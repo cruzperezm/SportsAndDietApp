@@ -1,0 +1,71 @@
+#global {
+  background-color: #ffffff;
+  overflow: hidden;
+  min-width: 1440px;
+  min-height: 5622px;
+  position: relative;
+}
+#global .ellipse11 {
+  margin: 0;
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: 76px;
+  left: 75px;
+  background-color: #d9d9d9;
+  border-radius: 100%;
+}
+#global .text1 {
+  position: absolute;
+  color: #000000;
+  font-family: Inter, sans-serif;
+  font-size: 96px;
+  top: 111px;
+  left: 348px;
+}
+#global .ellipse12 {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  background-color: #d9d9d9;
+  border-radius: 100%;
+  top: 312px;
+  left: 625px;
+}
+
+#global .ellipse15 {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  background-color: #d9d9d9;
+  border-radius: 100%;
+  top: 5px;
+  left: 5px;
+}
+
+#global .ellipse4 {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  background-color: #d9d9d9;
+  border-radius: 100%;
+  top: 312px;
+  left: 625px;
+}
+#global .rectangle79 {
+  position: absolute;
+  width: 200px;
+  height: 100px;
+  background-color: #f0f0f0;
+  border-radius: 70px;
+  left: 620px;
+  top: 307px;
+}
+#global .rectangle83 {
+  position: absolute;
+  width: 1295px;
+  height: 771px;
+  top: 431px;
+  left: 75px;
+  background-color: #f2f2f2;
+}
