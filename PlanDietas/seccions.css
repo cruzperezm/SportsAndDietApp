@@ -1,0 +1,73 @@
+body {
+    background-color: #FFFFFF;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+.plan-dietas {
+    width: 90%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+.text-96 {
+    font-size: clamp(48px, 7vw, 96px);
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.text-48 {
+    font-size: clamp(32px, 4vw, 48px);
+    font-weight: 400;
+    margin: 40px 0 20px 0;
+}
+
+/* Grid elástico: siempre 3 columnas */
+.grid-3-cuadros {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2vw;
+}
+
+/* Contenedor del cuadro + texto */
+.contenedor-item {
+    position: relative;
+    width: 100%;
+}
+
+.cuadro-gris {
+    width: 100%;
+    aspect-ratio: 378 / 382; /* Mantiene la forma de Figma */
+    background: #D9D9D9;
+    position: relative;
+    overflow: hidden;
+}
+
+/* La X cruzada dinámica */
+.cuadro-gris::before, .cuadro-gris::after {
+    content: "";
+    position: absolute;
+    width: 150%;
+    height: 1px;
+    background: black;
+    top: 50%;
+    left: 50%;
+}
+.cuadro-gris::before { transform: translate(-50%, -50%) rotate(45deg); }
+.cuadro-gris::after { transform: translate(-50%, -50%) rotate(-45deg); }
+
+/* El texto dentro del cuadro, esquina inferior izquierda */
+.texto-interior {
+    position: absolute;
+    bottom: 10px; /* Ajuste para que no toque el borde */
+    left: 10px;
+    width: 223px; /* Tu tamaño de Figma */
+    height: 42px;
+    font-size: 32px;
+    color: black;
+    pointer-events: none; /* Para que no interfiera */
+    display: flex;
+    align-items: center;
+}
