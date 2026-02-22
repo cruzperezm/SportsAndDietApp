@@ -18,7 +18,7 @@ body {
 
 .titulo-principal {
     color: #000000;
-    font-size: clamp(40px, 6.5vw, 96px); /* para el tamaño fluido ese */
+    font-size: clamp(40px, 6.5vw, 96px);
     font-weight: 400;
     margin-bottom: 10px;
 }

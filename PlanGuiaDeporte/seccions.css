@@ -3,9 +3,10 @@ body {
     margin: 0;
     font-family: 'Inter', sans-serif;
     overflow-x: hidden;
+    color: black;
 }
 
-.guia-dieta {
+.guia-deporte {
     width: 100%;
     max-width: 1440px;
     margin: 0 auto;
@@ -26,36 +27,40 @@ body {
 .hero-guia::before, .hero-guia::after {
     content: "";
     position: absolute;
-    width: 150%;
+    width: 160%;
     height: 1px;
     background: black;
     top: 50%;
     left: 50%;
+    z-index: 1;
 }
+
 .hero-guia::before { transform: translate(-50%, -50%) rotate(20deg); }
-.hero-guia::after { transform: translate(-50%, -50%) rotate(-20deg); }
+.hero-guia::after  { transform: translate(-50%, -50%) rotate(-20deg); }
 
 .text-96 {
     font-size: clamp(40px, 8vw, 96px);
-    z-index: 2;
+    font-weight: 400;
     margin: 0;
-    text-align: center;
+    z-index: 2;
 }
 
 .text-24-hero {
     font-size: clamp(16px, 2vw, 24px);
-    z-index: 2;
+    font-weight: 400;
     margin-top: 20px;
     text-align: center;
     width: 80%;
+    z-index: 2;
 }
 
 .contenedor-columnas {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 5vw;
-    padding: 5vw 2vw;
+    align-items: flex-start;
+    gap: 80px;
+    padding: 80px 20px 120px 20px;
 }
 
 .columna {
@@ -65,29 +70,23 @@ body {
 
 .linea-divisoria {
     width: 1px;
-    height: 300px;
+    height: 316px;
     background: black;
-    display: block;
 }
 
-@media (max-width: 800px) {
-    .linea-divisoria { display: none; }
+.text-40 {
+    font-size: clamp(28px, 4vw, 40px);
+    font-weight: 400;
+    margin-bottom: 30px;
 }
-
-.text-40 { font-size: clamp(28px, 3.5vw, 40px); margin-bottom: 20px; }
 
 .lista-columna {
-    font-size: clamp(18px, 2vw, 24px);
-    line-height: 1.5;
-    padding-left: 20px;
+    font-size: clamp(18px, 2.2vw, 24px);
+    line-height: 1.6;
+    padding-left: 25px;
 }
 
-.bloque-inferior {
-    padding: 0 5vw 100px 5vw;
-}
-
-.text-24-largo {
-    font-size: clamp(18px, 2vw, 24px);
-    line-height: 1.4;
-    text-align: left;
+@media (max-width: 850px) {
+    .linea-divisoria { display: none; }
+    .contenedor-columnas { flex-direction: column; align-items: center; }
 }
