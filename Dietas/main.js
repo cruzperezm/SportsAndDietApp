@@ -13,8 +13,8 @@ const datosPaginas = {
 
 async function cargarContenido(tipo) {
     try {
-        const respuesta = await fetch('Dietas/grid-view.html');
-        if (!respuesta.ok) throw new Error("Error al cargar template");
+        const respuesta = await fetch('grid-view.html');
+        if (!respuesta.ok) throw new Error("Error al cargar template grid-view.html");
         const html = await respuesta.text();
 
         document.getElementById('contenedor-principal').innerHTML = html;

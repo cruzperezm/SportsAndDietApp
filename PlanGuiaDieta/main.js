@@ -17,7 +17,10 @@ const datosGuia = {
 
 async function cargarGuia() {
     try {
-        const respuesta = await fetch('PlanGuiaDieta/grid-view.html');
+        const respuesta = await fetch('grid-view.html');
+
+        if (!respuesta.ok) throw new Error("No se encuentra grid-view.html en la carpeta actual");
+
         const html = await respuesta.text();
         document.getElementById('contenedor-principal').innerHTML = html;
 
@@ -26,16 +29,18 @@ async function cargarGuia() {
 
         document.getElementById('col-titulo-1').innerText = datosGuia.columna1.titulo;
         const lista1 = document.getElementById('col-lista-1');
+        lista1.innerHTML = "";
         datosGuia.columna1.puntos.forEach(p => lista1.innerHTML += `<li>${p}</li>`);
 
         document.getElementById('col-titulo-2').innerText = datosGuia.columna2.titulo;
         const lista2 = document.getElementById('col-lista-2');
+        lista2.innerHTML = "";
         datosGuia.columna2.puntos.forEach(p => lista2.innerHTML += `<li>${p}</li>`);
 
         document.getElementById('titulo-final').innerText = datosGuia.final.titulo;
         document.getElementById('texto-largo').innerHTML = datosGuia.final.descripcion;
 
-    } catch (e) { console.error(e); }
+    } catch (e) { console.error("Error en la carga:", e); }
 }
 
 window.onload = cargarGuia;
