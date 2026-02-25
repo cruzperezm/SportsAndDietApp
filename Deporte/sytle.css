@@ -1,0 +1,224 @@
+body {
+    background-color: #FFFFFF;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+}
+
+.seccion-articulos {
+    width: 95%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+.contenedor-texto {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.titulo-principal {
+    color: #000000;
+    font-size: clamp(40px, 6.5vw, 96px);
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.descripcion-principal {
+    color: #000000;
+    font-size: clamp(18px, 2.5vw, 36px);
+}
+
+.contenedor-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3vw;
+    justify-content: center;
+}
+
+.tarjeta-item {
+    width: 100%;
+}
+
+.placeholder-imagen {
+    width: 100%;
+    aspect-ratio: 422 / 360;
+    background: #D9D9D9;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.placeholder-imagen:hover {
+    transform: scale(1.03);
+}
+
+.placeholder-imagen::before,
+.placeholder-imagen::after {
+    content: "";
+    position: absolute;
+    width: 150%;
+    height: 1px;
+    background-color: black;
+    top: 50%;
+    left: 50%;
+}
+
+.placeholder-imagen::before {
+    transform: translate(-50%, -50%) rotate(40.4deg);
+}
+
+.placeholder-imagen::after {
+    transform: translate(-50%, -50%) rotate(-40.4deg);
+}
+
+.tarjeta-item h3 {
+    color: #000000;
+    font-size: clamp(16px, 2vw, 32px);
+    font-weight: 400;
+    margin-top: 15px;
+    word-wrap: break-word;
+}
+
+.plan-dietas {
+    width: 90%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+.text-96 {
+    font-size: clamp(48px, 7vw, 96px);
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.text-48 {
+    font-size: clamp(32px, 4vw, 48px);
+    font-weight: 400;
+    margin: 40px 0 20px 0;
+}
+
+.grid-3-cuadros {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2vw;
+}
+
+.contenedor-item {
+    position: relative;
+    width: 100%;
+}
+
+.cuadro-gris {
+    width: 100%;
+    aspect-ratio: 378 / 382;
+    background: #D9D9D9;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.cuadro-gris:hover {
+    transform: scale(1.03);
+}
+
+.cuadro-gris::before, .cuadro-gris::after {
+    content: "";
+    position: absolute;
+    width: 150%;
+    height: 1px;
+    background: black;
+    top: 50%;
+    left: 50%;
+}
+
+.cuadro-gris::before { transform: translate(-50%, -50%) rotate(45deg); }
+.cuadro-gris::after { transform: translate(-50%, -50%) rotate(-45deg); }
+
+.texto-interior {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    width: 223px;
+    height: 42px;
+    font-size: 32px;
+    color: black;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+}
+
+.guia-dieta {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.hero-guia {
+    width: 100%;
+    aspect-ratio: 1440 / 545;
+    background: #D9D9D9;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.hero-guia::before, .hero-guia::after {
+    content: "";
+    position: absolute;
+    width: 150%;
+    height: 1px;
+    background: black;
+    top: 50%;
+    left: 50%;
+}
+
+.hero-guia::before { transform: translate(-50%, -50%) rotate(20deg); }
+.hero-guia::after { transform: translate(-50%, -50%) rotate(-20deg); }
+
+.text-24-hero {
+    font-size: clamp(16px, 2vw, 24px);
+    z-index: 2;
+    margin-top: 20px;
+    text-align: center;
+    width: 80%;
+}
+
+.contenedor-columnas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5vw;
+    padding: 5vw 2vw;
+}
+
+.columna {
+    width: 100%;
+    max-width: 372px;
+}
+
+.linea-divisoria {
+    width: 1px;
+    height: 300px;
+    background: black;
+    display: block;
+}
+
+.text-40 { font-size: clamp(28px, 3.5vw, 40px); margin-bottom: 20px; }
+
+.lista-columna {
+    font-size: clamp(18px, 2vw, 24px);
+    line-height: 1.5;
+    padding-left: 20px;
+}
+
+@media (max-width: 800px) {
+    .linea-divisoria { display: none; }
+}
