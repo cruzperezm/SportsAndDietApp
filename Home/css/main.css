@@ -1,0 +1,199 @@
+/* Variables para colores y espaciados */
+:root {
+    --gray-placeholder: #d9d9d9;
+    --text-main: #333;
+    --max-width: 1200px;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    color: var(--text-main);
+}
+
+/* Clase maestra para los cuadros con aspas del wireframe */
+.placeholder-img {
+    background-color: var(--gray-placeholder);
+    background-image: url('../images/aspas.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 8px;
+    min-height: 200px;
+}
+
+/* =========================================
+   Estilos Generales del Header
+   ========================================= */
+.header {
+    background-color: #ffffff; /* Fondo blanco */
+    border-bottom: 1px solid #f3f4f6; /* Línea sutil debajo para separar del contenido */
+    padding: 0 2rem;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* =========================================
+   Contenedor de Navegación (Flexbox)
+   ========================================= */
+.navigation {
+    display: flex;
+    align-items: center;
+    height: 80px;
+    gap: 1rem;
+}
+
+/* =========================================
+   1. Estilos Base (Para TODOS los enlaces)
+   ========================================= */
+.navigation a {
+    /* Añade esto temporalmente para tu mockup */
+    width: 100px;
+    height: 40px;
+    text-decoration: none;
+    color: #000000;
+    background-color: #d9d9d9;
+    padding: 0.5rem 1.25rem;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.navigation a:hover {
+    background-color: #888888;
+}
+
+/* =========================================
+   2. Logo / Home (Sobrescribe detalles)
+   ========================================= */
+#nav-home {
+    margin-right: auto; /* Empuja los demás a la derecha */
+    width: 50px;
+    height: 50px;
+    padding: 0; /* 🟢 AÑADIDO: Quitamos el padding base para que no deforme el círculo */
+    border-radius: 50%; /* Cambia los 6px base por un círculo perfecto */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+#nav-home img {
+    max-width: 80%;
+    height: auto;
+}
+
+/* =========================================
+   3. Botón Log In (Sobrescribe detalles)
+   ========================================= */
+#nav-login {
+    margin-left: auto; /* Se separa hacia el extremo derecho */
+    padding: 0.6rem 2.5rem; /* Cambia el padding base por uno más ancho */
+    border-radius: 9999px; /* Cambia los 6px base por forma de píldora */
+    font-weight: 600; /* Hace la letra un poco más gruesa */
+}
+
+/* Hero Section (La parte superior de la imagen) */
+.hero-section {
+    padding: 60px 5%;
+}
+
+.hero-banner {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    padding-left: 50px;
+}
+
+/* Grid de 3 Columnas (Features y Testimonios) */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 40px 5%;
+}
+
+.card {
+    text-align: center;
+}
+
+.card-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px;
+}
+
+/* Secciones divididas (Imagen lado a lado con texto) */
+.split-section {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    padding: 60px 5%;
+}
+
+.split-section.reverse { flex-direction: row-reverse; }
+.split-content { flex: 1; }
+.split-image { flex: 1; height: 350px; }
+
+/* Footer */
+/* Contenedor principal del footer */
+.footer-content {
+    background-color: #dbdbdb; /* Fondo gris claro de la imagen */
+    display: flex;
+    justify-content: center; /* Centra todo el contenido horizontalmente */
+    align-items: center;
+    padding: 60px 20px;
+    gap: 100px; /* Espacio grande entre las columnas de texto y las redes sociales */
+    font-family: Arial, sans-serif;
+}
+
+/* Contenedor de las dos columnas de texto */
+.footer-text-columns {
+    display: flex;
+    gap: 50px; /* Espacio entre la columna 1 y la columna 2 */
+}
+
+/* Estilos para el texto */
+.footer-column p {
+    margin: 0;
+    width: 140px; /* Ancho restringido para forzar los saltos de línea idénticos a la imagen */
+    font-size: 14px;
+    line-height: 1.4;
+    color: #1a1a1a;
+}
+
+/* Contenedor de los enlaces sociales */
+.social-links {
+    display: flex;
+    gap: 24px; /* Espacio entre cada círculo */
+    align-items: center;
+}
+
+/* Estilos de los enlaces (convertidos en círculos grises) */
+.social-links a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: #a8a8a8; /* Color gris oscuro de los círculos */
+    border-radius: 50%; /* Los hace perfectamente redondos */
+    text-decoration: none;
+    overflow: hidden; /* Evita que las imágenes se salgan del círculo */
+    transition: transform 0.2s ease; /* Pequeña animación opcional */
+}
+
+/* Efecto hover opcional para los botones */
+.social-links a:hover {
+    transform: scale(1.05);
+}
+
+/* Ajuste de las imágenes/iconos dentro de los enlaces */
+.social-links img {
+    width: 60%; /* Mantiene los iconos de Gmail/Instagram centrados y proporcionados */
+    height: auto;
+    object-fit: contain;
+    /* Nota: Si quieres que se vean SOLO círculos grises (sin iconos) como en tu imagen,
+       puedes descomentar la siguiente línea: */
+    /* opacity: 0; */
+}
