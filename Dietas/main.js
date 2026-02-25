@@ -14,7 +14,7 @@ const datosPaginas = {
 async function cargarContenido(tipo) {
     try {
         const respuesta = await fetch('grid-view.html');
-        if (!respuesta.ok) throw new Error("Error al cargar template grid-view.html");
+        if (!respuesta.ok) throw new Error("Error al cargar template PlanDeporte_grid-view.html");
         const html = await respuesta.text();
 
         document.getElementById('contenedor-principal').innerHTML = html;

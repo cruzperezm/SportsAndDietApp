@@ -10,7 +10,7 @@ const datosPlan = {
 async function cargarPlanDietas() {
     try {
         const respuesta = await fetch('grid-view.html');
-        if (!respuesta.ok) throw new Error("No se encuentra el template grid-view.html");
+        if (!respuesta.ok) throw new Error("No se encuentra el template PlanDeporte_grid-view.html");
         const html = await respuesta.text();
 
         document.getElementById('contenedor-principal').innerHTML = html;

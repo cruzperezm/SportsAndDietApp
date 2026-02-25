@@ -19,7 +19,7 @@ async function cargarGuia() {
     try {
         const respuesta = await fetch('grid-view.html');
 
-        if (!respuesta.ok) throw new Error("No se encuentra grid-view.html en la carpeta actual");
+        if (!respuesta.ok) throw new Error("No se encuentra PlanDeporte_grid-view.html en la carpeta actual");
 
         const html = await respuesta.text();
         document.getElementById('contenedor-principal').innerHTML = html;
