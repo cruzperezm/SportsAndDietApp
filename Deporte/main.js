@@ -1,46 +1,41 @@
-const datosDeporte = {
+const datosDietas = {
     titulo: "Lorem Ipsum",
     subtitulo: "Lorem Ipsum Lorem Ipsum Lorem Ipsum",
-    items: ["Lorem Ipsum", "Lorem Ipsum", "Lorem Ipsum", "Lorem Ipsum", "Lorem Ipsum", "Lorem Ipsum"]
+    items: Array(6).fill("Lorem Ipsum")
 };
 
 const datosPlan = {
     titulo: "Lorem Ipsum",
-    rutinas: [
-        { subtitulo: "Lorem Ipsum", items: ["Lorem Ipsum", "Lorem Ipsum", "Lorem Ipsum"] },
-        { subtitulo: "Lorem Ipsum", items: ["Lorem Ipsum", "Lorem Ipsum", "Lorem Ipsum"] },
-        { subtitulo: "Lorem Ipsum", items: ["Lorem Ipsum", "Lorem Ipsum", "Lorem Ipsum"] }
+    comidas: [
+        { subtitulo: "Lorem Ipsum", items: Array(9).fill("Lorem Ipsum") },
+        { subtitulo: "Lorem Ipsum", items: Array(9).fill("Lorem Ipsum") },
+        { subtitulo: "Lorem Ipsum", items: Array(9).fill("Lorem Ipsum") }
     ]
 };
 
 const datosGuia = {
     tituloPrincipal: "Lorem Ipsum",
     subtituloHero: "Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum",
-    columna1: {
-        titulo: "Lorem Ipsum",
-        puntos: ["Lorem Ipsum Lorem Ipsum", "Lorem Ipsum Lorem Ipsum", "Lorem Ipsum Lorem Ipsum", "Lorem Ipsum Lorem Ipsum", "Lorem Ipsum Lorem Ipsum", "Lorem Ipsum Lorem Ipsum"]
-    },
-    columna2: {
-        titulo: "Lorem Ipsum",
-        puntos: ["Lorem Ipsum Lorem Ipsum", "Lorem Ipsum Lorem Ipsum", "Lorem Ipsum Lorem Ipsum", "Lorem Ipsum Lorem Ipsum", "Lorem Ipsum Lorem Ipsum", "Lorem Ipsum Lorem Ipsum"]
-    }
+    columna1: { titulo: "Lorem Ipsum", puntos: Array(5).fill("Lorem Ipsum") },
+    columna2: { titulo: "Lorem Ipsum", puntos: Array(5).fill("Lorem Ipsum") }
 };
+
+let bloqueado = false;
 
 async function navegar(vista) {
     const contenedor = document.getElementById('contenedor-principal');
     let url = "";
 
-    if (vista === 'deporte') url = 'Deporte_grid-view.html';
-    if (vista === 'plan') url = 'PlanDeporte_grid-view.html';
-    if (vista === 'guia') url = 'PlanGuiaDeporte_grid-view.html';
+    if (vista === 'dietas') url = 'Dietas_grid-view.html';
+    if (vista === 'plan') url = 'PlanDietas_grid-view.html';
+    if (vista === 'guia') url = 'PlanGuiaDieta_grid-view.html';
 
     try {
         const res = await fetch(url);
-        if (!res.ok) throw new Error("File not found");
         const html = await res.text();
         contenedor.innerHTML = html;
 
-        if (vista === 'deporte') renderDeporte();
+        if (vista === 'dietas') renderDietas();
         if (vista === 'plan') renderPlan();
         if (vista === 'guia') renderGuia();
 
@@ -48,14 +43,14 @@ async function navegar(vista) {
     } catch (e) { console.error(e); }
 }
 
-function renderDeporte() {
-    document.getElementById('titulo-pagina').innerText = datosDeporte.titulo;
-    document.getElementById('subtitulo-pagina').innerText = datosDeporte.subtitulo;
+function renderDietas() {
+    document.getElementById('titulo-pagina').innerText = datosDietas.titulo;
+    document.getElementById('subtitulo-pagina').innerText = datosDietas.subtitulo;
     const grid = document.getElementById('grid-items');
-    grid.innerHTML = datosDeporte.items.map((texto, index) => `
+    grid.innerHTML = datosDietas.items.map(() => `
         <article class="tarjeta-item">
-            <div class="placeholder-imagen" onclick="navegar('${index % 2 === 0 ? 'plan' : 'guia'}')"></div>
-            <h3>${texto}</h3>
+            <div class="placeholder-imagen" onclick="navegar('plan')"></div>
+            <h3>Lorem Ipsum</h3>
         </article>
     `).join('');
 }
@@ -63,20 +58,61 @@ function renderDeporte() {
 function renderPlan() {
     document.getElementById('titulo-pagina').innerText = datosPlan.titulo;
     const contenedor = document.getElementById('secciones-dinamicas');
-    contenedor.innerHTML = datosPlan.rutinas.map(rutina => `
+
+    contenedor.innerHTML = datosPlan.comidas.map((comida, idx) => `
         <div class="seccion-comida">
-            <h2 class="text-48">${rutina.subtitulo}</h2>
-            <div class="grid-3-cuadros">
-                ${rutina.items.map(texto => `
-                    <div class="contenedor-item">
-                        <div class="cuadro-gris" onclick="navegar('guia')">
-                            <div class="texto-interior">${texto}</div>
+            <h2 class="text-48">${comida.subtitulo}</h2>
+            <div class="wrapper-carrusel">
+                <div class="grid-3-cuadros" id="fila-${idx}">
+                    ${comida.items.map(texto => `
+                        <div class="contenedor-item">
+                            <div class="cuadro-gris" onclick="navegar('guia')">
+                                <div class="texto-interior">${texto}</div>
+                            </div>
                         </div>
-                    </div>
-                `).join('')}
+                    `).join('')}
+                </div>
             </div>
-        </div>
-    `).join('');
+            <div class="controles-carrusel">
+                <button class="btn-nav" onclick="moverCarrusel(${idx}, -1)">←</button>
+                <button class="btn-nav" onclick="moverCarrusel(${idx}, 1)">→</button>
+            </div>
+        </div>`).join('');
+}
+
+function moverCarrusel(idx, dir) {
+    if (bloqueado) return;
+    bloqueado = true;
+
+    const fila = document.getElementById(`fila-${idx}`);
+    const items = fila.querySelectorAll('.contenedor-item');
+    const anchoMover = items[0].offsetWidth + parseFloat(getComputedStyle(fila).gap);
+
+    if (dir === 1) {
+        fila.style.transition = "transform 0.5s ease";
+        fila.style.transform = `translateX(${-anchoMover * 3}px)`;
+
+        setTimeout(() => {
+            fila.style.transition = "none";
+            for (let i = 0; i < 3; i++) {
+                fila.appendChild(fila.firstElementChild);
+            }
+            fila.style.transform = "translateX(0)";
+            bloqueado = false;
+        }, 500);
+    } else {
+        fila.style.transition = "none";
+        for (let i = 0; i < 3; i++) {
+            fila.prepend(fila.lastElementChild);
+        }
+        fila.style.transform = `translateX(${-anchoMover * 3}px)`;
+
+        setTimeout(() => {
+            fila.style.transition = "transform 0.5s ease";
+            fila.style.transform = "translateX(0)";
+            setTimeout(() => { bloqueado = false; }, 500);
+        }, 10);
+    }
 }
 
 function renderGuia() {
@@ -84,13 +120,11 @@ function renderGuia() {
     document.getElementById('subtitulo-hero').innerText = datosGuia.subtituloHero;
     document.getElementById('col-titulo-1').innerText = datosGuia.columna1.titulo;
     document.getElementById('col-titulo-2').innerText = datosGuia.columna2.titulo;
-
-    document.getElementById('col-lista-1').innerHTML = datosGuia.columna1.puntos.map(p => `<li>${p}</li>`).join('');
-    document.getElementById('col-lista-2').innerHTML = datosGuia.columna2.puntos.map(p => `<li>${p}</li>`).join('');
-
+    document.getElementById('col-lista-1').innerHTML = datosGuia.columna1.puntos.map(() => `<li>Lorem Ipsum</li>`).join('');
+    document.getElementById('col-lista-2').innerHTML = datosGuia.columna2.puntos.map(() => `<li>Lorem Ipsum</li>`).join('');
     const hero = document.querySelector('.hero-guia');
     hero.style.cursor = 'pointer';
-    hero.onclick = () => navegar('deporte');
+    hero.onclick = () => navegar('dietas');
 }
 
-window.onload = () => navegar('deporte');
+window.onload = () => navegar('dietas');

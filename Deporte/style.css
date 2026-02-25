@@ -65,20 +65,14 @@ body {
     left: 50%;
 }
 
-.placeholder-imagen::before {
-    transform: translate(-50%, -50%) rotate(40.4deg);
-}
-
-.placeholder-imagen::after {
-    transform: translate(-50%, -50%) rotate(-40.4deg);
-}
+.placeholder-imagen::before { transform: translate(-50%, -50%) rotate(40.4deg); }
+.placeholder-imagen::after { transform: translate(-50%, -50%) rotate(-40.4deg); }
 
 .tarjeta-item h3 {
     color: #000000;
     font-size: clamp(16px, 2vw, 32px);
     font-weight: 400;
     margin-top: 15px;
-    word-wrap: break-word;
 }
 
 .plan-dietas {
@@ -101,15 +95,22 @@ body {
     margin: 40px 0 20px 0;
 }
 
+.wrapper-carrusel {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
 .grid-3-cuadros {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
     gap: 2vw;
+    transition: transform 0.5s ease;
+    padding: 10px 0;
 }
 
 .contenedor-item {
-    position: relative;
-    width: 100%;
+    flex: 0 0 calc(33.333% - 1.34vw);
+    min-width: calc(33.333% - 1.34vw);
 }
 
 .cuadro-gris {
@@ -143,13 +144,38 @@ body {
     position: absolute;
     bottom: 10px;
     left: 10px;
-    width: 223px;
-    height: 42px;
     font-size: 32px;
     color: black;
-    pointer-events: none;
+}
+
+.controles-carrusel {
+    display: flex;
+    justify-content: flex-end;
+    width: 137px;
+    height: 50px;
+    margin-top: 23px;
+    margin-left: auto;
+    gap: 37px;
+}
+
+.btn-nav {
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+    border-radius: 50%;
+    border: 1px solid black;
+    background: white;
+    cursor: pointer;
+    font-size: 27px;
     display: flex;
     align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+.btn-nav:hover {
+    background: black;
+    color: white;
 }
 
 .guia-dieta {
@@ -188,7 +214,6 @@ body {
     z-index: 2;
     margin-top: 20px;
     text-align: center;
-    width: 80%;
 }
 
 .contenedor-columnas {
@@ -208,7 +233,6 @@ body {
     width: 1px;
     height: 300px;
     background: black;
-    display: block;
 }
 
 .text-40 { font-size: clamp(28px, 3.5vw, 40px); margin-bottom: 20px; }
@@ -217,8 +241,4 @@ body {
     font-size: clamp(18px, 2vw, 24px);
     line-height: 1.5;
     padding-left: 20px;
-}
-
-@media (max-width: 800px) {
-    .linea-divisoria { display: none; }
 }
