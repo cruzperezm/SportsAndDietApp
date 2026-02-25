@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <title>Explorador</title>
+</head>
+
+<body>
+
+<!-- Add your site or application content here -->
+<header id="mi-header" style="text-align:center; margin-bottom:10%;"></header>
+<div style="text-align:center; margin:0 auto; background-color:#ffffff;margin-bottom: 50px;">
+    <input type="text" style="width: 40%" placeholder="Search..."></input>
+    <button>Search</button>
+</div>
+<div style="text-align:center; margin:0 auto; width: 50%; height: 50%">
+    <img src="icon.svg"></img>
+</div>
+<footer id="mi-footer" style="text-align:center; margin-top:10%;" ></footer>
+
+<script>
+    fetch("/Home/header.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("mi-header").innerHTML = data;
+        });
+
+    fetch("/Home/footer.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("mi-footer").innerHTML = data;
+        });
+</script>
+
+
+</body>
+
+</html>
