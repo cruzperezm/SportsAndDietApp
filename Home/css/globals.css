@@ -1,18 +1,29 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+
+/* =========================================
+   Variables Globales
+   ========================================= */
+:root {
+    --gray-placeholder: #d9d9d9;
+    --text-main: #333;
+    --max-width: 1200px;
+}
+
 * {
     -webkit-font-smoothing: antialiased;
     box-sizing: border-box;
 }
+
 html,
 body {
     margin: 0px;
     height: 100%;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    color: var(--text-main);
 }
-/* a blue color as a generic focus style */
+
+/* Color azul genérico para el foco de accesibilidad */
 button:focus-visible {
     outline: 2px solid #4a90e2 !important;
     outline: -webkit-focus-ring-color auto 5px !important;
-}
-a {
-    text-decoration: none;
 }
