@@ -17,6 +17,20 @@ const datosModulo = {
 
 let bloqueado = false;
 
+async function cargarComponentesGlobales() {
+    try {
+        const resHeader = await fetch('../Home/header.html');
+        if (resHeader.ok) {
+            document.getElementById('header-global').innerHTML = await resHeader.text();
+        }
+
+        const resFooter = await fetch('../Home/footer.html');
+        if (resFooter.ok) {
+            document.getElementById('footer-global').innerHTML = await resFooter.text();
+        }
+    } catch (e) { console.error("Error cargando componentes desde Home:", e); }
+}
+
 async function navegar(vista) {
     const contenedor = document.getElementById('contenedor-principal');
     let url = "";
@@ -115,4 +129,7 @@ function renderGuia() {
     hero.onclick = () => navegar('main');
 }
 
-window.onload = () => navegar('main');
+window.onload = async () => {
+    await cargarComponentesGlobales();
+    navegar('main');
+};
