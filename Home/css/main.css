@@ -1,8 +1,12 @@
-/* Variables para colores y espaciados */
+/* =========================================
+   Variables y Configuración Base del Index
+   ========================================= */
 :root {
     --gray-placeholder: #d9d9d9;
+    --gray-light: #ececec;
     --text-main: #333;
     --max-width: 1200px;
+    --section-padding: 60px 10%; /* Márgenes laterales para encuadrar todo como en la imagen */
 }
 
 body {
@@ -35,85 +39,6 @@ body {
     background-size: cover;
     border-radius: 8px;
     min-height: 200px;
-}
-
-/* =========================================
-   Estilos Generales del Header
-   ========================================= */
-.header {
-    background-color: #ffffff; /* Fondo blanco */
-    border-bottom: 1px solid #f3f4f6; /* Línea sutil debajo para separar del contenido */
-    padding: 0 2rem;
-    font-family: system-ui, -apple-system, sans-serif;
-}
-
-/* =========================================
-   Contenedor de Navegación (Flexbox)
-   ========================================= */
-.navigation {
-    display: flex;
-    align-items: center;
-    height: 80px;
-    gap: 1rem;
-}
-
-/* =========================================
-   1. Estilos Base (Para TODOS los enlaces)
-   ========================================= */
-.navigation a {
-    /* Añade esto temporalmente para tu mockup */
-    width: 100px;
-    height: 40px;
-    text-decoration: none;
-    color: #000000;
-    background-color: #d9d9d9;
-    padding: 0.5rem 1.25rem;
-    border-radius: 6px;
-    font-weight: 500;
-    transition: background-color 0.2s ease, transform 0.2s ease;
-}
-
-.navigation a:hover {
-    background-color: #888888;
-}
-
-/* =========================================
-   2. Logo / Home (Sobrescribe detalles)
-   ========================================= */
-#nav-home {
-    margin-right: auto; /* Empuja los demás a la derecha */
-    width: 50px;
-    height: 50px;
-    padding: 0; /* 🟢 AÑADIDO: Quitamos el padding base para que no deforme el círculo */
-    border-radius: 50%; /* Cambia los 6px base por un círculo perfecto */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-}
-
-#nav-home img {
-    max-width: 80%;
-    height: auto;
-}
-
-/* =========================================
-   3. Botón Log In (Sobrescribe detalles)
-   ========================================= */
-#nav-login {
-    margin-left: auto; /* Se separa hacia el extremo derecho */
-    padding: 0.6rem 2.5rem; /* Cambia el padding base por uno más ancho */
-    border-radius: 9999px; /* Cambia los 6px base por forma de píldora */
-    font-weight: 600; /* Hace la letra un poco más gruesa */
-}
-/* =========================================
-   Variables y Configuración Base del Index
-   ========================================= */
-:root {
-    --gray-placeholder: #d9d9d9;
-    --gray-light: #ececec;
-    --text-main: #333;
-    --section-padding: 60px 10%; /* Márgenes laterales para encuadrar todo como en la imagen */
 }
 
 /* Aplicamos fondo gris a todas las imágenes "placeholder" del wireframe */
@@ -171,7 +96,7 @@ img[src*="aspas.svg"] {
 .features-section img {
     width: 50px;
     height: 50px;
-    border-radius: 4px; /* Iconos cuadrados con bordes ligeramente redondeados */
+    border-radius: 4px;
     margin-bottom: 20px;
 }
 
@@ -200,7 +125,7 @@ img[src*="aspas.svg"] {
     gap: 50px;
 }
 
-/* Invertimos el orden para "Sports" (Texto a la izq, Imagen a la der) */
+/* Invertimos el orden para "Sports" */
 .sport-preview {
     flex-direction: row-reverse;
 }
@@ -209,7 +134,7 @@ img[src*="aspas.svg"] {
 .sport-preview img {
     width: 140px;
     height: 140px;
-    border-radius: 16px; /* Bordes notablemente redondeados como en el wireframe */
+    border-radius: 16px;
     flex-shrink: 0;
 }
 
@@ -231,7 +156,7 @@ img[src*="aspas.svg"] {
 .diet-preview-gallery img,
 .sport-preview-gallery img {
     width: 100%;
-    aspect-ratio: 1 / 1; /* Fuerza a que sean cuadrados perfectos */
+    aspect-ratio: 1 / 1;
 }
 
 /* =========================================
@@ -240,7 +165,7 @@ img[src*="aspas.svg"] {
 .featured-comments {
     padding: var(--section-padding);
     display: flex;
-    flex-wrap: wrap; /* Permite que el título ocupe toda la fila superior */
+    flex-wrap: wrap;
     justify-content: space-between;
     gap: 20px;
 }
@@ -287,11 +212,11 @@ img[src*="aspas.svg"] {
    ========================================= */
 .sign-up-request {
     display: grid;
-    grid-template-columns: 1fr 300px; /* Columna izq fluida, Columna der fija */
+    grid-template-columns: 1fr 300px;
     align-items: center;
     gap: 50px;
     padding: var(--section-padding);
-    padding-bottom: 80px; /* Extra espacio inferior */
+    padding-bottom: 80px;
     position: relative;
 }
 
@@ -306,76 +231,36 @@ img[src*="aspas.svg"] {
     height: 250px;
 }
 
-/* Botón píldora sobre la imagen */
+/* =========================================
+   Botones y Enlaces del Main (Sign up, Diets, Sports)
+   ========================================= */
+
 #sign-up-link {
     position: absolute;
-    bottom: 95px; /* Lo posiciona en la parte baja de la imagen */
-    right: calc(10% + 150px - 50px); /* 10% del padding + mitad imagen (150) - mitad botón (50) */
+    bottom: 95px;
+    right: calc(10% + 150px - 50px);
     width: 100px;
     height: 30px;
     background-color: var(--gray-light);
-    border-radius: 9999px; /* Forma de píldora */
+    border-radius: 9999px;
     display: block;
-}
-/* Footer */
-/* Contenedor principal del footer */
-.footer-content {
-    background-color: #dbdbdb; /* Fondo gris claro de la imagen */
-    display: flex;
-    justify-content: center; /* Centra todo el contenido horizontalmente */
-    align-items: center;
-    padding: 60px 20px;
-    gap: 100px; /* Espacio grande entre las columnas de texto y las redes sociales */
-    font-family: Arial, sans-serif;
+    transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
-/* Contenedor de las dos columnas de texto */
-.footer-text-columns {
-    display: flex;
-    gap: 50px; /* Espacio entre la columna 1 y la columna 2 */
+#sport-preview-link,
+#diet-preview-link {
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    display: inline-block;
 }
 
-/* Estilos para el texto */
-.footer-column p {
-    margin: 0;
-    width: 140px; /* Ancho restringido para forzar los saltos de línea idénticos a la imagen */
-    font-size: 14px;
-    line-height: 1.4;
-    color: #1a1a1a;
-}
-
-/* Contenedor de los enlaces sociales */
-.social-links {
-    display: flex;
-    gap: 24px; /* Espacio entre cada círculo */
-    align-items: center;
-}
-
-/* Estilos de los enlaces (convertidos en círculos grises) */
-.social-links a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50px;
-    height: 50px;
-    background-color: #a8a8a8; /* Color gris oscuro de los círculos */
-    border-radius: 50%; /* Los hace perfectamente redondos */
-    text-decoration: none;
-    overflow: hidden; /* Evita que las imágenes se salgan del círculo */
-    transition: transform 0.2s ease; /* Pequeña animación opcional */
-}
-
-/* Efecto hover opcional para los botones */
-.social-links a:hover {
+/* Hover SOLO para el botón de texto de Sign Up (mantiene el color gris oscuro y el tamaño) */
+#sign-up-link:hover {
+    background-color: #888888 !important;
     transform: scale(1.05);
 }
 
-/* Ajuste de las imágenes/iconos dentro de los enlaces */
-.social-links img {
-    width: 60%; /* Mantiene los iconos de Gmail/Instagram centrados y proporcionados */
-    height: auto;
-    object-fit: contain;
-    /* Nota: Si quieres que se vean SOLO círculos grises (sin iconos) como en tu imagen,
-       puedes descomentar la siguiente línea: */
-    opacity: 0;
+/* Hover para los enlaces de las imágenes (SOLO aumenta el tamaño, sin cambiar de color) */
+#sport-preview-link:hover,
+#diet-preview-link:hover {
+    transform: scale(1.05);
 }
