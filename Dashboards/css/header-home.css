@@ -1,0 +1,78 @@
+.header *, .header *::before, .header *::after {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Foco de accesibilidad para los enlaces del header */
+.header a:focus-visible {
+    outline: 2px solid #4a90e2 !important;
+    outline: -webkit-focus-ring-color auto 5px !important;
+}
+
+/* =========================================
+   Estilos Generales del Header (Extraído de main.css)
+   ========================================= */
+.header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #f3f4f6;
+    padding: 0 2rem;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    color: #333; /* --text-main */
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    height: 80px;
+    gap: 1rem;
+}
+
+/* =========================================
+   Estilos Base de los Enlaces
+   ========================================= */
+.navigation a {
+    width: 100px;
+    height: 40px;
+    text-decoration: none;
+    color: #000000;
+    background-color: #d9d9d9;
+    padding: 0.5rem 1.25rem;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    /* Extra: Asegura que el texto esté centrado en la caja fija */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navigation a:hover {
+    background-color: #888888;
+}
+
+/* =========================================
+   Logo / Home
+   ========================================= */
+#nav-home {
+    margin-right: auto;
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+#nav-home img {
+    max-width: 80%;
+    height: auto;
+}
+
+/* =========================================
+   Botón Log In
+   ========================================= */
+#nav-login {
+    margin-left: auto;
+    padding: 0.6rem 2.5rem;
+    border-radius: 9999px;
+    font-weight: 600;
+}
