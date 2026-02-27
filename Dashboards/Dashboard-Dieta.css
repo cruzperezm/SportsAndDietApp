@@ -1,4 +1,4 @@
-#global {
+#dashboard-dieta {
   margin: 0px 0px 0px 0px;
   background-color: #ffffff;
   overflow: hidden;
@@ -6,7 +6,7 @@
   height: 2960px;
   position: absolute;
 }
-#global .ellipse11 {
+#dashboard-dieta .ellipse11 {
   margin: 0px 0px 0px 0px;
   position: absolute;
   width: 200px;
@@ -16,7 +16,7 @@
   background-color: #d9d9d9;
   border-radius: 100%;
 }
-#global .text1 {
+#dashboard-dieta .text1 {
   margin: 0px 0px 0px 0px;
   position: absolute;
   color: #000000;
@@ -25,7 +25,7 @@
   top: 111px;
   left: 348px;
 }
-#global .ellipse12 {
+#dashboard-dieta .ellipse12 {
   margin: 0px 0px 0px 0px;
   position: absolute;
   width: 90px;
@@ -36,7 +36,7 @@
   left: 1297px;
 }
 
-#global .ellipse15 {
+#dashboard-dieta .ellipse15 {
   margin: 0px 0px 0px 0px;
   position: absolute;
   width: 90px;
@@ -47,7 +47,7 @@
   left: 5px;
 }
 
-#global .ellipse4 {
+#dashboard-dieta .ellipse4 {
   margin: 0px 0px 0px 0px;
   position: absolute;
   width: 90px;
@@ -57,7 +57,7 @@
   top: 312px;
   left: 625px;
 }
-#global .rectangle79 {
+#dashboard-dieta .rectangle79 {
   margin: 0px 0px 0px 0px;
   position: absolute;
   width: 200px;
@@ -67,7 +67,7 @@
   left: 620px;
   top: 307px;
 }
-#global .rectangle83 {
+#dashboard-dieta .rectangle83 {
   margin: 0px 0px 0px 0px;
   position: absolute;
   width: 1295px;
@@ -76,7 +76,7 @@
   left: 75px;
   background-color: #f2f2f2;
 }
-#global .ellipse13 {
+#dashboard-dieta .ellipse13 {
   margin: 0px 0px 0px 0px;
   position: absolute;
   width: 500px;
@@ -86,7 +86,7 @@
   background-color: #d9d9d9;
   border-radius: 100%;
 }
-#global .ellipse14 {
+#dashboard-dieta .ellipse14 {
   margin: 0px 0px 0px 0px;
   position: absolute;
   width: 450px;
@@ -96,7 +96,7 @@
   background-color: #ffffff;
   border-radius: 100%;
 }
-#global .text2 {
+#dashboard-dieta .text2 {
   margin: 0px 0px 0px 0px;
   position: absolute;
   color: #000000;
@@ -105,7 +105,7 @@
   top: 132px;
   left: 72px;
 }
-#global .text3 {
+#dashboard-dieta .text3 {
   margin: 0px 0px 0px 0px;
   position: absolute;
   color: #000000;
@@ -114,7 +114,7 @@
   top: 190px;
   left: 108px;
 }
-#global .rectangle80 {
+#dashboard-dieta .rectangle80 {
   margin: 0px 0px 0px 0px;
   position: absolute;
   left: 80px;
@@ -124,7 +124,7 @@
   border-radius: 90px;
   background-color: #d9d9d9;
 }
-#global .rectangle81 {
+#dashboard-dieta .rectangle81 {
   margin: 0px 0px 0px 0px;
   position: absolute;
   left: 513px;
@@ -134,7 +134,7 @@
   border-radius: 90px;
   background-color: #d9d9d9;
 }
-#global .rectangle82 {
+#dashboard-dieta .rectangle82 {
   margin: 0px 0px 0px 0px;
   position: absolute;
   left: 963px;
@@ -144,7 +144,7 @@
   border-radius: 90px;
   background-color: #d9d9d9;
 }
-#global .text4 {
+#dashboard-dieta .text4 {
   margin: 0 0 0 0;
   position: absolute;
   color: #000000;
@@ -153,7 +153,7 @@
   top: 219px;
   left: 80px;
 }
-#global .text5 {
+#dashboard-dieta .text5 {
   margin: 0 0 0 0;
   position: absolute;
   color: #000000;
@@ -162,7 +162,7 @@
   top: 219px;
   left: 1010px;
 }
-#global .text6 {
+#dashboard-dieta .text6 {
   margin: 0 0 0 0;
   position: absolute;
   color: #000000;
@@ -171,7 +171,7 @@
   top: 590px;
   left: 108px;
 }
-#global .text7 {
+#dashboard-dieta .text7 {
   margin: 0 0 0 0;
   position: absolute;
   color: #000000;
@@ -180,7 +180,7 @@
   top: 689px;
   left: 142px;
 }
-#global .text8 {
+#dashboard-dieta .text8 {
   margin: 0 0 0 0;
   position: absolute;
   color: #000000;
@@ -189,7 +189,7 @@
   top: 590px;
   left: 541px;
 }
-#global .text9 {
+#dashboard-dieta .text9 {
   margin: 0 0 0 0;
   position: absolute;
   color: #000000;
@@ -197,7 +197,7 @@
   font-size: 32px;
   top: 689px;
   left: 575px;}
-#global .text10 {
+#dashboard-dieta .text10 {
   margin: 0 0 0 0;
   position: absolute;
   color: #000000;
@@ -206,7 +206,7 @@
   top: 590px;
   left: 991px;
 }
-#global .text11 {
+#dashboard-dieta .text11 {
   margin: 0 0 0 0;
   position: absolute;
   color: #000000;
@@ -215,7 +215,7 @@
   top: 689px;
   left: 1025px;}
 
-#global .ellipse16 {
+#dashboard-dieta .ellipse16 {
   margin: 0px 0px 0px 0px;
   position: absolute;
   width: 150px;
@@ -225,7 +225,7 @@
   left: 184px;
   border-radius: 50%;
 }
-#global .text12 {
+#dashboard-dieta .text12 {
   margin: 0 0 0 0;
   position: absolute;
   color: #000000;
@@ -234,7 +234,7 @@
   top: 1395px;
   left: 435px;
 }
-#global .text13 {
+#dashboard-dieta .text13 {
   margin: 0 0 0 0;
   position: absolute;
   color: #000000;
@@ -243,7 +243,7 @@
   top: 1453px;
   left: 484px;
 }
-#global .rectangle86 {
+#dashboard-dieta .rectangle86 {
   margin: 0 0 0 0;
   position: absolute;
   width: 27px;
@@ -253,7 +253,7 @@
   background-color: #d9d9d9;
   border-radius: 90px;
 }
-#global .rectangle87 {
+#dashboard-dieta .rectangle87 {
   margin: 0 0 0 0;
   position: absolute;
   width: 89px;
@@ -262,7 +262,7 @@
   left: 1148px;
   background-color: #d9d9d9;
   border-radius: 90px;}
-#global .ellipse17 {
+#dashboard-dieta .ellipse17 {
   margin: 0px 0px 0px 0px;
   position: absolute;
   width: 150px;
@@ -272,7 +272,7 @@
   left: 184px;
   border-radius: 50%;
 }
-#global .text14 {
+#dashboard-dieta .text14 {
   margin: 0 0 0 0;
   position: absolute;
   color: #000000;
@@ -281,7 +281,7 @@
   top: 1752px;
   left: 435px;
 }
-#global .text15 {
+#dashboard-dieta .text15 {
   margin: 0 0 0 0;
   position: absolute;
   color: #000000;
@@ -290,7 +290,7 @@
   top: 1810px;
   left: 484px;
 }
-#global .rectangle88 {
+#dashboard-dieta .rectangle88 {
   margin: 0 0 0 0;
   position: absolute;
   width: 27px;
@@ -300,7 +300,7 @@
   background-color: #d9d9d9;
   border-radius: 90px;
 }
-#global .rectangle89 {
+#dashboard-dieta .rectangle89 {
   margin: 0 0 0 0;
   position: absolute;
   width: 89px;
@@ -309,7 +309,7 @@
   left: 1148px;
   background-color: #d9d9d9;
   border-radius: 90px;}
-#global .ellipse18 {
+#dashboard-dieta .ellipse18 {
   margin: 0px 0px 0px 0px;
   position: absolute;
   width: 150px;
@@ -319,7 +319,7 @@
   left: 184px;
   border-radius: 50%;
 }
-#global .text16 {
+#dashboard-dieta .text16 {
   margin: 0 0 0 0;
   position: absolute;
   color: #000000;
@@ -328,7 +328,7 @@
   top: 2019px;
   left: 435px;
 }
-#global .text17 {
+#dashboard-dieta .text17 {
   margin: 0 0 0 0;
   position: absolute;
   color: #000000;
@@ -337,7 +337,7 @@
   top: 2167px;
   left: 484px;
 }
-#global .rectangle90 {
+#dashboard-dieta .rectangle90 {
   margin: 0 0 0 0;
   position: absolute;
   width: 27px;
@@ -347,7 +347,7 @@
   background-color: #d9d9d9;
   border-radius: 90px;
 }
-#global .rectangle91 {
+#dashboard-dieta .rectangle91 {
   margin: 0 0 0 0;
   position: absolute;
   width: 89px;
