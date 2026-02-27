@@ -1,0 +1,538 @@
+.dashboard-deporte {
+    background-color: #ffffff;
+    width: 100%;
+    min-width: 1440px;
+    min-height: 2960px;
+    position: relative;
+}
+
+.dashboard-deporte .rectangle {
+    position: absolute;
+    top: 432px;
+    left: 75px;
+    width: 1295px;
+    height: 771px;
+    background-color: #f1f1f1;
+}
+
+.dashboard-deporte .ellipse {
+    position: absolute;
+    top: 76px;
+    left: 75px;
+    width: 200px;
+    height: 200px;
+    background-color: #d9d9d9;
+    border-radius: 100px;
+}
+
+.dashboard-deporte .text-wrapper {
+    top: 111px;
+    left: 348px;
+    width: 597px;
+    font-size: 96px;
+    position: absolute;
+    font-family: "Inter-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.dashboard-deporte .div {
+    position: absolute;
+    top: 31px;
+    left: 1297px;
+    width: 90px;
+    height: 90px;
+    background-color: #d9d9d9;
+    border-radius: 45px;
+}
+
+.dashboard-deporte .rectangle-2 {
+    position: absolute;
+    top: 307px;
+    left: 620px;
+    width: 200px;
+    height: 100px;
+    background-color: #efefef;
+    border-radius: 70px;
+}
+
+.dashboard-deporte .ellipse-2 {
+    position: absolute;
+    top: 312px;
+    left: 720px;
+    width: 90px;
+    height: 90px;
+    background-color: #d9d9d9;
+    border-radius: 45px;
+}
+
+.dashboard-deporte .rectangle-3 {
+    position: absolute;
+    top: 2590px;
+    left: 0;
+    width: 1440px;
+    height: 370px;
+    background-color: #d9d9d9;
+}
+
+.dashboard-deporte .p {
+    position: absolute;
+    top: 2656px;
+    left: 777px;
+    width: 198px;
+    font-family: "Inter-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.dashboard-deporte .ellipse-3 {
+    position: absolute;
+    top: 2735px;
+    left: 1261px;
+    width: 45px;
+    height: 45px;
+    background-color: #afafaf;
+    border-radius: 22.5px;
+}
+
+.dashboard-deporte .ellipse-4 {
+    position: absolute;
+    top: 2735px;
+    left: 1175px;
+    width: 45px;
+    height: 45px;
+    background-color: #afafaf;
+    border-radius: 22.5px;
+}
+
+.dashboard-deporte .ellipse-5 {
+    position: absolute;
+    top: 2735px;
+    left: 1089px;
+    width: 45px;
+    height: 45px;
+    background-color: #afafaf;
+    border-radius: 22.5px;
+}
+
+.dashboard-deporte .text-wrapper-2 {
+    position: absolute;
+    top: 2656px;
+    left: 452px;
+    width: 198px;
+    font-family: "Inter-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.dashboard-deporte .ellipse-6 {
+    position: absolute;
+    top: 1366px;
+    left: 184px;
+    width: 150px;
+    height: 150px;
+    background-color: #d9d9d9;
+    border-radius: 75px;
+}
+
+.dashboard-deporte .ellipse-7 {
+    position: absolute;
+    top: 1723px;
+    left: 184px;
+    width: 150px;
+    height: 150px;
+    background-color: #d9d9d9;
+    border-radius: 75px;
+}
+
+.dashboard-deporte .ellipse-8 {
+    position: absolute;
+    top: 2080px;
+    left: 172px;
+    width: 150px;
+    height: 150px;
+    background-color: #d9d9d9;
+    border-radius: 75px;
+}
+
+.dashboard-deporte .text-wrapper-3 {
+    top: 1395px;
+    left: 435px;
+    width: 232px;
+    font-size: 32px;
+    position: absolute;
+    font-family: "Inter-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.dashboard-deporte .text-wrapper-4 {
+    top: 2109px;
+    left: 435px;
+    width: 232px;
+    font-size: 32px;
+    position: absolute;
+    font-family: "Inter-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.dashboard-deporte .text-wrapper-5 {
+    position: absolute;
+    top: 1752px;
+    left: 435px;
+    width: 232px;
+    font-family: "Inter-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 32px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.dashboard-deporte .text-wrapper-6 {
+    position: absolute;
+    top: 1453px;
+    left: 484px;
+    width: 106px;
+    font-family: "Inter-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.dashboard-deporte .text-wrapper-7 {
+    top: 1810px;
+    position: absolute;
+    left: 484px;
+    width: 106px;
+    font-family: "Inter-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.dashboard-deporte .text-wrapper-8 {
+    top: 2167px;
+    position: absolute;
+    left: 484px;
+    width: 106px;
+    font-family: "Inter-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.dashboard-deporte .rectangle-4 {
+    position: absolute;
+    top: 526px;
+    left: 297px;
+    width: 35px;
+    height: 520px;
+    background-color: #d9d9d9;
+    border-radius: 80px;
+}
+
+.dashboard-deporte .rectangle-5 {
+    position: absolute;
+    top: 526px;
+    left: 433px;
+    width: 35px;
+    height: 520px;
+    background-color: #d9d9d9;
+    border-radius: 80px;
+}
+
+.dashboard-deporte .rectangle-6 {
+    position: absolute;
+    top: 526px;
+    left: 569px;
+    width: 35px;
+    height: 520px;
+    background-color: #d9d9d9;
+    border-radius: 80px;
+}
+
+.dashboard-deporte .rectangle-7 {
+    position: absolute;
+    top: 526px;
+    left: 705px;
+    width: 35px;
+    height: 520px;
+    background-color: #d9d9d9;
+    border-radius: 80px;
+}
+
+.dashboard-deporte .rectangle-8 {
+    position: absolute;
+    top: 526px;
+    left: 841px;
+    width: 35px;
+    height: 520px;
+    background-color: #d9d9d9;
+    border-radius: 80px;
+}
+
+.dashboard-deporte .rectangle-9 {
+    position: absolute;
+    top: 526px;
+    left: 977px;
+    width: 35px;
+    height: 520px;
+    background-color: #d9d9d9;
+    border-radius: 80px;
+}
+
+.dashboard-deporte .rectangle-10 {
+    position: absolute;
+    top: 526px;
+    left: 1113px;
+    width: 35px;
+    height: 520px;
+    background-color: #d9d9d9;
+    border-radius: 80px;
+}
+
+.dashboard-deporte .text-wrapper-9 {
+    left: 297px;
+    position: absolute;
+    top: 1098px;
+    width: 35px;
+    font-family: "Inter-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 40px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.dashboard-deporte .text-wrapper-10 {
+    position: absolute;
+    top: 1098px;
+    left: 433px;
+    width: 35px;
+    font-family: "Inter-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 40px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.dashboard-deporte .text-wrapper-11 {
+    position: absolute;
+    top: 1098px;
+    left: 568px;
+    width: 35px;
+    font-family: "Inter-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 40px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.dashboard-deporte .text-wrapper-12 {
+    position: absolute;
+    top: 1098px;
+    left: 840px;
+    width: 35px;
+    font-family: "Inter-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 40px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.dashboard-deporte .text-wrapper-13 {
+    left: 976px;
+    position: absolute;
+    top: 1098px;
+    width: 35px;
+    font-family: "Inter-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 40px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.dashboard-deporte .text-wrapper-14 {
+    position: absolute;
+    top: 1098px;
+    left: 1111px;
+    width: 35px;
+    font-family: "Inter-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 40px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.dashboard-deporte .text-wrapper-15 {
+    position: absolute;
+    top: 1098px;
+    left: 705px;
+    width: 35px;
+    font-family: "Inter-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 40px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.dashboard-deporte .rectangle-11 {
+    position: absolute;
+    top: 1390px;
+    left: 1120px;
+    width: 27px;
+    height: 89px;
+    background-color: #d9d9d9;
+    border-radius: 90px;
+}
+
+.dashboard-deporte .rectangle-12 {
+    position: absolute;
+    top: 1391px;
+    left: 1120px;
+    width: 27px;
+    height: 89px;
+    background-color: #d9d9d9;
+    border-radius: 90px;
+    transform: rotate(-90deg);
+}
+
+.dashboard-deporte .rectangle-13 {
+    position: absolute;
+    top: 1744px;
+    left: 1120px;
+    width: 27px;
+    height: 89px;
+    background-color: #d9d9d9;
+    border-radius: 90px;
+}
+
+.dashboard-deporte .rectangle-14 {
+    position: absolute;
+    top: 1745px;
+    left: 1120px;
+    width: 27px;
+    height: 89px;
+    background-color: #d9d9d9;
+    border-radius: 90px;
+    transform: rotate(-90deg);
+}
+
+.dashboard-deporte .rectangle-15 {
+    position: absolute;
+    top: 2117px;
+    left: 1120px;
+    width: 27px;
+    height: 89px;
+    background-color: #d9d9d9;
+    border-radius: 90px;
+}
+
+.dashboard-deporte .rectangle-16 {
+    position: absolute;
+    top: 2118px;
+    left: 1120px;
+    width: 27px;
+    height: 89px;
+    background-color: #d9d9d9;
+    border-radius: 90px;
+    transform: rotate(-90deg);
+}
+
+.dashboard-deporte .line {
+    top: 1394px;
+    left: 205px;
+    width: 108px;
+    height: 95px;
+    position: absolute;
+    object-fit: cover;
+}
+
+.dashboard-deporte .img {
+    top: 1394px;
+    left: 204px;
+    width: 108px;
+    height: 95px;
+    position: absolute;
+    object-fit: cover;
+}
+
+.dashboard-deporte .line-2 {
+    top: 1749px;
+    left: 202px;
+    width: 111px;
+    height: 97px;
+    position: absolute;
+    object-fit: cover;
+}
+
+.dashboard-deporte .line-3 {
+    top: 1749px;
+    left: 201px;
+    width: 111px;
+    height: 97px;
+    position: absolute;
+    object-fit: cover;
+}
+
+.dashboard-deporte .line-4 {
+    top: 2108px;
+    left: 192px;
+    width: 110px;
+    height: 93px;
+    position: absolute;
+    object-fit: cover;
+}
+
+.dashboard-deporte .line-5 {
+    top: 2108px;
+    left: 191px;
+    width: 110px;
+    height: 93px;
+    position: absolute;
+    object-fit: cover;
+}
+
+.dashboard-deporte .line-6 {
+    top: 47px;
+    left: 1309px;
+    width: 68px;
+    height: 57px;
+    position: absolute;
+    object-fit: cover;
+}
+
+.dashboard-deporte .line-7 {
+    top: 47px;
+    left: 1308px;
+    width: 68px;
+    height: 57px;
+    position: absolute;
+    object-fit: cover;
+}
