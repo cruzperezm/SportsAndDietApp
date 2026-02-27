@@ -1,9 +1,16 @@
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<!-- Uploaded to: SVG Repo, www.svgrepo.com, Transformed by: SVG Repo Mixer Tools -->
-<svg fill="#000000" width="64px" height="64px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-<g id="SVGRepo_bgCarrier" stroke-width="0"/>
-<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
-<g id="SVGRepo_iconCarrier">
-<path d="M7.004 23.087l7.08-7.081-7.07-7.071L8.929 7.02l7.067 7.069L23.084 7l1.912 1.913-7.089 7.093 7.075 7.077-1.912 1.913-7.074-7.073L8.917 25z"/>
-</g>
-</svg>
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
+ "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+ width="132.000000pt" height="134.000000pt" viewBox="0 0 132.000000 134.000000"
+ preserveAspectRatio="xMidYMid meet">
+
+<g transform="translate(0.000000,134.000000) scale(0.100000,-0.100000)"
+fill="#000000" stroke="none">
+<path d="M60 1263 c0 -5 132 -140 292 -300 l293 -293 -293 -293 c-160 -160
+-292 -297 -292 -302 0 -5 134 124 298 288 l297 297 294 -294 c162 -162 299
+-292 304 -289 5 3 -124 139 -287 302 l-296 296 295 295 c162 162 292 296 289
+299 -3 3 -137 -127 -299 -289 l-295 -295 -293 293 c-160 160 -295 292 -300
+292 -4 0 -7 -3 -7 -7z"/>
+</g>
+</svg>
