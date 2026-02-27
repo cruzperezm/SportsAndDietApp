@@ -3,16 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FitFuel - Dieta</title>
+  <title>Dieta</title>
+
   <link rel="stylesheet" href="style.css">
+
+  <script src="/xlu-include-file.js"></script>
+  <script src="main.js"></script>
 </head>
 <body>
-<div id="header-global"></div>
+
+<header id="header-global" xlu-include-file="/Home/header.html"></header>
 
 <div id="contenedor-principal"></div>
 
-<div id="footer-global"></div>
+<footer id="footer-global" xlu-include-file="/Home/footer.html"></footer>
 
-<script src="main.js"></script>
+
+<script>
+  xLuIncludeFile();
+</script>
 </body>
 </html>
