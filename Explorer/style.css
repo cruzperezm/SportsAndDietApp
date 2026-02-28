@@ -1,0 +1,39 @@
+header{
+    margin-bottom: 5vh;
+}
+
+footer{
+    margin-top: 5vh;
+}
+
+.box1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.form {
+    flex: auto;
+    height: 4vh;
+    width: 55vh;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    display: block;
+}
+
+.button {
+    flex: 1;
+    width: 8vh;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    display: block;
+    text-decoration: none;
+}
