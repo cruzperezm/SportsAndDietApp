@@ -76,7 +76,22 @@
     border-radius: 9999px;
     font-weight: 600;
 }
+body:has(main.dietas) #nav-dietas {
+    background-color: #888888;
+    color: #ffffff;
+}
+
+body:has(main.deporte) #nav-deporte {
+    background-color: #888888;
+    color: #ffffff;
+}
+
+body:has(main.explorador) #nav-explorador {
+    background-color: #888888;
+    color: #ffffff;
+}
+
 body:has(main.about-us) #nav-about-us {
-    background-color: #4a90e2;
+    background-color: #888888;
     color: #ffffff;
 }
