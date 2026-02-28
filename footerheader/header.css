@@ -76,3 +76,7 @@
     border-radius: 9999px;
     font-weight: 600;
 }
+body:has(main.about-us) #nav-about-us {
+    background-color: #4a90e2;
+    color: #ffffff;
+}
