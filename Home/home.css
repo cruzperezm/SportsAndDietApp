@@ -1,20 +1,38 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+
 /* =========================================
-   Variables y Configuración Base del Index
+   Variables Globales y Configuración Base
    ========================================= */
 :root {
     --gray-placeholder: #d9d9d9;
     --gray-light: #ececec;
     --text-main: #333;
     --max-width: 1200px;
-    --section-padding: 60px 10%; /* Márgenes laterales para encuadrar todo como en la imagen */
+    --section-padding: 60px 10%;
 }
 
+* {
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+}
+
+html,
 body {
-    font-family: 'Inter', sans-serif;
     margin: 0;
+    height: 100%;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
     color: var(--text-main);
 }
 
+/* Color azul genérico para el foco de accesibilidad */
+button:focus-visible {
+    outline: 2px solid #4a90e2 !important;
+    outline: -webkit-focus-ring-color auto 5px !important;
+}
+
+/* =========================================
+   Estructura y Utilidades
+   ========================================= */
 #div-1,
 #div-2,
 #div-3,
@@ -53,7 +71,7 @@ img[src*="aspas.svg"] {
 .title {
     position: relative;
     width: 100%;
-    height: 350px; /* Altura del bloque superior */
+    height: 350px;
     display: flex;
     align-items: center;
     background-color: var(--gray-placeholder);
@@ -234,7 +252,6 @@ img[src*="aspas.svg"] {
 /* =========================================
    Botones y Enlaces del Main (Sign up, Diets, Sports)
    ========================================= */
-
 #sign-up-link {
     position: absolute;
     bottom: 95px;
@@ -253,13 +270,13 @@ img[src*="aspas.svg"] {
     display: inline-block;
 }
 
-/* Hover SOLO para el botón de texto de Sign Up (mantiene el color gris oscuro y el tamaño) */
+/* Hover SOLO para el botón de texto de Sign Up */
 #sign-up-link:hover {
     background-color: #888888 !important;
     transform: scale(1.05);
 }
 
-/* Hover para los enlaces de las imágenes (SOLO aumenta el tamaño, sin cambiar de color) */
+/* Hover para los enlaces de las imágenes */
 #sport-preview-link:hover,
 #diet-preview-link:hover {
     transform: scale(1.05);
