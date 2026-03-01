@@ -1,8 +1,5 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
 
-/* =========================================
-   Variables Globales y Configuración Base
-   ========================================= */
 :root {
     --gray-placeholder: #d9d9d9;
     --gray-light: #ececec;
@@ -24,15 +21,11 @@ body {
     color: var(--text-main);
 }
 
-/* Color azul genérico para el foco de accesibilidad */
 button:focus-visible {
     outline: 2px solid #4a90e2 !important;
     outline: -webkit-focus-ring-color auto 5px !important;
 }
 
-/* =========================================
-   Estructura y Utilidades
-   ========================================= */
 #div-1,
 #div-2,
 #div-3,
@@ -48,7 +41,6 @@ button:focus-visible {
     overflow: hidden;
 }
 
-/* Clase maestra para los cuadros con aspas del wireframe */
 .placeholder-img {
     background-color: var(--gray-placeholder);
     background-image: url('../images/aspas.svg');
@@ -59,15 +51,11 @@ button:focus-visible {
     min-height: 200px;
 }
 
-/* Aplicamos fondo gris a todas las imágenes "placeholder" del wireframe */
 img[src*="aspas.svg"] {
     background-color: var(--gray-placeholder);
     object-fit: cover;
 }
 
-/* =========================================
-   1. Hero Section (.title)
-   ========================================= */
 .title {
     position: relative;
     width: 100%;
@@ -94,9 +82,6 @@ img[src*="aspas.svg"] {
     color: #000;
 }
 
-/* =========================================
-   2. Features Section (3 columnas superiores)
-   ========================================= */
 .features-section {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -124,9 +109,6 @@ img[src*="aspas.svg"] {
     color: var(--text-main);
 }
 
-/* =========================================
-   3. Previsualizaciones (Diets & Sports)
-   ========================================= */
 .diets-preview,
 .sports-preview {
     padding: 20px 10% 60px 10%;
@@ -135,7 +117,6 @@ img[src*="aspas.svg"] {
     gap: 40px;
 }
 
-/* Layout Texto / Imagen Lado a Lado */
 .diet-preview,
 .sport-preview {
     display: flex;
@@ -143,7 +124,6 @@ img[src*="aspas.svg"] {
     gap: 50px;
 }
 
-/* Invertimos el orden para "Sports" */
 .sport-preview {
     flex-direction: row-reverse;
 }
@@ -163,7 +143,6 @@ img[src*="aspas.svg"] {
     line-height: 1.6;
 }
 
-/* Galerías de 3 imágenes */
 .diet-preview-gallery,
 .sport-preview-gallery {
     display: grid;
@@ -177,9 +156,6 @@ img[src*="aspas.svg"] {
     aspect-ratio: 1 / 1;
 }
 
-/* =========================================
-   4. Comentarios Destacados (.featured-comments)
-   ========================================= */
 .featured-comments {
     padding: var(--section-padding);
     display: flex;
@@ -225,9 +201,6 @@ img[src*="aspas.svg"] {
     line-height: 1.4;
 }
 
-/* =========================================
-   5. Sign Up Request (.sign-up-request)
-   ========================================= */
 .sign-up-request {
     display: grid;
     grid-template-columns: 1fr 300px;
@@ -249,9 +222,6 @@ img[src*="aspas.svg"] {
     height: 250px;
 }
 
-/* =========================================
-   Botones y Enlaces del Main (Sign up, Diets, Sports)
-   ========================================= */
 #sign-up-link {
     position: absolute;
     bottom: 95px;
@@ -270,14 +240,30 @@ img[src*="aspas.svg"] {
     display: inline-block;
 }
 
-/* Hover SOLO para el botón de texto de Sign Up */
 #sign-up-link:hover {
     background-color: #888888 !important;
     transform: scale(1.05);
 }
 
-/* Hover para los enlaces de las imágenes */
 #sport-preview-link:hover,
 #diet-preview-link:hover {
     transform: scale(1.05);
+}
+
+#sign-up-link {
+    position: absolute;
+    bottom: 95px;
+    right: calc(10% + 150px - 50px);
+    width: 100px;
+    height: 40px;
+    text-decoration: none;
+    color: #000000;
+    background-color: #ececec;
+    padding: 0.5rem 1.25rem;
+    border-radius: 9999px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.2s ease, transform 0.2s ease;
 }

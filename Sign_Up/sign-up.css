@@ -1,4 +1,3 @@
-/* --- Estilos Globales --- */
 :root {
     --bg-color: #ffffff;
     --card-bg: #e5e5e5;
@@ -22,7 +21,6 @@ body {
     overflow: hidden;
 }
 
-/* --- Estilos de la Tarjeta Wireframe --- */
 .wireframe-card {
     background-color: var(--card-bg);
     width: 100%;
@@ -34,24 +32,22 @@ body {
     align-items: center;
 }
 
-/* --- Contenedor de la foto de usuario --- */
 .logo-placeholder {
     width: 80px;
     height: 80px;
     margin-bottom: 50px;
-    border-radius: 50%; /* Hace que el contenedor sea un círculo perfecto */
-    background-color: #dcdcdc; /* Color de fondo provisional */
+    border-radius: 50%;
+    background-color: #dcdcdc;
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden; /* Corta cualquier parte de la imagen que sobresalga */
+    overflow: hidden;
 }
 
-/* Imagen de usuario */
 .user-avatar {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Llena el círculo sin aplastar o estirar la foto */
+    object-fit: cover;
     display: block;
 }
 
@@ -62,7 +58,6 @@ body {
     align-items: center;
 }
 
-/* Campos de texto */
 .input-field {
     width: 100%;
     margin-bottom: 30px;
@@ -80,14 +75,13 @@ body {
 }
 
 .input-field input:focus {
-    border: 1px solid #999; /* Feedback visual al escribir */
+    border: 1px solid #999;
 }
 
 .input-field input::placeholder {
     color: var(--text-color);
 }
 
-/* Fila de botones medianos (enlaces) */
 .button-row {
     display: flex;
     justify-content: space-between;
@@ -101,17 +95,19 @@ body {
     height: 35px;
     background-color: var(--element-bg);
     border-radius: 6px;
-    display: block;
     text-decoration: none;
     cursor: pointer;
     transition: background-color 0.2s;
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .wire-btn:hover {
     background-color: #dcdcdc;
 }
 
-/* --- Textos centrales --- */
 .text-links {
     text-align: center;
     font-size: 13px;
@@ -129,7 +125,6 @@ body {
     text-decoration: underline;
 }
 
-/* --- Fila de iconos rectangulares inferiores --- */
 .icon-row {
     display: flex;
     justify-content: center;
@@ -140,7 +135,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 60px; /* Mantiene la forma del recuadro de la guía */
+    width: 60px;
     height: 40px;
     background-color: var(--element-bg);
     border-radius: 6px;
@@ -150,23 +145,21 @@ body {
 }
 
 .wireframe-icon:hover {
-    transform: scale(1.05); /* Efecto de aumento al pasar el ratón */
+    transform: scale(1.05);
 }
 
-/* Regla para limitar el tamaño de los iconos y centrarlos */
 .wireframe-icon img {
-    max-width: 24px; /* Limita el ancho del icono */
-    max-height: 24px; /* Limita el alto del icono */
+    max-width: 24px;
+    max-height: 24px;
     object-fit: contain;
 }
 
-/* --- Estado deshabilitado para el botón --- */
 .wire-btn.is-disabled {
-    background-color: #cccccc; /* Un gris más oscuro para mostrar deshabilitado */
+    background-color: #cccccc;
     cursor: not-allowed;
-    pointer-events: none; /* Previene la acción del enlace */
-    opacity: 0.6; /* Un poco de transparencia */
+    pointer-events: none;
+    opacity: 0.6;
 }
 .wire-btn.is-disabled:hover {
-    background-color: #cccccc; /* No hay efecto hover para deshabilitado */
+    background-color: #cccccc;
 }

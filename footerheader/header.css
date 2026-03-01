@@ -3,21 +3,17 @@
     -webkit-font-smoothing: antialiased;
 }
 
-/* Foco de accesibilidad para los enlaces del header */
 .header a:focus-visible {
     outline: 2px solid #4a90e2 !important;
     outline: -webkit-focus-ring-color auto 5px !important;
 }
 
-/* =========================================
-   Estilos Generales del Header (Extraído de main.css)
-   ========================================= */
 .header {
     background-color: #ffffff;
     border-bottom: 1px solid #f3f4f6;
     padding: 0 2rem;
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
-    color: #333; /* --text-main */
+    color: #333;
 }
 
 .navigation {
@@ -27,9 +23,6 @@
     gap: 1rem;
 }
 
-/* =========================================
-   Estilos Base de los Enlaces
-   ========================================= */
 .navigation a {
     width: 100px;
     height: 40px;
@@ -40,7 +33,6 @@
     border-radius: 6px;
     font-weight: 500;
     transition: background-color 0.2s ease, transform 0.2s ease;
-    /* Extra: Asegura que el texto esté centrado en la caja fija */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -50,9 +42,6 @@
     background-color: #888888;
 }
 
-/* =========================================
-   Logo / Home
-   ========================================= */
 #nav-home {
     margin-right: auto;
     width: 50px;
@@ -67,9 +56,6 @@
     height: auto;
 }
 
-/* =========================================
-   Botón Log In
-   ========================================= */
 #nav-login {
     margin-left: auto;
     padding: 0.6rem 2.5rem;
