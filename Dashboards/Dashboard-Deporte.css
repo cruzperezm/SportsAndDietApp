@@ -1,0 +1,356 @@
+#dashboard-deporte {
+    margin: 0px 0px 0px 0px;
+    background-color: #ffffff;
+    overflow: hidden;
+    min-width: 1440px;
+    min-height: 3664.35vh;
+    position: relative;
+}
+#dashboard-deporte .ellipse11 {
+    margin: 0px 0px 0px 0px;
+    position: absolute;
+    width: 13.88vw;
+    height: 27.51vh;
+    top: 10.27vh;
+    left: 5.20833vw;
+    background-color: #d9d9d9;
+    border-radius: 6.944vw;
+}
+#dashboard-deporte .text1 {
+    margin: 0px 0px 0px 0px;
+    position: absolute;
+    color: #000000;
+    font-family: Inter, sans-serif;
+    font-size: 96px;
+    top: 15.22vh;
+    left: 24.166vw;
+}
+#dashboard-deporte .ellipse12 {
+    margin: 0px 0px 0px 0px;
+    position: absolute;
+    width: 6.25vw;
+    height: 12.38vh;
+    background-color: #d9d9d9;
+    border-radius: 6.944vw;
+    top: 2.85vh;
+    left: 90.0694vw;
+}
+
+#dashboard-deporte .ellipse15 {
+    margin: 0px 0px 0px 0px;
+    position: absolute;
+    width: 6.25vw;
+    height: 12.38vh;
+    background-color: #d9d9d9;
+    border-radius: 6.944vw;
+    top: 0.62vh;
+    left: 7.29166vw;
+}
+
+#dashboard-deporte .ellipse4 {
+    margin: 0px 0px 0px 0px;
+    position: absolute;
+    width: 6.25vw;
+    height: 12.38vh;
+    background-color: #aad9d9;
+    border-radius: 6.944vw;
+    top: 42.83vh;
+    left: 43.3027vw;
+}
+#dashboard-deporte .rectangle79 {
+    margin: 0px 0px 0px 0px;
+    position: absolute;
+    width: 13.88vw;
+    height: 13.74vh;
+    background-color: #f0f0f0;
+    border-radius: 4.8608vw;
+    left: 43.055vw;
+    top: 42.21vh;
+}
+#dashboard-deporte .rectangle83 {
+    margin: 0px 0px 0px 0px;
+    position: absolute;
+    width: 89.9611vw;
+    height: 105.97vh;
+    top: 59.17vh;
+    bottom: 241.25vh;
+    left: 5.06944vw;
+    background-color: #f2f2f2;
+}
+#dashboard-deporte .ellipse16 {
+    margin: 0px 0px 0px 0px;
+    position: absolute;
+    width: 10.4166vw;
+    height: 20.62vh;
+    background-color: #d9d9d9;
+    top: 187.80vh;
+    left: 12.77vw;
+    border-radius: 100vw;
+}
+#dashboard-deporte .text12 {
+    margin: 0 0 0 0;
+    position: absolute;
+    color: #000000;
+    font-family: Inter, sans-serif;
+    font-size: 32px;
+    top: 191.88vh;
+    left: 30.20833vw;
+}
+#dashboard-deporte .text13 {
+    margin: 0 0 0 0;
+    position: absolute;
+    color: #000000;
+    font-family: Inter, sans-serif;
+    font-size: 32px;
+    top: 201.23vh;
+    left: 33.611vw;
+}
+#dashboard-deporte .rectangle86 {
+    margin: 0 0 0 0;
+    position: absolute;
+    width: 1.875vw;
+    height: 12.23vh;
+    left: 81.875vw;
+    top: 191.19vh;
+    background-color: #d9d9d9;
+    border-radius: 6.2496vw;
+}
+#dashboard-deporte .rectangle87 {
+    margin: 0 0 0 0;
+    position: absolute;
+    width: 6.18033vw;
+    height: 3.71vh;
+    left: 79.722vw;
+    top: 195.60vh;
+    background-color: #d9d9d9;
+    border-radius: 6.2496vw;
+}
+#dashboard-deporte .ellipse17 {
+    margin: 0px 0px 0px 0px;
+    position: absolute;
+    width: 10.4166vw;
+    height: 20.62vh;
+    background-color: #d9d9d9;
+    top: 236.94vh;
+    left: 12.77vw;
+    border-radius: 100vw;
+}
+#dashboard-deporte .text14 {
+    margin: 0 0 0 0;
+    position: absolute;
+    color: #000000;
+    font-family: Inter, sans-serif;
+    font-size: 32px;
+    top: 240.98vh;
+    left: 30.20833vw;
+}
+#dashboard-deporte .text15 {
+    margin: 0 0 0 0;
+    position: absolute;
+    color: #000000;
+    font-family: Inter, sans-serif;
+    font-size: 32px;
+    top: 248.97vh;
+    left: 33.611vw;
+}
+#dashboard-deporte .rectangle88 {
+    margin: 0 0 0 0;
+    position: absolute;
+    width: 1.875vw;
+    height: 12.23vh;
+    left: 81.875vw;
+    top: 240.57vh;
+    background-color: #d9d9d9;
+    border-radius: 6.2496vw;
+}
+#dashboard-deporte .rectangle89 {
+    margin: 0 0 0 0;
+    position: absolute;
+    width: 6.18033vw;
+    height: 3.71vh;
+    left: 79.722vw;
+    top: 244.97vh;
+    background-color: #d9d9d9;
+    border-radius: 6.2496vw;
+}
+#dashboard-deporte .ellipse18 {
+    margin: 0px 0px 0px 0px;
+    position: absolute;
+    width: 10.4166vw;
+    height: 20.632vh;
+    background-color: #d9d9d9;
+    top: 286.10514vh;
+    left: 12.77vw;
+    border-radius: 100vw;
+}
+#dashboard-deporte .text16 {
+    margin: 0 0 0 0;
+    position: absolute;
+    color: #000000;
+    font-family: Inter, sans-serif;
+    font-size: 32px;
+    top: 290.0941098vh;
+    left: 30.20833vw;
+}
+#dashboard-deporte .text17 {
+    margin: 0 0 0 0;
+    position: absolute;
+    color: #000000;
+    font-family: Inter, sans-serif;
+    font-size: 32px;
+    top: 298.0720417vh;
+    left: 33.611vw;
+}
+#dashboard-deporte .rectangle90 {
+    margin: 0 0 0 0;
+    position: absolute;
+    width: 1.875vw;
+    height: 12.23vh;
+    left: 81.875vw;
+    top: 291.88vh;
+    background-color: #d9d9d9;
+    border-radius: 6.2496vw;
+}
+#dashboard-deporte .rectangle91 {
+    margin: 0 0 0 0;
+    position: absolute;
+    width: 6.18033vw;
+    height: 3.71vh;
+    left: 79.722vw;
+    top: 296.29vh;
+    background-color: #d9d9d9;
+    border-radius: 6.2496vw;
+}
+#dashboard-deporte .rectangle92 {
+    margin: 0 0 0 0;
+    position: absolute;
+    width: 2.43055vw;
+    height: 71.52vh;
+    top: 8.94vh;
+    left: 15.4166vw;
+    border-radius: 5.5552vw;
+    background-color: #d9d9d9;
+}
+#dashboard-deporte .text18 {
+    margin: 0 0 0 0;
+    position: absolute;
+    color: #000000;
+    font-family: Inter, sans-serif;
+    font-size: 40px;
+    top: 91.61vh;
+    left: 15.4166vw;
+}
+#dashboard-deporte .rectangle93 {
+    margin: 0 0 0 0;
+    position: absolute;
+    width: 2.43055vw;
+    height: 71.52vh;
+    top: 8.94vh;
+    left: 24.3055vw;
+    border-radius: 5.5552vw;
+    background-color: #d9d9d9;
+}
+#dashboard-deporte .text19 {
+    margin: 0 0 0 0;
+    position: absolute;
+    color: #000000;
+    font-family: Inter, sans-serif;
+    font-size: 40px;
+    top: 91.61vh;
+    left: 24.3055vw;
+}
+#dashboard-deporte .rectangle94 {
+    margin: 0 0 0 0;
+    position: absolute;
+    width: 2.43055vw;
+    height: 71.52vh;
+    top: 8.94vh;
+    left: 34.3055vw;
+    border-radius: 5.5552vw;
+    background-color: #d9d9d9;
+}
+#dashboard-deporte .text20 {
+    margin: 0 0 0 0;
+    position: absolute;
+    color: #000000;
+    font-family: Inter, sans-serif;
+    font-size: 40px;
+    top: 91.61vh;
+    left: 34.3055vw;
+}
+#dashboard-deporte .rectangle95 {
+    margin: 0 0 0 0;
+    position: absolute;
+    width: 2.43055vw;
+    height: 71.52vh;
+    top: 8.94vh;
+    left: 43.75vw;
+    border-radius: 5.5552vw;
+    background-color: #d9d9d9;
+}
+#dashboard-deporte .text21 {
+    margin: 0 0 0 0;
+    position: absolute;
+    color: #000000;
+    font-family: Inter, sans-serif;
+    font-size: 40px;
+    top: 91.61vh;
+    left: 43.75vw;
+}
+#dashboard-deporte .rectangle96 {
+    margin: 0 0 0 0;
+    position: absolute;
+    width: 2.43055vw;
+    height: 71.52vh;
+    top: 8.94vh;
+    left: 53.1944vw;
+    border-radius: 5.5552vw;
+    background-color: #d9d9d9;
+}
+#dashboard-deporte .text22 {
+    margin: 0 0 0 0;
+    position: absolute;
+    color: #000000;
+    font-family: Inter, sans-serif;
+    font-size: 40px;
+    top: 91.61vh;
+    left: 53.1944vw;
+}
+#dashboard-deporte .rectangle97 {
+    margin: 0 0 0 0;
+    position: absolute;
+    width: 2.43055vw;
+    height: 71.52vh;
+    top: 8.94vh;
+    left: 62.6388vw;
+    border-radius: 5.5552vw;
+    background-color: #d9d9d9;
+}
+#dashboard-deporte .text23 {
+    margin: 0 0 0 0;
+    position: absolute;
+    color: #000000;
+    font-family: Inter, sans-serif;
+    font-size: 40px;
+    top: 91.61vh;
+    left: 62.6388vw;
+}
+#dashboard-deporte .rectangle98 {
+    margin: 0 0 0 0;
+    position: absolute;
+    width: 2.43055vw;
+    height: 71.52vh;
+    top: 8.94vh;
+    left: 72.0833vw;
+    border-radius: 5.5552vw;
+    background-color: #d9d9d9;
+}
+#dashboard-deporte .text24 {
+    margin: 0 0 0 0;
+    position: absolute;
+    color: #000000;
+    font-family: Inter, sans-serif;
+    font-size: 40px;
+    top: 91.61vh;
+    left: 72.083vw;
+}
