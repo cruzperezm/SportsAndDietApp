@@ -1,8 +1,6 @@
 ---
 title: "Documentación del Proyecto: SportsAndDietApp"
 author: "43.5 - Sprint 1"
-date: "`r Sys.Date()`"
-output: github_document
 ---
 
 # 1. Nombre del Proyecto y Componentes
@@ -43,25 +41,30 @@ La página de inicio de la aplicación es: **`Home/index.html`**
 
 | Archivo HTML | Mockup que Implementa | Ubicación |
 | :--- | :--- | :--- |
-| `Dietas_index.html` | Grid Principal de Categorías (Dieta) | `/Dietas` |
-| `Plan_index.html` | Planificación 3x3 / Carrusel (Dieta) | `/Dietas` |
-| `Guia_index.html` | Guía de Texto Detallada (Dieta) | `/Dietas` |
-| `Deporte_index.html` | Grid Principal de Categorías (Deporte) | `/Deporte` |
-| `Plan_index.html` | Planificación 3x3 / Carrusel (Deporte) | `/Deporte` |
-| `Guia_index.html` | Guía de Texto Detallada (Deporte) | `/Deporte` |
+| `index.html` | Landing Page / Home | `/Home` |
+| `log-in-index.html` | Formulario de Acceso | `/Log_In` |
+| `sign-up-index.html` | Formulario de Registro | `/Sign_Up` |
+| `About-Us-index.html` | Información del Equipo | `/About_Us` |
+| `explorer.html` | Buscador de Contenido | `/Explorer` |
+| `Dashboard-Deporte_index.html` | Panel de Control Deporte | `/Dashboards` |
+| `Dashboard-Dieta_index.html` | Panel de Control Dieta | `/Dashboards` |
+| `Datos-Biometricos-1.html` a `5.html` | Cuestionario de Salud (Pasos) | `/Datos_Biometritos` |
+| `Dietas_index.html` | Grid de Categorías Dieta | `/Dietas` |
+| `Deporte_index.html` | Grid de Categorías Deporte | `/Deporte` |
 
 ---
 
 # 6. Listado de Archivos Templates
-Se utiliza un sistema de inyección de fragmentos para optimizar la mantenibilidad.
+El proyecto se basa en la carga de "vistas" dentro de "contenedores index".
 
-| Archivo Template (Origen) | Archivo donde se carga (Destino) | Función |
+| Archivo Template (Origen) | Archivo Destino (Carga) | Función |
 | :--- | :--- | :--- |
-| `header.html` | Todos los archivos `_index.html` | Navegación global interactiva. |
-| `footer.html` | Todos los archivos `_index.html` | Información de contacto y cierre. |
-| `Dietas_grid-view.html` | `Dietas_index.html` | Vista de categorías de dieta. |
-| `PlanDietas_grid-view.html` | `Plan_index.html` | Vista de carruseles de dieta. |
-| `PlanGuiaDieta_grid-view.html`| `Guia_index.html` | Vista de información final. |
+| `header.html` | Todos los `*_index.html` | Menú de navegación global interactivo. |
+| `footer.html` | Todos los `*_index.html` | Pie de página con información legal. |
+| `Dietas_grid-view.html` | `Dietas_index.html` | Vista principal de nutrición. |
+| `Deporte_grid-view.html` | `Deporte_index.html` | Vista principal de entrenamiento. |
+| `PlanDeporte_grid-view.html` | `Plan_index.html` | Detalle 3x3 de rutinas. |
+| `GuiaDeporte_grid-view.html` | `Guia_index.html` | Texto técnico detallado. |
 
 ---
 
