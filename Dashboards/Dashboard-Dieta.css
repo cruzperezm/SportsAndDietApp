@@ -2,16 +2,16 @@
   margin: 0px 0px 0px 0px;
   background-color: #ffffff;
   overflow: hidden;
-  width: 100vw;
-  height: 407.15vh;
-  position: absolute;
+  min-width: 1440px;
+  min-height: 2960px;
+  position: relative;
 }
 #dashboard-dieta .ellipse11 {
   margin: 0px 0px 0px 0px;
   position: absolute;
-  width: 13.89vw;
+  width: 13.88vw;
   height: 27.51vh;
-  top: 10.45vh;
+  top: 10.27vh;
   left: 5.20833vw;
   background-color: #d9d9d9;
   border-radius: 100%;
