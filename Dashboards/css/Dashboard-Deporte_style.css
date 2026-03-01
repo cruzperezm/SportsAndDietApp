@@ -48,7 +48,7 @@
     border-radius: 45px;
 }
 
-.dashboard-deporte .rectangle-2 {
+.dashboard-deporte .nav-button {
     position: absolute;
     top: 307px;
     left: 620px;
@@ -58,7 +58,7 @@
     border-radius: 70px;
 }
 
-.dashboard-deporte .ellipse-2 {
+.dashboard-deporte .nav-button-2 {
     position: absolute;
     top: 312px;
     left: 725px;

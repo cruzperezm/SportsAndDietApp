@@ -110,7 +110,7 @@
     line-height: normal;
 }
 
-.dashboard-dieta .rectangle-2 {
+.dashboard-dieta .nav-button {
     position: absolute;
     top: 307px;
     left: 620px;
@@ -120,7 +120,7 @@
     border-radius: 70px;
 }
 
-.dashboard-dieta .ellipse-4 {
+.dashboard-dieta .nav-button-2 {
     position: absolute;
     top: 312px;
     left: 625px;
