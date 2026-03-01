@@ -32,7 +32,7 @@ Siguiendo los estándares de ingeniería de software, se han identificado los si
 Los diseños previos, esquemas visuales y el flujo de navegación se encuentran documentados en el siguiente archivo:
 
 * **Nombre:** `Mockuos.pdf`
-* **Ubicación:** `[carpeta_documentacion]/Mockups.pdf` 
+* **Ubicación:** `[Mockups]/Mockups.pdf` 
 
 ---
 
