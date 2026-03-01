@@ -31,7 +31,7 @@ Siguiendo los estándares de ingeniería de software, se han identificado los si
 # 4. Mockups y Storyboard
 Los diseños previos, esquemas visuales y el flujo de navegación se encuentran documentados en el siguiente archivo:
 
-* **Nombre:** `Mockuos.pdf`
+* **Nombre:** `Mockups.pdf`
 * **Ubicación:** `[Mockups]/Mockups.pdf` 
 
 ---
