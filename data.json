@@ -1,10 +1,11 @@
 {
-  "compilerOptions": {
-    "target": "es2016",
-    "module": "commonjs",
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "strict": true,
-    "skipLibCheck": true
-  }
+  "dietas": [
+    { "id": "keto", "titulo": "Dieta Keto" },
+    { "id": "vegana", "titulo": "Dieta Vegana" },
+    { "id": "mediterranea", "titulo": "Dieta Mediterránea" },
+    { "id": "paleo", "titulo": "Dieta Paleo" },
+    { "id": "ayuno", "titulo": "Ayuno Intermitente" },
+    { "id": "proteica", "titulo": "Dieta Hiperproteica" }
+  ],
+  "deporte": []
 }

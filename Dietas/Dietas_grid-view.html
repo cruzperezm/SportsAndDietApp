@@ -1,32 +1,15 @@
 <section class="seccion-articulos">
     <div class="contenedor-texto">
-        <h1 class="titulo-principal">Lorem Ipsum</h1>
-        <p class="descripcion-principal">Lorem Ipsum Lorem Ipsum Lorem Ipsum</p>
+        <h1 class="titulo-principal">Dietas</h1>
+        <p class="descripcion-principal">Elige el plan que mejor se adapte a tu objetivo</p>
     </div>
-    <div class="contenedor-grid" id="grid-items">
-        <article class="tarjeta-item">
-            <div class="placeholder-imagen" onclick="location.href='Plan_index.html'"></div>
-            <h3>Lorem Ipsum</h3>
-        </article>
-        <article class="tarjeta-item">
-            <div class="placeholder-imagen" onclick="location.href='Plan_index.html'"></div>
-            <h3>Lorem Ipsum</h3>
-        </article>
-        <article class="tarjeta-item">
-            <div class="placeholder-imagen" onclick="location.href='Plan_index.html'"></div>
-            <h3>Lorem Ipsum</h3>
-        </article>
-        <article class="tarjeta-item">
-            <div class="placeholder-imagen" onclick="location.href='Plan_index.html'"></div>
-            <h3>Lorem Ipsum</h3>
-        </article>
-        <article class="tarjeta-item">
-            <div class="placeholder-imagen" onclick="location.href='Plan_index.html'"></div>
-            <h3>Lorem Ipsum</h3>
-        </article>
-        <article class="tarjeta-item">
-            <div class="placeholder-imagen" onclick="location.href='Plan_index.html'"></div>
-            <h3>Lorem Ipsum</h3>
-        </article>
-    </div>
+
+    <div id="contenedor-dietas" class="contenedor-grid"></div>
 </section>
+
+<template id="dieta-template">
+    <div class="tarjeta-item">
+        <div class="placeholder-imagen js-btn"></div>
+        <h3 class="js-titulo"></h3>
+    </div>
+</template>

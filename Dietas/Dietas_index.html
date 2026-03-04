@@ -1,22 +1,64 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Dieta</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="../footerheader/header.css">
-  <link rel="stylesheet" href="../footerheader/footer.css">
-  <script src="../xlu-include-file.js"></script>
+    <meta charset="UTF-8">
+    <title>SportsAndDiet - Selección de Dietas</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../footerheader/header.css">
+    <link rel="stylesheet" href="../footerheader/footer.css">
+    <script src="../xlu-include-file.js"></script>
 </head>
 <body>
+
 <header xlu-include-file="../footerheader/header.html"></header>
 
-<main class="dietas" xlu-include-file="Dietas_grid-view.html"></main>
+<main class="dietas">
+    <div id="main-content" xlu-include-file="Dietas_grid-view.html"></div>
+</main>
 
 <footer xlu-include-file="../footerheader/footer.html"></footer>
 
 <script>
-  xLuIncludeFile();
+    xLuIncludeFile();
+
+    function cargarDietasDinamicas() {
+        const contenedor = document.getElementById('contenedor-dietas');
+        const template = document.getElementById('dieta-template');
+
+        if (!contenedor || !template) {
+            setTimeout(cargarDietasDinamicas, 50);
+            return;
+        }
+
+        fetch('../data.json')
+            .then(response => response.json())
+            .then(data => {
+                if ('content' in document.createElement('template')) {
+                    const fragmento = document.createDocumentFragment();
+
+                    data.dietas.forEach(dieta => {
+                        const clon = template.content.cloneNode(true);
+
+                        clon.querySelector('.js-titulo').innerText = dieta.titulo;
+
+                        const areaClic = clon.querySelector('.js-btn');
+                        areaClic.onclick = () => {
+                            localStorage.setItem('dietaSeleccionada', dieta.id);
+                            window.location.href = 'Dietas_PlanDiario.html';
+                        };
+
+                        fragmento.appendChild(clon);
+                    });
+
+                    contenedor.innerHTML = "";
+                    contenedor.appendChild(fragmento);
+                }
+            })
+            .catch(err => console.error(err));
+    }
+
+    window.onload = cargarDietasDinamicas;
 </script>
+
 </body>
 </html>
