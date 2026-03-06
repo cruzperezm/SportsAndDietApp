@@ -25,11 +25,12 @@ body {
     align-items: center;
     text-align: center;
     flex-grow: 1;
-    row-gap: 2vw;
+    row-gap: 2vh;
 }
 
 .form-row {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     width: 100%;
     gap: 30px;
@@ -42,7 +43,7 @@ body {
     width: 25vw;
     background-color: #f0f0f0;
     border-radius: 8px;
-    display: block;
+    border: 2px solid lightgray;
 }
 
 .selector {
@@ -56,12 +57,16 @@ body {
 
 .button {
     flex: 1;
-    height: 5vw;
+    height: 3vw;
     width: 5vw;
     background-color: #f0f0f0;
     border-radius: 8px;
     display: block;
     text-decoration: none;
+}
+
+input[type=text]:focus {
+    background-color: lightblue;
 }
 
 .small{
@@ -78,4 +83,31 @@ body {
 
 .larger{
     font-size: xx-large;
+}
+
+@media (max-width: 600px) {
+    .form-row {
+        flex-direction: column;
+        align-items: center;
+    }
+    .form {
+        display: flex;
+    }
+}
+@media (min-width: 600px) {
+    .form-row {
+        flex-direction: column;
+        align-items: center;
+    }
+    .form {
+        display: flex;
+    }
+}
+@media (min-width: 992px) {
+    .form-row {
+        flex-direction: row;
+    }
+    .form {
+        display: flex;
+    }
 }
