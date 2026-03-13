@@ -1,18 +1,23 @@
 #dashboard-deporte {
-    margin: 0px 0px 0px 0px;
+    margin: 0;
     background-color: #ffffff;
-    overflow: hidden;
-    min-width: 1440px;
-    min-height: 2960px;
+    overflow-x: hidden;
+
+    width: 100%;
+    min-height: 100vh;
     position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 #dashboard-deporte .ellipse11 {
     margin: 0px 0px 0px 0px;
     position: absolute;
-    width: 13.88vw;
-    height: 27.51vh;
-    top: 10.27vh;
-    left: 5.20833vw;
+    width: 200px;
+    height: 200px;
+    top: 76px;
+    left: 75px;
     background-color: #d9d9d9;
     border-radius: 100%;
 }
@@ -22,214 +27,210 @@
     color: #000000;
     font-family: Inter, sans-serif;
     font-size: 96px;
-    top: 15.22vh;
-    left: 24.166vw;
+    top: 111px;
+    left: 348px;
 }
 #dashboard-deporte .ellipse12 {
     margin: 0px 0px 0px 0px;
     position: absolute;
-    width: 6.25vw;
-    height: 12.38vh;
+    width: 90px;
+    height: 90px;
     background-color: #d9d9d9;
-    border-radius: 6.944vw;
-    top: 2.85vh;
-    left: 90.0694vw;
+    border-radius: 100%;
+    top: 21px;
+    left: 1297px;
 }
 
 #dashboard-deporte .ellipse15 {
     margin: 0px 0px 0px 0px;
     position: absolute;
-    width: 6.25vw;
-    height: 12.38vh;
+    width: 90px;
+    height: 90px;
     background-color: #d9d9d9;
-    border-radius: 6.944vw;
-    top: 0.62vh;
-    left: 7.29166vw;
+    border-radius: 100%;
+    top: 5px;
+    left: 5px;
 }
 
 #dashboard-deporte .ellipse4 {
     margin: 0px 0px 0px 0px;
     position: absolute;
-    width: 6.25vw;
-    height: 12.38vh;
-    background-color: #aad9d9;
-    border-radius: 6.944vw;
-    top: 42.83vh;
-    left: 43.3027vw;
+    width: 90px;
+    height: 90px;
+    background-color: #d9d9d9;
+    border-radius: 100%;
+    top: 312px;
+    left: 625px;
 }
 #dashboard-deporte .rectangle79 {
     margin: 0px 0px 0px 0px;
     position: absolute;
-    width: 13.88vw;
-    height: 13.74vh;
+    width: 200px;
+    height: 100px;
     background-color: #f0f0f0;
-    border-radius: 4.8608vw;
-    left: 43.055vw;
-    top: 42.21vh;
+    border-radius: 70px;
+    left: 620px;
+    top: 307px;
 }
 #dashboard-deporte .rectangle83 {
     margin: 0px 0px 0px 0px;
     position: absolute;
-    width: 89.9611vw;
-    height: 105.97vh;
-    top: 59.17vh;
-    bottom: 241.25vh;
-    left: 5.06944vw;
+    width: 1295px;
+    height: 771px;
+    top: 431px;
+    left: 75px;
     background-color: #f2f2f2;
 }
 #dashboard-deporte .ellipse16 {
-  margin: 0px 0px 0px 0px;
-  position: absolute;
-  width: 10.4166vw;
-  height: 20.62vh;
-  background-color: #d9d9d9;
-  top: 187.80vh;
-  left: 12.77vw;
-  border-radius: 100vw;
+    margin: 0px 0px 0px 0px;
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background-color: #d9d9d9;
+    top: 1366px;
+    left: 184px;
+    border-radius: 50%;
 }
 #dashboard-deporte .text12 {
-  margin: 0 0 0 0;
-  position: absolute;
-  color: #000000;
-  font-family: Inter, sans-serif;
-  font-size: 32px;
-  top: 191.88vh;
-  left: 30.20833vw;
+    margin: 0 0 0 0;
+    position: absolute;
+    color: #000000;
+    font-family: Inter, sans-serif;
+    font-size: 32px;
+    top: 1395px;
+    left: 435px;
 }
 #dashboard-deporte .text13 {
-  margin: 0 0 0 0;
-  position: absolute;
-  color: #000000;
-  font-family: Inter, sans-serif;
-  font-size: 32px;
-  top: 201.23vh;
-  left: 33.611vw;
+    margin: 0 0 0 0;
+    position: absolute;
+    color: #000000;
+    font-family: Inter, sans-serif;
+    font-size: 32px;
+    top: 1453px;
+    left: 484px;
 }
 #dashboard-deporte .rectangle86 {
-  margin: 0 0 0 0;
-  position: absolute;
-  width: 1.875vw;
-  height: 12.23vh;
-  left: 81.875vw;
-  top: 191.19vh;
-  background-color: #d9d9d9;
-  border-radius: 6.2496vw;
+    margin: 0 0 0 0;
+    position: absolute;
+    width: 27px;
+    height: 89px;
+    top: 1395px;
+    left: 1179px;
+    background-color: #d9d9d9;
+    border-radius: 90px;
 }
 #dashboard-deporte .rectangle87 {
-  margin: 0 0 0 0;
-  position: absolute;
-  width: 6.18033vw;
-  height: 3.71vh;
-  left: 79.722vw;
-  top: 195.60vh;
-  background-color: #d9d9d9;
-  border-radius: 6.2496vw;
-}
+    margin: 0 0 0 0;
+    position: absolute;
+    width: 89px;
+    height: 27px;
+    top: 1427px;
+    left: 1148px;
+    background-color: #d9d9d9;
+    border-radius: 90px;}
 #dashboard-deporte .ellipse17 {
-  margin: 0px 0px 0px 0px;
-  position: absolute;
-  width: 10.4166vw;
-  height: 20.62vh;
-  background-color: #d9d9d9;
-  top: 236.94vh;
-  left: 12.77vw;
-  border-radius: 100vw;
+    margin: 0px 0px 0px 0px;
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background-color: #d9d9d9;
+    top: 1723px;
+    left: 184px;
+    border-radius: 50%;
 }
 #dashboard-deporte .text14 {
-  margin: 0 0 0 0;
-  position: absolute;
-  color: #000000;
-  font-family: Inter, sans-serif;
-  font-size: 32px;
-  top: 240.98vh;
-  left: 30.20833vw;
+    margin: 0 0 0 0;
+    position: absolute;
+    color: #000000;
+    font-family: Inter, sans-serif;
+    font-size: 32px;
+    top: 1752px;
+    left: 435px;
 }
 #dashboard-deporte .text15 {
-  margin: 0 0 0 0;
-  position: absolute;
-  color: #000000;
-  font-family: Inter, sans-serif;
-  font-size: 32px;
-  top: 248.97vh;
-  left: 33.611vw;
+    margin: 0 0 0 0;
+    position: absolute;
+    color: #000000;
+    font-family: Inter, sans-serif;
+    font-size: 32px;
+    top: 1810px;
+    left: 484px;
 }
 #dashboard-deporte .rectangle88 {
-  margin: 0 0 0 0;
-  position: absolute;
-  width: 1.875vw;
-  height: 12.23vh;
-  left: 81.875vw;
-  top: 240.57vh;
-  background-color: #d9d9d9;
-  border-radius: 6.2496vw;
+    margin: 0 0 0 0;
+    position: absolute;
+    width: 27px;
+    height: 89px;
+    top: 1749px;
+    left: 1179px;
+    background-color: #d9d9d9;
+    border-radius: 90px;
 }
 #dashboard-deporte .rectangle89 {
-  margin: 0 0 0 0;
-  position: absolute;
-  width: 6.18033vw;
-  height: 3.71vh;
-  left: 79.722vw;
-  top: 244.97vh;
-  background-color: #d9d9d9;
-  border-radius: 6.2496vw;
-}
+    margin: 0 0 0 0;
+    position: absolute;
+    width: 89px;
+    height: 27px;
+    top: 1781px;
+    left: 1148px;
+    background-color: #d9d9d9;
+    border-radius: 90px;}
 #dashboard-deporte .ellipse18 {
-  margin: 0px 0px 0px 0px;
-  position: absolute;
-  width: 10.4166vw;
-  height: 20.632vh;
-  background-color: #d9d9d9;
-  top: 286.10514vh;
-  left: 12.77vw;
-  border-radius: 100vw;
+    margin: 0px 0px 0px 0px;
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background-color: #d9d9d9;
+    top: 2061px;
+    left: 184px;
+    border-radius: 50%;
 }
 #dashboard-deporte .text16 {
-  margin: 0 0 0 0;
-  position: absolute;
-  color: #000000;
-  font-family: Inter, sans-serif;
-  font-size: 32px;
-  top: 290.0941098vh;
-  left: 30.20833vw;
+    margin: 0 0 0 0;
+    position: absolute;
+    color: #000000;
+    font-family: Inter, sans-serif;
+    font-size: 32px;
+    top: 2019px;
+    left: 435px;
 }
 #dashboard-deporte .text17 {
-  margin: 0 0 0 0;
-  position: absolute;
-  color: #000000;
-  font-family: Inter, sans-serif;
-  font-size: 32px;
-  top: 298.0720417vh;
-  left: 33.611vw;
+    margin: 0 0 0 0;
+    position: absolute;
+    color: #000000;
+    font-family: Inter, sans-serif;
+    font-size: 32px;
+    top: 2167px;
+    left: 484px;
 }
 #dashboard-deporte .rectangle90 {
-  margin: 0 0 0 0;
-  position: absolute;
-  width: 1.875vw;
-  height: 12.23vh;
-  left: 81.875vw;
-  top: 291.88vh;
-  background-color: #d9d9d9;
-  border-radius: 6.2496vw;
+    margin: 0 0 0 0;
+    position: absolute;
+    width: 27px;
+    height: 89px;
+    top: 2122px;
+    left: 1179px;
+    background-color: #d9d9d9;
+    border-radius: 90px;
 }
 #dashboard-deporte .rectangle91 {
-  margin: 0 0 0 0;
-  position: absolute;
-  width: 6.18033vw;
-  height: 3.71vh;
-  left: 79.722vw;
-  top: 296.29vh;
-  background-color: #d9d9d9;
-  border-radius: 6.2496vw;
+    margin: 0 0 0 0;
+    position: absolute;
+    width: 89px;
+    height: 27px;
+    top: 2154px;
+    left: 1148px;
+    background-color: #d9d9d9;
+    border-radius: 90px;
 }
-
 #dashboard-deporte .rectangle92 {
     margin: 0 0 0 0;
     position: absolute;
-    width: 2.43055vw;
-    height: 71.52vh;
-    top: 8.94vh;
-    left: 15.4166vw;
-    border-radius: 5.5552vw;
+    width: 35px;
+    height: 520px;
+    top: 94px;
+    left: 222px;
+    border-radius: 80px;
     background-color: #d9d9d9;
 }
 #dashboard-deporte .text18 {
@@ -238,17 +239,17 @@
     color: #000000;
     font-family: Inter, sans-serif;
     font-size: 40px;
-    top: 91.61vh;
-    left: 15.4166vw;
+    top: 666px;
+    left: 222px;
 }
 #dashboard-deporte .rectangle93 {
     margin: 0 0 0 0;
     position: absolute;
-    width: 2.43055vw;
-    height: 71.52vh;
-    top: 8.94vh;
-    left: 24.3055vw;
-    border-radius: 5.5552vw;
+    width: 35px;
+    height: 520px;
+    top: 94px;
+    left: 358px;
+    border-radius: 80px;
     background-color: #d9d9d9;
 }
 #dashboard-deporte .text19 {
@@ -257,17 +258,17 @@
     color: #000000;
     font-family: Inter, sans-serif;
     font-size: 40px;
-    top: 91.61vh;
-    left: 24.3055vw;
+    top: 666px;
+    left: 358px;
 }
 #dashboard-deporte .rectangle94 {
     margin: 0 0 0 0;
     position: absolute;
-    width: 2.43055vw;
-    height: 71.52vh;
-    top: 8.94vh;
-    left: 34.3055vw;
-    border-radius: 5.5552vw;
+    width: 35px;
+    height: 520px;
+    top: 94px;
+    left: 494px;
+    border-radius: 80px;
     background-color: #d9d9d9;
 }
 #dashboard-deporte .text20 {
@@ -276,17 +277,17 @@
     color: #000000;
     font-family: Inter, sans-serif;
     font-size: 40px;
-    top: 91.61vh;
-    left: 34.3055vw;
+    top: 666px;
+    left: 494px;
 }
 #dashboard-deporte .rectangle95 {
     margin: 0 0 0 0;
     position: absolute;
-    width: 2.43055vw;
-    height: 71.52vh;
-    top: 8.94vh;
-    left: 43.75vw;
-    border-radius: 5.5552vw;
+    width: 35px;
+    height: 520px;
+    top: 94px;
+    left: 630px;
+    border-radius: 80px;
     background-color: #d9d9d9;
 }
 #dashboard-deporte .text21 {
@@ -295,17 +296,17 @@
     color: #000000;
     font-family: Inter, sans-serif;
     font-size: 40px;
-    top: 91.61vh;
-    left: 43.75vw;
+    top: 666px;
+    left: 630px;
 }
 #dashboard-deporte .rectangle96 {
     margin: 0 0 0 0;
     position: absolute;
-    width: 2.43055vw;
-    height: 71.52vh;
-    top: 8.94vh;
-    left: 53.1944vw;
-    border-radius: 5.5552vw;
+    width: 35px;
+    height: 520px;
+    top: 94px;
+    left: 766px;
+    border-radius: 80px;
     background-color: #d9d9d9;
 }
 #dashboard-deporte .text22 {
@@ -314,17 +315,17 @@
     color: #000000;
     font-family: Inter, sans-serif;
     font-size: 40px;
-    top: 91.61vh;
-    left: 53.1944vw;
+    top: 666px;
+    left: 766px;
 }
 #dashboard-deporte .rectangle97 {
     margin: 0 0 0 0;
     position: absolute;
-    width: 2.43055vw;
-    height: 71.52vh;
-    top: 8.94vh;
-    left: 62.6388vw;
-    border-radius: 5.5552vw;
+    width: 35px;
+    height: 520px;
+    top: 94px;
+    left: 902px;
+    border-radius: 80px;
     background-color: #d9d9d9;
 }
 #dashboard-deporte .text23 {
@@ -333,17 +334,17 @@
     color: #000000;
     font-family: Inter, sans-serif;
     font-size: 40px;
-    top: 91.61vh;
-    left: 62.6388vw;
+    top: 666px;
+    left: 902px;
 }
 #dashboard-deporte .rectangle98 {
     margin: 0 0 0 0;
     position: absolute;
-    width: 2.43055vw;
-    height: 71.52vh;
-    top: 8.94vh;
-    left: 72.0833vw;
-    border-radius: 5.5552vw;
+    width: 35px;
+    height: 520px;
+    top: 94px;
+    left: 1038px;
+    border-radius: 80px;
     background-color: #d9d9d9;
 }
 #dashboard-deporte .text24 {
@@ -352,6 +353,6 @@
     color: #000000;
     font-family: Inter, sans-serif;
     font-size: 40px;
-    top: 91.61vh;
-    left: 72.083vw;
+    top: 666px;
+    left: 1038px;
 }

@@ -2,17 +2,17 @@
   margin: 0px 0px 0px 0px;
   background-color: #ffffff;
   overflow: hidden;
-  min-width: 1440px;
-  min-height: 2960px;
-  position: relative;
+  width: 1440px;
+  height: 2960px;
+  position: absolute;
 }
 #dashboard-dieta .ellipse11 {
   margin: 0px 0px 0px 0px;
   position: absolute;
-  width: 13.88vw;
-  height: 27.51vh;
-  top: 10.27vh;
-  left: 5.20833vw;
+  width: 200px;
+  height: 200px;
+  top: 76px;
+  left: 75px;
   background-color: #d9d9d9;
   border-radius: 100%;
 }
@@ -22,120 +22,208 @@
   color: #000000;
   font-family: Inter, sans-serif;
   font-size: 96px;
-  top: 15.27vh;
-  left: 24.16665vw;
+  top: 111px;
+  left: 348px;
 }
 #dashboard-dieta .ellipse12 {
   margin: 0px 0px 0px 0px;
   position: absolute;
-  width: 6.25vw;
-  height: 12.38vh;
+  width: 90px;
+  height: 90px;
   background-color: #d9d9d9;
   border-radius: 100%;
-  top: 2.89vh;
-  left: 90.06939vw;
+  top: 21px;
+  left: 1297px;
 }
 
 #dashboard-dieta .ellipse15 {
   margin: 0px 0px 0px 0px;
   position: absolute;
-  width: 6.25vw;
-  height: 12.38vh;
+  width: 90px;
+  height: 90px;
   background-color: #d9d9d9;
   border-radius: 100%;
-  top: 0.69vh;
-  left: 0.34722vw;
+  top: 5px;
+  left: 105px;
 }
 
 #dashboard-dieta .ellipse4 {
   margin: 0px 0px 0px 0px;
   position: absolute;
-  width: 6.25vw;
-  height: 12.38vh;
+  width: 90px;
+  height: 90px;
   background-color: #d9d9d9;
   border-radius: 100%;
-  top: 42.92vh;
-  left: 43.40275vw;
+  top: 312px;
+  left: 625px;
 }
 #dashboard-dieta .rectangle79 {
   margin: 0px 0px 0px 0px;
   position: absolute;
-  width: 13.89vw;
-  height: 13.76vh;
+  width: 200px;
+  height: 100px;
   background-color: #f0f0f0;
   border-radius: 70px;
-  left: 43.05553vw;
-  top: 42.23vh;
+  left: 620px;
+  top: 307px;
 }
 #dashboard-dieta .rectangle83 {
   margin: 0px 0px 0px 0px;
   position: absolute;
-  width: 89.92vw;
-  height: 106.05vh;
-  top: 59.28vh;
-  left: 5.20833vw;
+  width: 1295px;
+  height: 771px;
+  top: 431px;
+  left: 75px;
   background-color: #f2f2f2;
 }
 #dashboard-dieta .ellipse13 {
   margin: 0px 0px 0px 0px;
   position: absolute;
-  width: 34.72vw;
-  height: 68.78vh;
-  top: 2.75vh;
-  left: 27.56943vw;
+  width: 500px;
+  height: 500px;
+  top: 20px;
+  left: 397px;
   background-color: #d9d9d9;
   border-radius: 100%;
 }
 #dashboard-dieta .ellipse14 {
   margin: 0px 0px 0px 0px;
   position: absolute;
-  width: 31.25vw;
-  height: 61.90vh;
-  top: 3.44vh;
-  left: 1.73611vw;
+  width: 450px;
+  height: 450px;
+  top: 25px;
+  left: 25px;
   background-color: #ffffff;
   border-radius: 100%;
 }
-
+#dashboard-dieta .text2 {
+  margin: 0px 0px 0px 0px;
+  position: absolute;
+  color: #000000;
+  font-family: Inter, sans-serif;
+  font-size: 48px;
+  top: 132px;
+  left: 72px;
+}
+#dashboard-dieta .text3 {
+  margin: 0px 0px 0px 0px;
+  position: absolute;
+  color: #000000;
+  font-family: Inter, sans-serif;
+  font-size: 128px;
+  top: 190px;
+  left: 108px;
+}
 #dashboard-dieta .rectangle80 {
   margin: 0px 0px 0px 0px;
   position: absolute;
-  left: 5.55555vw;
-  top: 89.13vh;
-  width: 18.33vw;
-  height: 2.75vh;
+  left: 80px;
+  top: 648px;
+  width: 264px;
+  height: 20px;
   border-radius: 90px;
   background-color: #d9d9d9;
 }
 #dashboard-dieta .rectangle81 {
   margin: 0px 0px 0px 0px;
   position: absolute;
-  left: 35.62497vw;
-  top: 89.13vh;
-  width: 18.33vw;
-  height: 2.75vh;
+  left: 513px;
+  top: 648px;
+  width: 264px;
+  height: 20px;
   border-radius: 90px;
   background-color: #d9d9d9;
 }
 #dashboard-dieta .rectangle82 {
   margin: 0px 0px 0px 0px;
   position: absolute;
-  left: 66.87495vw;
-  top: 89.13vh;
-  width: 18.33vw;
-  height: 2.75vh;
+  left: 963px;
+  top: 648px;
+  width: 264px;
+  height: 20px;
   border-radius: 90px;
   background-color: #d9d9d9;
 }
+#dashboard-dieta .text4 {
+  margin: 0 0 0 0;
+  position: absolute;
+  color: #000000;
+  font-family: Inter, sans-serif;
+  font-size: 32px;
+  top: 219px;
+  left: 80px;
+}
+#dashboard-dieta .text5 {
+  margin: 0 0 0 0;
+  position: absolute;
+  color: #000000;
+  font-family: Inter, sans-serif;
+  font-size: 32px;
+  top: 219px;
+  left: 1010px;
+}
+#dashboard-dieta .text6 {
+  margin: 0 0 0 0;
+  position: absolute;
+  color: #000000;
+  font-family: Inter, sans-serif;
+  font-size: 32px;
+  top: 590px;
+  left: 108px;
+}
+#dashboard-dieta .text7 {
+  margin: 0 0 0 0;
+  position: absolute;
+  color: #000000;
+  font-family: Inter, sans-serif;
+  font-size: 32px;
+  top: 689px;
+  left: 142px;
+}
+#dashboard-dieta .text8 {
+  margin: 0 0 0 0;
+  position: absolute;
+  color: #000000;
+  font-family: Inter, sans-serif;
+  font-size: 32px;
+  top: 590px;
+  left: 541px;
+}
+#dashboard-dieta .text9 {
+  margin: 0 0 0 0;
+  position: absolute;
+  color: #000000;
+  font-family: Inter, sans-serif;
+  font-size: 32px;
+  top: 689px;
+  left: 575px;}
+#dashboard-dieta .text10 {
+  margin: 0 0 0 0;
+  position: absolute;
+  color: #000000;
+  font-family: Inter, sans-serif;
+  font-size: 32px;
+  top: 590px;
+  left: 991px;
+}
+#dashboard-dieta .text11 {
+  margin: 0 0 0 0;
+  position: absolute;
+  color: #000000;
+  font-family: Inter, sans-serif;
+  font-size: 32px;
+  top: 689px;
+  left: 1025px;}
+
 #dashboard-dieta .ellipse16 {
   margin: 0px 0px 0px 0px;
   position: absolute;
-  width: 10.4166vw;
-  height: 20.62vh;
+  width: 150px;
+  height: 150px;
   background-color: #d9d9d9;
-  top: 187.80vh;
-  left: 12.77vw;
-  border-radius: 100vw;
+  top: 1366px;
+  left: 184px;
+  border-radius: 50%;
 }
 #dashboard-dieta .text12 {
   margin: 0 0 0 0;
@@ -143,8 +231,8 @@
   color: #000000;
   font-family: Inter, sans-serif;
   font-size: 32px;
-  top: 191.88vh;
-  left: 30.20833vw;
+  top: 1395px;
+  left: 435px;
 }
 #dashboard-dieta .text13 {
   margin: 0 0 0 0;
@@ -152,38 +240,37 @@
   color: #000000;
   font-family: Inter, sans-serif;
   font-size: 32px;
-  top: 201.23vh;
-  left: 33.611vw;
+  top: 1453px;
+  left: 484px;
 }
 #dashboard-dieta .rectangle86 {
   margin: 0 0 0 0;
   position: absolute;
-  width: 1.875vw;
-  height: 12.23vh;
-  left: 81.875vw;
-  top: 191.19vh;
+  width: 27px;
+  height: 89px;
+  top: 1395px;
+  left: 1179px;
   background-color: #d9d9d9;
-  border-radius: 6.2496vw;
+  border-radius: 90px;
 }
 #dashboard-dieta .rectangle87 {
   margin: 0 0 0 0;
   position: absolute;
-  width: 6.18033vw;
-  height: 3.71vh;
-  left: 79.722vw;
-  top: 195.60vh;
+  width: 89px;
+  height: 27px;
+  top: 1427px;
+  left: 1148px;
   background-color: #d9d9d9;
-  border-radius: 6.2496vw;
-}
+  border-radius: 90px;}
 #dashboard-dieta .ellipse17 {
   margin: 0px 0px 0px 0px;
   position: absolute;
-  width: 10.4166vw;
-  height: 20.62vh;
+  width: 150px;
+  height: 150px;
   background-color: #d9d9d9;
-  top: 236.94vh;
-  left: 12.77vw;
-  border-radius: 100vw;
+  top: 1723px;
+  left: 184px;
+  border-radius: 50%;
 }
 #dashboard-dieta .text14 {
   margin: 0 0 0 0;
@@ -191,8 +278,8 @@
   color: #000000;
   font-family: Inter, sans-serif;
   font-size: 32px;
-  top: 240.98vh;
-  left: 30.20833vw;
+  top: 1752px;
+  left: 435px;
 }
 #dashboard-dieta .text15 {
   margin: 0 0 0 0;
@@ -200,38 +287,37 @@
   color: #000000;
   font-family: Inter, sans-serif;
   font-size: 32px;
-  top: 248.97vh;
-  left: 33.611vw;
+  top: 1810px;
+  left: 484px;
 }
 #dashboard-dieta .rectangle88 {
   margin: 0 0 0 0;
   position: absolute;
-  width: 1.875vw;
-  height: 12.23vh;
-  left: 81.875vw;
-  top: 240.57vh;
+  width: 27px;
+  height: 89px;
+  top: 1749px;
+  left: 1179px;
   background-color: #d9d9d9;
-  border-radius: 6.2496vw;
+  border-radius: 90px;
 }
 #dashboard-dieta .rectangle89 {
   margin: 0 0 0 0;
   position: absolute;
-  width: 6.18033vw;
-  height: 3.71vh;
-  left: 79.722vw;
-  top: 244.97vh;
+  width: 89px;
+  height: 27px;
+  top: 1781px;
+  left: 1148px;
   background-color: #d9d9d9;
-  border-radius: 6.2496vw;
-}
+  border-radius: 90px;}
 #dashboard-dieta .ellipse18 {
   margin: 0px 0px 0px 0px;
   position: absolute;
-  width: 10.4166vw;
-  height: 20.632vh;
+  width: 150px;
+  height: 150px;
   background-color: #d9d9d9;
-  top: 286.10514vh;
-  left: 12.77vw;
-  border-radius: 100vw;
+  top: 2061px;
+  left: 184px;
+  border-radius: 50%;
 }
 #dashboard-dieta .text16 {
   margin: 0 0 0 0;
@@ -239,8 +325,8 @@
   color: #000000;
   font-family: Inter, sans-serif;
   font-size: 32px;
-  top: 290.0941098vh;
-  left: 30.20833vw;
+  top: 2019px;
+  left: 435px;
 }
 #dashboard-dieta .text17 {
   margin: 0 0 0 0;
@@ -248,116 +334,26 @@
   color: #000000;
   font-family: Inter, sans-serif;
   font-size: 32px;
-  top: 298.0720417vh;
-  left: 33.611vw;
+  top: 2167px;
+  left: 484px;
 }
 #dashboard-dieta .rectangle90 {
   margin: 0 0 0 0;
   position: absolute;
-  width: 1.875vw;
-  height: 12.23vh;
-  left: 81.875vw;
-  top: 291.88vh;
+  width: 27px;
+  height: 89px;
+  top: 2122px;
+  left: 1179px;
   background-color: #d9d9d9;
-  border-radius: 6.2496vw;
+  border-radius: 90px;
 }
 #dashboard-dieta .rectangle91 {
   margin: 0 0 0 0;
   position: absolute;
-  width: 6.18033vw;
-  height: 3.71vh;
-  left: 79.722vw;
-  top: 296.29vh;
+  width: 89px;
+  height: 27px;
+  top: 2154px;
+  left: 1148px;
   background-color: #d9d9d9;
-  border-radius: 6.2496vw;
-}
-#dashboard-dieta .text2{
-  margin: 0 0 0 0;
-  position: absolute;
-  color: #000000;
-  font-family: Inter, sans-serif;
-  font-size: 48px;
-  left: 7.5vw;
-  top:18.15667259vh;
-}
-#dashboard-dieta .text3{
-  margin: 0 0 0 0;
-  position: absolute;
-  color: #000000;
-  font-family: Inter, sans-serif;
-  font-size: 128px;
-  left: 10vw;
-  top:26.13460449vh;
-}
-#dashboard-dieta .text4{
-  margin: 0 0 0 0;
-  position: absolute;
-  color: #000000;
-  font-family: Inter, sans-serif;
-  font-size: 32px;
-  left: 9svw;
-  top:30.12357043vh;
-}
-#dashboard-dieta .text5{
-  margin: 0 0 0 0;
-  position: absolute;
-  color: #000000;
-  font-family: Inter, sans-serif;
-  font-size: 32px;
-  left: 70.13888vw;
-  top:30.12357043vh;
-}
-#dashboard-dieta .text6{
-  margin: 0 0 0 0;
-  position: absolute;
-  color: #000000;
-  font-family: Inter, sans-serif;
-  font-size: 32px;
-  left: 7.91666vw;
-  top:81.15482446vh;
-}
-#dashboard-dieta .text7{
-  margin: 0 0 0 0;
-  position: absolute;
-  color: #000000;
-  font-family: Inter, sans-serif;
-  font-size: 32px;
-  left: 10.208333vw;
-  top:94.7723289vh;
-}
-#dashboard-dieta .text8{
-  margin: 0 0 0 0;
-  position: absolute;
-  color: #000000;
-  font-family: Inter, sans-serif;
-  font-size: 32px;
-  left: 39.20834vw;
-  top:81.15482446vh;
-}
-#dashboard-dieta .text9{
-  margin: 0 0 0 0;
-  position: absolute;
-  color: #000000;
-  font-family: Inter, sans-serif;
-  font-size: 32px;
-  left: 41.70832vw;
-  top:94.7723289vh;
-}
-#dashboard-dieta .text10{
-  margin: 0 0 0 0;
-  position: absolute;
-  color: #000000;
-  font-family: Inter, sans-serif;
-  font-size: 32px;
-  left: 70.44445vw;
-  top:81.15482446vh;
-}
-#dashboard-dieta .text11{
-  margin: 0 0 0 0;
-  position: absolute;
-  color: #000000;
-  font-family: Inter, sans-serif;
-  font-size: 32px;
-  left: 72.81943vw;
-  top:94.7723289vh;
+  border-radius: 90px;
 }
