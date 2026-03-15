@@ -2,6 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Plan de Dieta</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="../footerheader/header.css">
@@ -10,8 +11,112 @@
 </head>
 <body>
 <header xlu-include-file="../footerheader/header.html"></header>
+
 <main xlu-include-file="PlanDietas_grid-view.html"></main>
+
 <footer xlu-include-file="../footerheader/footer.html"></footer>
-<script>xLuIncludeFile();</script>
+
+<script>
+  xLuIncludeFile();
+
+  function cargarPaginaPlan() {
+    const contenedorPrincipal = document.getElementById('secciones-dinamicas');
+    const tSeccion = document.getElementById('temp-seccion');
+    const tPlato = document.getElementById('temp-plato');
+
+    if (!contenedorPrincipal || !tSeccion || !tPlato) {
+      setTimeout(cargarPaginaPlan, 100);
+      return;
+    }
+
+    fetch('../data.json')
+            .then(res => res.json())
+            .then(data => {
+              const dietaId = localStorage.getItem('dietaSeleccionada') || 'keto';
+              const dieta = data.dietas.find(d => d.id === dietaId);
+
+              const tituloHero = document.getElementById('titulo-dieta-dinamico');
+              if (tituloHero) tituloHero.innerText = dieta.titulo;
+
+              dieta.plan.forEach(fase => {
+                const clonSeccion = tSeccion.content.cloneNode(true);
+                clonSeccion.querySelector('.js-momento').innerText = fase.momento;
+
+                const grid = clonSeccion.querySelector('.js-contenedor-platos');
+
+                fase.opciones.forEach(plato => {
+                  const clonPlato = tPlato.content.cloneNode(true);
+                  clonPlato.querySelector('.js-nombre').innerText = plato.nombre;
+
+                  const cuadro = clonPlato.querySelector('.js-btn-receta');
+
+                  if (plato.imagen) {
+                    cuadro.style.backgroundImage = `url('${plato.imagen}')`;
+                    cuadro.style.backgroundSize = 'cover';
+                    cuadro.style.backgroundPosition = 'center';
+                  }
+
+                  cuadro.onclick = () => {
+                    localStorage.setItem('recetaSeleccionada', plato.id);
+                    window.location.href = 'Guia_index.html';
+                  };
+
+                  grid.appendChild(clonPlato);
+                });
+
+                const btnNext = clonSeccion.querySelector('.js-next');
+                const btnPrev = clonSeccion.querySelector('.js-prev');
+                let enMovimiento = false;
+
+                btnNext.onclick = () => {
+                  if (enMovimiento) return;
+                  enMovimiento = true;
+
+                  const anchoElemento = grid.firstElementChild.offsetWidth;
+                  const gap = parseFloat(window.getComputedStyle(grid).gap) || 0;
+                  const distancia = anchoElemento + gap;
+
+                  grid.style.transition = 'transform 0.5s ease';
+                  grid.style.transform = `translateX(-${distancia}px)`;
+
+                  setTimeout(() => {
+                    grid.style.transition = 'none';
+                    grid.appendChild(grid.firstElementChild);
+                    grid.style.transform = 'translateX(0)';
+                    enMovimiento = false;
+                  }, 500);
+                };
+
+                btnPrev.onclick = () => {
+                  if (enMovimiento) return;
+                  enMovimiento = true;
+
+                  const anchoElemento = grid.firstElementChild.offsetWidth;
+                  const gap = parseFloat(window.getComputedStyle(grid).gap) || 0;
+                  const distancia = anchoElemento + gap;
+
+                  grid.style.transition = 'none';
+                  grid.insertBefore(grid.lastElementChild, grid.firstElementChild);
+
+                  grid.style.transform = `translateX(-${distancia}px)`;
+
+                  grid.offsetHeight;
+
+                  grid.style.transition = 'transform 0.5s ease';
+                  grid.style.transform = 'translateX(0)';
+
+                  setTimeout(() => {
+                    enMovimiento = false;
+                  }, 500);
+                };
+
+                contenedorPrincipal.appendChild(clonSeccion);
+              });
+            })
+            .catch(error => console.error("Error cargando el plan:", error));
+  }
+
+  window.onload = cargarPaginaPlan;
+</script>
 </body>
 </html>

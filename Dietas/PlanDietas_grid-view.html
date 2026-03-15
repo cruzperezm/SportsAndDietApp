@@ -1,46 +1,29 @@
 <section class="plan-dietas">
     <div class="hero-section">
-        <h1 class="text-96">Lorem Ipsum</h1>
+        <h1 id="titulo-dieta-dinamico" class="text-96">Cargando...</h1>
     </div>
-    <div id="secciones-dinamicas">
-        <div class="seccion-comida">
-            <h2 class="text-48">Lorem Ipsum</h2>
-            <div class="wrapper-carrusel">
-                <div class="grid-3-cuadros">
-                    <div class="contenedor-item"><div class="cuadro-gris" onclick="location.href='Guia_index.html'"><div class="texto-interior">Lorem Ipsum</div></div></div>
-                    <div class="contenedor-item"><div class="cuadro-gris" onclick="location.href='Guia_index.html'"><div class="texto-interior">Lorem Ipsum</div></div></div>
-                    <div class="contenedor-item"><div class="cuadro-gris" onclick="location.href='Guia_index.html'"><div class="texto-interior">Lorem Ipsum</div></div></div>
-                </div>
-            </div>
-            <div class="controles-carrusel">
-                <button class="btn-nav">←</button><button class="btn-nav">→</button>
-            </div>
-        </div>
-        <div class="seccion-comida">
-            <h2 class="text-48">Lorem Ipsum</h2>
-            <div class="wrapper-carrusel">
-                <div class="grid-3-cuadros">
-                    <div class="contenedor-item"><div class="cuadro-gris" onclick="location.href='Guia_index.html'"><div class="texto-interior">Lorem Ipsum</div></div></div>
-                    <div class="contenedor-item"><div class="cuadro-gris" onclick="location.href='Guia_index.html'"><div class="texto-interior">Lorem Ipsum</div></div></div>
-                    <div class="contenedor-item"><div class="cuadro-gris" onclick="location.href='Guia_index.html'"><div class="texto-interior">Lorem Ipsum</div></div></div>
-                </div>
-            </div>
-            <div class="controles-carrusel">
-                <button class="btn-nav">←</button><button class="btn-nav">→</button>
-            </div>
-        </div>
-        <div class="seccion-comida">
-            <h2 class="text-48">Lorem Ipsum</h2>
-            <div class="wrapper-carrusel">
-                <div class="grid-3-cuadros">
-                    <div class="contenedor-item"><div class="cuadro-gris" onclick="location.href='Guia_index.html'"><div class="texto-interior">Lorem Ipsum</div></div></div>
-                    <div class="contenedor-item"><div class="cuadro-gris" onclick="location.href='Guia_index.html'"><div class="texto-interior">Lorem Ipsum</div></div></div>
-                    <div class="contenedor-item"><div class="cuadro-gris" onclick="location.href='Guia_index.html'"><div class="texto-interior">Lorem Ipsum</div></div></div>
-                </div>
-            </div>
-            <div class="controles-carrusel">
-                <button class="btn-nav">←</button><button class="btn-nav">→</button>
-            </div>
-        </div>
-    </div>
+
+    <div id="secciones-dinamicas"></div>
 </section>
+
+<template id="temp-seccion">
+    <div class="seccion-comida">
+        <h2 class="text-48 js-momento"></h2>
+        <div class="wrapper-carrusel">
+            <div class="grid-3-cuadros js-contenedor-platos">
+            </div>
+        </div>
+        <div class="controles-carrusel">
+            <button class="btn-nav js-prev">←</button>
+            <button class="btn-nav js-next">→</button>
+        </div>
+    </div>
+</template>
+
+<template id="temp-plato">
+    <div class="contenedor-item">
+        <div class="cuadro-gris js-btn-receta">
+            <div class="texto-interior js-nombre"></div>
+        </div>
+    </div>
+</template>

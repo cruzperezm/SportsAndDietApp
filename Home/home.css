@@ -43,7 +43,7 @@ button:focus-visible {
 
 .placeholder-img {
     background-color: var(--gray-placeholder);
-    background-image: url('../images/aspas.svg');
+    background-image: url('../imagenes/aspas.svg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
