@@ -13,7 +13,7 @@
               "id": "k_des_1", "nombre": "Huevos con Aguacate",
               "imagen": "../imagenes/Dietas/Keto/k_des_1.jpg",
               "etiquetas": ["vegetariano", "desayuno_rapido"],
-              "alergenos": ["huevo"],
+              "alergenos": ["huevos", "gluten"],
               "ingredientes": ["2 huevos", "1/2 aguacate", "1 cda mantequilla", "Sal y pimienta", "Tostadas Integrales"],
               "informacion": { "calorias": "380 kcal", "proteinas": "14g", "grasas": "34g", "carbohidratos": "4g" },
               "preparacion": "1. Bate los huevos.\n\n2. Cocina en la sartén con mantequilla a fuego lento.\n\n3. Sirve junto al aguacate en láminas.\n\n4. Puedes acompañarlo con unas tostadas integrales."

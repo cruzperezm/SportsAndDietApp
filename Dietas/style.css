@@ -332,50 +332,63 @@ body {
     }
 }
 
-/* Contenedor de las píldoras */
-.etiquetas-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin: 15px 0;
+/* Contenedor de iconos */.etiquetas-wrapper {
+                              display: flex;
+                              gap: 12px;
+                              margin: 15px 0;
+                              align-items: center;
+                          }
+
+.icono-alergeno {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    color: white;
+    font-size: 22px;
+    cursor: help;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
 }
 
-/* Diseño de la píldora de Alérgeno (Rojo) */
-.badge-alergeno {
-    background-color: #fee2e2;
-    color: #991b1b;
-    padding: 6px 12px;
-    border-radius: 20px;
-    font-size: 0.85rem;
-    font-weight: bold;
-}
+.icon-gluten { background-color: #E67E22; }
+.icon-huevos { background-color: #F1C40F; }
+.icon-lacteos { background-color: #3498DB; }
+.icon-pescado { background-color: #2C3E50; }
+.icon-frutos { background-color: #A0522D; }
+.icon-soja { background-color: #27AE60; }
+.icon-apio { background-color: #76D7C4; }
+.icon-mostaza { background-color: #D4AC0D; }
 
-/* Diseño de la píldora de Etiqueta normal (Verde) */
 .badge-etiqueta {
-    background-color: #d1fae5;
-    color: #065f46;
-    padding: 6px 12px;
+    background-color: #27AE60;
+    color: white;
+    padding: 6px 14px;
     border-radius: 20px;
     font-size: 0.85rem;
     font-weight: bold;
+    text-transform: capitalize;
 }
 
 /* El botón principal */
 .btn-primario {
-    background-color: var(--color-acento, #10B981); /* Usa tu color verde de la app */
+    background-color: #27AE60;
     color: white;
-    padding: 15px 20px;
+    padding: 16px 32px;
     border: none;
-    border-radius: 8px;
+    border-radius: 12px;
     font-size: 1.1rem;
     font-weight: bold;
     cursor: pointer;
-    width: 100%;
-    margin-top: 30px;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
 }
 
-/* El botón cuando ya está guardado (Gris) */
 .btn-primario.guardado {
-    background-color: #4b5563;
+    background-color: #34495E;
+}
+
+.btn-primario:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.1);
 }
