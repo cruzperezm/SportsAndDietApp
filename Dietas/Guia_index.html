@@ -2,16 +2,163 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Guía Detallada</title>
+  <title>Guía Detallada - Sports and Diet</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="../footerheader/header.css">
   <link rel="stylesheet" href="../footerheader/footer.css">
   <script src="../xlu-include-file.js"></script>
 </head>
 <body>
+
 <header xlu-include-file="../footerheader/header.html"></header>
+
 <main xlu-include-file="PlanGuiaDieta_grid-view.html"></main>
+
 <footer xlu-include-file="../footerheader/footer.html"></footer>
-<script>xLuIncludeFile();</script>
+
+<script>
+  // Inicializamos la carga de archivos externos
+  xLuIncludeFile();
+
+  function cargarPaginaReceta() {
+    // 1. Verificamos que el HTML inyectado ya esté disponible en el DOM
+    const tituloDOM = document.getElementById('receta-titulo');
+
+    if (!tituloDOM) {
+      // Si el archivo modular aún no se ha cargado, reintentamos en 100ms
+      setTimeout(cargarPaginaReceta, 100);
+      return;
+    }
+
+    // 2. Obtenemos el ID de la receta que el usuario seleccionó en la pág anterior
+    const recetaId = localStorage.getItem('recetaSeleccionada');
+    if (!recetaId) {
+      tituloDOM.innerText = "Selecciona una receta en el Plan";
+      return;
+    }
+
+    // 3. Cargamos los datos del JSON
+    fetch('../data.json')
+            .then(res => res.json())
+            .then(data => {
+              let receta = null;
+
+              // Buscamos la receta en todas las dietas y momentos (Desayuno, Almuerzo, Cena)
+              data.dietas.forEach(dieta => {
+                dieta.plan.forEach(fase => {
+                  fase.opciones.forEach(opcion => {
+                    if (opcion.id === recetaId) {
+                      receta = opcion;
+                    }
+                  });
+                });
+              });
+
+              if (!receta) {
+                tituloDOM.innerText = "Receta no encontrada";
+                return;
+              }
+
+              // 4. RELLENAMOS EL DISEÑO CON LOS DATOS
+
+              // Título y Hero (Imagen de fondo)
+              tituloDOM.innerText = receta.nombre;
+              const hero = document.getElementById('receta-hero');
+              if (hero && receta.imagen) {
+                hero.style.backgroundImage = `linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('${receta.imagen}')`;
+                hero.style.backgroundSize = 'cover';
+                hero.style.backgroundPosition = 'center';
+              }
+
+              // Listado de Ingredientes
+              const listaIngredientes = document.getElementById('receta-ingredientes');
+              if (listaIngredientes) {
+                listaIngredientes.innerHTML = '';
+                receta.ingredientes.forEach(ing => {
+                  const li = document.createElement('li');
+                  li.innerText = ing;
+                  listaIngredientes.appendChild(li);
+                });
+              }
+
+              // Información Nutricional (Macros)
+              const listaInfo = document.getElementById('receta-info');
+              if (listaInfo) {
+                listaInfo.innerHTML = '';
+                for (const [key, value] of Object.entries(receta.informacion)) {
+                  const li = document.createElement('li');
+                  li.style.textTransform = 'capitalize';
+                  li.innerHTML = `<strong>${key}:</strong> ${value}`;
+                  listaInfo.appendChild(li);
+                }
+              }
+
+              // Texto de Preparación
+              const prepDOM = document.getElementById('receta-preparacion');
+              if (prepDOM) prepDOM.innerText = receta.preparacion;
+
+              // 5. PINTAR BADGES (ALÉRGENOS Y ETIQUETAS)
+              const contenedorEtiquetas = document.getElementById('contenedor-etiquetas');
+              if (contenedorEtiquetas) {
+                contenedorEtiquetas.innerHTML = '';
+
+                // Alérgenos (Rojos)
+                if (receta.alergenos) {
+                  receta.alergenos.forEach(alergeno => {
+                    const span = document.createElement('span');
+                    span.className = 'badge-alergeno';
+                    span.innerText = `⚠️ Contiene ${alergeno}`;
+                    contenedorEtiquetas.appendChild(span);
+                  });
+                }
+                // Etiquetas (Verdes)
+                if (receta.etiquetas) {
+                  receta.etiquetas.forEach(etiqueta => {
+                    const span = document.createElement('span');
+                    span.className = 'badge-etiqueta';
+                    span.innerText = `✔️ ${etiqueta.replace('_', ' ')}`;
+                    contenedorEtiquetas.appendChild(span);
+                  });
+                }
+              }
+
+              // 6. LÓGICA DEL BOTÓN AÑADIR A MI PLAN (LOCALSTORAGE)
+              const btnAnadir = document.getElementById('btn-anadir-plan');
+              if (btnAnadir) {
+                // Comprobamos si ya está en la "base de datos" del navegador
+                let guardadas = JSON.parse(localStorage.getItem('misRecetasGuardadas')) || [];
+
+                if (guardadas.includes(recetaId)) {
+                  btnAnadir.innerText = "✓ Guardada en tu plan";
+                  btnAnadir.classList.add('guardado');
+                }
+
+                btnAnadir.onclick = () => {
+                  let guardadasActuales = JSON.parse(localStorage.getItem('misRecetasGuardadas')) || [];
+
+                  if (!guardadasActuales.includes(recetaId)) {
+                    // Guardar
+                    guardadasActuales.push(recetaId);
+                    localStorage.setItem('misRecetasGuardadas', JSON.stringify(guardadasActuales));
+                    btnAnadir.innerText = "✓ Guardada en tu plan";
+                    btnAnadir.classList.add('guardado');
+                    alert(`¡${receta.nombre} añadida a tu plan!`);
+                  } else {
+                    // Quitar
+                    guardadasActuales = guardadasActuales.filter(id => id !== recetaId);
+                    localStorage.setItem('misRecetasGuardadas', JSON.stringify(guardadasActuales));
+                    btnAnadir.innerText = "Añadir a mi plan 📅";
+                    btnAnadir.classList.remove('guardado');
+                  }
+                };
+              }
+
+            })
+            .catch(err => console.error("Error cargando los datos de la dieta:", err));
+  }
+
+  window.onload = cargarPaginaReceta;
+</script>
+
 </body>
 </html>

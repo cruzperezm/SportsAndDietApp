@@ -331,3 +331,51 @@ body {
         font-size: 28px;
     }
 }
+
+/* Contenedor de las píldoras */
+.etiquetas-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+/* Diseño de la píldora de Alérgeno (Rojo) */
+.badge-alergeno {
+    background-color: #fee2e2;
+    color: #991b1b;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+/* Diseño de la píldora de Etiqueta normal (Verde) */
+.badge-etiqueta {
+    background-color: #d1fae5;
+    color: #065f46;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+/* El botón principal */
+.btn-primario {
+    background-color: var(--color-acento, #10B981); /* Usa tu color verde de la app */
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 30px;
+    transition: background-color 0.3s ease;
+}
+
+/* El botón cuando ya está guardado (Gris) */
+.btn-primario.guardado {
+    background-color: #4b5563;
+}
