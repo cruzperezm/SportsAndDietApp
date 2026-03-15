@@ -12,7 +12,6 @@
             {
               "id": "k_des_1", "nombre": "Huevos con Aguacate",
               "imagen": "../imagenes/Dietas/Keto/k_des_1.jpg",
-              "etiquetas": ["vegetariano", "desayuno_rapido"],
               "alergenos": ["huevos", "gluten"],
               "ingredientes": ["2 huevos", "1/2 aguacate", "1 cda mantequilla", "Sal y pimienta", "Tostadas Integrales"],
               "informacion": { "calorias": "380 kcal", "proteinas": "14g", "grasas": "34g", "carbohidratos": "4g" },
@@ -20,101 +19,115 @@
             },
             {
               "id": "k_des_2", "nombre": "Tortilla de Espinacas",
-              "imagen": "../img/recetas/tortilla-espinacas.jpg",
+              "imagen": "../imagenes/Dietas/Keto/k_des_2.jpg",
+              "alergenos": ["huevos", "lacteos"],
               "ingredientes": ["3 huevos", "Espinacas frescas", "30g queso cheddar", "Aceite de oliva"],
               "informacion": { "calorias": "410 kcal", "proteinas": "22g", "grasas": "33g", "carbohidratos": "3g" },
-              "preparacion": "1. Saltea las espinacas.\n\n2. Añade los huevos batidos.\n\n3. Incorpora el queso y dobla la tortilla."
+              "preparacion": "1. Saltea las espinacas con un poco de aceite.\n\n2. Añade los huevos batidos.\n\n3. Incorpora el queso cheddar y dobla la tortilla cuando cuaje."
             },
             {
               "id": "k_des_3", "nombre": "Café Bulletproof",
-              "imagen": "../img/recetas/cafe-bulletproof.jpg",
+              "imagen": "../imagenes/Dietas/Keto/k_des_3.jpg",
+              "alergenos": ["lacteos"],
               "ingredientes": ["1 taza café negro", "1 cda aceite MCT", "1 cda mantequilla pasto"],
               "informacion": { "calorias": "230 kcal", "proteinas": "1g", "grasas": "25g", "carbohidratos": "0g" },
-              "preparacion": "1. Prepara el café caliente.\n\n2. Bate todo en licuadora hasta que quede espumoso."
+              "preparacion": "1. Prepara una taza de café caliente de calidad.\n\n2. Introduce todos los ingredientes en la licuadora.\n\n3. Bate hasta que se forme una capa de espuma cremosa."
             },
             {
               "id": "k_des_4", "nombre": "Pancakes Keto",
-              "imagen": "../img/recetas/pancakes.jpg",
+              "imagen": "../imagenes/Dietas/Keto/k_des_4.jpg",
+              "alergenos": ["huevos", "frutos_secos"],
               "ingredientes": ["50g harina almendra", "2 huevos", "Chorro leche almendras", "Canela"],
               "informacion": { "calorias": "350 kcal", "proteinas": "15g", "grasas": "28g", "carbohidratos": "5g" },
-              "preparacion": "1. Mezcla los ingredientes en un bol.\n\n2. Cocina en sartén engrasada vuelta y vuelta."
+              "preparacion": "1. Mezcla los ingredientes en un bol hasta obtener una masa homogénea.\n\n2. Engrasa una sartén y vierte la masa en porciones pequeñas.\n\n3. Cocina vuelta y vuelta hasta que doren."
             },
             {
               "id": "k_des_5", "nombre": "Porridge de Chía",
-              "imagen": "../img/recetas/porridge-chia.jpg",
+              "imagen": "../imagenes/Dietas/Keto/k_des_5.jpg",
+              "alergenos": ["frutos_secos"],
               "ingredientes": ["3 cdas semillas chía", "1/2 taza leche coco", "Nueces picadas"],
               "informacion": { "calorias": "320 kcal", "proteinas": "8g", "grasas": "25g", "carbohidratos": "6g" },
-              "preparacion": "1. Calienta la leche de coco.\n\n2. Mezcla con la chía y deja reposar 10 min.\n\n3. Decora con nueces."
+              "preparacion": "1. Calienta ligeramente la leche de coco.\n\n2. Mezcla con las semillas de chía y deja reposar 10 min para que espese.\n\n3. Decora con las nueces picadas por encima."
             },
             {
               "id": "k_des_6", "nombre": "Muffins de Huevo y Bacon",
-              "imagen": "../img/recetas/muffins-huevo-bacon.jpg",
+              "imagen": "../imagenes/Dietas/Keto/k_des_6.jpg",
+              "alergenos": ["huevos", "lacteos"],
               "ingredientes": ["4 huevos", "2 lonchas bacon", "Queso rallado", "Cebollino"],
               "informacion": { "calorias": "290 kcal", "proteinas": "20g", "grasas": "22g", "carbohidratos": "2g" },
-              "preparacion": "1. Pica el bacon y mezcla con huevos y queso.\n\n2. Vierte en moldes para muffin.\n\n3. Hornea a 180°C por 15 min."
+              "preparacion": "1. Pica el bacon y mézclalo con los huevos batidos y el queso.\n\n2. Vierte la mezcla en moldes para muffins.\n\n3. Hornea a 180°C durante unos 15 minutos."
             },
             {
               "id": "k_des_7", "nombre": "Yogur Griego con Pecanas",
-              "imagen": "../img/recetas/yogur-griego-penacas.jpg",
+              "imagen": "../imagenes/Dietas/Keto/k_des_7.jpg",
+              "alergenos": ["lacteos", "frutos_secos"],
               "ingredientes": ["150g yogur griego natural", "30g nueces pecanas", "1 cda semillas lino"],
               "informacion": { "calorias": "310 kcal", "proteinas": "12g", "grasas": "26g", "carbohidratos": "7g" },
-              "preparacion": "1. Sirve el yogur en un bol.\n\n2. Añade las nueces y semillas por encima."
+              "preparacion": "1. Vierte el yogur griego en un bol.\n\n2. Añade las nueces pecanas y las semillas de lino por encima y disfruta."
             },
             {
               "id": "k_des_8", "nombre": "Chaffles (Gofres Queso)",
-              "imagen": "../img/recetas/chaffles.jpg",
+              "imagen": "../imagenes/Dietas/Keto/k_des_8.jpg",
+              "alergenos": ["huevos", "lacteos", "frutos_secos"],
               "ingredientes": ["1 huevo", "50g mozzarella rallada", "Pizca harina almendra"],
               "informacion": { "calorias": "250 kcal", "proteinas": "18g", "grasas": "18g", "carbohidratos": "2g" },
-              "preparacion": "1. Mezcla el huevo y el queso.\n\n2. Cocina en la gofrera hasta que estén dorados y crujientes."
+              "preparacion": "1. Mezcla el huevo con la mozzarella y la harina de almendra.\n\n2. Pon la masa en la gofrera caliente.\n\n3. Cocina hasta que esté bien dorado y crujiente."
             },
             {
               "id": "k_des_9", "nombre": "Salmón y Queso Crema",
-              "imagen": "../img/recetas/salmon-queso.jpg",
+              "imagen": "../imagenes/Dietas/Keto/k_des_9.jpg",
+              "alergenos": ["pescado", "lacteos"],
               "ingredientes": ["100g salmón ahumado", "2 cdas queso crema", "Medio pepino en rodajas"],
               "informacion": { "calorias": "280 kcal", "proteinas": "22g", "grasas": "20g", "carbohidratos": "3g" },
-              "preparacion": "1. Corta el pepino en rodajas gruesas.\n\n2. Unta queso crema y pon salmón encima de cada rodaja."
+              "preparacion": "1. Corta el pepino en rodajas gruesas para que sirvan de base.\n\n2. Unta el queso crema sobre el pepino.\n\n3. Coloca una lámina de salmón ahumado encima."
             },
             {
               "id": "k_des_10", "nombre": "Batido Verde Keto",
-              "imagen": "../img/recetas/batido-verde.jpg",
+              "imagen": "../imagenes/Dietas/Keto/k_des_10.jpg",
+              "alergenos": ["frutos_secos"],
               "ingredientes": ["1 taza espinaca", "1/2 aguacate", "Leche de almendras", "Proteína vainilla sin azúcar"],
               "informacion": { "calorias": "260 kcal", "proteinas": "25g", "grasas": "15g", "carbohidratos": "4g" },
-              "preparacion": "1. Pon todos los ingredientes en la licuadora.\n\n2. Bate hasta que quede suave y sirve frío."
+              "preparacion": "1. Introduce todos los ingredientes en el vaso de la licuadora.\n\n2. Procesa hasta obtener una textura suave.\n\n3. Sirve inmediatamente bien frío."
             },
             {
               "id": "k_des_11", "nombre": "Benedictinos Portobello",
-              "imagen": "../img/recetas/benedictinos-portobello.jpg",
+              "imagen": "../imagenes/Dietas/Keto/k_des_11.jpg",
+              "alergenos": ["huevos", "lacteos"],
               "ingredientes": ["2 huevos escalfados", "2 hongos portobello grandes", "Salsa holandesa"],
               "informacion": { "calorias": "340 kcal", "proteinas": "16g", "grasas": "28g", "carbohidratos": "5g" },
-              "preparacion": "1. Asa los portobellos.\n\n2. Coloca un huevo escalfado sobre cada hongo.\n\n3. Báñalos en salsa holandesa."
+              "preparacion": "1. Limpia y asa los portobellos a la plancha.\n\n2. Cocina dos huevos escalfados en agua con vinagre.\n\n3. Monta el huevo sobre el hongo y cubre con salsa holandesa."
             },
             {
               "id": "k_des_12", "nombre": "Rollitos de Jamón Serrano",
-              "imagen": "../img/recetas/rollitos-jamon.jpg",
+              "imagen": "../imagenes/Dietas/Keto/k_des_12.jpg",
+              "alergenos": ["lacteos"],
               "ingredientes": ["4 lonchas jamón serrano", "Queso crema", "Rúcula fresca"],
               "informacion": { "calorias": "220 kcal", "proteinas": "15g", "grasas": "16g", "carbohidratos": "1g" },
-              "preparacion": "1. Extiende las lonchas de jamón.\n\n2. Unta queso, añade rúcula y enrolla."
+              "preparacion": "1. Extiende las lonchas de jamón sobre una superficie limpia.\n\n2. Unta una capa fina de queso crema.\n\n3. Añade rúcula en el centro y enrolla con cuidado."
             },
             {
               "id": "k_des_13", "nombre": "Cottage con Semillas",
-              "imagen": "../img/recetas/cottage-semillas.jpg",
+              "imagen": "../imagenes/Dietas/Keto/k_des_13.jpg",
+              "alergenos": ["lacteos"],
               "ingredientes": ["150g queso cottage", "2 cdas semillas calabaza", "Aceite oliva"],
               "informacion": { "calorias": "270 kcal", "proteinas": "20g", "grasas": "18g", "carbohidratos": "5g" },
-              "preparacion": "1. Pon el queso en un bol.\n\n2. Añade las semillas y un chorrito de aceite de oliva crudo."
+              "preparacion": "1. Pon el queso cottage en un bol individual.\n\n2. Esparce las semillas de calabaza.\n\n3. Termina con un chorrito de aceite de oliva virgen extra."
             },
             {
               "id": "k_des_14", "nombre": "Pudding de Lino",
-              "imagen": "../img/recetas/pudding-lino.jpg",
+              "imagen": "../imagenes/Dietas/Keto/k_des_14.jpg",
+              "alergenos": [],
               "ingredientes": ["3 cdas semillas lino molidas", "Leche de coco", "Frambuesas"],
               "informacion": { "calorias": "290 kcal", "proteinas": "9g", "grasas": "24g", "carbohidratos": "4g" },
-              "preparacion": "1. Mezcla el lino con la leche de coco la noche anterior.\n\n2. Por la mañana, decora con frambuesas."
+              "preparacion": "1. Mezcla las semillas de lino molidas con la leche de coco la noche anterior.\n\n2. Guarda en la nevera.\n\n3. Por la mañana, añade las frambuesas frescas por encima."
             },
             {
               "id": "k_des_15", "nombre": "Huevos con Chorizo",
-              "imagen": "../img/recetas/huevos-chorizo.jpg",
+              "imagen": "../imagenes/Dietas/Keto/k_des_15.jpg",
+              "alergenos": ["huevos"],
               "ingredientes": ["2 huevos", "50g chorizo picado", "1/4 aguacate"],
               "informacion": { "calorias": "450 kcal", "proteinas": "22g", "grasas": "38g", "carbohidratos": "3g" },
-              "preparacion": "1. Saltea el chorizo en la sartén.\n\n2. Fríe los huevos en la grasa del chorizo.\n\n3. Sirve con el aguacate."
+              "preparacion": "1. Saltea el chorizo en la sartén hasta que suelte su grasa.\n\n2. Fríe los huevos en esa misma grasa.\n\n3. Sirve acompañado del cuarto de aguacate."
             }
           ]
         },
@@ -123,18 +136,24 @@
           "opciones": [
             {
               "id": "k_alm_1", "nombre": "Ensalada Cobb",
+              "imagen": "../imagenes/Dietas/Keto/k_alm_1.jpg",
+              "alergenos": ["lacteos"],
               "ingredientes": ["Lechuga", "Bacon", "1 Huevo duro", "1/2 Aguacate", "Queso Azul"],
               "informacion": { "calorias": "520 kcal", "proteinas": "20g", "grasas": "45g", "carbohidratos": "6g" },
               "preparacion": "1. Pica todos los ingredientes.\n\n2. Mezcla en un bol y aliña con aceite y vinagre."
             },
             {
               "id": "k_alm_2", "nombre": "Zoodles Boloñesa",
+              "imagen": "../imagenes/Dietas/Keto/k_alm_2.jpg",
+              "alergenos": [],
               "ingredientes": ["Calabacín en espiral", "150g carne picada ternera", "Salsa tomate sin azúcar"],
               "informacion": { "calorias": "400 kcal", "proteinas": "30g", "grasas": "25g", "carbohidratos": "8g" },
               "preparacion": "1. Cocina la carne con la salsa.\n\n2. Saltea los zoodles 2 min y mezcla con la carne."
             },
             {
               "id": "k_alm_3", "nombre": "Burger en Lechuga",
+              "imagen": "../imagenes/Dietas/Keto/k_alm_3.jpg",
+              "alergenos": ["lacteos"],
               "ingredientes": ["200g carne picada", "Queso cheddar", "Hojas lechuga iceberg", "Mostaza"],
               "informacion": { "calorias": "480 kcal", "proteinas": "40g", "grasas": "32g", "carbohidratos": "4g" },
               "preparacion": "1. Haz la hamburguesa a la plancha con el queso.\n\n2. Usa las hojas de lechuga como si fueran el pan."
@@ -218,18 +237,24 @@
           "opciones": [
             {
               "id": "k_cen_1", "nombre": "Lasaña de Calabacín",
+              "imagen": "../imagenes/Dietas/Keto/k_cen_1.jpg",
+              "alergenos": ["lacteos"],
               "ingredientes": ["Láminas calabacín", "Carne picada", "Tomate triturado", "Ricotta", "Mozzarella"],
               "informacion": { "calorias": "450 kcal", "proteinas": "35g", "grasas": "28g", "carbohidratos": "9g" },
               "preparacion": "1. Intercala capas de calabacín, carne cocinada y ricotta.\n\n2. Gratina en el horno con mozzarella."
             },
             {
               "id": "k_cen_2", "nombre": "Albóndigas Ternera",
+              "imagen": "../imagenes/Dietas/Keto/k_cen_2.jpg",
+              "alergenos": ["gluten"],
               "ingredientes": ["200g carne picada", "Harina almendra", "Salsa tomate keto"],
               "informacion": { "calorias": "420 kcal", "proteinas": "32g", "grasas": "26g", "carbohidratos": "6g" },
               "preparacion": "1. Haz las albóndigas usando la almendra para ligar.\n\n2. Fríelas y luego guísalas en la salsa de tomate."
             },
             {
               "id": "k_cen_3", "nombre": "Pollo Parmesana",
+              "imagen": "../imagenes/Dietas/Keto/k_cen_3.jpg",
+              "alergenos": ["lacteos"],
               "ingredientes": ["Pechuga pollo", "Salsa tomate", "Parmesano rallado"],
               "informacion": { "calorias": "380 kcal", "proteinas": "45g", "grasas": "18g", "carbohidratos": "4g" },
               "preparacion": "1. Haz la pechuga a la plancha.\n\n2. Cúbrela con salsa y parmesano, y funde al horno."

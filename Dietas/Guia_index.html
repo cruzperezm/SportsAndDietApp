@@ -140,7 +140,7 @@
                   } else {
                     guardadasActuales = guardadasActuales.filter(id => id !== recetaId);
                     localStorage.setItem('misRecetasGuardadas', JSON.stringify(guardadasActuales));
-                    btnAnadir.innerText = "Añadir a mi plan 📅";
+                    btnAnadir.innerText = "Añadir a mi plan";
                     btnAnadir.classList.remove('guardado');
                   }
                 };

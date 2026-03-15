@@ -1,6 +1,6 @@
 /* =========================================
-   VARIABLES Y BASE
-   Paleta: Esmeralda, Crema, Gris Carbón
+    VARIABLES Y BASE
+    Paleta: Esmeralda, Crema, Gris Carbón
 ========================================= */
 :root {
     --color-fondo: #FAFAFA;       /* Blanco roto/crema para el fondo */
@@ -22,7 +22,7 @@ body {
 }
 
 /* =========================================
-   PÁGINA 1: SELECCIÓN DE DIETAS
+    PÁGINA 1: SELECCIÓN DE DIETAS
 ========================================= */
 .seccion-articulos {
     width: 95%;
@@ -73,13 +73,12 @@ body {
     box-shadow: var(--sombra-hover);
 }
 
-/* PREPARADO PARA IMÁGENES REALES */
 .placeholder-imagen {
     width: 100%;
     aspect-ratio: 4/3;
-    object-fit: cover; /* Hace que la foto llene el hueco sin deformarse */
+    object-fit: cover;
     border-radius: 12px;
-    background-color: #E5E7EB; /* Gris clarito por si tarda en cargar la foto */
+    background-color: #E5E7EB;
 }
 
 .tarjeta-item h3 {
@@ -90,7 +89,7 @@ body {
 }
 
 /* =========================================
-   PÁGINA 2: PLAN DIARIO Y CARRUSEL
+    PÁGINA 2: PLAN DIARIO Y CARRUSEL (CORREGIDO)
 ========================================= */
 .plan-dietas {
     width: 95%;
@@ -128,34 +127,38 @@ body {
     padding-left: 15px;
 }
 
+/* --- Ajustes exclusivos del Carrusel Circular --- */
 .wrapper-carrusel {
-    overflow: hidden;
+    overflow: hidden; /* El marco que recorta las tarjetas */
     position: relative;
     width: 100%;
-    padding: 10px 0;
 }
 
 .grid-3-cuadros {
-    display: flex;
+    display: flex !important;
     gap: 2vw;
-    /* La transición la gestiona el JS ahora para el carrusel infinito */
     padding: 10px;
+    overflow: visible;
+    will-change: transform;
 }
 
 .contenedor-item {
     flex: 0 0 calc(33.333% - 1.34vw);
     min-width: calc(33.333% - 1.34vw);
+    box-sizing: border-box;
 }
 
 .cuadro-gris {
     width: 100%;
-    aspect-ratio: 1/1; /* Cuadrado perfecto para platos */
+    aspect-ratio: 1/1;
     background-color: #E5E7EB;
     border-radius: 20px;
     position: relative;
     overflow: hidden;
     cursor: pointer;
     box-shadow: var(--sombra-suave);
+    background-size: cover;
+    background-position: center;
     transition: transform 0.3s ease;
 }
 
@@ -163,7 +166,6 @@ body {
     transform: scale(1.02);
 }
 
-/* Oscurecemos el fondo del texto para que se lea sobre cualquier foto */
 .texto-interior {
     position: absolute;
     bottom: 0;
@@ -208,7 +210,7 @@ body {
 }
 
 /* =========================================
-   PÁGINA 3: GUÍA DE RECETA
+    PÁGINA 3: GUÍA DE RECETA
 ========================================= */
 .guia-dieta {
     width: 100%;
@@ -219,7 +221,6 @@ body {
 .hero-guia {
     width: 100%;
     aspect-ratio: 21/9;
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1490645935967-10de6ba17061?q=80&w=2053&auto=format&fit=crop') center/cover;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -256,10 +257,6 @@ body {
     box-shadow: var(--sombra-suave);
 }
 
-.linea-divisoria {
-    display: none; /* La quitamos porque ahora usamos tarjetas separadas */
-}
-
 .text-40 {
     font-size: clamp(24px, 3vw, 32px);
     font-weight: 700;
@@ -292,103 +289,55 @@ body {
     padding: 40px;
     border-radius: 20px;
     box-shadow: var(--sombra-suave);
+    white-space: pre-wrap;
 }
 
 /* =========================================
-   RESPONSIVE DESIGN (RWD)
+    RECIÉN AÑADIDO: FILTROS Y ALÉRGENOS
+========================================= */
+
+.filtros-container { margin: 30px auto; text-align: center; }
+.filtros-botones { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+.btn-filtro {
+    padding: 8px 18px; border: 2px solid var(--color-acento);
+    background: white; color: var(--color-acento);
+    border-radius: 20px; font-weight: bold; cursor: pointer; transition: 0.3s;
+}
+.btn-filtro.active { background: var(--color-acento); color: white; }
+.receta-oculta { display: none !important; }
+
+.etiquetas-wrapper { display: flex; gap: 12px; margin: 15px 0; justify-content: center; }
+.icono-alergeno {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 40px; height: 40px; border-radius: 50%; color: white; font-size: 20px;
+}
+.icon-gluten { background: #E67E22; }
+.icon-huevos { background: #F1C40F; }
+.icon-lacteos { background: #3498DB; }
+.icon-pescado { background: #2C3E50; }
+.icon-frutos { background: #A0522D; }
+
+.btn-primario {
+    background-color: var(--color-acento); color: white;
+    padding: 15px 25px; border: none; border-radius: 8px;
+    font-size: 1.1rem; font-weight: bold; cursor: pointer;
+    width: 100%; margin-top: 20px; transition: 0.3s;
+}
+.btn-primario.guardado { background-color: #4b5563; }
+
+/* =========================================
+    RESPONSIVE DESIGN (RWD)
 ========================================= */
 @media (max-width: 1024px) {
-    .contenedor-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .contenedor-columnas {
-        flex-direction: column;
-        padding-top: 40px;
-    }
-    .columna {
-        width: 100%;
-        box-sizing: border-box;
-    }
+    .contenedor-grid { grid-template-columns: repeat(2, 1fr); }
+    .contenedor-columnas { flex-direction: column; padding-top: 40px; }
+    .columna { width: 100%; box-sizing: border-box; }
 }
 
 @media (max-width: 768px) {
-    .contenedor-grid {
-        grid-template-columns: 1fr;
-    }
-    .hero-guia {
-        aspect-ratio: 16/9;
-    }
-    /* Hacemos que el carrusel muestre 2 elementos en tablet o 1 en móvil */
-    .contenedor-item {
-        flex: 0 0 calc(100% - 2vw);
-        min-width: calc(100% - 2vw);
-    }
-    .controles-carrusel {
-        justify-content: center;
-        padding-right: 0;
-    }
-    .text-48 {
-        font-size: 28px;
-    }
-}
-
-/* Contenedor de iconos */.etiquetas-wrapper {
-                              display: flex;
-                              gap: 12px;
-                              margin: 15px 0;
-                              align-items: center;
-                          }
-
-.icono-alergeno {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 42px;
-    height: 42px;
-    border-radius: 50%;
-    color: white;
-    font-size: 22px;
-    cursor: help;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
-}
-
-.icon-gluten { background-color: #E67E22; }
-.icon-huevos { background-color: #F1C40F; }
-.icon-lacteos { background-color: #3498DB; }
-.icon-pescado { background-color: #2C3E50; }
-.icon-frutos { background-color: #A0522D; }
-.icon-soja { background-color: #27AE60; }
-.icon-apio { background-color: #76D7C4; }
-.icon-mostaza { background-color: #D4AC0D; }
-
-.badge-etiqueta {
-    background-color: #27AE60;
-    color: white;
-    padding: 6px 14px;
-    border-radius: 20px;
-    font-size: 0.85rem;
-    font-weight: bold;
-    text-transform: capitalize;
-}
-
-/* El botón principal */
-.btn-primario {
-    background-color: #27AE60;
-    color: white;
-    padding: 16px 32px;
-    border: none;
-    border-radius: 12px;
-    font-size: 1.1rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.btn-primario.guardado {
-    background-color: #34495E;
-}
-
-.btn-primario:hover {
-    transform: translateY(-2px);
-    filter: brightness(1.1);
+    .contenedor-grid { grid-template-columns: 1fr; }
+    .hero-guia { aspect-ratio: 16/9; }
+    .contenedor-item { flex: 0 0 calc(100% - 2vw); min-width: calc(100% - 2vw); }
+    .controles-carrusel { justify-content: center; padding-right: 0; }
+    .text-48 { font-size: 28px; }
 }
