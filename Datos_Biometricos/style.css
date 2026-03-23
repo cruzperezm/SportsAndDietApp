@@ -28,31 +28,47 @@ body {
     row-gap: 2vh;
 }
 
-.form-row {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
-    gap: 30px;
-    margin-bottom: 30px;
-}
-
-.form {
-    flex: auto;
+.selector {
     height: 35px;
     width: 25vw;
     background-color: #f0f0f0;
     border-radius: 8px;
     border: 2px solid lightgray;
+    margin-bottom: 0;
 }
 
-.selector {
+input {
+    width: 25vw;
+    background-color: #ffffff;
+    border-radius: 8px;
+    text-decoration: none;
+    border: 2px solid lightgray;
+    margin-bottom: 30px;
+    height: 5vh;
+}
+
+.form {
     flex: 1;
     width: 25vw;
     background-color: #ffffff;
     border-radius: 8px;
-    display: block;
     text-decoration: none;
+    border: 2px solid lightgray;
+    margin-bottom: 30px;
+    justify-content: center;
+}
+
+.radiowrapper input {
+    position: absolute;
+    visibility:hidden;
+    width:0;
+}
+
+.radiowrapper:hover label{
+    background-color: #d1d1d1; }
+
+.radiowrapper input:checked ~ label {
+    background-color: #aefaf8;
 }
 
 .button {
