@@ -35,7 +35,9 @@ function xLuIncludeFile() {
 */
 
 async function xLuIncludeFile() {
-    let z = document.getElementsByTagName("*");
+    // MAGIA AQUÍ: Usamos querySelectorAll para crear una lista estática
+    // que no se mueva cuando cargar-datos.js inyecte elementos nuevos.
+    let z = document.querySelectorAll("*");
 
     for (let i = 0; i < z.length; i++) {
         if (z[i].getAttribute("xlu-include-file")) {
@@ -69,9 +71,7 @@ async function xLuIncludeFile() {
                             .replace(/{{imageCaption}}/g, articleData.imageCaption || '');
                     }
 
-
                     a.removeAttribute("xlu-include-file");
-                    //a.innerHTML = await response.text();
                     a.innerHTML = content;
                     z[i].parentNode.replaceChild(a, z[i]);
                     xLuIncludeFile();
@@ -84,4 +84,3 @@ async function xLuIncludeFile() {
         }
     }
 }
-

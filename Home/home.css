@@ -13,8 +13,7 @@
     box-sizing: border-box;
 }
 
-html,
-body {
+html, body {
     margin: 0;
     height: 100%;
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
@@ -26,10 +25,7 @@ button:focus-visible {
     outline: -webkit-focus-ring-color auto 5px !important;
 }
 
-#div-1,
-#div-2,
-#div-3,
-#div-4 {
+#div-1, #div-2, #div-3, #div-4 {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -43,7 +39,7 @@ button:focus-visible {
 
 .placeholder-img {
     background-color: var(--gray-placeholder);
-    background-image: url('../images/aspas.svg');
+    background-image: url('../imagenes/aspas.svg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -56,6 +52,7 @@ img[src*="aspas.svg"] {
     object-fit: cover;
 }
 
+/* --- HEADER / TITLE --- */
 .title {
     position: relative;
     width: 100%;
@@ -71,6 +68,7 @@ img[src*="aspas.svg"] {
     width: 100%;
     height: 100%;
     z-index: 1;
+    object-fit: cover;
 }
 
 .title-text {
@@ -82,6 +80,7 @@ img[src*="aspas.svg"] {
     color: #000;
 }
 
+/* --- FEATURES --- */
 .features-section {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -109,16 +108,15 @@ img[src*="aspas.svg"] {
     color: var(--text-main);
 }
 
-.diets-preview,
-.sports-preview {
+/* --- PREVIEWS (DIET & SPORT) --- */
+.diets-preview, .sports-preview {
     padding: 20px 10% 60px 10%;
     display: flex;
     flex-direction: column;
     gap: 40px;
 }
 
-.diet-preview,
-.sport-preview {
+.diet-preview, .sport-preview {
     display: flex;
     align-items: center;
     gap: 50px;
@@ -128,34 +126,31 @@ img[src*="aspas.svg"] {
     flex-direction: row-reverse;
 }
 
-.diet-preview img,
-.sport-preview img {
+.diet-preview img, .sport-preview img {
     width: 140px;
     height: 140px;
     border-radius: 16px;
     flex-shrink: 0;
 }
 
-.diet-info,
-.sport-info {
+.diet-info, .sport-info {
     flex: 1;
     font-size: 0.9rem;
     line-height: 1.6;
 }
 
-.diet-preview-gallery,
-.sport-preview-gallery {
+.diet-preview-gallery, .sport-preview-gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }
 
-.diet-preview-gallery img,
-.sport-preview-gallery img {
+.diet-preview-gallery img, .sport-preview-gallery img {
     width: 100%;
     aspect-ratio: 1 / 1;
 }
 
+/* --- COMMENTS --- */
 .featured-comments {
     padding: var(--section-padding);
     display: flex;
@@ -201,6 +196,7 @@ img[src*="aspas.svg"] {
     line-height: 1.4;
 }
 
+/* --- SIGN UP --- */
 .sign-up-request {
     display: grid;
     grid-template-columns: 1fr 300px;
@@ -222,43 +218,24 @@ img[src*="aspas.svg"] {
     height: 250px;
 }
 
-#sign-up-link {
-    position: absolute;
-    bottom: 95px;
-    right: calc(10% + 150px - 50px);
-    width: 100px;
-    height: 30px;
-    background-color: var(--gray-light);
-    border-radius: 9999px;
-    display: block;
-    transition: background-color 0.2s ease, transform 0.2s ease;
-}
-
-#sport-preview-link,
-#diet-preview-link {
+#sport-preview-link, #diet-preview-link {
     transition: background-color 0.2s ease, transform 0.2s ease;
     display: inline-block;
 }
 
-#sign-up-link:hover {
-    background-color: #888888 !important;
-    transform: scale(1.05);
-}
-
-#sport-preview-link:hover,
-#diet-preview-link:hover {
+#sport-preview-link:hover, #diet-preview-link:hover {
     transform: scale(1.05);
 }
 
 #sign-up-link {
     position: absolute;
     bottom: 95px;
-    right: calc(10% + 150px - 50px);
+    right: calc(10% + 150px - 50px); /* Calculado para centrarse bajo la imagen */
     width: 100px;
     height: 40px;
     text-decoration: none;
     color: #000000;
-    background-color: #ececec;
+    background-color: var(--gray-light);
     padding: 0.5rem 1.25rem;
     border-radius: 9999px;
     font-weight: 500;
@@ -266,4 +243,140 @@ img[src*="aspas.svg"] {
     justify-content: center;
     align-items: center;
     transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+#sign-up-link:hover {
+    background-color: #888888;
+    transform: scale(1.05);
+}
+
+
+/* =========================================================
+   MEDIA QUERIES (RESPONSIVE)
+   ========================================================= */
+
+/* --- VISTA TABLET (Hasta 1280px) --- */
+@media (max-width: 1280px) {
+    :root {
+        /* Reducimos un poco los márgenes laterales en tablets */
+        --section-padding: 60px 5%;
+    }
+
+    .diet-preview, .sport-preview {
+        gap: 30px; /* Juntamos un poco la imagen y el texto */
+    }
+
+    .sign-up-request {
+        grid-template-columns: 1fr 250px;
+        gap: 30px;
+    }
+
+    #sign-up-link {
+        /* Reajustamos la posición del botón al nuevo ancho */
+        right: calc(5% + 125px - 50px);
+    }
+}
+
+/* --- VISTA MÓVIL (Hasta 768px, incluye los 412px estándar) --- */
+@media (max-width: 412px) {
+    :root {
+        /* Reducimos los márgenes laterales al mínimo para ganar espacio */
+        --section-padding: 30px 15px;
+    }
+
+    .title {
+        height: 180px; /* Banner superior proporcionado */
+    }
+
+    .title-text {
+        font-size: 1.2rem;
+        margin-left: 15px;
+    }
+
+    /* --- FEATURES (Forzamos las 3 columnas) --- */
+    .features-section {
+        grid-template-columns: repeat(3, 1fr); /* Evita que se apilen */
+        gap: 10px; /* Hueco mínimo entre columnas */
+        padding: 20px 15px;
+    }
+
+    .features-section img {
+        width: 35px;
+        height: 35px;
+        margin-bottom: 10px;
+    }
+
+    .features-section p {
+        font-size: 0.5rem; /* Texto muy pequeño para que quepa en 1/3 de pantalla */
+    }
+
+    /* --- PREVIEWS (Mantenemos imagen y texto lado a lado) --- */
+    .diets-preview, .sports-preview {
+        padding: 15px 15px 30px 15px;
+        gap: 20px;
+    }
+
+    .diet-preview, .sport-preview {
+        /* No cambiamos a flex-direction: column. Se quedan en horizontal */
+        gap: 15px;
+    }
+
+    .diet-preview img, .sport-preview img {
+        width: 90px;
+        height: 90px;
+        border-radius: 8px;
+    }
+
+    .diet-info, .sport-info {
+        font-size: 0.6rem;
+        line-height: 1.3;
+    }
+
+    /* --- COMMENTS (Mantenemos los 3 en la misma fila) --- */
+    .featured-comments {
+        flex-wrap: nowrap; /* Impide que los comentarios bajen a otra línea */
+        gap: 8px;
+    }
+
+    .featured-comments article {
+        min-width: 0; /* Anula los 200px de escritorio para que puedan encogerse */
+    }
+
+    .comment-box {
+        padding: 8px;
+    }
+
+    .comment-comas {
+        font-size: 1.2rem;
+        margin-bottom: 5px;
+    }
+
+    .comment {
+        font-size: 0.45rem; /* Letra minúscula para caber en la caja reducida */
+    }
+
+    /* --- SIGN UP (Mantenemos 2 columnas: Texto + Imagen) --- */
+    .sign-up-request {
+        grid-template-columns: 1fr 130px; /* Columna der. ajustada al ancho móvil */
+        gap: 15px;
+        padding-bottom: 40px;
+    }
+
+    .sign-up-text {
+        font-size: 0.65rem;
+    }
+
+    .sign-up-image {
+        height: 130px;
+    }
+
+    #sign-up-link {
+        /* Reubicamos el botón proporcionalmente sobre la imagen reducida */
+        bottom: 50px;
+        right: 40px;
+        width: 70px;
+        height: 25px;
+        font-size: 0.55rem;
+        padding: 0;
+    }
 }
