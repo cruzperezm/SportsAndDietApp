@@ -1,0 +1,94 @@
+// Esperamos a que el HTML base esté cargado en el navegador
+document.addEventListener('DOMContentLoaded', () => {
+    // 1. Solicitamos el archivo JSON
+    fetch('data.json')
+        .then(respuesta => {
+            if (!respuesta.ok) throw new Error('Error al cargar data.json');
+            return respuesta.json(); // Convertimos la respuesta a objeto JavaScript
+        })
+        .then(datos => {
+            // 2. Si todo va bien, llamamos a la función que inyecta los datos
+            inyectarDatosEnHome(datos);
+        })
+        .catch(error => console.error('Error cargando los datos:', error));
+});
+
+function inyectarDatosEnHome(data) {
+    // --- HERO SECTION ---
+    document.getElementById('hero-title').textContent = data.hero.title;
+
+    // NUEVA LÓGICA DE VIDEOS:
+    const heroVideo = document.getElementById('hero-img');
+    const playlist = data.hero.bgVideos;
+    let videoActual = 0; // Empezamos por el primer video (posición 0)
+
+    if (playlist && playlist.length > 0) {
+        // Cargamos el primer video y le damos al play
+        heroVideo.src = playlist[videoActual];
+        heroVideo.play().catch(error => console.log("Autoplay bloqueado por el navegador", error));
+
+        // Escuchamos el evento 'ended' (cuando el video termina)
+        heroVideo.addEventListener('ended', () => {
+            // Pasamos al siguiente video. Si llegamos al final, volvemos al 0.
+            videoActual = (videoActual + 1) % playlist.length;
+            heroVideo.src = playlist[videoActual];
+            heroVideo.play();
+        });
+    }
+
+    // --- FEATURES SECTION (Generamos los <article> dinámicamente) ---
+    const featuresContainer = document.getElementById('features-container');
+    data.features.forEach(feature => {
+        // Tu HTML original usaba una clase diferente para el tercer texto, lo respetamos
+        const textClass = feature.type === 'about-us' ? 'text-wrapper-5' : `${feature.type}-text`;
+        featuresContainer.innerHTML += `
+        <article class="feature-${feature.type}">
+          <img src="${feature.icon}" alt="${feature.type} Logo">
+          <p class="${textClass}">${feature.text}</p>
+        </article>
+      `;
+    });
+
+    // --- DIET PREVIEW ---
+    document.getElementById('diet-preview-link').href = data.dietPreview.link;
+    document.getElementById('diet-preview-img').src = data.dietPreview.image;
+    document.getElementById('diet-info-text').textContent = data.dietPreview.info;
+
+    const dietGallery = document.getElementById('diet-gallery-container');
+    data.dietPreview.gallery.forEach((imgSrc, index) => {
+        dietGallery.innerHTML += `<img src="${imgSrc}" alt="diet ${index + 1}">`;
+    });
+
+    // --- SPORT PREVIEW ---
+    document.getElementById('sport-preview-link').href = data.sportPreview.link;
+    document.getElementById('sport-preview-img').src = data.sportPreview.image;
+    document.getElementById('sport-info-text').textContent = data.sportPreview.info;
+
+    const sportGallery = document.getElementById('sport-gallery-container');
+    data.sportPreview.gallery.forEach((imgSrc, index) => {
+        sportGallery.innerHTML += `<img src="${imgSrc}" alt="exercise ${index + 1}">`;
+    });
+
+    // --- COMMENTS SECTION ---
+    document.getElementById('comments-heading').textContent = data.comments.heading;
+    const commentsContainer = document.getElementById('comments-container');
+    data.comments.items.forEach((comment, index) => {
+        commentsContainer.innerHTML += `
+        <article id="comment-${index + 1}">
+          <div class="comment-box">
+            <div class="comment-comas" aria-hidden="true">,,</div>
+            <blockquote class="comment">${comment}</blockquote>
+          </div>
+        </article>
+      `;
+    });
+
+    // --- SIGN UP SECTION ---
+    // Usamos innerHTML porque tu texto tiene una etiqueta <br />
+    document.getElementById('sign-up-heading').innerHTML = data.signUp.heading;
+    document.getElementById('sign-up-img').src = data.signUp.image;
+
+    const signUpBtn = document.getElementById('sign-up-link');
+    signUpBtn.href = data.signUp.buttonLink;
+    signUpBtn.textContent = data.signUp.buttonText;
+}
