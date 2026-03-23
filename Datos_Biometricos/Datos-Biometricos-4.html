@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<meta charset="UTF-16">
 
 <head>
 
@@ -8,19 +9,30 @@
 
 <body>
 
-<div class="box1">Lorem Ipsum Lorem Ipsum?
-    <div class="box">Lorem Ipsum
-        <p>Lorem Ipsum Lorem Ipsum</p>
-        <p class="selector">Lorem Ipsum</p>
-        <p>Lorem Ipsum Lorem Ipsum</p>
-        <p class="selector">Lorem Ipsum</p>
-        <p class="selector">Lorem Ipsum</p>
-        <p class="selector">Lorem Ipsum</p>
+<form action="Datos-Biometricos-5.html" class="box1">Lorem Ipsum Lorem Ipsum?
+    <div class="box">
+        <label>Peso actual</label>
+        <input id="cWeight" type="text" required>
+        <label>Peso deseado</label>
+        <input id="dWeight" type="text" required>
+        <label>Cuantas semanas quieres?</label>
+        <input id="nWeeks" type="number">
         <div>
-            <a href="../Datos_Biometricos/Datos-Biometricos-5.html" class="button"></a>
+            <button onclick="store()" type="submit" class="button"></button>
         </div>
     </div>
-</div>
+</form>
+
+<script>
+    function store(){
+        if (typeof(Storage) !== "undefined") {
+            // Store
+            localStorage.setItem("cWeight", document.getElementById("cWeight").value);
+            localStorage.setItem("dWeight", document.getElementById("dWeight").value);
+            localStorage.setItem("nWeeks", document.getElementById("nWeeks").value);
+        }
+    }
+</script>
 
 </body>
 

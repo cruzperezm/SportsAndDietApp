@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<meta charset="UTF-16">
 <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="style.css">
@@ -9,18 +10,36 @@
 
 <form action="Datos-Biometricos-2.html" class="box1">Lorem Ipsum Lorem Ipsum?
     <div class="box">
-        <p class="selector">Lorem Ipsum</p>
-        <label  class="form-row">
-                <input type="text" required class="form"></input>
-                <input type="text" required class="form"></input>
-        </label>
-        <p class="selector">Lorem Ipsum</p>
-        <p class="selector">Lorem Ipsum</p>
+        <label>Nombre</label>
+        <input id="name" type="text" required>
+        <label> Género </label>
+        <select id="genre" class="selector">
+            <option value="Hombre">Hombre</option>
+            <option value="Mujer">Mujer</option>
+            <option value="No-binario">No Binario</option>
+            <option value="PND">Prefiero no decirlo</option>
+        </select>
+        <label>Edad</label>
+        <input id="age" type="number" required>
+        <label>Altura</label>
+        <input id="height" type="number" required>
         <div>
-            <button type="submit" class="button"></button>
+            <button onclick="store()" type="submit" class="button"></button>
         </div>
     </div>
 </form>
+
+<script>
+    function store(){
+    if (typeof(Storage) !== "undefined") {
+        // Store
+        localStorage.setItem("name", document.getElementById("name").value);
+        localStorage.setItem("genre", document.getElementById("genre").value);
+        localStorage.setItem("age", document.getElementById("age").value);
+        localStorage.setItem("height", document.getElementById("height").value);
+    }
+    }
+</script>
 
 </body>
 

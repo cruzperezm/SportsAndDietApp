@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<meta charset="UTF-16">
 
 <head>
     <link rel="stylesheet" href="style.css">
@@ -7,17 +8,42 @@
 
 <body>
 
-<div class="box1">Lorem Ipsum Lorem Ipsum?
-    <div class="box">Lorem Ipsum
-        <p class="selector">Lorem Ipsum</p>
-        <p class="selector">Lorem Ipsum</p>
-        <p class="selector">Lorem Ipsum</p>
-        <p class="selector">Lorem Ipsum</p>
+<form action="../Datos_Biometricos/Datos-Biometricos-3.html" class="box1">Cual es tu meta?
+    <div class="box">
+        <div class="radiowrapper">
+            <input id="dec" type="radio" name="radio" value="dec">
+            <label for="dec" class="form">Bajar peso</label>
+        </div>
+
+        <div class="radiowrapper">
+        <input id="inc" type="radio" name="radio" value="inc">
+            <label for="inc" class="form">Subir peso</label>
+        </div>
+
+        <div class="radiowrapper">
+        <input id="mnt" type="radio" name="radio" value="mnt">
+            <label for="mnt" class="form">Mantenerse</label>
+        </div>
+
+        <div class="radiowrapper">
+        <input id="muscle" type="radio" name="radio" value="muscle">
+            <label for="muscle" class="form">Musculo</label>
+        </div>
+        
         <div>
-            <a href="../Datos_Biometricos/Datos-Biometricos-3.html" class="button"></a>
+            <button onclick="store()" type="submit" class="button"></button>
         </div>
     </div>
-</div>
+</form>
+
+<script>
+    function store(){
+        if (typeof(Storage) !== "undefined") {
+            // Store
+            localStorage.setItem("goal", document.querySelector("input[name=radio]:checked").value);
+        }
+    }
+</script>
 
 </body>
 

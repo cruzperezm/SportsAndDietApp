@@ -1,23 +1,53 @@
 <!DOCTYPE html>
 <html>
-
+<meta charset="UTF-16">
 <head>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div class="box1">Lorem Ipsum Lorem Ipsum?
-    <div class="box">Lorem Ipsum
-        <p class="selector">Lorem Ipsum</p>
-        <p class="selector">Lorem Ipsum</p>
-        <p class="selector">Lorem Ipsum</p>
-        <p class="selector">Lorem Ipsum</p>
+<form action="Datos-Biometricos-4.html" class="box1">Cuanta actividad haces?
+    <div class="box">
+        <div class="radiowrapper">
+            <input id="nev" type="radio" name="radio" value="nev">
+            <label for="nev" class="form">Nada</label>
+        </div>
+
+        <div class="radiowrapper">
+            <input id="small" type="radio" name="radio" value="small">
+            <label for="small" class="form">Poca</label>
+        </div>
+
+        <div class="radiowrapper">
+            <input id="mod" type="radio" name="radio" value="mod">
+            <label for="mod" class="form">Moderada</label>
+        </div>
+
+        <div class="radiowrapper">
+            <input id="lots" type="radio" name="radio" value="lots">
+            <label for="lots" class="form">Mucha</label>
+        </div>
+
+        <div class="radiowrapper">
+            <input id="daily" type="radio" name="radio" value="daily">
+            <label for="daily" class="form">Todos los días</label>
+        </div>
+
         <div>
-            <a href="../Datos_Biometricos/Datos-Biometricos-4.html" class="button"></a>
+            <button onclick="store()" type="submit" class="button"></button>
         </div>
     </div>
-</div>
+</form>
+
+<script>
+    function store(){
+        if (typeof(Storage) !== "undefined") {
+            // Store
+            localStorage.setItem("activity", document.querySelector("input[name=radio]:checked").value);
+        }
+    }
+</script>
 
 </body>
 
