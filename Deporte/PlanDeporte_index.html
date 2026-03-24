@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Plan de Entrenamiento - Sports and Diet</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../footerheader/header.css">
+    <link rel="stylesheet" href="../footerheader/footer.css">
+    <script src="../xlu-include-file.js"></script>
+    <style>
+        :root {
+            --color-acento: #F97316;
+            --color-acento-hover: #EA580C;
+        }
+    </style>
+</head>
+<body>
+
+<header xlu-include-file="../footerheader/header.html"></header>
+
+<main xlu-include-file="PlanDeporte_grid-view.html"></main>
+
+<footer xlu-include-file="../footerheader/footer.html"></footer>
+
+<script>
+    xLuIncludeFile();
+
+    function cargarPlanDeporte() {
+        console.log("Iniciando carga de deporte..."); // Chivato 1
+
+        const contenedorPrincipal = document.getElementById('secciones-dinamicas');
+        const tempSeccion = document.getElementById('temp-seccion');
+        const tempPlato = document.getElementById('temp-plato');
+
+        // Si los templates no están, esperamos
+        if (!contenedorPrincipal || !tempSeccion || !tempPlato) {
+            console.log("Esperando a que carguen los templates..."); // Chivato 2
+            setTimeout(cargarPlanDeporte, 100);
+            return;
+        }
+
+        const deporteId = localStorage.getItem('deporteSeleccionado');
+        console.log("ID seleccionado:", deporteId); // Chivato 3
+
+        fetch('../data.json')
+            .then(res => res.json())
+            .then(data => {
+                console.log("Datos cargados del JSON:", data); // Chivato 4
+
+                const deporte = data.deportes.find(d => d.id === deporteId);
+
+                if (!deporte) {
+                    console.error("No se encontró el deporte con ID:", deporteId);
+                    document.getElementById('titulo-deporte-dinamico').innerText = "Deporte no encontrado";
+                    return;
+                }
+
+                document.getElementById('titulo-deporte-dinamico').innerText = deporte.titulo;
+
+                deporte.plan.forEach(fase => {
+                    console.log("Pintando fase:", fase.momento); // Chivato 5
+                    const clonSeccion = tempSeccion.content.cloneNode(true);
+                    clonSeccion.querySelector('.js-momento').innerText = fase.momento;
+                    const grid = clonSeccion.querySelector('.js-contenedor-platos');
+
+                    fase.opciones.forEach(ejercicio => {
+                        const clonPlato = tempPlato.content.cloneNode(true);
+                        clonPlato.querySelector('.js-nombre').innerText = ejercicio.nombre;
+                        const btn = clonPlato.querySelector('.js-btn-receta');
+
+                        if (ejercicio.imagen) {
+                            btn.style.backgroundImage = `linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.4)), url('${ejercicio.imagen}')`;
+                            btn.style.backgroundSize = 'cover';
+                        }
+
+                        btn.onclick = () => {
+                            localStorage.setItem('ejercicioSeleccionado', ejercicio.id);
+                            window.location.href = 'GuiaDeporte_index.html';
+                        };
+                        grid.appendChild(clonPlato);
+                    });
+
+                    configurarBotonesCarrusel(clonSeccion, grid);
+                    contenedorPrincipal.appendChild(clonSeccion);
+                });
+            })
+            .catch(err => console.error("Error crítico en el fetch:", err));
+    }
+
+    // (Aquí va tu función configurarBotonesCarrusel igual que siempre)
+    function configurarBotonesCarrusel(seccion, grid) {
+        // ... tu código de los botones ...
+    }
+
+    window.onload = cargarPlanDeporte;
+</script>
+</body>
+</html>
