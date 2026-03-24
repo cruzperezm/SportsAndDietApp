@@ -68,9 +68,21 @@
     "image": "../videos/manzana.gif",
     "info": "Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum",
     "gallery": [
-      "../imagenes/Dietas/Definicion/def_alm_1.jpg",
-      "../imagenes/Dietas/Definicion/def_des_15.jpg",
-      "../imagenes/Dietas/Definicion/def_des_3.jpg"
+      "../imagenes/Dietas/Keto/k_alm_1.jpg",
+      "../imagenes/Dietas/Keto/k_alm_2.jpg",
+      "../imagenes/Dietas/Keto/k_alm_3.jpg",
+      "../imagenes/Dietas/Keto/k_alm_4.jpg",
+      "../imagenes/Dietas/Keto/k_alm_5.jpg",
+      "../imagenes/Dietas/Keto/k_alm_6.jpg",
+      "../imagenes/Dietas/Keto/k_alm_7.jpg",
+      "../imagenes/Dietas/Keto/k_alm_8.jpg",
+      "../imagenes/Dietas/Keto/k_alm_9.jpg",
+      "../imagenes/Dietas/Keto/k_alm_10.jpg",
+      "../imagenes/Dietas/Keto/k_alm_11.jpg",
+      "../imagenes/Dietas/Keto/k_alm_12.jpg",
+      "../imagenes/Dietas/Keto/k_alm_13.jpg",
+      "../imagenes/Dietas/Keto/k_alm_14.jpg",
+      "../imagenes/Dietas/Keto/k_alm_15.jpg"
     ]
   },
   "sportPreview": {

@@ -111,9 +111,17 @@ function inyectarDatosEnHome(data) {
     document.getElementById('diet-info-text').textContent = data.dietPreview.info;
 
     const dietGallery = document.getElementById('diet-gallery-container');
-    data.dietPreview.gallery.forEach((imgSrc, index) => {
-        dietGallery.innerHTML += `<img src="${imgSrc}" alt="diet ${index + 1}">`;
+    dietGallery.innerHTML = ''; // Limpiamos el contenedor
+    const dietTrack = document.createElement('div');
+    // Le damos la clase general y la de dirección izquierda
+    dietTrack.className = 'carousel-track carousel-track-left';
+
+    // MAGIA JS: Duplicamos el array para el bucle infinito
+    const dietImages = [...data.dietPreview.gallery, ...data.dietPreview.gallery];
+    dietImages.forEach((imgSrc, index) => {
+        dietTrack.innerHTML += `<img src="${imgSrc}" alt="diet ${index + 1}">`;
     });
+    dietGallery.appendChild(dietTrack);
 
     // --- SPORT PREVIEW ---
     document.getElementById('sport-preview-link').href = data.sportPreview.link;
@@ -121,9 +129,17 @@ function inyectarDatosEnHome(data) {
     document.getElementById('sport-info-text').textContent = data.sportPreview.info;
 
     const sportGallery = document.getElementById('sport-gallery-container');
-    data.sportPreview.gallery.forEach((imgSrc, index) => {
-        sportGallery.innerHTML += `<img src="${imgSrc}" alt="exercise ${index + 1}">`;
+    sportGallery.innerHTML = '';
+    const sportTrack = document.createElement('div');
+    // Le damos la clase general y la de dirección derecha
+    sportTrack.className = 'carousel-track carousel-track-right';
+
+    // MAGIA JS: Duplicamos el array también para el deporte
+    const sportImages = [...data.sportPreview.gallery, ...data.sportPreview.gallery];
+    sportImages.forEach((imgSrc, index) => {
+        sportTrack.innerHTML += `<img src="${imgSrc}" alt="exercise ${index + 1}">`;
     });
+    sportGallery.appendChild(sportTrack);
 
     // --- COMMENTS SECTION ---
     document.getElementById('comments-heading').textContent = data.comments.heading;

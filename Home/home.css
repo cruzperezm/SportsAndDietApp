@@ -22,10 +22,10 @@ html, body {
 /**
 .home {
     /* Degradado lineal de arriba (azul) hacia abajo (verde) */
-    /*background: linear-gradient(180deg, #e3ffb1 0%, #ffeeab 100%);
+/*background: linear-gradient(180deg, #e3ffb1 0%, #ffeeab 100%);
 
-    /* Asegura que el fondo cubra todo el alto, incluso si hay poco contenido */
-    /*min-height: 100vh;
+/* Asegura que el fondo cubra todo el alto, incluso si hay poco contenido */
+/*min-height: 100vh;
 }
 */
 
@@ -149,15 +149,55 @@ img[src*="aspas.svg"] {
     line-height: 1.6;
 }
 
+/* --- ESTILOS DEL CARRUSEL INFINITO --- */
+
+/* 1. El contenedor ahora es una ventana que oculta lo que sobresale */
 .diet-preview-gallery, .sport-preview-gallery {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
 }
 
+/* 2. La cinta base del carrusel */
+.carousel-track {
+    display: flex;
+    gap: 20px;
+    width: max-content; /* Crece todo lo que necesite hacia los lados */
+}
+
+/* 3. Direcciones y velocidad de animación */
+.carousel-track-left {
+    animation: scrollCarouselLeft 60s linear infinite;
+}
+
+.carousel-track-right {
+    animation: scrollCarouselRight 30s linear infinite;
+}
+
+/* Opcional (Buena UX): Pausar la animación al pasar el ratón por encima */
+.carousel-track:hover {
+    animation-play-state: paused;
+}
+
+/* 4. Las imágenes dentro de la cinta */
 .diet-preview-gallery img, .sport-preview-gallery img {
-    width: 100%;
+    /* Mantenemos un tamaño generoso parecido a tu imagen, pero que se adapte */
+    width: clamp(200px, 25vw, 350px);
     aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 16px;
+    flex-shrink: 0; /* IMPIDE que las imágenes se aplasten en pantallas pequeñas */
+}
+
+/* 5. Fotogramas clave de la animación (Cálculo exacto para que no haya saltos) */
+@keyframes scrollCarouselLeft {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-50% - 10px)); } /* -10px compensa la mitad del gap */
+}
+
+@keyframes scrollCarouselRight {
+    0% { transform: translateX(calc(-50% - 10px)); } /* Empieza a la mitad (oculto) */
+    100% { transform: translateX(0); } /* Termina en el inicio */
 }
 
 /* --- COMMENTS --- */
