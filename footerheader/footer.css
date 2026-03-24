@@ -29,6 +29,7 @@
     font-size: 14px;
     line-height: 1.4;
     color: #1a1a1a;
+    text-align: justify-all; /* <-- Añadimos esta línea */
 }
 
 .social-links {

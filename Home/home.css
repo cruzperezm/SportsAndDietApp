@@ -19,6 +19,15 @@ html, body {
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
     color: var(--text-main);
 }
+/**
+.home {
+    /* Degradado lineal de arriba (azul) hacia abajo (verde) */
+    /*background: linear-gradient(180deg, #e3ffb1 0%, #ffeeab 100%);
+
+    /* Asegura que el fondo cubra todo el alto, incluso si hay poco contenido */
+    /*min-height: 100vh;
+}
+*/
 
 button:focus-visible {
     outline: 2px solid #4a90e2 !important;
@@ -77,7 +86,8 @@ img[src*="aspas.svg"] {
     margin-left: 10%;
     font-size: 2rem;
     font-weight: 500;
-    color: #000;
+    color: #ffffff;
+    -webkit-text-stroke: 1px #000000;
 }
 
 /* --- FEATURES --- */

@@ -1,45 +1,81 @@
 {
+  "header": {
+    "home": {
+      "link": "../Home/home-index.html",
+      "logo": "../imagenes/Home/home.svg",
+      "alt": "Home"
+    },
+    "navLinks": [
+      { "id": "nav-dietas", "link": "../Dietas/Dietas_index.html", "text": "Dieta" },
+      { "id": "nav-deporte", "link": "../Deporte/Deporte_index.html", "text": "Deporte" },
+      { "id": "nav-explorador", "link": "../Explorer/explorer.html", "text": "Explorador" },
+      { "id": "nav-about-us", "link": "../About_Us/About-Us-index.html", "text": "Información" },
+      { "id": "nav-login", "link": "../Log_In/log-in-index.html", "text": "Log In" }
+    ]
+  },
+  "footer": {
+    "textColumns": [
+      "Proyecto desarrollado para la asignatura Programación Web y Móvil del Grado de Ingeniería Informática de la ULPGC por los integrantes: Margarita Cruz Pérez, Salwa Madani Lazaar, Óscar Yavar Rodríguez, Kemuel Rodríguez García",
+      "Contáctanos a través de nuestras redes sociales de Sports&DietApp:"
+    ],
+    "socialLinks": [
+      {
+        "name": "Gmail",
+        "link": "https://workspace.google.com/intl/es/gmail/",
+        "icon": "../imagenes/Footer/gmail-logo.svg",
+        "alt": "Gmail"
+      },
+      {
+        "name": "Instagram",
+        "link": "https://www.instagram.com/",
+        "icon": "../imagenes/Footer/instagram-logo.svg",
+        "alt": "Instagram"
+      },
+      {
+        "name": "LinkedIn",
+        "link": "https://es.linkedin.com/",
+        "icon": "../imagenes/Footer/linkedin-logo.svg",
+        "alt": "LinkedIn"
+      }
+    ]
+  },
   "hero": {
     "title": "Lorem Ipsum",
     "bgVideos": [
-      "../videos/1.mp4",
-      "../videos/2.mp4",
-      "../videos/3.mp4",
-      "../videos/4.mp4",
-      "../videos/5.mp4",
-      "../videos/6.mp4"
+      "../videos/video-title-1.mp4",
+      "../videos/video-title-2.mp4"
     ]
   },
   "features": [
     {
       "type": "diet",
-      "icon": "../imagenes/aspas.svg",
+      "icon": "../imagenes/Home/diet-logo.svg",
       "text": "Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum"
     },
     {
       "type": "sport",
-      "icon": "../imagenes/aspas.svg",
+      "icon": "../imagenes/Home/sports-logo.svg",
       "text": "Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum"
     },
     {
       "type": "about-us",
-      "icon": "../imagenes/aspas.svg",
+      "icon": "../imagenes/Home/info-logo.svg",
       "text": "Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum"
     }
   ],
   "dietPreview": {
     "link": "../Dietas/Dietas_index.html",
-    "image": "../imagenes/aspas.svg",
+    "image": "../videos/manzana.gif",
     "info": "Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum",
     "gallery": [
-      "../imagenes/aspas.svg",
-      "../imagenes/aspas.svg",
-      "../imagenes/aspas.svg"
+      "../imagenes/Dietas/Definicion/def_alm_1.jpg",
+      "../imagenes/Dietas/Definicion/def_des_15.jpg",
+      "../imagenes/Dietas/Definicion/def_des_3.jpg"
     ]
   },
   "sportPreview": {
     "link": "../Deporte/Deporte_index.html",
-    "image": "../imagenes/aspas.svg",
+    "image": "../videos/musculo.gif",
     "info": "Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum",
     "gallery": [
       "../imagenes/aspas.svg",
@@ -57,7 +93,7 @@
   },
   "signUp": {
     "heading": "Lorem Ipsum ?<br />Lorem Ipsum Lorem Ipsum !",
-    "image": "../imagenes/aspas.svg",
+    "image": "../imagenes/Home/icono-registrate.avif",
     "buttonText": "Lorem",
     "buttonLink": "../Sign_Up/sign-up-index.html"
   }

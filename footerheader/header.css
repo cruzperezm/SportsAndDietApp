@@ -31,7 +31,7 @@
     background-color: #d9d9d9;
     padding: 0.5rem 1.25rem;
     border-radius: 6px;
-    font-weight: 500;
+    font-weight: 400;
     transition: background-color 0.2s ease, transform 0.2s ease;
     display: flex;
     justify-content: center;
@@ -47,21 +47,35 @@
     width: 50px;
     height: 50px;
     padding: 0;
-    border-radius: 50%;
-    overflow: hidden;
+    border-radius: 50%; /* Mantiene la forma circular */
+    overflow: hidden;   /* Recorta la imagen para que sea circular */
+
+    /* --- CAMBIO: Quitamos el fondo gris para que no se vea detrás de la imagen --- */
+    background-color: transparent;
 }
 
 #nav-home img {
-    max-width: 80%;
-    height: auto;
+    /* --- CAMBIO: Forzamos a la imagen a llenar todo el contenedor (el círculo) --- */
+    width: 90%;
+    height: 90%;
+
+    /* --- CAMBIO: Asegura que la imagen se escale correctamente sin deformarse para cubrir el círculo --- */
+    object-fit: cover;
 }
 
 #nav-login {
     margin-left: auto;
-    padding: 0.6rem 2.5rem;
+    padding: 0.5rem 1.5rem; /* Reducimos un poco el padding para equilibrar */
     border-radius: 9999px;
     font-weight: 600;
+
+    /* --- SOLUCIÓN PARA QUE NO SE APILE --- */
+    font-size: 0.9rem; /* Reducimos ligeramente el tamaño de la letra */
+    width: auto; /* Anula los 100px fijos para que el botón crezca si lo necesita */
+    min-width: 100px; /* Mantiene un ancho mínimo por estética */
+    white-space: nowrap; /* Fuerza a que el texto se mantenga en una sola línea siempre */
 }
+
 body:has(main.dietas) #nav-dietas {
     background-color: #888888;
     color: #ffffff;

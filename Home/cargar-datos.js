@@ -7,11 +7,67 @@ document.addEventListener('DOMContentLoaded', () => {
             return respuesta.json(); // Convertimos la respuesta a objeto JavaScript
         })
         .then(datos => {
-            // 2. Si todo va bien, llamamos a la función que inyecta los datos
+            // 2. Inyectamos la Home (que carga inmediatamente)
             inyectarDatosEnHome(datos);
+
+            // 3. Esperamos a que los componentes externos se carguen para inyectarlos
+            esperarElemento('.navigation', () => inyectarHeader(datos.header));
+            esperarElemento('.footer-content', () => inyectarFooter(datos.footer));
         })
         .catch(error => console.error('Error cargando los datos:', error));
 });
+
+// --- FUNCIÓN VIGILANTE PARA COMPONENTES ASÍNCRONOS ---
+function esperarElemento(selector, callback) {
+    if (document.querySelector(selector)) {
+        callback(); // Si el elemento ya existe, ejecuta la función de inyectar
+    } else {
+        // Si no existe, vuelve a comprobarlo en 100 milisegundos
+        setTimeout(() => esperarElemento(selector, callback), 100);
+    }
+}
+
+// --- FUNCIONES DE INYECCIÓN DE DATOS ---
+
+function inyectarHeader(headerData) {
+    // Logo Home
+    const navHome = document.getElementById('nav-home');
+    if (navHome) {
+        navHome.href = headerData.home.link;
+        navHome.innerHTML = `<img src="${headerData.home.logo}" alt="${headerData.home.alt}">`;
+    }
+
+    // Links de navegación
+    headerData.navLinks.forEach(linkObj => {
+        const linkElement = document.getElementById(linkObj.id);
+        if (linkElement) {
+            linkElement.href = linkObj.link;
+            linkElement.textContent = linkObj.text;
+        }
+    });
+}
+
+function inyectarFooter(footerData) {
+    // Columnas de texto
+    const columnas = document.querySelectorAll('.footer-column p');
+    if (columnas.length >= 2) {
+        columnas[0].textContent = footerData.textColumns[0];
+        columnas[1].textContent = footerData.textColumns[1];
+    }
+
+    // Redes Sociales (las creamos dinámicamente)
+    const socialContainer = document.querySelector('.social-links');
+    if (socialContainer) {
+        socialContainer.innerHTML = ''; // Vaciamos el contenedor
+        footerData.socialLinks.forEach(social => {
+            socialContainer.innerHTML += `
+                <a href="${social.link}" class="${social.name}" aria-label="${social.name}">
+                    <img alt="${social.alt}" src="${social.icon}">
+                </a>
+            `;
+        });
+    }
+}
 
 function inyectarDatosEnHome(data) {
     // --- HERO SECTION ---
