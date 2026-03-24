@@ -1,100 +1,138 @@
+/* =========================================
+    VARIABLES Y BASE - VERSIÓN DEPORTE
+    Paleta: Naranja Acción, Crema, Gris Carbón
+========================================= */
+:root {
+    --color-fondo: #FAFAFA;
+    --color-acento: #F97316;      /* Naranja vibrante (Energía/Acción) */
+    --color-acento-hover: #EA580C;/* Naranja más oscuro para hover */
+    --color-texto: #1F2937;
+    --color-texto-suave: #4B5563;
+    --color-tarjeta: #FFFFFF;
+    --sombra-suave: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --sombra-hover: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Si prefieres el MORADO, solo cambia estas dos variables:
+    --color-acento: #8B5CF6;      
+    --color-acento-hover: #7C3AED; 
+*/
+
 body {
-    background-color: #FFFFFF;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
     margin: 0;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
     overflow-x: hidden;
 }
 
+/* =========================================
+    PÁGINA 1: SELECCIÓN DE DEPORTES
+========================================= */
 .seccion-articulos {
     width: 95%;
     max-width: 1440px;
     margin: 0 auto;
-    padding: 50px 0;
+    padding: 60px 0;
 }
 
 .contenedor-texto {
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 70px;
 }
 
 .titulo-principal {
-    color: #000000;
-    font-size: clamp(40px, 6.5vw, 96px);
-    font-weight: 400;
-    margin-bottom: 10px;
+    color: var(--color-texto);
+    font-size: clamp(40px, 6vw, 80px);
+    font-weight: 800;
+    letter-spacing: -1.5px;
+    margin-bottom: 15px;
 }
 
 .descripcion-principal {
-    color: #000000;
-    font-size: clamp(18px, 2.5vw, 36px);
+    color: var(--color-texto-suave);
+    font-size: clamp(18px, 2vw, 24px);
+    font-weight: 400;
 }
 
 .contenedor-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 3vw;
+    gap: 40px;
     justify-content: center;
+    padding: 0 20px;
 }
 
 .tarjeta-item {
     width: 100%;
+    background-color: var(--color-tarjeta);
+    border-radius: 20px;
+    padding: 15px;
+    box-shadow: var(--sombra-suave);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.tarjeta-item:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--sombra-hover);
 }
 
 .placeholder-imagen {
     width: 100%;
-    aspect-ratio: 422 / 360;
-    background: #D9D9D9;
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-    transition: transform 0.3s ease;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    border-radius: 12px;
+    background-color: #E5E7EB;
 }
-
-.placeholder-imagen:hover {
-    transform: scale(1.03);
-}
-
-.placeholder-imagen::before,
-.placeholder-imagen::after {
-    content: "";
-    position: absolute;
-    width: 150%;
-    height: 1px;
-    background-color: black;
-    top: 50%;
-    left: 50%;
-}
-
-.placeholder-imagen::before { transform: translate(-50%, -50%) rotate(40.4deg); }
-.placeholder-imagen::after { transform: translate(-50%, -50%) rotate(-40.4deg); }
 
 .tarjeta-item h3 {
-    color: #000000;
-    font-size: clamp(16px, 2vw, 32px);
-    font-weight: 400;
-    margin-top: 15px;
+    color: var(--color-texto);
+    font-size: clamp(20px, 2vw, 26px);
+    font-weight: 600;
+    margin: 20px 0 10px 10px;
 }
 
-.plan-dietas {
-    width: 90%;
+/* =========================================
+    PÁGINA 2: PLAN DE ENTRENAMIENTO
+========================================= */
+.plan-dietas { /* Mantenemos el nombre de la clase para no romper el HTML */
+    width: 95%;
     max-width: 1440px;
     margin: 0 auto;
     padding: 40px 0;
 }
 
+.hero-section {
+    background: linear-gradient(135deg, var(--color-acento), var(--color-acento-hover));
+    border-radius: 30px;
+    padding: 60px 20px;
+    margin-bottom: 60px;
+    color: white;
+}
+
 .text-96 {
-    font-size: clamp(48px, 7vw, 96px);
-    font-weight: 400;
+    font-size: clamp(40px, 6vw, 72px);
+    font-weight: 800;
     text-align: center;
-    margin-bottom: 40px;
+    margin: 0;
+    letter-spacing: -1px;
+}
+
+.seccion-comida {
+    margin-bottom: 80px;
 }
 
 .text-48 {
-    font-size: clamp(32px, 4vw, 48px);
-    font-weight: 400;
-    margin: 40px 0 20px 0;
+    font-size: clamp(28px, 4vw, 40px);
+    font-weight: 700;
+    margin: 0 0 30px 20px;
+    color: var(--color-texto);
+    border-left: 5px solid var(--color-acento);
+    padding-left: 15px;
 }
 
+/* --- Ajustes del Carrusel Circular --- */
 .wrapper-carrusel {
     overflow: hidden;
     position: relative;
@@ -102,83 +140,83 @@ body {
 }
 
 .grid-3-cuadros {
-    display: flex;
+    display: flex !important;
     gap: 2vw;
-    transition: transform 0.5s ease;
-    padding: 10px 0;
+    padding: 10px;
+    overflow: visible;
+    will-change: transform;
 }
 
 .contenedor-item {
     flex: 0 0 calc(33.333% - 1.34vw);
     min-width: calc(33.333% - 1.34vw);
+    box-sizing: border-box;
 }
 
 .cuadro-gris {
     width: 100%;
-    aspect-ratio: 378 / 382;
-    background: #D9D9D9;
+    aspect-ratio: 1/1;
+    background-color: #E5E7EB;
+    border-radius: 20px;
     position: relative;
     overflow: hidden;
     cursor: pointer;
+    box-shadow: var(--sombra-suave);
+    background-size: cover;
+    background-position: center;
     transition: transform 0.3s ease;
 }
 
 .cuadro-gris:hover {
-    transform: scale(1.03);
+    transform: scale(1.02);
 }
-
-.cuadro-gris::before, .cuadro-gris::after {
-    content: "";
-    position: absolute;
-    width: 150%;
-    height: 1px;
-    background: black;
-    top: 50%;
-    left: 50%;
-}
-
-.cuadro-gris::before { transform: translate(-50%, -50%) rotate(45deg); }
-.cuadro-gris::after { transform: translate(-50%, -50%) rotate(-45deg); }
 
 .texto-interior {
     position: absolute;
-    bottom: 10px;
-    left: 10px;
-    font-size: 24px !important;
-    color: black;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 20px 20px 20px;
+    box-sizing: border-box;
+    font-size: clamp(18px, 1.5vw, 22px) !important;
+    font-weight: 600;
+    color: white;
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
     pointer-events: none;
-    width: 90%;
 }
 
 .controles-carrusel {
     display: flex;
     justify-content: flex-end;
-    width: 137px;
-    height: 50px;
-    margin-top: 23px;
-    margin-left: auto;
-    gap: 37px;
+    margin-top: 20px;
+    padding-right: 20px;
+    gap: 15px;
 }
 
 .btn-nav {
     width: 50px;
     height: 50px;
-    min-width: 50px;
     border-radius: 50%;
-    border: 1px solid black;
-    background: white;
+    border: none;
+    background: var(--color-acento);
+    color: white;
     cursor: pointer;
-    font-size: 27px;
+    font-size: 24px;
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: background 0.2s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(249, 115, 22, 0.3);
 }
 
 .btn-nav:hover {
-    background: black;
-    color: white;
+    background: var(--color-acento-hover);
+    transform: translateY(-2px);
 }
 
+/* =========================================
+    PÁGINA 3: GUÍA DE EJERCICIO
+========================================= */
 .guia-dieta {
     width: 100%;
     max-width: 1440px;
@@ -187,64 +225,149 @@ body {
 
 .hero-guia {
     width: 100%;
-    aspect-ratio: 1440 / 545;
-    background: #D9D9D9;
+    aspect-ratio: 21/9;
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
+    color: white;
 }
 
-.hero-guia::before, .hero-guia::after {
-    content: "";
-    position: absolute;
-    width: 150%;
-    height: 1px;
-    background: black;
-    top: 50%;
-    left: 50%;
+.hero-guia h1 {
+    color: white;
+    text-shadow: 0 4px 8px rgba(0,0,0,0.3);
 }
-
-.hero-guia::before { transform: translate(-50%, -50%) rotate(20deg); }
-.hero-guia::after { transform: translate(-50%, -50%) rotate(-20deg); }
 
 .text-24-hero {
-    font-size: clamp(16px, 2vw, 24px);
+    font-size: clamp(18px, 2vw, 24px);
     z-index: 2;
-    margin-top: 20px;
+    margin-top: 10px;
     text-align: center;
+    opacity: 0.9;
 }
 
 .contenedor-columnas {
     display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: flex-start;
+    justify-content: space-between;
     gap: 5vw;
-    padding: 5vw 2vw;
-    width: 100%;
-    box-sizing: border-box;
+    padding: 80px 5vw 40px 5vw;
 }
 
 .columna {
     flex: 1;
-    max-width: 450px;
+    background: var(--color-tarjeta);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: var(--sombra-suave);
 }
 
-.linea-divisoria {
-    width: 1px;
-    height: 300px;
-    background: black;
-    flex-shrink: 0;
+.text-40 {
+    font-size: clamp(24px, 3vw, 32px);
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: var(--color-acento);
 }
-
-.text-40 { font-size: clamp(28px, 3.5vw, 40px); margin-bottom: 20px; }
 
 .lista-columna {
-    font-size: clamp(18px, 2vw, 24px);
-    line-height: 1.5;
+    font-size: clamp(16px, 1.5vw, 18px);
+    line-height: 1.8;
     padding-left: 20px;
+    color: var(--color-texto-suave);
+}
+
+.lista-columna li {
+    margin-bottom: 12px;
+}
+
+.bloque-inferior {
+    padding: 0 5vw 100px 5vw;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.text-24-largo {
+    font-size: clamp(16px, 1.8vw, 20px);
+    line-height: 1.8;
+    color: var(--color-texto-suave);
+    background: var(--color-tarjeta);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: var(--sombra-suave);
+    white-space: pre-wrap;
+}
+
+/* =========================================
+    FILTROS Y ICONOS DEPORTE
+========================================= */
+
+.filtros-container { margin: 30px auto; text-align: center; }
+.filtros-botones { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+
+.btn-filtro {
+    padding: 8px 18px; border: 2px solid var(--color-acento);
+    background: white; color: var(--color-acento);
+    border-radius: 20px; font-weight: bold; cursor: pointer; transition: 0.3s;
+}
+.btn-filtro.active { background: var(--color-acento); color: white; }
+.receta-oculta { display: none !important; }
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* Relación 16:9 */
+    height: 0;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: var(--sombra-suave);
+    background: #000;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Iconos de Deporte en Guía */
+.etiquetas-wrapper { display: flex; gap: 12px; margin: 15px 0; justify-content: center; }
+
+.icono-deporte {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 40px; height: 40px; border-radius: 10px; color: white; font-size: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Colores por tipo de entrenamiento */
+.icon-fuerza { background-color: #EF4444; }
+.icon-cardio { background-color: #3B82F6; }
+.icon-flex { background-color: #8B5CF6; }
+.icon-equipo { background-color: #6B7280; }
+.icon-tiempo { background-color: #F59E0B; }
+
+.btn-primario {
+    background-color: var(--color-acento); color: white;
+    padding: 15px 25px; border: none; border-radius: 50px; /* Más redondeado para deporte */
+    font-size: 1.1rem; font-weight: bold; cursor: pointer;
+    width: 100%; margin-top: 20px; transition: 0.3s;
+    text-transform: uppercase; letter-spacing: 1px;
+}
+.btn-primario.guardado { background-color: #1F2937; }
+
+/* =========================================
+    RESPONSIVE DESIGN (RWD)
+========================================= */
+@media (max-width: 1024px) {
+    .contenedor-grid { grid-template-columns: repeat(2, 1fr); }
+    .contenedor-columnas { flex-direction: column; padding-top: 40px; }
+    .columna { width: 100%; box-sizing: border-box; }
+}
+
+@media (max-width: 768px) {
+    .contenedor-grid { grid-template-columns: 1fr; }
+    .hero-guia { aspect-ratio: 16/9; }
+    .contenedor-item { flex: 0 0 calc(100% - 2vw); min-width: calc(100% - 2vw); }
+    .controles-carrusel { justify-content: center; padding-right: 0; }
 }
