@@ -18,46 +18,7 @@
 <main xlu-include-file="Deporte_grid-view.html"></main>
 
 <footer xlu-include-file="../footerheader/footer.html"></footer>
+<script src="logica-deportes.js"></script>
 
-<script>
-    xLuIncludeFile();
-
-    function inicializar() {
-        // 1. Verificamos que los elementos existen antes de hacer nada
-        const contenedor = document.getElementById('contenedor-deportes');
-        const temp = document.getElementById('template-tarjeta');
-
-        if (!contenedor || !temp) {
-            // Si el archivo modular aún no ha cargado, esperamos 100ms
-            setTimeout(inicializar, 100);
-            return;
-        }
-
-        fetch('../data.json')
-            .then(res => res.json())
-            .then(data => {
-                // 2. IMPORTANTE: Comprueba que en tu JSON existe "deportes" (en plural)
-                if (!data.deportes) {
-                    console.error("No se encontró la clave 'deportes' en el JSON");
-                    return;
-                }
-
-                data.deportes.forEach(deporte => {
-                    const clon = temp.content.cloneNode(true);
-                    clon.querySelector('.js-titulo').innerText = deporte.titulo;
-                    clon.querySelector('.js-imagen').src = deporte.imagen;
-
-                    clon.querySelector('.js-enlace').onclick = () => {
-                        localStorage.setItem('deporteSeleccionado', deporte.id);
-                        window.location.href = 'PlanDeporte_index.html';
-                    };
-                    contenedor.appendChild(clon);
-                });
-            })
-            .catch(error => console.error("Error cargando deportes:", error));
-    }
-
-    window.onload = inicializar;
-</script>
 </body>
 </html>

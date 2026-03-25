@@ -18,47 +18,6 @@
 
 <footer xlu-include-file="../footerheader/footer.html"></footer>
 
-<script>
-  xLuIncludeFile();
-
-  function inicializar() {
-    const contenedor = document.getElementById('contenedor-dietas');
-    const temp = document.getElementById('template-tarjeta');
-
-    if (!contenedor || !temp) {
-      setTimeout(inicializar, 100);
-      return;
-    }
-
-    fetch('../data.json')
-            .then(res => {
-              if (!res.ok) throw new Error("No se encontró el data.json");
-              return res.json();
-            })
-            .then(data => {
-              data.dietas.forEach(dieta => {
-                const clon = temp.content.cloneNode(true);
-                clon.querySelector('.js-titulo').innerText = dieta.titulo;
-
-                clon.querySelector('.js-imagen').src = dieta.imagen;
-                clon.querySelector('.js-imagen').alt = dieta.titulo;
-
-                clon.querySelector('.js-enlace').onclick = () => {
-                  localStorage.setItem('dietaSeleccionada', dieta.id);
-                  window.location.href = 'Plan_index.html';
-                };
-                contenedor.appendChild(clon);
-              });
-            })
-            .catch(error => console.error("Error cargando dietas:", error));
-  }
-
-  window.addEventListener('load', () => {
-    console.log("Página cargada, iniciando lógica...");
-    if (typeof inicializar === 'function') inicializar();
-    if (typeof cargarPlanDieta === 'function') cargarPlanDieta();
-    if (typeof cargarPaginaReceta === 'function') cargarPaginaReceta();
-  });
-</script>
+<script src="logica-dietas.js"></script>
 </body>
 </html>

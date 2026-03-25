@@ -1,10 +1,6 @@
-/* =========================================
-    VARIABLES Y BASE
-    Paleta: Esmeralda, Crema, Gris Carbón
-========================================= */
 :root {
     --color-fondo: #FAFAFA;       /* Blanco roto/crema para el fondo */
-    --color-acento: #10B981;      /* Verde esmeralda (Salud/Fitness) */
+    --color-acento: #10B981;      /* Verde esmeralda  */
     --color-acento-hover: #059669;/* Verde más oscuro para hover */
     --color-texto: #1F2937;       /* Gris carbón para texto principal */
     --color-texto-suave: #4B5563; /* Gris medio para descripciones */
@@ -21,9 +17,6 @@ body {
     overflow-x: hidden;
 }
 
-/* =========================================
-    PÁGINA 1: SELECCIÓN DE DIETAS
-========================================= */
 .seccion-articulos {
     width: 95%;
     max-width: 1440px;
@@ -88,9 +81,6 @@ body {
     margin: 20px 0 10px 10px;
 }
 
-/* =========================================
-    PÁGINA 2: PLAN DIARIO Y CARRUSEL (CORREGIDO)
-========================================= */
 .plan-dietas {
     width: 95%;
     max-width: 1440px;
@@ -209,9 +199,6 @@ body {
     transform: translateY(-2px);
 }
 
-/* =========================================
-    PÁGINA 3: GUÍA DE RECETA
-========================================= */
 .guia-dieta {
     width: 100%;
     max-width: 1440px;
@@ -292,9 +279,6 @@ body {
     white-space: pre-wrap;
 }
 
-/* =========================================
-    RECIÉN AÑADIDO: FILTROS Y ALÉRGENOS
-========================================= */
 
 .filtros-container { margin: 30px auto; text-align: center; }
 .filtros-botones { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
@@ -325,9 +309,7 @@ body {
 }
 .btn-primario.guardado { background-color: #4b5563; }
 
-/* =========================================
-    RESPONSIVE DESIGN (RWD)
-========================================= */
+/* RESPONSIVE DESIGN (RWD) */
 @media (max-width: 1024px) {
     .contenedor-grid { grid-template-columns: repeat(2, 1fr); }
     .contenedor-columnas { flex-direction: column; padding-top: 40px; }
