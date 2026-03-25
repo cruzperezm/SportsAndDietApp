@@ -3152,7 +3152,7 @@
               "imagen": "../imagenes/Deportes/sprints-a.jpg",
               "material": ["Pista o calle"],
               "detalles": { "reps": "8", "descanso": "1 min" },
-              "video": "https://youtu.be/nBIAxWw5jos?si=CNknJ_Wh9NllNTEk",
+              "video": "https://www.youtube.com/embed/nBIAxWw5jos",
               "caracteristicas": ["Alta Intensidad", "Tiempo"]
             },
             {
@@ -3161,7 +3161,7 @@
               "imagen": "../imagenes/Deportes/comba-a.jpg",
               "material": ["Comba rápida"],
               "detalles": { "tiempo": "60 seg", "reps": "4 series" },
-              "video": "https://youtu.be/KgBlZjPVHzM?si=73r7LsjMbclf64P9",
+              "video": "https://www.youtube.com/embed/KgBlZjPVHzM",
               "caracteristicas": ["Cardio", "Equipo"]
             },
             {
