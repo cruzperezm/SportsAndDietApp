@@ -171,7 +171,7 @@ img[src*="aspas.svg"] {
 }
 
 .carousel-track-right {
-    animation: scrollCarouselRight 30s linear infinite;
+    animation: scrollCarouselRight 60s linear infinite;
 }
 
 /* Opcional (Buena UX): Pausar la animación al pasar el ratón por encima */

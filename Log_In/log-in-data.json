@@ -1,0 +1,39 @@
+{
+  "login": {
+    "avatar": {
+      "src": "../imagenes/Log-in-Sign-up/user-icon.svg",
+      "alt": "Foto de usuario"
+    },
+    "inputs": [
+      { "placeholder": "Nombre de usuario", "type": "text" },
+      { "placeholder": "Contraseña", "type": "password" }
+    ],
+    "buttons": [
+      { "text": "Atrás", "link": "../Home/home-index.html" },
+      { "text": "Siguiente", "link": "../Dashboards/Dashboard-Dieta.html" }
+    ],
+    "links": {
+      "prefix": "¿No tienes una cuenta? | ",
+      "signupText": "Crear cuenta",
+      "signupLink": "../Sign_Up/sign-up-index.html",
+      "forgotText": "También puedes iniciar sesión con:"
+    },
+    "social": [
+      {
+        "platform": "Google",
+        "link": "https://www.google.com/?hl=es",
+        "icon": "../imagenes/Log-in-Sign-up/google-logo.svg"
+      },
+      {
+        "platform": "Facebook",
+        "link": "https://www.facebook.com/marketplace/item/1755357712079241/",
+        "icon": "../imagenes/Log-in-Sign-up/github-logo.svg"
+      },
+      {
+        "platform": "Github",
+        "link": "https://github.com/",
+        "icon": "../imagenes/Log-in-Sign-up/facebook-logo.svg"
+      }
+    ]
+  }
+}
