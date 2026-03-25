@@ -1,3 +1,12 @@
+/* Nuwvo de Salwa */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
+
+.footer-content {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif !important;
+}
+
+
 .footer-content *, .footer-content *::before, .footer-content *::after {
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
@@ -59,4 +68,33 @@
     width: 60%;
     height: auto;
     object-fit: contain;
+}
+
+/* =========================================
+   RESPONSIVE FOOTER (Móviles y Tablets)
+   ========================================= */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column; /* Pone los elementos uno debajo de otro */
+        padding: 40px 20px;
+        gap: 30px; /* Quitamos el hueco gigante de 100px */
+    }
+
+    .footer-text-columns {
+        flex-direction: column; /* Apila los dos textos */
+        gap: 20px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-column p {
+        width: 100%; /* Quitamos el ancho fijo rígido de 140px */
+        max-width: 400px;
+        text-align: center; /* En móvil queda mejor centrado */
+    }
+
+    .social-links {
+        justify-content: center;
+        gap: 20px;
+    }
 }

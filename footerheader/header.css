@@ -95,3 +95,58 @@ body:has(main.about-us) #nav-about-us {
     background-color: #888888;
     color: #ffffff;
 }
+/* =========================================
+   1. ESCRITORIO Y TABLET (Mayor a 768px) - Píldoras
+   ========================================= */
+.navigation .nav-icon {
+    display: none !important;
+}
+
+.navigation .nav-text {
+    display: inline-block !important;
+}
+
+/* =========================================
+   2. SOLO MÓVIL (Hasta 768px) - Círculos Reales
+   ========================================= */
+@media (max-width: 768px) {
+    /* 1. Escondemos el texto del todo */
+    .navigation .nav-text {
+        display: none !important;
+    }
+
+    /* 2. Mostramos el icono */
+    .navigation .nav-icon {
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+        font-size: 24px !important;
+        margin: 0 !important;
+    }
+
+    /* 3. EL CANDADO ANTI-PÍLDORAS (Solo para móvil) */
+    .navigation .nav-button,
+    .header .nav-button {
+        flex: 0 0 45px !important;
+        width: 45px !important;
+        height: 45px !important;
+        padding: 0 !important;
+        border-radius: 50% !important;
+        box-sizing: border-box !important;
+
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        overflow: hidden !important;
+    }
+
+    /* 4. Contenedor del menú en móvil */
+    .navigation {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: center !important;
+        align-items: center !important;
+        padding: 10px;
+    }
+}
