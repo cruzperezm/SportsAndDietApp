@@ -1,0 +1,31 @@
+{
+  "usuario": {
+    "nombre": "Juan Pérez",
+    "avatar": ""
+  },
+  "dieta": {
+    "calorias_totales": 2100,
+    "objetivo": 2500,
+    "macros": [
+      {"nombre": "Proteínas", "valor": "100/200", "progreso": 50},
+      {"nombre": "Carbohidratos", "valor": "150/300", "progreso": 50},
+      {"nombre": "Grasas", "valor": "60/80", "progreso": 75}
+    ]
+  },
+  "deporte": {
+    "semana": [
+      {"dia": "L", "valor": 80},
+      {"dia": "M", "valor": 40},
+      {"dia": "X", "valor": 90},
+      {"dia": "J", "valor": 100},
+      {"dia": "V", "valor": 20},
+      {"dia": "S", "valor": 10},
+      {"dia": "D", "valor": 0}
+    ]
+  },
+  "actividades": [
+    {"nombre": "Caminar", "meta": "100/200", "icono": "🚶"},
+    {"nombre": "Running", "meta": "50/100", "icono": "🏃"},
+    {"nombre": "Natación", "meta": "30/60", "icono": "🏊"}
+  ]
+}
