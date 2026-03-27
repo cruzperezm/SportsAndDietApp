@@ -9,7 +9,6 @@
     --sombra-hover: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
-
 body {
     background-color: var(--color-fondo);
     color: var(--color-texto);
@@ -82,7 +81,7 @@ body {
     margin: 20px 0 10px 10px;
 }
 
-.plan-dietas { /* Mantenemos el nombre de la clase para no romper el HTML */
+.plan-dietas {
     width: 95%;
     max-width: 1440px;
     margin: 0 auto;
@@ -118,7 +117,6 @@ body {
     padding-left: 15px;
 }
 
-/* --- Ajustes del Carrusel Circular --- */
 .wrapper-carrusel {
     overflow: hidden;
     position: relative;
@@ -280,21 +278,37 @@ body {
     white-space: pre-wrap;
 }
 
+.filtros-container {
+    margin: 30px auto;
+    text-align: center;
+}
 
-.filtros-container { margin: 30px auto; text-align: center; }
-.filtros-botones { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+.filtros-botones {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
 
 .btn-filtro {
-    padding: 8px 18px; border: 2px solid var(--color-acento);
-    background: white; color: var(--color-acento);
-    border-radius: 20px; font-weight: bold; cursor: pointer; transition: 0.3s;
+    padding: 8px 18px;
+    border: 2px solid var(--color-acento);
+    background: white;
+    color: var(--color-acento);
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
 }
-.btn-filtro.active { background: var(--color-acento); color: white; }
-.receta-oculta { display: none !important; }
+
+.btn-filtro.active {
+    background: var(--color-acento);
+    color: white;
+}
 
 .video-container {
     position: relative;
-    padding-bottom: 56.25%; /* Relación 16:9 */
+    padding-bottom: 56.25%;
     height: 0;
     overflow: hidden;
     border-radius: 20px;
@@ -311,16 +325,25 @@ body {
     border: none;
 }
 
-/* Iconos de Deporte en Guía */
-.etiquetas-wrapper { display: flex; gap: 12px; margin: 15px 0; justify-content: center; }
+.etiquetas-wrapper {
+    display: flex;
+    gap: 12px;
+    margin: 15px 0;
+    justify-content: center;
+}
 
 .icono-deporte {
-    display: inline-flex; align-items: center; justify-content: center;
-    width: 40px; height: 40px; border-radius: 10px; color: white; font-size: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
-/* Colores por tipo de entrenamiento */
 .icon-fuerza { background-color: #EF4444; }
 .icon-cardio { background-color: #3B82F6; }
 .icon-flex { background-color: #8B5CF6; }
@@ -328,15 +351,67 @@ body {
 .icon-tiempo { background-color: #F59E0B; }
 
 .btn-primario {
-    background-color: var(--color-acento); color: white;
-    padding: 15px 25px; border: none; border-radius: 50px; /* Más redondeado para deporte */
-    font-size: 1.1rem; font-weight: bold; cursor: pointer;
-    width: 100%; margin-top: 20px; transition: 0.3s;
-    text-transform: uppercase; letter-spacing: 1px;
+    background-color: var(--color-acento);
+    color: white;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 20px;
+    transition: 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
-.btn-primario.guardado { background-color: #1F2937; }
 
-/* RESPONSIVE DESIGN (RWD) */
+.btn-primario.guardado {
+    background-color: #1F2937;
+}
+
+.filtros-contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin: 20px auto 50px auto;
+    padding: 0 15px;
+    width: 100%;
+    max-width: 800px;
+}
+
+.btn-filtro-deporte {
+    padding: 10px 24px;
+    border: 2px solid var(--color-acento);
+    background-color: #FFFFFF;
+    color: var(--color-acento);
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    letter-spacing: 0.5px;
+}
+
+
+.btn-filtro-deporte:hover {
+    background-color: #FFF7ED;
+    transform: translateY(-2px);
+}
+
+.btn-filtro-deporte.active {
+    background-color: var(--color-acento);
+    color: #FFFFFF;
+    border-color: var(--color-acento);
+    box-shadow: 0 6px 12px rgba(249, 115, 22, 0.3);
+    transform: translateY(-2px);
+}
+
+.ejercicio-oculto, .receta-oculta {
+    display: none !important;
+}
 
 @media (max-width: 1024px) {
     .contenedor-grid { grid-template-columns: repeat(2, 1fr); }

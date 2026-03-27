@@ -2299,7 +2299,8 @@
               "material": ["Ninguno"],
               "detalles": { "tiempo": "40 seg", "descanso": "20 seg" },
               "video": "https://youtu.be/j8XGysKsPFc?si=pXiZ9ALqs9xSxsXV",
-              "caracteristicas": ["Cardio", "Casa"]
+              "caracteristicas": ["Cardio", "Casa"],
+              "zonas": ["full_body", "tren_inferior", "core"]
             },
             {
               "id": "q-p2",
@@ -2308,7 +2309,8 @@
               "material": ["Ninguno"],
               "detalles": { "series": "3", "reps": "15" },
               "video": "https://youtu.be/CoHcZ4fMVdQ?si=5EaW1VHZBcNr7jJe",
-              "caracteristicas": ["Fuerza", "Casa"]
+              "caracteristicas": ["Fuerza", "Casa"],
+              "zonas": ["tren_inferior"]
             },
             {
               "id": "q-p3",
@@ -2317,7 +2319,8 @@
               "material": ["Pared"],
               "detalles": { "series": "3", "reps": "12" },
               "video": "https://youtu.be/_ifxX0U-xrM?si=8k7Icy1JtGT4sXG_",
-              "caracteristicas": ["Fuerza"]
+              "caracteristicas": ["Fuerza"],
+              "zonas": ["tren_superior"]
             },
             {
               "id": "q-p4",
@@ -2326,7 +2329,8 @@
               "material": ["Escalón o Silla"],
               "detalles": { "tiempo": "45 seg", "descanso": "15 seg" },
               "video": "https://youtu.be/CBdPcHV52nc?si=2a7K8TmwiHGeN4QW",
-              "caracteristicas": ["Cardio", "Equipo"]
+              "caracteristicas": ["Cardio", "Equipo"],
+              "zonas": ["tren_inferior"]
             },
             {
               "id": "q-p5",
@@ -2335,7 +2339,8 @@
               "material": ["Esterilla"],
               "detalles": { "series": "3", "reps": "20" },
               "video": "https://youtu.be/uuiN9NRFMBo?si=acN_N5LBd0oN3at8",
-              "caracteristicas": ["Fuerza", "Casa"]
+              "caracteristicas": ["Fuerza", "Casa"],
+              "zonas": ["tren_inferior", "core"]
             },
             {
               "id": "q-p6",
@@ -2344,7 +2349,8 @@
               "material": ["Espacio libre"],
               "detalles": { "tiempo": "30 seg", "descanso": "30 seg" },
               "video": "https://youtu.be/ab03L5kaG9I?si=5qrO2LrjsIkvAcw8",
-              "caracteristicas": ["Fuerza", "Core"]
+              "caracteristicas": ["Fuerza", "Core"],
+              "zonas": ["full_body", "core", "tren_superior"]
             }
           ]
         },
@@ -2358,7 +2364,8 @@
               "material": ["Ninguno"],
               "detalles": { "tiempo": "45 seg", "descanso": "15 seg" },
               "video": "https://youtu.be/uLVt6u15L98?si=6-61tsGsWzxvSfCt",
-              "caracteristicas": ["Cardio", "Alta Intensidad"]
+              "caracteristicas": ["Cardio", "Alta Intensidad"],
+              "zonas": ["full_body"]
             },
             {
               "id": "q-i2",
@@ -2367,7 +2374,8 @@
               "material": ["Mancuernas opcionales"],
               "detalles": { "series": "4", "reps": "20 totales" },
               "video": "https://youtu.be/Xcfs_3DMKlc?si=SZqbk50cTSibUcIi",
-              "caracteristicas": ["Fuerza"]
+              "caracteristicas": ["Fuerza"],
+              "zonas": ["tren_inferior"]
             },
             {
               "id": "q-i3",
@@ -2376,7 +2384,8 @@
               "material": ["Ninguno"],
               "detalles": { "tiempo": "40 seg", "descanso": "20 seg" },
               "video": "https://youtu.be/kLh-uczlPLg?si=p9zKu3ChyGoTvArY",
-              "caracteristicas": ["Cardio", "Core"]
+              "caracteristicas": ["Cardio", "Core"],
+              "zonas": ["full_body", "core", "tren_superior"]
             },
             {
               "id": "q-i4",
@@ -2385,7 +2394,8 @@
               "material": ["Esterilla"],
               "detalles": { "tiempo": "60 seg", "descanso": "30 seg" },
               "video": "https://www.youtube.com/embed/BQu26ABuVS0",
-              "caracteristicas": ["Core", "Tiempo"]
+              "caracteristicas": ["Core", "Tiempo"],
+              "zonas": ["core", "tren_superior"]
             },
             {
               "id": "q-i5",
@@ -2394,7 +2404,8 @@
               "material": ["Ninguno"],
               "detalles": { "tiempo": "45 seg", "descanso": "15 seg" },
               "video": "https://youtu.be/Xz27DudBfSs?si=eMkfJhZ1otNaGON5",
-              "caracteristicas": ["Cardio", "Coordinación"]
+              "caracteristicas": ["Cardio", "Coordinación"],
+              "zonas": ["tren_inferior", "full_body"]
             },
             {
               "id": "q-i6",
@@ -2403,7 +2414,8 @@
               "material": ["Pared"],
               "detalles": { "tiempo": "45 seg", "descanso": "15 seg" },
               "video": "https://youtu.be/ufiU47JBqhA?si=4RkSMcB7e7GU1RO7",
-              "caracteristicas": ["Fuerza", "Tiempo"]
+              "caracteristicas": ["Fuerza", "Tiempo"],
+              "zonas": ["tren_inferior"]
             }
           ]
         },
@@ -2417,7 +2429,8 @@
               "material": ["Ninguno"],
               "detalles": { "series": "5", "reps": "12", "descanso": "30 seg" },
               "video": "https://youtu.be/auBLPXO8Fww?si=MaU-e5R8nEm_FeQE",
-              "caracteristicas": ["Cardio", "Alta Intensidad"]
+              "caracteristicas": ["Cardio", "Alta Intensidad"],
+              "zonas": ["full_body"]
             },
             {
               "id": "q-a2",
@@ -2426,7 +2439,8 @@
               "material": ["Ninguno"],
               "detalles": { "tiempo": "30 seg", "descanso": "30 seg" },
               "video": "https://youtu.be/Yl7tEmpzknY?si=GcVkuHMNP6zpJvxO",
-              "caracteristicas": ["Cardio", "Potencia"]
+              "caracteristicas": ["Cardio", "Potencia"],
+              "zonas": ["tren_inferior", "full_body", "core"]
             },
             {
               "id": "q-a3",
@@ -2435,7 +2449,8 @@
               "material": ["Ninguno"],
               "detalles": { "series": "4", "reps": "12" },
               "video": "https://youtu.be/NO3fnbQr5nk?si=efrpqTU-C8NVXURv",
-              "caracteristicas": ["Fuerza"]
+              "caracteristicas": ["Fuerza"],
+              "zonas": ["tren_superior"]
             },
             {
               "id": "q-a4",
@@ -2444,7 +2459,8 @@
               "material": ["Ninguno"],
               "detalles": { "series": "4", "reps": "15" },
               "video": "https://youtu.be/BRfxI2Es2lE?si=32hZ4euXx206Imh3",
-              "caracteristicas": ["Fuerza", "Potencia"]
+              "caracteristicas": ["Fuerza", "Potencia"],
+              "zonas": ["tren_inferior", "full_body"]
             },
             {
               "id": "q-a5",
@@ -2453,7 +2469,8 @@
               "material": ["Ninguno"],
               "detalles": { "tiempo": "60 seg", "descanso": "20 seg" },
               "video": "https://youtu.be/QOCn3_iOAro?si=zLIpG8-qeWJ90MZ9",
-              "caracteristicas": ["Core", "Alta Intensidad"]
+              "caracteristicas": ["Core", "Alta Intensidad"],
+              "zonas": ["core", "tren_superior"]
             },
             {
               "id": "q-a6",
@@ -2462,7 +2479,8 @@
               "material": ["Ninguno"],
               "detalles": { "series": "3", "reps": "10" },
               "video": "https://youtu.be/FbIrd0_4X1w?si=9g29aqPubzlxul7i",
-              "caracteristicas": ["Fuerza", "Alta Intensidad"]
+              "caracteristicas": ["Fuerza", "Alta Intensidad"],
+              "zonas": ["tren_superior", "core"]
             }
           ]
         }
@@ -2483,7 +2501,8 @@
               "material": ["1 Mancuerna o Pesa rusa"],
               "detalles": { "series": "3", "reps": "12", "descanso": "60 seg" },
               "video": "https://youtu.be/pEGfGwp6IEA?si=xJZZUY9__EnTgUPS",
-              "caracteristicas": ["Fuerza", "Equipo"]
+              "caracteristicas": ["Fuerza", "Equipo"],
+              "zonas": ["tren_inferior", "core"]
             },
             {
               "id": "v-p2",
@@ -2492,7 +2511,8 @@
               "material": ["Esterilla"],
               "detalles": { "series": "3", "reps": "10", "descanso": "60 seg" },
               "video": "https://youtu.be/NhtUptsdnbw?si=X49V2DkIEYrvmmLm",
-              "caracteristicas": ["Fuerza", "Casa"]
+              "caracteristicas": ["Fuerza", "Casa"],
+              "zonas": ["tren_superior", "core"]
             },
             {
               "id": "v-p3",
@@ -2501,7 +2521,8 @@
               "material": ["1 Mancuerna", "Banco o silla"],
               "detalles": { "series": "3", "reps": "12 por lado", "descanso": "60 seg" },
               "video": "https://youtu.be/fgA4bGIKsn8?si=Hk5wT4P-diWBb7ci",
-              "caracteristicas": ["Fuerza", "Equipo"]
+              "caracteristicas": ["Fuerza", "Equipo"],
+              "zonas": ["tren_superior"]
             },
             {
               "id": "v-p4",
@@ -2510,7 +2531,8 @@
               "material": ["2 Mancuernas"],
               "detalles": { "series": "3", "reps": "10 por pierna", "descanso": "60 seg" },
               "video": "https://youtu.be/Z6uuBikrNus?si=PE69rGjbZEfyUUGa",
-              "caracteristicas": ["Fuerza"]
+              "caracteristicas": ["Fuerza"],
+              "zonas": ["tren_inferior"]
             },
             {
               "id": "v-p5",
@@ -2519,7 +2541,8 @@
               "material": ["2 Mancuernas"],
               "detalles": { "series": "3", "reps": "12", "descanso": "60 seg" },
               "video": "https://youtu.be/96xeqjYXkT4?si=29ujPgAPkPKCBYGV",
-              "caracteristicas": ["Fuerza", "Equipo"]
+              "caracteristicas": ["Fuerza", "Equipo"],
+              "zonas": ["tren_superior"]
             },
             {
               "id": "v-p6",
@@ -2528,7 +2551,8 @@
               "material": ["2 Mancuernas"],
               "detalles": { "series": "3", "reps": "15", "descanso": "45 seg" },
               "video": "https://youtu.be/toR4XLLVzwY?si=3gSYheq8Is59xufa",
-              "caracteristicas": ["Fuerza", "Equipo"]
+              "caracteristicas": ["Fuerza", "Equipo"],
+              "zonas": ["tren_superior"]
             }
           ]
         },
@@ -2542,7 +2566,8 @@
               "material": ["Barra", "Rack de potencia"],
               "detalles": { "series": "4", "reps": "10", "descanso": "90 seg" },
               "video": "https://youtu.be/dsCuiccYNGs?si=tLXKngA23Hr--qvJ",
-              "caracteristicas": ["Fuerza", "Equipo"]
+              "caracteristicas": ["Fuerza", "Equipo"],
+              "zonas": ["tren_inferior", "full_body"]
             },
             {
               "id": "v-i2",
@@ -2551,7 +2576,8 @@
               "material": ["Barra", "Banco horizontal"],
               "detalles": { "series": "4", "reps": "10", "descanso": "90 seg" },
               "video": "https://youtu.be/8PDlR31AmU4?si=Rre1PDjkwWhfZN-B",
-              "caracteristicas": ["Fuerza", "Equipo"]
+              "caracteristicas": ["Fuerza", "Equipo"],
+              "zonas": ["tren_superior"]
             },
             {
               "id": "v-i3",
@@ -2560,7 +2586,8 @@
               "material": ["Barra o Mancuernas"],
               "detalles": { "series": "3", "reps": "12", "descanso": "90 seg" },
               "video": "https://youtu.be/0XL4cZR2Ink?si=Nfn9-vXaLKGDLleB",
-              "caracteristicas": ["Fuerza", "Equipo"]
+              "caracteristicas": ["Fuerza", "Equipo"],
+              "zonas": ["tren_inferior", "core"]
             },
             {
               "id": "v-i4",
@@ -2569,7 +2596,8 @@
               "material": ["Banda elástica o Máquina"],
               "detalles": { "series": "3", "reps": "8-10", "descanso": "120 seg" },
               "video": "https://youtu.be/Cb7gSQDnPiY?si=rLKM6IjAculgM5Lv",
-              "caracteristicas": ["Fuerza", "Equipo"]
+              "caracteristicas": ["Fuerza", "Equipo"],
+              "zonas": ["tren_superior"]
             },
             {
               "id": "v-i5",
@@ -2578,7 +2606,8 @@
               "material": ["Barra"],
               "detalles": { "series": "4", "reps": "8", "descanso": "90 seg" },
               "video": "https://youtu.be/mbIhJZ2Sbcc?si=m119wliD7NtUcJuQ",
-              "caracteristicas": ["Fuerza", "Equipo"]
+              "caracteristicas": ["Fuerza", "Equipo"],
+              "zonas": ["tren_superior", "core"]
             },
             {
               "id": "v-i6",
@@ -2587,7 +2616,8 @@
               "material": ["Barras paralelas"],
               "detalles": { "series": "3", "reps": "10", "descanso": "90 seg" },
               "video": "https://youtu.be/4PEcd1VDpKY?si=W70mzGekppvwKEJJ",
-              "caracteristicas": ["Fuerza", "Equipo"]
+              "caracteristicas": ["Fuerza", "Equipo"],
+              "zonas": ["tren_superior"]
             }
           ]
         },
@@ -2601,7 +2631,8 @@
               "material": ["Mancuerna"],
               "detalles": { "series": "4", "reps": "6-8", "descanso": "2 min" },
               "video": "https://youtu.be/ZiIwAeC2tfs?si=7oryn9FRCSPnRT01",
-              "caracteristicas": ["Fuerza", "Alta Intensidad"]
+              "caracteristicas": ["Fuerza", "Alta Intensidad"],
+              "zonas": ["tren_inferior"]
             },
             {
               "id": "v-a2",
@@ -2610,7 +2641,8 @@
               "material": ["Barra", "Banco inclinado"],
               "detalles": { "series": "4", "reps": "8", "descanso": "90 seg" },
               "video": "https://youtu.be/PAd6ezGbDUQ?si=ST3qq9unBnK5XNOD",
-              "caracteristicas": ["Fuerza", "Equipo"]
+              "caracteristicas": ["Fuerza", "Equipo"],
+              "zonas": ["tren_superior"]
             },
             {
               "id": "v-a3",
@@ -2619,7 +2651,8 @@
               "material": ["Barra", "Discos"],
               "detalles": { "series": "3", "reps": "5", "descanso": "3 min" },
               "video": "https://youtu.be/0XL4cZR2Ink?si=EiKpjkzVmqbgSdhl",
-              "caracteristicas": ["Fuerza", "Potencia"]
+              "caracteristicas": ["Fuerza", "Potencia"],
+              "zonas": ["full_body", "tren_inferior", "core"]
             },
             {
               "id": "v-a4",
@@ -2628,7 +2661,8 @@
               "material": ["Cinturón de lastre", "Barra"],
               "detalles": { "series": "3", "reps": "6", "descanso": "2 min" },
               "video": "https://youtu.be/YmPIrEhp2wU?si=VpeQMS3DrGKpMHBu",
-              "caracteristicas": ["Fuerza", "Alta Intensidad"]
+              "caracteristicas": ["Fuerza", "Alta Intensidad"],
+              "zonas": ["tren_superior", "core"]
             },
             {
               "id": "v-a5",
@@ -2637,7 +2671,8 @@
               "material": ["2 Mancuernas pesadas"],
               "detalles": { "series": "3", "reps": "10", "descanso": "90 seg" },
               "video": "https://youtu.be/PQb19eCsHuQ?si=95Jpu6rMr3e7XXRl",
-              "caracteristicas": ["Fuerza", "Equipo"]
+              "caracteristicas": ["Fuerza", "Equipo"],
+              "zonas": ["tren_superior"]
             },
             {
               "id": "v-a6",
@@ -2646,7 +2681,8 @@
               "material": ["Barra", "Banco", "Almohadilla"],
               "detalles": { "series": "4", "reps": "10", "descanso": "2 min" },
               "video": "https://www.youtube.com/embed/LM8LGne_fHo",
-              "caracteristicas": ["Fuerza", "Potencia"]
+              "caracteristicas": ["Fuerza", "Potencia"],
+              "zonas": ["tren_inferior", "core"]
             }
           ]
         }
@@ -2667,7 +2703,8 @@
               "material": ["Esterilla"],
               "detalles": { "tiempo": "2 min", "foco": "Relajación lumbar" },
               "video": "https://youtu.be/cFcNQjKDI58?si=4Xep16FK82cBlQxN",
-              "caracteristicas": ["Flexibilidad", "Casa"]
+              "caracteristicas": ["Flexibilidad", "Casa"],
+              "zonas": ["full_body", "core"]
             },
             {
               "id": "f-p2",
@@ -2676,7 +2713,8 @@
               "material": ["Esterilla"],
               "detalles": { "reps": "15 ciclos", "foco": "Movilidad columna" },
               "video": "https://youtu.be/vUiNcilaCC4?si=51CGbxfWPu1P-rwu",
-              "caracteristicas": ["Flexibilidad", "Core"]
+              "caracteristicas": ["Flexibilidad", "Core"],
+              "zonas": ["core", "full_body"]
             },
             {
               "id": "f-p3",
@@ -2685,7 +2723,8 @@
               "material": ["Esterilla"],
               "detalles": { "tiempo": "45 seg", "reps": "3" },
               "video": "https://www.youtube.com/embed/fOdrW7nfPRg",
-              "caracteristicas": ["Flexibilidad"]
+              "caracteristicas": ["Flexibilidad"],
+              "zonas": ["core", "tren_superior"]
             },
             {
               "id": "f-p4",
@@ -2694,7 +2733,8 @@
               "material": ["Ninguno"],
               "detalles": { "tiempo": "1 min", "foco": "Postura y equilibrio" },
               "video": "https://youtu.be/aEQVYMb9P6U?si=hGphOsr6sBDqhPnf",
-              "caracteristicas": ["Flexibilidad"]
+              "caracteristicas": ["Flexibilidad"],
+              "zonas": ["full_body"]
             },
             {
               "id": "f-p5",
@@ -2703,7 +2743,8 @@
               "material": ["Esterilla"],
               "detalles": { "tiempo": "1 min por pierna" },
               "video": "https://youtu.be/fk26DB44VNg?si=j4EFTY9n-IVQIJxp",
-              "caracteristicas": ["Flexibilidad", "Casa"]
+              "caracteristicas": ["Flexibilidad", "Casa"],
+              "zonas": ["tren_inferior"]
             },
             {
               "id": "f-p6",
@@ -2712,7 +2753,8 @@
               "material": ["Ninguno"],
               "detalles": { "tiempo": "45 seg por lado" },
               "video": "https://youtu.be/ugERZRwFQhI?si=_geKbdwrNS_Mns5r",
-              "caracteristicas": ["Flexibilidad"]
+              "caracteristicas": ["Flexibilidad"],
+              "zonas": ["core"]
             }
           ]
         },
@@ -2726,7 +2768,8 @@
               "material": ["Esterilla"],
               "detalles": { "tiempo": "90 seg", "respiraciones": "10" },
               "video": "https://youtu.be/jUPZxU2grzQ?si=LMdK3Iot591t0R67",
-              "caracteristicas": ["Flexibilidad", "Fuerza"]
+              "caracteristicas": ["Flexibilidad", "Fuerza"],
+              "zonas": ["full_body", "tren_superior", "tren_inferior"]
             },
             {
               "id": "f-i2",
@@ -2735,7 +2778,8 @@
               "material": ["Ninguno"],
               "detalles": { "tiempo": "1 min por lado" },
               "video": "https://youtu.be/NgCY67xHwMI?si=qjbkPoSOBahQmro4",
-              "caracteristicas": ["Fuerza", "Flexibilidad"]
+              "caracteristicas": ["Fuerza", "Flexibilidad"],
+              "zonas": ["tren_inferior", "core"]
             },
             {
               "id": "f-i3",
@@ -2744,7 +2788,8 @@
               "material": ["Esterilla"],
               "detalles": { "tiempo": "1 min por pierna", "foco": "Equilibrio" },
               "video": "https://youtu.be/6g5zC1B2EDQ?si=7xjmZfjYJdawG_bI",
-              "caracteristicas": ["Flexibilidad"]
+              "caracteristicas": ["Flexibilidad"],
+              "zonas": ["tren_inferior", "core"]
             },
             {
               "id": "f-i4",
@@ -2753,7 +2798,8 @@
               "material": ["Esterilla"],
               "detalles": { "tiempo": "45 seg por lado" },
               "video": "https://youtu.be/mod3Wbamr1k?si=qZA7u7Uw1YSkkTHX",
-              "caracteristicas": ["Flexibilidad"]
+              "caracteristicas": ["Flexibilidad"],
+              "zonas": ["tren_inferior"]
             },
             {
               "id": "f-i5",
@@ -2762,7 +2808,8 @@
               "material": ["Opcional: Bloque"],
               "detalles": { "tiempo": "1 min por lado" },
               "video": "https://youtu.be/V00SS-_Wcr0?si=Z9ZLMGv08No_PLvW",
-              "caracteristicas": ["Flexibilidad"]
+              "caracteristicas": ["Flexibilidad"],
+              "zonas": ["tren_inferior", "core"]
             },
             {
               "id": "f-i6",
@@ -2771,7 +2818,8 @@
               "material": ["Esterilla"],
               "detalles": { "tiempo": "2 min por lado", "foco": "Apertura cadera" },
               "video": "https://youtu.be/c7sfYSZcZso?si=T4WAuRNiZkxxuGib",
-              "caracteristicas": ["Flexibilidad", "Tiempo"]
+              "caracteristicas": ["Flexibilidad", "Tiempo"],
+              "zonas": ["tren_inferior"]
             }
           ]
         },
@@ -2785,7 +2833,8 @@
               "material": ["Esterilla"],
               "detalles": { "intentos": "5", "mantenimiento": "30 seg" },
               "video": "https://youtu.be/SevyFSshg9A?si=mLIHUiOTsyIEXFDI",
-              "caracteristicas": ["Fuerza", "Equilibrio"]
+              "caracteristicas": ["Fuerza", "Equilibrio"],
+              "zonas": ["tren_superior", "core"]
             },
             {
               "id": "f-a2",
@@ -2794,7 +2843,8 @@
               "material": ["Esterilla"],
               "detalles": { "tiempo": "30 seg", "reps": "3" },
               "video": "https://youtu.be/5CEOC1jq_t8?si=VtYY9OfbwAgKOJdp",
-              "caracteristicas": ["Flexibilidad", "Alta Intensidad"]
+              "caracteristicas": ["Flexibilidad", "Alta Intensidad"],
+              "zonas": ["full_body", "core"]
             },
             {
               "id": "f-a3",
@@ -2803,7 +2853,8 @@
               "material": ["Bloques de apoyo"],
               "detalles": { "tiempo": "2 min", "foco": "Máxima flexibilidad" },
               "video": "https://youtu.be/eakrXq3qa0Y?si=orNd2YX95Y4TXTRI",
-              "caracteristicas": ["Flexibilidad", "Tiempo"]
+              "caracteristicas": ["Flexibilidad", "Tiempo"],
+              "zonas": ["tren_inferior"]
             },
             {
               "id": "f-a4",
@@ -2812,7 +2863,8 @@
               "material": ["Pared o Esterilla"],
               "detalles": { "tiempo": "1 min", "foco": "Control core" },
               "video": "https://youtu.be/1uQd3FWoPGA?si=v7b4y2yOAYZI6VyR",
-              "caracteristicas": ["Equilibrio", "Alta Intensidad"]
+              "caracteristicas": ["Equilibrio", "Alta Intensidad"],
+              "zonas": ["full_body", "tren_superior", "core"]
             },
             {
               "id": "f-a5",
@@ -2821,7 +2873,8 @@
               "material": ["Esterilla"],
               "detalles": { "tiempo": "45 seg por pierna" },
               "video": "https://youtu.be/8LtXpuPNnSc?si=afQR67aGMIxxtXVx",
-              "caracteristicas": ["Flexibilidad", "Equilibrio"]
+              "caracteristicas": ["Flexibilidad", "Equilibrio"],
+              "zonas": ["tren_inferior", "core"]
             },
             {
               "id": "f-a6",
@@ -2830,7 +2883,8 @@
               "material": ["Esterilla"],
               "detalles": { "tiempo": "30 seg por lado" },
               "video": "https://youtu.be/XNzE5a0hL0U?si=xkVxDv2J_KkC6bot",
-              "caracteristicas": ["Flexibilidad", "Fuerza"]
+              "caracteristicas": ["Flexibilidad", "Fuerza"],
+              "zonas": ["full_body", "tren_superior", "core"]
             }
           ]
         }
@@ -2851,7 +2905,8 @@
               "material": ["Ninguno"],
               "detalles": { "series": "3", "reps": "10", "enfoque": "Aterrizaje silencioso" },
               "video": "https://youtu.be/wg1aM2MLynM?si=ul4FcjbrAeBiDBsp",
-              "caracteristicas": ["Potencia", "Casa"]
+              "caracteristicas": ["Potencia", "Casa"],
+              "zonas": ["tren_inferior", "full_body"]
             },
             {
               "id": "p-p2",
@@ -2860,7 +2915,8 @@
               "material": ["Cinta o línea en el suelo"],
               "detalles": { "tiempo": "30 seg", "reps": "3" },
               "video": "https://youtu.be/1mStIPjEYqA?si=qF0XaJP3mWDZ5Qst",
-              "caracteristicas": ["Potencia", "Coordinación"]
+              "caracteristicas": ["Potencia", "Coordinación"],
+              "zonas": ["tren_inferior"]
             },
             {
               "id": "p-p3",
@@ -2869,7 +2925,8 @@
               "material": ["Balón medicinal"],
               "detalles": { "series": "3", "reps": "12", "descanso": "60 seg" },
               "video": "https://youtu.be/94Bnguutg4Y?si=0HM69izYToI8g1RX",
-              "caracteristicas": ["Potencia", "Equipo"]
+              "caracteristicas": ["Potencia", "Equipo"],
+              "zonas": ["full_body", "tren_superior", "core"]
             },
             {
               "id": "p-p4",
@@ -2878,7 +2935,8 @@
               "material": ["Escalón o Silla estable"],
               "detalles": { "series": "3", "reps": "8 por pierna" },
               "video": "https://youtu.be/QxZzLH4UwvY?si=Qkfp2NGhiRHPrbcC",
-              "caracteristicas": ["Fuerza", "Potencia"]
+              "caracteristicas": ["Fuerza", "Potencia"],
+              "zonas": ["tren_inferior"]
             },
             {
               "id": "p-p5",
@@ -2887,7 +2945,8 @@
               "material": ["Espacio libre"],
               "detalles": { "series": "3", "reps": "6", "descanso": "90 seg" },
               "video": "https://youtu.be/_EmN3pwT6M0?si=7shLlPiPsEsuhASM",
-              "caracteristicas": ["Potencia"]
+              "caracteristicas": ["Potencia"],
+              "zonas": ["tren_inferior", "full_body"]
             },
             {
               "id": "p-p6",
@@ -2896,7 +2955,8 @@
               "material": ["Esterilla"],
               "detalles": { "tiempo": "30 seg", "ritmo": "Máximo" },
               "video": "https://youtu.be/lD_gfTofg4A?si=ozGdK_ot94TBngWP",
-              "caracteristicas": ["Cardio", "Potencia"]
+              "caracteristicas": ["Cardio", "Potencia"],
+              "zonas": ["full_body", "core", "tren_superior"]
             }
           ]
         },
@@ -2910,7 +2970,8 @@
               "material": ["Cajón pliométrico"],
               "detalles": { "series": "4", "reps": "8", "descanso": "2 min" },
               "video": "https://youtu.be/uL3jSfAJCAY?si=eeZyUgLSs3PvwQAO",
-              "caracteristicas": ["Potencia", "Equipo"]
+              "caracteristicas": ["Potencia", "Equipo"],
+              "zonas": ["tren_inferior", "full_body"]
             },
             {
               "id": "p-i2",
@@ -2919,7 +2980,8 @@
               "material": ["Ninguno"],
               "detalles": { "series": "4", "reps": "10", "descanso": "60 seg" },
               "video": "https://youtu.be/wwwTzYB75Qo?si=tkeqVdOmStRiih3P",
-              "caracteristicas": ["Alta Intensidad", "Potencia"]
+              "caracteristicas": ["Alta Intensidad", "Potencia"],
+              "zonas": ["full_body"]
             },
             {
               "id": "p-i3",
@@ -2928,7 +2990,8 @@
               "material": ["Ninguno"],
               "detalles": { "series": "3", "reps": "14 totales", "enfoque": "Estabilidad" },
               "video": "https://youtu.be/opIUn1zykmA?si=5Q-Y1sY1a0rX7ROP",
-              "caracteristicas": ["Coordinación", "Potencia"]
+              "caracteristicas": ["Coordinación", "Potencia"],
+              "zonas": ["tren_inferior"]
             },
             {
               "id": "p-i4",
@@ -2937,7 +3000,8 @@
               "material": ["Balón medicinal", "Pared"],
               "detalles": { "series": "4", "reps": "12", "descanso": "60 seg" },
               "video": "https://youtu.be/fpUD0mcFp_0?si=23nSnYGOm7js0cZ0",
-              "caracteristicas": ["Potencia", "Equipo"]
+              "caracteristicas": ["Potencia", "Equipo"],
+              "zonas": ["full_body", "tren_inferior", "tren_superior"]
             },
             {
               "id": "p-i5",
@@ -2946,7 +3010,8 @@
               "material": ["Ninguno"],
               "detalles": { "series": "3", "reps": "12", "descanso": "60 seg" },
               "video": "https://youtu.be/velMsAINaWw?si=SNdF9j40aEfoj-8h",
-              "caracteristicas": ["Potencia", "Fuerza"]
+              "caracteristicas": ["Potencia", "Fuerza"],
+              "zonas": ["tren_inferior"]
             },
             {
               "id": "p-i6",
@@ -2955,7 +3020,8 @@
               "material": ["Espacio libre"],
               "detalles": { "series": "3", "reps": "5", "descanso": "2 min" },
               "video": "https://youtu.be/uhz-ia-2UcM?si=a3cv_0evKGh_ABq-",
-              "caracteristicas": ["Potencia"]
+              "caracteristicas": ["Potencia"],
+              "zonas": ["tren_inferior", "full_body"]
             }
           ]
         },
@@ -2969,7 +3035,8 @@
               "material": ["Cajón bajo", "Suelo firme"],
               "detalles": { "series": "4", "reps": "5", "descanso": "3 min" },
               "video": "https://youtube.com/shorts/lGDnqv9H6o4?si=UMKgsXNldsKBOJt5",
-              "caracteristicas": ["Alta Intensidad", "Potencia"]
+              "caracteristicas": ["Alta Intensidad", "Potencia"],
+              "zonas": ["tren_inferior", "full_body"]
             },
             {
               "id": "p-a2",
@@ -2978,7 +3045,8 @@
               "material": ["Cajón alto"],
               "detalles": { "series": "5", "reps": "3", "descanso": "3 min" },
               "video": "https://youtu.be/k7dmYdknbac?si=aXkI5OmwJ8Ve5IEJ",
-              "caracteristicas": ["Potencia", "Equipo"]
+              "caracteristicas": ["Potencia", "Equipo"],
+              "zonas": ["tren_inferior", "full_body"]
             },
             {
               "id": "p-a3",
@@ -2987,7 +3055,8 @@
               "material": ["Ninguno"],
               "detalles": { "series": "4", "tiempo": "30 seg", "descanso": "60 seg" },
               "video": "https://youtu.be/Yl7tEmpzknY?si=NXf4UKBiErb-Ml-K",
-              "caracteristicas": ["Alta Intensidad", "Potencia"]
+              "caracteristicas": ["Alta Intensidad", "Potencia"],
+              "zonas": ["tren_inferior", "core", "full_body"]
             },
             {
               "id": "p-a4",
@@ -2996,7 +3065,8 @@
               "material": ["Ninguno"],
               "detalles": { "series": "3", "reps": "6 por pierna" },
               "video": "https://youtu.be/M03prFMwSOk?si=THjKaj0lbVSeNMmK",
-              "caracteristicas": ["Equilibrio", "Potencia"]
+              "caracteristicas": ["Equilibrio", "Potencia"],
+              "zonas": ["tren_inferior"]
             },
             {
               "id": "p-a5",
@@ -3005,7 +3075,8 @@
               "material": ["Conos o marcas"],
               "detalles": { "series": "6", "distancia": "20 metros" },
               "video": "https://youtu.be/pCFv8jAmTNk?si=CKpo5s98Zlw9yIZy",
-              "caracteristicas": ["Potencia", "Tiempo"]
+              "caracteristicas": ["Potencia", "Tiempo"],
+              "zonas": ["tren_inferior", "full_body"]
             },
             {
               "id": "p-a6",
@@ -3014,7 +3085,8 @@
               "material": ["Cajón pliométrico"],
               "detalles": { "series": "4", "reps": "8", "descanso": "2 min" },
               "video": "https://youtu.be/VqOow4Yuk_o?si=BovrBR2cIQT0Erma",
-              "caracteristicas": ["Alta Intensidad", "Equipo"]
+              "caracteristicas": ["Alta Intensidad", "Equipo"],
+              "zonas": ["full_body"]
             }
           ]
         }
@@ -3035,7 +3107,8 @@
               "material": ["Zapatillas cómodas"],
               "detalles": { "tiempo": "20 min", "foco": "Ritmo constante" },
               "video": "https://youtu.be/TWyguC7VVh8?si=rfhprCHfvjGbRF5V",
-              "caracteristicas": ["Cardio", "Casa"]
+              "caracteristicas": ["Cardio", "Casa"],
+              "zonas": ["tren_inferior", "full_body"]
             },
             {
               "id": "r-p2",
@@ -3044,7 +3117,8 @@
               "material": ["Escalón bajo"],
               "detalles": { "tiempo": "5 min", "descanso": "1 min" },
               "video": "https://youtu.be/wfhXnLILqdk?si=10SbEZ4Jnt9MsbZV",
-              "caracteristicas": ["Cardio"]
+              "caracteristicas": ["Cardio"],
+              "zonas": ["tren_inferior"]
             },
             {
               "id": "r-p3",
@@ -3053,7 +3127,8 @@
               "material": ["Ninguno"],
               "detalles": { "tiempo": "60 seg", "reps": "3 series" },
               "video": "https://youtu.be/QBqwvDdw7dQ?si=2M6IEc3v_zU_6l_p",
-              "caracteristicas": ["Cardio", "Casa"]
+              "caracteristicas": ["Cardio", "Casa"],
+              "zonas": ["full_body"]
             },
             {
               "id": "r-p4",
@@ -3062,7 +3137,8 @@
               "material": ["Ninguno"],
               "detalles": { "tiempo": "3 min", "ritmo": "Moderado" },
               "video": "https://youtu.be/0e4251eQAE8?si=4FCWtqMpBIgOlAA8",
-              "caracteristicas": ["Cardio"]
+              "caracteristicas": ["Cardio"],
+              "zonas": ["tren_inferior", "full_body"]
             },
             {
               "id": "r-p5",
@@ -3071,7 +3147,8 @@
               "material": ["Ninguno"],
               "detalles": { "tiempo": "2 min", "reps": "3" },
               "video": "https://youtu.be/MVUnw0GcZ1o?si=u_0AZfHjSqkkcRFp",
-              "caracteristicas": ["Cardio", "Coordinación"]
+              "caracteristicas": ["Cardio", "Coordinación"],
+              "zonas": ["tren_superior", "core"]
             },
             {
               "id": "r-p6",
@@ -3080,7 +3157,8 @@
               "material": ["Ninguno"],
               "detalles": { "tiempo": "60 seg", "foco": "Calentamiento" },
               "video": "https://youtu.be/brpDFocfbFc?si=PKrJVtumaZJPg4EA",
-              "caracteristicas": ["Cardio"]
+              "caracteristicas": ["Cardio"],
+              "zonas": ["tren_superior"]
             }
           ]
         },
@@ -3094,7 +3172,8 @@
               "material": ["Espacio libre"],
               "detalles": { "tiempo": "15 min", "intensidad": "Media" },
               "video": "https://youtu.be/6_5_wI-FXzE?si=yh1QFrceb3Y2-exW",
-              "caracteristicas": ["Cardio", "Tiempo"]
+              "caracteristicas": ["Cardio", "Tiempo"],
+              "zonas": ["tren_inferior", "full_body"]
             },
             {
               "id": "r-i2",
@@ -3103,7 +3182,8 @@
               "material": ["Comba"],
               "detalles": { "tiempo": "2 min", "reps": "5 series" },
               "video": "https://youtu.be/Mir21GP6oBo?si=CsmygB1gcPlGiR7e",
-              "caracteristicas": ["Cardio", "Equipo"]
+              "caracteristicas": ["Cardio", "Equipo"],
+              "zonas": ["full_body", "tren_inferior"]
             },
             {
               "id": "r-i3",
@@ -3112,7 +3192,8 @@
               "material": ["Esterilla"],
               "detalles": { "tiempo": "45 seg", "descanso": "15 seg" },
               "video": "https://youtu.be/lD_gfTofg4A?si=PQmnL7F89eW19s88",
-              "caracteristicas": ["Cardio", "Core"]
+              "caracteristicas": ["Cardio", "Core"],
+              "zonas": ["full_body", "core", "tren_superior"]
             },
             {
               "id": "r-i4",
@@ -3121,7 +3202,8 @@
               "material": ["Ninguno"],
               "detalles": { "tiempo": "40 seg", "descanso": "20 seg" },
               "video": "https://youtu.be/T7lDL4ZDcWA?si=M5AFF2Sf0nI6vmTX",
-              "caracteristicas": ["Cardio", "Alta Intensidad"]
+              "caracteristicas": ["Cardio", "Alta Intensidad"],
+              "zonas": ["tren_inferior", "core", "full_body"]
             },
             {
               "id": "r-i5",
@@ -3130,7 +3212,8 @@
               "material": ["Ninguno"],
               "detalles": { "tiempo": "50 seg", "descanso": "10 seg" },
               "video": "https://youtu.be/6kU43UKjA9A?si=E4vg4W40quA-cuzk",
-              "caracteristicas": ["Cardio", "Coordinación"]
+              "caracteristicas": ["Cardio", "Coordinación"],
+              "zonas": ["tren_inferior", "full_body"]
             },
             {
               "id": "r-i6",
@@ -3139,7 +3222,8 @@
               "material": ["Ninguno"],
               "detalles": { "reps": "15", "descanso": "45 seg" },
               "video": "https://youtu.be/Xhv4qLfeKwc?si=LqDqzFfbOhZW-lPd",
-              "caracteristicas": ["Cardio", "Fuerza"]
+              "caracteristicas": ["Cardio", "Fuerza"],
+              "zonas": ["full_body", "core"]
             }
           ]
         },
@@ -3153,7 +3237,8 @@
               "material": ["Pista o calle"],
               "detalles": { "reps": "8", "descanso": "1 min" },
               "video": "https://www.youtube.com/embed/nBIAxWw5jos",
-              "caracteristicas": ["Alta Intensidad", "Tiempo"]
+              "caracteristicas": ["Alta Intensidad", "Tiempo"],
+              "zonas": ["tren_inferior", "full_body"]
             },
             {
               "id": "r-a2",
@@ -3162,7 +3247,8 @@
               "material": ["Comba rápida"],
               "detalles": { "tiempo": "60 seg", "reps": "4 series" },
               "video": "https://www.youtube.com/embed/KgBlZjPVHzM",
-              "caracteristicas": ["Cardio", "Equipo"]
+              "caracteristicas": ["Cardio", "Equipo"],
+              "zonas": ["full_body", "tren_inferior"]
             },
             {
               "id": "r-a3",
@@ -3171,7 +3257,8 @@
               "material": ["Ninguno"],
               "detalles": { "reps": "20", "ritmo": "Explosivo" },
               "video": "https://youtu.be/h4cf5Bik4Tg?si=Br0GhtZR00f6lmN8",
-              "caracteristicas": ["Alta Intensidad", "Potencia"]
+              "caracteristicas": ["Alta Intensidad", "Potencia"],
+              "zonas": ["full_body"]
             },
             {
               "id": "r-a4",
@@ -3180,7 +3267,8 @@
               "material": ["Cuesta pronunciada"],
               "detalles": { "reps": "10 subidas", "descanso": "Bajar andando" },
               "video": "https://www.youtube.com/embed/fS_S8O9UfXo",
-              "caracteristicas": ["Cardio", "Potencia"]
+              "caracteristicas": ["Cardio", "Potencia"],
+              "zonas": ["tren_inferior", "full_body", "core"]
             },
             {
               "id": "r-a5",
@@ -3189,7 +3277,8 @@
               "material": ["Ninguno"],
               "detalles": { "tiempo": "60 seg", "ritmo": "Máximo" },
               "video": "https://www.youtube.com/embed/fS_S8O9UfXo",
-              "caracteristicas": ["Cardio", "Alta Intensidad"]
+              "caracteristicas": ["Cardio", "Alta Intensidad"],
+              "zonas": ["tren_inferior"]
             },
             {
               "id": "r-a6",
@@ -3198,7 +3287,8 @@
               "material": ["Esterilla"],
               "detalles": { "tiempo": "10 min", "foco": "No parar" },
               "video": "https://www.youtube.com/embed/auBLPXO8FHI",
-              "caracteristicas": ["Cardio", "Tiempo"]
+              "caracteristicas": ["Cardio", "Tiempo"],
+              "zonas": ["full_body"]
             }
           ]
         }
@@ -3210,7 +3300,7 @@
       "imagen": "../imagenes/Deportes/casa.jpg",
       "plan": [
         {
-          "momento": "Fila 1: Principiante (Estabilidad y Control)",
+          "momento": "Nivel Principiante",
           "opciones": [
             {
               "id": "c-p1",
@@ -3219,7 +3309,8 @@
               "material": ["Silla estable"],
               "detalles": { "series": "3", "reps": "12", "descanso": "45 seg" },
               "video": "https://www.youtube.com/embed/MeIiIdhvXT4",
-              "caracteristicas": ["Casa", "Fuerza"]
+              "caracteristicas": ["Casa", "Fuerza"],
+              "zonas": ["tren_inferior"]
             },
             {
               "id": "c-p2",
@@ -3228,7 +3319,8 @@
               "material": ["Mueble alto y estable"],
               "detalles": { "series": "3", "reps": "10", "descanso": "60 seg" },
               "video": "https://www.youtube.com/embed/Z0bRiVHNn8Y",
-              "caracteristicas": ["Casa", "Fuerza"]
+              "caracteristicas": ["Casa", "Fuerza"],
+              "zonas": ["tren_superior", "core"]
             },
             {
               "id": "c-p3",
@@ -3237,7 +3329,8 @@
               "material": ["Ninguno"],
               "detalles": { "series": "3", "reps": "15", "descanso": "30 seg" },
               "video": "https://www.youtube.com/embed/6sc4_Yp-8_E",
-              "caracteristicas": ["Casa", "Core"]
+              "caracteristicas": ["Casa", "Core"],
+              "zonas": ["tren_inferior", "core"]
             },
             {
               "id": "c-p4",
@@ -3246,7 +3339,8 @@
               "material": ["Esterilla o alfombra"],
               "detalles": { "series": "3", "reps": "10 totales", "descanso": "30 seg" },
               "video": "https://www.youtube.com/embed/XmG7OshV_YI",
-              "caracteristicas": ["Casa", "Core"]
+              "caracteristicas": ["Casa", "Core"],
+              "zonas": ["core"]
             },
             {
               "id": "c-p5",
@@ -3255,7 +3349,8 @@
               "material": ["Esterilla"],
               "detalles": { "tiempo": "30 seg", "reps": "3 series" },
               "video": "https://www.youtube.com/embed/BQu26ABuVS0",
-              "caracteristicas": ["Casa", "Core"]
+              "caracteristicas": ["Casa", "Core"],
+              "zonas": ["core", "tren_superior"]
             },
             {
               "id": "c-p6",
@@ -3264,12 +3359,13 @@
               "material": ["Ninguno"],
               "detalles": { "series": "3", "reps": "20", "descanso": "30 seg" },
               "video": "https://www.youtube.com/embed/fS_S8O9UfXo",
-              "caracteristicas": ["Casa", "Fuerza"]
+              "caracteristicas": ["Casa", "Fuerza"],
+              "zonas": ["tren_inferior"]
             }
           ]
         },
         {
-          "momento": "Fila 2: Intermedio (Resistencia y Tonificación)",
+          "momento": "Nivel Intermedio",
           "opciones": [
             {
               "id": "c-i1",
@@ -3278,7 +3374,8 @@
               "material": ["Ninguno"],
               "detalles": { "series": "4", "reps": "12 por pierna" },
               "video": "https://www.youtube.com/embed/e6_f5zL6q5s",
-              "caracteristicas": ["Casa", "Fuerza"]
+              "caracteristicas": ["Casa", "Fuerza"],
+              "zonas": ["tren_inferior"]
             },
             {
               "id": "c-i2",
@@ -3287,7 +3384,8 @@
               "material": ["Ninguno"],
               "detalles": { "series": "3", "reps": "12", "descanso": "60 seg" },
               "video": "https://www.youtube.com/embed/IODxDxX7oi4",
-              "caracteristicas": ["Casa", "Fuerza"]
+              "caracteristicas": ["Casa", "Fuerza"],
+              "zonas": ["tren_superior", "core"]
             },
             {
               "id": "c-i3",
@@ -3296,7 +3394,8 @@
               "material": ["Silla robusta"],
               "detalles": { "series": "3", "reps": "10", "descanso": "60 seg" },
               "video": "https://www.youtube.com/embed/2z8JmcrW-As",
-              "caracteristicas": ["Casa", "Fuerza"]
+              "caracteristicas": ["Casa", "Fuerza"],
+              "zonas": ["tren_superior"]
             },
             {
               "id": "c-i4",
@@ -3305,7 +3404,8 @@
               "material": ["Ninguno"],
               "detalles": { "tiempo": "45 seg", "descanso": "15 seg" },
               "video": "https://www.youtube.com/embed/nmwgirgXLYM",
-              "caracteristicas": ["Casa", "Core"]
+              "caracteristicas": ["Casa", "Core"],
+              "zonas": ["core"]
             },
             {
               "id": "c-i5",
@@ -3314,7 +3414,8 @@
               "material": ["Alfombra"],
               "detalles": { "series": "3", "reps": "15", "descanso": "45 seg" },
               "video": "https://www.youtube.com/embed/8itYpBv7-f0",
-              "caracteristicas": ["Casa", "Core"]
+              "caracteristicas": ["Casa", "Core"],
+              "zonas": ["core", "full_body"]
             },
             {
               "id": "c-i6",
@@ -3323,12 +3424,13 @@
               "material": ["Pared"],
               "detalles": { "tiempo": "45 seg", "reps": "3 series" },
               "video": "https://www.youtube.com/embed/Yp_pS9S6eHw",
-              "caracteristicas": ["Casa", "Fuerza"]
+              "caracteristicas": ["Casa", "Fuerza"],
+              "zonas": ["tren_inferior"]
             }
           ]
         },
         {
-          "momento": "Fila 3: Avanzado (Intensidad sin Equipo)",
+          "momento": "Nivel Avanzado",
           "opciones": [
             {
               "id": "c-a1",
@@ -3337,7 +3439,8 @@
               "material": ["Ninguno / Pared para apoyo"],
               "detalles": { "series": "3", "reps": "6 por lado" },
               "video": "https://www.youtube.com/embed/wdln9l0V0gs",
-              "caracteristicas": ["Fuerza", "Equilibrio"]
+              "caracteristicas": ["Fuerza", "Equilibrio"],
+              "zonas": ["tren_inferior", "core"]
             },
             {
               "id": "c-a2",
@@ -3346,16 +3449,18 @@
               "material": ["Ninguno"],
               "detalles": { "series": "4", "reps": "12", "descanso": "60 seg" },
               "video": "https://www.youtube.com/embed/s8vV_v_H5Hw",
-              "caracteristicas": ["Casa", "Fuerza"]
+              "caracteristicas": ["Casa", "Fuerza"],
+              "zonas": ["tren_superior", "core"]
             },
             {
               "id": "c-a3",
-              "nombre": "V-Ups (Abdominales en V)",
+              "nombre": "Abdominales",
               "imagen": "../imagenes/Deportes/v-ups.jpg",
               "material": ["Esterilla"],
               "detalles": { "series": "4", "reps": "15", "descanso": "45 seg" },
               "video": "https://www.youtube.com/embed/nmwgirgXLYM",
-              "caracteristicas": ["Casa", "Core"]
+              "caracteristicas": ["Casa", "Core"],
+              "zonas": ["core"]
             },
             {
               "id": "c-a4",
@@ -3364,7 +3469,8 @@
               "material": ["Silla o Sofá"],
               "detalles": { "series": "4", "reps": "10", "descanso": "90 seg" },
               "video": "https://www.youtube.com/embed/IODxDxX7oi4",
-              "caracteristicas": ["Casa", "Alta Intensidad"]
+              "caracteristicas": ["Casa", "Alta Intensidad"],
+              "zonas": ["tren_superior", "core"]
             },
             {
               "id": "c-a5",
@@ -3373,16 +3479,18 @@
               "material": ["Ninguno"],
               "detalles": { "tiempo": "60 seg", "ritmo": "Máximo" },
               "video": "https://www.youtube.com/embed/auBLPXO8FHI",
-              "caracteristicas": ["Alta Intensidad", "Cardio"]
+              "caracteristicas": ["Alta Intensidad", "Cardio"],
+              "zonas": ["full_body"]
             },
             {
               "id": "c-a6",
-              "nombre": "Plancha Dinámica (Spiderman)",
-              "imagen": "../imagenes/Deportes/plancha-spider.jpg",
+              "nombre": "Cross Montaña",
+              "imagen": "../imagenes/Deportes/cross-montaña.jpg",
               "material": ["Ninguno"],
               "detalles": { "tiempo": "60 seg", "descanso": "20 seg" },
               "video": "https://www.youtube.com/embed/vG9L66K9e6M",
-              "caracteristicas": ["Alta Intensidad", "Core"]
+              "caracteristicas": ["Alta Intensidad", "Core"],
+              "zonas": ["core", "full_body", "tren_superior"]
             }
           ]
         }

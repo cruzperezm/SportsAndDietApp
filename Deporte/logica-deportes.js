@@ -1,6 +1,5 @@
 xLuIncludeFile();
 
-// Lógica para Deporte_index.html
 function inicializarDeportes() {
     const contenedor = document.getElementById('contenedor-deportes');
     const temp = document.getElementById('template-tarjeta');
@@ -33,7 +32,6 @@ function inicializarDeportes() {
         .catch(error => console.error("Error cargando deportes:", error));
 }
 
-// --- Lógica para Guia_index.html (Deporte) ---
 function cargarPaginaEjercicio() {
     const tituloDOM = document.getElementById('ejercicio-titulo');
 
@@ -66,7 +64,6 @@ function cargarPaginaEjercicio() {
                 return;
             }
 
-            // PINTAR LOS DATOS
             tituloDOM.innerText = ejercicio.nombre;
             const hero = document.getElementById('ejercicio-hero');
             if (hero && ejercicio.imagen) {
@@ -74,7 +71,6 @@ function cargarPaginaEjercicio() {
                 hero.style.backgroundSize = 'cover';
             }
 
-            // Material
             const listaMaterial = document.getElementById('ejercicio-material');
             if (listaMaterial) {
                 listaMaterial.innerHTML = '';
@@ -85,7 +81,6 @@ function cargarPaginaEjercicio() {
                 });
             }
 
-            // Detalles Técnicos
             const listaDetalles = document.getElementById('ejercicio-detalles');
             if (listaDetalles) {
                 listaDetalles.innerHTML = '';
@@ -96,7 +91,6 @@ function cargarPaginaEjercicio() {
                 }
             }
 
-            // Vídeo
             const videoIframe = document.getElementById('ejercicio-video');
             if (videoIframe && ejercicio.video) {
                 videoIframe.src = ejercicio.video;
@@ -104,7 +98,6 @@ function cargarPaginaEjercicio() {
                 videoIframe.parentElement.style.display = 'none';
             }
 
-            // PINTAR ICONOS DEPORTIVOS
             const contenedorIconos = document.getElementById('contenedor-iconos-deporte');
             if (contenedorIconos) {
                 contenedorIconos.innerHTML = '';
@@ -127,7 +120,6 @@ function cargarPaginaEjercicio() {
                 });
             }
 
-            // LÓGICA BOTÓN AÑADIR RUTINA
             const btnAnadir = document.getElementById('btn-anadir-rutina');
             if (btnAnadir) {
                 let rutina = JSON.parse(localStorage.getItem('miRutinaDeportiva')) || [];
@@ -155,7 +147,6 @@ function cargarPaginaEjercicio() {
         .catch(err => console.error("Error cargando deporte:", err));
 }
 
-// --- Lógica para PlanDeporte_index.html ---
 function cargarPlanDeporte() {
     const contenedorPrincipal = document.getElementById('secciones-dinamicas');
     const tempSeccion = document.getElementById('temp-seccion');
@@ -187,6 +178,12 @@ function cargarPlanDeporte() {
 
                 fase.opciones.forEach(ejercicio => {
                     const clonPlato = tempPlato.content.cloneNode(true);
+                    const tarjeta = clonPlato.querySelector('.contenedor-item');
+
+                    if (tarjeta) {
+                        tarjeta.setAttribute('data-zonas', (ejercicio.zonas || []).join(',').toLowerCase());
+                    }
+
                     clonPlato.querySelector('.js-nombre').innerText = ejercicio.nombre;
                     const btn = clonPlato.querySelector('.js-btn-receta');
 
@@ -197,12 +194,11 @@ function cargarPlanDeporte() {
 
                     btn.onclick = () => {
                         localStorage.setItem('ejercicioSeleccionado', ejercicio.id);
-                        window.location.href = 'GuiaDeporte_index.html'; // Asegúrate de que este archivo se llama así
+                        window.location.href = 'GuiaDeporte_index.html';
                     };
                     grid.appendChild(clonPlato);
                 });
 
-                // Añadimos el carrusel
                 configurarBotonesCarrusel(clonSeccion, grid);
                 contenedorPrincipal.appendChild(clonSeccion);
             });
@@ -210,7 +206,6 @@ function cargarPlanDeporte() {
         .catch(err => console.error("Error crítico en el fetch:", err));
 }
 
-// Función del Carrusel
 function configurarBotonesCarrusel(seccion, grid) {
     const btnNext = seccion.querySelector('.js-next');
     const btnPrev = seccion.querySelector('.js-prev');
@@ -259,6 +254,59 @@ function configurarBotonesCarrusel(seccion, grid) {
             enMovimiento = false;
         }, 500);
     };
+}
+
+let filtrosDeporteActivos = [];
+
+document.addEventListener('click', (e) => {
+    if (e.target.classList.contains('btn-filtro-deporte')) {
+        const filtro = e.target.getAttribute('data-filtro');
+
+        if (filtro === 'todos') {
+            filtrosDeporteActivos = [];
+            document.querySelectorAll('.btn-filtro-deporte').forEach(btn => btn.classList.remove('active'));
+            e.target.classList.add('active');
+        } else {
+            document.querySelector('.btn-filtro-deporte[data-filtro="todos"]')?.classList.remove('active');
+
+            if (filtrosDeporteActivos.includes(filtro)) {
+                filtrosDeporteActivos = filtrosDeporteActivos.filter(f => f !== filtro);
+                e.target.classList.remove('active');
+            } else {
+                filtrosDeporteActivos.push(filtro);
+                e.target.classList.add('active');
+            }
+
+            if (filtrosDeporteActivos.length === 0) {
+                document.querySelector('.btn-filtro-deporte[data-filtro="todos"]')?.classList.add('active');
+            }
+        }
+        ejecutarFiltradoDeportes();
+    }
+});
+
+function ejecutarFiltradoDeportes() {
+    const tarjetas = document.querySelectorAll('.contenedor-item');
+
+    tarjetas.forEach(tarjeta => {
+        const zonasCard = tarjeta.getAttribute('data-zonas');
+        if (!zonasCard) return;
+
+        const zonasArray = zonasCard.split(',');
+        let debeMostrarse = false;
+
+        if (filtrosDeporteActivos.length === 0) {
+            debeMostrarse = true;
+        } else {
+            debeMostrarse = filtrosDeporteActivos.some(filtro => zonasArray.includes(filtro));
+        }
+
+        if (debeMostrarse) {
+            tarjeta.classList.remove('ejercicio-oculto');
+        } else {
+            tarjeta.classList.add('ejercicio-oculto');
+        }
+    });
 }
 
 window.addEventListener('load', () => {
