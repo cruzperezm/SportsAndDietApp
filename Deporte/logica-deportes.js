@@ -9,7 +9,7 @@ function inicializarDeportes() {
         return;
     }
 
-    fetch('../data.json')
+    fetch('../Dietas/DietaDeporte.json')
         .then(res => res.json())
         .then(data => {
             if (!data.deportes) {
@@ -46,7 +46,7 @@ function cargarPaginaEjercicio() {
         return;
     }
 
-    fetch('../data.json')
+    fetch('../Dietas/DietaDeporte.json')
         .then(res => res.json())
         .then(data => {
             let ejercicio = null;
@@ -159,7 +159,7 @@ function cargarPlanDeporte() {
 
     const deporteId = localStorage.getItem('deporteSeleccionado');
 
-    fetch('../data.json')
+    fetch('../Dietas/DietaDeporte.json')
         .then(res => res.json())
         .then(data => {
             const deporte = data.deportes.find(d => d.id === deporteId);

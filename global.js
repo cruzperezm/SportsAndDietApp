@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     // Segundo, comprobamos si la página actual necesita datos dinámicos JSON
     const body = document.body;
-    const jsonRuta = body.getAttribute('data-json-src'); // Ej: 'log-in-data.json'
+    const jsonRuta = body.getAttribute('data-json-src'); // Ej: 'log-in-DietaDeporte.json'
     const pageId = body.getAttribute('data-page-id');    // Ej: 'login'
 
     if (jsonRuta && pageId) {
