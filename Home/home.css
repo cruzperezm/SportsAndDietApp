@@ -41,11 +41,11 @@ html, body {
 }
 
 /* =========================================================
-   --- NUEVA ESCALA TIPOGRÁFICA (TAMAÑOS AUMENTADOS) ---
+   --- ESCALA TIPOGRÁFICA ---
    ========================================================= */
 p {
-    font-size: 1.2rem; /* Subimos el tamaño base general */
-    line-height: 1.7;  /* Más respiro entre líneas para facilitar la lectura */
+    font-size: 1.2rem;
+    line-height: 1.7;
     color: var(--text-secondary);
 }
 
@@ -91,7 +91,7 @@ img[src*="aspas.svg"] {
 .title {
     position: relative;
     width: 100%;
-    height: 450px; /* Aumentamos la altura para acomodar el título más grande */
+    height: 450px;
     display: flex;
     align-items: center;
     overflow: hidden;
@@ -109,7 +109,6 @@ img[src*="aspas.svg"] {
     position: relative;
     z-index: 2;
     margin-left: 10%;
-    /* TEXTO PRINCIPAL GIGANTE E IMPACTANTE */
     font-size: clamp(3rem, 7vw, 5rem);
     font-weight: 800;
     color: #ffffff;
@@ -133,7 +132,7 @@ img[src*="aspas.svg"] {
 }
 
 .features-section img {
-    width: 80px; /* Iconos más visibles */
+    width: 80px;
     height: 80px;
     border-radius: 12px;
     margin-bottom: 25px;
@@ -146,7 +145,7 @@ img[src*="aspas.svg"] {
 }
 
 .features-section p {
-    font-size: 1.2rem; /* Textos de características ampliados */
+    font-size: 1.2rem;
     line-height: 1.6;
 }
 
@@ -169,7 +168,7 @@ img[src*="aspas.svg"] {
 }
 
 .diet-preview img, .sport-preview img {
-    width: 200px; /* Imágenes más grandes para acompañar el texto ampliado */
+    width: 200px;
     height: 200px;
     border-radius: 20px;
     flex-shrink: 0;
@@ -192,10 +191,10 @@ img[src*="aspas.svg"] {
     box-shadow: none;
 }
 
-/* TEXTOS DE INFORMACIÓN MÁS GRANDES Y CÓMODOS */
+/* TEXTOS DE INFORMACIÓN */
 .diet-info, .sport-info {
     flex: 1;
-    font-size: 1.3rem; /* Letra ideal para párrafos de lectura media */
+    font-size: 1.3rem;
     line-height: 1.8;
 }
 
@@ -266,7 +265,7 @@ img[src*="aspas.svg"] {
 #comments-heading {
     width: 100%;
     text-align: center;
-    font-size: 2.5rem; /* Título de sección más grande */
+    font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 50px;
     line-height: 1.4;
@@ -279,7 +278,7 @@ img[src*="aspas.svg"] {
 
 .comment-box {
     background-color: var(--color-bg-card);
-    padding: 40px; /* Más padding para respirar con la nueva letra */
+    padding: 40px;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -289,7 +288,7 @@ img[src*="aspas.svg"] {
 
 .comment-comas {
     font-family: serif;
-    font-size: 5rem; /* Comillas más grandes e imponentes */
+    font-size: 5rem;
     font-weight: 900;
     line-height: 0.5;
     margin-bottom: 25px;
@@ -298,59 +297,76 @@ img[src*="aspas.svg"] {
 
 .comment {
     margin: 0;
-    font-size: 1.2rem; /* Testimonios mucho más legibles */
+    font-size: 1.2rem;
     line-height: 1.7;
     color: var(--text-secondary);
 }
 
-/* --- SIGN UP (INVITACIÓN DE REGISTRO) --- */
+/* =========================================================
+   --- SIGN UP (INVITACIÓN DE REGISTRO) - TIPO MOCKUP ---
+   ========================================================= */
 .sign-up-request {
-    display: grid;
-    grid-template-columns: 1fr 350px;
+    /* Forzamos columna centrada en TODAS las resoluciones */
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    text-align: center;
     gap: 40px;
-    padding: 80px 15% 100px 15%;
-    position: relative;
-    margin-bottom: 80px;
+    padding: var(--section-padding);
+    margin-bottom: 60px;
 }
 
 .sign-up-text {
-    font-size: 2.2rem; /* Texto de invitación a tamaño título */
+    font-size: 2.2rem;
     line-height: 1.4;
     font-weight: 600;
+    margin: 0; /* Limpiamos márgenes para evitar saltos */
+}
+
+/* Contenedor relativo que agrupa la imagen y el botón */
+.sign-up-image-container {
+    position: relative;
+    width: 100%;
+    max-width: 450px; /* Tamaño máximo de la caja */
+    display: flex;
+    justify-content: center;
 }
 
 .sign-up-image {
     width: 100%;
-    height: 300px;
-    border-radius: 20px;
+    aspect-ratio: 1 / 1; /* Hace que la imagen sea cuadrada */
+    object-fit: cover;
+    border-radius: 40px; /* Bordes muy redondeados */
     box-shadow: var(--shadow-basic);
-    transition: var(--transition-standard);
+    display: block;
 }
 
 #sign-up-link {
+    /* Posicionamiento absoluto respecto al contenedor de la imagen */
     position: absolute;
-    bottom: 110px;
-    right: calc(15% + 175px - 75px); /* Ajustado al nuevo ancho del botón */
-    width: 150px; /* Botón más ancho para el texto más grande */
-    height: 55px; /* Botón más alto */
+    bottom: 30px; /* Distancia desde la base de la imagen */
+    left: 50%;
+    transform: translateX(-50%); /* Centrado horizontal perfecto */
+
+    width: 160px;
+    height: 55px;
     text-decoration: none;
     color: #ffffff;
     background-color: var(--color-deporte);
-    padding: 0.5rem 1.25rem;
     border-radius: 9999px;
     font-weight: 600;
-    font-size: 1.3rem; /* Letra del botón más grande */
+    font-size: 1.3rem;
     display: flex;
     justify-content: center;
     align-items: center;
     transition: var(--transition-standard);
     box-shadow: 0 5px 15px rgba(255, 152, 0, 0.3);
+    z-index: 5;
 }
 
 #sign-up-link:hover {
     background-color: #e68a00;
-    transform: translateY(-5px) scale(1.02);
+    transform: translateX(-50%) translateY(-5px);
     box-shadow: 0 10px 20px rgba(255, 152, 0, 0.4);
 }
 
@@ -359,8 +375,26 @@ img[src*="aspas.svg"] {
    MEDIA QUERIES (RESPONSIVE)
    ========================================================= */
 
-/* --- COMENTARIOS EN TABLET/MÓVIL --- */
+/* --- VISTA TABLET GENERAL (Hasta 1280px) --- */
+@media (max-width: 1280px) {
+    :root {
+        --section-padding: 60px 5%;
+    }
+
+    .diet-preview, .sport-preview {
+        gap: 40px;
+    }
+}
+
+/* --- VISTA TABLET Y MÓVIL HORIZONTAL (<= 768px) --- */
 @media (max-width: 768px) {
+    /* Apilado de Features */
+    .features-section {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    /* Apilado de Comentarios */
     .featured-comments {
         flex-direction: column;
         gap: 40px;
@@ -372,31 +406,7 @@ img[src*="aspas.svg"] {
     }
 }
 
-/* --- VISTA TABLET GENERAL (Hasta 1280px) --- */
-@media (max-width: 1280px) {
-    :root {
-        --section-padding: 60px 5%;
-    }
-
-    .diet-preview, .sport-preview {
-        gap: 40px;
-    }
-
-    .sign-up-request {
-        grid-template-columns: 1fr 300px;
-        gap: 40px;
-        padding-left: 10%;
-        padding-right: 10%;
-    }
-
-    #sign-up-link {
-        right: calc(10% + 150px - 75px);
-    }
-}
-
-/* =========================================================
-   --- VISTA MÓVIL (<= 412px) CON TEXTOS ESCALADOS ---
-   ========================================================= */
+/* --- VISTA MÓVIL PEQUEÑA (<= 412px) --- */
 @media (max-width: 412px) {
     :root {
         --section-padding: 40px 20px;
@@ -407,14 +417,12 @@ img[src*="aspas.svg"] {
     }
 
     .title-text {
-        font-size: 2.8rem; /* Título principal excelente en móvil */
+        font-size: 2.8rem;
         margin-left: 20px;
         text-align: left;
     }
 
     .features-section {
-        grid-template-columns: 1fr;
-        gap: 50px;
         padding: 40px 20px;
         text-align: center;
     }
@@ -433,32 +441,19 @@ img[src*="aspas.svg"] {
     }
 
     .diet-preview img, .sport-preview img {
-        width: 120px; /* Un pelín más grandes en móvil */
+        width: 120px;
         height: 120px;
     }
 
     .diet-info, .sport-info {
-        font-size: 1.15rem; /* Muy legibles en pantallas estrechas */
+        font-size: 1.15rem;
         line-height: 1.6;
         padding-left: 15px;
         padding-right: 15px;
     }
 
-    .diet-info { border-left-width: 3px; }
-    .sport-info { border-right-width: 3px; }
-
     .diet-preview-gallery img, .sport-preview-gallery img {
         width: clamp(180px, 40vw, 250px);
-    }
-
-    .featured-comments {
-        flex-direction: column;
-        gap: 30px;
-    }
-
-    .featured-comments article {
-        width: 100%;
-        min-width: 0;
     }
 
     .comment-box {
@@ -466,38 +461,11 @@ img[src*="aspas.svg"] {
     }
 
     .comment {
-        font-size: 1.15rem; /* Ajuste para móvil de las citas */
+        font-size: 1.15rem;
     }
 
-    .sign-up-request {
-        grid-template-columns: 1fr;
-        text-align: center;
-        padding: 40px 20px 120px 20px;
-        gap: 30px;
-    }
-
+    /* Ajuste para Sign Up en móvil */
     .sign-up-text {
-        font-size: 1.8rem; /* Mucha fuerza para invitar al registro */
-        order: 1;
-    }
-
-    .sign-up-image {
-        height: 220px;
-        order: 2;
-    }
-
-    #sign-up-link {
-        position: absolute;
-        right: 50%;
-        transform: translateX(50%);
-        bottom: 60px;
-        width: 160px; /* Botón cómodo para el dedo pulgar */
-        height: 55px;
-        font-size: 1.2rem;
-        order: 3;
-    }
-
-    #sign-up-link:hover {
-        transform: translateX(50%) translateY(-5px) scale(1.02);
+        font-size: 1.8rem;
     }
 }
