@@ -1,0 +1,43 @@
+/* Base común extraída de tus archivos */
+body { margin: 0; background-color: #ffffff; font-family: 'Inter', sans-serif; }
+
+.canvas {
+    width: 1280px; /* Ancho original de tu diseño */
+    height: 1800px;
+    position: relative;
+    margin: 0 auto;
+}
+
+/* Header - Posiciones exactas */
+.text1 { position: absolute; font-size: 96px; top: 111px; left: 348px; margin: 0; }
+.ellipse11 { position: absolute; width: 200px; height: 200px; top: 76px; left: 75px; background-color: #d9d9d9; border-radius: 50%; }
+.ellipse12 { position: absolute; width: 90px; height: 90px; top: 21px; right: 50px; background-color: #d9d9d9; border-radius: 50%; }
+
+/* Switch - Rectangle 79 */
+.rectangle79 { position: absolute; width: 200px; height: 100px; top: 307px; left: 540px; background-color: #f2f2f2; border-radius: 50px; }
+.ellipse15 { position: absolute; width: 90px; height: 90px; top: 5px; background-color: #d9d9d9; border-radius: 50%; transition: left 0.3s; }
+
+/* Contenedor Gris - Rectangle 83 */
+.rectangle83 { position: absolute; width: 1295px; height: 771px; top: 484px; left: -7px; background-color: #f2f2f2; }
+
+/* Dieta Específica */
+.ellipse13 { position: absolute; width: 450px; height: 450px; top: 116px; left: 78px; background-color: #d9d9d9; border-radius: 50%; }
+.ellipse14 { position: absolute; width: 380px; height: 380px; top: 35px; left: 35px; background-color: #ffffff; border-radius: 50%; text-align: center; }
+
+/* Deporte - Barras */
+.bar-unit { position: absolute; width: 35px; background-color: #d9d9d9; border-radius: 80px; bottom: 150px; }
+
+/* Listado inferior */
+.item-row { position: relative; height: 200px; margin-top: 20px; }
+.ellipse16 { width: 150px; height: 150px; background-color: #d9d9d9; border-radius: 50%; }
+
+/* --- MEDIA QUERY PARA RESPONSIVIDAD SIN CAMBIAR TAMAÑOS --- */
+@media screen and (max-width: 1280px) {
+    .canvas {
+        transform: scale(0.6); /* Escala todo el diseño proporcionalmente */
+        transform-origin: top center;
+    }
+}
+@media screen and (max-width: 768px) {
+    .canvas { transform: scale(0.4); }
+}

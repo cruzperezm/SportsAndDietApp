@@ -5,12 +5,12 @@
       "alt": "Foto de usuario"
     },
     "inputs": [
-      { "placeholder": "Nombre de usuario", "type": "text" },
-      { "placeholder": "Contraseña", "type": "password" }
+      { "id": "username", "placeholder": "Nombre de usuario", "type": "text" },
+      { "id": "password", "placeholder": "Contraseña", "type": "password" }
     ],
     "buttons": [
-      { "text": "Atrás", "link": "../Home/home-index.html" },
-      { "text": "Siguiente", "link": "../Dashboards/Dashboard-Dieta.html" }
+      { "id": "btn-back", "text": "Atrás", "link": "../Home/home-index.html", "type": "button" },
+      { "id": "btn-submit", "text": "Siguiente", "link": "../Dashboards/Dashboard-Dieta.html", "type": "submit" }
     ],
     "links": {
       "prefix": "¿No tienes una cuenta? | ",
@@ -26,14 +26,18 @@
       },
       {
         "platform": "Facebook",
-        "link": "https://www.facebook.com/marketplace/item/1755357712079241/",
-        "icon": "../imagenes/Log-in-Sign-up/github-logo.svg"
+        "link": "https://www.facebook.com/",
+        "icon": "../imagenes/Log-in-Sign-up/facebook-logo.svg"
       },
       {
         "platform": "Github",
         "link": "https://github.com/",
-        "icon": "../imagenes/Log-in-Sign-up/facebook-logo.svg"
+        "icon": "../imagenes/Log-in-Sign-up/github-logo.svg"
       }
+    ],
+    "users": [
+      { "username": "admin", "password": "123" },
+      { "username": "prueba", "password": "abc" }
     ]
   }
 }
