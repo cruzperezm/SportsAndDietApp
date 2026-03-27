@@ -163,3 +163,21 @@ body {
 .wire-btn.is-disabled:hover {
     background-color: #cccccc;
 }
+
+/* --- Mensajes de Validación --- */
+#signup-message {
+    font-size: 14px;
+    margin-bottom: 20px;
+    display: none; /* Oculto por defecto */
+    text-align: center;
+    width: 100%;
+}
+
+.msg-error {
+    color: #EF4444; /* Rojo para errores */
+}
+
+.msg-success {
+    color: #10B981; /* Verde esmeralda para éxito */
+    font-weight: bold;
+}

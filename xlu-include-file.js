@@ -1,42 +1,47 @@
-// https://stackoverflow.com/questions/40162907/w3includehtml-sometimes-includes-twice
-/*
-function xLuIncludeFile() {
-    let z, i, a, file, xhttp;
+document.addEventListener('DOMContentLoaded', async () => {
+    // 1. Inyectamos todo el HTML estático primero (Header, Footer, Artículos)
+    await xLuIncludeFile();
 
-    z = document.getElementsByTagName("*");
+    const body = document.body;
 
-    for (i = 0; i < z.length; i++) {
-        if (z[i].getAttribute("xlu-include-file")) {
-            a = z[i].cloneNode(false);
-            file = z[i].getAttribute("xlu-include-file");
-            xhttp = new XMLHttpRequest();
-
-            xhttp.onreadystatechange = function () {
-                if (xhttp.readyState === 4 && xhttp.status === 200) {
-                    a.removeAttribute("xlu-include-file");
-                    a.innerHTML = xhttp.responseText;
-                    z[i].parentNode.replaceChild(a, z[i]);
-                    xLuIncludeFile();
-                }
+    // 2. Cargamos los datos GLOBALES (Header y Footer)
+    const globalRuta = body.getAttribute('data-global-src');
+    if (globalRuta) {
+        try {
+            const respuestaGlobal = await fetch(globalRuta);
+            if (respuestaGlobal.ok) {
+                const datosGlobales = await respuestaGlobal.json();
+                if (datosGlobales.header) inyectarHeader(datosGlobales.header);
+                if (datosGlobales.footer) inyectarFooter(datosGlobales.footer);
             }
-
-            // false makes the send operation synchronous, which solves a problem
-            // when using this function in short pages with Chrome. But it is
-            // deprecated on the main thread due to its impact on responsiveness.
-            // This call may end up throwing an exception someday.
-
-            xhttp.open("GET", file, false);
-            xhttp.send();
-
-            return;
+        } catch (error) {
+            console.error("Error cargando los datos globales:", error);
         }
     }
-}
-*/
+
+    // 3. Cargamos los datos ESPECÍFICOS de la página actual (Si los requiere)
+    const jsonPaginRuta = body.getAttribute('data-json-src');
+    const pageId = body.getAttribute('data-page-id');
+
+    if (jsonPaginRuta && pageId) {
+        try {
+            const respuestaPagina = await fetch(jsonPaginRuta);
+            if (respuestaPagina.ok) {
+                const datosCompletos = await respuestaPagina.json();
+                const datosPagina = datosCompletos[pageId] || datosCompletos;
+
+                // Enrutador para páginas específicas
+                if (pageId === 'home' && typeof inyectarHome === 'function') inyectarHome(datosPagina);
+                if (pageId === 'login' && typeof inyectarLogIn === 'function') inyectarLogIn(datosPagina);
+                if (pageId === 'signup' && typeof inyectarSignUp === 'function') inyectarSignUp(datosPagina);
+            }
+        } catch (error) {
+            console.error(`Error cargando los datos de la página ${pageId}:`, error);
+        }
+    }
+});
 
 async function xLuIncludeFile() {
-    // MAGIA AQUÍ: Usamos querySelectorAll para crear una lista estática
-    // que no se mueva cuando cargar-datos.js inyecte elementos nuevos.
     let z = document.querySelectorAll("*");
 
     for (let i = 0; i < z.length; i++) {
@@ -47,10 +52,8 @@ async function xLuIncludeFile() {
             try {
                 let response = await fetch(file);
                 if (response.ok) {
-
                     let content = await response.text();
 
-                    // Si el archivo es una plantilla, reemplazamos los placeholders
                     if (file === "article-template.html") {
                         let articleData = {
                             title: z[i].getAttribute("data-title"),
@@ -74,7 +77,9 @@ async function xLuIncludeFile() {
                     a.removeAttribute("xlu-include-file");
                     a.innerHTML = content;
                     z[i].parentNode.replaceChild(a, z[i]);
-                    xLuIncludeFile();
+
+                    // Await añadido para asegurar la sincronía de carga de componentes
+                    await xLuIncludeFile();
                 }
             } catch (error) {
                 console.error("Error fetching file:", error);
@@ -82,5 +87,45 @@ async function xLuIncludeFile() {
 
             return;
         }
+    }
+}
+
+// --- FUNCIONES DE INYECCIÓN GLOBALES ---
+
+function inyectarHeader(headerData) {
+    const navHome = document.getElementById('nav-home');
+    if (navHome) {
+        navHome.href = headerData.home.link;
+        navHome.innerHTML = `<img src="${headerData.home.logo}" alt="${headerData.home.alt}">`;
+    }
+
+    if (headerData.navLinks) {
+        headerData.navLinks.forEach(linkObj => {
+            const linkElement = document.getElementById(linkObj.id);
+            if (linkElement) {
+                linkElement.href = linkObj.link;
+                linkElement.textContent = linkObj.text;
+            }
+        });
+    }
+}
+
+function inyectarFooter(footerData) {
+    const columnas = document.querySelectorAll('.footer-column p');
+    if (columnas.length >= 2 && footerData.textColumns) {
+        columnas[0].textContent = footerData.textColumns[0];
+        columnas[1].textContent = footerData.textColumns[1];
+    }
+
+    const socialContainer = document.querySelector('.social-links');
+    if (socialContainer && footerData.socialLinks) {
+        socialContainer.innerHTML = '';
+        footerData.socialLinks.forEach(social => {
+            socialContainer.innerHTML += `
+                <a href="${social.link}" class="${social.name}" aria-label="${social.name}">
+                    <img alt="${social.alt}" src="${social.icon}">
+                </a>
+            `;
+        });
     }
 }
