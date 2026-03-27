@@ -1,64 +1,84 @@
 {
   "hero": {
-    "title": "Lorem Ipsum",
+    "title": "Tu cambio está aquí",
     "bgVideos": [
-      "../videos/1.mp4",
-      "../videos/2.mp4",
-      "../videos/3.mp4",
-      "../videos/4.mp4",
-      "../videos/5.mp4",
-      "../videos/6.mp4"
+      "../videos/video-title-1.mp4",
+      "../videos/video-title-2.mp4"
     ]
   },
   "features": [
     {
       "type": "diet",
-      "icon": "../imagenes/aspas.svg",
-      "text": "Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum"
+      "icon": "../imagenes/Home/diet-logo.svg",
+      "text": "¿Necesitas controlar tu alimentación de manera sencilla? Añade tus recetas favoritas, controla alimentos que te gustan, alergias que poseas y tus recetas favoritas. Disfrutar comiendo y haciéndolo saludable es posible"
     },
     {
       "type": "sport",
-      "icon": "../imagenes/aspas.svg",
-      "text": "Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum"
+      "icon": "../imagenes/Home/sports-logo.svg",
+      "text": "No necesitas ser experto para aumentar tu actividad física. Rutinas personalizadas, ejercicios según objetivos y grupos musculares. Para mejorar solo se necesita un pequeño cambio, te podemos ayudar a conseguirlo."
     },
     {
       "type": "about-us",
-      "icon": "../imagenes/aspas.svg",
-      "text": "Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum"
+      "icon": "../imagenes/Home/info-logo.svg",
+      "text": "Si necesitas conocernos mejor accede a nuestra página de información. Si quieres combinar una buena alimentación con unos ejercicios adecuados regístrate. Lo mejor de ambos mundos para tu bienestar, nuestra prioridad."
     }
   ],
   "dietPreview": {
     "link": "../Dietas/Dietas_index.html",
-    "image": "../imagenes/aspas.svg",
-    "info": "Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum",
+    "image": "../videos/manzana.gif",
+    "info": "Escoge tu tipo de dieta preferido, añade la receta que más te guste o todas las similares. Desde el desayuno a la cena escoge tus preferencias para alcanzar tus objetivos con indicaciones de preparación y objetivos alimenticios basados en tu información. Mejora tu alimentación con un seguimiento agradable y sencillo.",
     "gallery": [
-      "../imagenes/aspas.svg",
-      "../imagenes/aspas.svg",
-      "../imagenes/aspas.svg"
+      "../imagenes/Dietas/Keto/k_alm_1.jpg",
+      "../imagenes/Dietas/Keto/k_alm_2.jpg",
+      "../imagenes/Dietas/Keto/k_alm_3.jpg",
+      "../imagenes/Dietas/Keto/k_alm_4.jpg",
+      "../imagenes/Dietas/Keto/k_alm_5.jpg",
+      "../imagenes/Dietas/Keto/k_alm_6.jpg",
+      "../imagenes/Dietas/Keto/k_alm_7.jpg",
+      "../imagenes/Dietas/Keto/k_alm_8.jpg",
+      "../imagenes/Dietas/Keto/k_alm_9.jpg",
+      "../imagenes/Dietas/Keto/k_alm_10.jpg",
+      "../imagenes/Dietas/Keto/k_alm_11.jpg",
+      "../imagenes/Dietas/Keto/k_alm_12.jpg",
+      "../imagenes/Dietas/Keto/k_alm_13.jpg",
+      "../imagenes/Dietas/Keto/k_alm_14.jpg",
+      "../imagenes/Dietas/Keto/k_alm_15.jpg"
     ]
   },
   "sportPreview": {
     "link": "../Deporte/Deporte_index.html",
-    "image": "../imagenes/aspas.svg",
-    "info": "Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum",
+    "image": "../videos/musculo.gif",
+    "info": "Tren superior, tren inferior, pierna, pecho, core... Escoge tu grupo muscular o ejercicio preferido, síguelo sabiendo tus kcal consumidas y el tiempo de actividad empleado. Te guiamos en el proceso de aumentar tu actividad física y estado de salud, personalizándolo a tus gustos particulares.",
     "gallery": [
-      "../imagenes/aspas.svg",
-      "../imagenes/aspas.svg",
-      "../imagenes/aspas.svg"
+      "../imagenes/Deportes/single-hop.jpg",
+      "../imagenes/Deportes/skater-jump.jpg",
+      "../imagenes/Deportes/skaters.jpg",
+      "../imagenes/Deportes/skating.jpg",
+      "../imagenes/Deportes/skipping.jpg",
+      "../imagenes/Deportes/slam-ball.jpg",
+      "../imagenes/Deportes/spiderman.jpg",
+      "../imagenes/Deportes/split.jpg",
+      "../imagenes/Deportes/sprints.jpg",
+      "../imagenes/Deportes/sprints-a.jpg",
+      "../imagenes/Deportes/squat-barra.jpg",
+      "../imagenes/Deportes/squat-jump.jpg",
+      "../imagenes/Deportes/step-p.jpg",
+      "../imagenes/Deportes/step-up.jpg",
+      "../imagenes/Deportes/step-up-exp.jpg"
     ]
   },
   "comments": {
-    "heading": "Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum",
+    "heading": "Comentarios destacados de los usuarios. Deja el tuyo en nuestras redes sociales.",
     "items": [
-      "Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum",
-      "Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum",
-      "Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum"
+      "Por fin un sitio donde poder controlar lo que como y lo que hago sin tener que estresarme por las dudas o las complicaciones.",
+      "Necesitaba buscar una forma de tener recetas que se adaptaran a mis múltiples alergias y elecciones particulares de alimentos, soy algo selectivo con la comida. SportsAndDietApp me da lo que necesito al completo.",
+      "Siempre me ha costado ponerme en forma, no sabía qué ejercicios realizar para poder bajar de peso o ganar músculo. Al fin encuentro todo en un mismo lugar y unas indicaciones claras sobre cómo mejorar mi actividad física."
     ]
   },
   "signUp": {
-    "heading": "Lorem Ipsum ?<br />Lorem Ipsum Lorem Ipsum !",
-    "image": "../imagenes/aspas.svg",
-    "buttonText": "Lorem",
+    "heading": "¿No tienes una cuenta con nosotros?<br />¡Regístrate ahora y no te pierdas ninguna de nuestras ventajas!",
+    "image": "../imagenes/Home/icono-registrate.avif",
+    "buttonText": "Regístrate",
     "buttonLink": "../Sign_Up/sign-up-index.html"
   }
 }
