@@ -1,14 +1,15 @@
 <section class="seccion-articulos">
   <div class="contenedor-texto">
-    <h1 class="titulo-principal">Lorem Ipsum</h1>
-    <p class="descripcion-principal">Lorem Ipsum Lorem Ipsum Lorem Ipsum</p>
+    <h1 class="titulo-principal">Deportes</h1>
+    <p class="descripcion-principal">Selecciona la disciplina que impulsará tu entrenamiento</p>
   </div>
-  <div class="contenedor-grid">
-    <article class="tarjeta-item"><div class="placeholder-imagen" onclick="location.href='Plan_index.html'"></div><h3>Lorem Ipsum</h3></article>
-    <article class="tarjeta-item"><div class="placeholder-imagen" onclick="location.href='Plan_index.html'"></div><h3>Lorem Ipsum</h3></article>
-    <article class="tarjeta-item"><div class="placeholder-imagen" onclick="location.href='Plan_index.html'"></div><h3>Lorem Ipsum</h3></article>
-    <article class="tarjeta-item"><div class="placeholder-imagen" onclick="location.href='Plan_index.html'"></div><h3>Lorem Ipsum</h3></article>
-    <article class="tarjeta-item"><div class="placeholder-imagen" onclick="location.href='Plan_index.html'"></div><h3>Lorem Ipsum</h3></article>
-    <article class="tarjeta-item"><div class="placeholder-imagen" onclick="location.href='Plan_index.html'"></div><h3>Lorem Ipsum</h3></article>
-  </div>
+
+  <div id="contenedor-deportes" class="contenedor-grid"></div>
 </section>
+
+<template id="template-tarjeta">
+  <div class="tarjeta-item">
+    <img class="placeholder-imagen js-imagen js-enlace" src="" alt="Deporte">
+    <h3 class="js-titulo"></h3>
+  </div>
+</template>

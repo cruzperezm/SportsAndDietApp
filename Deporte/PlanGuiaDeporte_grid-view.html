@@ -1,21 +1,34 @@
 <section class="guia-dieta">
-    <div class="hero-guia" onclick="location.href='Deporte_index.html'">
-        <h1 class="text-96">Lorem Ipsum</h1>
-        <p class="text-24-hero">Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum</p>
+    <div id="ejercicio-hero" class="hero-guia" onclick="location.href='PlanDeporte_index.html'" style="cursor: pointer;">
+        <h1 id="ejercicio-titulo" class="text-96">Cargando...</h1>
+        <div id="contenedor-iconos-deporte" class="etiquetas-wrapper"></div>
     </div>
+
     <div class="contenedor-columnas">
         <div class="columna">
-            <h2 class="text-40">Lorem Ipsum</h2>
-            <ul class="lista-columna">
-                <li>Lorem Ipsum</li><li>Lorem Ipsum</li><li>Lorem Ipsum</li>
-            </ul>
+            <h2 class="text-40">Material Necesario</h2>
+            <ul id="ejercicio-material" class="lista-columna"></ul>
         </div>
-        <div class="linea-divisoria"></div>
         <div class="columna">
-            <h2 class="text-40">Lorem Ipsum</h2>
-            <ul class="lista-columna">
-                <li>Lorem Ipsum</li><li>Lorem Ipsum</li><li>Lorem Ipsum</li>
-            </ul>
+            <h2 class="text-40">Detalles Técnicos</h2>
+            <ul id="ejercicio-detalles" class="lista-columna"></ul>
+        </div>
+    </div>
+
+    <div class="bloque-inferior">
+        <h2 class="text-40">Técnica Correcta</h2>
+        <div class="video-container">
+            <iframe id="ejercicio-video"
+                    src=""
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen>
+            </iframe>
+        </div>
+
+        <div style="text-align: center; margin-top: 40px;">
+            <button id="btn-anadir-rutina" class="btn-primario">Añadir a mi rutina 📅</button>
         </div>
     </div>
 </section>
