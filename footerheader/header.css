@@ -1,81 +1,70 @@
-/* =========================================================
-   --- ESTILOS GENERALES DEL HEADER ---
-   ========================================================= */
-.header {
-    width: 100%;
-    height: 100px; /* Aumentamos un poco la altura para la nueva letra */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 10%;
-    background-color: #FFFFFF; /* Fondo blanco limpio */
-    border-bottom: 2px solid #4CAF50; /* Línea de acento verde Dieta */
-    position: relative;
-    z-index: 100;
+.header *, .header *::before, .header *::after {
+    box-sizing: border-box;
 }
 
-/* =========================================================
-   --- NAVEGACIÓN PRINCIPAL ---
-   ========================================================= */
+.header {
+    background-color: #ffffff;
+    /* Línea decorativa estilo Dieta */
+    border-bottom: 2px solid #10B981;
+    padding: 0 2rem;
+    font-family: 'Inter', system-ui, sans-serif;
+}
+
 .navigation {
     display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    gap: 15px; /* Espacio entre botones */
-}
-
-/* Estilos base de los enlaces de navegación */
-.navigation a {
-    display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 10px; /* Espacio entre icono y texto */
+    height: 80px;
+    gap: 0.5rem; /* Separación sutil entre los botones centrales */
+}
+
+/* =========================================
+   ESTADO BASE DE LOS BOTONES CENTRALES (PC)
+   ========================================= */
+.nav-button {
     text-decoration: none;
-
-    /* TIPOGRAFÍA MÁS GRANDE */
-    color: #1A1A1A; /* Texto casi negro */
-    font-size: 1.1rem; /* Aumentado */
+    color: #1F2937;
+    /* Fondo gris muy clarito para diferenciar del header blanco */
+    background-color: #F3F4F6;
+    padding: 0.5rem 1rem;
+    /* Rectángulos con esquinas redondeadas para Dietas, Deporte, Explorar, Info */
+    border-radius: 10px;
     font-weight: 500;
-
-    /* Caja del botón */
-    padding: 10px 20px;
-    border-radius: 9999px; /* Botón píldora */
-    background-color: #F5F5F7; /* Gris Off-White sutil */
-
-    /* TRANSICIÓN ESTÁNDAR */
-    transition: all 0.2s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px; /* Espacio entre el icono y el texto */
+    transition: all 0.3s ease;
 }
 
-/* =========================================================
-   --- EFECTO HOVER "DIET-STYLE" (ELEVACIÓN) ---
-   ========================================================= */
-.navigation a:hover {
-    background-color: #E8F5E9; /* Fondo verde muy suave al hover */
-    color: #4CAF50; /* Texto verde salud */
-
-    /* Efectos de elevación */
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+/* Mostrar iconos y texto juntos en PC */
+.nav-icon {
+    display: block;
+    font-size: 20px; /* Tamaño equilibrado para el icono */
+}
+.nav-text {
+    display: block;
+    font-size: 1rem;
 }
 
-/* Estado activo (cuando el usuario está en esa página) */
-.navigation a.active {
-    background-color: #4CAF50; /* Fondo verde salud */
-    color: #FFFFFF; /* Texto blanco */
+/* Efecto HOVER (Estilo Dieta: Elevación y Sombra) */
+.nav-button:hover {
+    background-color: #ECFDF5; /* Verde esmeralda clarito */
+    color: #059669; /* Verde esmeralda oscuro */
+    transform: translateY(-4px); /* Elevación sutil */
+    box-shadow: 0 8px 12px -3px rgba(0, 0, 0, 0.1);
 }
 
-/* =========================================================
-   --- AJUSTES ESPECÍFICOS DE BOTONES ---
-   ========================================================= */
+/* =========================================
+   POSICIONAMIENTO Y ESTILO DE EXTREMOS (HOME Y LOGIN)
+   ========================================= */
 
-/* Logo / Home button */
+/* HOME: Se va a la izquierda y centra el resto */
 #nav-home {
     margin-right: auto;
-    width: 60px; /* Un poco más grande */
-    height: 60px;
-    padding: 0;
-    background-color: transparent; /* Sin fondo */
+    background-color: transparent; /* Sin fondo, como un logo */
+    width: 45px; /* Tamaño reducido para igualarlo a los demás iconos */
+    height: 45px;
+    padding: 8px; /* Espaciado interno */
 }
 
 #nav-home img {
@@ -85,95 +74,80 @@
 }
 
 #nav-home:hover {
-    background-color: transparent;
-    transform: translateY(-3px) scale(1.05); /* Escala suave */
-    box-shadow: none;
+    background-color: #F3F4F6; /* Fondecito suave al pasar el ratón */
+    transform: translateY(-4px);
+    box-shadow: 0 8px 12px -3px rgba(0, 0, 0, 0.1);
 }
 
-/* Botón de Log In (Toque Naranja sutil) */
+/* LOGIN: Se va a la derecha, centra el resto y TIENE FORMA DE PÍLDORA */
+#nav-login {
+    margin-left: auto;
+    border-radius: 9999px; /* ¡Forma de píldora recuperada! */
+    padding: 0.5rem 1.5rem; /* Padding horizontal un poco mayor para acentuar la píldora */
+}
+
+/* Toque sutil de Deporte (Naranja) solo para el botón Log In en hover */
 #nav-login:hover {
-    background-color: #FFF3E0; /* Fondo naranja muy suave */
-    color: #FF9800; /* Texto naranja deporte */
+    background-color: #FFF7ED;
+    color: #F97316;
 }
 
-/* =========================================================
-   --- LOGICA DE ICONOS OCULTOS / TEXTO ---
-   ========================================================= */
-
-/* Por defecto (PC/Tablet): Ocultamos iconos de navegación, mostramos texto */
-.nav-icon {
-    display: none; /* Oculto */
-}
-
-.nav-text {
-    display: block; /* Visible */
-}
-
-
-/* =========================================================
-   --- MEDIA QUERIES (RESPONSIVE) ---
-   ========================================================= */
-
-/* --- VISTA TABLET GENERAL (Hasta 768px, incluye móvil horizontal) --- */
+/* =========================================
+   VISTA INTERMEDIA (<= 768px) - Adiós textos, se mantiene la forma
+   ========================================= */
 @media (max-width: 768px) {
-    .header {
-        height: 80px;
-        padding: 0 5%;
+    /* OCULTAMOS TODOS LOS TEXTOS para ganar espacio */
+    .nav-text {
+        display: none !important;
     }
 
-    #nav-home {
-        width: 50px;
-        height: 50px;
+    /* Reducimos ligeramente el padding para que la píldora sin texto no se vea muy vacía */
+    .nav-button {
+        padding: 0.5rem 0.8rem;
     }
 
-    .navigation a {
-        font-size: 1rem;
-        padding: 8px 15px;
+    #nav-login {
+        padding: 0.5rem 1rem; /* Mantenemos el look de píldora un poco más ancho */
     }
 }
 
-/* =========================================================
-   --- NUEVA VISTA MÓVIL CRUCIAL (<= 412px) ---
-   --- ICONOS EN SUSTITUCIÓN DE TEXTO ---
-   ========================================================= */
+/* =========================================
+   VISTA MÓVIL (<= 412px) - Solo Iconos Circulares
+   ========================================= */
 @media (max-width: 412px) {
     .header {
-        padding: 0 15px;
+        padding: 0 10px;
     }
 
     .navigation {
-        gap: 8px; /* Reducimos el gap entre iconos */
+        gap: 5px; /* Comprimimos el espacio */
+        justify-content: center; /* Centramos todo en móvil */
     }
 
-    .navigation a {
-        /* Reducimos el botón a un círculo o cuadrado pequeño para el icono */
-        padding: 10px;
-        border-radius: 12px;
-        aspect-ratio: 1 / 1; /* Hacemos los botones cuadrados */
+    /* En móvil anulamos los márgenes automáticos para que se repartan parejos */
+    #nav-home { margin-right: 0; }
+    #nav-login { margin-left: 0; }
+
+    /* Mostramos solo los iconos, centrados */
+    .nav-icon {
+        display: block !important;
+        font-size: 24px !important; /* Un poco más grandes para móvil */
+        margin: 0;
+    }
+
+    /* Convertimos TODOS los botones (incluido Login) en CÍRCULOS perfectos */
+    .nav-button {
         width: 45px;
         height: 45px;
+        padding: 0 !important; /* Quitamos el padding asimétrico de la píldora */
+        border-radius: 50% !important; /* Forzamos forma circular */
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
-    /* --- LA MAGIA: Intercambio de visibilidad --- */
-    .nav-text {
-        display: none !important; /* OCULTAMOS EL TEXTO OBLIGATORIAMENTE */
-    }
-
-    .nav-icon {
-        display: block !important; /* MOSTRAMOS LOS ICONOS OBLIGATORIAMENTE */
-        width: 25px;
-        height: 25px;
-        object-fit: contain;
-        /* Aseguramos que el icono use el color del texto del enlace parent */
-        filter: grayscale(100%) brightness(0); /* Ejemplo: convierte el SVG a negro */
-    }
-
-    /* Ajustamos el filtro en hover/activo para que use el color correcto */
-    .navigation a:hover .nav-icon {
-        filter: none; /* Quita el filtro negro si el SVG tiene color */
-    }
-
-    .navigation a.active .nav-icon {
-        filter: brightness(0) invert(1); /* Convierte el icono a blanco */
+    #nav-home {
+        width: 45px;
+        height: 45px;
     }
 }
