@@ -17,19 +17,19 @@
     "socialLinks": [
       {
         "name": "Gmail",
-        "link": "https://workspace.google.com/intl/es/gmail/",
+        "link": "mailto:contactosportsanddiet@gmail.com",
         "icon": "../imagenes/Footer/gmail-logo.svg",
         "alt": "Gmail"
       },
       {
         "name": "Instagram",
-        "link": "https://www.instagram.com/",
+        "link": "https://www.instagram.com/sportsanddietapp/",
         "icon": "../imagenes/Footer/instagram-logo.svg",
         "alt": "Instagram"
       },
       {
         "name": "LinkedIn",
-        "link": "https://es.linkedin.com/",
+        "link": "https://es.linkedin.com/in/sportsanddiet-health-and-exercise-a560713bb/",
         "icon": "../imagenes/Footer/linkedin-logo.svg",
         "alt": "LinkedIn"
       }
