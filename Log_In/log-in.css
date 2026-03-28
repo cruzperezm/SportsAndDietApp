@@ -1,56 +1,95 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+
+/* =========================================================
+   --- PALETA DE COLORES Y VARIABLES GLOBALES (Igual al Sign Up) ---
+   ========================================================= */
 :root {
-    --bg-color: #ffffff;
-    --card-bg: #e5e5e5;
-    --element-bg: #f0f0f0;
-    --text-color: #333333;
+    /* Colores Principales */
+    --color-deporte: #FF9800;
+    --color-dieta: #4CAF50;
+    --color-error: #EF4444;
+
+    /* Colores de Estructura */
+    --color-bg-page: #F5F5F7;
+    --color-bg-card: #FFFFFF;
+    --gray-element: #EAEAEA;
+    --gray-border: #D1D5DB;
+    --gray-placeholder: #6B7280;
+
+    /* Texto */
+    --text-main: #1A1A1A;
+    --text-secondary: #4B5563;
+
+    /* Efectos de Sombra y Transición */
+    --shadow-basic: 0 10px 25px rgba(0,0,0,0.08);
+    --transition-standard: all 0.2s ease;
 }
 
 * {
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+    -webkit-font-smoothing: antialiased;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: var(--bg-color);
+html, body {
+    margin: 0;
+    height: 100%;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    color: var(--text-main);
+    background-color: var(--color-bg-page);
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
     overflow: hidden;
 }
 
+/* =========================================================
+   --- TARJETA PRINCIPAL ---
+   ========================================================= */
 .wireframe-card {
-    background-color: var(--card-bg);
-    width: 100%;
-    max-width: 450px;
-    padding: 60px 40px;
-    border-radius: 12px;
+    background-color: var(--color-bg-card);
+    width: 45%;
+    min-width: 500px;
+    max-width: 900px;
+    max-height: 95vh;
+    overflow-y: hidden;
+    padding: 30px 60px;
+    border-radius: 16px;
+    box-shadow: var(--shadow-basic);
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+.wireframe-card::-webkit-scrollbar {
+    display: none;
+}
+
+/* =========================================================
+   --- LOGO / AVATAR ---
+   ========================================================= */
 .logo-placeholder {
-    width: 80px;
-    height: 80px;
-    margin-bottom: 50px;
+    width: 75px;
+    height: 75px;
+    margin-bottom: 20px;
     border-radius: 50%;
-    background-color: #dcdcdc;
+    background-color: transparent;
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    flex-shrink: 0;
 }
 
 .user-avatar {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     display: block;
 }
 
+/* =========================================================
+   --- FORMULARIO E INPUTS ---
+   ========================================================= */
 .wireframe-form {
     width: 100%;
     display: flex;
@@ -60,65 +99,115 @@ body {
 
 .input-field {
     width: 100%;
-    margin-bottom: 30px;
+    margin-bottom: 12px;
 }
 
 .input-field input {
     width: 100%;
-    padding: 18px 15px;
-    background-color: var(--element-bg);
-    border: none;
-    border-radius: 6px;
-    font-size: 14px;
-    color: var(--text-color);
+    padding: 14px 18px;
+    background-color: var(--gray-element);
+    border: 2px solid transparent;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: var(--text-main);
     outline: none;
+    transition: var(--transition-standard);
 }
 
 .input-field input:focus {
-    border: 1px solid #999;
+    border-color: var(--color-deporte);
+    background-color: #ffffff;
+}
+
+.input-field input.is-valid {
+    border-color: var(--color-dieta) !important;
+    background-color: #f0fdf4;
+}
+
+.input-field input.is-invalid {
+    border-color: var(--color-error);
 }
 
 .input-field input::placeholder {
-    color: var(--text-color);
+    color: var(--gray-placeholder);
 }
 
+/* --- Mensajes de Validación --- */
+#login-error {
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    display: none;
+    text-align: center;
+    width: 100%;
+}
+
+.msg-error {
+    color: var(--color-error);
+}
+
+.msg-success {
+    color: var(--color-dieta);
+    font-weight: 600;
+}
+
+/* =========================================================
+   --- BOTONES UNIFICADOS ---
+   ========================================================= */
 .button-row {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    gap: 30px;
-    margin-bottom: 30px;
+    gap: 20px;
+    margin-top: 5px;
+    margin-bottom: 20px;
 }
 
 .wire-btn {
     flex: 1;
-    height: 35px;
-    background-color: var(--element-bg);
-    border-radius: 6px;
-    text-decoration: none;
-    cursor: pointer;
-    transition: background-color 0.2s;
-    color: var(--text-color);
+    height: 46px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: var(--transition-standard);
+    text-decoration: none;
+    cursor: pointer;
+    background-color: var(--color-bg-card);
+    color: var(--text-main);
+    border: 1px solid var(--gray-border);
 }
 
 .wire-btn:hover {
-    background-color: #dcdcdc;
+    background-color: var(--color-deporte);
+    color: #ffffff;
+    border-color: var(--color-deporte);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 152, 0, 0.3);
 }
 
+.wire-btn:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+/* =========================================================
+   --- TEXTO Y REDES SOCIALES ---
+   ========================================================= */
 .text-links {
     text-align: center;
-    font-size: 13px;
-    color: var(--text-color);
-    margin-bottom: 30px;
-    line-height: 1.8;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-bottom: 15px;
+    line-height: 1.4;
 }
 
 .text-links a {
-    color: var(--text-color);
+    color: var(--color-deporte);
+    font-weight: 600;
     text-decoration: none;
+    transition: var(--transition-standard);
 }
 
 .text-links a:hover {
@@ -128,17 +217,17 @@ body {
 .icon-row {
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 20px;
 }
 
 .wireframe-icon {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 60px;
+    width: 50px;
     height: 40px;
-    background-color: var(--element-bg);
-    border-radius: 6px;
+    background-color: var(--gray-element);
+    border-radius: 8px;
     text-decoration: none;
     cursor: pointer;
     transition: transform 0.2s ease;
@@ -149,7 +238,26 @@ body {
 }
 
 .wireframe-icon img {
-    max-width: 24px;
-    max-height: 24px;
+    max-width: 22px;
+    max-height: 22px;
     object-fit: contain;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+    .wireframe-card {
+        width: 90%;
+        min-width: unset;
+        padding: 30px 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .wireframe-card {
+        padding: 20px 20px;
+    }
+    .button-row {
+        flex-direction: column;
+        gap: 12px;
+    }
 }

@@ -1,0 +1,41 @@
+{
+  "signup": {
+    "avatar": {
+      "src": "../imagenes/Log-in-Sign-up/user-icon.svg",
+      "alt": "Foto de usuario"
+    },
+    "inputs": [
+      { "id": "signup-username", "placeholder": "Nombre de usuario", "type": "text" },
+      { "id": "signup-email", "placeholder": "Correo electrónico", "type": "email" },
+      { "id": "signup-password", "placeholder": "Contraseña", "type": "password" },
+      { "id": "signup-password-repeat", "placeholder": "Repetir contraseña", "type": "password" }
+    ],
+    "buttons": [
+      { "text": "Atrás", "link": "../Home/home-index.html", "type": "button" },
+      { "text": "Registrarse", "link": "../Datos_Biometricos/Datos-Biometricos-1.html", "type": "submit" }
+    ],
+    "links": {
+      "prefix": "¿Ya tienes una cuenta? | ",
+      "loginText": "Inicia sesión",
+      "loginLink": "../Log_In/log-in-index.html",
+      "forgotText": "O regístrate con:"
+    },
+    "social": [
+      {
+        "platform": "Google",
+        "link": "https://www.google.com/?hl=es",
+        "icon": "../imagenes/Log-in-Sign-up/google-logo.svg"
+      },
+      {
+        "platform": "Facebook",
+        "link": "https://www.facebook.com/",
+        "icon": "../imagenes/Log-in-Sign-up/facebook-logo.svg"
+      },
+      {
+        "platform": "Github",
+        "link": "https://github.com/",
+        "icon": "../imagenes/Log-in-Sign-up/github-logo.svg"
+      }
+    ]
+  }
+}

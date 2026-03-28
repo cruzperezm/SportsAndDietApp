@@ -1,0 +1,30 @@
+{
+  "about": {
+    "hero": {
+      "image": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?q=80&w=2070&auto=format&fit=crop",
+      "text": "Nuestra misión es ayudarte a encontrar el equilibrio perfecto entre una nutrición saludable y la actividad física, mejorando tu calidad de vida día a día."
+    },
+    "features": [
+      {
+        "icon": "restaurant",
+        "title": "Nutrición",
+        "description": "Planes alimenticios diseñados específicamente para tus objetivos. Nos adaptamos a tus gustos y necesidades."
+      },
+      {
+        "icon": "fitness_center",
+        "title": "Entrenamiento",
+        "description": "Rutinas efectivas y adaptadas a tu nivel físico actual. Ejercítate más y mejor con nuestras guías."
+      },
+      {
+        "icon": "monitor_heart",
+        "title": "Salud Total",
+        "description": "Monitoreo constante para asegurar tu bienestar a largo plazo. Si quieres mantener al día tus datos regístrate y haz un seguimiento detallado de tus objetivos."
+      },
+      {
+        "icon": "groups",
+        "title": "Comunidad",
+        "description": "Disfruta de un espacio amigable para todos los públicos. Estamos para lo que necesites, utiliza nuestros medios de comunicación personalizados para aportar sugerencias o incidencias."
+      }
+    ]
+  }
+}

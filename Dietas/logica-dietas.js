@@ -1,6 +1,5 @@
 xLuIncludeFile();
 
-// --- Lógica para Dietas_index.html ---
 function inicializar() {
     const contenedor = document.getElementById('contenedor-dietas');
     const temp = document.getElementById('template-tarjeta');
@@ -10,9 +9,10 @@ function inicializar() {
         return;
     }
 
-    fetch('../data.json')
+    // ACTUALIZADO: Apunta al nuevo archivo dieta.json
+    fetch('dieta.json')
         .then(res => {
-            if (!res.ok) throw new Error("No se encontró el data.json");
+            if (!res.ok) throw new Error("No se encontró el dieta.json");
             return res.json();
         })
         .then(data => {
@@ -32,7 +32,6 @@ function inicializar() {
         .catch(error => console.error("Error cargando dietas:", error));
 }
 
-// --- Lógica para Guia_index.html ---
 function cargarPaginaReceta() {
     const tituloDOM = document.getElementById('receta-titulo');
 
@@ -47,7 +46,8 @@ function cargarPaginaReceta() {
         return;
     }
 
-    fetch('../data.json')
+    // ACTUALIZADO: Apunta al nuevo archivo dieta.json
+    fetch('dieta.json')
         .then(res => res.json())
         .then(data => {
             let receta = null;
@@ -67,7 +67,6 @@ function cargarPaginaReceta() {
                 return;
             }
 
-            // PINTAR DATOS
             tituloDOM.innerText = receta.nombre;
             const hero = document.getElementById('receta-hero');
             if (hero && receta.imagen) {
@@ -100,7 +99,6 @@ function cargarPaginaReceta() {
             const prepDOM = document.getElementById('receta-preparacion');
             if (prepDOM) prepDOM.innerText = receta.preparacion;
 
-            // PINTAR ICONOS DE ALÉRGENOS
             const contenedorEtiquetas = document.getElementById('contenedor-etiquetas');
             if (contenedorEtiquetas) {
                 contenedorEtiquetas.innerHTML = '';
@@ -131,7 +129,6 @@ function cargarPaginaReceta() {
                 }
             }
 
-            // LÓGICA DEL BOTÓN AÑADIR
             const btnAnadir = document.getElementById('btn-anadir-plan');
             if (btnAnadir) {
                 let guardadas = JSON.parse(localStorage.getItem('misRecetasGuardadas')) || [];
@@ -162,7 +159,6 @@ function cargarPaginaReceta() {
         .catch(err => console.error("Error cargando los datos:", err));
 }
 
-// --- Lógica para Plan_index.html ---
 let filtrosActivos = [];
 
 function cargarPlanDieta() {
@@ -181,7 +177,8 @@ function cargarPlanDieta() {
         return;
     }
 
-    fetch('../data.json')
+    // ACTUALIZADO: Apunta al nuevo archivo dieta.json
+    fetch('dieta.json')
         .then(res => res.json())
         .then(data => {
             const dieta = data.dietas.find(d => d.id === dietaId);
@@ -272,7 +269,6 @@ function configurarBotonesCarrusel(seccion, grid) {
     };
 }
 
-// Lógica de Filtros (Plan_index.html)
 document.addEventListener('click', (e) => {
     if (e.target.classList.contains('btn-filtro')) {
         const filtro = e.target.getAttribute('data-filtro');
@@ -320,7 +316,6 @@ function ejecutarFiltradoMulticapa() {
         }
     });
 }
-
 
 window.addEventListener('load', () => {
     console.log("Archivos cargados. Iniciando lógica según la página...");

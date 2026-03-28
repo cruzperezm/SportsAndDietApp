@@ -1,152 +1,127 @@
 .header *, .header *::before, .header *::after {
     box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
-}
-
-.header a:focus-visible {
-    outline: 2px solid #4a90e2 !important;
-    outline: -webkit-focus-ring-color auto 5px !important;
 }
 
 .header {
     background-color: #ffffff;
-    border-bottom: 1px solid #f3f4f6;
+    /* Línea decorativa estilo Dieta */
+    border-bottom: 2px solid #10B981;
     padding: 0 2rem;
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
-    color: #333;
+    font-family: 'Inter', system-ui, sans-serif;
 }
 
 .navigation {
     display: flex;
     align-items: center;
     height: 80px;
-    gap: 1rem;
+    gap: 0.5rem; /* Separación sutil entre los botones centrales */
 }
 
-.navigation a {
-    width: 100px;
-    height: 40px;
+/* =========================================
+   ESTADO BASE DE TODOS LOS BOTONES
+   ========================================= */
+.nav-button {
     text-decoration: none;
-    color: #000000;
-    background-color: #d9d9d9;
-    padding: 0.5rem 1.25rem;
-    border-radius: 6px;
-    font-weight: 400;
-    transition: background-color 0.2s ease, transform 0.2s ease;
+    color: #1F2937;
+    /* Fondo gris muy clarito para diferenciar del header blanco */
+    background-color: #F3F4F6;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    font-weight: 500;
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 8px; /* Espacio entre el icono y el texto */
+    transition: all 0.3s ease;
 }
 
-.navigation a:hover {
-    background-color: #888888;
+.nav-icon {
+    display: block;
+    font-size: 20px;
+}
+.nav-text {
+    display: block;
+    font-size: 1rem;
 }
 
+.nav-button:hover {
+    background-color: #ECFDF5;
+    color: #059669;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 12px -3px rgba(0, 0, 0, 0.1);
+}
+
+/* =========================================
+   POSICIONAMIENTO DE EXTREMOS (HOME Y LOGIN)
+   ========================================= */
+
+/* HOME: Se va a la izquierda y centra el resto.
+   Ya no necesita reglas de tamaño ni hover especiales,
+   hereda todo de .nav-button */
 #nav-home {
     margin-right: auto;
-    width: 50px;
-    height: 50px;
-    padding: 0;
-    border-radius: 50%; /* Mantiene la forma circular */
-    overflow: hidden;   /* Recorta la imagen para que sea circular */
-
-    /* --- CAMBIO: Quitamos el fondo gris para que no se vea detrás de la imagen --- */
-    background-color: transparent;
 }
 
-#nav-home img {
-    /* --- CAMBIO: Forzamos a la imagen a llenar todo el contenedor (el círculo) --- */
-    width: 90%;
-    height: 90%;
-
-    /* --- CAMBIO: Asegura que la imagen se escale correctamente sin deformarse para cubrir el círculo --- */
-    object-fit: cover;
-}
-
+/* LOGIN: Se va a la derecha, centra el resto y TIENE FORMA DE PÍLDORA */
 #nav-login {
     margin-left: auto;
-    padding: 0.5rem 1.5rem; /* Reducimos un poco el padding para equilibrar */
     border-radius: 9999px;
-    font-weight: 600;
-
-    /* --- SOLUCIÓN PARA QUE NO SE APILE --- */
-    font-size: 0.9rem; /* Reducimos ligeramente el tamaño de la letra */
-    width: auto; /* Anula los 100px fijos para que el botón crezca si lo necesita */
-    min-width: 100px; /* Mantiene un ancho mínimo por estética */
-    white-space: nowrap; /* Fuerza a que el texto se mantenga en una sola línea siempre */
+    padding: 0.5rem 1.5rem;
 }
 
-body:has(main.dietas) #nav-dietas {
-    background-color: #888888;
-    color: #ffffff;
-}
-
-body:has(main.deporte) #nav-deporte {
-    background-color: #888888;
-    color: #ffffff;
-}
-
-body:has(main.explorador) #nav-explorador {
-    background-color: #888888;
-    color: #ffffff;
-}
-
-body:has(main.about-us) #nav-about-us {
-    background-color: #888888;
-    color: #ffffff;
-}
-/* =========================================
-   1. ESCRITORIO Y TABLET (Mayor a 768px) - Píldoras
-   ========================================= */
-.navigation .nav-icon {
-    display: none !important;
-}
-
-.navigation .nav-text {
-    display: inline-block !important;
+#nav-login:hover {
+    background-color: #FFF7ED;
+    color: #F97316;
 }
 
 /* =========================================
-   2. SOLO MÓVIL (Hasta 768px) - Círculos Reales
+   VISTA INTERMEDIA (<= 768px)
    ========================================= */
 @media (max-width: 768px) {
-    /* 1. Escondemos el texto del todo */
-    .navigation .nav-text {
+    .nav-text {
         display: none !important;
     }
 
-    /* 2. Mostramos el icono */
-    .navigation .nav-icon {
-        display: flex !important;
-        justify-content: center;
-        align-items: center;
-        font-size: 24px !important;
-        margin: 0 !important;
+    .nav-button {
+        padding: 0.5rem 0.8rem;
     }
 
-    /* 3. EL CANDADO ANTI-PÍLDORAS (Solo para móvil) */
-    .navigation .nav-button,
-    .header .nav-button {
-        flex: 0 0 45px !important;
-        width: 45px !important;
-        height: 45px !important;
+    #nav-login {
+        padding: 0.5rem 1rem;
+    }
+}
+
+/* =========================================
+   VISTA MÓVIL (<= 412px)
+   ========================================= */
+@media (max-width: 412px) {
+    .header {
+        padding: 0 10px;
+    }
+
+    .navigation {
+        gap: 5px;
+        justify-content: center;
+    }
+
+    /* Anulamos los márgenes para que se repartan parejos */
+    #nav-home { margin-right: 0; }
+    #nav-login { margin-left: 0; }
+
+    .nav-icon {
+        display: block !important;
+        font-size: 24px !important;
+        margin: 0;
+    }
+
+    /* Convertimos TODOS los botones en CÍRCULOS perfectos */
+    .nav-button {
+        width: 45px;
+        height: 45px;
         padding: 0 !important;
         border-radius: 50% !important;
-        box-sizing: border-box !important;
-
-        display: flex !important;
-        justify-content: center !important;
-        align-items: center !important;
-        overflow: hidden !important;
-    }
-
-    /* 4. Contenedor del menú en móvil */
-    .navigation {
         display: flex;
-        flex-wrap: wrap;
-        gap: 15px;
-        justify-content: center !important;
-        align-items: center !important;
-        padding: 10px;
+        justify-content: center;
+        align-items: center;
     }
 }
