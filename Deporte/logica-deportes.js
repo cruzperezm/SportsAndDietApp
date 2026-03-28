@@ -9,8 +9,12 @@ function inicializarDeportes() {
         return;
     }
 
-    fetch('../Dietas/DietaDeporte.json')
-        .then(res => res.json())
+    // ACTUALIZADO: Apunta al nuevo archivo deporte.json
+    fetch('deporte.json')
+        .then(res => {
+            if (!res.ok) throw new Error("No se encontró el deporte.json");
+            return res.json();
+        })
         .then(data => {
             if (!data.deportes) {
                 console.error("No se encontró la clave 'deportes' en el JSON");
@@ -46,7 +50,8 @@ function cargarPaginaEjercicio() {
         return;
     }
 
-    fetch('../Dietas/DietaDeporte.json')
+    // ACTUALIZADO: Apunta al nuevo archivo deporte.json
+    fetch('deporte.json')
         .then(res => res.json())
         .then(data => {
             let ejercicio = null;
@@ -159,7 +164,8 @@ function cargarPlanDeporte() {
 
     const deporteId = localStorage.getItem('deporteSeleccionado');
 
-    fetch('../Dietas/DietaDeporte.json')
+    // ACTUALIZADO: Apunta al nuevo archivo deporte.json
+    fetch('deporte.json')
         .then(res => res.json())
         .then(data => {
             const deporte = data.deportes.find(d => d.id === deporteId);

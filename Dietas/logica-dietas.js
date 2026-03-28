@@ -9,9 +9,10 @@ function inicializar() {
         return;
     }
 
-    fetch('DietaDeporte.json')
+    // ACTUALIZADO: Apunta al nuevo archivo dieta.json
+    fetch('dieta.json')
         .then(res => {
-            if (!res.ok) throw new Error("No se encontró el DietaDeporte.json");
+            if (!res.ok) throw new Error("No se encontró el dieta.json");
             return res.json();
         })
         .then(data => {
@@ -45,7 +46,8 @@ function cargarPaginaReceta() {
         return;
     }
 
-    fetch('DietaDeporte.json')
+    // ACTUALIZADO: Apunta al nuevo archivo dieta.json
+    fetch('dieta.json')
         .then(res => res.json())
         .then(data => {
             let receta = null;
@@ -175,7 +177,8 @@ function cargarPlanDieta() {
         return;
     }
 
-    fetch('DietaDeporte.json')
+    // ACTUALIZADO: Apunta al nuevo archivo dieta.json
+    fetch('dieta.json')
         .then(res => res.json())
         .then(data => {
             const dieta = data.dietas.find(d => d.id === dietaId);

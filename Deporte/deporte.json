@@ -1,0 +1,2296 @@
+{
+  "deportes": [
+    {
+      "id": "quema-grasa",
+      "titulo": "Pérdida de Grasa (HIIT)",
+      "imagen": "../imagenes/Deportes/hiit.jpg",
+      "plan": [
+        {
+          "momento": "Nivel Principiante",
+          "opciones": [
+            {
+              "id": "q-p1",
+              "nombre": "Marcha con Rodillas Altas",
+              "imagen": "../imagenes/Deportes/marcha.jpg",
+              "material": ["Ninguno"],
+              "detalles": { "tiempo": "40 seg", "descanso": "20 seg" },
+              "video": "https://youtu.be/j8XGysKsPFc?si=pXiZ9ALqs9xSxsXV",
+              "caracteristicas": ["Cardio", "Casa"],
+              "zonas": ["full_body", "tren_inferior", "core"]
+            },
+            {
+              "id": "q-p2",
+              "nombre": "Sentadilla Lateral",
+              "imagen": "../imagenes/Deportes/sentadilla-lat.jpg",
+              "material": ["Ninguno"],
+              "detalles": { "series": "3", "reps": "15" },
+              "video": "https://youtu.be/CoHcZ4fMVdQ?si=5EaW1VHZBcNr7jJe",
+              "caracteristicas": ["Fuerza", "Casa"],
+              "zonas": ["tren_inferior"]
+            },
+            {
+              "id": "q-p3",
+              "nombre": "Flexiones en Pared",
+              "imagen": "../imagenes/Deportes/flexion-pared.jpg",
+              "material": ["Pared"],
+              "detalles": { "series": "3", "reps": "12" },
+              "video": "https://youtu.be/_ifxX0U-xrM?si=8k7Icy1JtGT4sXG_",
+              "caracteristicas": ["Fuerza"],
+              "zonas": ["tren_superior"]
+            },
+            {
+              "id": "q-p4",
+              "nombre": "Step-ups Suaves",
+              "imagen": "../imagenes/Deportes/step-up.jpg",
+              "material": ["Escalón o Silla"],
+              "detalles": { "tiempo": "45 seg", "descanso": "15 seg" },
+              "video": "https://youtu.be/CBdPcHV52nc?si=2a7K8TmwiHGeN4QW",
+              "caracteristicas": ["Cardio", "Equipo"],
+              "zonas": ["tren_inferior"]
+            },
+            {
+              "id": "q-p5",
+              "nombre": "Puente de Glúteo",
+              "imagen": "../imagenes/Deportes/puente.jpg",
+              "material": ["Esterilla"],
+              "detalles": { "series": "3", "reps": "20" },
+              "video": "https://youtu.be/uuiN9NRFMBo?si=acN_N5LBd0oN3at8",
+              "caracteristicas": ["Fuerza", "Casa"],
+              "zonas": ["tren_inferior", "core"]
+            },
+            {
+              "id": "q-p6",
+              "nombre": "Caminata de Oso",
+              "imagen": "../imagenes/Deportes/oso.jpg",
+              "material": ["Espacio libre"],
+              "detalles": { "tiempo": "30 seg", "descanso": "30 seg" },
+              "video": "https://youtu.be/ab03L5kaG9I?si=5qrO2LrjsIkvAcw8",
+              "caracteristicas": ["Fuerza", "Core"],
+              "zonas": ["full_body", "core", "tren_superior"]
+            },
+            {
+              "id": "q-p7",
+              "nombre": "Boxeo de Sombra Suave",
+              "imagen": "../imagenes/Deportes/shadow-p.jpg",
+              "material": ["Ninguno"],
+              "detalles": { "tiempo": "45 seg", "descanso": "15 seg" },
+              "video": "https://youtu.be/MVUnw0GcZ1o?si=u_0AZfHjSqkkcRFp",
+              "caracteristicas": ["Cardio", "Casa"],
+              "zonas": ["tren_superior", "core"]
+            },
+            {
+              "id": "q-p8",
+              "nombre": "Elevación de Rodillas al Codo",
+              "imagen": "../imagenes/Deportes/rodilla-codo.jpg",
+              "material": ["Ninguno"],
+              "detalles": { "tiempo": "40 seg", "descanso": "20 seg" },
+              "video": "https://www.youtube.com/embed/nmwgirgXLYM",
+              "caracteristicas": ["Cardio", "Core"],
+              "zonas": ["core", "tren_inferior"]
+            },
+            {
+              "id": "q-p9",
+              "nombre": "Desplazamiento Lateral Tocado",
+              "imagen": "../imagenes/Deportes/desplazamiento.jpg",
+              "material": ["Espacio libre"],
+              "detalles": { "tiempo": "45 seg", "descanso": "15 seg" },
+              "video": "https://youtu.be/1mStIPjEYqA?si=qF0XaJP3mWDZ5Qst",
+              "caracteristicas": ["Cardio", "Casa"],
+              "zonas": ["tren_inferior", "full_body"]
+            },
+            {
+              "id": "q-p10",
+              "nombre": "Plancha Inclinada",
+              "imagen": "../imagenes/Deportes/plancha-inclinada.jpg",
+              "material": ["Silla estable"],
+              "detalles": { "tiempo": "30 seg", "descanso": "30 seg" },
+              "video": "https://www.youtube.com/embed/BQu26ABuVS0",
+              "caracteristicas": ["Fuerza", "Core"],
+              "zonas": ["core", "tren_superior"]
+            },
+            {
+              "id": "q-p11",
+              "nombre": "Tijeras Horizontales",
+              "imagen": "../imagenes/Deportes/tijeras-suelo.jpg",
+              "material": ["Esterilla"],
+              "detalles": { "tiempo": "30 seg", "descanso": "30 seg" },
+              "video": "https://www.youtube.com/embed/8itYpBv7-f0",
+              "caracteristicas": ["Fuerza", "Core"],
+              "zonas": ["core", "tren_inferior"]
+            },
+            {
+              "id": "q-p12",
+              "nombre": "Zancada Hacia Atrás Estática",
+              "imagen": "../imagenes/Deportes/zancada-atras.jpg",
+              "material": ["Ninguno"],
+              "detalles": { "series": "3", "reps": "10 por pierna" },
+              "video": "https://youtu.be/e6_f5zL6q5s",
+              "caracteristicas": ["Fuerza", "Casa"],
+              "zonas": ["tren_inferior"]
+            }
+          ]
+        },
+        {
+          "momento": "Nivel Intermedio",
+          "opciones": [
+            {
+              "id": "q-i1",
+              "nombre": "Jumping Jacks",
+              "imagen": "../imagenes/Deportes/jacks.jpg",
+              "material": ["Ninguno"],
+              "detalles": { "tiempo": "45 seg", "descanso": "15 seg" },
+              "video": "https://youtu.be/uLVt6u15L98?si=6-61tsGsWzxvSfCt",
+              "caracteristicas": ["Cardio", "Alta Intensidad"],
+              "zonas": ["full_body"]
+            },
+            {
+              "id": "q-i2",
+              "nombre": "Zancadas Alternas",
+              "imagen": "../imagenes/Deportes/zancadas.jpg",
+              "material": ["Mancuernas opcionales"],
+              "detalles": { "series": "4", "reps": "20 totales" },
+              "video": "https://youtu.be/Xcfs_3DMKlc?si=SZqbk50cTSibUcIi",
+              "caracteristicas": ["Fuerza"],
+              "zonas": ["tren_inferior"]
+            },
+            {
+              "id": "q-i3",
+              "nombre": "Mountain Climbers",
+              "imagen": "../imagenes/Deportes/climbers.jpg",
+              "material": ["Ninguno"],
+              "detalles": { "tiempo": "40 seg", "descanso": "20 seg" },
+              "video": "https://youtu.be/kLh-uczlPLg?si=p9zKu3ChyGoTvArY",
+              "caracteristicas": ["Cardio", "Core"],
+              "zonas": ["full_body", "core", "tren_superior"]
+            },
+            {
+              "id": "q-i4",
+              "nombre": "Plancha Abdominal",
+              "imagen": "../imagenes/Deportes/plancha.jpg",
+              "material": ["Esterilla"],
+              "detalles": { "tiempo": "60 seg", "descanso": "30 seg" },
+              "video": "https://www.youtube.com/embed/BQu26ABuVS0",
+              "caracteristicas": ["Core", "Tiempo"],
+              "zonas": ["core", "tren_superior"]
+            },
+            {
+              "id": "q-i5",
+              "nombre": "Skating Jumps",
+              "imagen": "../imagenes/Deportes/skating.jpg",
+              "material": ["Ninguno"],
+              "detalles": { "tiempo": "45 seg", "descanso": "15 seg" },
+              "video": "https://youtu.be/Xz27DudBfSs?si=eMkfJhZ1otNaGON5",
+              "caracteristicas": ["Cardio", "Coordinación"],
+              "zonas": ["tren_inferior", "full_body"]
+            },
+            {
+              "id": "q-i6",
+              "nombre": "Sentadilla Isométrica",
+              "imagen": "../imagenes/Deportes/iso.jpg",
+              "material": ["Pared"],
+              "detalles": { "tiempo": "45 seg", "descanso": "15 seg" },
+              "video": "https://youtu.be/ufiU47JBqhA?si=4RkSMcB7e7GU1RO7",
+              "caracteristicas": ["Fuerza", "Tiempo"],
+              "zonas": ["tren_inferior"]
+            },
+            {
+              "id": "q-i7",
+              "nombre": "Cross Jacks",
+              "imagen": "../imagenes/Deportes/cross-jacks.jpg",
+              "material": ["Ninguno"],
+              "detalles": { "tiempo": "45 seg", "descanso": "15 seg" },
+              "video": "https://youtu.be/velMsAINaWw?si=SNdF9j40aEfoj-8h",
+              "caracteristicas": ["Cardio", "Alta Intensidad"],
+              "zonas": ["full_body"]
+            },
+            {
+              "id": "q-i8",
+              "nombre": "Sprawls",
+              "imagen": "../imagenes/Deportes/sprawls.jpg",
+              "material": ["Ninguno"],
+              "detalles": { "tiempo": "40 seg", "descanso": "20 seg" },
+              "video": "https://youtu.be/Xhv4qLfeKwc?si=LqDqzFfbOhZW-lPd",
+              "caracteristicas": ["Cardio", "Core"],
+              "zonas": ["full_body", "core"]
+            },
+            {
+              "id": "q-i9",
+              "nombre": "Puente de Glúteo a una Pierna",
+              "imagen": "../imagenes/Deportes/puente-unapierna.jpg",
+              "material": ["Esterilla"],
+              "detalles": { "series": "3", "reps": "12 por pierna" },
+              "video": "https://www.youtube.com/embed/LM8LGne_fHo",
+              "caracteristicas": ["Fuerza", "Core"],
+              "zonas": ["tren_inferior", "core"]
+            },
+            {
+              "id": "q-i10",
+              "nombre": "T-Plank",
+              "imagen": "../imagenes/Deportes/t-plank.jpg",
+              "material": ["Esterilla"],
+              "detalles": { "tiempo": "40 seg", "descanso": "20 seg" },
+              "video": "https://youtu.be/QOCn3_iOAro?si=zLIpG8-qeWJ90MZ9",
+              "caracteristicas": ["Fuerza", "Core"],
+              "zonas": ["core", "tren_superior"]
+            },
+            {
+              "id": "q-i11",
+              "nombre": "High Knees",
+              "imagen": "../imagenes/Deportes/skipping.jpg",
+              "material": ["Ninguno"],
+              "detalles": { "tiempo": "30 seg", "descanso": "30 seg" },
+              "video": "https://youtu.be/T7lDL4ZDcWA?si=M5AFF2Sf0nI6vmTX",
+              "caracteristicas": ["Cardio", "Alta Intensidad"],
+              "zonas": ["tren_inferior", "full_body", "core"]
+            },
+            {
+              "id": "q-i12",
+              "nombre": "Sentadilla con patada",
+              "imagen": "../imagenes/Deportes/sentadilla-patada.jpg",
+              "material": ["Ninguno"],
+              "detalles": { "tiempo": "45 seg", "descanso": "15 seg" },
+              "video": "https://www.youtube.com/embed/vG9L66K9e6M",
+              "caracteristicas": ["Fuerza", "Cardio"],
+              "zonas": ["tren_inferior", "core"]
+            }
+          ]
+        },
+        {
+          "momento": "Nivel Avanzado",
+          "opciones": [
+            {
+              "id": "q-a1",
+              "nombre": "Burpees Completos",
+              "imagen": "../imagenes/Deportes/burpees.jpg",
+              "material": ["Ninguno"],
+              "detalles": { "series": "5", "reps": "12", "descanso": "30 seg" },
+              "video": "https://youtu.be/auBLPXO8Fww?si=MaU-e5R8nEm_FeQE",
+              "caracteristicas": ["Cardio", "Alta Intensidad"],
+              "zonas": ["full_body"]
+            },
+            {
+              "id": "q-a2",
+              "nombre": "Tuck Jumps",
+              "imagen": "../imagenes/Deportes/tuck.jpg",
+              "material": ["Ninguno"],
+              "detalles": { "tiempo": "30 seg", "descanso": "30 seg" },
+              "video": "https://youtu.be/Yl7tEmpzknY?si=GcVkuHMNP6zpJvxO",
+              "caracteristicas": ["Cardio", "Potencia"],
+              "zonas": ["tren_inferior", "full_body", "core"]
+            },
+            {
+              "id": "q-a3",
+              "nombre": "Flexiones Diamante",
+              "imagen": "../imagenes/Deportes/diamante.jpg",
+              "material": ["Ninguno"],
+              "detalles": { "series": "4", "reps": "12" },
+              "video": "https://youtu.be/NO3fnbQr5nk?si=efrpqTU-C8NVXURv",
+              "caracteristicas": ["Fuerza"],
+              "zonas": ["tren_superior"]
+            },
+            {
+              "id": "q-a4",
+              "nombre": "Sentadilla con Salto",
+              "imagen": "../imagenes/Deportes/jump-squat.jpg",
+              "material": ["Ninguno"],
+              "detalles": { "series": "4", "reps": "15" },
+              "video": "https://youtu.be/BRfxI2Es2lE?si=32hZ4euXx206Imh3",
+              "caracteristicas": ["Fuerza", "Potencia"],
+              "zonas": ["tren_inferior", "full_body"]
+            },
+            {
+              "id": "q-a5",
+              "nombre": "Plancha con Toque de Hombros",
+              "imagen": "../imagenes/Deportes/shoulder-tap.jpg",
+              "material": ["Ninguno"],
+              "detalles": { "tiempo": "60 seg", "descanso": "20 seg" },
+              "video": "https://youtu.be/QOCn3_iOAro?si=zLIpG8-qeWJ90MZ9",
+              "caracteristicas": ["Core", "Alta Intensidad"],
+              "zonas": ["core", "tren_superior"]
+            },
+            {
+              "id": "q-a6",
+              "nombre": "Spider-Man Pushups",
+              "imagen": "../imagenes/Deportes/spiderman.jpg",
+              "material": ["Ninguno"],
+              "detalles": { "series": "3", "reps": "10" },
+              "video": "https://youtu.be/FbIrd0_4X1w?si=9g29aqPubzlxul7i",
+              "caracteristicas": ["Fuerza", "Alta Intensidad"],
+              "zonas": ["tren_superior", "core"]
+            },
+            {
+              "id": "q-a7",
+              "nombre": "Broad Jumps",
+              "imagen": "../imagenes/Deportes/broad-jump-p.jpg",
+              "material": ["Espacio libre"],
+              "detalles": { "series": "4", "reps": "8", "descanso": "45 seg" },
+              "video": "https://youtu.be/uhz-ia-2UcM?si=a3cv_0evKGh_ABq-",
+              "caracteristicas": ["Potencia", "Alta Intensidad"],
+              "zonas": ["tren_inferior", "full_body"]
+            },
+            {
+              "id": "q-a8",
+              "nombre": "Flexiones Pliométricas",
+              "imagen": "../imagenes/Deportes/flexion-plio.jpg",
+              "material": ["Ninguno"],
+              "detalles": { "series": "3", "reps": "8", "descanso": "60 seg" },
+              "video": "https://www.youtube.com/embed/Z0bRiVHNn8Y",
+              "caracteristicas": ["Potencia", "Fuerza"],
+              "zonas": ["tren_superior", "core"]
+            },
+            {
+              "id": "q-a9",
+              "nombre": "Zancadas con Salto",
+              "imagen": "../imagenes/Deportes/jumping-lunges.jpg",
+              "material": ["Ninguno"],
+              "detalles": { "tiempo": "40 seg", "descanso": "20 seg" },
+              "video": "https://youtu.be/velMsAINaWw?si=SNdF9j40aEfoj-8h",
+              "caracteristicas": ["Potencia", "Alta Intensidad"],
+              "zonas": ["tren_inferior"]
+            },
+            {
+              "id": "q-a10",
+              "nombre": "Plancha Jack",
+              "imagen": "../imagenes/Deportes/plank-jacks.jpg",
+              "material": ["Esterilla"],
+              "detalles": { "tiempo": "45 seg", "descanso": "15 seg" },
+              "video": "https://youtu.be/kLh-uczlPLg?si=p9zKu3ChyGoTvArY",
+              "caracteristicas": ["Core", "Alta Intensidad"],
+              "zonas": ["core", "tren_superior", "tren_inferior"]
+            },
+            {
+              "id": "q-a11",
+              "nombre": "Sprints en el Sitio",
+              "imagen": "../imagenes/Deportes/sprint-sitio.jpg",
+              "material": ["Ninguno"],
+              "detalles": { "tiempo": "20 seg", "descanso": "10 seg (Tabata)" },
+              "video": "https://www.youtube.com/embed/nBIAxWw5jos",
+              "caracteristicas": ["Cardio", "Alta Intensidad"],
+              "zonas": ["full_body", "tren_inferior"]
+            },
+            {
+              "id": "q-a12",
+              "nombre": "Flexion con palmada",
+              "imagen": "../imagenes/Deportes/flexion-palmada.jpg",
+              "material": ["Ninguno"],
+              "detalles": { "series": "4", "reps": "10", "descanso": "45 seg" },
+              "video": "https://youtu.be/VqOow4Yuk_o?si=BovrBR2cIQT0Erma",
+              "caracteristicas": ["Potencia", "Alta Intensidad"],
+              "zonas": ["full_body", "core"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "volumen",
+      "titulo": "Aumento de Masa Muscular",
+      "imagen": "../imagenes/Deportes/volumen.jpg",
+      "plan": [
+        {
+          "momento": "Nivel Principiante",
+          "opciones": [
+            {
+              "id": "v-p1",
+              "nombre": "Goblet Squat",
+              "imagen": "../imagenes/Deportes/goblet-squat.jpg",
+              "material": ["1 Mancuerna o Pesa rusa"],
+              "detalles": { "series": "3", "reps": "12", "descanso": "60 seg" },
+              "video": "https://youtu.be/pEGfGwp6IEA?si=xJZZUY9__EnTgUPS",
+              "caracteristicas": ["Fuerza", "Equipo"],
+              "zonas": ["tren_inferior", "core"]
+            },
+            {
+              "id": "v-p2",
+              "nombre": "Flexiones con Rodillas Apoyadas",
+              "imagen": "../imagenes/Deportes/flexion-rodilla.jpg",
+              "material": ["Esterilla"],
+              "detalles": { "series": "3", "reps": "10", "descanso": "60 seg" },
+              "video": "https://youtu.be/NhtUptsdnbw?si=X49V2DkIEYrvmmLm",
+              "caracteristicas": ["Fuerza", "Casa"],
+              "zonas": ["tren_superior", "core"]
+            },
+            {
+              "id": "v-p3",
+              "nombre": "Remo con Mancuerna a una mano",
+              "imagen": "../imagenes/Deportes/remo-mancuerna.jpg",
+              "material": ["1 Mancuerna", "Banco o silla"],
+              "detalles": { "series": "3", "reps": "12 por lado", "descanso": "60 seg" },
+              "video": "https://youtu.be/fgA4bGIKsn8?si=Hk5wT4P-diWBb7ci",
+              "caracteristicas": ["Fuerza", "Equipo"],
+              "zonas": ["tren_superior"]
+            },
+            {
+              "id": "v-p4",
+              "nombre": "Zancadas Estáticas",
+              "imagen": "../imagenes/Deportes/zancada-estatica.jpg",
+              "material": ["2 Mancuernas"],
+              "detalles": { "series": "3", "reps": "10 por pierna", "descanso": "60 seg" },
+              "video": "https://youtu.be/Z6uuBikrNus?si=PE69rGjbZEfyUUGa",
+              "caracteristicas": ["Fuerza"],
+              "zonas": ["tren_inferior"]
+            },
+            {
+              "id": "v-p5",
+              "nombre": "Press de Hombros Sentado",
+              "imagen": "../imagenes/Deportes/press-hombro.jpg",
+              "material": ["2 Mancuernas"],
+              "detalles": { "series": "3", "reps": "12", "descanso": "60 seg" },
+              "video": "https://youtu.be/96xeqjYXkT4?si=29ujPgAPkPKCBYGV",
+              "caracteristicas": ["Fuerza", "Equipo"],
+              "zonas": ["tren_superior"]
+            },
+            {
+              "id": "v-p6",
+              "nombre": "Curl de Bíceps con Mancuernas",
+              "imagen": "../imagenes/Deportes/curl-biceps.jpg",
+              "material": ["2 Mancuernas"],
+              "detalles": { "series": "3", "reps": "15", "descanso": "45 seg" },
+              "video": "https://youtu.be/toR4XLLVzwY?si=3gSYheq8Is59xufa",
+              "caracteristicas": ["Fuerza", "Equipo"],
+              "zonas": ["tren_superior"]
+            },
+            {
+              "id": "v-p7",
+              "nombre": "Floor Press",
+              "imagen": "../imagenes/Deportes/floor-press.jpg",
+              "material": ["2 Mancuernas", "Esterilla"],
+              "detalles": { "series": "3", "reps": "12", "descanso": "60 seg" },
+              "video": "https://youtu.be/uUGDRwge4F8",
+              "caracteristicas": ["Fuerza", "Equipo"],
+              "zonas": ["tren_superior"]
+            },
+            {
+              "id": "v-p8",
+              "nombre": "Peso Muerto Rumano con Mancuernas",
+              "imagen": "../imagenes/Deportes/rdl-mancuernas.jpg",
+              "material": ["2 Mancuernas"],
+              "detalles": { "series": "3", "reps": "12", "descanso": "60 seg" },
+              "video": "https://youtu.be/JCXUYuzwNrM",
+              "caracteristicas": ["Fuerza", "Equipo"],
+              "zonas": ["tren_inferior"]
+            },
+            {
+              "id": "v-p9",
+              "nombre": "Elevaciones Laterales",
+              "imagen": "../imagenes/Deportes/elevacion-lateral.jpg",
+              "material": ["2 Mancuernas ligeras"],
+              "detalles": { "series": "3", "reps": "15", "descanso": "45 seg" },
+              "video": "https://youtu.be/3VcKaXpzqRo",
+              "caracteristicas": ["Fuerza", "Equipo"],
+              "zonas": ["tren_superior"]
+            },
+            {
+              "id": "v-p10",
+              "nombre": "Extensión de Tríceps Copa",
+              "imagen": "../imagenes/Deportes/triceps-copa.jpg",
+              "material": ["1 Mancuerna pesada"],
+              "detalles": { "series": "3", "reps": "12", "descanso": "60 seg" },
+              "video": "https://youtu.be/nRiJVZDpdYk",
+              "caracteristicas": ["Fuerza", "Equipo"],
+              "zonas": ["tren_superior"]
+            },
+            {
+              "id": "v-p11",
+              "nombre": "Puente de Glúteo con Peso",
+              "imagen": "../imagenes/Deportes/puente-peso.jpg",
+              "material": ["1 Mancuerna", "Esterilla"],
+              "detalles": { "series": "3", "reps": "15", "descanso": "60 seg" },
+              "video": "https://youtu.be/uuiN9NRFMBo",
+              "caracteristicas": ["Fuerza", "Equipo"],
+              "zonas": ["tren_inferior", "core"]
+            },
+            {
+              "id": "v-p12",
+              "nombre": "Curl de Isquiotibiales",
+              "imagen": "../imagenes/Deportes/curl-isquios.jpg",
+              "material": ["1 Mancuerna", "Esterilla"],
+              "detalles": { "series": "3", "reps": "12", "descanso": "60 seg" },
+              "video": "https://youtu.be/0WOP9JNB2k4",
+              "caracteristicas": ["Fuerza", "Equipo"],
+              "zonas": ["tren_inferior"]
+            }
+          ]
+        },
+        {
+          "momento": "Nivel Intermedio",
+          "opciones": [
+            {
+              "id": "v-i1",
+              "nombre": "Sentadilla con Barra Trasera",
+              "imagen": "../imagenes/Deportes/squat-barra.jpg",
+              "material": ["Barra", "Rack de potencia"],
+              "detalles": { "series": "4", "reps": "10", "descanso": "90 seg" },
+              "video": "https://youtu.be/dsCuiccYNGs?si=tLXKngA23Hr--qvJ",
+              "caracteristicas": ["Fuerza", "Equipo"],
+              "zonas": ["tren_inferior", "full_body"]
+            },
+            {
+              "id": "v-i2",
+              "nombre": "Press de Banca con Barra",
+              "imagen": "../imagenes/Deportes/bench-press.jpg",
+              "material": ["Barra", "Banco horizontal"],
+              "detalles": { "series": "4", "reps": "10", "descanso": "90 seg" },
+              "video": "https://youtu.be/8PDlR31AmU4?si=Rre1PDjkwWhfZN-B",
+              "caracteristicas": ["Fuerza", "Equipo"],
+              "zonas": ["tren_superior"]
+            },
+            {
+              "id": "v-i3",
+              "nombre": "Peso Muerto Rumano",
+              "imagen": "../imagenes/Deportes/rdl.jpg",
+              "material": ["Barra o Mancuernas"],
+              "detalles": { "series": "3", "reps": "12", "descanso": "90 seg" },
+              "video": "https://youtu.be/0XL4cZR2Ink?si=Nfn9-vXaLKGDLleB",
+              "caracteristicas": ["Fuerza", "Equipo"],
+              "zonas": ["tren_inferior", "core"]
+            },
+            {
+              "id": "v-i4",
+              "nombre": "Dominadas Asistidas",
+              "imagen": "../imagenes/Deportes/pull-up-asistida.jpg",
+              "material": ["Banda elástica o Máquina"],
+              "detalles": { "series": "3", "reps": "8-10", "descanso": "120 seg" },
+              "video": "https://youtu.be/Cb7gSQDnPiY?si=rLKM6IjAculgM5Lv",
+              "caracteristicas": ["Fuerza", "Equipo"],
+              "zonas": ["tren_superior"]
+            },
+            {
+              "id": "v-i5",
+              "nombre": "Press Militar de Pie",
+              "imagen": "../imagenes/Deportes/militar-pie.jpg",
+              "material": ["Barra"],
+              "detalles": { "series": "4", "reps": "8", "descanso": "90 seg" },
+              "video": "https://youtu.be/mbIhJZ2Sbcc?si=m119wliD7NtUcJuQ",
+              "caracteristicas": ["Fuerza", "Equipo"],
+              "zonas": ["tren_superior", "core"]
+            },
+            {
+              "id": "v-i6",
+              "nombre": "Fondos de Tríceps en Paralelas",
+              "imagen": "../imagenes/Deportes/fondos.jpg",
+              "material": ["Barras paralelas"],
+              "detalles": { "series": "3", "reps": "10", "descanso": "90 seg" },
+              "video": "https://youtu.be/4PEcd1VDpKY?si=W70mzGekppvwKEJJ",
+              "caracteristicas": ["Fuerza", "Equipo"],
+              "zonas": ["tren_superior"]
+            },
+            {
+              "id": "v-i7",
+              "nombre": "Remo con Barra",
+              "imagen": "../imagenes/Deportes/remo-barra.jpg",
+              "material": ["Barra", "Discos"],
+              "detalles": { "series": "4", "reps": "10", "descanso": "90 seg" },
+              "video": "https://youtu.be/FWJR5Ve8cE0",
+              "caracteristicas": ["Fuerza", "Equipo"],
+              "zonas": ["tren_superior", "core"]
+            },
+            {
+              "id": "v-i8",
+              "nombre": "Zancadas Caminando",
+              "imagen": "../imagenes/Deportes/zancadas-caminando.jpg",
+              "material": ["2 Mancuernas"],
+              "detalles": { "series": "3", "reps": "20 pasos", "descanso": "90 seg" },
+              "video": "https://youtu.be/D7KaRcUTQeE",
+              "caracteristicas": ["Fuerza", "Equipo"],
+              "zonas": ["tren_inferior"]
+            },
+            {
+              "id": "v-i9",
+              "nombre": "Press Inclinado con Mancuernas",
+              "imagen": "../imagenes/Deportes/press-inclinado-mancuernas.jpg",
+              "material": ["2 Mancuernas", "Banco inclinado"],
+              "detalles": { "series": "4", "reps": "10", "descanso": "90 seg" },
+              "video": "https://youtu.be/8iPEnn-ltC8",
+              "caracteristicas": ["Fuerza", "Equipo"],
+              "zonas": ["tren_superior"]
+            },
+            {
+              "id": "v-i10",
+              "nombre": "Curl de Bíceps con Barra EZ",
+              "imagen": "../imagenes/Deportes/curl-barra-ez.jpg",
+              "material": ["Barra EZ", "Discos"],
+              "detalles": { "series": "3", "reps": "12", "descanso": "60 seg" },
+              "video": "https://youtu.be/kwG2ipFRgfo",
+              "caracteristicas": ["Fuerza", "Equipo"],
+              "zonas": ["tren_superior"]
+            },
+            {
+              "id": "v-i11",
+              "nombre": "Press Francés",
+              "imagen": "../imagenes/Deportes/skull-crushers.jpg",
+              "material": ["Barra EZ", "Banco"],
+              "detalles": { "series": "3", "reps": "10", "descanso": "60 seg" },
+              "video": "https://youtu.be/d_KZxkY_0cM",
+              "caracteristicas": ["Fuerza", "Equipo"],
+              "zonas": ["tren_superior"]
+            },
+            {
+              "id": "v-i12",
+              "nombre": "Elevación de Talones sentado",
+              "imagen": "../imagenes/Deportes/elevacion-talones.jpg",
+              "material": ["Banco", "Escalón"],
+              "detalles": { "series": "4", "reps": "15", "descanso": "60 seg" },
+              "video": "https://youtu.be/-M4-G8p8fmc",
+              "caracteristicas": ["Fuerza", "Equipo"],
+              "zonas": ["tren_inferior"]
+            }
+          ]
+        },
+        {
+          "momento": "Nivel Avanzado",
+          "opciones": [
+            {
+              "id": "v-a1",
+              "nombre": "Sentadilla bulgaras",
+              "imagen": "../imagenes/Deportes/front-squat.jpg",
+              "material": ["Mancuerna"],
+              "detalles": { "series": "4", "reps": "6-8", "descanso": "2 min" },
+              "video": "https://youtu.be/ZiIwAeC2tfs?si=7oryn9FRCSPnRT01",
+              "caracteristicas": ["Fuerza", "Alta Intensidad"],
+              "zonas": ["tren_inferior"]
+            },
+            {
+              "id": "v-a2",
+              "nombre": "Press de Banca Inclinado",
+              "imagen": "../imagenes/Deportes/inclinado.jpg",
+              "material": ["Barra", "Banco inclinado"],
+              "detalles": { "series": "4", "reps": "8", "descanso": "90 seg" },
+              "video": "https://youtu.be/PAd6ezGbDUQ?si=ST3qq9unBnK5XNOD",
+              "caracteristicas": ["Fuerza", "Equipo"],
+              "zonas": ["tren_superior"]
+            },
+            {
+              "id": "v-a3",
+              "nombre": "Peso Muerto Convencional",
+              "imagen": "../imagenes/Deportes/deadlift.jpg",
+              "material": ["Barra", "Discos"],
+              "detalles": { "series": "3", "reps": "5", "descanso": "3 min" },
+              "video": "https://youtu.be/0XL4cZR2Ink?si=EiKpjkzVmqbgSdhl",
+              "caracteristicas": ["Fuerza", "Potencia"],
+              "zonas": ["full_body", "tren_inferior", "core"]
+            },
+            {
+              "id": "v-a4",
+              "nombre": "Dominadas Lastradas",
+              "imagen": "../imagenes/Deportes/pull-up-lastre.jpg",
+              "material": ["Cinturón de lastre", "Barra"],
+              "detalles": { "series": "3", "reps": "6", "descanso": "2 min" },
+              "video": "https://youtu.be/YmPIrEhp2wU?si=VpeQMS3DrGKpMHBu",
+              "caracteristicas": ["Fuerza", "Alta Intensidad"],
+              "zonas": ["tren_superior", "core"]
+            },
+            {
+              "id": "v-a5",
+              "nombre": "Press Arnold",
+              "imagen": "../imagenes/Deportes/arnold.jpg",
+              "material": ["2 Mancuernas pesadas"],
+              "detalles": { "series": "3", "reps": "10", "descanso": "90 seg" },
+              "video": "https://youtu.be/PQb19eCsHuQ?si=95Jpu6rMr3e7XXRl",
+              "caracteristicas": ["Fuerza", "Equipo"],
+              "zonas": ["tren_superior"]
+            },
+            {
+              "id": "v-a6",
+              "nombre": "Hip Thrust con Barra",
+              "imagen": "../imagenes/Deportes/hip-thrust.jpg",
+              "material": ["Barra", "Banco", "Almohadilla"],
+              "detalles": { "series": "4", "reps": "10", "descanso": "2 min" },
+              "video": "https://www.youtube.com/embed/LM8LGne_fHo",
+              "caracteristicas": ["Fuerza", "Potencia"],
+              "zonas": ["tren_inferior", "core"]
+            },
+            {
+              "id": "v-a7",
+              "nombre": "Sentadilla Frontal",
+              "imagen": "../imagenes/Deportes/sentadilla-frontal.jpg",
+              "material": ["Barra", "Rack de potencia"],
+              "detalles": { "series": "4", "reps": "6-8", "descanso": "2 min" },
+              "video": "https://youtu.be/v-mQsAWEAqc",
+              "caracteristicas": ["Fuerza", "Alta Intensidad"],
+              "zonas": ["tren_inferior", "core"]
+            },
+            {
+              "id": "v-a8",
+              "nombre": "Chin-ups",
+              "imagen": "../imagenes/Deportes/chin-up-lastre.jpg",
+              "material": ["Barra de dominadas", "Lastre"],
+              "detalles": { "series": "4", "reps": "6-8", "descanso": "2 min" },
+              "video": "https://youtu.be/mRy9m2Q9_1I",
+              "caracteristicas": ["Fuerza", "Alta Intensidad"],
+              "zonas": ["tren_superior", "core"]
+            },
+            {
+              "id": "v-a9",
+              "nombre": "Remo en T",
+              "imagen": "../imagenes/Deportes/remo-t.jpg",
+              "material": ["Barra", "Soporte en T"],
+              "detalles": { "series": "4", "reps": "8-10", "descanso": "90 seg" },
+              "video": "https://youtu.be/j3Igk5nyZE4",
+              "caracteristicas": ["Fuerza", "Equipo"],
+              "zonas": ["tren_superior", "core"]
+            },
+            {
+              "id": "v-a10",
+              "nombre": "Press Militar Sentado Pesado",
+              "imagen": "../imagenes/Deportes/press-militar-sentado.jpg",
+              "material": ["2 Mancuernas pesadas", "Banco"],
+              "detalles": { "series": "4", "reps": "6-8", "descanso": "2 min" },
+              "video": "https://youtu.be/qEwKCR5JCog",
+              "caracteristicas": ["Fuerza", "Potencia"],
+              "zonas": ["tren_superior"]
+            },
+            {
+              "id": "v-a11",
+              "nombre": "Extensiones de Cuádriceps",
+              "imagen": "../imagenes/Deportes/extension-cuadriceps.jpg",
+              "material": ["Máquina de extensiones"],
+              "detalles": { "series": "4", "reps": "12-15", "descanso": "60 seg" },
+              "video": "https://youtu.be/YyvSfVjQeL0",
+              "caracteristicas": ["Fuerza", "Equipo"],
+              "zonas": ["tren_inferior"]
+            },
+            {
+              "id": "v-a12",
+              "nombre": "Curl Araña con Mancuernas",
+              "imagen": "../imagenes/Deportes/spider-curl.jpg",
+              "material": ["2 Mancuernas", "Banco inclinado"],
+              "detalles": { "series": "3", "reps": "10-12", "descanso": "60 seg" },
+              "video": "https://youtu.be/keYAMXqN6Xw",
+              "caracteristicas": ["Fuerza", "Equipo"],
+              "zonas": ["tren_superior"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "flexibilidad",
+      "titulo": "Yoga y Flexibilidad",
+      "imagen": "../imagenes/Deportes/yoga.jpg",
+      "plan": [
+        {
+          "momento": "Nivel Principiante",
+          "opciones": [
+            {
+              "id": "f-p1",
+              "nombre": "Postura del Niño (Balasana)",
+              "imagen": "../imagenes/Deportes/balasana.jpg",
+              "material": ["Esterilla"],
+              "detalles": { "tiempo": "2 min", "foco": "Relajación lumbar" },
+              "video": "https://youtu.be/cFcNQjKDI58?si=4Xep16FK82cBlQxN",
+              "caracteristicas": ["Flexibilidad", "Casa"],
+              "zonas": ["full_body", "core"]
+            },
+            {
+              "id": "f-p2",
+              "nombre": "Gato-Vaca (Marjaryasana)",
+              "imagen": "../imagenes/Deportes/cat-cow.jpg",
+              "material": ["Esterilla"],
+              "detalles": { "reps": "15 ciclos", "foco": "Movilidad columna" },
+              "video": "https://youtu.be/vUiNcilaCC4?si=51CGbxfWPu1P-rwu",
+              "caracteristicas": ["Flexibilidad", "Core"],
+              "zonas": ["core", "full_body"]
+            },
+            {
+              "id": "f-p3",
+              "nombre": "Estiramiento de Cobrita",
+              "imagen": "../imagenes/Deportes/cobra.jpg",
+              "material": ["Esterilla"],
+              "detalles": { "tiempo": "45 seg", "reps": "3" },
+              "video": "https://www.youtube.com/embed/fOdrW7nfPRg",
+              "caracteristicas": ["Flexibilidad"],
+              "zonas": ["core", "tren_superior"]
+            },
+            {
+              "id": "f-p4",
+              "nombre": "Postura de la Montaña",
+              "imagen": "../imagenes/Deportes/tadasana.jpg",
+              "material": ["Ninguno"],
+              "detalles": { "tiempo": "1 min", "foco": "Postura y equilibrio" },
+              "video": "https://youtu.be/aEQVYMb9P6U?si=hGphOsr6sBDqhPnf",
+              "caracteristicas": ["Flexibilidad"],
+              "zonas": ["full_body"]
+            },
+            {
+              "id": "f-p5",
+              "nombre": "Estiramiento Isquiotibiales",
+              "imagen": "../imagenes/Deportes/isquios.jpg",
+              "material": ["Esterilla"],
+              "detalles": { "tiempo": "1 min por pierna" },
+              "video": "https://youtu.be/fk26DB44VNg?si=j4EFTY9n-IVQIJxp",
+              "caracteristicas": ["Flexibilidad", "Casa"],
+              "zonas": ["tren_inferior"]
+            },
+            {
+              "id": "f-p6",
+              "nombre": "Torsión Espinal Sentado",
+              "imagen": "../imagenes/Deportes/torsion.jpg",
+              "material": ["Ninguno"],
+              "detalles": { "tiempo": "45 seg por lado" },
+              "video": "https://youtu.be/ugERZRwFQhI?si=_geKbdwrNS_Mns5r",
+              "caracteristicas": ["Flexibilidad"],
+              "zonas": ["core"]
+            },
+            {
+              "id": "f-p7",
+              "nombre": "Postura de la Mariposa (Baddha Konasana)",
+              "imagen": "../imagenes/Deportes/mariposa.jpg",
+              "material": ["Esterilla"],
+              "detalles": { "tiempo": "90 seg", "foco": "Apertura de cadera" },
+              "video": "https://youtu.be/vUiNcilaCC4",
+              "caracteristicas": ["Flexibilidad", "Casa"],
+              "zonas": ["tren_inferior"]
+            },
+            {
+              "id": "f-p8",
+              "nombre": "Estiramiento de Cuádriceps de Pie",
+              "imagen": "../imagenes/Deportes/cuadriceps-pie.jpg",
+              "material": ["Pared o Silla para equilibrio"],
+              "detalles": { "tiempo": "45 seg por pierna" },
+              "video": "https://youtu.be/cFcNQjKDI58",
+              "caracteristicas": ["Flexibilidad"],
+              "zonas": ["tren_inferior"]
+            },
+            {
+              "id": "f-p9",
+              "nombre": "Rodillas al Pecho Tumbado (Apanasana)",
+              "imagen": "../imagenes/Deportes/apanasana.jpg",
+              "material": ["Esterilla"],
+              "detalles": { "tiempo": "1 min", "foco": "Relajación lumbar" },
+              "video": "https://youtu.be/aEQVYMb9P6U",
+              "caracteristicas": ["Flexibilidad", "Core"],
+              "zonas": ["core", "full_body"]
+            },
+            {
+              "id": "f-p10",
+              "nombre": "Postura de la Esfinge",
+              "imagen": "../imagenes/Deportes/esfinge.jpg",
+              "material": ["Esterilla"],
+              "detalles": { "tiempo": "60 seg", "foco": "Extensión suave espalda" },
+              "video": "https://youtu.be/fOdrW7nfPRg",
+              "caracteristicas": ["Flexibilidad", "Casa"],
+              "zonas": ["core", "tren_superior"]
+            },
+            {
+              "id": "f-p11",
+              "nombre": "Estiramiento de Cuello y Hombros",
+              "imagen": "../imagenes/Deportes/cuello-hombros.jpg",
+              "material": ["Ninguno"],
+              "detalles": { "tiempo": "2 min", "foco": "Aliviar tensión cervical" },
+              "video": "https://youtu.be/ugERZRwFQhI",
+              "caracteristicas": ["Flexibilidad", "Casa"],
+              "zonas": ["tren_superior"]
+            },
+            {
+              "id": "f-p12",
+              "nombre": "Paschimottanasana",
+              "imagen": "../imagenes/Deportes/paschimottanasana.jpg",
+              "material": ["Esterilla", "Correa (opcional)"],
+              "detalles": { "tiempo": "1 min", "foco": "Cadena posterior" },
+              "video": "https://youtu.be/fk26DB44VNg",
+              "caracteristicas": ["Flexibilidad"],
+              "zonas": ["tren_inferior", "core"]
+            }
+          ]
+        },
+        {
+          "momento": "Nivel Intermedio",
+          "opciones": [
+            {
+              "id": "f-i1",
+              "nombre": "Perro Boca Abajo",
+              "imagen": "../imagenes/Deportes/perro.jpg",
+              "material": ["Esterilla"],
+              "detalles": { "tiempo": "90 seg", "respiraciones": "10" },
+              "video": "https://youtu.be/jUPZxU2grzQ?si=LMdK3Iot591t0R67",
+              "caracteristicas": ["Flexibilidad", "Fuerza"],
+              "zonas": ["full_body", "tren_superior", "tren_inferior"]
+            },
+            {
+              "id": "f-i2",
+              "nombre": "Postura del Guerrero I",
+              "imagen": "../imagenes/Deportes/guerrero1.jpg",
+              "material": ["Ninguno"],
+              "detalles": { "tiempo": "1 min por lado" },
+              "video": "https://youtu.be/NgCY67xHwMI?si=qjbkPoSOBahQmro4",
+              "caracteristicas": ["Fuerza", "Flexibilidad"],
+              "zonas": ["tren_inferior", "core"]
+            },
+            {
+              "id": "f-i3",
+              "nombre": "Postura del Árbol (Vrksasana)",
+              "imagen": "../imagenes/Deportes/arbol.jpg",
+              "material": ["Esterilla"],
+              "detalles": { "tiempo": "1 min por pierna", "foco": "Equilibrio" },
+              "video": "https://youtu.be/6g5zC1B2EDQ?si=7xjmZfjYJdawG_bI",
+              "caracteristicas": ["Flexibilidad"],
+              "zonas": ["tren_inferior", "core"]
+            },
+            {
+              "id": "f-i4",
+              "nombre": "Estocada Baja (Anjaneyasana)",
+              "imagen": "../imagenes/Deportes/estocada-baja.jpg",
+              "material": ["Esterilla"],
+              "detalles": { "tiempo": "45 seg por lado" },
+              "video": "https://youtu.be/mod3Wbamr1k?si=qZA7u7Uw1YSkkTHX",
+              "caracteristicas": ["Flexibilidad"],
+              "zonas": ["tren_inferior"]
+            },
+            {
+              "id": "f-i5",
+              "nombre": "Postura del Triángulo",
+              "imagen": "../imagenes/Deportes/triangulo.jpg",
+              "material": ["Opcional: Bloque"],
+              "detalles": { "tiempo": "1 min por lado" },
+              "video": "https://youtu.be/V00SS-_Wcr0?si=Z9ZLMGv08No_PLvW",
+              "caracteristicas": ["Flexibilidad"],
+              "zonas": ["tren_inferior", "core"]
+            },
+            {
+              "id": "f-i6",
+              "nombre": "Postura de la Paloma (Eka Pada)",
+              "imagen": "../imagenes/Deportes/paloma.jpg",
+              "material": ["Esterilla"],
+              "detalles": { "tiempo": "2 min por lado", "foco": "Apertura cadera" },
+              "video": "https://youtu.be/c7sfYSZcZso?si=T4WAuRNiZkxxuGib",
+              "caracteristicas": ["Flexibilidad", "Tiempo"],
+              "zonas": ["tren_inferior"]
+            },
+            {
+              "id": "f-i7",
+              "nombre": "Postura del Guerrero II",
+              "imagen": "../imagenes/Deportes/guerrero2.jpg",
+              "material": ["Esterilla"],
+              "detalles": { "tiempo": "1 min por lado", "foco": "Apertura de cadera y fuerza" },
+              "video": "https://youtu.be/NgCY67xHwMI",
+              "caracteristicas": ["Fuerza", "Flexibilidad"],
+              "zonas": ["tren_inferior", "core"]
+            },
+            {
+              "id": "f-i8",
+              "nombre": "Postura de la Silla (Utkatasana)",
+              "imagen": "../imagenes/Deportes/silla-yoga.jpg",
+              "material": ["Ninguno"],
+              "detalles": { "tiempo": "45 seg", "reps": "3 series" },
+              "video": "https://youtu.be/V00SS-_Wcr0",
+              "caracteristicas": ["Fuerza", "Equilibrio"],
+              "zonas": ["tren_inferior", "full_body"]
+            },
+            {
+              "id": "f-i9",
+              "nombre": "Torsión Espinal Supina",
+              "imagen": "../imagenes/Deportes/torsion-supina.jpg",
+              "material": ["Esterilla"],
+              "detalles": { "tiempo": "1 min por lado", "foco": "Descompresión vertebral" },
+              "video": "https://youtu.be/c7sfYSZcZso",
+              "caracteristicas": ["Flexibilidad", "Casa"],
+              "zonas": ["core"]
+            },
+            {
+              "id": "f-i10",
+              "nombre": "Perro Boca Arriba (Urdhva Mukha)",
+              "imagen": "../imagenes/Deportes/perro-arriba.jpg",
+              "material": ["Esterilla"],
+              "detalles": { "tiempo": "45 seg", "foco": "Apertura de pecho" },
+              "video": "https://youtu.be/jUPZxU2grzQ",
+              "caracteristicas": ["Flexibilidad", "Fuerza"],
+              "zonas": ["tren_superior", "core"]
+            },
+            {
+              "id": "f-i11",
+              "nombre": "Postura del Puente (Setu Bandhasana)",
+              "imagen": "../imagenes/Deportes/puente-yoga.jpg",
+              "material": ["Esterilla"],
+              "detalles": { "tiempo": "1 min", "reps": "3 series" },
+              "video": "https://youtu.be/mod3Wbamr1k",
+              "caracteristicas": ["Fuerza", "Flexibilidad"],
+              "zonas": ["tren_inferior", "core"]
+            },
+            {
+              "id": "f-i12",
+              "nombre": "Estiramiento del Corredor",
+              "imagen": "../imagenes/Deportes/corredor.jpg",
+              "material": ["Esterilla"],
+              "detalles": { "tiempo": "1 min por pierna", "foco": "Psoas e isquiotibiales" },
+              "video": "https://youtu.be/6g5zC1B2EDQ",
+              "caracteristicas": ["Flexibilidad", "Tiempo"],
+              "zonas": ["tren_inferior"]
+            }
+          ]
+        },
+        {
+          "momento": "Nivel Avanzado",
+          "opciones": [
+            {
+              "id": "f-a1",
+              "nombre": "Postura del Cuervo (Bakasana)",
+              "imagen": "../imagenes/Deportes/cuervo.jpg",
+              "material": ["Esterilla"],
+              "detalles": { "intentos": "5", "mantenimiento": "30 seg" },
+              "video": "https://youtu.be/SevyFSshg9A?si=mLIHUiOTsyIEXFDI",
+              "caracteristicas": ["Fuerza", "Equilibrio"],
+              "zonas": ["tren_superior", "core"]
+            },
+            {
+              "id": "f-a2",
+              "nombre": "Postura de la Rueda (Arco)",
+              "imagen": "../imagenes/Deportes/rueda.jpg",
+              "material": ["Esterilla"],
+              "detalles": { "tiempo": "30 seg", "reps": "3" },
+              "video": "https://youtu.be/5CEOC1jq_t8?si=VtYY9OfbwAgKOJdp",
+              "caracteristicas": ["Flexibilidad", "Alta Intensidad"],
+              "zonas": ["full_body", "core"]
+            },
+            {
+              "id": "f-a3",
+              "nombre": "Split Frontal (Hanumanasana)",
+              "imagen": "../imagenes/Deportes/split.jpg",
+              "material": ["Bloques de apoyo"],
+              "detalles": { "tiempo": "2 min", "foco": "Máxima flexibilidad" },
+              "video": "https://youtu.be/eakrXq3qa0Y?si=orNd2YX95Y4TXTRI",
+              "caracteristicas": ["Flexibilidad", "Tiempo"],
+              "zonas": ["tren_inferior"]
+            },
+            {
+              "id": "f-a4",
+              "nombre": "Parada de Cabeza (Sirsasana)",
+              "imagen": "../imagenes/Deportes/parada.jpg",
+              "material": ["Pared o Esterilla"],
+              "detalles": { "tiempo": "1 min", "foco": "Control core" },
+              "video": "https://youtu.be/1uQd3FWoPGA?si=v7b4y2yOAYZI6VyR",
+              "caracteristicas": ["Equilibrio", "Alta Intensidad"],
+              "zonas": ["full_body", "tren_superior", "core"]
+            },
+            {
+              "id": "f-a5",
+              "nombre": "Postura del Bailarín (Natarajasana)",
+              "imagen": "../imagenes/Deportes/bailarin.jpg",
+              "material": ["Esterilla"],
+              "detalles": { "tiempo": "45 seg por pierna" },
+              "video": "https://youtu.be/8LtXpuPNnSc?si=afQR67aGMIxxtXVx",
+              "caracteristicas": ["Flexibilidad", "Equilibrio"],
+              "zonas": ["tren_inferior", "core"]
+            },
+            {
+              "id": "f-a6",
+              "nombre": "Wild Thing (Camatkarasana)",
+              "imagen": "../imagenes/Deportes/wild-thing.jpg",
+              "material": ["Esterilla"],
+              "detalles": { "tiempo": "30 seg por lado" },
+              "video": "https://youtu.be/XNzE5a0hL0U?si=xkVxDv2J_KkC6bot",
+              "caracteristicas": ["Flexibilidad", "Fuerza"],
+              "zonas": ["full_body", "tren_superior", "core"]
+            },
+            {
+              "id": "f-a7",
+              "nombre": "Postura del Barco",
+              "imagen": "../imagenes/Deportes/navasana.jpg",
+              "material": ["Esterilla"],
+              "detalles": { "tiempo": "45 seg", "reps": "3 series" },
+              "video": "https://youtu.be/eakrXq3qa0Y",
+              "caracteristicas": ["Fuerza", "Core"],
+              "zonas": ["core"]
+            },
+            {
+              "id": "f-a8",
+              "nombre": "Split Lateral",
+              "imagen": "../imagenes/Deportes/split-lateral.jpg",
+              "material": ["Esterilla"],
+              "detalles": { "tiempo": "2 min", "foco": "Apertura pélvica profunda" },
+              "video": "https://youtu.be/1uQd3FWoPGA",
+              "caracteristicas": ["Flexibilidad", "Tiempo"],
+              "zonas": ["tren_inferior"]
+            },
+            {
+              "id": "f-a9",
+              "nombre": "Postura de la Vela (Sarvangasana)",
+              "imagen": "../imagenes/Deportes/vela.jpg",
+              "material": ["Esterilla"],
+              "detalles": { "tiempo": "1 min", "foco": "Inversión y circulación" },
+              "video": "https://youtu.be/5CEOC1jq_t8",
+              "caracteristicas": ["Equilibrio", "Core"],
+              "zonas": ["core", "full_body"]
+            },
+            {
+              "id": "f-a10",
+              "nombre": "Postura del Camello (Ustrasana)",
+              "imagen": "../imagenes/Deportes/camello.jpg",
+              "material": ["Esterilla"],
+              "detalles": { "tiempo": "45 seg", "foco": "Extensión torácica intensa" },
+              "video": "https://youtu.be/8LtXpuPNnSc",
+              "caracteristicas": ["Flexibilidad", "Equilibrio"],
+              "zonas": ["core", "tren_superior"]
+            },
+            {
+              "id": "f-a11",
+              "nombre": "Parada de Manos (Asistida en pared)",
+              "imagen": "../imagenes/Deportes/parada-manos.jpg",
+              "material": ["Pared"],
+              "detalles": { "tiempo": "30 seg", "intentos": "5" },
+              "video": "https://youtu.be/SevyFSshg9A",
+              "caracteristicas": ["Fuerza", "Alta Intensidad"],
+              "zonas": ["tren_superior", "core", "full_body"]
+            },
+            {
+              "id": "f-a12",
+              "nombre": "Postura del Pavo Real (Mayurasana)",
+              "imagen": "../imagenes/Deportes/pavo-real.jpg",
+              "material": ["Esterilla"],
+              "detalles": { "tiempo": "20 seg", "intentos": "4" },
+              "video": "https://youtu.be/XNzE5a0hL0U",
+              "caracteristicas": ["Fuerza", "Equilibrio"],
+              "zonas": ["tren_superior", "core", "full_body"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "potencia",
+      "titulo": "Potencia y Explosividad",
+      "imagen": "../imagenes/Deportes/potencia.jpg",
+      "plan": [
+        {
+          "momento": "Nivel Principiante",
+          "opciones": [
+            {
+              "id": "p-p1",
+              "nombre": "Squat Jumps Suaves",
+              "imagen": "../imagenes/Deportes/squat-jump.jpg",
+              "material": ["Ninguno"],
+              "detalles": { "series": "3", "reps": "10", "enfoque": "Aterrizaje silencioso" },
+              "video": "https://youtu.be/wg1aM2MLynM?si=ul4FcjbrAeBiDBsp",
+              "caracteristicas": ["Potencia", "Casa"],
+              "zonas": ["tren_inferior", "full_body"]
+            },
+            {
+              "id": "p-p2",
+              "nombre": "Saltos de Línea Laterales",
+              "imagen": "../imagenes/Deportes/line-hops.jpg",
+              "material": ["Cinta o línea en el suelo"],
+              "detalles": { "tiempo": "30 seg", "reps": "3" },
+              "video": "https://youtu.be/1mStIPjEYqA?si=qF0XaJP3mWDZ5Qst",
+              "caracteristicas": ["Potencia", "Coordinación"],
+              "zonas": ["tren_inferior"]
+            },
+            {
+              "id": "p-p3",
+              "nombre": "Lanzamiento Balón al Suelo",
+              "imagen": "../imagenes/Deportes/slam-ball.jpg",
+              "material": ["Balón medicinal"],
+              "detalles": { "series": "3", "reps": "12", "descanso": "60 seg" },
+              "video": "https://youtu.be/94Bnguutg4Y?si=0HM69izYToI8g1RX",
+              "caracteristicas": ["Potencia", "Equipo"],
+              "zonas": ["full_body", "tren_superior", "core"]
+            },
+            {
+              "id": "p-p4",
+              "nombre": "Box Step-ups Explosivos",
+              "imagen": "../imagenes/Deportes/step-up-exp.jpg",
+              "material": ["Escalón o Silla estable"],
+              "detalles": { "series": "3", "reps": "8 por pierna" },
+              "video": "https://youtu.be/QxZzLH4UwvY?si=Qkfp2NGhiRHPrbcC",
+              "caracteristicas": ["Fuerza", "Potencia"],
+              "zonas": ["tren_inferior"]
+            },
+            {
+              "id": "p-p5",
+              "nombre": "Salto de Longitud Estático",
+              "imagen": "../imagenes/Deportes/broad-jump-p.jpg",
+              "material": ["Espacio libre"],
+              "detalles": { "series": "3", "reps": "6", "descanso": "90 seg" },
+              "video": "https://youtu.be/_EmN3pwT6M0?si=7shLlPiPsEsuhASM",
+              "caracteristicas": ["Potencia"],
+              "zonas": ["tren_inferior", "full_body"]
+            },
+            {
+              "id": "p-p6",
+              "nombre": "Mountain Climbers Explosivos",
+              "imagen": "../imagenes/Deportes/climbers-exp.jpg",
+              "material": ["Esterilla"],
+              "detalles": { "tiempo": "30 seg", "ritmo": "Máximo" },
+              "video": "https://youtu.be/lD_gfTofg4A?si=ozGdK_ot94TBngWP",
+              "caracteristicas": ["Cardio", "Potencia"],
+              "zonas": ["full_body", "core", "tren_superior"]
+            },
+            {
+              "id": "p-p7",
+              "nombre": "Push Press con Mancuernas Ligeras",
+              "imagen": "../imagenes/Deportes/push-press-ligero.jpg",
+              "material": ["2 Mancuernas"],
+              "detalles": { "series": "3", "reps": "10", "descanso": "60 seg" },
+              "video": "https://youtu.be/iaBVSJm7Eko",
+              "caracteristicas": ["Potencia", "Equipo"],
+              "zonas": ["tren_superior", "full_body"]
+            },
+            {
+              "id": "p-p8",
+              "nombre": "Sentadilla con Elevación Explosiva de Talones",
+              "imagen": "../imagenes/Deportes/squat-calf-raise.jpg",
+              "material": ["Ninguno"],
+              "detalles": { "series": "3", "reps": "15", "descanso": "45 seg" },
+              "video": "https://youtu.be/MeIiIdhvXT4",
+              "caracteristicas": ["Potencia", "Casa"],
+              "zonas": ["tren_inferior"]
+            },
+            {
+              "id": "p-p9",
+              "nombre": "Swing con Mancuerna (Dumbbell Swing)",
+              "imagen": "../imagenes/Deportes/db-swing.jpg",
+              "material": ["1 Mancuerna"],
+              "detalles": { "series": "3", "reps": "12", "descanso": "60 seg" },
+              "video": "https://youtu.be/sFEjvT_qJFA",
+              "caracteristicas": ["Potencia", "Equipo"],
+              "zonas": ["tren_inferior", "core", "full_body"]
+            },
+            {
+              "id": "p-p10",
+              "nombre": "Flexiones con Despegue (Rodillas apoyadas)",
+              "imagen": "../imagenes/Deportes/flexion-despegue.jpg",
+              "material": ["Esterilla"],
+              "detalles": { "series": "3", "reps": "8", "descanso": "60 seg" },
+              "video": "https://youtu.be/Z0bRiVHNn8Y",
+              "caracteristicas": ["Potencia", "Casa"],
+              "zonas": ["tren_superior", "core"]
+            },
+            {
+              "id": "p-p11",
+              "nombre": "Lanzamiento de Balón Vertical",
+              "imagen": "../imagenes/Deportes/balon-vertical.jpg",
+              "material": ["Balón medicinal"],
+              "detalles": { "series": "3", "reps": "10", "descanso": "60 seg" },
+              "video": "https://youtu.be/94Bnguutg4Y",
+              "caracteristicas": ["Potencia", "Equipo"],
+              "zonas": ["tren_superior", "full_body"]
+            },
+            {
+              "id": "p-p12",
+              "nombre": "Saltos rodilla Suaves",
+              "imagen": "../imagenes/Deportes/jumps-suaves.jpg",
+              "material": ["Ninguno"],
+              "detalles": { "tiempo": "30 seg", "descanso": "30 seg" },
+              "video": "https://youtu.be/QBqwvDdw7dQ",
+              "caracteristicas": ["Cardio", "Potencia"],
+              "zonas": ["full_body", "tren_inferior"]
+            }
+          ]
+        },
+        {
+          "momento": "Nivel Intermedio",
+          "opciones": [
+            {
+              "id": "p-i1",
+              "nombre": "Saltos al Cajón (Box Jumps)",
+              "imagen": "../imagenes/Deportes/box-jump.jpg",
+              "material": ["Cajón pliométrico"],
+              "detalles": { "series": "4", "reps": "8", "descanso": "2 min" },
+              "video": "https://youtu.be/uL3jSfAJCAY?si=eeZyUgLSs3PvwQAO",
+              "caracteristicas": ["Potencia", "Equipo"],
+              "zonas": ["tren_inferior", "full_body"]
+            },
+            {
+              "id": "p-i2",
+              "nombre": "Burpees con Salto Vertical",
+              "imagen": "../imagenes/Deportes/burpee-jump.jpg",
+              "material": ["Ninguno"],
+              "detalles": { "series": "4", "reps": "10", "descanso": "60 seg" },
+              "video": "https://youtu.be/wwwTzYB75Qo?si=tkeqVdOmStRiih3P",
+              "caracteristicas": ["Alta Intensidad", "Potencia"],
+              "zonas": ["full_body"]
+            },
+            {
+              "id": "p-i3",
+              "nombre": "Skater Jumps con Pausa",
+              "imagen": "../imagenes/Deportes/skater-jump.jpg",
+              "material": ["Ninguno"],
+              "detalles": { "series": "3", "reps": "14 totales", "enfoque": "Estabilidad" },
+              "video": "https://youtu.be/opIUn1zykmA?si=5Q-Y1sY1a0rX7ROP",
+              "caracteristicas": ["Coordinación", "Potencia"],
+              "zonas": ["tren_inferior"]
+            },
+            {
+              "id": "p-i4",
+              "nombre": "Lanzamiento Balón a Pared",
+              "imagen": "../imagenes/Deportes/wall-ball.jpg",
+              "material": ["Balón medicinal", "Pared"],
+              "detalles": { "series": "4", "reps": "12", "descanso": "60 seg" },
+              "video": "https://youtu.be/fpUD0mcFp_0?si=23nSnYGOm7js0cZ0",
+              "caracteristicas": ["Potencia", "Equipo"],
+              "zonas": ["full_body", "tren_inferior", "tren_superior"]
+            },
+            {
+              "id": "p-i5",
+              "nombre": "Saltos de Tijera (Switch Lunges)",
+              "imagen": "../imagenes/Deportes/switch-lunges.jpg",
+              "material": ["Ninguno"],
+              "detalles": { "series": "3", "reps": "12", "descanso": "60 seg" },
+              "video": "https://youtu.be/velMsAINaWw?si=SNdF9j40aEfoj-8h",
+              "caracteristicas": ["Potencia", "Fuerza"],
+              "zonas": ["tren_inferior"]
+            },
+            {
+              "id": "p-i6",
+              "nombre": "Salto de Longitud con Rebote",
+              "imagen": "../imagenes/Deportes/broad-jump-reb.jpg",
+              "material": ["Espacio libre"],
+              "detalles": { "series": "3", "reps": "5", "descanso": "2 min" },
+              "video": "https://youtu.be/uhz-ia-2UcM?si=a3cv_0evKGh_ABq-",
+              "caracteristicas": ["Potencia"],
+              "zonas": ["tren_inferior", "full_body"]
+            },
+            {
+              "id": "p-i7",
+              "nombre": "Thrusters con Mancuernas",
+              "imagen": "../imagenes/Deportes/thrusters.jpg",
+              "material": ["2 Mancuernas"],
+              "detalles": { "series": "4", "reps": "10", "descanso": "90 seg" },
+              "video": "https://youtu.be/L219ltL15zk",
+              "caracteristicas": ["Potencia", "Alta Intensidad"],
+              "zonas": ["full_body", "tren_superior", "tren_inferior"]
+            },
+            {
+              "id": "p-i8",
+              "nombre": "Saltos Laterales a una Pierna (Bounds)",
+              "imagen": "../imagenes/Deportes/lateral-bounds.jpg",
+              "material": ["Espacio libre"],
+              "detalles": { "series": "3", "reps": "10 por pierna", "descanso": "60 seg" },
+              "video": "https://youtu.be/1mStIPjEYqA",
+              "caracteristicas": ["Potencia", "Equilibrio"],
+              "zonas": ["tren_inferior"]
+            },
+            {
+              "id": "p-i9",
+              "nombre": "Flexiones con Toque Hombro",
+              "imagen": "../imagenes/Deportes/flexiones-toque-hombro.jpg",
+              "material": ["Ninguno"],
+              "detalles": { "series": "3", "reps": "8", "descanso": "90 seg" },
+              "video": "https://youtu.be/Z0bRiVHNn8Y",
+              "caracteristicas": ["Potencia", "Fuerza"],
+              "zonas": ["tren_superior", "core"]
+            },
+            {
+              "id": "p-i10",
+              "nombre": "Kettlebell Swing",
+              "imagen": "../imagenes/Deportes/kb-swing.jpg",
+              "material": ["Pesa Rusa (Kettlebell)"],
+              "detalles": { "series": "4", "reps": "15", "descanso": "60 seg" },
+              "video": "https://youtu.be/YSxHifyI6s8",
+              "caracteristicas": ["Potencia", "Equipo"],
+              "zonas": ["full_body", "tren_inferior", "core"]
+            },
+            {
+              "id": "p-i11",
+              "nombre": "Sprints de Ida y Vuelta (Shuttle Runs)",
+              "imagen": "../imagenes/Deportes/shuttle-runs.jpg",
+              "material": ["Conos o marcas"],
+              "detalles": { "series": "4", "distancia": "10 metros x 4", "descanso": "60 seg" },
+              "video": "https://youtu.be/nBIAxWw5jos",
+              "caracteristicas": ["Potencia", "Alta Intensidad"],
+              "zonas": ["tren_inferior", "full_body"]
+            },
+            {
+              "id": "p-i12",
+              "nombre": "Push Jerk con Barra",
+              "imagen": "../imagenes/Deportes/push-jerk.jpg",
+              "material": ["Barra y discos"],
+              "detalles": { "series": "4", "reps": "6", "descanso": "90 seg" },
+              "video": "https://youtu.be/iaBVSJm7Eko",
+              "caracteristicas": ["Potencia", "Fuerza"],
+              "zonas": ["tren_superior", "full_body", "core"]
+            }
+          ]
+        },
+        {
+          "momento": "Nivel Avanzado",
+          "opciones": [
+            {
+              "id": "p-a1",
+              "nombre": "Depth Jumps (Salto de Caída)",
+              "imagen": "../imagenes/Deportes/depth-jump.jpg",
+              "material": ["Cajón bajo", "Suelo firme"],
+              "detalles": { "series": "4", "reps": "5", "descanso": "3 min" },
+              "video": "https://youtube.com/shorts/lGDnqv9H6o4?si=UMKgsXNldsKBOJt5",
+              "caracteristicas": ["Alta Intensidad", "Potencia"],
+              "zonas": ["tren_inferior", "full_body"]
+            },
+            {
+              "id": "p-a2",
+              "nombre": "Box Jumps a Máxima Altura",
+              "imagen": "../imagenes/Deportes/max-box.jpg",
+              "material": ["Cajón alto"],
+              "detalles": { "series": "5", "reps": "3", "descanso": "3 min" },
+              "video": "https://youtu.be/k7dmYdknbac?si=aXkI5OmwJ8Ve5IEJ",
+              "caracteristicas": ["Potencia", "Equipo"],
+              "zonas": ["tren_inferior", "full_body"]
+            },
+            {
+              "id": "p-a3",
+              "nombre": "Tuck Jumps (Salto al Pecho)",
+              "imagen": "../imagenes/Deportes/tuck-jump.jpg",
+              "material": ["Ninguno"],
+              "detalles": { "series": "4", "tiempo": "30 seg", "descanso": "60 seg" },
+              "video": "https://youtu.be/Yl7tEmpzknY?si=NXf4UKBiErb-Ml-K",
+              "caracteristicas": ["Alta Intensidad", "Potencia"],
+              "zonas": ["tren_inferior", "core", "full_body"]
+            },
+            {
+              "id": "p-a4",
+              "nombre": "Saltos a una Pierna (Single Leg Hops)",
+              "imagen": "../imagenes/Deportes/single-hop.jpg",
+              "material": ["Ninguno"],
+              "detalles": { "series": "3", "reps": "6 por pierna" },
+              "video": "https://youtu.be/M03prFMwSOk?si=THjKaj0lbVSeNMmK",
+              "caracteristicas": ["Equilibrio", "Potencia"],
+              "zonas": ["tren_inferior"]
+            },
+            {
+              "id": "p-a5",
+              "nombre": "Sprints de Reacción",
+              "imagen": "../imagenes/Deportes/sprints.jpg",
+              "material": ["Conos o marcas"],
+              "detalles": { "series": "6", "distancia": "20 metros" },
+              "video": "https://youtu.be/pCFv8jAmTNk?si=CKpo5s98Zlw9yIZy",
+              "caracteristicas": ["Potencia", "Tiempo"],
+              "zonas": ["tren_inferior", "full_body"]
+            },
+            {
+              "id": "p-a6",
+              "nombre": "Burpee Over Box",
+              "imagen": "../imagenes/Deportes/burpee-box.jpg",
+              "material": ["Cajón pliométrico"],
+              "detalles": { "series": "4", "reps": "8", "descanso": "2 min" },
+              "video": "https://youtu.be/VqOow4Yuk_o?si=BovrBR2cIQT0Erma",
+              "caracteristicas": ["Alta Intensidad", "Equipo"],
+              "zonas": ["full_body"]
+            },
+            {
+              "id": "p-a7",
+              "nombre": "Snatch con Pesa Rusa (Kettlebell Snatch)",
+              "imagen": "../imagenes/Deportes/kb-snatch.jpg",
+              "material": ["Pesa Rusa"],
+              "detalles": { "series": "4", "reps": "6 por brazo", "descanso": "90 seg" },
+              "video": "https://youtu.be/6_5_wI-FXzE",
+              "caracteristicas": ["Potencia", "Alta Intensidad"],
+              "zonas": ["full_body", "tren_inferior", "tren_superior", "core"]
+            },
+            {
+              "id": "p-a8",
+              "nombre": "Flexion con Disco",
+              "imagen": "../imagenes/Deportes/flexion-disco.jpg",
+              "material": ["2 Cajones bajos o steps"],
+              "detalles": { "series": "4", "reps": "6", "descanso": "2 min" },
+              "video": "https://youtu.be/Z0bRiVHNn8Y",
+              "caracteristicas": ["Potencia", "Fuerza"],
+              "zonas": ["tren_superior", "core"]
+            },
+            {
+              "id": "p-a9",
+              "nombre": "Saltos de Tobillos a Mano",
+              "imagen": "../imagenes/Deportes/kneeling-jump.jpg",
+              "material": ["Esterilla acolchada"],
+              "detalles": { "series": "3", "reps": "5", "descanso": "2 min" },
+              "video": "https://youtu.be/uL3jSfAJCAY",
+              "caracteristicas": ["Potencia", "Alta Intensidad"],
+              "zonas": ["tren_inferior", "core"]
+            },
+            {
+              "id": "p-a10",
+              "nombre": "Clean and Jerk con Mancuernas",
+              "imagen": "../imagenes/Deportes/clean-jerk-db.jpg",
+              "material": ["2 Mancuernas pesadas"],
+              "detalles": { "series": "4", "reps": "6", "descanso": "2 min" },
+              "video": "https://youtu.be/iaBVSJm7Eko",
+              "caracteristicas": ["Potencia", "Fuerza"],
+              "zonas": ["full_body", "tren_inferior", "tren_superior"]
+            },
+            {
+              "id": "p-a11",
+              "nombre": "Escaleras",
+              "imagen": "../imagenes/Deportes/escalera.jpg",
+              "material": ["Maquina"],
+              "detalles": { "series": "8", "distancia": "40 metros", "descanso": "Bajar andando" },
+              "video": "https://youtu.be/nBIAxWw5jos",
+              "caracteristicas": ["Potencia", "Alta Intensidad"],
+              "zonas": ["tren_inferior", "full_body"]
+            },
+            {
+              "id": "p-a12",
+              "nombre": "Lanzamiento Rotacional",
+              "imagen": "../imagenes/Deportes/rotational-throw.jpg",
+              "material": ["Balón medicinal pesado"],
+              "detalles": { "series": "4", "reps": "8 por lado", "descanso": "90 seg" },
+              "video": "https://youtu.be/fpUD0mcFp_0",
+              "caracteristicas": ["Potencia", "Core"],
+              "zonas": ["core", "tren_superior"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "resistencia",
+      "titulo": "Resistencia Cardiovascular",
+      "imagen": "../imagenes/Deportes/resistencia.jpg",
+      "plan": [
+        {
+          "momento": "Nivel Principiante",
+          "opciones": [
+            {
+              "id": "r-p1",
+              "nombre": "Caminata a Ritmo Alegre",
+              "imagen": "../imagenes/Deportes/caminata.jpg",
+              "material": ["Zapatillas cómodas"],
+              "detalles": { "tiempo": "20 min", "foco": "Ritmo constante" },
+              "video": "https://youtu.be/TWyguC7VVh8?si=rfhprCHfvjGbRF5V",
+              "caracteristicas": ["Cardio", "Casa"],
+              "zonas": ["tren_inferior", "full_body"]
+            },
+            {
+              "id": "r-p2",
+              "nombre": "Step-ups de Bajo Impacto",
+              "imagen": "../imagenes/Deportes/step-p.jpg",
+              "material": ["Escalón bajo"],
+              "detalles": { "tiempo": "5 min", "descanso": "1 min" },
+              "video": "https://youtu.be/wfhXnLILqdk?si=10SbEZ4Jnt9MsbZV",
+              "caracteristicas": ["Cardio"],
+              "zonas": ["tren_inferior"]
+            },
+            {
+              "id": "r-p3",
+              "nombre": "Jumping Jacks",
+              "imagen": "../imagenes/Deportes/jacks-sin-salto.jpg",
+              "material": ["Ninguno"],
+              "detalles": { "tiempo": "60 seg", "reps": "3 series" },
+              "video": "https://youtu.be/QBqwvDdw7dQ?si=2M6IEc3v_zU_6l_p",
+              "caracteristicas": ["Cardio", "Casa"],
+              "zonas": ["full_body"]
+            },
+            {
+              "id": "r-p4",
+              "nombre": "Marcha en el Sitio",
+              "imagen": "../imagenes/Deportes/marcha-sitio.jpg",
+              "material": ["Ninguno"],
+              "detalles": { "tiempo": "3 min", "ritmo": "Moderado" },
+              "video": "https://youtu.be/0e4251eQAE8?si=4FCWtqMpBIgOlAA8",
+              "caracteristicas": ["Cardio"],
+              "zonas": ["tren_inferior", "full_body"]
+            },
+            {
+              "id": "r-p5",
+              "nombre": "Boxeo de Sombra Suave",
+              "imagen": "../imagenes/Deportes/shadow-p.jpg",
+              "material": ["Ninguno"],
+              "detalles": { "tiempo": "2 min", "reps": "3" },
+              "video": "https://youtu.be/MVUnw0GcZ1o?si=u_0AZfHjSqkkcRFp",
+              "caracteristicas": ["Cardio", "Coordinación"],
+              "zonas": ["tren_superior", "core"]
+            },
+            {
+              "id": "r-p6",
+              "nombre": "Círculos con los Brazos",
+              "imagen": "../imagenes/Deportes/brazos.jpg",
+              "material": ["Ninguno"],
+              "detalles": { "tiempo": "60 seg", "foco": "Calentamiento" },
+              "video": "https://youtu.be/brpDFocfbFc?si=PKrJVtumaZJPg4EA",
+              "caracteristicas": ["Cardio"],
+              "zonas": ["tren_superior"]
+            },
+            {
+              "id": "r-p7",
+              "nombre": "Desplazamiento Lateral Tobillo",
+              "imagen": "../imagenes/Deportes/desplazamiento-lateral.jpg",
+              "material": ["Espacio libre"],
+              "detalles": { "tiempo": "2 min", "ritmo": "Constante" },
+              "video": "https://youtu.be/1mStIPjEYqA",
+              "caracteristicas": ["Cardio", "Casa"],
+              "zonas": ["tren_inferior", "full_body"]
+            },
+            {
+              "id": "r-p8",
+              "nombre": "Elevación de Rodillas de Pie",
+              "imagen": "../imagenes/Deportes/elevacion-rodillas.jpg",
+              "material": ["Caja"],
+              "detalles": { "tiempo": "90 seg", "reps": "3 series" },
+              "video": "https://youtu.be/j8XGysKsPFc",
+              "caracteristicas": ["Cardio", "Core"],
+              "zonas": ["core", "tren_inferior"]
+            },
+            {
+              "id": "r-p9",
+              "nombre": "Toques de Pie al Frente (Toe Taps)",
+              "imagen": "../imagenes/Deportes/toe-taps.jpg",
+              "material": ["Un escalón bajo o marca"],
+              "detalles": { "tiempo": "60 seg", "descanso": "30 seg" },
+              "video": "https://youtu.be/CBdPcHV52nc",
+              "caracteristicas": ["Cardio", "Coordinación"],
+              "zonas": ["tren_inferior"]
+            },
+            {
+              "id": "r-p10",
+              "nombre": "Talones al Glúteo Suave",
+              "imagen": "../imagenes/Deportes/talones-gluteo-suave.jpg",
+              "material": ["Ninguno"],
+              "detalles": { "tiempo": "2 min", "ritmo": "Relajado" },
+              "video": "https://youtu.be/fS_S8O9UfXo",
+              "caracteristicas": ["Cardio", "Casa"],
+              "zonas": ["tren_inferior"]
+            },
+            {
+              "id": "r-p11",
+              "nombre": "Nadador en el Suelo (Swimmers)",
+              "imagen": "../imagenes/Deportes/swimmers.jpg",
+              "material": ["Esterilla"],
+              "detalles": { "tiempo": "45 seg", "descanso": "15 seg" },
+              "video": "https://youtu.be/8itYpBv7-f0",
+              "caracteristicas": ["Cardio", "Core"],
+              "zonas": ["core", "tren_superior", "full_body"]
+            },
+            {
+              "id": "r-p12",
+              "nombre": "Aeróbicos Básicos / Baile Libre",
+              "imagen": "../imagenes/Deportes/aerobicos.jpg",
+              "material": ["Música animada"],
+              "detalles": { "tiempo": "10 min", "foco": "No parar de moverse" },
+              "video": "https://youtu.be/TWyguC7VVh8",
+              "caracteristicas": ["Cardio", "Tiempo"],
+              "zonas": ["full_body"]
+            }
+          ]
+        },
+        {
+          "momento": "Nivel Intermedio",
+          "opciones": [
+            {
+              "id": "r-i1",
+              "nombre": "Trote Continuo",
+              "imagen": "../imagenes/Deportes/trote.jpg",
+              "material": ["Espacio libre"],
+              "detalles": { "tiempo": "15 min", "intensidad": "Media" },
+              "video": "https://youtu.be/6_5_wI-FXzE?si=yh1QFrceb3Y2-exW",
+              "caracteristicas": ["Cardio", "Tiempo"],
+              "zonas": ["tren_inferior", "full_body"]
+            },
+            {
+              "id": "r-i2",
+              "nombre": "Salto a la Comba (Básico)",
+              "imagen": "../imagenes/Deportes/comba-p.jpg",
+              "material": ["Comba"],
+              "detalles": { "tiempo": "2 min", "reps": "5 series" },
+              "video": "https://youtu.be/Mir21GP6oBo?si=CsmygB1gcPlGiR7e",
+              "caracteristicas": ["Cardio", "Equipo"],
+              "zonas": ["full_body", "tren_inferior"]
+            },
+            {
+              "id": "r-i3",
+              "nombre": "Mountain Climbers Rítmicos",
+              "imagen": "../imagenes/Deportes/climbers-r.jpg",
+              "material": ["Esterilla"],
+              "detalles": { "tiempo": "45 seg", "descanso": "15 seg" },
+              "video": "https://youtu.be/lD_gfTofg4A?si=PQmnL7F89eW19s88",
+              "caracteristicas": ["Cardio", "Core"],
+              "zonas": ["full_body", "core", "tren_superior"]
+            },
+            {
+              "id": "r-i4",
+              "nombre": "Rodillas al Pecho (Skipping)",
+              "imagen": "../imagenes/Deportes/skipping.jpg",
+              "material": ["Ninguno"],
+              "detalles": { "tiempo": "40 seg", "descanso": "20 seg" },
+              "video": "https://youtu.be/T7lDL4ZDcWA?si=M5AFF2Sf0nI6vmTX",
+              "caracteristicas": ["Cardio", "Alta Intensidad"],
+              "zonas": ["tren_inferior", "core", "full_body"]
+            },
+            {
+              "id": "r-i5",
+              "nombre": "Patinadores",
+              "imagen": "../imagenes/Deportes/skaters.jpg",
+              "material": ["Ninguno"],
+              "detalles": { "tiempo": "50 seg", "descanso": "10 seg" },
+              "video": "https://youtu.be/6kU43UKjA9A?si=E4vg4W40quA-cuzk",
+              "caracteristicas": ["Cardio", "Coordinación"],
+              "zonas": ["tren_inferior", "full_body"]
+            },
+            {
+              "id": "r-i6",
+              "nombre": "Burpees Sin Flexión",
+              "imagen": "../imagenes/Deportes/burpee-s.jpg",
+              "material": ["Ninguno"],
+              "detalles": { "reps": "15", "descanso": "45 seg" },
+              "video": "https://youtu.be/Xhv4qLfeKwc?si=LqDqzFfbOhZW-lPd",
+              "caracteristicas": ["Cardio", "Fuerza"],
+              "zonas": ["full_body", "core"]
+            },
+            {
+              "id": "r-i7",
+              "nombre": "Bicicleta Estática o Elíptica",
+              "imagen": "../imagenes/Deportes/bicicleta-estatica.jpg",
+              "material": ["Bicicleta o Elíptica"],
+              "detalles": { "tiempo": "20 min", "intensidad": "Moderada a Alta" },
+              "video": "https://youtu.be/6_5_wI-FXzE",
+              "caracteristicas": ["Cardio", "Equipo"],
+              "zonas": ["tren_inferior"]
+            },
+            {
+              "id": "r-i8",
+              "nombre": "Saltos de Lado a Lado (Lateral Hops)",
+              "imagen": "../imagenes/Deportes/lateral-hops.jpg",
+              "material": ["Ninguno"],
+              "detalles": { "tiempo": "60 seg", "reps": "3 series" },
+              "video": "https://youtu.be/1mStIPjEYqA",
+              "caracteristicas": ["Cardio", "Coordinación"],
+              "zonas": ["tren_inferior"]
+            },
+            {
+              "id": "r-i9",
+              "nombre": "Pasos de Oso (Bear Crawls)",
+              "imagen": "../imagenes/Deportes/bear-crawls.jpg",
+              "material": ["Espacio libre"],
+              "detalles": { "tiempo": "45 seg", "descanso": "15 seg" },
+              "video": "https://youtu.be/ab03L5kaG9I",
+              "caracteristicas": ["Cardio", "Fuerza"],
+              "zonas": ["full_body", "core", "tren_superior"]
+            },
+            {
+              "id": "r-i10",
+              "nombre": "Remo en Máquina (Intensidad Media)",
+              "imagen": "../imagenes/Deportes/remo-maquina.jpg",
+              "material": ["Máquina de remo"],
+              "detalles": { "tiempo": "15 min", "foco": "Ritmo constante" },
+              "video": "https://youtu.be/FWJR5Ve8cE0",
+              "caracteristicas": ["Cardio", "Equipo"],
+              "zonas": ["full_body", "tren_superior", "core"]
+            },
+            {
+              "id": "r-i11",
+              "nombre": "Saltos de Tijera Cruzados (Cross Jacks)",
+              "imagen": "../imagenes/Deportes/cross-jacks.jpg",
+              "material": ["Ninguno"],
+              "detalles": { "tiempo": "60 seg", "descanso": "20 seg" },
+              "video": "https://youtu.be/velMsAINaWw",
+              "caracteristicas": ["Cardio", "Coordinación"],
+              "zonas": ["full_body"]
+            },
+            {
+              "id": "r-i12",
+              "nombre": "Carrera con Cambios de Ritmo (Fartlek)",
+              "imagen": "../imagenes/Deportes/fartlek.jpg",
+              "material": ["Parque o Pista"],
+              "detalles": { "tiempo": "15 min", "foco": "Alternar rápido/lento" },
+              "video": "https://youtu.be/nBIAxWw5jos",
+              "caracteristicas": ["Cardio", "Tiempo"],
+              "zonas": ["tren_inferior", "full_body"]
+            }
+          ]
+        },
+        {
+          "momento": "Nivel Avanzado",
+          "opciones": [
+            {
+              "id": "r-a1",
+              "nombre": "Sprints de 100 metros",
+              "imagen": "../imagenes/Deportes/sprints-a.jpg",
+              "material": ["Pista o calle"],
+              "detalles": { "reps": "8", "descanso": "1 min" },
+              "video": "https://www.youtube.com/embed/nBIAxWw5jos",
+              "caracteristicas": ["Alta Intensidad", "Tiempo"],
+              "zonas": ["tren_inferior", "full_body"]
+            },
+            {
+              "id": "r-a2",
+              "nombre": "Salto a la Comba Doble (Double Unders)",
+              "imagen": "../imagenes/Deportes/comba-a.jpg",
+              "material": ["Comba rápida"],
+              "detalles": { "tiempo": "60 seg", "reps": "4 series" },
+              "video": "https://www.youtube.com/embed/KgBlZjPVHzM",
+              "caracteristicas": ["Cardio", "Equipo"],
+              "zonas": ["full_body", "tren_inferior"]
+            },
+            {
+              "id": "r-a3",
+              "nombre": "Burpees con Salto",
+              "imagen": "../imagenes/Deportes/burpee-a.jpg",
+              "material": ["Ninguno"],
+              "detalles": { "reps": "20", "ritmo": "Explosivo" },
+              "video": "https://youtu.be/h4cf5Bik4Tg?si=Br0GhtZR00f6lmN8",
+              "caracteristicas": ["Alta Intensidad", "Potencia"],
+              "zonas": ["full_body"]
+            },
+            {
+              "id": "r-a4",
+              "nombre": "Carrera de Montaña (Hill Sprints)",
+              "imagen": "../imagenes/Deportes/colina.jpg",
+              "material": ["Cuesta pronunciada"],
+              "detalles": { "reps": "10 subidas", "descanso": "Bajar andando" },
+              "video": "https://www.youtube.com/embed/fS_S8O9UfXo",
+              "caracteristicas": ["Cardio", "Potencia"],
+              "zonas": ["tren_inferior", "full_body", "core"]
+            },
+            {
+              "id": "r-a5",
+              "nombre": "Talones al Glúteo Rápido",
+              "imagen": "../imagenes/Deportes/talones.jpg",
+              "material": ["Ninguno"],
+              "detalles": { "tiempo": "60 seg", "ritmo": "Máximo" },
+              "video": "https://www.youtube.com/embed/fS_S8O9UfXo",
+              "caracteristicas": ["Cardio", "Alta Intensidad"],
+              "zonas": ["tren_inferior"]
+            },
+            {
+              "id": "r-a6",
+              "nombre": "Circuito sin Descanso",
+              "imagen": "../imagenes/Deportes/circuito.jpg",
+              "material": ["Esterilla"],
+              "detalles": { "tiempo": "10 min", "foco": "No parar" },
+              "video": "https://www.youtube.com/embed/auBLPXO8FHI",
+              "caracteristicas": ["Cardio", "Tiempo"],
+              "zonas": ["full_body"]
+            },
+            {
+              "id": "r-a7",
+              "nombre": "Carrera Larga Distancia (5k - 10k)",
+              "imagen": "../imagenes/Deportes/fartlek.jpg",
+              "material": ["Zapatillas de running"],
+              "detalles": { "distancia": "5 - 10 km", "foco": "Mantener el ritmo" },
+              "video": "https://youtu.be/6_5_wI-FXzE",
+              "caracteristicas": ["Cardio", "Tiempo"],
+              "zonas": ["tren_inferior", "full_body"]
+            },
+            {
+              "id": "r-a8",
+              "nombre": "Natación Continua",
+              "imagen": "../imagenes/Deportes/natacion.jpg",
+              "material": ["Piscina"],
+              "detalles": { "tiempo": "30 min", "foco": "Resistencia sin impacto" },
+              "video": "https://youtu.be/8itYpBv7-f0",
+              "caracteristicas": ["Cardio", "Tiempo"],
+              "zonas": ["full_body", "tren_superior", "core"]
+            },
+            {
+              "id": "r-a9",
+              "nombre": "Ciclismo HIIT (Spinning Extremo)",
+              "imagen": "../imagenes/Deportes/spinning-hiit.jpg",
+              "material": ["Bicicleta de Spinning"],
+              "detalles": { "tiempo": "20 min", "formato": "20 seg tope / 10 seg descanso" },
+              "video": "https://youtu.be/nBIAxWw5jos",
+              "caracteristicas": ["Alta Intensidad", "Equipo"],
+              "zonas": ["tren_inferior"]
+            },
+            {
+              "id": "r-a10",
+              "nombre": "Remo HIIT (Sprint en Máquina)",
+              "imagen": "../imagenes/Deportes/remo-hiit.jpg",
+              "material": ["Máquina de remo"],
+              "detalles": { "tiempo": "15 min", "distancia": "Tramos de 500m rápidos" },
+              "video": "https://youtu.be/FWJR5Ve8cE0",
+              "caracteristicas": ["Alta Intensidad", "Equipo"],
+              "zonas": ["full_body", "tren_superior", "core"]
+            },
+            {
+              "id": "r-a11",
+              "nombre": "Saltos al Cajón Repetitivos (Box Jump Overs)",
+              "imagen": "../imagenes/Deportes/box-jump-overs.jpg",
+              "material": ["Cajón pliométrico"],
+              "detalles": { "tiempo": "60 seg", "reps": "4 series" },
+              "video": "https://youtu.be/uL3jSfAJCAY",
+              "caracteristicas": ["Alta Intensidad", "Potencia"],
+              "zonas": ["tren_inferior", "full_body"]
+            },
+            {
+              "id": "r-a12",
+              "nombre": "Arrastre de Trineo (Sled Push / Pull)",
+              "imagen": "../imagenes/Deportes/sled-push.jpg",
+              "material": ["Trineo de peso"],
+              "detalles": { "series": "5", "distancia": "20 metros" },
+              "video": "https://youtu.be/iaBVSJm7Eko",
+              "caracteristicas": ["Alta Intensidad", "Fuerza"],
+              "zonas": ["full_body", "tren_inferior", "core"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "casa",
+      "titulo": "Entrenamiento en Casa",
+      "imagen": "../imagenes/Deportes/casa.jpg",
+      "plan": [
+        {
+          "momento": "Nivel Principiante",
+          "opciones": [
+            {
+              "id": "c-p1",
+              "nombre": "Sentadilla a la Silla",
+              "imagen": "../imagenes/Deportes/sentadilla-silla.jpg",
+              "material": ["Silla estable"],
+              "detalles": { "series": "3", "reps": "12", "descanso": "45 seg" },
+              "video": "https://www.youtube.com/embed/MeIiIdhvXT4",
+              "caracteristicas": ["Casa", "Fuerza"],
+              "zonas": ["tren_inferior"]
+            },
+            {
+              "id": "c-p2",
+              "nombre": "Flexiones en Mesa o Encimera",
+              "imagen": "../imagenes/Deportes/flexion-mesa.jpg",
+              "material": ["Mueble alto y estable"],
+              "detalles": { "series": "3", "reps": "10", "descanso": "60 seg" },
+              "video": "https://www.youtube.com/embed/Z0bRiVHNn8Y",
+              "caracteristicas": ["Casa", "Fuerza"],
+              "zonas": ["tren_superior", "core"]
+            },
+            {
+              "id": "c-p3",
+              "nombre": "Puente de Glúteo en Suelo",
+              "imagen": "../imagenes/Deportes/puente-suelo.jpg",
+              "material": ["Ninguno"],
+              "detalles": { "series": "3", "reps": "15", "descanso": "30 seg" },
+              "video": "https://www.youtube.com/embed/6sc4_Yp-8_E",
+              "caracteristicas": ["Casa", "Core"],
+              "zonas": ["tren_inferior", "core"]
+            },
+            {
+              "id": "c-p4",
+              "nombre": "Bird-Dog (Equilibrio Lumbar)",
+              "imagen": "../imagenes/Deportes/bird-dog.jpg",
+              "material": ["Esterilla o alfombra"],
+              "detalles": { "series": "3", "reps": "10 totales", "descanso": "30 seg" },
+              "video": "https://www.youtube.com/embed/XmG7OshV_YI",
+              "caracteristicas": ["Casa", "Core"],
+              "zonas": ["core"]
+            },
+            {
+              "id": "c-p5",
+              "nombre": "Plancha con Rodillas Apoyadas",
+              "imagen": "../imagenes/Deportes/plancha-r.jpg",
+              "material": ["Esterilla"],
+              "detalles": { "tiempo": "30 seg", "reps": "3 series" },
+              "video": "https://www.youtube.com/embed/BQu26ABuVS0",
+              "caracteristicas": ["Casa", "Core"],
+              "zonas": ["core", "tren_superior"]
+            },
+            {
+              "id": "c-p6",
+              "nombre": "Elevación de Talones (Gemelos)",
+              "imagen": "../imagenes/Deportes/gemelos.jpg",
+              "material": ["Ninguno"],
+              "detalles": { "series": "3", "reps": "20", "descanso": "30 seg" },
+              "video": "https://www.youtube.com/embed/fS_S8O9UfXo",
+              "caracteristicas": ["Casa", "Fuerza"],
+              "zonas": ["tren_inferior"]
+            },
+            {
+              "id": "c-p7",
+              "nombre": "Rotaciones de Tronco de Pie",
+              "imagen": "../imagenes/Deportes/rotacion-tronco.jpg",
+              "material": ["Ninguno"],
+              "detalles": { "tiempo": "45 seg", "descanso": "15 seg" },
+              "video": "https://youtu.be/ugERZRwFQhI",
+              "caracteristicas": ["Casa", "Core"],
+              "zonas": ["core", "full_body"]
+            },
+            {
+              "id": "c-p8",
+              "nombre": "Bíceps Isométrico con Toalla",
+              "imagen": "../imagenes/Deportes/biceps-toalla.jpg",
+              "material": ["Toalla"],
+              "detalles": { "tiempo": "30 seg", "reps": "3 series" },
+              "video": "https://youtu.be/toR4XLLVzwY",
+              "caracteristicas": ["Casa", "Fuerza"],
+              "zonas": ["tren_superior"]
+            },
+            {
+              "id": "c-p9",
+              "nombre": "Aperturas de Pecho en Puerta",
+              "imagen": "../imagenes/Deportes/aperturas-puerta.jpg",
+              "material": ["Marco de puerta"],
+              "detalles": { "series": "3", "reps": "12", "descanso": "45 seg" },
+              "video": "https://youtu.be/_ifxX0U-xrM",
+              "caracteristicas": ["Casa", "Fuerza"],
+              "zonas": ["tren_superior"]
+            },
+            {
+              "id": "c-p10",
+              "nombre": "Desplantes Laterales Cortos",
+              "imagen": "../imagenes/Deportes/desplante-lateral.jpg",
+              "material": ["Ninguno"],
+              "detalles": { "series": "3", "reps": "10 por lado" },
+              "video": "https://youtu.be/CoHcZ4fMVdQ",
+              "caracteristicas": ["Casa", "Fuerza"],
+              "zonas": ["tren_inferior"]
+            },
+            {
+              "id": "c-p11",
+              "nombre": "Abdominales Cortos (Crunches)",
+              "imagen": "../imagenes/Deportes/crunches.jpg",
+              "material": ["Esterilla"],
+              "detalles": { "series": "3", "reps": "15", "descanso": "30 seg" },
+              "video": "https://youtu.be/nmwgirgXLYM",
+              "caracteristicas": ["Casa", "Core"],
+              "zonas": ["core"]
+            },
+            {
+              "id": "c-p12",
+              "nombre": "Patada de Glúteo (Cuadrupedia)",
+              "imagen": "../imagenes/Deportes/patada-gluteo.jpg",
+              "material": ["Esterilla"],
+              "detalles": { "series": "3", "reps": "15 por pierna" },
+              "video": "https://youtu.be/uuiN9NRFMBo",
+              "caracteristicas": ["Casa", "Fuerza"],
+              "zonas": ["tren_inferior"]
+            }
+          ]
+        },
+        {
+          "momento": "Nivel Intermedio",
+          "opciones": [
+            {
+              "id": "c-i1",
+              "nombre": "Zancadas en el Sitio",
+              "imagen": "../imagenes/Deportes/zancada-c.jpg",
+              "material": ["Ninguno"],
+              "detalles": { "series": "4", "reps": "12 por pierna" },
+              "video": "https://www.youtube.com/embed/e6_f5zL6q5s",
+              "caracteristicas": ["Casa", "Fuerza"],
+              "zonas": ["tren_inferior"]
+            },
+            {
+              "id": "c-i2",
+              "nombre": "Flexiones de Brazos Estándar",
+              "imagen": "../imagenes/Deportes/flexion-c.jpg",
+              "material": ["Ninguno"],
+              "detalles": { "series": "3", "reps": "12", "descanso": "60 seg" },
+              "video": "https://www.youtube.com/embed/IODxDxX7oi4",
+              "caracteristicas": ["Casa", "Fuerza"],
+              "zonas": ["tren_superior", "core"]
+            },
+            {
+              "id": "c-i3",
+              "nombre": "Fondos en Silla (Dips)",
+              "imagen": "../imagenes/Deportes/fondos-silla.jpg",
+              "material": ["Silla robusta"],
+              "detalles": { "series": "3", "reps": "10", "descanso": "60 seg" },
+              "video": "https://www.youtube.com/embed/2z8JmcrW-As",
+              "caracteristicas": ["Casa", "Fuerza"],
+              "zonas": ["tren_superior"]
+            },
+            {
+              "id": "c-i4",
+              "nombre": "Abdominales Bicicleta",
+              "imagen": "../imagenes/Deportes/bicicleta.jpg",
+              "material": ["Ninguno"],
+              "detalles": { "tiempo": "45 seg", "descanso": "15 seg" },
+              "video": "https://www.youtube.com/embed/nmwgirgXLYM",
+              "caracteristicas": ["Casa", "Core"],
+              "zonas": ["core"]
+            },
+            {
+              "id": "c-i5",
+              "nombre": "Superman (Lumbares)",
+              "imagen": "../imagenes/Deportes/superman.jpg",
+              "material": ["Alfombra"],
+              "detalles": { "series": "3", "reps": "15", "descanso": "45 seg" },
+              "video": "https://www.youtube.com/embed/8itYpBv7-f0",
+              "caracteristicas": ["Casa", "Core"],
+              "zonas": ["core", "full_body"]
+            },
+            {
+              "id": "c-i6",
+              "nombre": "Sentadilla Isométrica (Wall Sit)",
+              "imagen": "../imagenes/Deportes/pared-c.jpg",
+              "material": ["Pared"],
+              "detalles": { "tiempo": "45 seg", "reps": "3 series" },
+              "video": "https://www.youtube.com/embed/Yp_pS9S6eHw",
+              "caracteristicas": ["Casa", "Fuerza"],
+              "zonas": ["tren_inferior"]
+            },
+            {
+              "id": "c-i7",
+              "nombre": "Escaladores (Mountain Climbers)",
+              "imagen": "../imagenes/Deportes/climbers.jpg",
+              "material": ["Esterilla"],
+              "detalles": { "tiempo": "45 seg", "descanso": "15 seg" },
+              "video": "https://youtu.be/kLh-uczlPLg",
+              "caracteristicas": ["Casa", "Cardio"],
+              "zonas": ["core", "full_body"]
+            },
+            {
+              "id": "c-i8",
+              "nombre": "Plancha Lateral Estática",
+              "imagen": "../imagenes/Deportes/plancha-lateral.jpg",
+              "material": ["Esterilla"],
+              "detalles": { "tiempo": "30 seg por lado", "descanso": "20 seg" },
+              "video": "https://youtu.be/QOCn3_iOAro",
+              "caracteristicas": ["Casa", "Core"],
+              "zonas": ["core"]
+            },
+            {
+              "id": "c-i9",
+              "nombre": "Remo Invertido Bajo Mesa",
+              "imagen": "../imagenes/Deportes/remo-mesa.jpg",
+              "material": ["Mesa muy resistente"],
+              "detalles": { "series": "3", "reps": "8-10", "descanso": "90 seg" },
+              "video": "https://youtu.be/fgA4bGIKsn8",
+              "caracteristicas": ["Casa", "Fuerza"],
+              "zonas": ["tren_superior", "core"]
+            },
+            {
+              "id": "c-i10",
+              "nombre": "Puente de Glúteo a Una Pierna",
+              "imagen": "../imagenes/Deportes/puente-unapierna.jpg",
+              "material": ["Esterilla"],
+              "detalles": { "series": "3", "reps": "12 por lado" },
+              "video": "https://youtu.be/uuiN9NRFMBo",
+              "caracteristicas": ["Casa", "Fuerza"],
+              "zonas": ["tren_inferior", "core"]
+            },
+            {
+              "id": "c-i11",
+              "nombre": "Toques al Hombro en Plancha",
+              "imagen": "../imagenes/Deportes/shoulder-tap.jpg",
+              "material": ["Esterilla"],
+              "detalles": { "tiempo": "45 seg", "descanso": "15 seg" },
+              "video": "https://youtu.be/QOCn3_iOAro",
+              "caracteristicas": ["Casa", "Core"],
+              "zonas": ["core", "tren_superior"]
+            },
+            {
+              "id": "c-i12",
+              "nombre": "Sentadilla con Salto Suave",
+              "imagen": "../imagenes/Deportes/squat-jump.jpg",
+              "material": ["Ninguno"],
+              "detalles": { "series": "3", "reps": "12", "descanso": "60 seg" },
+              "video": "https://youtu.be/wg1aM2MLynM",
+              "caracteristicas": ["Casa", "Potencia"],
+              "zonas": ["tren_inferior", "full_body"]
+            }
+          ]
+        },
+        {
+          "momento": "Nivel Avanzado",
+          "opciones": [
+            {
+              "id": "c-a1",
+              "nombre": "Sentadilla a una Pierna (Pistol)",
+              "imagen": "../imagenes/Deportes/pistol.jpg",
+              "material": ["Ninguno / Pared para apoyo"],
+              "detalles": { "series": "3", "reps": "6 por lado" },
+              "video": "https://www.youtube.com/embed/wdln9l0V0gs",
+              "caracteristicas": ["Fuerza", "Equilibrio"],
+              "zonas": ["tren_inferior", "core"]
+            },
+            {
+              "id": "c-a2",
+              "nombre": "Flexiones Diamante",
+              "imagen": "../imagenes/Deportes/diamante-c.jpg",
+              "material": ["Ninguno"],
+              "detalles": { "series": "4", "reps": "12", "descanso": "60 seg" },
+              "video": "https://www.youtube.com/embed/s8vV_v_H5Hw",
+              "caracteristicas": ["Casa", "Fuerza"],
+              "zonas": ["tren_superior", "core"]
+            },
+            {
+              "id": "c-a3",
+              "nombre": "Abdominales en V (V-Ups)",
+              "imagen": "../imagenes/Deportes/v-ups.jpg",
+              "material": ["Esterilla"],
+              "detalles": { "series": "4", "reps": "15", "descanso": "45 seg" },
+              "video": "https://www.youtube.com/embed/nmwgirgXLYM",
+              "caracteristicas": ["Casa", "Core"],
+              "zonas": ["core"]
+            },
+            {
+              "id": "c-a4",
+              "nombre": "Flexiones con Pies Elevados",
+              "imagen": "../imagenes/Deportes/flexion-pies.jpg",
+              "material": ["Silla o Sofá"],
+              "detalles": { "series": "4", "reps": "10", "descanso": "90 seg" },
+              "video": "https://www.youtube.com/embed/IODxDxX7oi4",
+              "caracteristicas": ["Casa", "Alta Intensidad"],
+              "zonas": ["tren_superior", "core"]
+            },
+            {
+              "id": "c-a5",
+              "nombre": "Burpees con Flexión",
+              "imagen": "../imagenes/Deportes/burpee-final.jpg",
+              "material": ["Ninguno"],
+              "detalles": { "tiempo": "60 seg", "ritmo": "Máximo" },
+              "video": "https://www.youtube.com/embed/auBLPXO8FHI",
+              "caracteristicas": ["Alta Intensidad", "Cardio"],
+              "zonas": ["full_body"]
+            },
+            {
+              "id": "c-a6",
+              "nombre": "Cross Montaña (Escalador Cruzado)",
+              "imagen": "../imagenes/Deportes/cross-montaña.jpg",
+              "material": ["Ninguno"],
+              "detalles": { "tiempo": "60 seg", "descanso": "20 seg" },
+              "video": "https://www.youtube.com/embed/vG9L66K9e6M",
+              "caracteristicas": ["Alta Intensidad", "Core"],
+              "zonas": ["core", "full_body", "tren_superior"]
+            },
+            {
+              "id": "c-a7",
+              "nombre": "Flexiones a una Mano (Asistidas)",
+              "imagen": "../imagenes/Deportes/flexion-unamano.jpg",
+              "material": ["Balón o Toalla para apoyo suave"],
+              "detalles": { "series": "3", "reps": "5 por brazo", "descanso": "90 seg" },
+              "video": "https://youtu.be/Z0bRiVHNn8Y",
+              "caracteristicas": ["Casa", "Fuerza"],
+              "zonas": ["tren_superior", "core"]
+            },
+            {
+              "id": "c-a8",
+              "nombre": "Salto Horizontal + Burpee (Broad Jump Burpee)",
+              "imagen": "../imagenes/Deportes/broad-jump-reb.jpg",
+              "material": ["Espacio libre"],
+              "detalles": { "series": "4", "reps": "8", "descanso": "60 seg" },
+              "video": "https://youtu.be/uhz-ia-2UcM",
+              "caracteristicas": ["Casa", "Alta Intensidad"],
+              "zonas": ["full_body", "tren_inferior"]
+            },
+            {
+              "id": "c-a9",
+              "nombre": "L-Sit Holds (Isométrico Abdominal)",
+              "imagen": "../imagenes/Deportes/l-sit.jpg",
+              "material": ["Suelo o dos Sillas firmes"],
+              "detalles": { "tiempo": "15 a 20 seg", "reps": "4 series" },
+              "video": "https://youtu.be/BQu26ABuVS0",
+              "caracteristicas": ["Casa", "Core"],
+              "zonas": ["core", "tren_superior"]
+            },
+            {
+              "id": "c-a10",
+              "nombre": "Dominadas en Marco de Puerta",
+              "imagen": "../imagenes/Deportes/pullup-puerta.jpg",
+              "material": ["Barra de puerta"],
+              "detalles": { "series": "4", "reps": "8-12", "descanso": "90 seg" },
+              "video": "https://youtu.be/Cb7gSQDnPiY",
+              "caracteristicas": ["Casa", "Fuerza"],
+              "zonas": ["tren_superior"]
+            },
+            {
+              "id": "c-a11",
+              "nombre": "Zancadas Búlgaras con Salto",
+              "imagen": "../imagenes/Deportes/bulgara-salto.jpg",
+              "material": ["Silla o Sofá"],
+              "detalles": { "series": "3", "reps": "8 por pierna", "descanso": "60 seg" },
+              "video": "https://youtu.be/ZiIwAeC2tfs",
+              "caracteristicas": ["Casa", "Potencia"],
+              "zonas": ["tren_inferior"]
+            },
+            {
+              "id": "c-a12",
+              "nombre": "Handstand Push-ups (Flexión Pino en Pared)",
+              "imagen": "../imagenes/Deportes/hspu.jpg",
+              "material": ["Pared fuerte", "Cojín para cabeza"],
+              "detalles": { "series": "3", "reps": "5-8", "descanso": "2 min" },
+              "video": "https://youtu.be/1uQd3FWoPGA",
+              "caracteristicas": ["Casa", "Fuerza"],
+              "zonas": ["tren_superior", "core"]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
