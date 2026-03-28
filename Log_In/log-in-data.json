@@ -36,8 +36,8 @@
       }
     ],
     "users": [
-      { "username": "admin", "password": "123" },
-      { "username": "prueba", "password": "abc" }
+      { "username": "admin", "password": "Admin1234" },
+      { "username": "prueba", "password": "Prueba123" }
     ]
   }
 }

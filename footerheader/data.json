@@ -1,11 +1,7 @@
 {
   "header": {
-    "home": {
-      "link": "../Home/home-index.html",
-      "logo": "../imagenes/Home/home.svg",
-      "alt": "Home"
-    },
     "navLinks": [
+      { "id": "nav-home", "link": "../Home/home-index.html", "text": "Inicio", "icon": "home" },
       { "id": "nav-dietas", "link": "../Dietas/Dietas_index.html", "text": "Dietas", "icon": "restaurant" },
       { "id": "nav-deporte", "link": "../Deporte/Deporte_index.html", "text": "Deporte", "icon": "fitness_center" },
       { "id": "nav-explorador", "link": "../Explorer/explorer.html", "text": "Explorar", "icon": "explore" },
@@ -15,7 +11,7 @@
   },
   "footer": {
     "textColumns": [
-      "Proyecto desarrollado para la asignatura Programación Web y Móvil del Grado de Ingeniería Informática de la ULPGC por los integrantes: Margarita Cruz Pérez, Salwa Madani Lazaar, Óscar Yavar Rodríguez, Kemuel Rodríguez García",
+      "Proyecto desarrollado para la asignatura Programación Web y Móvil del Grado de Ingeniería Informática de la ULPGC por los integrantes: Margarita Cruz Pérez, Salwa Madani Lazaar, Óscar Yavar Rodríguez y Kemuel Rodríguez García",
       "Contáctanos a través de nuestras redes sociales de Sports&DietApp:"
     ],
     "socialLinks": [

@@ -56,12 +56,10 @@ function inyectarHeader(headerData) {
     const nav = document.getElementById('main-nav');
     if (!nav) return;
 
-    nav.innerHTML = `
-        <a id="nav-home" class="nav-button" href="${headerData.home.link}">
-            <img src="${headerData.home.logo}" alt="${headerData.home.alt}" style="width: 100%; height: 100%; object-fit: contain;">
-        </a>
-    `;
+    // Limpiamos el contenido por si acaso
+    nav.innerHTML = '';
 
+    // Ahora iteramos sobre TODOS los links (incluido el Home que ahora es el primero)
     if (headerData.navLinks) {
         headerData.navLinks.forEach(enlace => {
             nav.innerHTML += `
