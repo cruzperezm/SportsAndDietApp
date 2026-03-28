@@ -6,11 +6,12 @@ body {
     overflow: hidden;
     justify-content: center;
     align-items: center;
+    font-size: 24px;
 }
 
 p{
     width: 75vw;
-    margin: 0;
+    margin: 1.5vh;
 }
 
 .box {
@@ -25,16 +26,16 @@ p{
     text-align: center;
     flex-grow: 1;
     row-gap: 1vh;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .selector {
-    height: 35px;
+    height: 5vh;
     width: 25vw;
-    background-color: #f0f0f0;
+    background-color: #ffffff;
     border-radius: 8px;
     border: 2px solid lightgray;
-    margin-bottom: 0;
+    font-size: 20px;
 }
 
 input {
@@ -43,11 +44,11 @@ input {
     border-radius: 8px;
     text-decoration: none;
     border: 2px solid lightgray;
-    margin-bottom: 30px;
     height: 5vh;
 }
 
 .form {
+    display: flex;
     flex: 1;
     width: 25vw;
     height: 5vh;
@@ -55,7 +56,6 @@ input {
     border-radius: 8px;
     text-decoration: none;
     border: 2px solid lightgray;
-    margin-bottom: 30px;
     justify-content: center;
     align-items: center;
 }
@@ -70,13 +70,13 @@ input {
     background-color: #d1d1d1; }
 
 .radiowrapper input:checked ~ label {
-    background-color: #aefaf8;
+    background-color: #37ba8f;
 }
 
 .button {
     flex: 1;
-    height: 3vw;
-    width: 5vw;
+    height: 6vh;
+    width: 10vw;
     background-color: #f0f0f0;
     border-radius: 8px;
     display: block;
@@ -103,48 +103,69 @@ input[type=text]:focus {
     font-size: xx-large;
 }
 @media only screen and (max-width: 600px) {
-    .form-row {
-        flex-direction: column;
-        align-items: center;
-    }
     .form {
-        display: flex;
+        width: 50vw;
+    }
+    .selector {
+        height: 2rem;
+        width: 50vw;
+        font-size: 16px;
+    }
+    input {
+        height: 2rem;
         width: 50vw;
     }
     .button {
-        width: 25vw;
-        height: 3rem;
+        width: 20vw;
+        height: 2.5rem;
+    }
+    body{
+        font-size: 20px;
     }
     .box{
-
-    }
-    body{
-        font-size: 26px;
+        width: 55vw;
     }
 }
 
-@media only screen and (min-width: 600px) {
-    .form-row {
-        flex-direction: row;
+@media only screen and (min-width: 600px) and (max-width: 992px) {
+    body{
+        font-size: 22px;
+    }
+    p{
+        margin-block-start: -25px;
+        margin-block-end: 10px;
     }
     .form {
-        display: flex;
+        width: 35vw;
     }
-    body{
-        font-size: 24px;
-    }
-}
-
-@media only screen and (min-width: 992px) {
-    .form-row {
-        flex-direction: column;
-        align-items: center;
-    }
-    .form {
-        display: flex;
-    }
-    body{
+    .selector {
+        height: 1.5rem;
+        width: 35vw;
         font-size: 18px;
+    }
+    input {
+        height: 1.5rem;
+        width: 35vw;
+    }
+    .button {
+        width: 15vw;
+        height: 2rem;
+    }
+    .box{
+        width: 60vw;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    body{
+        font-size: 30px;
+    }
+    .button {
+        height: 3rem;
+    }
+    
+    .selector {
+        font-size: 26px;
     }
 
 }
