@@ -1,3 +1,7 @@
+body{
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
 header{
     margin-bottom: 5vh;
 }
