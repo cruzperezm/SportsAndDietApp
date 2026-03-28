@@ -27,8 +27,8 @@
         const container = document.getElementById('bars-container');
         // Mapeo manual para mantener tus posiciones exactas de X
         const xPositions = [122, 249, 376, 503, 630, 757, 884];
-        container.innerHTML = data.deporte.barras.map((b, i) => `
-                <div class="bar-unit" style="left: ${xPositions[i]}px; height: ${b.altura};"></div>
+        container.innerHTML = data.deporte.valor.map((b, i) => `
+                <div class="bar-unit" style="left: ${xPositions[i]}px; height: ${b.altura}; color: #1A1A1A"></div>
                 <div style="position:absolute; left:${xPositions[i]}px; top:680px; font-size:40px;">${b.dia}</div>
             `).join('');
     });

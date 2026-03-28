@@ -9,46 +9,65 @@
 <body>
 <main>
 <div id="dashboard-deporte">
-    <p class="text1">Lorem Ipsum</p>
-    <div class="ellipse11"></div>
+    <p class="text_name" id="name"></p>
+    <div class="ellipse11" id="profile_picture"></div>
     <div class="ellipse12"></div>
-    <div class="rectangle79" href="Dashboard-Dieta.html">
-        <a class="ellipse15" href="Dashboard-Dieta.html"></a>
+    <div class="rectangle79">
+        <a class="ellipse15" id="boton_dieta" href="Dashboard-Dieta.html"></a>
     </div>
-    <div class="rectangle83">
-        <div class="rectangle92"></div>
-        <div class="text18">L</div>
-        <div class="rectangle93"></div>
-        <div class="text19">M</div>
-        <div class="rectangle94"></div>
-        <div class="text20">X</div>
-        <div class="rectangle95"></div>
-        <div class="text21">J</div>
-        <div class="rectangle96"></div>
-        <div class="text22">V</div>
-        <div class="rectangle97"></div>
-        <div class="text23">S</div>
-        <div class="rectangle98"></div>
-        <div class="text24">D</div>
+    <div class="rectangle_container" id="bars-container">
+        <!--<div class="rectangle_day" id="bar_L"></div>
+        <div class="text_day" id="L">L</div>
+        <div class="rectangle_day" id="bar_M"></div>
+        <div class="text_day" id="M">M</div>
+        <div class="rectangle_day" id="bar_X"></div>
+        <div class="text_day" id="X">X</div>
+        <div class="rectangle_day" id="bar_J"></div>
+        <div class="text_day" id="J">J</div>
+        <div class="rectangle_day" id="bar_V"></div>
+        <div class="text_day" id="V">V</div>
+        <div class="rectangle_day" id="bar_S"></div>
+        <div class="text_day" id="S">S</div>
+        <div class="rectangle_day" id="bar_D"></div>
+        <div class="text_day" id="D">D</div>-->
+        <div class="text25" id="diario1"></div>
+        <div class="text26" id="avance_diario1"></div>
+        <div class="text25" id="diario2"></div>
+        <div class="text26" id="avance_diario2"></div>
+        <div class="text25" id="diario3"></div>
+        <div class="text26" id="avance_diario3"></div>
     </div>
-    <div class="ellipse16"></div>
-    <div class="text12">Lorem Ipsum</div>
-    <div class="text13">100/200</div>
+    <div class="text12" id="entrenamiento1">Lorem Ipsum</div>
+    <div class="text13" id="avance_entrenamiento1">100/200</div>
     <div class="rectangle86"></div>
     <div class="rectangle87"></div>
-    <div class="ellipse17"></div>
-    <div class="text14">Lorem Ipsum</div>
-    <div class="text15">100/200</div>
+    <div class="text14" id="entrenamiento2">Lorem Ipsum</div>
+    <div class="text15" id="avance_entrenamiento2">100/200</div>
     <div class="rectangle88"></div>
     <div class="rectangle89"></div>
-    <div class="ellipse18"></div>
-    <div class="text16">Lorem Ipsum</div>
-    <div class="text17">100/200</div>
+    <div class="text16" id="entrenamiento3">Lorem Ipsum</div>
+    <div class="text17" id="avance_entrenamiento3">100/200</div>
+    <div class="rectangle90"></div>
+    <div class="rectangle91"></div>
+    <div class="text16" id="entrenamiento4">Lorem Ipsum</div>
+    <div class="text17" id="avance_entrenamiento4">100/200</div>
     <div class="rectangle90"></div>
     <div class="rectangle91"></div>
 </div>
 </main>
 <footer xlu-include-file="/footerheader/footer.html"></footer>
 <script>xLuIncludeFile()</script>
+<script>
+    fetch('data.json').then(r => r.json()).then(data => {
+        document.getElementById('name').innerText = data.usuario.nombre;
+        const container = document.getElementById('bars-container');
+        // Mapeo manual para mantener tus posiciones exactas de X
+        const xPositions = [122, 249, 376, 503, 630, 757, 884];
+        container.innerHTML = data.deporte.barras.map((b, i) => `
+                <div class="bar-unit" style="left: ${xPositions[i]}px; height: ${b.altura};"></div>
+                <div style="position:absolute; left:${xPositions[i]}px; top:680px; font-size:40px;">${b.dia}</div>
+            `).join('');
+    });
+</script>
 </body>
 </html>
