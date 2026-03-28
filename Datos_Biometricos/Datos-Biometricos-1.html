@@ -14,7 +14,8 @@
         <label>Nombre</label>
         <input id="name" type="text" required>
         <label> Género </label>
-        <select id="genre" class="selector">
+        <select id="genre" class="selector" required>
+            <option value="" disabled selected>Seleccione</option>
             <option value="Hombre">Hombre</option>
             <option value="Mujer">Mujer</option>
             <option value="No-binario">No Binario</option>
@@ -23,9 +24,9 @@
         <label>Edad</label>
         <input id="age" type="number" required>
         <label>Altura</label>
-        <input id="height" type="number" required>
+        <input id="height" type="number" placeholder="cm" required>
         <div>
-            <button onclick="store()" type="submit" class="button"></button>
+            <button onclick="store()" type="submit" class="button">Siguiente</button>
         </div>
     </div>
 </form>
