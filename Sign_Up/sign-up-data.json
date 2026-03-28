@@ -7,11 +7,12 @@
     "inputs": [
       { "id": "signup-username", "placeholder": "Nombre de usuario", "type": "text" },
       { "id": "signup-email", "placeholder": "Correo electrónico", "type": "email" },
-      { "id": "signup-password", "placeholder": "Contraseña", "type": "password" }
+      { "id": "signup-password", "placeholder": "Contraseña", "type": "password" },
+      { "id": "signup-password-repeat", "placeholder": "Repetir contraseña", "type": "password" }
     ],
     "buttons": [
       { "text": "Atrás", "link": "../Home/home-index.html", "type": "button" },
-      { "text": "Registrarse", "link": "../Log_In/log-in-index.html", "type": "submit" }
+      { "text": "Registrarse", "link": "../Datos_Biometricos/Datos-Biometricos-1.html", "type": "submit" }
     ],
     "links": {
       "prefix": "¿Ya tienes una cuenta? | ",

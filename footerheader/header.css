@@ -18,7 +18,7 @@
 }
 
 /* =========================================
-   ESTADO BASE DE LOS BOTONES CENTRALES (PC)
+   ESTADO BASE DE TODOS LOS BOTONES
    ========================================= */
 .nav-button {
     text-decoration: none;
@@ -26,7 +26,6 @@
     /* Fondo gris muy clarito para diferenciar del header blanco */
     background-color: #F3F4F6;
     padding: 0.5rem 1rem;
-    /* Rectángulos con esquinas redondeadas para Dietas, Deporte, Explorar, Info */
     border-radius: 10px;
     font-weight: 500;
     display: flex;
@@ -36,83 +35,64 @@
     transition: all 0.3s ease;
 }
 
-/* Mostrar iconos y texto juntos en PC */
 .nav-icon {
     display: block;
-    font-size: 20px; /* Tamaño equilibrado para el icono */
+    font-size: 20px;
 }
 .nav-text {
     display: block;
     font-size: 1rem;
 }
 
-/* Efecto HOVER (Estilo Dieta: Elevación y Sombra) */
 .nav-button:hover {
-    background-color: #ECFDF5; /* Verde esmeralda clarito */
-    color: #059669; /* Verde esmeralda oscuro */
-    transform: translateY(-4px); /* Elevación sutil */
+    background-color: #ECFDF5;
+    color: #059669;
+    transform: translateY(-4px);
     box-shadow: 0 8px 12px -3px rgba(0, 0, 0, 0.1);
 }
 
 /* =========================================
-   POSICIONAMIENTO Y ESTILO DE EXTREMOS (HOME Y LOGIN)
+   POSICIONAMIENTO DE EXTREMOS (HOME Y LOGIN)
    ========================================= */
 
-/* HOME: Se va a la izquierda y centra el resto */
+/* HOME: Se va a la izquierda y centra el resto.
+   Ya no necesita reglas de tamaño ni hover especiales,
+   hereda todo de .nav-button */
 #nav-home {
     margin-right: auto;
-    background-color: transparent; /* Sin fondo, como un logo */
-    width: 45px; /* Tamaño reducido para igualarlo a los demás iconos */
-    height: 45px;
-    padding: 8px; /* Espaciado interno */
-}
-
-#nav-home img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-
-#nav-home:hover {
-    background-color: #F3F4F6; /* Fondecito suave al pasar el ratón */
-    transform: translateY(-4px);
-    box-shadow: 0 8px 12px -3px rgba(0, 0, 0, 0.1);
 }
 
 /* LOGIN: Se va a la derecha, centra el resto y TIENE FORMA DE PÍLDORA */
 #nav-login {
     margin-left: auto;
-    border-radius: 9999px; /* ¡Forma de píldora recuperada! */
-    padding: 0.5rem 1.5rem; /* Padding horizontal un poco mayor para acentuar la píldora */
+    border-radius: 9999px;
+    padding: 0.5rem 1.5rem;
 }
 
-/* Toque sutil de Deporte (Naranja) solo para el botón Log In en hover */
 #nav-login:hover {
     background-color: #FFF7ED;
     color: #F97316;
 }
 
 /* =========================================
-   VISTA INTERMEDIA (<= 768px) - Adiós textos, se mantiene la forma
+   VISTA INTERMEDIA (<= 768px)
    ========================================= */
 @media (max-width: 768px) {
-    /* OCULTAMOS TODOS LOS TEXTOS para ganar espacio */
     .nav-text {
         display: none !important;
     }
 
-    /* Reducimos ligeramente el padding para que la píldora sin texto no se vea muy vacía */
     .nav-button {
         padding: 0.5rem 0.8rem;
     }
 
     #nav-login {
-        padding: 0.5rem 1rem; /* Mantenemos el look de píldora un poco más ancho */
+        padding: 0.5rem 1rem;
     }
 }
 
 /* =========================================
-   VISTA MÓVIL (<= 412px) - Solo Iconos Circulares
+   VISTA MÓVIL (<= 412px)
    ========================================= */
 @media (max-width: 412px) {
     .header {
@@ -120,34 +100,28 @@
     }
 
     .navigation {
-        gap: 5px; /* Comprimimos el espacio */
-        justify-content: center; /* Centramos todo en móvil */
+        gap: 5px;
+        justify-content: center;
     }
 
-    /* En móvil anulamos los márgenes automáticos para que se repartan parejos */
+    /* Anulamos los márgenes para que se repartan parejos */
     #nav-home { margin-right: 0; }
     #nav-login { margin-left: 0; }
 
-    /* Mostramos solo los iconos, centrados */
     .nav-icon {
         display: block !important;
-        font-size: 24px !important; /* Un poco más grandes para móvil */
+        font-size: 24px !important;
         margin: 0;
     }
 
-    /* Convertimos TODOS los botones (incluido Login) en CÍRCULOS perfectos */
+    /* Convertimos TODOS los botones en CÍRCULOS perfectos */
     .nav-button {
         width: 45px;
         height: 45px;
-        padding: 0 !important; /* Quitamos el padding asimétrico de la píldora */
-        border-radius: 50% !important; /* Forzamos forma circular */
+        padding: 0 !important;
+        border-radius: 50% !important;
         display: flex;
         justify-content: center;
         align-items: center;
-    }
-
-    #nav-home {
-        width: 45px;
-        height: 45px;
     }
 }
