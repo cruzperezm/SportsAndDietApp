@@ -27,47 +27,6 @@ function esperarElemento(selector, callback) {
     }
 }
 
-// --- FUNCIONES DE INYECCIÓN DE DATOS ---
-
-function inyectarHeader(headerData) {
-    // Logo Home
-    const navHome = document.getElementById('nav-home');
-    if (navHome) {
-        navHome.href = headerData.home.link;
-        navHome.innerHTML = `<img src="${headerData.home.logo}" alt="${headerData.home.alt}">`;
-    }
-
-    // Links de navegación
-    headerData.navLinks.forEach(linkObj => {
-        const linkElement = document.getElementById(linkObj.id);
-        if (linkElement) {
-            linkElement.href = linkObj.link;
-            linkElement.textContent = linkObj.text;
-        }
-    });
-}
-
-function inyectarFooter(footerData) {
-    // Columnas de texto
-    const columnas = document.querySelectorAll('.footer-column p');
-    if (columnas.length >= 2) {
-        columnas[0].textContent = footerData.textColumns[0];
-        columnas[1].textContent = footerData.textColumns[1];
-    }
-
-    // Redes Sociales (las creamos dinámicamente)
-    const socialContainer = document.querySelector('.social-links');
-    if (socialContainer) {
-        socialContainer.innerHTML = ''; // Vaciamos el contenedor
-        footerData.socialLinks.forEach(social => {
-            socialContainer.innerHTML += `
-                <a href="${social.link}" class="${social.name}" aria-label="${social.name}">
-                    <img alt="${social.alt}" src="${social.icon}">
-                </a>
-            `;
-        });
-    }
-}
 
 function inyectarDatosEnHome(data) {
     // --- HERO SECTION ---
