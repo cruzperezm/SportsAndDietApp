@@ -1,3 +1,28 @@
+// =========================================================
+// 1. INYECTAR LOS ESTILOS DEL HEADER Y FOOTER
+// =========================================================
+function cargarEstilosGlobales() {
+    // Crear el link para el CSS del Header
+    const cssHeader = document.createElement('link');
+    cssHeader.rel = 'stylesheet';
+    cssHeader.href = '../footerheader/header.css'; // Ajusta la ruta si tu CSS se llama distinto
+
+    // Crear el link para el CSS del Footer
+    const cssFooter = document.createElement('link');
+    cssFooter.rel = 'stylesheet';
+    cssFooter.href = '../footerheader/footer.css'; // Ajusta la ruta si tu CSS se llama distinto
+
+    // Añadirlos al <head> de la página
+    document.head.appendChild(cssHeader);
+    document.head.appendChild(cssFooter);
+}
+
+// Ejecutamos la función inmediatamente para que vaya descargando los estilos
+cargarEstilosGlobales();
+
+// =========================================================
+// 2. LÓGICA ORIGINAL DE INYECCIÓN DE DATOS (Sin cambios)
+// =========================================================
 document.addEventListener('DOMContentLoaded', () => {
     // Comprobamos cada 100ms si el HTML del header y footer ya fue inyectado
     const intervalo = setInterval(() => {

@@ -23,19 +23,19 @@ function inyectarSignUp(data) {
         });
     }
 
-    // 3. Inyectar Botones
+    // 3. Inyectar Botones (UNIFICADO)
     const btnsContainer = document.getElementById('signup-buttons-container');
     if (btnsContainer) {
         btnsContainer.innerHTML = '';
         data.buttons.forEach(btn => {
             if (btn.type === 'submit') {
                 btnsContainer.innerHTML += `
-                    <button type="submit" class="wire-btn" style="border:none; font-family:inherit; font-size:inherit; font-weight:bold; background-color: #d9d9d9;">
+                    <button type="submit" class="wire-btn solid-btn btn-submit">
                         ${btn.text}
                     </button>
                 `;
             } else {
-                btnsContainer.innerHTML += `<a href="${btn.link}" class="wire-btn">${btn.text}</a>`;
+                btnsContainer.innerHTML += `<a href="${btn.link}" class="wire-btn solid-btn">${btn.text}</a>`;
             }
         });
     }
@@ -66,6 +66,69 @@ function inyectarSignUp(data) {
         });
     }
 
+    // =========================================================
+    // --- NUEVA LÓGICA DE VALIDACIÓN VISUAL DE CAMPOS ---
+    // =========================================================
+
+    const inputs = document.querySelectorAll('.input-field input');
+
+    // Función para validar un input individual
+    function validarInput(input) {
+        const id = input.id;
+        const valor = input.value.trim();
+        let esValido = false;
+
+        // Limpiar clases previas
+        input.classList.remove('is-valid', 'is-invalid');
+
+        // Solo validamos si hay algo escrito
+        if (valor === '') return;
+
+        // Lógica de validación por ID
+        if (id === 'signup-username') {
+            // Nombre de usuario: Al menos 3 caracteres
+            esValido = valor.length >= 3;
+        } else if (id === 'signup-email') {
+            // Correo electrónico: Expresión regular básica
+            const reEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            esValido = reEmail.test(valor);
+        } else if (id === 'signup-password') {
+            // Contraseña: Mínimo 8 caracteres, al menos 1 mayúscula y 1 número
+            const rePassword = /^(?=.*[A-Z])(?=.*\d).{8,}$/;
+            esValido = rePassword.test(valor);
+
+            // Si la contraseña principal cambia, forzamos la validación de la repetida
+            const repeatInput = document.getElementById('signup-password-repeat');
+            if (repeatInput && repeatInput.value !== '') {
+                // Al quitar y poner la clase forzamos a que se vuelva a evaluar visualmente abajo
+                if(repeatInput.value === valor) {
+                    repeatInput.classList.remove('is-invalid');
+                    repeatInput.classList.add('is-valid');
+                } else {
+                    repeatInput.classList.remove('is-valid');
+                    repeatInput.classList.add('is-invalid');
+                }
+            }
+        } else if (id === 'signup-password-repeat') {
+            // Repetir contraseña: Debe ser exactamente igual a la primera
+            const originalPassword = document.getElementById('signup-password').value;
+            esValido = (valor === originalPassword && valor !== '');
+        }
+
+        // Aplicar la clase correspondiente al input actual
+        if (esValido) {
+            input.classList.add('is-valid'); // Borde Verde
+        } else {
+            input.classList.add('is-invalid'); // Borde Rojo
+        }
+    }
+
+    // Escuchar el evento 'input' para validar mientras se escribe
+    inputs.forEach(input => {
+        input.addEventListener('input', () => validarInput(input));
+    });
+
+
     // 6. LÓGICA DE CREACIÓN DE USUARIO (Base de Datos Local)
     const signupForm = document.getElementById('signup-form');
     const msg = document.getElementById('signup-message');
@@ -75,9 +138,27 @@ function inyectarSignUp(data) {
             evento.preventDefault();
 
             // Recogemos los datos introducidos
-            const username = document.getElementById('signup-username').value;
-            const email = document.getElementById('signup-email').value;
-            const password = document.getElementById('signup-password').value;
+            const usernameInput = document.getElementById('signup-username');
+            const emailInput = document.getElementById('signup-email');
+            const passwordInput = document.getElementById('signup-password');
+
+            const username = usernameInput.value;
+            const email = emailInput.value;
+            const password = passwordInput.value;
+
+            // Validación final antes de guardar: Todos los campos deben ser válidos visualmente
+            const todosValidos = [...inputs].every(input => input.classList.contains('is-valid'));
+
+            if (!todosValidos) {
+                // Forzamos la validación de todos los campos para que se pongan en rojo los que faltan
+                inputs.forEach(input => validarInput(input));
+
+                // Añadimos un mensaje más explicativo por si es la contraseña lo que falla
+                msg.innerHTML = 'Por favor, rellena todos los campos correctamente.<br><small style="color:#555;">La contraseña requiere min 8 caracteres, 1 mayúscula y 1 número.</small>';
+                msg.className = 'msg-error';
+                msg.style.display = 'block';
+                return; // Detiene el registro
+            }
 
             // Simulamos consulta a la Base de Datos (leemos de localStorage)
             let usuariosGuardados = JSON.parse(localStorage.getItem('db_usuarios_sports')) || [];
@@ -90,16 +171,18 @@ function inyectarSignUp(data) {
                 msg.textContent = 'Este nombre de usuario ya está registrado.';
                 msg.className = 'msg-error';
                 msg.style.display = 'block';
+                usernameInput.classList.remove('is-valid');
+                usernameInput.classList.add('is-invalid');
             } else {
                 // Éxito: Guardamos el nuevo usuario
                 usuariosGuardados.push({ username: username, password: password, email: email });
                 localStorage.setItem('db_usuarios_sports', JSON.stringify(usuariosGuardados));
 
-                msg.textContent = '¡Registro exitoso! Redirigiendo al Log In...';
+                msg.textContent = '¡Registro exitoso! Redirigiendo...';
                 msg.className = 'msg-success';
                 msg.style.display = 'block';
 
-                // Esperamos 1.5 segundos para que lea el mensaje y redirigimos
+                // Redirigimos
                 const submitBtnData = data.buttons.find(b => b.type === 'submit');
                 setTimeout(() => {
                     window.location.href = submitBtnData.link;
