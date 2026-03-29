@@ -9,7 +9,6 @@ function inicializarDeportes() {
         return;
     }
 
-    // ACTUALIZADO: Apunta al nuevo archivo deporte.json
     fetch('deporte.json')
         .then(res => {
             if (!res.ok) throw new Error("No se encontró el deporte.json");
@@ -50,7 +49,6 @@ function cargarPaginaEjercicio() {
         return;
     }
 
-    // ACTUALIZADO: Apunta al nuevo archivo deporte.json
     fetch('deporte.json')
         .then(res => res.json())
         .then(data => {
@@ -69,13 +67,18 @@ function cargarPaginaEjercicio() {
                 return;
             }
 
+            // --- 1. DATOS BÁSICOS ---
             tituloDOM.innerText = ejercicio.nombre;
+
+            // Portada
             const hero = document.getElementById('ejercicio-hero');
             if (hero && ejercicio.imagen) {
                 hero.style.backgroundImage = `linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('${ejercicio.imagen}')`;
                 hero.style.backgroundSize = 'cover';
+                hero.style.backgroundPosition = 'center';
             }
 
+            // Material
             const listaMaterial = document.getElementById('ejercicio-material');
             if (listaMaterial) {
                 listaMaterial.innerHTML = '';
@@ -86,6 +89,7 @@ function cargarPaginaEjercicio() {
                 });
             }
 
+            // Detalles
             const listaDetalles = document.getElementById('ejercicio-detalles');
             if (listaDetalles) {
                 listaDetalles.innerHTML = '';
@@ -96,20 +100,53 @@ function cargarPaginaEjercicio() {
                 }
             }
 
-            const videoIframe = document.getElementById('ejercicio-video');
-            if (videoIframe && ejercicio.video) {
-                videoIframe.src = ejercicio.video;
-            } else if (videoIframe) {
-                videoIframe.parentElement.style.display = 'none';
+            // --- 2. IMAGEN TÉCNICA (Sustituye al vídeo) ---
+            const elementoImagenTecnica = document.getElementById('ejercicio-gif');
+
+            if (elementoImagenTecnica && ejercicio.imagen) {
+                elementoImagenTecnica.src = ejercicio.imagen;
+                elementoImagenTecnica.alt = `Técnica para ${ejercicio.nombre}`;
+
+                // 1. DESACTIVAR LA CAJA DEL VÍDEO (Padre 1)
+                const contenedorVideo = elementoImagenTecnica.closest('.video-container');
+                if (contenedorVideo) {
+                    contenedorVideo.style.display = 'block';
+                    contenedorVideo.style.position = 'static';
+                    contenedorVideo.style.padding = '0';
+                    contenedorVideo.style.height = 'auto';
+                    contenedorVideo.style.backgroundColor = 'transparent'; // Adiós fondo negro
+                }
+
+                // 2. DESACTIVAR LA CAJA DEL GIF (Padre 2)
+                const contenedorGif = elementoImagenTecnica.closest('.gif-container');
+                if (contenedorGif) {
+                    contenedorGif.style.padding = '0';
+                    contenedorGif.style.height = 'auto';
+                    contenedorGif.style.backgroundColor = 'transparent'; // Adiós fondo negro
+                }
+
+                // 3. TAMAÑO NATURAL PARA LA IMAGEN
+                elementoImagenTecnica.style.width = '100%';       // Ocupa el ancho natural
+                elementoImagenTecnica.style.maxWidth = '100%';    // Evita salir de la pantalla
+                elementoImagenTecnica.style.height = 'auto';      // Mantiene proporción
+                elementoImagenTecnica.style.backgroundColor = 'transparent'; // Imagen sin fondo
+                elementoImagenTecnica.style.display = 'block';
+                elementoImagenTecnica.style.margin = '0 auto';    // Centrada
+                elementoImagenTecnica.style.borderRadius = '15px'; // Bordes redondeados
+
+            } else if (elementoImagenTecnica) {
+                if (elementoImagenTecnica.closest('.video-container')) {
+                    elementoImagenTecnica.closest('.video-container').style.display = 'none';
+                }
             }
 
+            // --- 3. ICONOS ---
             const contenedorIconos = document.getElementById('contenedor-iconos-deporte');
             if (contenedorIconos) {
                 contenedorIconos.innerHTML = '';
                 const mapaIconos = {
                     "fuerza": ["fitness_center", "icon-fuerza"],
                     "cardio": ["directions_run", "icon-cardio"],
-                    "tiempo": ["timer", "icon-tiempo"],
                     "alta_intensidad": ["bolt", "icon-alta"]
                 };
 
@@ -125,6 +162,7 @@ function cargarPaginaEjercicio() {
                 });
             }
 
+            // --- 4. BOTÓN AÑADIR A RUTINA ---
             const btnAnadir = document.getElementById('btn-anadir-rutina');
             if (btnAnadir) {
                 let rutina = JSON.parse(localStorage.getItem('miRutinaDeportiva')) || [];
@@ -164,7 +202,6 @@ function cargarPlanDeporte() {
 
     const deporteId = localStorage.getItem('deporteSeleccionado');
 
-    // ACTUALIZADO: Apunta al nuevo archivo deporte.json
     fetch('deporte.json')
         .then(res => res.json())
         .then(data => {

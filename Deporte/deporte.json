@@ -14,8 +14,7 @@
               "imagen": "../imagenes/Deportes/marcha.jpg",
               "material": ["Ninguno"],
               "detalles": { "tiempo": "40 seg", "descanso": "20 seg" },
-              "video": "https://youtu.be/j8XGysKsPFc?si=pXiZ9ALqs9xSxsXV",
-              "caracteristicas": ["Cardio", "Casa"],
+              "gif": "../imagenes/Deportes/gifs/",
               "zonas": ["full_body", "tren_inferior", "core"]
             },
             {
@@ -1600,7 +1599,7 @@
               "id": "r-p7",
               "nombre": "Desplazamiento Lateral Tobillo",
               "imagen": "../imagenes/Deportes/desplazamiento-lateral.jpg",
-              "material": ["Espacio libre"],
+              "material": ["Elástico"],
               "detalles": { "tiempo": "2 min", "ritmo": "Constante" },
               "video": "https://youtu.be/1mStIPjEYqA",
               "caracteristicas": ["Cardio", "Casa"],
@@ -1608,7 +1607,7 @@
             },
             {
               "id": "r-p8",
-              "nombre": "Elevación de Rodillas de Pie",
+              "nombre": "Elevación de Rodillas",
               "imagen": "../imagenes/Deportes/elevacion-rodillas.jpg",
               "material": ["Caja"],
               "detalles": { "tiempo": "90 seg", "reps": "3 series" },
@@ -1990,7 +1989,7 @@
             },
             {
               "id": "c-p8",
-              "nombre": "Bíceps Isométrico con Toalla",
+              "nombre": "Bíceps Isométrico con Elástico",
               "imagen": "../imagenes/Deportes/biceps-toalla.jpg",
               "material": ["Toalla"],
               "detalles": { "tiempo": "30 seg", "reps": "3 series" },
@@ -2125,8 +2124,8 @@
             },
             {
               "id": "c-i9",
-              "nombre": "Remo Invertido Bajo Mesa",
-              "imagen": "../imagenes/Deportes/remo-mesa.jpg",
+              "nombre": "Plancha con Rotacion",
+              "imagen": "../imagenes/Deportes/plancha-rotacion.jpg",
               "material": ["Mesa muy resistente"],
               "detalles": { "series": "3", "reps": "8-10", "descanso": "90 seg" },
               "video": "https://youtu.be/fgA4bGIKsn8",
@@ -2230,7 +2229,7 @@
             },
             {
               "id": "c-a7",
-              "nombre": "Flexiones a una Mano (Asistidas)",
+              "nombre": "Flexiones a una Mano",
               "imagen": "../imagenes/Deportes/flexion-unamano.jpg",
               "material": ["Balón o Toalla para apoyo suave"],
               "detalles": { "series": "3", "reps": "5 por brazo", "descanso": "90 seg" },
@@ -2240,7 +2239,7 @@
             },
             {
               "id": "c-a8",
-              "nombre": "Salto Horizontal + Burpee (Broad Jump Burpee)",
+              "nombre": "Broad Jump Burpee",
               "imagen": "../imagenes/Deportes/broad-jump-reb.jpg",
               "material": ["Espacio libre"],
               "detalles": { "series": "4", "reps": "8", "descanso": "60 seg" },
@@ -2250,7 +2249,7 @@
             },
             {
               "id": "c-a9",
-              "nombre": "L-Sit Holds (Isométrico Abdominal)",
+              "nombre": "L-Sit Holds",
               "imagen": "../imagenes/Deportes/l-sit.jpg",
               "material": ["Suelo o dos Sillas firmes"],
               "detalles": { "tiempo": "15 a 20 seg", "reps": "4 series" },
@@ -2270,7 +2269,7 @@
             },
             {
               "id": "c-a11",
-              "nombre": "Zancadas Búlgaras con Salto",
+              "nombre": "Zancadas Búlgaras",
               "imagen": "../imagenes/Deportes/bulgara-salto.jpg",
               "material": ["Silla o Sofá"],
               "detalles": { "series": "3", "reps": "8 por pierna", "descanso": "60 seg" },
@@ -2280,7 +2279,7 @@
             },
             {
               "id": "c-a12",
-              "nombre": "Handstand Push-ups (Flexión Pino en Pared)",
+              "nombre": "Handstand Push-ups",
               "imagen": "../imagenes/Deportes/hspu.jpg",
               "material": ["Pared fuerte", "Cojín para cabeza"],
               "detalles": { "series": "3", "reps": "5-8", "descanso": "2 min" },
