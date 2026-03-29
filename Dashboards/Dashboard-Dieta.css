@@ -50,7 +50,7 @@
     }
 #dashboard-dieta {
     position: absolute;
-    height: 145rem;
+    min-height: 145rem;
     width: 100vw;
     background-color: var(--color-fondo);
     display: flex;
@@ -82,9 +82,16 @@
     height: 6.75rem;
     width: 6.75rem;
     left: 7.875rem;
-    top: 0rem;
+    top: 0.4rem;
     border-radius: 90px;
 }
+    .macro-track {
+        position: absolute;
+        background-color: #e2e8f0;
+        border-radius: 90px;
+        overflow: visible;
+        z-index: 10;
+    }
 #dashboard-dieta .rectangle-container {
     position: absolute;
     height: 51.4rem;
@@ -124,15 +131,13 @@
 }
 
 
-    /* Apply your EXACT requested mobile dimensions and positions */
     #protein-rectangle, #fats-rectangle, #carbs-rectangle, #sodium-rectangle, #sugar-rectangle {
-        width: 15.5611rem !important;
+        width: 18.5611rem !important;
         height: 1.4105rem !important;
         position: absolute !important;
         background-color: #d9d9d9;
     }
 
-    /* The fill bar styling */
     .macro-fill {
         height: 100%;
         background-color: var(--color-acento);
@@ -247,7 +252,7 @@
         position: absolute;
         height: 6.75rem;
         width: 6.75rem;
-        left: 0.4rem;
+        left: 7.8rem;
         top: 0.4rem;
         border-radius: 90px;
     }
@@ -277,6 +282,13 @@
         left: 1.4rem;
         border-radius: 100%;
     }
+    .macro-track {
+        position: absolute;
+        background-color: #e2e8f0;
+        border-radius: 90px;
+        overflow: visible;
+        z-index: 10;
+    }
     #calories-goal{
         position: absolute;
         left: 10rem;
@@ -295,15 +307,13 @@
     #sodium-rectangle{top: 41.76rem;}
     #sugar-rectangle{top: 52.02em;}
 
-    /* Apply your EXACT requested mobile dimensions and positions */
     #protein-rectangle, #fats-rectangle, #carbs-rectangle, #sodium-rectangle, #sugar-rectangle {
-        width: 20.5611rem !important;
+        width: 18rem !important;
         height: 1.4105rem !important;
         position: absolute !important;
         background-color: #d9d9d9;
     }
 
-    /* The fill bar styling */
     .macro-fill {
         height: 100%;
         background-color: var(--color-acento);
@@ -460,14 +470,13 @@
         left: 5.5rem;
     }
     .macro-track {
-        position: absolute; /* MUST be absolute to use top/left */
+        position: absolute;
         background-color: #e2e8f0;
         border-radius: 90px;
-        overflow: hidden;
+        overflow: visible;
         z-index: 10;
     }
 
-    /* Apply your EXACT requested mobile dimensions and positions */
     #protein-rectangle, #fats-rectangle, #carbs-rectangle, #sodium-rectangle, #sugar-rectangle {
         width: 8.2902rem !important;
         height: 0.6606rem !important;
@@ -480,7 +489,6 @@
     #sodium-rectangle  { top: 35.05rem !important; left: 9.8rem !important; }
     #sugar-rectangle   { top: 35.05rem !important; left: 23.3rem !important; }
 
-    /* The fill bar styling */
     .macro-fill {
         height: 100%;
         background-color: var(--color-acento);

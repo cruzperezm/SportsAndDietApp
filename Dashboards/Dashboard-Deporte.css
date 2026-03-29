@@ -41,11 +41,10 @@
     html {
         font-size: 0.65vw;
         overflow-x: hidden;
+        overflow-y: visible;
     }
 
     body {
-        margin: -1 0 0 0 ;
-        padding: -1 0 0 0;
         height: 100vh;
         width: 100vw;
         background-color: var(--color-fondo);
@@ -58,7 +57,7 @@
 
     #dashboard-deporte {
         position: absolute;
-        min-hei9ght: 145rem;
+        min-height: 145rem;
         width: 100%;
         background-color: var(--color-fondo);
         display: flex;
@@ -106,22 +105,8 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        overflow-x: visible; /* Changed to visible so text can sit slightly below if needed */
+        overflow-x: visible;
         box-shadow: var(--sombra-suave);
-    }
-    /* Ensure the container is ready for both flex bars and absolute children */
-    #dashboard-deporte .rectangle-container {
-        position: absolute;
-        height: 51.4rem;
-        width: 90.0rem;
-        top: 35.9rem;
-        left: 9.4rem;
-        background-color: #FFFFFF;
-        border-radius: 30px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        overflow-x: visible; /* Changed to visible so text can sit slightly below if needed */
     }
 
     .bars-container-wrapper .text16 {
