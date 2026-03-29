@@ -26,21 +26,22 @@
         <p class="text16" id="water-text"></p>
         <p class="text24" id="fiber-amount"></p>
         <p class="text16" id="fiber-text"></p>
-        <div class="rectangle-macros" id="protein-rectangle"></div>
         <p class="text16" id="protein-amount"></p>
         <p class="text24" id="protein-text"></p>
-        <div class="rectangle-macros" id="fats-rectangle"></div>
         <p class="text16" id="fats-amount"></p>
         <p class="text24" id="fats-text"></p>
-        <div class="rectangle-macros" id="carbs-rectangle"></div>
         <p class="text16" id="carbs-amount"></p>
         <p class="text24" id="carbs-text"></p>
-        <div class="rectangle-macros" id="sodium-rectangle"></div>
         <p class="text16" id="sodium-amount"></p>
         <p class="text24" id="sodium-text"></p>
-        <div class="rectangle-macros" id="sugar-rectangle"></div>
         <p class="text16" id="sugar-amount"></p>
         <p class="text24" id="sugar-text"></p>
+
+        <div id="protein-rectangle" class="macro-track"></div>
+        <div id="fats-rectangle" class="macro-track"></div>
+        <div id="carbs-rectangle" class="macro-track"></div>
+        <div id="sodium-rectangle" class="macro-track"></div>
+        <div id="sugar-rectangle" class="macro-track"></div>
     </div>
     <a class="cross-horizontal" id="r7" href="../Dietas/Dietas_index.html"></a>
     <a class="cross-vertical" id="r8" href="../Dietas/Dietas_index.html"></a>
@@ -63,6 +64,8 @@
     <p class="text16" id="diet-amount4"></p>
     <p class="text16" id="diet-amount5"></p>
 </div>
+<footer xlu-include-file="../footerheader/footer.html"></footer>
+<script src="../footerheader/global-header-footer.js"></script>
 <script>
     fetch('data.json')
         .then(r => r.json())
@@ -112,9 +115,30 @@
             document.getElementById('diet-amount5').innerText = recetas[4].valor;
             document.getElementById('diet-text5').innerText = recetas[4].nombre;
 
+            const macros = ['protein', 'fats', 'carbs', 'sodium', 'sugar'];
+
+            macros.forEach((id, index) => {
+                const track = document.getElementById(`${id}-rectangle`);
+                if (track && m2[index]) {
+                    // We set the width directly in the style attribute to avoid needing a timeout
+                    const progress = m2[index].progreso;
+
+                    track.innerHTML = `
+            <div id="${id}-fill"
+                 class="macro-fill"
+                 style="width: ${progress}%; height: 100%; background-color: var(--color-acento); border-radius: 90px;">
+            </div>`;
+
+                    // Update accompanying text labels
+                    const amountEl = document.getElementById(`${id}-amount`);
+                    const textEl = document.getElementById(`${id}-text`);
+
+                    if (textEl) textEl.innerText = m2[index].nombre;
+                }
+            });
         })
         .catch(error => console.error('Error loading JSON:', error));
 </script>
-<footer xlu-include-file="../footerheader/footer.html"></footer>
+<script>xLuIncludeFile()</script>
 </body>
 </html>

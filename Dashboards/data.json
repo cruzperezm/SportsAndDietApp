@@ -11,7 +11,7 @@
       {"nombre": "Fibra", "valor": "150/300", "progreso": 50}
     ],
     "macros2": [
-      {"nombre": "Proteína", "valor": "100/200", "progreso": 50},
+      {"nombre": "Proteína", "valor": "100/200", "progreso": 80},
       {"nombre": "Grasas", "valor": "150/300", "progreso": 50},
       {"nombre": "Carbohidratos", "valor": "100/200", "progreso": 50},
       {"nombre": "Sodio", "valor": "150/300", "progreso": 50},

@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=0.5">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <script src="../footerheader/global-header-footer.js"></script>
-    <script src="/xlu-include-file.js"></script>
+    <script src="../xlu-include-file.js"></script>
 </head>
 <body>
-<main>
+<header xlu-include-file="../footerheader/header.html"></header>
 <div id="dashboard-deporte">
     <p class="text64" id="name"></p>
     <div class="rectangle-toggle">
@@ -44,48 +44,45 @@
     <p class="text16" id="train-amount4"></p>
     <p class="text16" id="train-amount5"></p>
 </div>
-</main>
-<footer xlu-include-file="/footerheader/footer.html"></footer>
-<script>xLuIncludeFile()</script>
+<footer xlu-include-file="../footerheader/footer.html"></footer>
+<script src="../footerheader/global-header-footer.js"></script>
 <script>
-        fetch('data.json')
+    fetch('data.json')
         .then(r => r.json())
         .then(data => {
-        // Update User Name
-        document.getElementById('name').innerText = data.usuario.nombre;
+            document.getElementById('name').innerText = data.usuario.nombre;
 
-        // Update Activity Rings Stats (Move, Exercise, Stand)
-        // Using data.actividades for these labels
-        document.getElementById('move-text').innerText = data.actividades[0].nombre;
-        document.getElementById('move-calories').innerText = data.actividades[0].valor;
+            document.getElementById('move-text').innerText = data.actividades[0].nombre;
+            document.getElementById('move-calories').innerText = data.actividades[0].valor;
+            document.getElementById('exercise-text').innerText = data.actividades[1].nombre;
+            document.getElementById('exercise-calories').innerText = data.actividades[1].valor;
+            document.getElementById('stand-text').innerText = data.actividades[2].nombre;
+            document.getElementById('stand-calories').innerText = data.actividades[2].valor;
 
-        document.getElementById('exercise-text').innerText = data.actividades[1].nombre;
-        document.getElementById('exercise-calories').innerText = data.actividades[1].valor;
-
-        document.getElementById('stand-text').innerText = data.actividades[2].nombre;
-        document.getElementById('stand-calories').innerText = data.actividades[2].valor;
-
-            // Generate the Weekly Bars inside the existing .rectangle-container
-            // We prepend them to ensure they appear at the top as seen in the images
             const container = document.querySelector('.rectangle-container');
 
-            // Create a wrapper for the bars to keep them aligned
             const barsHtml = `
-                <div style="display: flex; justify-content: space-around; align-items: flex-end; height: 200px; width: 100%; margin-bottom: 20px;">
-                    ${data.deporte.semana.map(day => `
-                        <div style="display: flex; flex-direction: column; align-items: center; height: 100%; justify-content: flex-end;">
-                            <div class="bar-unit" style="width: 20px; background-color: #D1D5DB; border-radius: 10px; height: ${day.valor}%;"></div>
-                            <p class="text16" style="margin-top: 8px;">${day.dia}</p>
+                <div class="bars-container-wrapper" style="display: flex; justify-content: space-around; align-items: flex-end; height: 15rem; width: 90%; margin: 10rem auto 0 auto; position: relative; z-index: 5;">
+                    ${data.deporte.semana.map((day, i) => {
+                const percentStep = 100 / data.deporte.semana.length;
+                const leftPos = (i * percentStep) + (percentStep / 2);
+
+                return `
+                        <div style="display: flex; flex-direction: column; align-items: center; height: 100%; justify-content: flex-end; flex: 1;">
+                            <div class="bar-unit" style="width: 2.4rem; background-color: var(--color-acento-secundario); border-radius: 1rem; height: ${day.valor * 0.12}rem; transition: height 0.5s ease;"></div>
+
+                            <p class="text16" style="position: absolute; top: 15.5rem; left: ${leftPos}%; transform: translateX(-50%); font-weight: bold; color: var(--color-texto-color); white-space: nowrap;">
+                                ${day.dia}
+                            </p>
                         </div>
-                    `).join('')}
+                        `;
+            }).join('')}
                 </div>
             `;
 
-            // Keep the existing text elements but add the bars above them
             const existingContent = container.innerHTML;
             container.innerHTML = barsHtml + existingContent;
 
-            // Populate the bottom list (Exercises/Train)
             const exercises = data.deporte.ejercicios;
             for (let i = 1; i <= 5; i++) {
                 const textElem = document.getElementById(`train-text${i}`);
@@ -98,5 +95,6 @@
         })
         .catch(error => console.error('Error loading JSON:', error));
 </script>
+<script>xLuIncludeFile()</script>
 </body>
 </html>
