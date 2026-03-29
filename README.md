@@ -1,16 +1,11 @@
 ---
 title: "Documentación del Proyecto: SportsAndDietApp"
 author: "Salwa Madani, Kemuel Rodriguez, Margarita Cruz, Oscar Yavar"
-date: "`r Sys.Date()`"
-output:
-  html_document:
-    toc: true
-    toc_depth: 2
-    theme: united
+group: "43.5"
 ---
 
 # 1. Información del Proyecto
-**Nombre del Proyecto:** SportsAndDietApp 43.5 
+**Nombre del Proyecto:** SportsAndDietApp
 **Componentes del Grupo:**
 * Salwa Madani Lazaar
 * Kemuel Rodriguez García
