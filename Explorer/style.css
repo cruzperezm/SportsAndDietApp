@@ -36,6 +36,11 @@ footer{
     outline: none;
 }
 
+.map{
+    display: flex;
+    width: 40vw;
+}
+
 .button {
     flex: 1;
     height: 35px;
