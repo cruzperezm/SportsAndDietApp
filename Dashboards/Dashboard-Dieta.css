@@ -1,799 +1,469 @@
-@media screen and (max-width: 1280px) {
-  #dashboard-dieta {
-    margin: 0px 0px 0px 0px;
-    background-color: #ffffff;
-    overflow: hidden;
-    width: 100%;
-    height: 2960px;
-    position: absolute;
-  }
-
-  #dashboard-dieta .ellipse11 {
-    margin: 0px 0px 0px 0px;
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    top: 204px;
-    left: 92px;
-    background-color: #d9d9d9;
-    border-radius: 100%;
-  }
-
-  #dashboard-dieta .text1 {
-    margin: 0px 0px 0px 0px;
-    position: absolute;
-    color: #000000;
-    font-family: Inter, sans-serif;
-    font-size: 96px;
-    top: 111px;
-    left: 348px;
-  }
-
-  #dashboard-dieta .ellipse12 {
-    margin: 0px 0px 0px 0px;
-    position: absolute;
-    width: 90px;
-    height: 90px;
-    background-color: #d9d9d9;
-    border-radius: 100%;
-    top: 21px;
-    left: 1297px;
-  }
-
-  #dashboard-dieta .ellipse15 {
-    margin: 0px 0px 0px 0px;
-    position: absolute;
-    width: 90px;
-    height: 90px;
-    background-color: #d9d9d9;
-    border-radius: 100%;
-    top: 5px;
-    left: 105px;
-  }
-
-  #dashboard-dieta .ellipse4 {
-    margin: 0px 0px 0px 0px;
-    position: absolute;
-    width: 90px;
-    height: 90px;
-    background-color: #d9d9d9;
-    border-radius: 100%;
-    top: 312px;
-    left: 625px;
-  }
-
-  #dashboard-dieta .rectangle79 {
-    margin: 0px 0px 0px 0px;
-    position: absolute;
-    width: 200px;
-    height: 100px;
-    background-color: #f0f0f0;
-    border-radius: 70px;
-    left: 620px;
-    top: 307px;
-  }
-
-  #dashboard-dieta .rectangle83 {
-    margin: 0px 0px 0px 0px;
-    position: absolute;
-    width: 1295px;
-    height: 771px;
-    top: 431px;
-    left: 75px;
-    background-color: #f2f2f2;
-  }
-
-  #dashboard-dieta .ellipse13 {
-    margin: 0px 0px 0px 0px;
-    position: absolute;
-    width: 500px;
-    height: 500px;
-    top: 20px;
-    left: 397px;
-    background-color: #d9d9d9;
-    border-radius: 100%;
-  }
-
-  #dashboard-dieta .ellipse14 {
-    margin: 0px 0px 0px 0px;
-    position: absolute;
-    width: 450px;
-    height: 450px;
-    top: 25px;
-    left: 25px;
-    background-color: #ffffff;
-    border-radius: 100%;
-  }
-
-  #dashboard-dieta .text2 {
-    margin: 0px 0px 0px 0px;
-    position: absolute;
-    color: #000000;
-    font-family: Inter, sans-serif;
-    font-size: 48px;
-    top: 132px;
-    left: 72px;
-  }
-
-  #dashboard-dieta .text3 {
-    margin: 0px 0px 0px 0px;
-    position: absolute;
-    color: #000000;
-    font-family: Inter, sans-serif;
-    font-size: 128px;
-    top: 190px;
-    left: 108px;
-  }
-
-  #dashboard-dieta .rectangle80 {
-    margin: 0px 0px 0px 0px;
-    position: absolute;
-    left: 80px;
-    top: 648px;
-    width: 264px;
-    height: 20px;
-    border-radius: 90px;
-    background-color: #d9d9d9;
-  }
-
-  #dashboard-dieta .rectangle81 {
-    margin: 0px 0px 0px 0px;
-    position: absolute;
-    left: 513px;
-    top: 648px;
-    width: 264px;
-    height: 20px;
-    border-radius: 90px;
-    background-color: #d9d9d9;
-  }
-
-  #dashboard-dieta .rectangle82 {
-    margin: 0px 0px 0px 0px;
-    position: absolute;
-    left: 963px;
-    top: 648px;
-    width: 264px;
-    height: 20px;
-    border-radius: 90px;
-    background-color: #d9d9d9;
-  }
-
-  #dashboard-dieta .text4 {
-    margin: 0 0 0 0;
-    position: absolute;
-    color: #000000;
-    font-family: Inter, sans-serif;
-    font-size: 32px;
-    top: 219px;
-    left: 80px;
-  }
-
-  #dashboard-dieta .text5 {
-    margin: 0 0 0 0;
-    position: absolute;
-    color: #000000;
-    font-family: Inter, sans-serif;
-    font-size: 32px;
-    top: 219px;
-    left: 1010px;
-  }
-
-  #dashboard-dieta .text6 {
-    margin: 0 0 0 0;
-    position: absolute;
-    color: #000000;
-    font-family: Inter, sans-serif;
-    font-size: 32px;
-    top: 590px;
-    left: 108px;
-  }
-
-  #dashboard-dieta .text7 {
-    margin: 0 0 0 0;
-    position: absolute;
-    color: #000000;
-    font-family: Inter, sans-serif;
-    font-size: 32px;
-    top: 689px;
-    left: 142px;
-  }
-
-  #dashboard-dieta .text8 {
-    margin: 0 0 0 0;
-    position: absolute;
-    color: #000000;
-    font-family: Inter, sans-serif;
-    font-size: 32px;
-    top: 590px;
-    left: 541px;
-  }
-
-  #dashboard-dieta .text9 {
-    margin: 0 0 0 0;
-    position: absolute;
-    color: #000000;
-    font-family: Inter, sans-serif;
-    font-size: 32px;
-    top: 689px;
-    left: 575px;
-  }
-
-  #dashboard-dieta .text10 {
-    margin: 0 0 0 0;
-    position: absolute;
-    color: #000000;
-    font-family: Inter, sans-serif;
-    font-size: 32px;
-    top: 590px;
-    left: 991px;
-  }
-
-  #dashboard-dieta .text11 {
-    margin: 0 0 0 0;
-    position: absolute;
-    color: #000000;
-    font-family: Inter, sans-serif;
-    font-size: 32px;
-    top: 689px;
-    left: 1025px;
-  }
-
-  #dashboard-dieta .ellipse16 {
-    margin: 0px 0px 0px 0px;
-    position: absolute;
-    width: 150px;
-    height: 150px;
-    background-color: #d9d9d9;
-    top: 1366px;
-    left: 184px;
-    border-radius: 50%;
-  }
-
-  #dashboard-dieta .text12 {
-    margin: 0 0 0 0;
-    position: absolute;
-    color: #000000;
-    font-family: Inter, sans-serif;
-    font-size: 32px;
-    top: 1395px;
-    left: 435px;
-  }
-
-  #dashboard-dieta .text13 {
-    margin: 0 0 0 0;
-    position: absolute;
-    color: #000000;
-    font-family: Inter, sans-serif;
-    font-size: 32px;
-    top: 1453px;
-    left: 484px;
-  }
-
-  #dashboard-dieta .rectangle86 {
-    margin: 0 0 0 0;
-    position: absolute;
-    width: 27px;
-    height: 89px;
-    top: 1395px;
-    left: 1179px;
-    background-color: #d9d9d9;
-    border-radius: 90px;
-  }
-
-  #dashboard-dieta .rectangle87 {
-    margin: 0 0 0 0;
-    position: absolute;
-    width: 89px;
-    height: 27px;
-    top: 1427px;
-    left: 1148px;
-    background-color: #d9d9d9;
-    border-radius: 90px;
-  }
-
-  #dashboard-dieta .ellipse17 {
-    margin: 0px 0px 0px 0px;
-    position: absolute;
-    width: 150px;
-    height: 150px;
-    background-color: #d9d9d9;
-    top: 1723px;
-    left: 184px;
-    border-radius: 50%;
-  }
-
-  #dashboard-dieta .text14 {
-    margin: 0 0 0 0;
-    position: absolute;
-    color: #000000;
-    font-family: Inter, sans-serif;
-    font-size: 32px;
-    top: 1752px;
-    left: 435px;
-  }
-
-  #dashboard-dieta .text15 {
-    margin: 0 0 0 0;
-    position: absolute;
-    color: #000000;
-    font-family: Inter, sans-serif;
-    font-size: 32px;
-    top: 1810px;
-    left: 484px;
-  }
-
-  #dashboard-dieta .rectangle88 {
-    margin: 0 0 0 0;
-    position: absolute;
-    width: 27px;
-    height: 89px;
-    top: 1749px;
-    left: 1179px;
-    background-color: #d9d9d9;
-    border-radius: 90px;
-  }
-
-  #dashboard-dieta .rectangle89 {
-    margin: 0 0 0 0;
-    position: absolute;
-    width: 89px;
-    height: 27px;
-    top: 1781px;
-    left: 1148px;
-    background-color: #d9d9d9;
-    border-radius: 90px;
-  }
-
-  #dashboard-dieta .ellipse18 {
-    margin: 0px 0px 0px 0px;
-    position: absolute;
-    width: 150px;
-    height: 150px;
-    background-color: #d9d9d9;
-    top: 2061px;
-    left: 184px;
-    border-radius: 50%;
-  }
-
-  #dashboard-dieta .text16 {
-    margin: 0 0 0 0;
-    position: absolute;
-    color: #000000;
-    font-family: Inter, sans-serif;
-    font-size: 32px;
-    top: 2019px;
-    left: 435px;
-  }
-
-  #dashboard-dieta .text17 {
-    margin: 0 0 0 0;
-    position: absolute;
-    color: #000000;
-    font-family: Inter, sans-serif;
-    font-size: 32px;
-    top: 2167px;
-    left: 484px;
-  }
-
-  #dashboard-dieta .rectangle90 {
-    margin: 0 0 0 0;
-    position: absolute;
-    width: 27px;
-    height: 89px;
-    top: 2122px;
-    left: 1179px;
-    background-color: #d9d9d9;
-    border-radius: 90px;
-  }
-
-  #dashboard-dieta .rectangle91 {
-    margin: 0 0 0 0;
-    position: absolute;
-    width: 89px;
-    height: 27px;
-    top: 2154px;
-    left: 1148px;
-    background-color: #d9d9d9;
-    border-radius: 90px;
-  }
+:root {
+    --color-fondo: #FAFAFA;       /* Blanco roto/crema para el fondo */
+    --color-fondo-secundario: #a8f0d8;
+    --color-acento: #10B981;      /* color esmeralda  */
+    --color-acento-secundario: #6eb59e;
+    --color-acento-oscuro: #059669;
+    --color-texto: #1F2937;       /* Gris carbón para texto principal */
+    --color-texto-suave: #4B5563; /* Gris medio para descripciones */
+    --color-texto-color: #00120c;
+    --sombra-suave: 0 10rem 15rem -3rem rgba(0, 0, 0, 0.1), 0 4rem 6rem -2rem rgba(0, 0, 0, 0.05);
+    --sombra-hover: 0 20rem 25rem -5rem rgba(0, 0, 0, 0.1), 0 10rem 10rem -5rem rgba(0, 0, 0, 0.04);
 }
-@media screen and (max-width: 412px) {
 #dashboard-dieta {
-    margin: 0px 0px 0px 0px;
-    background-color: #ffffff;
-    overflow: hidden;
+    position: absolute;
     width: 100%;
-    height: 2960px;
-    position: absolute;
+    background-color: var(--color-fondo);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
 }
 
-#dashboard-dieta .ellipse11 {
-    margin: 0px 0px 0px 0px;
-    position: absolute;
-    width: 200px;
-    height: 200px;
-    top: 76px;
-    left: 75px;
-    background-color: #d9d9d9;
-    border-radius: 100%;
-}
+#dashboard-dieta .text16{position: absolute; font-size: 1.6rem; font-family: 'Inter', sans-serif; color: var(--color-texto-color); }
+#dashboard-dieta .text20{position: absolute; font-size: 2.0rem; font-family: 'Inter', sans-serif;color: var(--color-texto-suave); }
+#dashboard-dieta .text24{position: absolute; font-size: 2.4rem; font-family: 'Inter', sans-serif;color: var(--color-texto-suave); }
+#dashboard-dieta .text64{position: absolute; font-size: 6.4rem; font-family: 'Inter', sans-serif; font-weight: bold;color: var(--color-texto); }
 
-#dashboard-dieta .text1 {
-    margin: 0px 0px 0px 0px;
-    position: absolute;
-    color: #000000;
-    font-family: Inter, sans-serif;
-    font-size: 96px;
-    top: 111px;
-    left: 348px;
-}
 
-#dashboard-dieta .ellipse12 {
-    margin: 0px 0px 0px 0px;
-    position: absolute;
-    width: 90px;
-    height: 90px;
-    background-color: #d9d9d9;
-    border-radius: 100%;
-    top: 21px;
-    left: 1297px;
-}
+#dashboard-dieta .rectangle-macros{position: absolute; height: 1.4rem; width: 15.5rem; background-color: var(--color-acento-secundario); border-radius: 90px; }
+#dashboard-dieta .cross-horizontal {position: absolute; height:1.51685rem; width: 5rem; border-radius: 50px; background-color: var(--color-acento-oscuro);}
+#dashboard-dieta .cross-vertical {position: absolute; width:1.51685rem; height: 5rem; border-radius: 50px; background-color: var(--color-acento-oscuro);}
 
-#dashboard-dieta .ellipse15 {
-    margin: 0px 0px 0px 0px;
+#dashboard-dieta .rectangle-toggle {
     position: absolute;
-    width: 90px;
-    height: 90px;
-    background-color: #d9d9d9;
-    border-radius: 100%;
-    top: 5px;
-    left: 105px;
-}
-
-#dashboard-dieta .ellipse4 {
-    margin: 0px 0px 0px 0px;
-    position: absolute;
-    width: 90px;
-    height: 90px;
-    background-color: #d9d9d9;
-    border-radius: 100%;
-    top: 312px;
-    left: 625px;
-}
-
-#dashboard-dieta .rectangle79 {
-    margin: 0px 0px 0px 0px;
-    position: absolute;
-    width: 200px;
-    height: 100px;
-    background-color: #f0f0f0;
+    height: 7.5rem;
+    width: 15.0rem;
+    top: 21.6rem;
+    left: 123.1rem;
     border-radius: 70px;
-    left: 620px;
-    top: 307px;
+    background-color: var(--color-acento);
 }
-
-#dashboard-dieta .rectangle83 {
-    margin: 0px 0px 0px 0px;
+#dashboard-dieta .ellipse-toggle {
     position: absolute;
-    width: 1295px;
-    height: 771px;
-    top: 431px;
-    left: 75px;
-    background-color: #f2f2f2;
+    height: 6.75rem;
+    width: 6.75rem;
+    left: 7.875rem;
+    top: 0.375rem;
+    background-color: var(--color-fondo-secundario);
+    border-radius: 90px;
 }
-
-#dashboard-dieta .ellipse13 {
-    margin: 0px 0px 0px 0px;
+#dashboard-dieta .rectangle-container {
     position: absolute;
-    width: 500px;
-    height: 500px;
-    top: 20px;
-    left: 397px;
-    background-color: #d9d9d9;
+    height: 51.4rem;
+    width: 90.0rem;
+    top: 35.9rem;
+    left: 9.4rem;
+    background-color: var(--color-fondo-secundario);
+}
+#dashboard-dieta .ellipse-container{
+    position: absolute;
+    height: 31.7rem;
+    width: 31.7rem;
+    top: 6.5rem;
+    left: 5.7rem;
+    background-color: var(--color-acento-oscuro);
+    border-radius: 100%;
+}
+#dashboard-dieta .ellipse{
+    position: absolute;
+    height: 28.5rem;
+    width: 28.5rem;
+    top: 1.6rem;
+    left: 1.6rem;
+    background-color: var(--color-fondo);
     border-radius: 100%;
 }
 
-#dashboard-dieta .ellipse14 {
-    margin: 0px 0px 0px 0px;
+#calories-amount{
     position: absolute;
-    width: 450px;
-    height: 450px;
-    top: 25px;
-    left: 25px;
-    background-color: #ffffff;
+    left: 7.05rem;
+    top: 4rem;
+}
+#calories-goal{
+    position: absolute;
+    top: 4rem;
+    left: 11.5rem;
+}
+#water-text {position:absolute; left: 11.5rem; top:40rem;}
+#water-amount{position:absolute; left: 9rem; top:41rem;}
+#fiber-text{position:absolute; left: 29.5rem; top:40rem;}
+#fiber-amount{position:absolute; left: 27rem; top:41rem;}
+#name{
+    position: absolute;
+    top: 21.6rem;
+    left: 22.6rem;
+}
+#protein-rectangle, #fats-rectangle, #carbs-rectangle, #sodium-rectangle, #sugar-rectangle{position: absolute; left: 70.750rem;}
+#protein-rectangle{top: 9.1rem;}
+#fats-rectangle{top: 17.8rem;}
+#carbs-rectangle{top: 26.5rem;}
+#sodium-rectangle{top: 35.2rem;}
+#sugar-rectangle{top: 43.9rem;}
+
+#protein-amount, #fats-amount, #sodium-amount, #sugar-amount, #carbs-amount{position: absolute; left: 75.5rem;}
+#protein-amount{top: 5rem;}
+#fats-amount{top: 13.8rem;}
+#carbs-amount{top: 22rem;}
+#sodium-amount{top: 31rem;}
+#sugar-amount{top: 39.9rem;}
+
+
+#protein-text, #fats-text, #carbs-text, #sodium-text, #sugar-text{position: absolute; left: 45rem;}
+#protein-text{top: 5.8rem;}
+#fats-text{top: 14.5rem;}
+#carbs-text{top: 23.2rem;}
+#sodium-text{top: 31.9rem;}
+#sugar-text{top: 40.6rem;}
+
+#r8,#r10,#r12,#r14,#r16{position: absolute; left: 140rem;}
+
+#r8{top: 35.9rem;}
+#r10{top: 47.7rem;}
+#r12{top: 59.5rem;}
+#r14{top: 71.3rem;}
+#r16{top: 83.1rem;}
+
+#r7,#r9,#r11,#r13,#r15{position: absolute; left: 138.25rem;}
+#r7{top: 37.7rem;}
+#r9{top: 49.5rem;}
+#r11{top: 61.29rem;}
+#r13{top: 73.09rem;}
+#r15{top: 84.89rem;}
+
+#diet-amount1, #diet-amount2, #diet-amount3, #diet-amount4, #diet-amount5 {position: absolute; left: 130rem;}
+#diet-amount1 {top: 36rem;}
+#diet-amount2 {top: 47.8rem;}
+#diet-amount3 {top: 59.6rem;}
+#diet-amount4 {top: 71.4rem;}
+#diet-amount5 {top: 83.2rem;}
+
+#diet-text1, #diet-text2, #diet-text3, #diet-text4, #diet-text5 {position: absolute; left: 110rem; width: 14rem;}
+#diet-text1 {top: 35.3rem;}
+#diet-text2 {top: 47.1rem;}
+#diet-text3 {top: 58.9rem;}
+#diet-text4 {top: 70.7rem;}
+#diet-text5 {top: 82.5rem;}
+
+@media (max-width: 1279px) {
+    #dashboard-dieta {
+        position: relative;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Stack elements vertically instead of absolute positions */
+    #name, .rectangle-toggle, .rectangle-container,
+    #diet-text1, #diet-text2, #diet-text3, #diet-text4, #diet-text5,
+    #r7, #r8, #r9, #r10, #r11, #r12, #r13, #r14, #r15, #r16 {
+        position: relative !important;
+        left: auto !important;
+        top: auto !important;
+        margin: 1.5rem auto;
+    }
+
+    #dashboard-dieta .rectangle-container {
+        width: 100%;
+        height: auto;
+        padding-bottom: 3rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Circle remains centered but scaled */
+    #dashboard-dieta .ellipse-container {
+        position: relative;
+        left: auto;
+        top: 2rem;
+        margin-bottom: 4rem;
+    }
+
+    /* Macros layout in mobile (2 columns) */
+    #protein-rectangle, #fats-rectangle, #carbs-rectangle, #sodium-rectangle, #sugar-rectangle {
+        position: relative !important;
+        left: auto !important;
+        top: auto !important;
+        margin: 1rem;
+        display: inline-block;
+    }
+
+    /* Adjust text sizes for small screens */
+    #dashboard-dieta .text64 { font-size: 4.8rem; }
+    #dashboard-dieta .text24 { font-size: 1.8rem; }
+}
+
+/*
+@media screen and (min-width: 1280px){
+#dashboard-dieta {
+    position: absolute;
+    width: 100%;
+    background-color: var(--color-fondo);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+#dashboard-dieta .text16{position: absolute; font-size: 1.6rem; font-family: 'Inter', sans-serif; color: var(--color-texto-color); }
+#dashboard-dieta .text20{position: absolute; font-size: 2.0rem; font-family: 'Inter', sans-serif;color: var(--color-texto-suave); }
+#dashboard-dieta .text24{position: absolute; font-size: 2.4rem; font-family: 'Inter', sans-serif;color: var(--color-texto-suave); }
+#dashboard-dieta .text64{position: absolute; font-size: 6.4rem; font-family: 'Inter', sans-serif; font-weight: bold;color: var(--color-texto); }
+
+
+#dashboard-dieta .rectangle-macros{position: absolute; height: 1.4rem; width: 15.5rem; background-color: var(--color-acento-secundario); border-radius: 90px; }
+#dashboard-dieta .cross-horizontal {position: absolute; height:1.51685rem; width: 5rem; border-radius: 50px; background-color: var(--color-acento-oscuro);}
+#dashboard-dieta .cross-vertical {position: absolute; width:1.51685rem; height: 5rem; border-radius: 50px; background-color: var(--color-acento-oscuro);}
+
+#dashboard-dieta .rectangle-toggle {
+    position: absolute;
+    height: 7.5rem;
+    width: 15.0rem;
+    top: 21.6rem;
+    left: 123.1rem;
+    border-radius: 70px;
+    background-color: var(--color-acento);
+}
+#dashboard-dieta .ellipse-toggle {
+    position: absolute;
+    height: 6.75rem;
+    width: 6.75rem;
+    left: 7.875rem;
+    top: 0.375rem;
+    background-color: var(--color-fondo-secundario);
+    border-radius: 90px;
+}
+#dashboard-dieta .rectangle-container {
+    position: absolute;
+    height: 51.4rem;
+    width: 90.0rem;
+    top: 35.9rem;
+    left: 9.4rem;
+    background-color: var(--color-fondo-secundario);
+}
+#dashboard-dieta .ellipse-container{
+    position: absolute;
+    height: 31.7rem;
+    width: 31.7rem;
+    top: 6.5rem;
+    left: 5.7rem;
+    background-color: var(--color-acento-oscuro);
+    border-radius: 100%;
+}
+#dashboard-dieta .ellipse{
+    position: absolute;
+    height: 28.5rem;
+    width: 28.5rem;
+    top: 1.6rem;
+    left: 1.6rem;
+    background-color: var(--color-fondo);
     border-radius: 100%;
 }
 
-#dashboard-dieta .text2 {
-    margin: 0px 0px 0px 0px;
+#calories-amount{
     position: absolute;
-    color: #000000;
-    font-family: Inter, sans-serif;
-    font-size: 48px;
-    top: 132px;
-    left: 72px;
+    left: 7.05rem;
+    top: 4rem;
+}
+#calories-goal{
+    position: absolute;
+    top: 4rem;
+    left: 11.5rem;
+}
+#water-text {position:absolute; left: 11.5rem; top:40rem;}
+#water-amount{position:absolute; left: 9rem; top:41rem;}
+#fiber-text{position:absolute; left: 29.5rem; top:40rem;}
+#fiber-amount{position:absolute; left: 27rem; top:41rem;}
+#name{
+    position: absolute;
+    top: 21.6rem;
+    left: 22.6rem;
+}
+#protein-rectangle, #fats-rectangle, #carbs-rectangle, #sodium-rectangle, #sugar-rectangle{position: absolute; left: 70.750rem;}
+#protein-rectangle{top: 9.1rem;}
+#fats-rectangle{top: 17.8rem;}
+#carbs-rectangle{top: 26.5rem;}
+#sodium-rectangle{top: 35.2rem;}
+#sugar-rectangle{top: 43.9rem;}
+
+#protein-amount, #fats-amount, #sodium-amount, #sugar-amount, #carbs-amount{position: absolute; left: 75.5rem;}
+#protein-amount{top: 5rem;}
+#fats-amount{top: 13.8rem;}
+#carbs-amount{top: 22rem;}
+#sodium-amount{top: 31rem;}
+#sugar-amount{top: 39.9rem;}
+
+
+#protein-text, #fats-text, #carbs-text, #sodium-text, #sugar-text{position: absolute; left: 45rem;}
+#protein-text{top: 5.8rem;}
+#fats-text{top: 14.5rem;}
+#carbs-text{top: 23.2rem;}
+#sodium-text{top: 31.9rem;}
+#sugar-text{top: 40.6rem;}
+
+#r8,#r10,#r12,#r14,#r16{position: absolute; left: 140rem;}
+
+#r8{top: 35.9rem;}
+#r10{top: 47.7rem;}
+#r12{top: 59.5rem;}
+#r14{top: 71.3rem;}
+#r16{top: 83.1rem;}
+
+#r7,#r9,#r11,#r13,#r15{position: absolute; left: 138.25rem;}
+#r7{top: 37.7rem;}
+#r9{top: 49.5rem;}
+#r11{top: 61.29rem;}
+#r13{top: 73.09rem;}
+#r15{top: 84.89rem;}
+
+#diet-amount1, #diet-amount2, #diet-amount3, #diet-amount4, #diet-amount5 {position: absolute; left: 130rem;}
+#diet-amount1 {top: 36rem;}
+#diet-amount2 {top: 47.8rem;}
+#diet-amount3 {top: 59.6rem;}
+#diet-amount4 {top: 71.4rem;}
+#diet-amount5 {top: 83.2rem;}
+
+#diet-text1, #diet-text2, #diet-text3, #diet-text4, #diet-text5 {position: absolute; left: 110rem; width: 14rem;}
+#diet-text1 {top: 35.3rem;}
+#diet-text2 {top: 47.1rem;}
+#diet-text3 {top: 58.9rem;}
+#diet-text4 {top: 70.7rem;}
+#diet-text5 {top: 82.5rem;}
 }
 
-#dashboard-dieta .text3 {
-    margin: 0px 0px 0px 0px;
-    position: absolute;
-    color: #000000;
-    font-family: Inter, sans-serif;
-    font-size: 128px;
-    top: 190px;
-    left: 108px;
-}
+/* pantalla movil*/
+/*@media screen and (min-width: 412px){
+    .canvas {
+        transform: scale(0.28);
+    }
+    #dashboard-dieta {
+        position: absolute;
+        width: 100%;
+        background-color: var(--color-fondo);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+    #dashboard-dieta .rectangle-macros{position: absolute; height: 1.4rem; width: 15.5rem; background-color: var(--color-acento-secundario); border-radius: 90px; }
+    #dashboard-dieta .cross-horizontal {position: absolute; height:1.51685rem; width: 5rem; border-radius: 50px; background-color: var(--color-acento-oscuro);}
+    #dashboard-dieta .cross-vertical {position: absolute; width:1.51685rem; height: 5rem; border-radius: 50px; background-color: var(--color-acento-oscuro);}
 
-#dashboard-dieta .rectangle80 {
-    margin: 0px 0px 0px 0px;
-    position: absolute;
-    left: 80px;
-    top: 648px;
-    width: 264px;
-    height: 20px;
-    border-radius: 90px;
-    background-color: #d9d9d9;
-}
+    #dashboard-dieta .rectangle-toggle {
+        position: absolute;
+        height: 3.3rem;
+        width: 6.2rem;
+        top: 9.11rem;
+        left: 17.214rem;
+        border-radius: 70px;
+        background-color: var(--color-acento);
+    }
+    #dashboard-dieta .ellipse-toggle {
+        position: absolute;
+        height: 2.9rem;
+        width: 2.9rem;
+        left: 3.19rem;
+        top: 0.18rem;
+        background-color: var(--color-fondo-secundario);
+        border-radius: 90px;
+    }
+    #dashboard-dieta .rectangle-container {
+        position: absolute;
+        height: 51.4rem;
+        width: 90.0rem;
+        top: 35.9rem;
+        left: 9.4rem;
+        background-color: var(--color-fondo-secundario);
+    }
+    #dashboard-dieta .ellipse-container{
+        position: absolute;
+        height: 31.7rem;
+        width: 31.7rem;
+        top: 6.5rem;
+        left: 5.7rem;
+        background-color: var(--color-acento-oscuro);
+        border-radius: 100%;
+    }
+    #dashboard-dieta .ellipse{
+        position: absolute;
+        height: 28.5rem;
+        width: 28.5rem;
+        top: 1.6rem;
+        left: 1.6rem;
+        background-color: var(--color-fondo);
+        border-radius: 100%;
+    }
 
-#dashboard-dieta .rectangle81 {
-    margin: 0px 0px 0px 0px;
-    position: absolute;
-    left: 513px;
-    top: 648px;
-    width: 264px;
-    height: 20px;
-    border-radius: 90px;
-    background-color: #d9d9d9;
-}
+    #calories-amount{
+        position: absolute;
+        left: 7.05rem;
+        top: 4rem;
+    }
+    #calories-goal{
+        position: absolute;
+        top: 4rem;
+        left: 11.5rem;
+    }
+    #water-text {position:absolute; left: 11.5rem; top:40rem;}
+    #water-amount{position:absolute; left: 9rem; top:41rem;}
+    #fiber-text{position:absolute; left: 29.5rem; top:40rem;}
+    #fiber-amount{position:absolute; left: 27rem; top:41rem;}
+    #name{
+        position: absolute;
+        top: 21.6rem;
+        left: 22.6rem;
+    }
+    #protein-rectangle, #fats-rectangle, #carbs-rectangle, #sodium-rectangle, #sugar-rectangle{position: absolute; left: 70.750rem;}
+    #protein-rectangle{top: 9.1rem;}
+    #fats-rectangle{top: 17.8rem;}
+    #carbs-rectangle{top: 26.5rem;}
+    #sodium-rectangle{top: 35.2rem;}
+    #sugar-rectangle{top: 43.9rem;}
 
-#dashboard-dieta .rectangle82 {
-    margin: 0px 0px 0px 0px;
-    position: absolute;
-    left: 963px;
-    top: 648px;
-    width: 264px;
-    height: 20px;
-    border-radius: 90px;
-    background-color: #d9d9d9;
-}
+    #protein-amount, #fats-amount, #sodium-amount, #sugar-amount, #carbs-amount{position: absolute; left: 75.5rem;}
+    #protein-amount{top: 5rem;}
+    #fats-amount{top: 13.8rem;}
+    #carbs-amount{top: 22rem;}
+    #sodium-amount{top: 31rem;}
+    #sugar-amount{top: 39.9rem;}
 
-#dashboard-dieta .text4 {
-    margin: 0 0 0 0;
-    position: absolute;
-    color: #000000;
-    font-family: Inter, sans-serif;
-    font-size: 32px;
-    top: 219px;
-    left: 80px;
-}
 
-#dashboard-dieta .text5 {
-    margin: 0 0 0 0;
-    position: absolute;
-    color: #000000;
-    font-family: Inter, sans-serif;
-    font-size: 32px;
-    top: 219px;
-    left: 1010px;
-}
+    #protein-text, #fats-text, #carbs-text, #sodium-text, #sugar-text{position: absolute; left: 45rem;}
+    #protein-text{top: 5.8rem;}
+    #fats-text{top: 14.5rem;}
+    #carbs-text{top: 23.2rem;}
+    #sodium-text{top: 31.9rem;}
+    #sugar-text{top: 40.6rem;}
 
-#dashboard-dieta .text6 {
-    margin: 0 0 0 0;
-    position: absolute;
-    color: #000000;
-    font-family: Inter, sans-serif;
-    font-size: 32px;
-    top: 590px;
-    left: 108px;
-}
+    #r8,#r10,#r12,#r14,#r16{position: absolute; left: 140rem;}
 
-#dashboard-dieta .text7 {
-    margin: 0 0 0 0;
-    position: absolute;
-    color: #000000;
-    font-family: Inter, sans-serif;
-    font-size: 32px;
-    top: 689px;
-    left: 142px;
-}
+    #r8{top: 35.9rem;}
+    #r10{top: 47.7rem;}
+    #r12{top: 59.5rem;}
+    #r14{top: 71.3rem;}
+    #r16{top: 83.1rem;}
 
-#dashboard-dieta .text8 {
-    margin: 0 0 0 0;
-    position: absolute;
-    color: #000000;
-    font-family: Inter, sans-serif;
-    font-size: 32px;
-    top: 590px;
-    left: 541px;
-}
+    #r7,#r9,#r11,#r13,#r15{position: absolute; left: 138.25rem;}
+    #r7{top: 37.7rem;}
+    #r9{top: 49.5rem;}
+    #r11{top: 61.29rem;}
+    #r13{top: 73.09rem;}
+    #r15{top: 84.89rem;}
 
-#dashboard-dieta .text9 {
-    margin: 0 0 0 0;
-    position: absolute;
-    color: #000000;
-    font-family: Inter, sans-serif;
-    font-size: 32px;
-    top: 689px;
-    left: 575px;
-}
+    #diet-amount1, #diet-amount2, #diet-amount3, #diet-amount4, #diet-amount5 {position: absolute; left: 130rem;}
+    #diet-amount1 {top: 36rem;}
+    #diet-amount2 {top: 47.8rem;}
+    #diet-amount3 {top: 59.6rem;}
+    #diet-amount4 {top: 71.4rem;}
+    #diet-amount5 {top: 83.2rem;}
 
-#dashboard-dieta .text10 {
-    margin: 0 0 0 0;
-    position: absolute;
-    color: #000000;
-    font-family: Inter, sans-serif;
-    font-size: 32px;
-    top: 590px;
-    left: 991px;
-}
+    #diet-text1, #diet-text2, #diet-text3, #diet-text4, #diet-text5 {position: absolute; left: 110rem; width: 14rem;}
+    #diet-text1 {top: 35.3rem;}
+    #diet-text2 {top: 47.1rem;}
+    #diet-text3 {top: 58.9rem;}
+    #diet-text4 {top: 70.7rem;}
+    #diet-text5 {top: 82.5rem;}
+}*/
 
-#dashboard-dieta .text11 {
-    margin: 0 0 0 0;
-    position: absolute;
-    color: #000000;
-    font-family: Inter, sans-serif;
-    font-size: 32px;
-    top: 689px;
-    left: 1025px;
-}
-
-#dashboard-dieta .ellipse16 {
-    margin: 0px 0px 0px 0px;
-    position: absolute;
-    width: 150px;
-    height: 150px;
-    background-color: #d9d9d9;
-    top: 1366px;
-    left: 184px;
-    border-radius: 50%;
-}
-
-#dashboard-dieta .text12 {
-    margin: 0 0 0 0;
-    position: absolute;
-    color: #000000;
-    font-family: Inter, sans-serif;
-    font-size: 32px;
-    top: 1395px;
-    left: 435px;
-}
-
-#dashboard-dieta .text13 {
-    margin: 0 0 0 0;
-    position: absolute;
-    color: #000000;
-    font-family: Inter, sans-serif;
-    font-size: 32px;
-    top: 1453px;
-    left: 484px;
-}
-
-#dashboard-dieta .rectangle86 {
-    margin: 0 0 0 0;
-    position: absolute;
-    width: 27px;
-    height: 89px;
-    top: 1395px;
-    left: 1179px;
-    background-color: #d9d9d9;
-    border-radius: 90px;
-}
-
-#dashboard-dieta .rectangle87 {
-    margin: 0 0 0 0;
-    position: absolute;
-    width: 89px;
-    height: 27px;
-    top: 1427px;
-    left: 1148px;
-    background-color: #d9d9d9;
-    border-radius: 90px;
-}
-
-#dashboard-dieta .ellipse17 {
-    margin: 0px 0px 0px 0px;
-    position: absolute;
-    width: 150px;
-    height: 150px;
-    background-color: #d9d9d9;
-    top: 1723px;
-    left: 184px;
-    border-radius: 50%;
-}
-
-#dashboard-dieta .text14 {
-    margin: 0 0 0 0;
-    position: absolute;
-    color: #000000;
-    font-family: Inter, sans-serif;
-    font-size: 32px;
-    top: 1752px;
-    left: 435px;
-}
-
-#dashboard-dieta .text15 {
-    margin: 0 0 0 0;
-    position: absolute;
-    color: #000000;
-    font-family: Inter, sans-serif;
-    font-size: 32px;
-    top: 1810px;
-    left: 484px;
-}
-
-#dashboard-dieta .rectangle88 {
-    margin: 0 0 0 0;
-    position: absolute;
-    width: 27px;
-    height: 89px;
-    top: 1749px;
-    left: 1179px;
-    background-color: #d9d9d9;
-    border-radius: 90px;
-}
-
-#dashboard-dieta .rectangle89 {
-    margin: 0 0 0 0;
-    position: absolute;
-    width: 89px;
-    height: 27px;
-    top: 1781px;
-    left: 1148px;
-    background-color: #d9d9d9;
-    border-radius: 90px;
-}
-
-#dashboard-dieta .ellipse18 {
-    margin: 0px 0px 0px 0px;
-    position: absolute;
-    width: 150px;
-    height: 150px;
-    background-color: #d9d9d9;
-    top: 2061px;
-    left: 184px;
-    border-radius: 50%;
-}
-
-#dashboard-dieta .text16 {
-    margin: 0 0 0 0;
-    position: absolute;
-    color: #000000;
-    font-family: Inter, sans-serif;
-    font-size: 32px;
-    top: 2019px;
-    left: 435px;
-}
-
-#dashboard-dieta .text17 {
-    margin: 0 0 0 0;
-    position: absolute;
-    color: #000000;
-    font-family: Inter, sans-serif;
-    font-size: 32px;
-    top: 2167px;
-    left: 484px;
-}
-
-#dashboard-dieta .rectangle90 {
-    margin: 0 0 0 0;
-    position: absolute;
-    width: 27px;
-    height: 89px;
-    top: 2122px;
-    left: 1179px;
-    background-color: #d9d9d9;
-    border-radius: 90px;
-}
-
-#dashboard-dieta .rectangle91 {
-    margin: 0 0 0 0;
-    position: absolute;
-    width: 89px;
-    height: 27px;
-    top: 2154px;
-    left: 1148px;
-    background-color: #d9d9d9;
-    border-radius: 90px;
-}
-
-}

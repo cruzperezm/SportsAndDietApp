@@ -11,65 +11,92 @@
 <body>
 <main>
 <div id="dashboard-deporte">
-    <p class="text_name" id="name"></p>
-    <div class="ellipse11" id="profile_picture"></div>
-    <div class="ellipse12"></div>
-    <div class="rectangle79">
-        <a class="ellipse15" id="boton_dieta" href="Dashboard-Dieta.html"></a>
+    <p class="text64" id="name"></p>
+    <div class="rectangle-toggle">
+        <a class="ellipse-toggle" href="Dashboard-Dieta.html"></a>
     </div>
-    <div class="rectangle_container" id="bars-container">
-        <!--<div class="rectangle_day" id="bar_L"></div>
-        <div class="text_day" id="L">L</div>
-        <div class="rectangle_day" id="bar_M"></div>
-        <div class="text_day" id="M">M</div>
-        <div class="rectangle_day" id="bar_X"></div>
-        <div class="text_day" id="X">X</div>
-        <div class="rectangle_day" id="bar_J"></div>
-        <div class="text_day" id="J">J</div>
-        <div class="rectangle_day" id="bar_V"></div>
-        <div class="text_day" id="V">V</div>
-        <div class="rectangle_day" id="bar_S"></div>
-        <div class="text_day" id="S">S</div>
-        <div class="rectangle_day" id="bar_D"></div>
-        <div class="text_day" id="D">D</div>-->
-        <div class="text25" id="diario1"></div>
-        <div class="text26" id="avance_diario1"></div>
-        <div class="text25" id="diario2"></div>
-        <div class="text26" id="avance_diario2"></div>
-        <div class="text25" id="diario3"></div>
-        <div class="text26" id="avance_diario3"></div>
+    <div class="rectangle-container">
+        <p class="text24" id="move-text"></p>
+        <p class="text24" id="move-calories"></p>
+        <p class="text24" id="exercise-text"></p>
+        <p class="text24" id="exercise-calories"></p>
+        <p class="text24" id="stand-text"></p>
+        <p class="text24" id="stand-calories"></p>
     </div>
-    <div class="text12" id="entrenamiento1">Lorem Ipsum</div>
-    <div class="text13" id="avance_entrenamiento1">100/200</div>
-    <div class="rectangle86"></div>
-    <div class="rectangle87"></div>
-    <div class="text14" id="entrenamiento2">Lorem Ipsum</div>
-    <div class="text15" id="avance_entrenamiento2">100/200</div>
-    <div class="rectangle88"></div>
-    <div class="rectangle89"></div>
-    <div class="text16" id="entrenamiento3">Lorem Ipsum</div>
-    <div class="text17" id="avance_entrenamiento3">100/200</div>
-    <div class="rectangle90"></div>
-    <div class="rectangle91"></div>
-    <div class="text16" id="entrenamiento4">Lorem Ipsum</div>
-    <div class="text17" id="avance_entrenamiento4">100/200</div>
-    <div class="rectangle90"></div>
-    <div class="rectangle91"></div>
+    <a class="cross-horizontal" id="r7" href="../Deporte/Deporte_index.html"></a>
+    <a class="cross-vertical" id="r8" href="../Deporte/Deporte_index.html"></a>
+    <p class="text20" id="train-text1"></p>
+    <a class="cross-horizontal" id="r9" href="../Deporte/Deporte_index.html"></a>
+    <a class="cross-vertical" id="r10" href="../Deporte/Deporte_index.html"></a>
+    <p class="text20" id="train-text2"></p>
+    <a class="cross-horizontal" id="r11" href="../Deporte/Deporte_index.html"></a>
+    <a class="cross-vertical" id="r12" href="../Deporte/Deporte_index.html"></a>
+    <p class="text20" id="train-text3"></p>
+    <a class="cross-horizontal" id="r13" href="../Deporte/Deporte_index.html"></a>
+    <a class="cross-vertical" id="r14" href="../Deporte/Deporte_index.html"></a>
+    <p class="text20" id="train-text4"></p>
+    <a class="cross-horizontal" id="r15" href="../Deporte/Deporte_index.html"></a>
+    <a class="cross-vertical" id="r16" href="../Deporte/Deporte_index.html"></a>
+    <p class="text20" id="train-text5"></p>
+    <p class="text16" id="train-amount1"></p>
+    <p class="text16" id="train-amount2"></p>
+    <p class="text16" id="train-amount3"></p>
+    <p class="text16" id="train-amount4"></p>
+    <p class="text16" id="train-amount5"></p>
 </div>
 </main>
 <footer xlu-include-file="/footerheader/footer.html"></footer>
 <script>xLuIncludeFile()</script>
 <script>
-    fetch('data.json').then(r => r.json()).then(data => {
+        fetch('data.json')
+        .then(r => r.json())
+        .then(data => {
+        // Update User Name
         document.getElementById('name').innerText = data.usuario.nombre;
-        const container = document.getElementById('bars-container');
-        // Mapeo manual para mantener tus posiciones exactas de X
-        const xPositions = [122, 249, 376, 503, 630, 757, 884];
-        container.innerHTML = data.deporte.barras.map((b, i) => `
-                <div class="bar-unit" style="left: ${xPositions[i]}px; height: ${b.altura};"></div>
-                <div style="position:absolute; left:${xPositions[i]}px; top:680px; font-size:40px;">${b.dia}</div>
-            `).join('');
-    });
+
+        // Update Activity Rings Stats (Move, Exercise, Stand)
+        // Using data.actividades for these labels
+        document.getElementById('move-text').innerText = data.actividades[0].nombre;
+        document.getElementById('move-calories').innerText = data.actividades[0].valor;
+
+        document.getElementById('exercise-text').innerText = data.actividades[1].nombre;
+        document.getElementById('exercise-calories').innerText = data.actividades[1].valor;
+
+        document.getElementById('stand-text').innerText = data.actividades[2].nombre;
+        document.getElementById('stand-calories').innerText = data.actividades[2].valor;
+
+            // Generate the Weekly Bars inside the existing .rectangle-container
+            // We prepend them to ensure they appear at the top as seen in the images
+            const container = document.querySelector('.rectangle-container');
+
+            // Create a wrapper for the bars to keep them aligned
+            const barsHtml = `
+                <div style="display: flex; justify-content: space-around; align-items: flex-end; height: 200px; width: 100%; margin-bottom: 20px;">
+                    ${data.deporte.semana.map(day => `
+                        <div style="display: flex; flex-direction: column; align-items: center; height: 100%; justify-content: flex-end;">
+                            <div class="bar-unit" style="width: 20px; background-color: #D1D5DB; border-radius: 10px; height: ${day.valor}%;"></div>
+                            <p class="text16" style="margin-top: 8px;">${day.dia}</p>
+                        </div>
+                    `).join('')}
+                </div>
+            `;
+
+            // Keep the existing text elements but add the bars above them
+            const existingContent = container.innerHTML;
+            container.innerHTML = barsHtml + existingContent;
+
+            // Populate the bottom list (Exercises/Train)
+            const exercises = data.deporte.ejercicios;
+            for (let i = 1; i <= 5; i++) {
+                const textElem = document.getElementById(`train-text${i}`);
+                const amountElem = document.getElementById(`train-amount${i}`);
+                if (textElem && amountElem && exercises[i-1]) {
+                    textElem.innerText = exercises[i-1].nombre;
+                    amountElem.innerText = exercises[i-1].valor;
+                }
+            }
+        })
+        .catch(error => console.error('Error loading JSON:', error));
 </script>
 </body>
 </html>
