@@ -14,8 +14,7 @@
               "imagen": "../imagenes/Deportes/marcha.jpg",
               "material": ["Ninguno"],
               "detalles": { "tiempo": "40 seg", "descanso": "20 seg" },
-              "video": "https://youtu.be/j8XGysKsPFc?si=pXiZ9ALqs9xSxsXV",
-              "caracteristicas": ["Cardio", "Casa"],
+              "gif": "../imagenes/Deportes/gifs/",
               "zonas": ["full_body", "tren_inferior", "core"]
             },
             {
