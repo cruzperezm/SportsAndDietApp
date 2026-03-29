@@ -38,7 +38,9 @@ footer{
 
 .map{
     display: flex;
-    width: 40vw;
+    width: 30vw;
+    border: 1px solid lightgray;
+    border-radius: 8px;
 }
 
 .button {
