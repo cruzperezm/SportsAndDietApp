@@ -12,6 +12,7 @@ body {
 p{
     width: 75vw;
     margin: 1.5vh;
+    font-weight: 600;
 }
 
 .box {
@@ -99,10 +100,15 @@ input {
     color: #37ba8f;
     margin: -10vh;
     font-size: 4rem;
+    font-weight: bolder;
 }
 
 .smaller{
     font-size: 1.2rem;
+}
+
+label{
+    font-weight: 600;
 }
 
 input:focus, .selector:focus{
