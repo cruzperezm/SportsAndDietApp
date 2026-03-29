@@ -1,61 +1,63 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #ffffff;;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: #F5F5F7;
     display: flex;
     height: 100vh;
     overflow: hidden;
     justify-content: center;
     align-items: center;
+    font-size: 24px;
 }
 
 p{
     width: 75vw;
-    margin: 0;
+    margin: 1.5vh;
 }
 
 .box {
-    background-color: #e5e5e5;
+    background-color: #ffffff;
     width: 50vw;
     height: 65vh;
     padding: 50px;
-    border-radius: 10px;
+    border-radius: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     flex-grow: 1;
     row-gap: 1vh;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .selector {
-    height: 35px;
+    height: 5vh;
     width: 25vw;
-    background-color: #f0f0f0;
+    background-color: #EAEAEA;
     border-radius: 8px;
     border: 2px solid lightgray;
-    margin-bottom: 0;
+    font-size: 20px;
 }
 
 input {
     width: 25vw;
-    background-color: #ffffff;
+    background-color: #EAEAEA;
     border-radius: 8px;
     text-decoration: none;
     border: 2px solid lightgray;
-    margin-bottom: 30px;
     height: 5vh;
+    font-size: 20px;
+    outline: none;
 }
 
 .form {
+    display: flex;
     flex: 1;
     width: 25vw;
     height: 5vh;
-    background-color: #ffffff;
+    background-color: #EAEAEA;
     border-radius: 8px;
     text-decoration: none;
     border: 2px solid lightgray;
-    margin-bottom: 30px;
     justify-content: center;
     align-items: center;
 }
@@ -67,84 +69,90 @@ input {
 }
 
 .radiowrapper:hover label{
-    background-color: #d1d1d1; }
+    background-color: #37ba8f;
+    color: #ffffff;
+    border-color: #37ba8f;
+    box-shadow: 0 4px 12px rgb(38, 122, 95);
+}
 
 .radiowrapper input:checked ~ label {
-    background-color: #aefaf8;
+    border-color: #37ba8f;
+    background-color: #ffffff;;
+    color: #000000;
 }
 
 .button {
     flex: 1;
-    height: 3vw;
-    width: 5vw;
+    height: 6vh;
+    width: 10vw;
     background-color: #f0f0f0;
     border-radius: 8px;
     display: block;
-    text-decoration: none;
+    font-size: 20px;
 }
 
-input[type=text]:focus {
-    background-color: lightblue;
+input:focus, .selector:focus{
+    border-color: #37ba8f;
+    background-color: #ffffff;
 }
-
-.small{
-    font-size: smaller;
-}
-
-.smaller{
-    font-size: smaller;
-}
-
-.large{
-    font-size: large;
+.button:hover {
+    background-color: #37ba8f;
+    color: #ffffff;
+    border-color: #37ba8f;
+    box-shadow: 0 4px 12px rgb(38, 122, 95);
 }
 
 .larger{
-    font-size: xx-large;
+    margin: -10vh;
+    font-size: 4rem;
 }
 @media only screen and (max-width: 600px) {
-    .form-row {
-        flex-direction: column;
-        align-items: center;
-    }
     .form {
-        display: flex;
         width: 50vw;
     }
+    .selector, input{
+        width: 50vw;
+        font-size: 16px;
+    }
     .button {
-        width: 25vw;
-        height: 3rem;
+        width: 20vw;
+        font-size: 16px;
+    }
+    body{
+        font-size: 20px;
     }
     .box{
-
-    }
-    body{
-        font-size: 26px;
+        width: 55vw;
     }
 }
 
-@media only screen and (min-width: 600px) {
-    .form-row {
-        flex-direction: row;
+@media only screen and (min-width: 600px) and (max-width: 992px) {
+    body{
+        font-size: 22px;
     }
     .form {
-        display: flex;
+        width: 35vw;
     }
-    body{
-        font-size: 24px;
-    }
-}
-
-@media only screen and (min-width: 992px) {
-    .form-row {
-        flex-direction: column;
-        align-items: center;
-    }
-    .form {
-        display: flex;
-    }
-    body{
+    .selector, input {
+        width: 35vw;
         font-size: 18px;
+    }
+    .button {
+        width: 15vw;
+        font-size: 18px;
+    }
+    .box{
+        width: 60vw;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    body{
+        font-size: 30px;
+    }
+    
+    .selector, input, .button {
+        font-size: 26px;
     }
 
 }
