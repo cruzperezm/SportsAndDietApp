@@ -1,26 +1,19 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
 
-/* =========================================================
-   --- PALETA DE COLORES Y VARIABLES GLOBALES (Igual al Sign Up) ---
-   ========================================================= */
 :root {
-    /* Colores Principales */
     --color-deporte: #FF9800;
     --color-dieta: #4CAF50;
     --color-error: #EF4444;
 
-    /* Colores de Estructura */
     --color-bg-page: #F5F5F7;
     --color-bg-card: #FFFFFF;
     --gray-element: #EAEAEA;
     --gray-border: #D1D5DB;
     --gray-placeholder: #6B7280;
 
-    /* Texto */
     --text-main: #1A1A1A;
     --text-secondary: #4B5563;
 
-    /* Efectos de Sombra y Transición */
     --shadow-basic: 0 10px 25px rgba(0,0,0,0.08);
     --transition-standard: all 0.2s ease;
 }
@@ -42,9 +35,6 @@ html, body {
     overflow: hidden;
 }
 
-/* =========================================================
-   --- TARJETA PRINCIPAL ---
-   ========================================================= */
 .wireframe-card {
     background-color: var(--color-bg-card);
     width: 45%;
@@ -64,9 +54,6 @@ html, body {
     display: none;
 }
 
-/* =========================================================
-   --- LOGO / AVATAR ---
-   ========================================================= */
 .logo-placeholder {
     width: 75px;
     height: 75px;
@@ -87,9 +74,6 @@ html, body {
     display: block;
 }
 
-/* =========================================================
-   --- FORMULARIO E INPUTS ---
-   ========================================================= */
 .wireframe-form {
     width: 100%;
     display: flex;
@@ -132,7 +116,6 @@ html, body {
     color: var(--gray-placeholder);
 }
 
-/* --- Mensajes de Validación --- */
 #login-error {
     font-size: 0.9rem;
     margin-bottom: 15px;
@@ -150,9 +133,6 @@ html, body {
     font-weight: 600;
 }
 
-/* =========================================================
-   --- BOTONES UNIFICADOS ---
-   ========================================================= */
 .button-row {
     display: flex;
     justify-content: space-between;
@@ -192,9 +172,6 @@ html, body {
     box-shadow: none;
 }
 
-/* =========================================================
-   --- TEXTO Y REDES SOCIALES ---
-   ========================================================= */
 .text-links {
     text-align: center;
     font-size: 0.9rem;
@@ -243,7 +220,6 @@ html, body {
     object-fit: contain;
 }
 
-/* --- RESPONSIVE --- */
 @media (max-width: 768px) {
     .wireframe-card {
         width: 90%;

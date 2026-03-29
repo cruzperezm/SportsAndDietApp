@@ -4,7 +4,6 @@
 
 .header {
     background-color: #ffffff;
-    /* Línea decorativa estilo Dieta */
     border-bottom: 2px solid #10B981;
     padding: 0 2rem;
     font-family: 'Inter', system-ui, sans-serif;
@@ -14,16 +13,12 @@
     display: flex;
     align-items: center;
     height: 80px;
-    gap: 0.5rem; /* Separación sutil entre los botones centrales */
+    gap: 0.5rem;
 }
 
-/* =========================================
-   ESTADO BASE DE TODOS LOS BOTONES
-   ========================================= */
 .nav-button {
     text-decoration: none;
     color: #1F2937;
-    /* Fondo gris muy clarito para diferenciar del header blanco */
     background-color: #F3F4F6;
     padding: 0.5rem 1rem;
     border-radius: 10px;
@@ -31,7 +26,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 8px; /* Espacio entre el icono y el texto */
+    gap: 8px;
     transition: all 0.3s ease;
 }
 
@@ -51,18 +46,10 @@
     box-shadow: 0 8px 12px -3px rgba(0, 0, 0, 0.1);
 }
 
-/* =========================================
-   POSICIONAMIENTO DE EXTREMOS (HOME Y LOGIN)
-   ========================================= */
-
-/* HOME: Se va a la izquierda y centra el resto.
-   Ya no necesita reglas de tamaño ni hover especiales,
-   hereda todo de .nav-button */
 #nav-home {
     margin-right: auto;
 }
 
-/* LOGIN: Se va a la derecha, centra el resto y TIENE FORMA DE PÍLDORA */
 #nav-login {
     margin-left: auto;
     border-radius: 9999px;
@@ -74,9 +61,6 @@
     color: #F97316;
 }
 
-/* =========================================
-   VISTA INTERMEDIA (<= 768px)
-   ========================================= */
 @media (max-width: 768px) {
     .nav-text {
         display: none !important;
@@ -91,9 +75,6 @@
     }
 }
 
-/* =========================================
-   VISTA MÓVIL (<= 412px)
-   ========================================= */
 @media (max-width: 412px) {
     .header {
         padding: 0 10px;
@@ -104,7 +85,6 @@
         justify-content: center;
     }
 
-    /* Anulamos los márgenes para que se repartan parejos */
     #nav-home { margin-right: 0; }
     #nav-login { margin-left: 0; }
 
@@ -114,7 +94,6 @@
         margin: 0;
     }
 
-    /* Convertimos TODOS los botones en CÍRCULOS perfectos */
     .nav-button {
         width: 45px;
         height: 45px;

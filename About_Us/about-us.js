@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Cargamos el archivo JSON
     fetch('about-us-data.json')
         .then(respuesta => respuesta.json())
         .then(datos => {
@@ -11,7 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function inyectarAboutUs(data) {
-    // 2. Inyectar el recuadro grande (Hero)
     const heroContainer = document.getElementById('about-hero-container');
     if (heroContainer && data.hero) {
         heroContainer.innerHTML = `
@@ -20,8 +18,6 @@ function inyectarAboutUs(data) {
             <p class="about-hero-text">${data.hero.text}</p>
         `;
     }
-
-    // 3. Inyectar los 4 recuadros (Features)
     const featuresContainer = document.getElementById('about-features-container');
     if (featuresContainer && data.features) {
         featuresContainer.innerHTML = ''; // Limpiamos por si acaso

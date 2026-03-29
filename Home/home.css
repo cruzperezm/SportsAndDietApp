@@ -1,27 +1,19 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
 
-/* =========================================================
-   --- NUEVA PALETA DE COLORES Y VARIABLES GLOBALES ---
-   ========================================================= */
 :root {
-    /* Colores Principales */
-    --color-deporte: #FF9800;   /* Naranja Energía */
-    --color-dieta: #4CAF50;     /* Verde Salud */
+    --color-deporte: #FF9800;
+    --color-dieta: #4CAF50;
 
-    /* Colores de Estructura */
-    --color-bg-page: #F5F5F7;  /* Fondo ultra-claro */
-    --color-bg-card: #FFFFFF;  /* Fondo de cajas blancas */
-    --gray-placeholder: #E0E0E0; /* Gris muy suave para placeholders */
+    --color-bg-page: #F5F5F7;
+    --color-bg-card: #FFFFFF;
+    --gray-placeholder: #E0E0E0;
 
-    /* Texto */
-    --text-main: #1A1A1A;      /* Casi negro para lectura principal */
-    --text-secondary: #555555; /* Gris oscuro para descripciones */
+    --text-main: #1A1A1A;
+    --text-secondary: #555555;
 
-    /* Estructura */
     --max-width: 1200px;
     --section-padding: 80px 10%;
 
-    /* --- EFECTOS DE SOMBRA "DIET-STYLE" --- */
     --shadow-basic: 0 4px 6px rgba(0,0,0,0.1);
     --shadow-hover: 0 10px 20px rgba(0,0,0,0.15);
     --transition-standard: all 0.2s ease;
@@ -40,9 +32,6 @@ html, body {
     background-color: var(--color-bg-page);
 }
 
-/* =========================================================
-   --- ESCALA TIPOGRÁFICA ---
-   ========================================================= */
 p {
     font-size: 1.2rem;
     line-height: 1.7;
@@ -59,7 +48,6 @@ button:focus-visible {
     outline: -webkit-focus-ring-color auto 5px !important;
 }
 
-/* Divs espaciadores heredados */
 #div-1, #div-2, #div-3, #div-4 {
     display: flex;
     flex-direction: column;
@@ -87,7 +75,6 @@ img[src*="aspas.svg"] {
     object-fit: cover;
 }
 
-/* --- HEADER / TITLE --- */
 .title {
     position: relative;
     width: 100%;
@@ -116,7 +103,6 @@ img[src*="aspas.svg"] {
     text-shadow: 2px 2px 12px rgba(0,0,0,0.6);
 }
 
-/* --- FEATURES --- */
 .features-section {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -149,7 +135,6 @@ img[src*="aspas.svg"] {
     line-height: 1.6;
 }
 
-/* --- PREVIEWS (DIET & SPORT) --- */
 .diets-preview, .sports-preview {
     padding: 40px 10% 80px 10%;
     display: flex;
@@ -176,7 +161,6 @@ img[src*="aspas.svg"] {
     transition: var(--transition-standard);
 }
 
-/* EFECTO HOVER "DIET-STYLE" */
 #diet-preview-link, #sport-preview-link {
     transition: var(--transition-standard);
     border-radius: 20px;
@@ -191,7 +175,6 @@ img[src*="aspas.svg"] {
     box-shadow: none;
 }
 
-/* TEXTOS DE INFORMACIÓN */
 .diet-info, .sport-info {
     flex: 1;
     font-size: 1.3rem;
@@ -208,7 +191,6 @@ img[src*="aspas.svg"] {
     padding-right: 30px;
 }
 
-/* --- ESTILOS DEL CARRUSEL INFINITO --- */
 .diet-preview-gallery, .sport-preview-gallery {
     width: 100%;
     overflow: hidden;
@@ -253,7 +235,6 @@ img[src*="aspas.svg"] {
     100% { transform: translateX(0); }
 }
 
-/* --- COMMENTS --- */
 .featured-comments {
     padding: var(--section-padding);
     display: flex;
@@ -302,11 +283,7 @@ img[src*="aspas.svg"] {
     color: var(--text-secondary);
 }
 
-/* =========================================================
-   --- SIGN UP (INVITACIÓN DE REGISTRO) - TIPO MOCKUP ---
-   ========================================================= */
 .sign-up-request {
-    /* Forzamos columna centrada en TODAS las resoluciones */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -320,33 +297,31 @@ img[src*="aspas.svg"] {
     font-size: 2.2rem;
     line-height: 1.4;
     font-weight: 600;
-    margin: 0; /* Limpiamos márgenes para evitar saltos */
+    margin: 0;
 }
 
-/* Contenedor relativo que agrupa la imagen y el botón */
 .sign-up-image-container {
     position: relative;
     width: 100%;
-    max-width: 450px; /* Tamaño máximo de la caja */
+    max-width: 450px;
     display: flex;
     justify-content: center;
 }
 
 .sign-up-image {
     width: 100%;
-    aspect-ratio: 1 / 1; /* Hace que la imagen sea cuadrada */
+    aspect-ratio: 1 / 1;
     object-fit: cover;
-    border-radius: 40px; /* Bordes muy redondeados */
+    border-radius: 40px;
     box-shadow: var(--shadow-basic);
     display: block;
 }
 
 #sign-up-link {
-    /* Posicionamiento absoluto respecto al contenedor de la imagen */
     position: absolute;
-    bottom: 30px; /* Distancia desde la base de la imagen */
+    bottom: 30px;
     left: 50%;
-    transform: translateX(-50%); /* Centrado horizontal perfecto */
+    transform: translateX(-50%);
 
     width: 160px;
     height: 55px;
@@ -370,12 +345,6 @@ img[src*="aspas.svg"] {
     box-shadow: 0 10px 20px rgba(255, 152, 0, 0.4);
 }
 
-
-/* =========================================================
-   MEDIA QUERIES (RESPONSIVE)
-   ========================================================= */
-
-/* --- VISTA TABLET GENERAL (Hasta 1280px) --- */
 @media (max-width: 1280px) {
     :root {
         --section-padding: 60px 5%;
@@ -386,15 +355,12 @@ img[src*="aspas.svg"] {
     }
 }
 
-/* --- VISTA TABLET Y MÓVIL HORIZONTAL (<= 768px) --- */
 @media (max-width: 768px) {
-    /* Apilado de Features */
     .features-section {
         grid-template-columns: 1fr;
         gap: 40px;
     }
 
-    /* Apilado de Comentarios */
     .featured-comments {
         flex-direction: column;
         gap: 40px;
@@ -406,7 +372,6 @@ img[src*="aspas.svg"] {
     }
 }
 
-/* --- VISTA MÓVIL PEQUEÑA (<= 412px) --- */
 @media (max-width: 412px) {
     :root {
         --section-padding: 40px 20px;
@@ -464,7 +429,6 @@ img[src*="aspas.svg"] {
         font-size: 1.15rem;
     }
 
-    /* Ajuste para Sign Up en móvil */
     .sign-up-text {
         font-size: 1.8rem;
     }

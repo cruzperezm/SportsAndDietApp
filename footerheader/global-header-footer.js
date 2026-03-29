@@ -1,35 +1,23 @@
-// =========================================================
-// 1. INYECTAR LOS ESTILOS DEL HEADER Y FOOTER
-// =========================================================
 function cargarEstilosGlobales() {
     // Crear el link para el CSS del Header
     const cssHeader = document.createElement('link');
     cssHeader.rel = 'stylesheet';
-    cssHeader.href = '../footerheader/header.css'; // Ajusta la ruta si tu CSS se llama distinto
+    cssHeader.href = '../footerheader/header.css';
 
-    // Crear el link para el CSS del Footer
     const cssFooter = document.createElement('link');
     cssFooter.rel = 'stylesheet';
-    cssFooter.href = '../footerheader/footer.css'; // Ajusta la ruta si tu CSS se llama distinto
+    cssFooter.href = '../footerheader/footer.css';
 
-    // Añadirlos al <head> de la página
     document.head.appendChild(cssHeader);
     document.head.appendChild(cssFooter);
 }
 
-// Ejecutamos la función inmediatamente para que vaya descargando los estilos
 cargarEstilosGlobales();
 
-// =========================================================
-// 2. LÓGICA ORIGINAL DE INYECCIÓN DE DATOS (Sin cambios)
-// =========================================================
 document.addEventListener('DOMContentLoaded', () => {
-    // Comprobamos cada 100ms si el HTML del header y footer ya fue inyectado
     const intervalo = setInterval(() => {
         const nav = document.getElementById('main-nav');
         const footerTextos = document.getElementById('footer-text-columns');
-
-        // Si ya existen en la página, paramos la búsqueda y cargamos los datos
         if (nav && footerTextos) {
             clearInterval(intervalo);
             cargarDatosGlobales();
@@ -38,7 +26,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function cargarDatosGlobales() {
-    // Forzamos la ruta exacta que necesitas
     fetch('../footerheader/data.json')
         .then(respuesta => {
             if (!respuesta.ok) throw new Error("No se pudo cargar el JSON del Header/Footer");
@@ -51,15 +38,10 @@ function cargarDatosGlobales() {
         .catch(error => console.error("Error inyectando globales:", error));
 }
 
-// --- FUNCIONES DE INYECCIÓN ---
 function inyectarHeader(headerData) {
     const nav = document.getElementById('main-nav');
     if (!nav) return;
-
-    // Limpiamos el contenido por si acaso
     nav.innerHTML = '';
-
-    // Ahora iteramos sobre TODOS los links (incluido el Home que ahora es el primero)
     if (headerData.navLinks) {
         headerData.navLinks.forEach(enlace => {
             nav.innerHTML += `

@@ -1,8 +1,5 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
 
-/* =========================================================
-   --- PALETA DE COLORES (Heredada del Home) ---
-   ========================================================= */
 :root {
     --color-deporte: #FF9800;
     --color-dieta: #4CAF50;
@@ -37,9 +34,6 @@ body {
     gap: 80px;
 }
 
-/* =========================================================
-   --- HERO SECTION (Recuadro Grande) ---
-   ========================================================= */
 .about-hero-section {
     position: relative;
     width: 100%;
@@ -61,7 +55,6 @@ body {
     z-index: 1;
 }
 
-/* Capa oscura para que el texto blanco siempre se lea bien sobre la imagen */
 .about-hero-overlay {
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
@@ -82,12 +75,8 @@ body {
     margin: 0;
 }
 
-/* =========================================================
-   --- FEATURES SECTION (Los 4 Recuadros Rectangulares) ---
-   ========================================================= */
 .about-features-section {
     display: grid;
-    /* MODIFICADO: 2 columnas fijas para versión web (2 arriba, 2 abajo) */
     grid-template-columns: repeat(2, 1fr);
     gap: 40px;
     width: 100%;
@@ -97,20 +86,16 @@ body {
 .about-feature-card {
     background-color: var(--color-bg-card);
     border-radius: 20px;
-    /* MODIFICADO: Más padding lateral para formato horizontal */
     padding: 40px 50px;
     display: flex;
     flex-direction: column;
-    /* MODIFICADO: Alineado a la izquierda para potenciar la forma rectangular */
     align-items: flex-start;
     text-align: left;
     box-shadow: var(--shadow-basic);
     transition: all 0.3s ease;
-    /* MODIFICADO: Borde lateral izquierdo en lugar de superior */
     border-left: 8px solid var(--color-dieta);
 }
 
-/* Intercalamos los colores de los bordes laterales (Verde, Naranja) */
 .about-feature-card:nth-child(even) {
     border-left-color: var(--color-deporte);
 }
@@ -143,12 +128,7 @@ body {
     margin: 0;
 }
 
-/* =========================================================
-   --- RESPONSIVE (Móviles) ---
-   ========================================================= */
-
-/* Móviles (412px o menos) */
-@media (max-width: 412px) {
+@media (max-width: 500px) {
     .about-us {
         padding: 40px 20px;
         gap: 40px;
@@ -165,14 +145,12 @@ body {
     }
 
     .about-features-section {
-        /* MODIFICADO: Apilados de 1 en 1 en móviles */
         grid-template-columns: 1fr;
         gap: 25px;
     }
 
     .about-feature-card {
         padding: 30px 25px;
-        /* Reducimos el borde lateral en móvil para ganar espacio */
         border-left-width: 5px;
     }
 
