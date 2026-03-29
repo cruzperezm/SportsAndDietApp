@@ -12,34 +12,44 @@
 
 <form action="../Datos_Biometricos/Datos-Biometricos-3.html" >
     <div class="box">
-        <p>Cual es tu meta?</p>
+        <p id="goal"></p>
         <div class="radiowrapper">
             <input id="dec" type="radio" name="radio" value="dec">
-            <label for="dec" class="form">Bajar peso</label>
+            <label id="decT" for="dec" class="form"></label>
         </div>
 
         <div class="radiowrapper">
         <input id="inc" type="radio" name="radio" value="inc">
-            <label for="inc" class="form">Subir peso</label>
+            <label id="incT" for="inc" class="form"></label>
         </div>
 
         <div class="radiowrapper">
         <input id="mnt" type="radio" name="radio" value="mnt">
-            <label for="mnt" class="form">Mantenerse</label>
+            <label id="mntT" for="mnt" class="form"></label>
         </div>
 
         <div class="radiowrapper">
         <input id="muscle" type="radio" name="radio" value="muscle">
-            <label for="muscle" class="form">Musculo</label>
+            <label id="muscleT" for="muscle" class="form"></label>
         </div>
         
         <div>
-            <button onclick="store()" type="submit" class="button">Siguiente</button>
+            <button id="button" onclick="store()" type="submit" class="button"></button>
         </div>
     </div>
 </form>
 
 <script>
+    fetch('bio-data.json').then(r => r.json())
+        .then(data => {
+            document.getElementById('goal').innerText = data.goal;
+            document.getElementById('decT').innerText = data.dec;
+            document.getElementById('incT').innerText = data.inc;
+            document.getElementById('mntT').innerText = data.mnt;
+            document.getElementById('muscleT').innerText = data.mscl;
+            document.getElementById('button').innerText = data.btn;
+        }).catch(error => console.error('Error loading JSON:', error));
+
     function store(){
         if (typeof(Storage) !== "undefined") {
             // Store

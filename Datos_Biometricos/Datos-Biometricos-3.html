@@ -11,39 +11,50 @@
 
 <form action="Datos-Biometricos-4.html">
     <div class="box">
-        <p>Cuanta actividad haces?</p>
+        <p id="activity"></p>
         <div class="radiowrapper">
             <input id="nev" type="radio" name="radio" value="nev">
-            <label for="nev" class="form">Nada</label>
+            <label id="nevT" for="nev" class="form"></label>
         </div>
 
         <div class="radiowrapper">
             <input id="small" type="radio" name="radio" value="small">
-            <label for="small" class="form">Poca</label>
+            <label id="smallT" for="small" class="form"></label>
         </div>
 
         <div class="radiowrapper">
             <input id="mod" type="radio" name="radio" value="mod">
-            <label for="mod" class="form">Moderada</label>
+            <label id="modT" for="mod" class="form"></label>
         </div>
 
         <div class="radiowrapper">
             <input id="lots" type="radio" name="radio" value="lots">
-            <label for="lots" class="form">Mucha</label>
+            <label id="lotsT" for="lots" class="form"></label>
         </div>
 
         <div class="radiowrapper">
             <input id="daily" type="radio" name="radio" value="daily">
-            <label for="daily" class="form">Todos los días</label>
+            <label id="dailyT" for="daily" class="form"></label>
         </div>
 
         <div>
-            <button onclick="store()" type="submit" class="button">Siguiente</button>
+            <button id="button" onclick="store()" type="submit" class="button"></button>
         </div>
     </div>
 </form>
 
 <script>
+    fetch('bio-data.json').then(r => r.json())
+        .then(data => {
+            document.getElementById('activity').innerText = data.act;
+            document.getElementById('nevT').innerText = data.nev;
+            document.getElementById('smallT').innerText = data.smallT;
+            document.getElementById('modT').innerText = data.mod;
+            document.getElementById('lotsT').innerText = data.lots;
+            document.getElementById('dailyT').innerText = data.daily;
+            document.getElementById('button').innerText = data.btn;
+        }).catch(error => console.error('Error loading JSON:', error));
+
     function store(){
         if (typeof(Storage) !== "undefined") {
             // Store

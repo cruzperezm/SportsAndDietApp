@@ -12,27 +12,41 @@
 
 <form action="../Datos_Biometricos/Datos-Biometricos-2.html">
     <div class="box">
-        <label>Nombre</label>
+        <label id="text1"></label>
         <input id="name" type="text" required>
-        <label> Género </label>
+        <label id="text2"></label>
         <select id="genre" class="selector" required>
-            <option value="" disabled selected>Seleccione</option>
-            <option value="Hombre">Hombre</option>
-            <option value="Mujer">Mujer</option>
-            <option value="No-binario">No Binario</option>
-            <option value="PND">Prefiero no decirlo</option>
+            <option id="text3" value="" disabled selected></option>
+            <option id="text4" value="Hombre"></option>
+            <option id="text5" value="Mujer"></option>
+            <option id="text6" value="No-binario"></option>
+            <option id="text7" value="PND"></option>
         </select>
-        <label>Edad</label>
+        <label id="text8"></label>
         <input id="age" type="number" required>
-        <label>Altura</label>
+        <label id="text9"></label>
         <input id="height" type="number" placeholder="cm" required>
         <div>
-            <button onclick="store()" type="submit" class="button">Siguiente</button>
+            <button id="button" onclick="store()" type="submit" class="button"></button>
         </div>
     </div>
 </form>
 
 <script>
+    fetch('bio-data.json').then(r => r.json())
+        .then(data => {
+            document.getElementById('text1').innerText = data.nombre;
+            document.getElementById('text2').innerText = data.genre;
+            document.getElementById('text3').innerText = data.gen1;
+            document.getElementById('text4').innerText = data.gen2;
+            document.getElementById('text5').innerText = data.gen3;
+            document.getElementById('text6').innerText = data.gen4;
+            document.getElementById('text7').innerText = data.gen5;
+            document.getElementById('text8').innerText = data.edad;
+            document.getElementById('text9').innerText = data.altura;
+            document.getElementById('button').innerText = data.btn;
+        }).catch(error => console.error('Error loading JSON:', error));
+    
     function store(){
     if (typeof(Storage) !== "undefined") {
         // Store

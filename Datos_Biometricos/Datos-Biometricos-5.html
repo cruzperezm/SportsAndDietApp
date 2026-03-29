@@ -13,15 +13,26 @@
 
 <form action="../Dashboards/Dashboard-Dieta.html" >
     <div class="box">
-        <p>Tus calorías diarias son:</p>
-        <p class="number">2010</p>
-        <p>Con estos datos llegarás a tu peso ideal!</p>
-        <p class="smaller">En 2 semanas podrás ver tus resultados</p>
+        <p id="dCal"></p>
+        <p id="cal" class="number"></p>
+        <p id="mText"></p>
+        <p id="weekText" class="smaller"></p>
         <div>
-            <button type="submit" class="button">Empieza Ya!</button>
+            <button id="finish" type="submit" class="button"></button>
         </div>
     </div>
 </form>
+
+<script>
+    fetch('bio-data.json').then(r => r.json())
+        .then(data => {
+            document.getElementById('dCal').innerText = data.dCal;
+            document.getElementById('cal').innerText = data.cal;
+            document.getElementById('mText').innerText = data.mText;
+            document.getElementById('weekText').innerText = data.weekText;
+            document.getElementById('finish').innerText = data.finish;
+        }).catch(error => console.error('Error loading JSON:', error));
+</script>
 
 </body>
 
