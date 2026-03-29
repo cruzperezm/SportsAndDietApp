@@ -1,3 +1,7 @@
+body{
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
 header{
     margin-bottom: 5vh;
 }
@@ -26,6 +30,10 @@ footer{
     height: 30px;
     background-color: #f0f0f0;
     border-radius: 8px;
+    text-decoration: none;
+    border: 2px solid lightgray;
+    font-size: 20px;
+    outline: none;
 }
 
 .button {
@@ -35,6 +43,19 @@ footer{
     background-color: #f0f0f0;
     border-radius: 8px;
     text-decoration: none;
+    border: 2px solid lightgray;
+    outline: none;
+}
+
+.form:focus{
+    border-color: #37ba8f;
+    background-color: #ffffff;
+}
+.button:hover {
+    background-color: #37ba8f;
+    color: #ffffff;
+    border-color: #37ba8f;
+    box-shadow: 0 4px 12px rgb(38, 122, 95);
 }
 
 /* 📱 móviles */

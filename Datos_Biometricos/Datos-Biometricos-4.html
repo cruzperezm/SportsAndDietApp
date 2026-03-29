@@ -4,7 +4,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <head>
-
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -13,13 +13,13 @@
 <form action="Datos-Biometricos-5.html">
     <div class="box">
         <label>Peso actual</label>
-        <input id="cWeight" type="text" required>
+        <input id="cWeight" type="number" placeholder="Kg" required>
         <label>Peso deseado</label>
-        <input id="dWeight" type="text" required>
+        <input id="dWeight" type="number" placeholder="Kg" required>
         <label>Cuantas semanas quieres?</label>
-        <input id="nWeeks" type="number">
+        <input id="nWeeks" type="number" required>
         <div>
-            <button onclick="store()" type="submit" class="button"></button>
+            <button onclick="store()" type="submit" class="button">Siguiente</button>
         </div>
     </div>
 </form>
@@ -33,6 +33,7 @@
             localStorage.setItem("nWeeks", document.getElementById("nWeeks").value);
         }
     }
+    
 </script>
 
 </body>

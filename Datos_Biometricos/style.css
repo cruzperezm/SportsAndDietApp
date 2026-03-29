@@ -1,6 +1,6 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #ffffff;;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: #F5F5F7;
     display: flex;
     height: 100vh;
     overflow: hidden;
@@ -15,11 +15,11 @@ p{
 }
 
 .box {
-    background-color: #e5e5e5;
+    background-color: #ffffff;
     width: 50vw;
     height: 65vh;
     padding: 50px;
-    border-radius: 10px;
+    border-radius: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -32,7 +32,7 @@ p{
 .selector {
     height: 5vh;
     width: 25vw;
-    background-color: #ffffff;
+    background-color: #EAEAEA;
     border-radius: 8px;
     border: 2px solid lightgray;
     font-size: 20px;
@@ -40,11 +40,13 @@ p{
 
 input {
     width: 25vw;
-    background-color: #ffffff;
+    background-color: #EAEAEA;
     border-radius: 8px;
     text-decoration: none;
     border: 2px solid lightgray;
     height: 5vh;
+    font-size: 20px;
+    outline: none;
 }
 
 .form {
@@ -52,7 +54,7 @@ input {
     flex: 1;
     width: 25vw;
     height: 5vh;
-    background-color: #ffffff;
+    background-color: #EAEAEA;
     border-radius: 8px;
     text-decoration: none;
     border: 2px solid lightgray;
@@ -67,10 +69,16 @@ input {
 }
 
 .radiowrapper:hover label{
-    background-color: #d1d1d1; }
+    background-color: #37ba8f;
+    color: #ffffff;
+    border-color: #37ba8f;
+    box-shadow: 0 4px 12px rgb(38, 122, 95);
+}
 
 .radiowrapper input:checked ~ label {
-    background-color: #37ba8f;
+    border-color: #37ba8f;
+    background-color: #ffffff;;
+    color: #000000;
 }
 
 .button {
@@ -80,44 +88,35 @@ input {
     background-color: #f0f0f0;
     border-radius: 8px;
     display: block;
-    text-decoration: none;
+    font-size: 20px;
 }
 
-input[type=text]:focus {
-    background-color: lightblue;
+input:focus, .selector:focus{
+    border-color: #37ba8f;
+    background-color: #ffffff;
 }
-
-.small{
-    font-size: smaller;
-}
-
-.smaller{
-    font-size: smaller;
-}
-
-.large{
-    font-size: large;
+.button:hover {
+    background-color: #37ba8f;
+    color: #ffffff;
+    border-color: #37ba8f;
+    box-shadow: 0 4px 12px rgb(38, 122, 95);
 }
 
 .larger{
-    font-size: xx-large;
+    margin: -10vh;
+    font-size: 4rem;
 }
 @media only screen and (max-width: 600px) {
     .form {
         width: 50vw;
     }
-    .selector {
-        height: 2rem;
+    .selector, input{
         width: 50vw;
         font-size: 16px;
     }
-    input {
-        height: 2rem;
-        width: 50vw;
-    }
     .button {
         width: 20vw;
-        height: 2.5rem;
+        font-size: 16px;
     }
     body{
         font-size: 20px;
@@ -131,25 +130,16 @@ input[type=text]:focus {
     body{
         font-size: 22px;
     }
-    p{
-        margin-block-start: -25px;
-        margin-block-end: 10px;
-    }
     .form {
         width: 35vw;
     }
-    .selector {
-        height: 1.5rem;
+    .selector, input {
         width: 35vw;
         font-size: 18px;
     }
-    input {
-        height: 1.5rem;
-        width: 35vw;
-    }
     .button {
         width: 15vw;
-        height: 2rem;
+        font-size: 18px;
     }
     .box{
         width: 60vw;
@@ -160,11 +150,8 @@ input[type=text]:focus {
     body{
         font-size: 30px;
     }
-    .button {
-        height: 3rem;
-    }
     
-    .selector {
+    .selector, input, .button {
         font-size: 26px;
     }
 

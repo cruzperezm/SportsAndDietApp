@@ -1,358 +1,105 @@
-#dashboard-deporte {
+:root{
+    --color-fondo: #FAFAFA;       /* Blanco roto/crema para el fondo */
+    --color-fondo-secundario: #f0c1a8;
+    --color-acento: #F97316;      /* color esmeralda  */
+    --color-acento-secundario: #d18f6b;
+    --color-acento-oscuro: #EA580C;
+    --color-texto: #1F2937;       /* Gris carbón para texto principal */
+    --color-texto-suave: #4B5563; /* Gris medio para descripciones */
+    --color-texto-color: #140700;
+    --sombra-suave: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --sombra-hover: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+body {
     margin: 0;
-    background-color: #ffffff;
-    overflow-x: hidden;
+    font-family: sans-serif;
+    background-color: #FAFAFA;
+}
 
+#dashboard-deporte {
+    position: absolute;
     width: 100%;
-    min-height: 100vh;
-    position: relative;
-
+    background-color: var(--color-fondo);
     display: flex;
     flex-direction: column;
-    align-items: center;
-}
-#dashboard-deporte .ellipse11 {
-    margin: 0px 0px 0px 0px;
-    position: absolute;
-    width: 200px;
-    height: 200px;
-    top: 76px;
-    left: 75px;
-    background-color: #d9d9d9;
-    border-radius: 100%;
-}
-#dashboard-deporte .text1 {
-    margin: 0px 0px 0px 0px;
-    position: absolute;
-    color: #000000;
-    font-family: Inter, sans-serif;
-    font-size: 96px;
-    top: 111px;
-    left: 348px;
-}
-#dashboard-deporte .ellipse12 {
-    margin: 0px 0px 0px 0px;
-    position: absolute;
-    width: 90px;
-    height: 90px;
-    background-color: #d9d9d9;
-    border-radius: 100%;
-    top: 21px;
-    left: 1297px;
+    justify-content: center;
+    text-align: center;
 }
 
-#dashboard-deporte .ellipse15 {
-    margin: 0px 0px 0px 0px;
-    position: absolute;
-    width: 90px;
-    height: 90px;
-    background-color: #d9d9d9;
-    border-radius: 100%;
-    top: 5px;
-    left: 5px;
-}
+#dashboard-deporte .text16{position: absolute; font-size: 1.6rem; font-family: 'Inter', sans-serif; color: var(--color-texto-color); }
+#dashboard-deporte .text20{position: absolute; font-size: 2.0rem; font-family: 'Inter', sans-serif;color: var(--color-texto-suave); }
+#dashboard-deporte .text24{position: absolute; font-size: 2.4rem; font-family: 'Inter', sans-serif;color: var(--color-texto-suave); }
+#dashboard-deporte .text64{position: absolute; font-size: 6.4rem; font-family: 'Inter', sans-serif; font-weight: bold;color: var(--color-texto); }
 
-#dashboard-deporte .ellipse4 {
-    margin: 0px 0px 0px 0px;
+
+#dashboard-deporte .rectangle-macros{position: absolute; height: 1.4rem; width: 15.5rem; background-color: var(--color-acento-secundario); border-radius: 90px; }
+#dashboard-deporte .cross-horizontal {position: absolute; height:1.51685rem; width: 5rem; border-radius: 50px; background-color: var(--color-acento-oscuro);}
+#dashboard-deporte .cross-vertical {position: absolute; width:1.51685rem; height: 5rem; border-radius: 50px; background-color: var(--color-acento-oscuro);}
+
+#dashboard-deporte .rectangle-toggle {
     position: absolute;
-    width: 90px;
-    height: 90px;
-    background-color: #d9d9d9;
-    border-radius: 100%;
-    top: 312px;
-    left: 625px;
-}
-#dashboard-deporte .rectangle79 {
-    margin: 0px 0px 0px 0px;
-    position: absolute;
-    width: 200px;
-    height: 100px;
-    background-color: #f0f0f0;
+    height: 7.5rem;
+    width: 15.0rem;
+    top: 21.6rem;
+    left: 123.1rem;
     border-radius: 70px;
-    left: 620px;
-    top: 307px;
+    background-color: var(--color-acento);
 }
-#dashboard-deporte .rectangle83 {
-    margin: 0px 0px 0px 0px;
+#dashboard-deporte .ellipse-toggle {
     position: absolute;
-    width: 1295px;
-    height: 771px;
-    top: 431px;
-    left: 75px;
-    background-color: #f2f2f2;
-}
-#dashboard-deporte .ellipse16 {
-    margin: 0px 0px 0px 0px;
-    position: absolute;
-    width: 150px;
-    height: 150px;
-    background-color: #d9d9d9;
-    top: 1366px;
-    left: 184px;
-    border-radius: 50%;
-}
-#dashboard-deporte .text12 {
-    margin: 0 0 0 0;
-    position: absolute;
-    color: #000000;
-    font-family: Inter, sans-serif;
-    font-size: 32px;
-    top: 1395px;
-    left: 435px;
-}
-#dashboard-deporte .text13 {
-    margin: 0 0 0 0;
-    position: absolute;
-    color: #000000;
-    font-family: Inter, sans-serif;
-    font-size: 32px;
-    top: 1453px;
-    left: 484px;
-}
-#dashboard-deporte .rectangle86 {
-    margin: 0 0 0 0;
-    position: absolute;
-    width: 27px;
-    height: 89px;
-    top: 1395px;
-    left: 1179px;
-    background-color: #d9d9d9;
+    height: 6.75rem;
+    width: 6.75rem;
+    left: 0.4rem;
+    top: 0.35rem;
+    background-color: var(--color-fondo-secundario);
     border-radius: 90px;
 }
-#dashboard-deporte .rectangle87 {
-    margin: 0 0 0 0;
+#dashboard-deporte .rectangle-container {
     position: absolute;
-    width: 89px;
-    height: 27px;
-    top: 1427px;
-    left: 1148px;
-    background-color: #d9d9d9;
-    border-radius: 90px;}
-#dashboard-deporte .ellipse17 {
-    margin: 0px 0px 0px 0px;
-    position: absolute;
-    width: 150px;
-    height: 150px;
-    background-color: #d9d9d9;
-    top: 1723px;
-    left: 184px;
-    border-radius: 50%;
+    height: 51.4rem;
+    width: 90.0rem;
+    top: 35.9rem;
+    left: 9.4rem;
+    background-color: var(--color-fondo-secundario);
 }
-#dashboard-deporte .text14 {
-    margin: 0 0 0 0;
+#name{
     position: absolute;
-    color: #000000;
-    font-family: Inter, sans-serif;
-    font-size: 32px;
-    top: 1752px;
-    left: 435px;
+    top: 21.6rem;
+    left: 22.6rem;
 }
-#dashboard-deporte .text15 {
-    margin: 0 0 0 0;
-    position: absolute;
-    color: #000000;
-    font-family: Inter, sans-serif;
-    font-size: 32px;
-    top: 1810px;
-    left: 484px;
-}
-#dashboard-deporte .rectangle88 {
-    margin: 0 0 0 0;
-    position: absolute;
-    width: 27px;
-    height: 89px;
-    top: 1749px;
-    left: 1179px;
-    background-color: #d9d9d9;
-    border-radius: 90px;
-}
-#dashboard-deporte .rectangle89 {
-    margin: 0 0 0 0;
-    position: absolute;
-    width: 89px;
-    height: 27px;
-    top: 1781px;
-    left: 1148px;
-    background-color: #d9d9d9;
-    border-radius: 90px;}
-#dashboard-deporte .ellipse18 {
-    margin: 0px 0px 0px 0px;
-    position: absolute;
-    width: 150px;
-    height: 150px;
-    background-color: #d9d9d9;
-    top: 2061px;
-    left: 184px;
-    border-radius: 50%;
-}
-#dashboard-deporte .text16 {
-    margin: 0 0 0 0;
-    position: absolute;
-    color: #000000;
-    font-family: Inter, sans-serif;
-    font-size: 32px;
-    top: 2019px;
-    left: 435px;
-}
-#dashboard-deporte .text17 {
-    margin: 0 0 0 0;
-    position: absolute;
-    color: #000000;
-    font-family: Inter, sans-serif;
-    font-size: 32px;
-    top: 2167px;
-    left: 484px;
-}
-#dashboard-deporte .rectangle90 {
-    margin: 0 0 0 0;
-    position: absolute;
-    width: 27px;
-    height: 89px;
-    top: 2122px;
-    left: 1179px;
-    background-color: #d9d9d9;
-    border-radius: 90px;
-}
-#dashboard-deporte .rectangle91 {
-    margin: 0 0 0 0;
-    position: absolute;
-    width: 89px;
-    height: 27px;
-    top: 2154px;
-    left: 1148px;
-    background-color: #d9d9d9;
-    border-radius: 90px;
-}
-#dashboard-deporte .rectangle92 {
-    margin: 0 0 0 0;
-    position: absolute;
-    width: 35px;
-    height: 520px;
-    top: 94px;
-    left: 222px;
-    border-radius: 80px;
-    background-color: #d9d9d9;
-}
-#dashboard-deporte .text18 {
-    margin: 0 0 0 0;
-    position: absolute;
-    color: #000000;
-    font-family: Inter, sans-serif;
-    font-size: 40px;
-    top: 666px;
-    left: 222px;
-}
-#dashboard-deporte .rectangle93 {
-    margin: 0 0 0 0;
-    position: absolute;
-    width: 35px;
-    height: 520px;
-    top: 94px;
-    left: 358px;
-    border-radius: 80px;
-    background-color: #d9d9d9;
-}
-#dashboard-deporte .text19 {
-    margin: 0 0 0 0;
-    position: absolute;
-    color: #000000;
-    font-family: Inter, sans-serif;
-    font-size: 40px;
-    top: 666px;
-    left: 358px;
-}
-#dashboard-deporte .rectangle94 {
-    margin: 0 0 0 0;
-    position: absolute;
-    width: 35px;
-    height: 520px;
-    top: 94px;
-    left: 494px;
-    border-radius: 80px;
-    background-color: #d9d9d9;
-}
-#dashboard-deporte .text20 {
-    margin: 0 0 0 0;
-    position: absolute;
-    color: #000000;
-    font-family: Inter, sans-serif;
-    font-size: 40px;
-    top: 666px;
-    left: 494px;
-}
-#dashboard-deporte .rectangle95 {
-    margin: 0 0 0 0;
-    position: absolute;
-    width: 35px;
-    height: 520px;
-    top: 94px;
-    left: 630px;
-    border-radius: 80px;
-    background-color: #d9d9d9;
-}
-#dashboard-deporte .text21 {
-    margin: 0 0 0 0;
-    position: absolute;
-    color: #000000;
-    font-family: Inter, sans-serif;
-    font-size: 40px;
-    top: 666px;
-    left: 630px;
-}
-#dashboard-deporte .rectangle96 {
-    margin: 0 0 0 0;
-    position: absolute;
-    width: 35px;
-    height: 520px;
-    top: 94px;
-    left: 766px;
-    border-radius: 80px;
-    background-color: #d9d9d9;
-}
-#dashboard-deporte .text22 {
-    margin: 0 0 0 0;
-    position: absolute;
-    color: #000000;
-    font-family: Inter, sans-serif;
-    font-size: 40px;
-    top: 666px;
-    left: 766px;
-}
-#dashboard-deporte .rectangle97 {
-    margin: 0 0 0 0;
-    position: absolute;
-    width: 35px;
-    height: 520px;
-    top: 94px;
-    left: 902px;
-    border-radius: 80px;
-    background-color: #d9d9d9;
-}
-#dashboard-deporte .text23 {
-    margin: 0 0 0 0;
-    position: absolute;
-    color: #000000;
-    font-family: Inter, sans-serif;
-    font-size: 40px;
-    top: 666px;
-    left: 902px;
-}
-#dashboard-deporte .rectangle98 {
-    margin: 0 0 0 0;
-    position: absolute;
-    width: 35px;
-    height: 520px;
-    top: 94px;
-    left: 1038px;
-    border-radius: 80px;
-    background-color: #d9d9d9;
-}
-#dashboard-deporte .text24 {
-    margin: 0 0 0 0;
-    position: absolute;
-    color: #000000;
-    font-family: Inter, sans-serif;
-    font-size: 40px;
-    top: 666px;
-    left: 1038px;
-}
+#move-calories{position: absolute; top:32rem; left: 67.5rem;}
+#move-text{position: absolute; top:32rem; left: 12.6rem;}
+#exercise-calories{position: absolute; top:38rem; left: 67.5rem;}
+#exercise-text{position: absolute; top:38rem; left: 12.6rem;}
+#stand-calories{position: absolute; top:44rem; left: 67.5rem;}
+#stand-text{position: absolute; top:44rem; left: 12.6rem;}
+
+
+#r8,#r10,#r12,#r14,#r16{position: absolute; left: 140rem;}
+
+#r8{top: 35.9rem;}
+#r10{top: 47.7rem;}
+#r12{top: 59.5rem;}
+#r14{top: 71.3rem;}
+#r16{top: 83.1rem;}
+
+#r7,#r9,#r11,#r13,#r15{position: absolute; left: 138.25rem;}
+#r7{top: 37.7rem;}
+#r9{top: 49.5rem;}
+#r11{top: 61.29rem;}
+#r13{top: 73.09rem;}
+#r15{top: 84.89rem;}
+
+#train-amount1, #train-amount2, #train-amount3, #train-amount4, #train-amount5 {position: absolute; left: 130rem;}
+#train-amount1 {top: 36rem;}
+#train-amount2 {top: 47.8rem;}
+#train-amount3 {top: 59.6rem;}
+#train-amount4 {top: 71.4rem;}
+#train-amount5 {top: 83.2rem;}
+
+#train-text1, #train-text2, #train-text3, #train-text4, #train-text5 {position: absolute; left: 110rem; width: 14rem;}
+#train-text1 {top: 35.3rem;}
+#train-text2 {top: 47.1rem;}
+#train-text3 {top: 58.9rem;}
+#train-text4 {top: 70.7rem;}
+#train-text5 {top: 82.5rem;}
