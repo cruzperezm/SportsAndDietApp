@@ -1,6 +1,7 @@
 ---
 title: "Documentación del Proyecto: SportsAndDietApp"
 author: "Salwa Madani, Kemuel Rodriguez, Margarita Cruz, Oscar Yavar"
+video: "https://youtu.be/iwgFCXn0rvg?si=72SQYwc5vDVhl2FI"
 group: "43.5"
 ---
 
