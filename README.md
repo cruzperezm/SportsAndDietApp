@@ -1,40 +1,59 @@
----
-title: "Sport and Diet"
-authors: "Salwa Madani Lazaar, Kemuel Rodriguez García, Margarita Cruz Perez, Óscar Yavar"
-date: "01/03/2026"
----
+# SportsAndDietApp
 
-# Introducción
+This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.5.
 
-Este documento detalla el trabajo realizado en los módulos de **Dieta** y **Deporte**. Se ha priorizado una arquitectura modular y 
-una experiencia de usuario interactiva basada en estándares de desarrollo web.
+## Development server
 
----
+To start a local development server, run:
 
-# Características Técnicas
+```bash
+ng serve
+```
 
-### 1. Arquitectura Modular
-* Se usa de la API `fetch` para inyectar fragmentos HTML sin recargar el navegador.
-* Organización del código en plantillas (`Dietas_grid-view.html`, etc.) para facilitar el mantenimiento.
+Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
 
----
+## Code scaffolding
 
-# Estructura del Proyecto
+Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
 
-El proyecto se organiza de la siguiente manera para garantizar que los cambios no afecten a otros módulos:
+```bash
+ng generate component component-name
+```
 
----
+For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
 
-# Tecnologías Utilizadas
+```bash
+ng generate --help
+```
 
-* **HTML5:** Marcado semántico.
-* **CSS3:** Flexbox, CSS Grid y Custom Properties.
-* **JavaScript:** Lógica asíncrona y manipulación de eventos.
+## Building
 
----
+To build the project run:
 
-# Guía de Ejecución
+```bash
+ng build
+```
 
-1. **Servidor Local:** Es obligatorio usar un servidor local (WebStorm Preview).
----
+This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
 
+## Running unit tests
+
+To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+
+```bash
+ng test
+```
+
+## Running end-to-end tests
+
+For end-to-end (e2e) testing, run:
+
+```bash
+ng e2e
+```
+
+Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+
+## Additional Resources
+
+For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
