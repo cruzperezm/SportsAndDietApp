@@ -1,0 +1,104 @@
+h2 {
+  margin-top: 0;
+  text-align: center;
+}
+
+h3 {
+  margin-top: 0;
+  text-align: center;
+}
+
+#form-section {
+  height: fit-content;
+}
+
+form {
+  margin: 40px auto auto auto;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+}
+
+input {
+  padding: 15px;
+  margin-bottom: 40px;
+  width: 100%;
+  border: none;
+  display: block;
+  border-radius: 12px;
+}
+
+label {
+  padding: 15px;
+  margin-bottom: 40px;
+  border: none;
+  display: block;
+  border-radius: 12px;
+}
+
+
+input:focus {
+  outline: 2px solid #2ECC71;
+}
+
+input[type="button"] {
+  width: 40%;
+  background-color: #2ECC71;
+  margin-bottom: 5%;
+}
+
+input[type="submit"] {
+  width: 40%;
+  background-color: #2ECC71;
+  margin-bottom: 5%;
+}
+
+#button-row {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+
+#container {
+  background-color: #f5f7f9;
+  border-radius: 20px;
+  font-family: 'Inter', sans-serif;
+  display: block;
+  width: 25%;
+  padding: 50px;
+  margin: 10% auto 10% auto;
+}
+
+#error {
+  color: red;
+  font-size: small;
+}
+
+.radiowrapper input {
+  position: absolute;
+  visibility:hidden;
+  width:0;
+}
+
+.radiowrapper:hover label{
+  background-color: #37ba8f;
+  color: #ffffff;
+  border-color: #37ba8f;
+  box-shadow: 0 4px 12px rgb(38, 122, 95);
+}
+
+.radiowrapper input:checked ~ label {
+  border-color: #37ba8f;
+  background-color: #37ba8f;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgb(38, 122, 95);
+}
+
+
+
