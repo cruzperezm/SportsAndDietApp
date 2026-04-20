@@ -1,9 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
-/*Dieta*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+
 :root {
   --color-fondo: #FAFAFA;
-  --color-acento: #10B981;
-  --color-acento-hover: #059669;
   --color-texto: #1F2937;
   --color-texto-suave: #4B5563;
   --color-tarjeta: #FFFFFF;
@@ -14,7 +13,5 @@
 body {
   background-color: var(--color-fondo);
   color: var(--color-texto);
-  margin: 0;
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
-  overflow-x: hidden;
 }

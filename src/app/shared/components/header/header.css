@@ -1,0 +1,139 @@
+.header-minimal {
+  background-color: #ffffff;
+  border-bottom: 1px solid #eee;
+  width: 100%;
+  font-family: 'Inter', sans-serif;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 85px;
+  width: auto;
+  margin: 0;
+  padding: 0 20px 0  20px;
+}
+
+.links-group {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.nav-pill {
+  text-decoration: none;
+  color: #555;
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 6px 20px;
+  border-radius: 12px;
+  background-color: #f5f7f9;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  border: 1px solid transparent;
+}
+
+.nav-pill:hover {
+  background-color: #e8f5ed;
+  color: #2ECC71;
+}
+
+.nav-pill.active-link {
+  background-color: #2ECC71;
+  color: white !important;
+  font-weight: 600;
+  box-shadow: 0 4px 10px rgba(46, 204, 113, 0.2);
+}
+
+.logo-link {
+  text-decoration: none;
+  color: #555;
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 6px 20px;
+  border-radius: 12px;
+  background-color: #f5f7f9;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  border: 1px solid transparent;
+}
+
+.logo-link:hover {
+  background-color: #e8f5ed;
+  color: #2ECC71;
+}
+
+.logo-link.active-link {
+  background-color: #2ECC71;
+  color: white !important;
+  font-weight: 600;
+  box-shadow: 0 4px 10px rgba(46, 204, 113, 0.2);
+}
+
+.logo-group {
+  margin-right: auto;
+}
+
+.login-group {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-left: auto;
+}
+
+.logo-image {
+  height: auto;
+  width: auto;
+  max-height: 30px;
+  object-fit: contain;
+}
+
+.login-button {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  padding: 6px 24px;
+  border-radius: 12px;
+  border: 2px solid #eee;
+  transition: all 0.2s ease;
+  height: 32px;
+  display: flex;
+  align-items: center;
+}
+
+.login-button:hover {
+  border-color: #2ECC71;
+  color: #2ECC71;
+}
+.signup-button {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  padding: 6px 24px;
+  border-radius: 12px;
+  border: 2px solid #eee;
+  transition: all 0.2s ease;
+  height: 32px;
+  display: flex;
+  align-items: center;
+}
+
+.signup-button:hover {
+  border-color: #2ECC71;
+  color: #2ECC71;
+}
+
+.profile-icon {
+  cursor: pointer;
+  height: auto;
+  width: auto;
+  max-height: 30px;
+  object-fit: contain;
+}

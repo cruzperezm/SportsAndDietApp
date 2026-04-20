@@ -1,0 +1,29 @@
+<header class="header-minimal">
+  <nav class="nav-container" role="navigation">
+
+    <div class="logo-group">
+      <a routerLink="" class="logo-link">
+        <img src="/shared/images/home.svg" alt="Home" class="logo-image">
+      </a>
+    </div>
+
+    <div class="links-group">
+      <a class="nav-pill" routerLink="/dietas" >Dietas</a>
+      <a class="nav-pill" routerLink="/deportes">Deporte</a>
+      <a class="nav-pill" routerLink="/explorador">Explorador</a>
+      <a class="nav-pill" routerLink="/about-us">Sobre Nosotros</a>
+    </div>
+
+    <div class="login-group">
+      @if (isLoggedIn$ | async) {
+        <img src="/shared/images/profile-icon.svg" alt="Profile Icon">
+        <img src="/shared/images/profile-icon.svg" class="profile-icon" (click)="onLogout()" alt="Profile Icon">
+      } @else {
+        <a routerLink="/login" class="login-button">Iniciar Sesión</a>
+        <a routerLink="/signup" class="signup-button">Crear Cuenta</a>
+      }
+
+    </div>
+
+  </nav>
+</header>
