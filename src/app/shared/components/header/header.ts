@@ -1,14 +1,14 @@
 import { Component, inject } from '@angular/core';
 import { RouterModule, Router } from '@angular/router'; // Importante para que funcionen tus botones
-import { AuthService } from '../../../services/auth.service';
+import { AuthService } from '../../../services/auth';
 import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-header',
   standalone: true,
   imports: [RouterModule, CommonModule],
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css'],
+  templateUrl: './header.html',
+  styleUrls: ['./header.css'],
 })
 export class HeaderComponent {
   private authService = inject(AuthService);

@@ -5,8 +5,8 @@ import { RouterLink } from '@angular/router';
   selector: 'app-home',
   standalone: true,
   imports: [RouterLink],
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.css'
+  templateUrl: './home.html',
+  styleUrl: './home.css'
 })
 export class HomeComponent implements AfterViewInit {
   // Capturamos el elemento de video del HTML
