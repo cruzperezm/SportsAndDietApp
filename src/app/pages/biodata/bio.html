@@ -1,0 +1,136 @@
+<div id="container">
+  <h2>Datos biométricos</h2>
+  <section id="form-section">
+    <form (ngSubmit)="saveData()" id="login-form">
+
+      @if (bioData==0){
+        @if (gen.invalid && (gen.dirty || gen.touched)){
+          @if (gen.hasError('required')) {
+            <div id="error">Campo genero obligatorio.</div>
+          }
+        }
+        <input [(ngModel)]="genre" name="genre" type="text" placeholder="Genero" required autofocus #gen="ngModel">
+
+        @if (edad.invalid && (edad.dirty || edad.touched)){
+          @if (edad.hasError('required')) {
+            <div id="error">La edad es obligatoria.</div>
+          }
+          @if (edad.hasError('min')) {
+            <div id="error">Tienes que ser mayor de 14.</div>
+          }
+          @if (edad.hasError('max')) {
+            <div id="error">La edad no puede ser mayor a 99.</div>
+          }
+        }
+        <input [(ngModel)]="age" name="age" min="14" max="99" type="number" placeholder="Edad" required #edad="ngModel">
+
+        @if (altura.invalid && (altura.dirty || altura.touched)){
+          @if (altura.hasError('required')) {
+            <div id="error">La altura es obligatoria.</div>
+          }
+          @if (altura.hasError('min')) {
+            <div id="error">Tienes que medir mas que 120cm.</div>
+          }
+          @if (altura.hasError('max')) {
+            <div id="error">Tienes que medir menos que 220cm.</div>
+          }
+        }
+        <input [(ngModel)]="height" name="height" min="120" max="220" type="number" placeholder="Altura (cm)" required #altura="ngModel">
+
+        <input type="button" value="Siguiente" [disabled]="!(gen.valid && edad.valid)" (click)="next()">
+      }
+
+      @if (bioData==1){
+        <h3>¿Cual es tu objetivo?</h3>
+
+        <div class="radiowrapper">
+          <input id="dec" type="radio" name="radio" value="dec" required (change)="onChange($event)">
+          <label id="decT" for="dec">Bajar de peso</label>
+        </div>
+
+        <div class="radiowrapper">
+          <input id="inc" type="radio" name="radio" value="inc" required (change)="onChange($event)">
+          <label id="incT" for="inc">Subir de peso</label>
+        </div>
+
+        <div class="radiowrapper">
+          <input id="mnt" type="radio" name="radio" value="mnt" required (change)="onChange($event)">
+          <label id="mntT" for="mnt">Mantenerme</label>
+        </div>
+
+        <div class="radiowrapper">
+          <input id="muscle" type="radio" name="radio" value="muscle" required (change)="onChange($event)">
+          <label id="muscleT" for="muscle">Crecer músculo</label>
+        </div>
+
+        <div id="button-row">
+          <input type="button" value="Atrás" (click)="back()">
+          <input type="button" value="Siguiente" [disabled]="!goal" (click)="next()">
+        </div>
+      }
+
+      @if (bioData==2){
+        <h3>¿Cuanta actividad haces?</h3>
+
+        <div class="radiowrapper">
+          <input id="nev" type="radio" name="radio1" value="nev" required (change)="onChange($event)">
+          <label id="nevT" for="nev" class="form">Nada</label>
+        </div>
+
+        <div class="radiowrapper">
+          <input id="small" type="radio" name="radio1" value="small" required (change)="onChange($event)">
+          <label id="smallT" for="small" class="form">Poca</label>
+        </div>
+
+        <div class="radiowrapper">
+          <input id="mod" type="radio" name="radio1" value="mod" required (change)="onChange($event)">
+          <label id="modT" for="mod" class="form">Moderada</label>
+        </div>
+
+        <div class="radiowrapper">
+          <input id="daily" type="radio" name="radio1" value="daily" required (change)="onChange($event)">
+          <label id="dailyT" for="daily" class="form">Diariamente</label>
+        </div>
+
+        <div id="button-row">
+          <input type="button" value="Atrás" (click)="back()">
+          <input type="button" value="Siguiente" [disabled]="!act" (click)="next()">
+        </div>
+      }
+
+      @if (bioData==3){
+        @if (cur.invalid && (cur.dirty || cur.touched)){
+          @if (cur.hasError('required')) {
+            <div id="error">El peso actual es obligatorio.</div>
+          }
+        }
+        <input name="cKg" type="number" placeholder="Peso actual Kg" required autofocus [(ngModel)]="cKg" #cur="ngModel">
+
+        @if (des.invalid && (des.dirty || des.touched)){
+          @if (des.hasError('required')) {
+            <div id="error">El peso deseado es obligatorio.</div>
+          }
+        }
+        <input name="dKg" type="number" placeholder="Peso deseado Kg" required [(ngModel)]="dKg" #des="ngModel">
+
+        @if (weeks.invalid && (weeks.dirty || weeks.touched)){
+          @if (weeks.hasError('required')) {
+            <div id="error">Las semanas son obligatorias.</div>
+          }
+          @if (weeks.hasError('min')) {
+            <div id="error">No pueden ser 0 semanas!</div>
+          }
+        }
+        <input name="nWeeks" type="number" min="1" placeholder="Nº semanas" required [(ngModel)]="nWeeks" #weeks="ngModel">
+
+        <div id="button-row">
+          <input type="button" value="Atrás" (click)="back()">
+          <input type="submit" value="Terminado!" [disabled]="!(cur.valid && des.valid && weeks.valid)">
+        </div>
+      }
+
+      </form>
+
+  </section>
+
+</div>
