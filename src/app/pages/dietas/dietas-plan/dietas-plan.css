@@ -1,0 +1,67 @@
+:host {
+  --verde-corp: #10B981;
+  --verde-dark: #059669;
+}
+
+.plan-wrapper {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+.btn-regresar {
+  border: none; background: none; cursor: pointer;
+  display: flex; align-items: center; gap: 8px;
+  color: #4B5563; font-weight: 600; margin-bottom: 30px;
+}
+
+/* LA PÍLDORA VERDE */
+.pill-header {
+  background: linear-gradient(135deg, var(--verde-corp), var(--verde-dark));
+  color: white;
+  padding: 50px 30px;
+  border-radius: 100px; /* Forma de píldora */
+  text-align: center;
+  margin-bottom: 50px;
+  box-shadow: 0 15px 30px rgba(16, 185, 129, 0.2);
+}
+
+.titulo-pill { font-size: clamp(32px, 5vw, 64px); margin: 0; font-weight: 800; }
+.subtitulo-pill { font-size: 1.2rem; opacity: 0.9; margin-top: 10px; }
+
+/* FILTROS */
+.filtros-nav { display: flex; justify-content: center; gap: 12px; margin-bottom: 60px; flex-wrap: wrap; }
+.filtros-nav button {
+  padding: 10px 25px; border-radius: 50px; border: 2px solid var(--verde-corp);
+  background: white; color: var(--verde-corp); font-weight: bold; cursor: pointer; transition: 0.3s;
+}
+.filtros-nav button.active { background: var(--verde-corp); color: white; }
+
+/* CARRUSEL Y GRID */
+.fase-seccion { margin-bottom: 70px; }
+.momento-label { border-left: 6px solid var(--verde-corp); padding-left: 15px; font-size: 2rem; margin-bottom: 30px; }
+
+.carrusel-container { display: flex; align-items: center; gap: 20px; }
+.grid-comidas { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; flex: 1; }
+
+.card-comida { cursor: pointer; transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+.card-comida:hover { transform: scale(1.05); }
+
+.card-img {
+  aspect-ratio: 1; background-size: cover; background-position: center;
+  border-radius: 25px; position: relative; overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.card-info {
+  position: absolute; bottom: 0; width: 100%; padding: 25px;
+  background: linear-gradient(transparent, rgba(0,0,0,0.8));
+  color: white;
+}
+
+.flecha-nav {
+  width: 55px; height: 55px; border-radius: 50%; border: none;
+  background: var(--verde-corp); color: white; font-size: 30px;
+  cursor: pointer; display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 5px 15px rgba(16, 185, 129, 0.4);
+}
