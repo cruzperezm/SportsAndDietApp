@@ -1,0 +1,46 @@
+<div class="plan-wrapper" *ngIf="dieta">
+
+  <button class="btn-regresar" (click)="volver()">
+    <span class="material-symbols-outlined">arrow_back</span> Volver
+  </button>
+
+  <header class="pill-header">
+    <h1 class="titulo-pill">{{ dieta?.titulo }}</h1>
+    <p class="subtitulo-pill">{{ dieta?.subtitulo }}</p>
+  </header>
+
+  <nav class="filtros-nav">
+    <button (click)="toggleFiltro('todos')" [class.active]="filtrosActivos.length === 0">Todos</button>
+    <button (click)="toggleFiltro('gluten')" [class.active]="filtrosActivos.includes('gluten')">Sin Gluten</button>
+    <button (click)="toggleFiltro('lacteos')" [class.active]="filtrosActivos.includes('lacteos')">Sin Lácteos</button>
+    <button (click)="toggleFiltro('huevos')" [class.active]="filtrosActivos.includes('huevos')">Sin Huevos</button>
+  </nav>
+
+  <section class="fase-seccion" *ngFor="let fase of dieta?.plan">
+    <h2 class="momento-label">{{ fase.momento }}</h2>
+
+    <div class="carrusel-container">
+      <button class="flecha-nav"
+              (click)="mover(-1, fase.momento)"
+              *ngIf="getComidasFiltradas(fase).length > 3">‹</button>
+
+      <div class="grid-comidas">
+        <div class="card-comida" *ngFor="let comida of getComidasVisibles(fase)" [routerLink]="['/dietas/receta', comida.id]">
+          <div class="card-img" [style.background-image]="'url(' + (comida.img || comida.imagen) + ')'">
+            <div class="card-info">
+              <h3>{{ comida.nombre }}</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button class="flecha-nav"
+              (click)="mover(1, fase.momento)"
+              *ngIf="getComidasFiltradas(fase).length > 3">›</button>
+    </div>
+  </section>
+</div>
+
+<div *ngIf="!dieta" class="loading-state">
+  <p>Cargando tu plan nutricional...</p>
+</div>

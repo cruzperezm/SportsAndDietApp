@@ -1,0 +1,54 @@
+<div class="guia-dieta" *ngIf="receta">
+
+  <div class="hero-guia" [style.backgroundImage]="'linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7)), url(' + receta.imagen + ')'" style="background-size: cover; background-position: center;">
+    <h1 class="text-96 text-white">{{ receta.nombre }}</h1>
+    <p class="text-24-hero text-white">⏱ {{ receta.tiempo }} | 🔥 {{ receta.calorias }}</p>
+
+    <div class="etiquetas-wrapper mt-3">
+      <span *ngIf="receta.alergenos.includes('huevos')"
+            class="icono-alergeno material-symbols-outlined"
+            data-tooltip="Contiene Huevos">egg</span>
+
+      <span *ngIf="receta.alergenos.includes('lacteos')"
+            class="icono-alergeno material-symbols-outlined"
+            data-tooltip="Contiene Lacteos">local_drink</span>
+
+      <span *ngIf="receta.alergenos.includes('gluten')"
+            class="icono-alergeno material-symbols-outlined"
+            data-tooltip="Contiene Gluten">bakery_dining</span>
+    </div>
+  </div>
+
+  <div class="contenedor-columnas">
+
+    <div class="columna">
+      <h2 class="text-40">Ingredientes</h2>
+      <ul class="lista-columna">
+        <li *ngFor="let ingrediente of receta.ingredientes">
+          {{ ingrediente }}
+        </li>
+      </ul>
+    </div>
+
+    <div class="columna">
+      <h2 class="text-40">Macros</h2>
+      <ul class="lista-columna">
+        <li><strong>Proteínas:</strong> {{ receta.macros.proteinas }}</li>
+        <li><strong>Grasas:</strong> {{ receta.macros.grasas }}</li>
+        <li><strong>Carbohidratos:</strong> {{ receta.macros.carbos }}</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="bloque-inferior">
+    <h2 class="text-40 text-center mb-4">Preparación</h2>
+    <div class="text-24-largo" style="white-space: pre-wrap;">{{ receta.instrucciones }}</div>
+
+    <div class="text-center mt-5">
+      <button class="btn-primario shadow-lg">Añadir plato al Dashboard</button>
+      <br><br>
+      <a href="#" (click)="volverAtras($event)" class="text-muted text-decoration-none">← Volver al plan</a>
+    </div>
+  </div>
+</div>

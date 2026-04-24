@@ -1,0 +1,75 @@
+body{
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+header{
+  margin-bottom: 5vh;
+}
+
+footer{
+  margin-top: 5vh;
+}
+
+.box1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 20px;
+}
+
+.form-row {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 5vh;
+  width: 50%;
+}
+
+.form {
+  flex: 6; /* más ancho que el botón */
+  height: 30px;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  text-decoration: none;
+  border: 2px solid lightgray;
+  font-size: 20px;
+  outline: none;
+}
+
+.map{
+  display: flex;
+  width: 30vw;
+  border: 1px solid lightgray;
+  border-radius: 8px;
+}
+
+.button {
+  flex: 1;
+  height: 35px;
+  max-width: 8%;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  text-decoration: none;
+  border: 2px solid lightgray;
+  outline: none;
+}
+
+.form:focus{
+  border-color: #37ba8f;
+  background-color: #ffffff;
+}
+.button:hover {
+  background-color: #37ba8f;
+  color: #ffffff;
+  border-color: #37ba8f;
+  box-shadow: 0 4px 12px rgb(38, 122, 95);
+}
+
+/* 📱 móviles */
+@media (max-width: 768px) {
+
+  .form-row {
+    width: 90%;
+  }
+
+}
