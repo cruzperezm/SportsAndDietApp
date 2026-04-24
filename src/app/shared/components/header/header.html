@@ -15,13 +15,8 @@
     </div>
 
     <div class="login-group">
-      @if (isLoggedIn$ | async) {
-        <img src="/shared/images/profile-icon.svg" alt="Profile Icon">
-        <img src="/shared/images/profile-icon.svg" class="profile-icon" (click)="onLogout()" alt="Profile Icon">
-      } @else {
         <a routerLink="/login" class="login-button">Iniciar Sesión</a>
         <a routerLink="/signup" class="signup-button">Crear Cuenta</a>
-      }
 
     </div>
 
