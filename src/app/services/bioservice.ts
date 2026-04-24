@@ -9,6 +9,7 @@ import {
   docData,
   collectionData,
   enableNetwork,
+  getFirestore,
 } from '@angular/fire/firestore';
 import { Injectable } from '@angular/core';
 
@@ -39,18 +40,7 @@ export class BioService {
   }
 
   async addBook(bio: Biodata) {
-    console.log('firestore instance:', this.firestore);
-    console.log('collection ref:', collection(this.firestore, 'bio'));
-
-    console.log(firebase);
-
     const ref = collection(this.firestore, 'bio');
-
-    try {
-      const r = await addDoc(ref, bio);
-      return console.log('OK:', r);
-    } catch (e) {
-      return console.error('ERROR:', e);
-    }
+    return addDoc(ref, bio);
   }
 }

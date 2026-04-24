@@ -25,10 +25,6 @@ export class Bio {
 
   ngOnInit() {
     this.queryId = parseInt(<string>this.route.snapshot.queryParamMap.get('userId'));
-    const auth = getAuth();
-    onAuthStateChanged(auth, (user) => {
-      console.log('AUTH STATE:', user);
-    });
   }
 
   bioForm: FormGroup = this.fb.group({
@@ -55,29 +51,13 @@ export class Bio {
 
   async saveData() {
     if (this.bioForm.invalid) return;
-
-    const formValue = this.bioForm.value;
-
-    const bio = {
-      genre: formValue.gender,
-      age: Number(formValue.age),
-      height: Number(formValue.height),
-      goal: formValue.goal,
-      act: formValue.act,
-      cKg: Number(formValue.cKg),
-      dKg: Number(formValue.dKg),
-      nWeeks: Number(formValue.nWeeks),
-    };
-
-    console.log('ANTES');
     try {
     // @ts-ignore
       await this.bioService
-      .addBook(bio)
+      .addBook(this.bioForm.value)
       .then((res) => console.log('OK:', res))
       .catch((err) => console.error('ERROR:', err));}
     catch(err) {console.error('ERROR:', err)}
-    console.log('DESPUÉS');
   }
 
   get gender(){
