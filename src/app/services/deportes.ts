@@ -2,52 +2,57 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, map } from 'rxjs';
 
-@Injectable({ providedIn: 'root' })
+@Injectable({
+  providedIn: 'root',
+})
 export class DeporteService {
   private jsonUrl = 'assets/data/deportes.json';
 
   constructor(private http: HttpClient) {}
 
-  obtenerPlanPorId(id: string | null): Observable<any> {
-    return this.http.get<any>(this.jsonUrl).pipe(
-      map(data => {
-        const idBuscado = String(id).trim();
-        return data.deportes.find((d: any) => String(d.id) === idBuscado);
-      })
+  getDeportes(): Observable<any[]> {
+    return this.http.get<any>(this.jsonUrl).pipe(map((response) => response.deportes));
+  }
+
+  obtenerPlanPorId(id: string | number): Observable<any> {
+    const idNumerico = Number(id);
+    return this.getDeportes().pipe(map((deportes) => deportes.find((d) => d.id === idNumerico)));
+  }
+
+  obtenerEjercicioPorId(id: string): Observable<any> {
+    return this.getDeportes().pipe(
+      map((deportes) => {
+        for (const deporte of deportes) {
+          for (const fase of deporte.plan) {
+            const ejercicio = fase.ejercicios.find((ej: any) => ej.id === id);
+            if (ejercicio) return ejercicio;
+          }
+        }
+        return null;
+      }),
     );
   }
 
-  obtenerEjercicioPorId(id: string | null): Observable<any> {
-    return this.http.get<any>(this.jsonUrl).pipe(
-      map(data => {
-        let ejercicioEncontrado = null;
-        data.deportes.forEach((dep: any) => {
-          dep.plan.forEach((fase: any) => {
-            const ej = fase.ejercicios.find((e: any) => String(e.id) === String(id));
-            if (ej) ejercicioEncontrado = ej;
-          });
-        });
-        return ejercicioEncontrado;
-      })
-    );
-  }
-
+  /**
+   * Buscador global para el componente de Inicio
+   */
   buscarEjercicios(termino: string): Observable<any[]> {
-    return this.http.get<any>(this.jsonUrl).pipe(
-      map(data => {
-        const resultados: any[] = [];
-        const busqueda = termino.toLowerCase();
-        data.deportes.forEach((dep: any) => {
-          dep.plan.forEach((fase: any) => {
-            fase.ejercicios.forEach((e: any) => {
-              if (e.nombre.toLowerCase().includes(busqueda)) {
-                resultados.push(e);
-              }
-            });
+    const term = termino.toLowerCase();
+    return this.getDeportes().pipe(
+      map((deportes) => {
+        let encontrados: any[] = [];
+        deportes.forEach((deporte) => {
+          deporte.plan.forEach((fase: any) => {
+            const matches = fase.ejercicios.filter(
+              (ej: any) =>
+                ej.nombre.toLowerCase().includes(term) ||
+                ej.musculos.some((m: string) => m.toLowerCase().includes(term)),
+            );
+            encontrados = [...encontrados, ...matches];
           });
         });
-        return resultados;
-      })
+        return encontrados;
+      }),
     );
   }
 }
