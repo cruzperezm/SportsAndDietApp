@@ -9,21 +9,18 @@ export class DietaService {
   constructor(private http: HttpClient) {}
 
   // 1. Para la página de PLAN
+  // 1. Para la página de PLAN
   obtenerPlanPorId(id: string | null): Observable<any> {
     return this.http.get<any>(this.jsonUrl).pipe(
       map(data => {
         if (!data || !data.dietas) return null;
 
-        // Convertimos el ID de la URL a string y limpiamos espacios
         const idLimpio = String(id).trim();
-
-        // Buscamos convirtiendo también el ID del JSON a string
         const encontrado = data.dietas.find((d: any) => String(d.id).trim() === idLimpio);
 
-        // PLAN B: Si no lo encuentra tras recargar, devuelve la dieta 1
         if (!encontrado) {
-          console.warn("⚠️ No se encontró el ID en el JSON. Cargando dieta por defecto.");
-          return data.dietas[0];
+          console.error(`Error: Dieta con ID '${idLimpio}' no encontrada en el JSON.`);
+          return null;
         }
 
         return encontrado;

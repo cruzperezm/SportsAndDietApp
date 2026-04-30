@@ -11,6 +11,6 @@ import { NgOptimizedImage } from '@angular/common';
   styleUrl: './explorer.css',
 })
 export class Explorer {
-  map = '/assets/images/GC.svg';
+  map = '/assets/img/GC.svg';
   private router = inject(Router);
 }

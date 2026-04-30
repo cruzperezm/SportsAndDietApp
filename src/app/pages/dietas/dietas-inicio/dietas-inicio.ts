@@ -17,13 +17,13 @@ export class DietasInicioComponent implements OnInit {
   textoBusqueda: string = '';
 
   //grid inicial
-  dietas = [
-    { id: 1, nombre: 'Dieta Keto', imagen: 'assets/img/keto.jpg' },
-    { id: 2, nombre: 'Dieta Vegana', imagen: 'assets/img/vegana.jpg' },
-    { id: 3, nombre: 'Mediterránea', imagen: 'assets/img/mediterranea.jpg' },
-    { id: 4, nombre: 'Ayuno Intermitente', imagen: 'assets/img/ayuno.jpg' },
-    { id: 5, nombre: 'Sin Gluten', imagen: 'assets/img/singluten.jpg' },
-    { id: 6, nombre: 'Paleo', imagen: 'assets/img/paleo.jpg' },
+  dietas: any[] = [
+    { id: 'keto', nombre: 'Dieta Keto', imagen: 'assets/img/dieta/keto/portada-keto.jpg' },
+    { id: 'mediterranea', nombre: 'Mediterránea', imagen: 'assets/img/dieta/mediterranea/portada-mediterranea.jpg' },
+    { id: 'vegana', nombre: 'Dieta Vegana', imagen: 'assets/img/dieta/vegana/portada-vegana.jpg' },
+    { id: 'volumen', nombre: 'Volumen', imagen: 'assets/img/dieta/volumen/portada-volumen.jpg' },
+    { id: 'definicion', nombre: 'Definición', imagen: 'assets/img/dieta/definicion/portada-definicion.jpg' },
+    { id: 'paleo', nombre: 'Paleo', imagen: 'assets/img/dieta/paleo/portada-paleo.jpg' },
   ];
 
   constructor(
@@ -38,7 +38,7 @@ export class DietasInicioComponent implements OnInit {
   }
 
   //navegación original a los planes -
-  irAlPlan(id: number) {
+  irAlPlan(id: string) {
     console.log('Intentando navegar al ID:', id);
     this.router.navigate(['/dietas/plan', id]);
   }

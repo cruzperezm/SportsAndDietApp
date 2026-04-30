@@ -8,7 +8,7 @@ import { DietaService } from '../../../services/dietas';
   standalone: true,
   imports: [CommonModule, RouterModule],
   templateUrl: './dietas-detalle.html',
-  styleUrl: './dietas-detalle.css'
+  styleUrl: './dietas-detalle.css',
 })
 export class DietasDetalleComponent implements OnInit {
   recetaId: string | null = null;
@@ -18,12 +18,12 @@ export class DietasDetalleComponent implements OnInit {
     private route: ActivatedRoute,
     private dietasService: DietaService,
     private location: Location,
-    private cdr: ChangeDetectorRef // Importante para refrescar la vista
+    private cdr: ChangeDetectorRef, // Importante para refrescar la vista
   ) {}
 
   ngOnInit() {
     // Usamos paramMap para que funcione siempre, incluso al recargar
-    this.route.paramMap.subscribe(params => {
+    this.route.paramMap.subscribe((params) => {
       this.recetaId = params.get('id');
       if (this.recetaId) {
         this.cargarReceta(this.recetaId);
@@ -39,7 +39,7 @@ export class DietasDetalleComponent implements OnInit {
         // Forzamos a Angular a pintar los datos
         this.cdr.detectChanges();
       },
-      error: (err) => console.error('Error al cargar detalle:', err)
+      error: (err) => console.error('Error al cargar detalle:', err),
     });
   }
 
