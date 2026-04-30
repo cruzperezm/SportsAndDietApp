@@ -1,0 +1,49 @@
+<div class="plan-wrapper" *ngIf="deporte">
+
+  <button class="btn-regresar" (click)="volver()">
+    <span class="material-symbols-outlined">arrow_back</span> Volver a Deportes
+  </button>
+
+  <header class="pill-header">
+    <h1 class="titulo-pill">{{ deporte?.titulo }}</h1>
+    <p class="subtitulo-pill">{{ deporte?.subtitulo }}</p>
+  </header>
+
+  <nav class="filtros-nav">
+    <button (click)="toggleFiltro('todos')" [class.active]="filtrosActivos.length === 0">
+      Todos
+    </button>
+
+    <button *ngFor="let musculo of musculosDisponibles"
+            (click)="toggleFiltro(musculo)"
+            [class.active]="filtrosActivos.includes(musculo)">
+      {{ musculo }}
+    </button>
+  </nav>
+
+  <section class="fase-seccion" *ngFor="let fase of deporte?.plan">
+    <div class="header-fase">
+      <h2 class="momento-label">{{ fase.nivel }}</h2>
+    </div>
+
+    <div class="carrusel-container">
+      <button class="flecha-nav" (click)="mover(-1, fase.nivel)"
+              *ngIf="getEjerciciosFiltrados(fase).length > 3">‹</button>
+
+      <div class="grid-comidas">
+        <div class="card-comida"
+             *ngFor="let ejercicio of getEjerciciosVisibles(fase)"
+             [routerLink]="['/deportes/guia', ejercicio.id]">
+          <div class="card-img" [style.background-image]="'url(' + ejercicio.imagen + ')'">
+            <div class="card-info">
+              <h3>{{ ejercicio.nombre }}</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button class="flecha-nav" (click)="mover(1, fase.nivel)"
+              *ngIf="getEjerciciosFiltrados(fase).length > 3">›</button>
+    </div>
+  </section>
+</div>

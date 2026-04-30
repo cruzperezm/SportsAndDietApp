@@ -1,0 +1,157 @@
+:host {
+  --color-acento: #F97316;
+  --color-acento-hover: #EA580C;
+  --color-texto: #1F2937;
+  --color-texto-suave: #6B7280;
+  --sombra-suave: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --sombra-hover: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.deportes-container {
+  width: 95%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 60px 0;
+}
+
+/* buscador hero */
+.buscador-hero {
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.titulo-principal {
+  color: var(--color-texto);
+  font-size: clamp(40px, 6vw, 80px);
+  font-weight: 800;
+  letter-spacing: -1.5px;
+  margin-bottom: 15px;
+}
+
+.descripcion-principal {
+  color: var(--color-texto-suave);
+  font-size: clamp(18px, 2vw, 24px);
+  font-weight: 400;
+  margin-bottom: 40px;
+}
+
+/* grid */
+.contenedor-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+/* tarjetas originales modo NO buscador */
+.tarjeta-item {
+  width: 100%;
+  background-color: #FFFFFF;
+  border-radius: 20px;
+  padding: 0;
+  box-shadow: var(--sombra-suave);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4/3;
+  border: none;
+}
+
+.tarjeta-item:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--sombra-hover);
+}
+
+.placeholder-imagen {
+  width: 100%;
+  height: 100%;
+  background-color: #E5E7EB;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.5s ease;
+}
+
+.tarjeta-item:hover .placeholder-imagen {
+  transform: scale(1.05);
+}
+
+.tarjeta-item h3 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  padding: 40px 20px 20px 20px;
+  box-sizing: border-box;
+  font-size: clamp(20px, 2vw, 26px);
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0) 100%);
+  pointer-events: none;
+}
+
+/* tarjeta de resultados del buscador */
+.resultados-grid {
+  padding: 0 20px;
+}
+
+.tarjeta-resultado {
+  background-color: #FFFFFF;
+  border-radius: 16px;
+  box-shadow: var(--sombra-suave);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  overflow: hidden;
+  border: 1px solid #f3f4f6;
+  height: 100%;
+}
+
+.tarjeta-resultado:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--sombra-hover);
+}
+
+.tarjeta-resultado .imagen-resultado {
+  width: 140px;
+  min-height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-color: #E5E7EB;
+}
+
+.tarjeta-resultado h5 {
+  font-weight: 700;
+  color: var(--color-texto);
+}
+
+/* responsive */
+@media (max-width: 1024px) {
+  .contenedor-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .contenedor-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .titulo-principal {
+    font-size: 32px !important;
+  }
+
+  .tarjeta-resultado {
+    flex-direction: column !important;
+  }
+
+  .tarjeta-resultado .imagen-resultado {
+    width: 100% !important;
+    height: 200px !important;
+    border-radius: 16px 16px 0 0 !important;
+  }
+
+  .buscador-hero .input-group {
+    width: 90% !important;
+  }
+}

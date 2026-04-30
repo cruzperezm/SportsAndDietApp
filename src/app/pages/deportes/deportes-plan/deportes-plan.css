@@ -1,0 +1,179 @@
+:host {
+  --naranja: #F97316;
+  --naranja-dark: #EA580C;
+  --naranja-soft: #FFF7ED;
+  --sombra: 0 10px 25px -5px rgba(249, 115, 22, 0.2), 0 8px 10px -6px rgba(249, 115, 22, 0.1);
+}
+
+.plan-wrapper {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+/* BOTÓN REGRESAR */
+.btn-regresar {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #64748b;
+  font-weight: 600;
+  margin-bottom: 25px;
+  transition: 0.3s;
+}
+
+.btn-regresar:hover {
+  color: var(--naranja);
+  transform: translateX(-5px);
+}
+
+/* LA PÍLDORA NARANJA (HERO) */
+.pill-header {
+  background: linear-gradient(135deg, var(--naranja), var(--naranja-dark));
+  color: white;
+  padding: 60px 40px;
+  border-radius: 100px; /* Forma de píldora */
+  text-align: center;
+  margin-bottom: 50px;
+  box-shadow: var(--sombra);
+}
+
+.titulo-pill {
+  font-size: clamp(32px, 5vw, 64px);
+  margin: 0;
+  font-weight: 800;
+  letter-spacing: -2px;
+}
+
+.subtitulo-pill {
+  font-size: 1.25rem;
+  opacity: 0.95;
+  margin-top: 10px;
+  font-weight: 400;
+}
+
+/* NAVEGACIÓN DE FILTROS */
+.filtros-nav {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 60px;
+  flex-wrap: wrap;
+}
+
+.filtros-nav button {
+  padding: 12px 28px;
+  border-radius: 50px;
+  border: 2px solid var(--naranja);
+  background: white;
+  color: var(--naranja);
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.filtros-nav button:hover {
+  background: var(--naranja-soft);
+  transform: translateY(-2px);
+}
+
+.filtros-nav button.active {
+  background: var(--naranja);
+  color: white;
+  box-shadow: 0 4px 12px rgba(249, 115, 22, 0.3);
+}
+
+/* SECCIONES Y CARRUSEL */
+.fase-seccion {
+  margin-bottom: 80px;
+}
+
+.momento-label {
+  border-left: 6px solid var(--naranja);
+  padding-left: 20px;
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #1e293b;
+  margin-bottom: 35px;
+}
+
+.carrusel-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.grid-comidas { /* Mantenemos el nombre para reusar lógica */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  flex: 1;
+}
+
+/* CARDS DE EJERCICIOS */
+.card-comida {
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card-comida:hover {
+  transform: translateY(-12px);
+}
+
+.card-img {
+  aspect-ratio: 1;
+  background-size: cover;
+  background-position: center;
+  border-radius: 30px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1);
+}
+
+.card-info {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 30px 20px 20px;
+  background: linear-gradient(transparent, rgba(0,0,0,0.9));
+  color: white;
+}
+
+.card-info h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+/* BOTONES DE NAVEGACIÓN */
+.flecha-nav {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: none;
+  background: white;
+  color: var(--naranja);
+  font-size: 32px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  border: 1px solid #f1f5f9;
+}
+
+.flecha-nav:hover {
+  background: var(--naranja);
+  color: white;
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .grid-comidas { grid-template-columns: 1fr; }
+  .pill-header { border-radius: 40px; padding: 40px 20px; }
+  .flecha-nav { display: none; } /* En móvil mejor usar scroll natural o quitar flechas */
+}
