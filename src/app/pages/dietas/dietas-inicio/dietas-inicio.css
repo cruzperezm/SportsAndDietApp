@@ -156,3 +156,15 @@
     width: 90% !important;
   }
 }
+
+.buscador-hero input:focus,
+.buscador-hero button:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  background-color: transparent !important;
+}
+
+.buscador-hero .input-group {
+  border-radius: 50px !important;
+  background-color: #FFFFFF;
+}
