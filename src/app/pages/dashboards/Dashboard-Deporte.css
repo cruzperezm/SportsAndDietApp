@@ -1,0 +1,71 @@
+/* Variables compartidas y configuración base */
+:root {
+  --color-fondo: #FAFAFA;
+  --sombra-suave: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: var(--color-fondo);
+}
+
+/* Clases comunes de texto para evitar duplicidad */
+.text16 { position: absolute; font-size: 1.6rem; }
+.text20 { position: absolute; font-size: 2.0rem; }
+.text24 { position: absolute; font-size: 2.4rem; }
+.text64 { position: absolute; font-size: 6.4rem; font-weight: bold; }
+
+:host {
+  --color-fondo-secundario: #f0c1a8;
+  --color-acento: #F97316;
+  --color-acento-secundario: #d18f6b;
+  --color-acento-oscuro: #EA580C;
+  --color-texto: #1F2937;
+  --color-texto-suave: #4B5563;
+  --color-texto-color: #140700;
+}
+
+#dashboard-deporte {
+  position: absolute;
+  min-height: 145rem;
+  width: 100%;
+  background-color: var(--color-fondo);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Escritorio */
+@media (min-width: 1024px) {
+  #dashboard-deporte .rectangle-toggle {
+    position: absolute; height: 7.5rem; width: 15.0rem; top: 21.6rem; left: 123.1rem; border-radius: 70px;
+    background-color: var(--color-acento);
+  }
+  #dashboard-deporte .ellipse-toggle {
+    position: absolute; height: 6.75rem; width: 6.75rem; left: 0.4rem; top: 0.35rem; border-radius: 90px;
+    background-color: var(--color-fondo-secundario);
+  }
+  #dashboard-deporte .rectangle-container {
+    position: absolute; height: 51.4rem; width: 90.0rem; top: 35.9rem; left: 9.4rem;
+    background-color: #FFFFFF; border-radius: 30px; box-shadow: var(--sombra-suave);
+  }
+  #name { position: absolute; top: 16rem; left: 22.6rem; }
+
+  /* Posiciones de ejercicios */
+  #train-amount1, #train-amount2, #train-amount3, #train-amount4, #train-amount5 { position: absolute; left: 130rem; }
+  #train-amount1 { top: 36rem; }
+  #train-amount2 { top: 47.8rem; }
+  /* ... (resto de posiciones de train-amount y train-text según Dashboard-Deporte.css) */
+}
+
+/* Móvil */
+@media (max-width: 768px) {
+  #dashboard-deporte .rectangle-container {
+    position: absolute; height: 41.2rem; width: 90vw; top: 13.4rem; left: calc(50% - 20.6rem);
+  }
+}
