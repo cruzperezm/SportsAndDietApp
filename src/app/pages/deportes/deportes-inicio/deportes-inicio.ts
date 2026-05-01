@@ -1,23 +1,39 @@
-import { OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { DeporteService } from '../../../services/deportes';
+import datosDeportes from '../../../../assets/data/deportes.json';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
+
+@Component({
+  selector: 'app-deportes-inicio',
+  standalone: true,
+  imports: [CommonModule, FormsModule],
+  templateUrl: './deportes-inicio.html',
+  styleUrls: ['./deportes-inicio.css']
+})
 
 export class DeportesInicioComponent implements OnInit {
   modoBusqueda: boolean = false;
   resultados: any[] = [];
   textoBusqueda: string = '';
 
-  // 1. La lista ahora empieza vacía
   planesDeportivos: any[] = [];
 
   constructor(
-    private router: Router,
     private deporteService: DeporteService,
+    private router: Router,
+    private cdr: ChangeDetectorRef
   ) {}
 
   ngOnInit() {
-    this.deporteService.getDeportes().subscribe((datos) => {
-      this.planesDeportivos = datos;
+    this.deporteService.getDeportes().subscribe({
+      next: (datos) => {
+        console.log('DATOS LLEGANDO:', datos);
+        this.planesDeportivos = datos;
+        this.cdr.detectChanges();
+      },
+      error: (err) => console.error('ERROR CRÍTICO:', err)
     });
   }
 

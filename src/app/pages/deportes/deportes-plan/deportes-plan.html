@@ -13,27 +13,31 @@
     <button (click)="toggleFiltro('todos')" [class.active]="filtrosActivos.length === 0">
       Todos
     </button>
-
-    <button *ngFor="let musculo of musculosDisponibles"
-            (click)="toggleFiltro(musculo)"
-            [class.active]="filtrosActivos.includes(musculo)">
-      {{ musculo }}
+    <!-- Aquí iteramos sobre los Grupos Musculares (Brazos, Piernas, etc.) -->
+    <button *ngFor="let grupo of gruposDisponibles"
+            (click)="toggleFiltro(grupo)"
+            [class.active]="filtrosActivos.includes(grupo)">
+      {{ grupo }}
     </button>
   </nav>
 
+  <!-- Secciones de Principiante, Intermedio, Avanzado -->
   <section class="fase-seccion" *ngFor="let fase of deporte?.plan">
     <div class="header-fase">
-      <h2 class="momento-label">{{ fase.nivel }}</h2>
+      <!-- Mostramos el nombre de la fase -->
+      <h2 class="momento-label">{{ fase.nivel || fase.nombre }}</h2>
     </div>
 
     <div class="carrusel-container">
-      <button class="flecha-nav" (click)="mover(-1, fase.nivel)"
+      <!-- Flecha Izquierda -->
+      <button class="flecha-nav" (click)="mover(-1, fase.nivel || fase.nombre)"
               *ngIf="getEjerciciosFiltrados(fase).length > 3">‹</button>
 
       <div class="grid-comidas">
+        <!-- Tarjetas de Ejercicios -->
         <div class="card-comida"
              *ngFor="let ejercicio of getEjerciciosVisibles(fase)"
-             [routerLink]="['/deportes/guia', ejercicio.id]">
+             [routerLink]="['/deportes/ejercicio', ejercicio.id]">
           <div class="card-img" [style.background-image]="'url(' + ejercicio.imagen + ')'">
             <div class="card-info">
               <h3>{{ ejercicio.nombre }}</h3>
@@ -42,7 +46,8 @@
         </div>
       </div>
 
-      <button class="flecha-nav" (click)="mover(1, fase.nivel)"
+      <!-- Flecha Derecha -->
+      <button class="flecha-nav" (click)="mover(1, fase.nivel || fase.nombre)"
               *ngIf="getEjerciciosFiltrados(fase).length > 3">›</button>
     </div>
   </section>

@@ -4,7 +4,7 @@
       "id": 1,
       "titulo": "Pérdida de Grasa (HIIT)",
       "subtitulo": "Quema calorías y mejora tu resistencia.",
-      "imagen": "assets/img/deporte/portadas/portada-1.jpg",
+      "imagen": "https://firebasestorage.googleapis.com/v0/b/sprint3-45084.firebasestorage.app/o/portada-1.jpg?alt=media&token=2b3b882e-b34a-4f55-af40-fefa2e618957",
       "plan": [
         {
           "nivel": "Principiante",
@@ -922,13 +922,8 @@
               "imagen": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/3216-7E06s6d.jpg",
               "tiempo": "10 min",
               "dificultad": "Alta",
-              "filtros": [
-                "peso-corporal"
-              ],
-              "musculos": [
-                "Pecho",
-                "Pectorales"
-              ],
+              "filtros": ["peso-corporal"],
+              "musculos": ["Pecho", "Pectorales"],
               "estadisticas": {
                 "series": "4",
                 "repeticiones": "12",
@@ -944,7 +939,7 @@
       "id": 2,
       "titulo": "Aumento de Masa Muscular",
       "subtitulo": "Ejercicios de hipertrofia enfocados en fuerza.",
-      "imagen": "assets/img/deporte/portadas/portada-2.jpg",
+      "imagen": "https://firebasestorage.googleapis.com/v0/b/sprint3-45084.firebasestorage.app/o/portada-2.jpg?alt=media&token=23e570e4-719d-436c-8e49-7ba9d9f1d3bc",
       "plan": [
         {
           "nivel": "Principiante",
@@ -1868,7 +1863,7 @@
       "id": 3,
       "titulo": "Flexibilidad",
       "subtitulo": "Mejora tu rango de movimiento y evita lesiones.",
-      "imagen": "assets/img/deporte/portadas/portada-3.jpg",
+      "imagen": "https://firebasestorage.googleapis.com/v0/b/sprint3-45084.firebasestorage.app/o/portada-3.jpg?alt=media&token=8c851d44-de38-4de2-914c-29b3887cae2f",
       "plan": [
         {
           "nivel": "Principiante",
@@ -2782,7 +2777,7 @@
       "id": 4,
       "titulo": "Potencia",
       "subtitulo": "Entrenamientos explosivos para rendir al máximo.",
-      "imagen": "assets/img/deporte/portadas/portada-4.jpg",
+      "imagen": "https://firebasestorage.googleapis.com/v0/b/sprint3-45084.firebasestorage.app/o/portada-4.jpg?alt=media&token=8e1db20d-e49e-4fe1-8bf7-c3879ca9aa93",
       "plan": [
         {
           "nivel": "Principiante",
@@ -3553,7 +3548,7 @@
       "id": 5,
       "titulo": "Resistencia",
       "subtitulo": "Aguanta más tiempo entrenando con esta rutina.",
-      "imagen": "assets/img/deporte/portadas/portada-5.jpg",
+      "imagen": "https://firebasestorage.googleapis.com/v0/b/sprint3-45084.firebasestorage.app/o/portada-5.jpg?alt=media&token=7bdfe0af-280a-4a5f-9385-ede00b6391b9",
       "plan": [
         {
           "nivel": "Principiante",
@@ -4460,7 +4455,7 @@
       "id": 6,
       "titulo": "En Casa",
       "subtitulo": "Ponte en forma sin necesidad de ir al gimnasio.",
-      "imagen": "assets/img/deporte/portadas/portada-6.jpg",
+      "imagen": "https://firebasestorage.googleapis.com/v0/b/sprint3-45084.firebasestorage.app/o/portada-6.jpg?alt=media&token=083421f3-0557-415b-ade2-0e2672b82435",
       "plan": [
         {
           "nivel": "Principiante",

@@ -8,12 +8,12 @@ import { DeporteService } from '../../../services/deportes';
   standalone: true,
   imports: [CommonModule, RouterModule],
   templateUrl: './deportes-detalle.html',
-  styleUrl: './deportes-detalle.css',
+  styleUrls: ['./deportes-detalle.css'], // Cambiado styleUrl por styleUrls (es lo estándar en Angular)
 })
 export class DeportesDetalleComponent implements OnInit {
   itemId: string | null = null;
   detalleData: any = null;
-  tipoVista: 'plan' | 'ejercicio' | null = null; // <- Añadimos esta variable
+  cargando: boolean = true;
 
   constructor(
     private route: ActivatedRoute,
@@ -32,24 +32,21 @@ export class DeportesDetalleComponent implements OnInit {
   }
 
   cargarDatos(id: string) {
+    this.cargando = true;
     this.deporteService.obtenerEjercicioPorId(id).subscribe({
       next: (data: any) => {
         this.detalleData = data;
-
-        // Detectamos qué nos ha devuelto el JSON
-        if (this.detalleData && this.detalleData.plan) {
-          this.tipoVista = 'plan'; // Es el HIIT entero
-        } else if (this.detalleData && this.detalleData.estadisticas) {
-          this.tipoVista = 'ejercicio'; // Es un ejercicio suelto
-        }
-
-        this.cdr.detectChanges();
+        this.cargando = false;
+        this.cdr.detectChanges(); // Forzamos a Angular a pintar el diseño
       },
-      error: (err) => console.error('Error al cargar:', err),
+      error: (err) => {
+        console.error('Error al cargar:', err);
+        this.cargando = false;
+      },
     });
   }
 
   volver() {
-    this.location.back();
+    this.location.back(); // Esto te devuelve al carrusel exacto donde estabas
   }
 }

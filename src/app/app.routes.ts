@@ -19,8 +19,16 @@ export const routes: Routes = [
   { path: 'dietas/receta/:id', component: DietasDetalleComponent, title: 'SPORTS&DIET · Receta' },
   { path: 'home', component: HomeComponent, title: 'SPORTS&DIET · Home' },
   { path: 'deportes', component: DeportesInicioComponent, title: 'SPORTS&DIET · Deportes' },
-  { path: 'deportes/plan/:id', component: DeportesPlanComponent, title: 'SPORTS&DIET · Entrenamientos' },
-  { path: 'deportes/guia/:id', component: DeportesDetalleComponent, title: 'SPORTS&DIET · Ejercicio' },
+  {
+    path: 'deportes/plan/:id',
+    component: DeportesPlanComponent,
+    title: 'SPORTS&DIET · Entrenamientos',
+  },
+  {
+    path: 'deportes/ejercicio/:id',
+    component: DeportesDetalleComponent,
+    title: 'SPORTS&DIET · Ejercicio',
+  },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: '**', redirectTo: 'home' },
 ];
