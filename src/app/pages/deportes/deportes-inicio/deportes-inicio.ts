@@ -10,6 +10,7 @@ import { DeporteService } from '../../../services/deportes';
   templateUrl: './deportes-inicio.html',
   styleUrl: './deportes-inicio.css',
 })
+
 export class DeportesInicioComponent implements OnInit {
   //variables del Buscador
   modoBusqueda: boolean = false;

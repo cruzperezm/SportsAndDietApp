@@ -1,4 +1,4 @@
-import { ApplicationConfig, importProvidersFrom } from '@angular/core';
+import { ApplicationConfig } from '@angular/core';
 import { provideRouter } from '@angular/router';
 import { routes } from './app.routes';
 import { provideHttpClient } from '@angular/common/http';
@@ -9,15 +9,17 @@ import { getAuth, provideAuth } from '@angular/fire/auth';
 import { getStorage, provideStorage } from '@angular/fire/storage';
 import { environment } from '../environments/environment';
 
+console.log(
+  '🚀 ARRANCANDO ANGULAR... FIREBASE CONECTADO AL PROYECTO:',
+  environment.firebase.projectId,
+);
+
 export const appConfig: ApplicationConfig = {
   providers: [
     provideRouter(routes),
     provideHttpClient(),
     provideFirebaseApp(() => initializeApp(environment.firebase)),
-    provideFirestore(() => {
-      const app = initializeApp(environment.firebase);
-      return getFirestore(app);
-    }),
+    provideFirestore(() => getFirestore()),
     provideAuth(() => getAuth()),
     provideStorage(() => getStorage()),
   ],

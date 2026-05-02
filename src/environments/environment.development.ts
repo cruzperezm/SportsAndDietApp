@@ -1,12 +1,11 @@
 export const environment = {
-  firebase:{
-    apiKey: "AIzaSyCNzwzCKAZoEywB5T6XMT94hidbuxi7BAk",
-    authDomain: "sportsanddietapp.firebaseapp.com",
-    databaseURL: "https://sportsanddietapp-default-rtdb.europe-west1.firebasedatabase.app",
-    projectId: "sportsanddietapp",
-    storageBucket: "sportsanddietapp.firebasestorage.app",
-    messagingSenderId: "446766581454",
-    appId: "1:446766581454:web:4a7ae65fbc8dd9aeeb729f",
-    measurementId: "G-5DWM0RNT5F"
-  }
+  production: false,
+  firebase: {
+    apiKey: 'AIzaSyDcIS69Xw1PPn8uzzkh3Jp79qde7QfqlU8',
+    authDomain: 'sprint3-45084.firebaseapp.com',
+    projectId: 'sprint3-45084',
+    storageBucket: 'sprint3-45084.firebasestorage.app',
+    messagingSenderId: '109562227923',
+    appId: '1:109562227923:web:6007d6982a4d77dd3bf826',
+  },
 };
