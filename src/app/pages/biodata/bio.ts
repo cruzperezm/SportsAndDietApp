@@ -53,7 +53,7 @@ export class Bio {
     try {
     // @ts-ignore
       await this.bioService
-      .addBook(this.bioForm.value)
+      .addBioData(this.bioForm.value)
       .then((res) => console.log('OK:', res))
       .catch((err) => console.error('ERROR:', err));}
     catch(err) {console.error('ERROR:', err)}
