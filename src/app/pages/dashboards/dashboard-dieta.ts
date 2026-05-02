@@ -3,8 +3,8 @@ import { DataService } from '../../services/dashboard.service';
 
 @Component({
   selector: 'app-diet-dashboard',
-  templateUrl: './diet-dashboard.component.html',
-  styleUrls: ['./diet-dashboard.component.css']
+  templateUrl: './Dashboard-Dieta.html',
+  styleUrls: ['./Dashboard-Dieta.css']
 })
 export class DietDashboardComponent implements OnInit {
   data: any;

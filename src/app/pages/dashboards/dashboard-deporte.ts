@@ -3,8 +3,8 @@ import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-sport-dashboard',
-  templateUrl: './sport-dashboard.component.html',
-  styleUrls: ['./sport-dashboard.component.css']
+  templateUrl: './Dashboard-Deporte.html',
+  styleUrls: ['./Dashboard-Deporte.css']
 })
 export class SportDashboardComponent implements OnInit {
   public data: any;
