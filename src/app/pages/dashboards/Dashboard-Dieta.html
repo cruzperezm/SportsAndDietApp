@@ -1,0 +1,33 @@
+<div id="dashboard-dieta" *ngIf="data">
+  <p class="text64" id="name">{{ data.usuario.nombre }}</p>
+
+  <div class="rectangle-toggle" id="r0">
+    <a class="ellipse-toggle" id="e0" routerLink="/deporte"></a>
+  </div>
+
+  <div class="rectangle-container" id="r1">
+    <div class="ellipse-container" id="e1">
+      <div class="ellipse" id="e2">
+        <p class="text24" id="calories-goal">/{{ data.dieta.calorias_objetivo }}</p>
+        <p class="text64" id="calories-amount">{{ data.dieta.calorias_totales }}</p>
+      </div>
+    </div>
+
+    <p class="text24" id="water-amount">{{ data.dieta.macros1[0].valor }}</p>
+    <p class="text16" id="water-text">{{ data.dieta.macros1[0].nombre }}</p>
+
+    <p class="text24" id="fiber-amount">{{ data.dieta.macros1[1].valor }}</p>
+    <p class="text16" id="fiber-text">{{ data.dieta.macros1[1].nombre }}</p>
+
+    <div *ngFor="let macro of data.dieta.macros2; let i = index"
+         [id]="['protein', 'fats', 'carbs', 'sodium', 'sugar'][i] + '-rectangle'"
+         class="macro-track">
+      <div class="macro-fill" [style.width.%]="macro.progreso"></div>
+    </div>
+  </div>
+
+  <ng-container *ngFor="let receta of data.dieta.recetas; let i = index">
+    <p class="text20" [id]="'diet-text' + (i+1)">{{ receta.nombre }}</p>
+    <p class="text16" [id]="'diet-amount' + (i+1)">{{ receta.valor }}</p>
+  </ng-container>
+</div>

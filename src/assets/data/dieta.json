@@ -1,0 +1,4192 @@
+{
+  "dietas": [
+    {
+      "id": "keto",
+      "titulo": "Dieta Keto",
+      "subtitulo": "Dieta cetogénica alta en grasas saludables y muy baja en carbohidratos.",
+      "imagen": "assets/img/dieta/keto/portada-keto.jpg",
+      "plan": [
+        {
+          "momento": "Desayuno",
+          "comidas": [
+            {
+              "id": "k_des_1",
+              "nombre": "Huevos con Aguacate",
+              "imagen": "assets/img/dieta/keto/k_des_1.jpg",
+              "tiempo": "15 min",
+              "calorias": "380 kcal",
+              "alergenos": ["huevos", "gluten"],
+              "ingredientes": ["2 huevos", "1/2 aguacate", "1 cda mantequilla", "Sal y pimienta", "Tostadas Integrales"],
+              "macros": {
+                "proteinas": "14g",
+                "grasas": "34g",
+                "carbos": "4g"
+              },
+              "instrucciones": "1. Bate los huevos.\n2. Cocina en la sartén con mantequilla a fuego lento.\n3. Sirve junto al aguacate en láminas.\n4. Puedes acompañarlo con unas tostadas integrales."
+            },
+            {
+              "id": "k_des_2",
+              "nombre": "Tortilla de Espinacas",
+              "imagen": "assets/img/dieta/keto/k_des_2.jpg",
+              "tiempo": "15 min",
+              "calorias": "410 kcal",
+              "alergenos": ["huevos", "lacteos"],
+              "ingredientes": ["3 huevos", "Espinacas frescas", "30g queso cheddar", "Aceite de oliva"],
+              "macros": {
+                "proteinas": "22g",
+                "grasas": "33g",
+                "carbos": "3g"
+              },
+              "instrucciones": "1. Saltea las espinacas con un poco de aceite.\n2. Añade los huevos batidos.\n3. Incorpora el queso cheddar y dobla la tortilla cuando cuaje."
+            },
+            {
+              "id": "k_des_3",
+              "nombre": "Café Bulletproof",
+              "imagen": "assets/img/dieta/keto/k_des_3.jpg",
+              "tiempo": "5 min",
+              "calorias": "230 kcal",
+              "alergenos": ["lacteos"],
+              "ingredientes": ["1 taza café negro", "1 cda aceite MCT", "1 cda mantequilla pasto"],
+              "macros": {
+                "proteinas": "1g",
+                "grasas": "25g",
+                "carbos": "0g"
+              },
+              "instrucciones": "1. Prepara una taza de café caliente de calidad.\n2. Introduce todos los ingredientes en la licuadora.\n3. Bate hasta que se forme una capa de espuma cremosa."
+            },
+            {
+              "id": "k_des_4",
+              "nombre": "Pancakes Keto",
+              "imagen": "assets/img/dieta/keto/k_des_4.jpg",
+              "tiempo": "20 min",
+              "calorias": "350 kcal",
+              "alergenos": ["huevos", "frutos secos"],
+              "ingredientes": ["50g harina almendra", "2 huevos", "Chorro leche almendras", "Canela"],
+              "macros": {
+                "proteinas": "15g",
+                "grasas": "28g",
+                "carbos": "5g"
+              },
+              "instrucciones": "1. Mezcla los ingredientes en un bol hasta obtener una masa homogénea.\n2. Engrasa una sartén y vierte la masa en porciones pequeñas.\n3. Cocina vuelta y vuelta hasta que doren."
+            },
+            {
+              "id": "k_des_5",
+              "nombre": "Porridge de Chía",
+              "imagen": "assets/img/dieta/keto/k_des_5.jpg",
+              "tiempo": "15 min",
+              "calorias": "320 kcal",
+              "alergenos": ["frutos secos"],
+              "ingredientes": ["3 cdas semillas chía", "1/2 taza leche coco", "Nueces picadas"],
+              "macros": {
+                "proteinas": "8g",
+                "grasas": "25g",
+                "carbos": "6g"
+              },
+              "instrucciones": "1. Calienta ligeramente la leche de coco.\n2. Mezcla con las semillas de chía y deja reposar 10 min para que espese.\n3. Decora con las nueces picadas por encima."
+            },
+            {
+              "id": "k_des_6",
+              "nombre": "Muffins de Huevo y Bacon",
+              "imagen": "assets/img/dieta/keto/k_des_6.jpg",
+              "tiempo": "25 min",
+              "calorias": "290 kcal",
+              "alergenos": ["huevos", "lacteos"],
+              "ingredientes": ["4 huevos", "2 lonchas bacon", "Queso rallado", "Cebollino"],
+              "macros": {
+                "proteinas": "20g",
+                "grasas": "22g",
+                "carbos": "2g"
+              },
+              "instrucciones": "1. Pica el bacon y mézclalo con los huevos batidos y el queso.\n2. Vierte la mezcla en moldes para muffins.\n3. Hornea a 180°C durante unos 15 minutos."
+            },
+            {
+              "id": "k_des_7",
+              "nombre": "Yogur Griego con Pecanas",
+              "imagen": "assets/img/dieta/keto/k_des_7.jpg",
+              "tiempo": "5 min",
+              "calorias": "310 kcal",
+              "alergenos": ["lacteos", "frutos secos"],
+              "ingredientes": ["150g yogur griego natural", "30g nueces pecanas", "1 cda semillas lino"],
+              "macros": {
+                "proteinas": "12g",
+                "grasas": "26g",
+                "carbos": "7g"
+              },
+              "instrucciones": "1. Vierte el yogur griego en un bol.\n2. Añade las nueces pecanas y las semillas de lino por encima y disfruta."
+            },
+            {
+              "id": "k_des_8",
+              "nombre": "Chaffles (Gofres Queso)",
+              "imagen": "assets/img/dieta/keto/k_des_8.jpg",
+              "tiempo": "15 min",
+              "calorias": "250 kcal",
+              "alergenos": ["huevos", "lacteos", "frutos secos"],
+              "ingredientes": ["1 huevo", "50g mozzarella rallada", "Pizca harina almendra"],
+              "macros": {
+                "proteinas": "18g",
+                "grasas": "18g",
+                "carbos": "2g"
+              },
+              "instrucciones": "1. Mezcla el huevo con la mozzarella y la harina de almendra.\n2. Pon la masa en la gofrera caliente.\n3. Cocina hasta que esté bien dorado y crujiente."
+            },
+            {
+              "id": "k_des_9",
+              "nombre": "Salmón y Queso Crema",
+              "imagen": "assets/img/dieta/keto/k_des_9.jpg",
+              "tiempo": "10 min",
+              "calorias": "280 kcal",
+              "alergenos": ["pescado", "lacteos"],
+              "ingredientes": ["100g salmón ahumado", "2 cdas queso crema", "Medio pepino en rodajas"],
+              "macros": {
+                "proteinas": "22g",
+                "grasas": "20g",
+                "carbos": "3g"
+              },
+              "instrucciones": "1. Corta el pepino en rodajas gruesas para que sirvan de base.\n2. Unta el queso crema sobre el pepino.\n3. Coloca una lámina de salmón ahumado encima."
+            },
+            {
+              "id": "k_des_10",
+              "nombre": "Batido Verde Keto",
+              "imagen": "assets/img/dieta/keto/k_des_10.jpg",
+              "tiempo": "5 min",
+              "calorias": "260 kcal",
+              "alergenos": ["frutos secos"],
+              "ingredientes": ["1 taza espinaca", "1/2 aguacate", "Leche de almendras", "Proteína vainilla sin azúcar"],
+              "macros": {
+                "proteinas": "25g",
+                "grasas": "15g",
+                "carbos": "4g"
+              },
+              "instrucciones": "1. Introduce todos los ingredientes en el vaso de la licuadora.\n2. Procesa hasta obtener una textura suave.\n3. Sirve inmediatamente bien frío."
+            },
+            {
+              "id": "k_des_11",
+              "nombre": "Benedictinos Portobello",
+              "imagen": "assets/img/dieta/keto/k_des_11.jpg",
+              "tiempo": "20 min",
+              "calorias": "340 kcal",
+              "alergenos": ["huevos", "lacteos"],
+              "ingredientes": ["2 huevos escalfados", "2 hongos portobello grandes", "Salsa holandesa"],
+              "macros": {
+                "proteinas": "16g",
+                "grasas": "28g",
+                "carbos": "5g"
+              },
+              "instrucciones": "1. Limpia y asa los portobellos a la plancha.\n2. Cocina dos huevos escalfados en agua con vinagre.\n3. Monta el huevo sobre el hongo y cubre con salsa holandesa."
+            },
+            {
+              "id": "k_des_12",
+              "nombre": "Rollitos de Jamón Serrano",
+              "imagen": "assets/img/dieta/keto/k_des_12.jpg",
+              "tiempo": "10 min",
+              "calorias": "220 kcal",
+              "alergenos": ["lacteos"],
+              "ingredientes": ["4 lonchas jamón serrano", "Queso crema", "Rúcula fresca"],
+              "macros": {
+                "proteinas": "15g",
+                "grasas": "16g",
+                "carbos": "1g"
+              },
+              "instrucciones": "1. Extiende las lonchas de jamón sobre una superficie limpia.\n2. Unta una capa fina de queso crema.\n3. Añade rúcula en el centro y enrolla con cuidado."
+            },
+            {
+              "id": "k_des_13",
+              "nombre": "Cottage con Semillas",
+              "imagen": "assets/img/dieta/keto/k_des_13.jpg",
+              "tiempo": "5 min",
+              "calorias": "270 kcal",
+              "alergenos": ["lacteos"],
+              "ingredientes": ["150g queso cottage", "2 cdas semillas calabaza", "Aceite oliva"],
+              "macros": {
+                "proteinas": "20g",
+                "grasas": "18g",
+                "carbos": "5g"
+              },
+              "instrucciones": "1. Pon el queso cottage en un bol individual.\n2. Esparce las semillas de calabaza.\n3. Termina con un chorrito de aceite de oliva virgen extra."
+            },
+            {
+              "id": "k_des_14",
+              "nombre": "Pudding de Lino",
+              "imagen": "assets/img/dieta/keto/k_des_14.jpg",
+              "tiempo": "10 min",
+              "calorias": "290 kcal",
+              "alergenos": [],
+              "ingredientes": ["3 cdas semillas lino molidas", "Leche de coco", "Frambuesas"],
+              "macros": {
+                "proteinas": "9g",
+                "grasas": "24g",
+                "carbos": "4g"
+              },
+              "instrucciones": "1. Mezcla las semillas de lino molidas con la leche de coco la noche anterior.\n2. Guarda en la nevera.\n3. Por la mañana, añade las frambuesas frescas por encima."
+            },
+            {
+              "id": "k_des_15",
+              "nombre": "Huevos con Chorizo",
+              "imagen": "assets/img/dieta/keto/k_des_15.jpg",
+              "tiempo": "15 min",
+              "calorias": "450 kcal",
+              "alergenos": ["huevos"],
+              "ingredientes": ["2 huevos", "50g chorizo picado", "1/4 aguacate"],
+              "macros": {
+                "proteinas": "22g",
+                "grasas": "38g",
+                "carbos": "3g"
+              },
+              "instrucciones": "1. Saltea el chorizo en la sartén hasta que suelte su grasa.\n2. Fríe los huevos en esa misma grasa.\n3. Sirve acompañado del cuarto de aguacate."
+            }
+          ]
+        },
+        {
+          "momento": "Almuerzo",
+          "comidas": [
+            {
+              "id": "k_alm_1",
+              "nombre": "Ensalada Cobb",
+              "imagen": "assets/img/dieta/keto/k_alm_1.jpg",
+              "tiempo": "20 min",
+              "calorias": "520 kcal",
+              "alergenos": ["lacteos"],
+              "ingredientes": ["Lechuga", "Bacon", "1 Huevo duro", "1/2 Aguacate", "Queso Azul"],
+              "macros": {
+                "proteinas": "20g",
+                "grasas": "45g",
+                "carbos": "6g"
+              },
+              "instrucciones": "1. Pica todos los ingredientes.\n2. Mezcla en un bol y aliña con aceite y vinagre."
+            },
+            {
+              "id": "k_alm_2",
+              "nombre": "Zoodles Boloñesa",
+              "imagen": "assets/img/dieta/keto/k_alm_2.jpg",
+              "tiempo": "25 min",
+              "calorias": "400 kcal",
+              "alergenos": [],
+              "ingredientes": ["Calabacín en espiral", "150g carne picada ternera", "Salsa tomate sin azúcar"],
+              "macros": {
+                "proteinas": "30g",
+                "grasas": "25g",
+                "carbos": "8g"
+              },
+              "instrucciones": "1. Cocina la carne con la salsa.\n2. Saltea los zoodles 2 min y mezcla con la carne."
+            },
+            {
+              "id": "k_alm_3",
+              "nombre": "Burger en Lechuga",
+              "imagen": "assets/img/dieta/keto/k_alm_3.jpg",
+              "tiempo": "20 min",
+              "calorias": "480 kcal",
+              "alergenos": ["lacteos"],
+              "ingredientes": ["200g carne picada", "Queso cheddar", "Hojas lechuga iceberg", "Mostaza"],
+              "macros": {
+                "proteinas": "40g",
+                "grasas": "32g",
+                "carbos": "4g"
+              },
+              "instrucciones": "1. Haz la hamburguesa a la plancha con el queso.\n2. Usa las hojas de lechuga como si fueran el pan."
+            },
+            {
+              "id": "k_alm_4",
+              "nombre": "Aguacates Rellenos Atún",
+              "imagen": "assets/img/dieta/keto/k_alm_4.jpg",
+              "tiempo": "15 min",
+              "calorias": "450 kcal",
+              "alergenos": ["pescado"],
+              "ingredientes": ["1 aguacate", "1 lata atún natural", "2 cdas mayonesa", "Cebolla picada"],
+              "macros": {
+                "proteinas": "25g",
+                "grasas": "35g",
+                "carbos": "5g"
+              },
+              "instrucciones": "1. Corta el aguacate por la mitad y saca un poco de pulpa.\n2. Mezcla atún, mayonesa y cebolla, y rellena."
+            },
+            {
+              "id": "k_alm_5",
+              "nombre": "Pollo Relleno",
+              "imagen": "assets/img/dieta/keto/k_alm_5.jpg",
+              "tiempo": "35 min",
+              "calorias": "390 kcal",
+              "alergenos": ["lacteos"],
+              "ingredientes": ["1 pechuga pollo", "Queso crema", "Espinacas", "Sal y ajo"],
+              "macros": {
+                "proteinas": "45g",
+                "grasas": "20g",
+                "carbos": "3g"
+              },
+              "instrucciones": "1. Abre la pechuga a la mitad.\n2. Rellena con queso y espinacas.\n3. Hornea 25 min a 200°C."
+            },
+            {
+              "id": "k_alm_6",
+              "nombre": "Pizza Base Coliflor",
+              "imagen": "assets/img/dieta/keto/k_alm_6.jpg",
+              "tiempo": "40 min",
+              "calorias": "420 kcal",
+              "alergenos": ["huevos", "lacteos"],
+              "ingredientes": ["Base de coliflor rallada y huevo", "Salsa tomate", "Mozzarella", "Pepperoni"],
+              "macros": {
+                "proteinas": "28g",
+                "grasas": "30g",
+                "carbos": "9g"
+              },
+              "instrucciones": "1. Hornea la base de coliflor 15 min.\n2. Añade toppings y hornea hasta fundir el queso."
+            },
+            {
+              "id": "k_alm_7",
+              "nombre": "Salmón con Costra",
+              "imagen": "assets/img/dieta/keto/k_alm_7.jpg",
+              "tiempo": "30 min",
+              "calorias": "460 kcal",
+              "alergenos": ["pescado", "frutos secos"],
+              "ingredientes": ["1 lomo salmón", "Almendra molida", "Espárragos trigueros", "Limón"],
+              "macros": {
+                "proteinas": "35g",
+                "grasas": "32g",
+                "carbos": "5g"
+              },
+              "instrucciones": "1. Reboza el salmón en almendra.\n2. Hornea junto a los espárragos aliñados por 20 min."
+            },
+            {
+              "id": "k_alm_8",
+              "nombre": "Tacos Costra Queso",
+              "imagen": "assets/img/dieta/keto/k_alm_8.jpg",
+              "tiempo": "25 min",
+              "calorias": "490 kcal",
+              "alergenos": ["lacteos"],
+              "ingredientes": ["Queso fundido en círculo", "Carne picada especiada", "Pico de gallo"],
+              "macros": {
+                "proteinas": "38g",
+                "grasas": "35g",
+                "carbos": "6g"
+              },
+              "instrucciones": "1. Fríe el queso hasta formar una costra dura.\n2. Dóblalo en forma de taco y rellena con carne."
+            },
+            {
+              "id": "k_alm_9",
+              "nombre": "Sopa Brócoli Queso",
+              "imagen": "assets/img/dieta/keto/k_alm_9.jpg",
+              "tiempo": "25 min",
+              "calorias": "380 kcal",
+              "alergenos": ["lacteos"],
+              "ingredientes": ["Brócoli", "Queso Cheddar", "Caldo pollo", "Nata líquida"],
+              "macros": {
+                "proteinas": "15g",
+                "grasas": "30g",
+                "carbos": "8g"
+              },
+              "instrucciones": "1. Hierve el brócoli en el caldo.\n2. Tritura, añade nata y cheddar hasta espesar."
+            },
+            {
+              "id": "k_alm_10",
+              "nombre": "Chuletas a la Mostaza",
+              "imagen": "assets/img/dieta/keto/k_alm_10.jpg",
+              "tiempo": "25 min",
+              "calorias": "510 kcal",
+              "alergenos": ["lacteos"],
+              "ingredientes": ["2 chuletas cerdo", "1 cda mostaza antigua", "Nata", "Judías verdes"],
+              "macros": {
+                "proteinas": "40g",
+                "grasas": "35g",
+                "carbos": "5g"
+              },
+              "instrucciones": "1. Haz las chuletas a la plancha.\n2. Mezcla mostaza y nata en la sartén para la salsa."
+            },
+            {
+              "id": "k_alm_11",
+              "nombre": "Curry de Pollo Coco",
+              "imagen": "assets/img/dieta/keto/k_alm_11.jpg",
+              "tiempo": "30 min",
+              "calorias": "470 kcal",
+              "alergenos": ["lacteos"],
+              "ingredientes": ["Pollo en dados", "Leche de coco entera", "Curry en polvo", "Coliflor picada (arroz)"],
+              "macros": {
+                "proteinas": "35g",
+                "grasas": "32g",
+                "carbos": "7g"
+              },
+              "instrucciones": "1. Cocina el pollo con la pasta de curry.\n2. Añade leche de coco y sirve sobre arroz de coliflor."
+            },
+            {
+              "id": "k_alm_12",
+              "nombre": "Pimientos Rellenos",
+              "imagen": "assets/img/dieta/keto/k_alm_12.jpg",
+              "tiempo": "45 min",
+              "calorias": "410 kcal",
+              "alergenos": ["lacteos"],
+              "ingredientes": ["1 pimiento grande", "Carne picada mixta", "Queso para gratinar"],
+              "macros": {
+                "proteinas": "30g",
+                "grasas": "25g",
+                "carbos": "8g"
+              },
+              "instrucciones": "1. Rellena el pimiento vaciado con la carne cocinada.\n2. Hornea 30 min y gratina con queso."
+            },
+            {
+              "id": "k_alm_13",
+              "nombre": "Wrap de Col",
+              "imagen": "assets/img/dieta/keto/k_alm_13.jpg",
+              "tiempo": "15 min",
+              "calorias": "320 kcal",
+              "alergenos": ["lacteos"],
+              "ingredientes": ["Hojas de col grandes", "Jamón cocido", "Queso havarti", "Mayonesa"],
+              "macros": {
+                "proteinas": "20g",
+                "grasas": "24g",
+                "carbos": "4g"
+              },
+              "instrucciones": "1. Escalda la col para que sea flexible.\n2. Úntala con mayonesa y enrolla con jamón y queso."
+            },
+            {
+              "id": "k_alm_14",
+              "nombre": "César sin Picatostes",
+              "imagen": "assets/img/dieta/keto/k_alm_14.jpg",
+              "tiempo": "15 min",
+              "calorias": "440 kcal",
+              "alergenos": ["lacteos"],
+              "ingredientes": ["Lechuga", "Pollo asado", "Parmesano", "Salsa César casera"],
+              "macros": {
+                "proteinas": "35g",
+                "grasas": "30g",
+                "carbos": "3g"
+              },
+              "instrucciones": "1. Trocea el pollo y la lechuga.\n2. Baña con la salsa y añade lascas de parmesano."
+            },
+            {
+              "id": "k_alm_15",
+              "nombre": "Brochetas Pollo Limón",
+              "imagen": "assets/img/dieta/keto/k_alm_15.jpg",
+              "tiempo": "25 min",
+              "calorias": "360 kcal",
+              "alergenos": [],
+              "ingredientes": ["Pollo troceado", "Calabacín en dados", "Aceite oliva y limón"],
+              "macros": {
+                "proteinas": "38g",
+                "grasas": "20g",
+                "carbos": "5g"
+              },
+              "instrucciones": "1. Marina el pollo en aceite, limón y hierbas.\n2. Ensarta alternando con calabacín y asa a la parrilla."
+            }
+          ]
+        },
+        {
+          "momento": "Cena",
+          "comidas": [
+            {
+              "id": "k_cen_1",
+              "nombre": "Lasaña de Calabacín",
+              "imagen": "assets/img/dieta/keto/k_cen_1.jpg",
+              "tiempo": "45 min",
+              "calorias": "450 kcal",
+              "alergenos": ["lacteos"],
+              "ingredientes": ["Láminas calabacín", "Carne picada", "Tomate triturado", "Ricotta", "Mozzarella"],
+              "macros": {
+                "proteinas": "35g",
+                "grasas": "28g",
+                "carbos": "9g"
+              },
+              "instrucciones": "1. Intercala capas de calabacín, carne cocinada y ricotta.\n2. Gratina en el horno con mozzarella."
+            },
+            {
+              "id": "k_cen_2",
+              "nombre": "Albóndigas Ternera",
+              "imagen": "assets/img/dieta/keto/k_cen_2.jpg",
+              "tiempo": "35 min",
+              "calorias": "420 kcal",
+              "alergenos": ["gluten"],
+              "ingredientes": ["200g carne picada", "Harina almendra", "Salsa tomate keto"],
+              "macros": {
+                "proteinas": "32g",
+                "grasas": "26g",
+                "carbos": "6g"
+              },
+              "instrucciones": "1. Haz las albóndigas usando la almendra para ligar.\n2. Fríelas y luego guísalas en la salsa de tomate."
+            },
+            {
+              "id": "k_cen_3",
+              "nombre": "Pollo Parmesana",
+              "imagen": "assets/img/dieta/keto/k_cen_3.jpg",
+              "tiempo": "30 min",
+              "calorias": "380 kcal",
+              "alergenos": ["lacteos"],
+              "ingredientes": ["Pechuga pollo", "Salsa tomate", "Parmesano rallado"],
+              "macros": {
+                "proteinas": "45g",
+                "grasas": "18g",
+                "carbos": "4g"
+              },
+              "instrucciones": "1. Haz la pechuga a la plancha.\n2. Cúbrela con salsa y parmesano, y funde al horno."
+            },
+            {
+              "id": "k_cen_4",
+              "nombre": "Risotto Coliflor",
+              "imagen": "assets/img/dieta/keto/k_cen_4.jpg",
+              "tiempo": "25 min",
+              "calorias": "350 kcal",
+              "alergenos": ["lacteos"],
+              "ingredientes": ["Coliflor picada", "Champiñones", "Nata líquida", "Parmesano"],
+              "macros": {
+                "proteinas": "15g",
+                "grasas": "25g",
+                "carbos": "8g"
+              },
+              "instrucciones": "1. Saltea coliflor y champiñones.\n2. Añade la nata y el queso y remueve hasta espesar."
+            },
+            {
+              "id": "k_cen_5",
+              "nombre": "Lubina al Horno",
+              "imagen": "assets/img/dieta/keto/k_cen_5.jpg",
+              "tiempo": "25 min",
+              "calorias": "410 kcal",
+              "alergenos": [],
+              "ingredientes": ["1 lubina entera", "Mayonesa", "Hierbas provenzales", "Limón"],
+              "macros": {
+                "proteinas": "40g",
+                "grasas": "25g",
+                "carbos": "1g"
+              },
+              "instrucciones": "1. Unta la lubina con mayonesa y hierbas (hace una costra jugosa).\n2. Hornea 20 minutos a 200°C."
+            },
+            {
+              "id": "k_cen_6",
+              "nombre": "Tortilla de Setas",
+              "imagen": "assets/img/dieta/keto/k_cen_6.jpg",
+              "tiempo": "15 min",
+              "calorias": "320 kcal",
+              "alergenos": ["huevos", "lacteos"],
+              "ingredientes": ["2 huevos", "Surtido setas", "Queso gruyère", "Aceite oliva"],
+              "macros": {
+                "proteinas": "20g",
+                "grasas": "24g",
+                "carbos": "3g"
+              },
+              "instrucciones": "1. Saltea las setas.\n2. Haz la tortilla envolviendo las setas y el queso dentro."
+            },
+            {
+              "id": "k_cen_7",
+              "nombre": "Fajitas en Lechuga",
+              "imagen": "assets/img/dieta/keto/k_cen_7.jpg",
+              "tiempo": "20 min",
+              "calorias": "390 kcal",
+              "alergenos": [],
+              "ingredientes": ["Tiras ternera", "Pimiento verde", "Cebolla", "Especias fajitas", "Lechuga romana"],
+              "macros": {
+                "proteinas": "35g",
+                "grasas": "22g",
+                "carbos": "7g"
+              },
+              "instrucciones": "1. Saltea carne y verduras con las especias.\n2. Sírvelo sobre barquitas de lechuga romana."
+            },
+            {
+              "id": "k_cen_8",
+              "nombre": "Rollitos Berenjena",
+              "imagen": "assets/img/dieta/keto/k_cen_8.jpg",
+              "tiempo": "25 min",
+              "calorias": "310 kcal",
+              "alergenos": ["lacteos"],
+              "ingredientes": ["Berenjena en láminas", "Queso cabra", "Nueces picadas"],
+              "macros": {
+                "proteinas": "14g",
+                "grasas": "25g",
+                "carbos": "6g"
+              },
+              "instrucciones": "1. Pasa la berenjena por la plancha.\n2. Rellena con queso y nueces, enrolla y calienta 5 min."
+            },
+            {
+              "id": "k_cen_9",
+              "nombre": "Brochetas Gambas",
+              "imagen": "assets/img/dieta/keto/k_cen_9.jpg",
+              "tiempo": "15 min",
+              "calorias": "250 kcal",
+              "alergenos": [],
+              "ingredientes": ["150g gambas", "Ajo y perejil", "Espárragos"],
+              "macros": {
+                "proteinas": "28g",
+                "grasas": "12g",
+                "carbos": "4g"
+              },
+              "instrucciones": "1. Ensarta las gambas.\n2. Cocina a la plancha con ajo junto a los espárragos."
+            },
+            {
+              "id": "k_cen_10",
+              "nombre": "Costillas BBQ Keto",
+              "imagen": "assets/img/dieta/keto/k_cen_10.jpg",
+              "tiempo": "130 min",
+              "calorias": "580 kcal",
+              "alergenos": [],
+              "ingredientes": ["Costillar cerdo", "Salsa BBQ sin azúcar añadida"],
+              "macros": {
+                "proteinas": "45g",
+                "grasas": "42g",
+                "carbos": "5g"
+              },
+              "instrucciones": "1. Hornea el costillar a baja temperatura (150°C) 2 horas.\n2. Pinta con la salsa y gratina 10 min."
+            },
+            {
+              "id": "k_cen_11",
+              "nombre": "Ensalada Templada",
+              "imagen": "assets/img/dieta/keto/k_cen_11.jpg",
+              "tiempo": "15 min",
+              "calorias": "340 kcal",
+              "alergenos": ["huevos"],
+              "ingredientes": ["Espinaca baby", "Bacon crujiente", "1 huevo escalfado", "Vinagre balsámico"],
+              "macros": {
+                "proteinas": "16g",
+                "grasas": "28g",
+                "carbos": "5g"
+              },
+              "instrucciones": "1. Haz el huevo escalfado.\n2. Mezcla espinacas y bacon caliente, pon el huevo encima."
+            },
+            {
+              "id": "k_cen_12",
+              "nombre": "Pastel de Carne",
+              "imagen": "assets/img/dieta/keto/k_cen_12.jpg",
+              "tiempo": "60 min",
+              "calorias": "520 kcal",
+              "alergenos": ["huevos", "gluten", "frutos secos"],
+              "ingredientes": ["Carne picada", "Huevo", "Harina almendra", "Bacon para envolver"],
+              "macros": {
+                "proteinas": "40g",
+                "grasas": "38g",
+                "carbos": "4g"
+              },
+              "instrucciones": "1. Mezcla la carne, el huevo y la almendra.\n2. Dale forma, envuelve en bacon y hornea 45 min."
+            },
+            {
+              "id": "k_cen_13",
+              "nombre": "Cerdo Agridulce",
+              "imagen": "assets/img/dieta/keto/k_cen_13.jpg",
+              "tiempo": "20 min",
+              "calorias": "380 kcal",
+              "alergenos": [],
+              "ingredientes": ["Solomillo cerdo", "Salsa soja", "Eritritol (edulcorante)", "Vinagre"],
+              "macros": {
+                "proteinas": "35g",
+                "grasas": "22g",
+                "carbos": "4g"
+              },
+              "instrucciones": "1. Saltea el cerdo en dados.\n2. Añade la salsa hecha con soja, vinagre y eritritol hasta espesar."
+            },
+            {
+              "id": "k_cen_14",
+              "nombre": "Sopa Fideos Konjac",
+              "imagen": "assets/img/dieta/keto/k_cen_14.jpg",
+              "tiempo": "15 min",
+              "calorias": "210 kcal",
+              "alergenos": [],
+              "ingredientes": ["Caldo huesos", "Fideos Konjac (shirataki)", "Tiras pollo", "Cebolleta"],
+              "macros": {
+                "proteinas": "25g",
+                "grasas": "8g",
+                "carbos": "3g"
+              },
+              "instrucciones": "1. Enjuaga bien los fideos konjac.\n2. Hiérvelos en el caldo junto con el pollo y la cebolleta."
+            },
+            {
+              "id": "k_cen_15",
+              "nombre": "Tacos Pescado Col",
+              "imagen": "assets/img/dieta/keto/k_cen_15.jpg",
+              "tiempo": "15 min",
+              "calorias": "330 kcal",
+              "alergenos": [],
+              "ingredientes": ["Pescado blanco plancha", "Hojas col morada", "Mayonesa picante"],
+              "macros": {
+                "proteinas": "28g",
+                "grasas": "20g",
+                "carbos": "6g"
+              },
+              "instrucciones": "1. Desmenuza el pescado a la plancha.\n2. Sírvelo sobre las hojas de col y aliña con la mayonesa."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mediterranea",
+      "titulo": "Dieta Mediterránea",
+      "subtitulo": "Rica en vegetales, frutas, granos integrales, grasas saludables y pescado.",
+      "imagen": "assets/img/dieta/mediterranea/portada-mediterranea.jpg",
+      "plan": [
+        {
+          "momento": "Desayuno",
+          "comidas": [
+            {
+              "id": "m_des_1",
+              "nombre": "Tostada de Tomate y AOVE",
+              "imagen": "assets/img/dieta/mediterranea/m_des_1.jpg",
+              "tiempo": "5 min",
+              "calorias": "280 kcal",
+              "alergenos": ["gluten"],
+              "ingredientes": ["2 rebanadas pan integral", "1 tomate maduro", "1 cda aceite de oliva virgen extra", "Pizca de sal", "Café o té"],
+              "macros": {
+                "proteinas": "8g",
+                "grasas": "14g",
+                "carbos": "30g"
+              },
+              "instrucciones": "1. Tuesta las rebanadas de pan integral.\n2. Ralla el tomate o tritúralo.\n3. Extiende el tomate sobre el pan, añade la sal y el aceite por encima."
+            },
+            {
+              "id": "m_des_2",
+              "nombre": "Yogur con Miel y Nueces",
+              "imagen": "assets/img/dieta/mediterranea/m_des_2.jpg",
+              "tiempo": "5 min",
+              "calorias": "320 kcal",
+              "alergenos": ["lacteos", "frutos secos"],
+              "ingredientes": ["1 yogur griego natural", "1 puñado de nueces", "1 cdita de miel", "Frutos rojos"],
+              "macros": {
+                "proteinas": "12g",
+                "grasas": "18g",
+                "carbos": "25g"
+              },
+              "instrucciones": "1. Vierte el yogur griego en un bol.\n2. Trocea las nueces y repártelas por encima.\n3. Añade los frutos rojos y un hilo de miel."
+            },
+            {
+              "id": "m_des_3",
+              "nombre": "Avena con Manzana y Canela",
+              "imagen": "assets/img/dieta/mediterranea/m_des_3.jpg",
+              "tiempo": "15 min",
+              "calorias": "310 kcal",
+              "alergenos": ["lacteos"],
+              "ingredientes": ["40g copos de avena", "1 vaso de leche o bebida vegetal", "1 manzana", "Canela en polvo"],
+              "macros": {
+                "proteinas": "10g",
+                "grasas": "5g",
+                "carbos": "55g"
+              },
+              "instrucciones": "1. Cuece la avena con la leche a fuego lento hasta que espese.\n2. Corta la manzana en dados pequeños.\n3. Sirve en un bol con la manzana y espolvorea canela."
+            },
+            {
+              "id": "m_des_4",
+              "nombre": "Tostada de Aguacate y Huevo",
+              "imagen": "assets/img/dieta/mediterranea/m_des_4.jpg",
+              "tiempo": "10 min",
+              "calorias": "350 kcal",
+              "alergenos": ["huevos"],
+              "ingredientes": ["1 rebanada pan integral", "1/2 aguacate", "1 huevo", "Semillas de sésamo"],
+              "macros": {
+                "proteinas": "14g",
+                "grasas": "22g",
+                "carbos": "20g"
+              },
+              "instrucciones": "1. Haz el huevo a la plancha o escalfado.\n2. Chafa el aguacate sobre la tostada.\n3. Pon el huevo encima y espolvorea semillas."
+            },
+            {
+              "id": "m_des_5",
+              "nombre": "Macedonia con Queso Fresco",
+              "imagen": "assets/img/dieta/mediterranea/m_des_5.jpg",
+              "tiempo": "10 min",
+              "calorias": "220 kcal",
+              "alergenos": ["lacteos"],
+              "ingredientes": ["1 rodaja melón", "1 kiwi", "1 puñado uvas", "50g queso fresco batido"],
+              "macros": {
+                "proteinas": "8g",
+                "grasas": "2g",
+                "carbos": "40g"
+              },
+              "instrucciones": "1. Pela y corta toda la fruta en dados.\n2. Mezcla en un bol y acompaña con unas cucharadas de queso fresco batido."
+            },
+            {
+              "id": "m_des_6",
+              "nombre": "Pan con Pavo y Aceite",
+              "imagen": "assets/img/dieta/mediterranea/m_des_6.jpg",
+              "tiempo": "5 min",
+              "calorias": "290 kcal",
+              "alergenos": ["gluten"],
+              "ingredientes": ["Bocadillo pequeño integral", "3 lonchas pechuga de pavo", "Chorrito de aceite de oliva", "Rodajas de tomate"],
+              "macros": {
+                "proteinas": "18g",
+                "grasas": "9g",
+                "carbos": "32g"
+              },
+              "instrucciones": "1. Abre el pan y rocía un poco de aceite de oliva.\n2. Coloca las rodajas de tomate fino y las lonchas de pavo."
+            },
+            {
+              "id": "m_des_7",
+              "nombre": "Tortilla de Espinacas",
+              "imagen": "assets/img/dieta/mediterranea/m_des_7.jpg",
+              "tiempo": "10 min",
+              "calorias": "310 kcal",
+              "alergenos": ["huevos"],
+              "ingredientes": ["2 huevos", "1 puñado espinacas frescas", "1 rebanada pan integral", "1 cda aceite oliva"],
+              "macros": {
+                "proteinas": "18g",
+                "grasas": "20g",
+                "carbos": "15g"
+              },
+              "instrucciones": "1. Saltea las espinacas ligeramente en la sartén.\n2. Bate los huevos, añádelos y cuaja la tortilla.\n3. Acompaña con el pan."
+            },
+            {
+              "id": "m_des_8",
+              "nombre": "Batido de Plátano y Avena",
+              "imagen": "assets/img/dieta/mediterranea/m_des_8.jpg",
+              "tiempo": "5 min",
+              "calorias": "340 kcal",
+              "alergenos": ["lacteos"],
+              "ingredientes": ["1 plátano maduro", "30g copos de avena", "1 vaso leche semidesnatada", "1 cdita cacao puro"],
+              "macros": {
+                "proteinas": "12g",
+                "grasas": "6g",
+                "carbos": "55g"
+              },
+              "instrucciones": "1. Pon todos los ingredientes en una batidora de vaso.\n2. Tritura hasta conseguir una textura suave y sin grumos."
+            },
+            {
+              "id": "m_des_9",
+              "nombre": "Tostada con Hummus",
+              "imagen": "assets/img/dieta/mediterranea/m_des_9.jpg",
+              "tiempo": "5 min",
+              "calorias": "280 kcal",
+              "alergenos": [],
+              "ingredientes": ["2 tostadas de centeno", "3 cdas hummus casero", "Pimentón dulce", "Chorrito de AOVE"],
+              "macros": {
+                "proteinas": "10g",
+                "grasas": "12g",
+                "carbos": "35g"
+              },
+              "instrucciones": "1. Unta el hummus sobre el pan de centeno.\n2. Espolvorea un poco de pimentón y unas gotas de aceite de oliva."
+            },
+            {
+              "id": "m_des_10",
+              "nombre": "Crepes de Avena",
+              "imagen": "assets/img/dieta/mediterranea/m_des_10.jpg",
+              "tiempo": "15 min",
+              "calorias": "300 kcal",
+              "alergenos": ["gluten", "lacteos", "huevos"],
+              "ingredientes": ["1 huevo", "30g harina de avena", "Chorro de leche", "Queso crema ligero", "Fresas"],
+              "macros": {
+                "proteinas": "15g",
+                "grasas": "11g",
+                "carbos": "30g"
+              },
+              "instrucciones": "1. Bate huevo, harina y leche.\n2. Haz los crepes en sartén antiadherente.\n3. Rellena con queso y fresas picadas."
+            },
+            {
+              "id": "m_des_11",
+              "nombre": "Queso Cottage con Fruta",
+              "imagen": "assets/img/dieta/mediterranea/m_des_11.jpg",
+              "tiempo": "5 min",
+              "calorias": "240 kcal",
+              "alergenos": ["lacteos"],
+              "ingredientes": ["150g queso cottage", "1 melocotón o naranja", "1 cda semillas de chía"],
+              "macros": {
+                "proteinas": "18g",
+                "grasas": "8g",
+                "carbos": "22g"
+              },
+              "instrucciones": "1. Corta la fruta en trozos pequeños.\n2. Mézclala con el queso cottage en un tazón.\n3. Espolvorea las semillas por encima."
+            },
+            {
+              "id": "m_des_12",
+              "nombre": "Huevos Revueltos al Orégano",
+              "imagen": "assets/img/dieta/mediterranea/m_des_12.jpg",
+              "tiempo": "10 min",
+              "calorias": "290 kcal",
+              "alergenos": ["huevos"],
+              "ingredientes": ["2 huevos", "Medio tomate", "Orégano", "Aceite de oliva", "Biscotes integrales"],
+              "macros": {
+                "proteinas": "16g",
+                "grasas": "18g",
+                "carbos": "15g"
+              },
+              "instrucciones": "1. Pica el tomate y sofríelo un minuto.\n2. Añade los huevos, remueve hasta cuajar y condimenta con orégano."
+            },
+            {
+              "id": "m_des_13",
+              "nombre": "Pudding de Chía y Mango",
+              "imagen": "assets/img/dieta/mediterranea/m_des_13.jpg",
+              "tiempo": "10 min",
+              "calorias": "270 kcal",
+              "alergenos": [],
+              "ingredientes": ["3 cdas semillas de chía", "1 vaso bebida de almendras", "Medio mango maduro"],
+              "macros": {
+                "proteinas": "7g",
+                "grasas": "12g",
+                "carbos": "32g"
+              },
+              "instrucciones": "1. Mezcla la chía con la bebida vegetal la noche anterior.\n2. Por la mañana, tritura el mango y ponlo como capa superior."
+            },
+            {
+              "id": "m_des_14",
+              "nombre": "Bocadillo de Atún",
+              "imagen": "assets/img/dieta/mediterranea/m_des_14.jpg",
+              "tiempo": "5 min",
+              "calorias": "310 kcal",
+              "alergenos": ["gluten"],
+              "ingredientes": ["Panecillo integral", "1 lata de atún al natural", "Pimientos del piquillo"],
+              "macros": {
+                "proteinas": "22g",
+                "grasas": "5g",
+                "carbos": "40g"
+              },
+              "instrucciones": "1. Escurre el atún.\n2. Abre el pan y rellena con el atún y unas tiras de pimiento asado."
+            },
+            {
+              "id": "m_des_15",
+              "nombre": "Bol de Kéfir y Granola",
+              "imagen": "assets/img/dieta/mediterranea/m_des_15.jpg",
+              "tiempo": "5 min",
+              "calorias": "330 kcal",
+              "alergenos": [],
+              "ingredientes": ["200ml kéfir", "3 cdas granola casera sin azúcar", "Arándanos"],
+              "macros": {
+                "proteinas": "10g",
+                "grasas": "12g",
+                "carbos": "45g"
+              },
+              "instrucciones": "1. Sirve el kéfir en un bol hondo.\n2. Añade la granola crujiente y los arándanos lavados justo antes de comer."
+            }
+          ]
+        },
+        {
+          "momento": "Almuerzo",
+          "comidas": [
+            {
+              "id": "m_alm_1",
+              "nombre": "Lentejas Estofadas con Verduras",
+              "imagen": "assets/img/dieta/mediterranea/m_alm_1.jpg",
+              "tiempo": "45 min",
+              "calorias": "380 kcal",
+              "alergenos": [],
+              "ingredientes": ["80g lentejas pardinas", "Zanahoria", "Patata", "Cebolla y ajo", "Pimentón dulce"],
+              "macros": {
+                "proteinas": "18g",
+                "grasas": "6g",
+                "carbos": "55g"
+              },
+              "instrucciones": "1. Pica finamente las verduras y haz un sofrito.\n2. Añade las lentejas, la patata troceada y cubre con agua.\n3. Cuece a fuego lento 40 min."
+            },
+            {
+              "id": "m_alm_2",
+              "nombre": "Ensalada Griega",
+              "imagen": "assets/img/dieta/mediterranea/m_alm_2.jpg",
+              "tiempo": "10 min",
+              "calorias": "350 kcal",
+              "alergenos": ["lacteos"],
+              "ingredientes": ["Tomate", "Pepino", "Cebolla roja", "Aceitunas negras", "Queso Feta", "Orégano y AOVE"],
+              "macros": {
+                "proteinas": "12g",
+                "grasas": "28g",
+                "carbos": "15g"
+              },
+              "instrucciones": "1. Corta el tomate y el pepino en dados grandes.\n2. Añade cebolla en juliana, aceitunas y el queso feta en cubos.\n3. Aliña generosamente."
+            },
+            {
+              "id": "m_alm_3",
+              "nombre": "Pollo al Limón con Arroz Integral",
+              "imagen": "assets/img/dieta/mediterranea/m_alm_3.jpg",
+              "tiempo": "30 min",
+              "calorias": "420 kcal",
+              "alergenos": [],
+              "ingredientes": ["150g pechuga pollo", "Zumo de 1 limón", "Ajo", "60g arroz integral seco"],
+              "macros": {
+                "proteinas": "35g",
+                "grasas": "8g",
+                "carbos": "45g"
+              },
+              "instrucciones": "1. Marina el pollo en limón y ajo.\n2. Cuece el arroz integral.\n3. Haz el pollo a la plancha hasta que dore."
+            },
+            {
+              "id": "m_alm_4",
+              "nombre": "Salmón al Horno con Patatas",
+              "imagen": "assets/img/dieta/mediterranea/m_alm_4.jpg",
+              "tiempo": "35 min",
+              "calorias": "510 kcal",
+              "alergenos": [],
+              "ingredientes": ["1 lomo de salmón", "1 patata mediana", "Media cebolla", "Vino blanco"],
+              "macros": {
+                "proteinas": "30g",
+                "grasas": "25g",
+                "carbos": "35g"
+              },
+              "instrucciones": "1. Corta la patata y cebolla en rodajas finas, ponlas en una bandeja con un chorro de vino.\n2. Hornea 15 min.\n3. Pon el salmón encima y hornea 12 min más."
+            },
+            {
+              "id": "m_alm_5",
+              "nombre": "Pasta Integral al Pesto",
+              "imagen": "assets/img/dieta/mediterranea/m_alm_5.jpg",
+              "tiempo": "20 min",
+              "calorias": "460 kcal",
+              "alergenos": ["lacteos"],
+              "ingredientes": ["80g espaguetis integrales", "Tomates cherry", "Salsa pesto casera", "Queso parmesano"],
+              "macros": {
+                "proteinas": "15g",
+                "grasas": "20g",
+                "carbos": "55g"
+              },
+              "instrucciones": "1. Hierve la pasta al dente.\n2. Mezcla con el pesto y los tomates cherry cortados por la mitad."
+            },
+            {
+              "id": "m_alm_6",
+              "nombre": "Garbanzos con Espinacas",
+              "imagen": "assets/img/dieta/mediterranea/m_alm_6.jpg",
+              "tiempo": "20 min",
+              "calorias": "390 kcal",
+              "alergenos": [],
+              "ingredientes": ["150g garbanzos cocidos", "Espinacas frescas", "1 huevo duro", "Ajo y pimentón"],
+              "macros": {
+                "proteinas": "20g",
+                "grasas": "12g",
+                "carbos": "45g"
+              },
+              "instrucciones": "1. Dora el ajo y el pimentón en una cazuela.\n2. Añade las espinacas hasta que reduzcan.\n3. Incorpora los garbanzos y sirve con el huevo picado."
+            },
+            {
+              "id": "m_alm_7",
+              "nombre": "Dorada a la Plancha",
+              "imagen": "assets/img/dieta/mediterranea/m_alm_7.jpg",
+              "tiempo": "15 min",
+              "calorias": "380 kcal",
+              "alergenos": [],
+              "ingredientes": ["1 filete de dorada", "Ensalada mixta", "Medio aguacate", "Limón"],
+              "macros": {
+                "proteinas": "32g",
+                "grasas": "22g",
+                "carbos": "10g"
+              },
+              "instrucciones": "1. Cocina la dorada a la plancha por el lado de la piel primero.\n2. Prepara la ensalada con aguacate y aliña al gusto."
+            },
+            {
+              "id": "m_alm_8",
+              "nombre": "Berenjenas Rellenas de Carne",
+              "imagen": "assets/img/dieta/mediterranea/m_alm_8.jpg",
+              "tiempo": "45 min",
+              "calorias": "410 kcal",
+              "alergenos": [],
+              "ingredientes": ["1 berenjena", "100g carne picada magra", "Tomate triturado", "Queso ligero para gratinar"],
+              "macros": {
+                "proteinas": "28g",
+                "grasas": "18g",
+                "carbos": "25g"
+              },
+              "instrucciones": "1. Vacía la berenjena y hornea las mitades.\n2. Sofrie la carne con la pulpa y el tomate.\n3. Rellena, añade queso y gratina."
+            },
+            {
+              "id": "m_alm_9",
+              "nombre": "Gazpacho con Guarnición",
+              "imagen": "assets/img/dieta/mediterranea/m_alm_9.jpg",
+              "tiempo": "10 min",
+              "calorias": "360 kcal",
+              "alergenos": ["huevos"],
+              "ingredientes": ["1 gran tazón gazpacho andaluz", "Huevo duro", "Tacos de jamón serrano", "Picatostes integrales"],
+              "macros": {
+                "proteinas": "18g",
+                "grasas": "20g",
+                "carbos": "25g"
+              },
+              "instrucciones": "1. Sirve el gazpacho bien frío.\n2. Añade el huevo, jamón y picatostes como guarnición por encima."
+            },
+            {
+              "id": "m_alm_10",
+              "nombre": "Bacalao con Pisto Manchego",
+              "imagen": "assets/img/dieta/mediterranea/m_alm_10.jpg",
+              "tiempo": "30 min",
+              "calorias": "340 kcal",
+              "alergenos": [],
+              "ingredientes": ["150g lomo bacalao", "Calabacín", "Pimiento verde y rojo", "Salsa de tomate casera"],
+              "macros": {
+                "proteinas": "30g",
+                "grasas": "12g",
+                "carbos": "20g"
+              },
+              "instrucciones": "1. Sofríe las verduras en dados a fuego lento.\n2. Añade el tomate.\n3. Cocina el bacalao encima del pisto tapando la sartén."
+            },
+            {
+              "id": "m_alm_11",
+              "nombre": "Couscous con Verduras y Pollo",
+              "imagen": "assets/img/dieta/mediterranea/m_alm_11.jpg",
+              "tiempo": "20 min",
+              "calorias": "480 kcal",
+              "alergenos": [],
+              "ingredientes": ["60g couscous", "Tiras de pollo", "Zanahoria, calabacín, pasas", "Especias ras el hanout"],
+              "macros": {
+                "proteinas": "32g",
+                "grasas": "10g",
+                "carbos": "60g"
+              },
+              "instrucciones": "1. Hidrata el couscous con caldo caliente.\n2. Saltea el pollo y verduras con las especias.\n3. Mezcla todo."
+            },
+            {
+              "id": "m_alm_12",
+              "nombre": "Pimientos Rellenos de Quinoa",
+              "imagen": "assets/img/dieta/mediterranea/m_alm_12.jpg",
+              "tiempo": "45 min",
+              "calorias": "350 kcal",
+              "alergenos": [],
+              "ingredientes": ["2 pimientos asar", "60g quinoa", "Champiñones", "Cebolla"],
+              "macros": {
+                "proteinas": "14g",
+                "grasas": "8g",
+                "carbos": "55g"
+              },
+              "instrucciones": "1. Cuece la quinoa.\n2. Saltea los champiñones y mézclalos con la quinoa.\n3. Rellena los pimientos crudos y hornea 30 min."
+            },
+            {
+              "id": "m_alm_13",
+              "nombre": "Risotto de Setas",
+              "imagen": "assets/img/dieta/mediterranea/m_alm_13.jpg",
+              "tiempo": "30 min",
+              "calorias": "430 kcal",
+              "alergenos": [],
+              "ingredientes": ["70g arroz arborio", "Surtido de setas", "Caldo de verduras", "Parmesano"],
+              "macros": {
+                "proteinas": "12g",
+                "grasas": "14g",
+                "carbos": "60g"
+              },
+              "instrucciones": "1. Saltea las setas.\n2. Añade el arroz y ve echando caldo caliente poco a poco sin dejar de remover.\n3. Manteca con parmesano al final."
+            },
+            {
+              "id": "m_alm_14",
+              "nombre": "Pavo con Parmentier",
+              "imagen": "assets/img/dieta/mediterranea/m_alm_14.jpg",
+              "tiempo": "30 min",
+              "calorias": "390 kcal",
+              "alergenos": ["lacteos"],
+              "ingredientes": ["150g solomillo pavo", "1 patata", "Chorro de leche", "Aceite de oliva"],
+              "macros": {
+                "proteinas": "36g",
+                "grasas": "10g",
+                "carbos": "35g"
+              },
+              "instrucciones": "1. Cuece la patata y machácala con leche y aceite (puré).\n2. Cocina el pavo a la plancha cortado en medallones."
+            },
+            {
+              "id": "m_alm_15",
+              "nombre": "Merluza en Salsa Verde",
+              "imagen": "assets/img/dieta/mediterranea/m_alm_15.jpg",
+              "tiempo": "25 min",
+              "calorias": "320 kcal",
+              "alergenos": [],
+              "ingredientes": ["2 rodajas merluza", "Guisantes", "Ajo y mucho perejil fresco", "Caldo pescado"],
+              "macros": {
+                "proteinas": "28g",
+                "grasas": "12g",
+                "carbos": "15g"
+              },
+              "instrucciones": "1. Dora el ajo, añade una cucharadita de harina y el caldo.\n2. Pon la merluza, guisantes y perejil, y cocina 10 min."
+            }
+          ]
+        },
+        {
+          "momento": "Cena",
+          "comidas": [
+            {
+              "id": "m_cen_1",
+              "nombre": "Crema de Calabacín",
+              "imagen": "assets/img/dieta/mediterranea/m_cen_1.jpg",
+              "tiempo": "25 min",
+              "calorias": "210 kcal",
+              "alergenos": ["lacteos"],
+              "ingredientes": ["2 calabacines", "1 patata pequeña", "Quesito light", "Pipas de calabaza"],
+              "macros": {
+                "proteinas": "6g",
+                "grasas": "8g",
+                "carbos": "25g"
+              },
+              "instrucciones": "1. Cuece el calabacín y patata.\n2. Tritura con el quesito.\n3. Sirve con las pipas de calabaza tostadas."
+            },
+            {
+              "id": "m_cen_2",
+              "nombre": "Ensalada Caprese",
+              "imagen": "assets/img/dieta/mediterranea/m_cen_2.jpg",
+              "tiempo": "10 min",
+              "calorias": "320 kcal",
+              "alergenos": ["lacteos"],
+              "ingredientes": ["1 tomate grande", "1 bola mozzarella fresca", "Albahaca fresca", "AOVE"],
+              "macros": {
+                "proteinas": "18g",
+                "grasas": "24g",
+                "carbos": "8g"
+              },
+              "instrucciones": "1. Corta el tomate y la mozzarella en rodajas.\n2. Altérnalos en un plato.\n3. Pon hojas de albahaca, sal y aceite."
+            },
+            {
+              "id": "m_cen_3",
+              "nombre": "Brochetas de Pollo y Verduras",
+              "imagen": "assets/img/dieta/mediterranea/m_cen_3.jpg",
+              "tiempo": "20 min",
+              "calorias": "280 kcal",
+              "alergenos": [],
+              "ingredientes": ["Pollo en dados", "Pimiento verde y rojo", "Cebolla", "Champiñones"],
+              "macros": {
+                "proteinas": "30g",
+                "grasas": "10g",
+                "carbos": "12g"
+              },
+              "instrucciones": "1. Ensarta los ingredientes alternándolos en un palillo de madera.\n2. Asa a la plancha hasta que el pollo esté hecho."
+            },
+            {
+              "id": "m_cen_4",
+              "nombre": "Revuelto de Setas y Ajetes",
+              "imagen": "assets/img/dieta/mediterranea/m_cen_4.jpg",
+              "tiempo": "15 min",
+              "calorias": "290 kcal",
+              "alergenos": ["huevos"],
+              "ingredientes": ["2 huevos", "Ajos tiernos", "Champiñones o setas", "Tostada integral"],
+              "macros": {
+                "proteinas": "16g",
+                "grasas": "16g",
+                "carbos": "18g"
+              },
+              "instrucciones": "1. Saltea los ajetes picados y las setas.\n2. Añade los huevos sin batir y rompe la yema en la sartén a fuego lento."
+            },
+            {
+              "id": "m_cen_5",
+              "nombre": "Sepia a la Plancha",
+              "imagen": "assets/img/dieta/mediterranea/m_cen_5.jpg",
+              "tiempo": "15 min",
+              "calorias": "250 kcal",
+              "alergenos": [],
+              "ingredientes": ["1 sepia limpia", "Ajo y perejil picado", "Ensalada verde", "Limón"],
+              "macros": {
+                "proteinas": "25g",
+                "grasas": "10g",
+                "carbos": "5g"
+              },
+              "instrucciones": "1. Haz cortes en cuadrícula en la sepia.\n2. Cocina a la plancha a fuego fuerte.\n3. Aliña con majado de ajo, perejil y limón."
+            },
+            {
+              "id": "m_cen_6",
+              "nombre": "Sopa de Fideos con Verduras",
+              "imagen": "assets/img/dieta/mediterranea/m_cen_6.jpg",
+              "tiempo": "20 min",
+              "calorias": "180 kcal",
+              "alergenos": [],
+              "ingredientes": ["Caldo de pollo o verdura", "Fideos finos", "Zanahoria picada", "Puerro"],
+              "macros": {
+                "proteinas": "6g",
+                "grasas": "4g",
+                "carbos": "30g"
+              },
+              "instrucciones": "1. Calienta el caldo con las verduras finamente picadas.\n2. Cuando hiervan, echa los fideos 3 minutos."
+            },
+            {
+              "id": "m_cen_7",
+              "nombre": "Tartar de Salmón y Aguacate",
+              "imagen": "assets/img/dieta/mediterranea/m_cen_7.jpg",
+              "tiempo": "15 min",
+              "calorias": "340 kcal",
+              "alergenos": [],
+              "ingredientes": ["100g salmón fresco congelado previamente", "Medio aguacate", "Salsa soja", "Limón"],
+              "macros": {
+                "proteinas": "22g",
+                "grasas": "25g",
+                "carbos": "8g"
+              },
+              "instrucciones": "1. Corta en daditos muy pequeños el salmón y el aguacate.\n2. Macera 10 min con soja y limón y emplata con aro."
+            },
+            {
+              "id": "m_cen_8",
+              "nombre": "Salteado de Brócoli y Pavo",
+              "imagen": "assets/img/dieta/mediterranea/m_cen_8.jpg",
+              "tiempo": "20 min",
+              "calorias": "290 kcal",
+              "alergenos": ["frutos secos"],
+              "ingredientes": ["Ramilletes de brócoli", "Tiras de pavo", "Almendras laminadas", "Aceite de sésamo"],
+              "macros": {
+                "proteinas": "28g",
+                "grasas": "12g",
+                "carbos": "15g"
+              },
+              "instrucciones": "1. Escalda el brócoli 3 min.\n2. Saltea fuerte en sartén o wok con el pavo y corona con almendras tostadas."
+            },
+            {
+              "id": "m_cen_9",
+              "nombre": "Gazpacho de Sandía",
+              "imagen": "assets/img/dieta/mediterranea/m_cen_9.jpg",
+              "tiempo": "10 min",
+              "calorias": "190 kcal",
+              "alergenos": ["lacteos"],
+              "ingredientes": ["Tomate pera", "Sandía sin pepitas", "Medio pepino", "Queso fresco picado"],
+              "macros": {
+                "proteinas": "8g",
+                "grasas": "6g",
+                "carbos": "25g"
+              },
+              "instrucciones": "1. Tritura tomate, sandía, pepino con un chorrito de aceite.\n2. Sirve frío con el queso fresco en cubitos."
+            },
+            {
+              "id": "m_cen_10",
+              "nombre": "Ensalada Templada de Gulas",
+              "imagen": "assets/img/dieta/mediterranea/m_cen_10.jpg",
+              "tiempo": "15 min",
+              "calorias": "310 kcal",
+              "alergenos": [],
+              "ingredientes": ["Bolsa canónigos", "Paquete de gulas", "Tomates cherry", "Ajo y guindilla"],
+              "macros": {
+                "proteinas": "15g",
+                "grasas": "22g",
+                "carbos": "12g"
+              },
+              "instrucciones": "1. Saltea las gulas con el ajo y la guindilla.\n2. Ponlas calientes sobre la cama de canónigos y cherrys."
+            },
+            {
+              "id": "m_cen_11",
+              "nombre": "Atún a la Plancha con Sésamo",
+              "imagen": "assets/img/dieta/mediterranea/m_cen_11.jpg",
+              "tiempo": "20 min",
+              "calorias": "380 kcal",
+              "alergenos": [],
+              "ingredientes": ["1 lomo atún fresco", "Semillas de sésamo", "Puré de boniato"],
+              "macros": {
+                "proteinas": "32g",
+                "grasas": "18g",
+                "carbos": "20g"
+              },
+              "instrucciones": "1. Reboza el borde del atún en sésamo.\n2. Márcado en la sartén muy fuerte (vuelta y vuelta).\n3. Acompaña con el puré."
+            },
+            {
+              "id": "m_cen_12",
+              "nombre": "Ensalada de Pepino y Yogur",
+              "imagen": "assets/img/dieta/mediterranea/m_cen_12.jpg",
+              "tiempo": "10 min",
+              "calorias": "220 kcal",
+              "alergenos": ["lacteos", "huevos"],
+              "ingredientes": ["1 pepino grande", "1 yogur griego", "Menta fresca", "Ajo en polvo", "Nueces"],
+              "macros": {
+                "proteinas": "8g",
+                "grasas": "14g",
+                "carbos": "12g"
+              },
+              "instrucciones": "1. Corta el pepino en rodajas muy finas.\n2. Mezcla el yogur con menta y ajo como salsa.\n3. Pon nueces troceadas."
+            },
+            {
+              "id": "m_cen_13",
+              "nombre": "Menestra de Verduras",
+              "imagen": "assets/img/dieta/mediterranea/m_cen_13.jpg",
+              "tiempo": "25 min",
+              "calorias": "250 kcal",
+              "alergenos": ["huevos"],
+              "ingredientes": ["Judías verdes, zanahoria, alcachofas", "1 huevo duro", "Tacos de jamón"],
+              "macros": {
+                "proteinas": "16g",
+                "grasas": "10g",
+                "carbos": "20g"
+              },
+              "instrucciones": "1. Cuece las verduras al vapor.\n2. Saltea el jamón en una sartén y vierte las verduras.\n3. Añade el huevo picado."
+            },
+            {
+              "id": "m_cen_14",
+              "nombre": "Pizza Base Integral Ligera",
+              "imagen": "assets/img/dieta/mediterranea/m_cen_14.jpg",
+              "tiempo": "25 min",
+              "calorias": "390 kcal",
+              "alergenos": [],
+              "ingredientes": ["Base fina integral pequeña", "Tomate natural", "Rúcula", "Jamón serrano"],
+              "macros": {
+                "proteinas": "18g",
+                "grasas": "12g",
+                "carbos": "48g"
+              },
+              "instrucciones": "1. Hornea la base con el tomate unos minutos.\n2. Al sacar del horno, pon la rúcula fresca y las lonchas de jamón encima."
+            },
+            {
+              "id": "m_cen_15",
+              "nombre": "Crepes de Espinacas y Pavo",
+              "imagen": "assets/img/dieta/mediterranea/m_cen_15.jpg",
+              "tiempo": "20 min",
+              "calorias": "320 kcal",
+              "alergenos": ["lacteos"],
+              "ingredientes": ["Masa crepe integral", "Espinacas baby", "Lonchas de pavo", "Queso de cabra"],
+              "macros": {
+                "proteinas": "22g",
+                "grasas": "14g",
+                "carbos": "25g"
+              },
+              "instrucciones": "1. Haz la crepe en la sartén.\n2. Rellénala con las hojas crudas, el pavo y rodajas finas de queso de cabra."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "vegana",
+      "titulo": "Dieta Vegana",
+      "subtitulo": "Alimentación 100% basada en plantas, sin productos de origen animal.",
+      "imagen": "assets/img/dieta/vegana/portada-vegana.jpg",
+      "plan": [
+        {
+          "momento": "Desayuno",
+          "comidas": [
+            {
+              "id": "v_des_1",
+              "nombre": "Revuelto de Tofu",
+              "imagen": "assets/img/dieta/vegana/v_des_1.jpg",
+              "tiempo": "15 min",
+              "calorias": "280 kcal",
+              "alergenos": ["gluten"],
+              "ingredientes": ["100g tofu firme", "Cúrcuma", "Pimienta negra", "Tomates cherry", "Pan integral"],
+              "macros": {
+                "proteinas": "18g",
+                "grasas": "12g",
+                "carbos": "25g"
+              },
+              "instrucciones": "1. Desmenuza el tofu con un tenedor.\n2. Saltea en la sartén con cúrcuma (le da color a huevo) y sal negra.\n3. Añade los cherrys y sirve con pan."
+            },
+            {
+              "id": "v_des_2",
+              "nombre": "Porridge de Avena y Manzana",
+              "imagen": "assets/img/dieta/vegana/v_des_2.jpg",
+              "tiempo": "15 min",
+              "calorias": "310 kcal",
+              "alergenos": ["frutos secos"],
+              "ingredientes": ["40g copos de avena", "Bebida de avena", "1 manzana", "Canela", "Nueces"],
+              "macros": {
+                "proteinas": "9g",
+                "grasas": "8g",
+                "carbos": "52g"
+              },
+              "instrucciones": "1. Cuece la avena con la bebida vegetal.\n2. Corta la manzana en dados y añádela.\n3. Decora con canela y nueces troceadas."
+            },
+            {
+              "id": "v_des_3",
+              "nombre": "Tostada Crema Cacahuete",
+              "imagen": "assets/img/dieta/vegana/v_des_3.jpg",
+              "tiempo": "5 min",
+              "calorias": "380 kcal",
+              "alergenos": ["cacahuete"],
+              "ingredientes": ["2 rebanadas pan centeno", "2 cdas crema cacahuete 100%", "Medio plátano", "Semillas chía"],
+              "macros": {
+                "proteinas": "14g",
+                "grasas": "18g",
+                "carbos": "42g"
+              },
+              "instrucciones": "1. Tuesta el pan.\n2. Unta la crema de cacahuete.\n3. Pon rodajas de plátano encima y espolvorea chía."
+            },
+            {
+              "id": "v_des_4",
+              "nombre": "Yogur de Soja y Granola",
+              "imagen": "assets/img/dieta/vegana/v_des_4.jpg",
+              "tiempo": "5 min",
+              "calorias": "260 kcal",
+              "alergenos": [],
+              "ingredientes": ["200g yogur soja sin azúcar", "3 cdas granola casera", "Frambuesas"],
+              "macros": {
+                "proteinas": "12g",
+                "grasas": "10g",
+                "carbos": "32g"
+              },
+              "instrucciones": "1. Vierte el yogur en un bol.\n2. Añade la granola y las frambuesas lavadas."
+            },
+            {
+              "id": "v_des_5",
+              "nombre": "Pudding de Chía y Coco",
+              "imagen": "assets/img/dieta/vegana/v_des_5.jpg",
+              "tiempo": "10 min",
+              "calorias": "290 kcal",
+              "alergenos": [],
+              "ingredientes": ["3 cdas chía", "Vaso leche de coco", "Mango", "Coco rallado"],
+              "macros": {
+                "proteinas": "6g",
+                "grasas": "18g",
+                "carbos": "28g"
+              },
+              "instrucciones": "1. Mezcla la chía y la leche la noche anterior.\n2. Pon encima trozos de mango y coco rallado."
+            },
+            {
+              "id": "v_des_6",
+              "nombre": "Batido Verde Proteico",
+              "imagen": "assets/img/dieta/vegana/v_des_6.jpg",
+              "tiempo": "5 min",
+              "calorias": "240 kcal",
+              "alergenos": [],
+              "ingredientes": ["Espinacas", "1 plátano", "Leche de almendras", "1 cazo proteína guisante"],
+              "macros": {
+                "proteinas": "25g",
+                "grasas": "4g",
+                "carbos": "28g"
+              },
+              "instrucciones": "1. Pon todo en la batidora.\n2. Bate a máxima potencia hasta que quede suave."
+            },
+            {
+              "id": "v_des_7",
+              "nombre": "Tortitas Veganas de Avena",
+              "imagen": "assets/img/dieta/vegana/v_des_7.jpg",
+              "tiempo": "15 min",
+              "calorias": "320 kcal",
+              "alergenos": ["gluten"],
+              "ingredientes": ["40g harina avena", "Medio plátano machacado", "Bebida soja", "Levadura"],
+              "macros": {
+                "proteinas": "10g",
+                "grasas": "5g",
+                "carbos": "58g"
+              },
+              "instrucciones": "1. Mezcla todo hasta formar una masa espesa.\n2. Haz las tortitas en una sartén antiadherente.\n3. Sirve con sirope de agave."
+            },
+            {
+              "id": "v_des_8",
+              "nombre": "Tostada de Hummus y Pimientos",
+              "imagen": "assets/img/dieta/vegana/v_des_8.jpg",
+              "tiempo": "5 min",
+              "calorias": "270 kcal",
+              "alergenos": [],
+              "ingredientes": ["2 rebanadas pan integral", "Hummus casero", "Pimientos del piquillo asados"],
+              "macros": {
+                "proteinas": "10g",
+                "grasas": "8g",
+                "carbos": "38g"
+              },
+              "instrucciones": "1. Unta el hummus sobre el pan tostado.\n2. Coloca tiras de pimiento rojo asado por encima."
+            },
+            {
+              "id": "v_des_9",
+              "nombre": "Arepa Rellena de Caraotas",
+              "imagen": "assets/img/dieta/vegana/v_des_9.jpg",
+              "tiempo": "15 min",
+              "calorias": "360 kcal",
+              "alergenos": ["gluten"],
+              "ingredientes": ["1 arepa de maíz", "Alubias negras (caraotas)", "Aguacate", "Cilantro"],
+              "macros": {
+                "proteinas": "12g",
+                "grasas": "12g",
+                "carbos": "52g"
+              },
+              "instrucciones": "1. Haz la arepa a la plancha.\n2. Ábrela y rellena con el aguacate chafado y las alubias guisadas."
+            },
+            {
+              "id": "v_des_10",
+              "nombre": "Tostada Tomate y Tofu Ahumado",
+              "imagen": "assets/img/dieta/vegana/v_des_10.jpg",
+              "tiempo": "10 min",
+              "calorias": "310 kcal",
+              "alergenos": ["gluten"],
+              "ingredientes": ["Pan de masa madre", "Tomate rallado", "Lonchas de tofu ahumado", "AOVE"],
+              "macros": {
+                "proteinas": "16g",
+                "grasas": "14g",
+                "carbos": "30g"
+              },
+              "instrucciones": "1. Tuesta el pan y pon el aceite y el tomate.\n2. Pasa las lonchas de tofu ahumado por la plancha y ponlas encima."
+            },
+            {
+              "id": "v_des_11",
+              "nombre": "Açai Bowl",
+              "imagen": "assets/img/dieta/vegana/v_des_11.jpg",
+              "tiempo": "5 min",
+              "calorias": "340 kcal",
+              "alergenos": [],
+              "ingredientes": ["Pulpa de açai congelada", "Plátano", "Bebida de avena", "Semillas cáñamo"],
+              "macros": {
+                "proteinas": "8g",
+                "grasas": "12g",
+                "carbos": "55g"
+              },
+              "instrucciones": "1. Tritura el açai con el plátano y poca leche para que quede espeso.\n2. Sirve en bol con semillas de cáñamo."
+            },
+            {
+              "id": "v_des_12",
+              "nombre": "Galletas Avena y Plátano",
+              "imagen": "assets/img/dieta/vegana/v_des_12.jpg",
+              "tiempo": "20 min",
+              "calorias": "350 kcal",
+              "alergenos": [],
+              "ingredientes": ["2 plátanos maduros", "80g copos avena", "Chips chocolate negro sin lácteos"],
+              "macros": {
+                "proteinas": "8g",
+                "grasas": "10g",
+                "carbos": "60g"
+              },
+              "instrucciones": "1. Chafa el plátano y mezcla con la avena y el chocolate.\n2. Forma galletas y hornea 15 min a 180°C."
+            },
+            {
+              "id": "v_des_13",
+              "nombre": "Bagel Vegano con Crema",
+              "imagen": "assets/img/dieta/vegana/v_des_13.jpg",
+              "tiempo": "5 min",
+              "calorias": "330 kcal",
+              "alergenos": [],
+              "ingredientes": ["1 bagel integral", "Queso crema de anacardos", "Cebollino", "Pepino"],
+              "macros": {
+                "proteinas": "10g",
+                "grasas": "14g",
+                "carbos": "42g"
+              },
+              "instrucciones": "1. Tuesta el bagel abierto por la mitad.\n2. Unta la crema de anacardos, espolvorea cebollino y pon rodajas de pepino."
+            },
+            {
+              "id": "v_des_14",
+              "nombre": "Quinoa Dulce con Leche",
+              "imagen": "assets/img/dieta/vegana/v_des_14.jpg",
+              "tiempo": "10 min",
+              "calorias": "280 kcal",
+              "alergenos": [],
+              "ingredientes": ["40g quinoa cocida", "Bebida de almendras", "Canela", "Pasas"],
+              "macros": {
+                "proteinas": "8g",
+                "grasas": "5g",
+                "carbos": "50g"
+              },
+              "instrucciones": "1. Calienta la quinoa ya cocida con la bebida de almendras.\n2. Añade canela y pasas, simulando arroz con leche."
+            },
+            {
+              "id": "v_des_15",
+              "nombre": "Batido de Frutos Rojos y Lino",
+              "imagen": "assets/img/dieta/vegana/v_des_15.jpg",
+              "tiempo": "5 min",
+              "calorias": "220 kcal",
+              "alergenos": [],
+              "ingredientes": ["1 taza frutos rojos", "Bebida de soja", "1 cda semillas lino molidas", "Agave"],
+              "macros": {
+                "proteinas": "10g",
+                "grasas": "6g",
+                "carbos": "32g"
+              },
+              "instrucciones": "1. Bate los frutos rojos con la bebida de soja y el agave.\n2. Añade el lino molido (para omega 3) y remueve."
+            }
+          ]
+        },
+        {
+          "momento": "Almuerzo",
+          "comidas": [
+            {
+              "id": "v_alm_1",
+              "nombre": "Curry de Garbanzos y Coco",
+              "imagen": "assets/img/dieta/vegana/v_alm_1.jpg",
+              "tiempo": "25 min",
+              "calorias": "480 kcal",
+              "alergenos": [],
+              "ingredientes": ["150g garbanzos", "Leche de coco", "Espinacas", "Pasta de curry", "Arroz basmati"],
+              "macros": {
+                "proteinas": "15g",
+                "grasas": "22g",
+                "carbos": "55g"
+              },
+              "instrucciones": "1. Sofríe la pasta de curry.\n2. Añade leche de coco, garbanzos y espinacas.\n3. Sirve acompañado de arroz basmati."
+            },
+            {
+              "id": "v_alm_2",
+              "nombre": "Boloñesa de Lenteja Roja",
+              "imagen": "assets/img/dieta/vegana/v_alm_2.jpg",
+              "tiempo": "20 min",
+              "calorias": "450 kcal",
+              "alergenos": [],
+              "ingredientes": ["Macarrones integrales", "Lenteja roja", "Salsa de tomate", "Zanahoria picada"],
+              "macros": {
+                "proteinas": "22g",
+                "grasas": "6g",
+                "carbos": "72g"
+              },
+              "instrucciones": "1. Cuece las lentejas rojas 10 min en salsa de tomate con zanahoria.\n2. Mezcla con la pasta integral hervida."
+            },
+            {
+              "id": "v_alm_3",
+              "nombre": "Ensalada de Quinoa y Tofu",
+              "imagen": "assets/img/dieta/vegana/v_alm_3.jpg",
+              "tiempo": "20 min",
+              "calorias": "420 kcal",
+              "alergenos": [],
+              "ingredientes": ["60g quinoa", "100g tofu marinado", "Aguacate", "Tomate", "Maíz"],
+              "macros": {
+                "proteinas": "20g",
+                "grasas": "18g",
+                "carbos": "48g"
+              },
+              "instrucciones": "1. Cuece la quinoa.\n2. Pasa el tofu a la plancha.\n3. Mezcla todo en un bol y aliña con aceite y limón."
+            },
+            {
+              "id": "v_alm_4",
+              "nombre": "Hamburguesa de Alubias",
+              "imagen": "assets/img/dieta/vegana/v_alm_4.jpg",
+              "tiempo": "25 min",
+              "calorias": "460 kcal",
+              "alergenos": ["gluten"],
+              "ingredientes": ["Alubias rojas trituradas", "Copos de avena", "Especias", "Pan integral", "Lechuga"],
+              "macros": {
+                "proteinas": "22g",
+                "grasas": "10g",
+                "carbos": "65g"
+              },
+              "instrucciones": "1. Mezcla las alubias machacadas con avena y especias.\n2. Forma hamburguesas y haz a la plancha.\n3. Monta en pan con lechuga."
+            },
+            {
+              "id": "v_alm_5",
+              "nombre": "Chili Vegano con Soja",
+              "imagen": "assets/img/dieta/vegana/v_alm_5.jpg",
+              "tiempo": "30 min",
+              "calorias": "410 kcal",
+              "alergenos": [],
+              "ingredientes": ["Soja texturizada fina", "Alubias rojas", "Tomate triturado", "Pimiento", "Especias picantes"],
+              "macros": {
+                "proteinas": "32g",
+                "grasas": "5g",
+                "carbos": "55g"
+              },
+              "instrucciones": "1. Hidrata la soja.\n2. Haz un sofrito con pimiento y tomate.\n3. Añade la soja, alubias y especias, y cocina 15 min."
+            },
+            {
+              "id": "v_alm_6",
+              "nombre": "Wok de Fideos y Heura",
+              "imagen": "assets/img/dieta/vegana/v_alm_6.jpg",
+              "tiempo": "20 min",
+              "calorias": "390 kcal",
+              "alergenos": [],
+              "ingredientes": ["Fideos de arroz", "Heura (bocados vegetales)", "Brócoli", "Salsa de soja"],
+              "macros": {
+                "proteinas": "24g",
+                "grasas": "8g",
+                "carbos": "58g"
+              },
+              "instrucciones": "1. Saltea el Heura con el brócoli.\n2. Añade los fideos de arroz hervidos y un buen chorro de salsa de soja."
+            },
+            {
+              "id": "v_alm_7",
+              "nombre": "Falafel con Pan Pita",
+              "imagen": "assets/img/dieta/vegana/v_alm_7.jpg",
+              "tiempo": "30 min",
+              "calorias": "480 kcal",
+              "alergenos": ["gluten"],
+              "ingredientes": ["Garbanzos crudos triturados", "Cilantro y ajo", "Pan pita", "Salsa tahini"],
+              "macros": {
+                "proteinas": "18g",
+                "grasas": "16g",
+                "carbos": "65g"
+              },
+              "instrucciones": "1. Forma bolitas con la masa de garbanzos crudos.\n2. Fríe u hornea.\n3. Rellena el pan pita con falafel y salsa tahini."
+            },
+            {
+              "id": "v_alm_8",
+              "nombre": "Berenjenas Rellenas Veganas",
+              "imagen": "assets/img/dieta/vegana/v_alm_8.jpg",
+              "tiempo": "45 min",
+              "calorias": "350 kcal",
+              "alergenos": [],
+              "ingredientes": ["1 berenjena", "Lentejas cocidas", "Champiñones", "Levadura nutricional"],
+              "macros": {
+                "proteinas": "18g",
+                "grasas": "6g",
+                "carbos": "52g"
+              },
+              "instrucciones": "1. Asa las berenjenas vaciadas.\n2. Saltea la pulpa con lentejas y champiñones.\n3. Rellena, espolvorea levadura nutricional (sabe a queso) y gratina."
+            },
+            {
+              "id": "v_alm_9",
+              "nombre": "Buddha Bowl",
+              "imagen": "assets/img/dieta/vegana/v_alm_9.jpg",
+              "tiempo": "30 min",
+              "calorias": "440 kcal",
+              "alergenos": [],
+              "ingredientes": ["Boniato asado", "Garbanzos especiados", "Espinacas", "Aguacate", "Semillas"],
+              "macros": {
+                "proteinas": "15g",
+                "grasas": "18g",
+                "carbos": "58g"
+              },
+              "instrucciones": "1. Hornea el boniato y los garbanzos con pimentón.\n2. Coloca todo en un bol por secciones.\n3. Aliña con vinagreta."
+            },
+            {
+              "id": "v_alm_10",
+              "nombre": "Lasaña de Verduras y Soja",
+              "imagen": "assets/img/dieta/vegana/v_alm_10.jpg",
+              "tiempo": "50 min",
+              "calorias": "490 kcal",
+              "alergenos": [],
+              "ingredientes": ["Placas lasaña sin huevo", "Soja texturizada", "Tomate", "Bechamel de avena"],
+              "macros": {
+                "proteinas": "25g",
+                "grasas": "12g",
+                "carbos": "65g"
+              },
+              "instrucciones": "1. Prepara una boloñesa con la soja hidratada.\n2. Monta las capas con placas, soja y bechamel de leche vegetal.\n3. Hornea."
+            },
+            {
+              "id": "v_alm_11",
+              "nombre": "Guiso de Alubias Blancas",
+              "imagen": "assets/img/dieta/vegana/v_alm_11.jpg",
+              "tiempo": "30 min",
+              "calorias": "380 kcal",
+              "alergenos": [],
+              "ingredientes": ["Alubias blancas", "Espinacas", "Puerro", "Zanahoria", "Pimentón dulce"],
+              "macros": {
+                "proteinas": "20g",
+                "grasas": "4g",
+                "carbos": "60g"
+              },
+              "instrucciones": "1. Sofríe puerro y zanahoria con pimentón.\n2. Añade agua, espinacas y alubias.\n3. Cuece 15 min para que espese el caldo."
+            },
+            {
+              "id": "v_alm_12",
+              "nombre": "Tacos Veganos",
+              "imagen": "assets/img/dieta/vegana/v_alm_12.jpg",
+              "tiempo": "20 min",
+              "calorias": "410 kcal",
+              "alergenos": [],
+              "ingredientes": ["Tortillas maíz", "Tiras de tempeh", "Pico de gallo", "Guacamole"],
+              "macros": {
+                "proteinas": "22g",
+                "grasas": "16g",
+                "carbos": "48g"
+              },
+              "instrucciones": "1. Pasa el tempeh cortado fino por la sartén.\n2. Rellena las tortillas con tempeh, pico de gallo y mucho guacamole."
+            },
+            {
+              "id": "v_alm_13",
+              "nombre": "Pizza Base Coliflor (Sin queso)",
+              "imagen": "assets/img/dieta/vegana/v_alm_13.jpg",
+              "tiempo": "40 min",
+              "calorias": "340 kcal",
+              "alergenos": [],
+              "ingredientes": ["Masa coliflor/lino", "Salsa tomate", "Champiñones", "Olivas negras", "Rúcula"],
+              "macros": {
+                "proteinas": "12g",
+                "grasas": "10g",
+                "carbos": "45g"
+              },
+              "instrucciones": "1. Haz la base de pizza usando coliflor y lino como aglutinante (en vez de huevo).\n2. Hornea con toppings."
+            },
+            {
+              "id": "v_alm_14",
+              "nombre": "Albóndigas de Soja",
+              "imagen": "assets/img/dieta/vegana/v_alm_14.jpg",
+              "tiempo": "35 min",
+              "calorias": "430 kcal",
+              "alergenos": ["gluten"],
+              "ingredientes": ["Soja texturizada gruesa", "Ajo y perejil", "Pan rallado", "Salsa de tomate casera"],
+              "macros": {
+                "proteinas": "30g",
+                "grasas": "8g",
+                "carbos": "55g"
+              },
+              "instrucciones": "1. Hidrata la soja, escúrrela bien y mezcla con ajo y pan rallado.\n2. Forma bolas, fríe ligeramente y guisa en el tomate."
+            },
+            {
+              "id": "v_alm_15",
+              "nombre": "Arroz Tres Delicias Vegano",
+              "imagen": "assets/img/dieta/vegana/v_alm_15.jpg",
+              "tiempo": "20 min",
+              "calorias": "400 kcal",
+              "alergenos": [],
+              "ingredientes": ["Arroz jazmín", "Guisantes", "Zanahoria", "Tofu desmenuzado (como tortilla)", "Salsa soja"],
+              "macros": {
+                "proteinas": "16g",
+                "grasas": "6g",
+                "carbos": "68g"
+              },
+              "instrucciones": "1. Saltea las verduras y el arroz cocido.\n2. Añade el tofu desmenuzado (que simula el huevo) y salsa de soja al final."
+            }
+          ]
+        },
+        {
+          "momento": "Cena",
+          "comidas": [
+            {
+              "id": "v_cen_1",
+              "nombre": "Crema de Calabaza",
+              "imagen": "assets/img/dieta/vegana/v_cen_1.jpg",
+              "tiempo": "25 min",
+              "calorias": "220 kcal",
+              "alergenos": [],
+              "ingredientes": ["Calabaza", "Puerro", "Leche de coco", "Pipas de calabaza"],
+              "macros": {
+                "proteinas": "4g",
+                "grasas": "12g",
+                "carbos": "28g"
+              },
+              "instrucciones": "1. Cuece calabaza y puerro.\n2. Tritura con un chorro de leche de coco para hacerla cremosa.\n3. Decora con pipas tostadas."
+            },
+            {
+              "id": "v_cen_2",
+              "nombre": "Ensalada Templada Lentejas",
+              "imagen": "assets/img/dieta/vegana/v_cen_2.jpg",
+              "tiempo": "15 min",
+              "calorias": "310 kcal",
+              "alergenos": ["frutos secos"],
+              "ingredientes": ["Lentejas cocidas", "Pimiento asado", "Nueces", "Vinagre balsámico"],
+              "macros": {
+                "proteinas": "16g",
+                "grasas": "10g",
+                "carbos": "42g"
+              },
+              "instrucciones": "1. Calienta ligeramente las lentejas.\n2. Mezcla con el pimiento asado en tiras, nueces y aliña con vinagreta."
+            },
+            {
+              "id": "v_cen_3",
+              "nombre": "Sopa Miso con Tofu",
+              "imagen": "assets/img/dieta/vegana/v_cen_3.jpg",
+              "tiempo": "15 min",
+              "calorias": "150 kcal",
+              "alergenos": [],
+              "ingredientes": ["Caldo dashi vegetal", "Pasta miso", "Tofu en dados", "Algas wakame", "Cebolleta"],
+              "macros": {
+                "proteinas": "12g",
+                "grasas": "5g",
+                "carbos": "15g"
+              },
+              "instrucciones": "1. Calienta el agua con las algas y el tofu.\n2. Retira del fuego y disuelve la pasta miso (no debe hervir).\n3. Pon cebolleta por encima."
+            },
+            {
+              "id": "v_cen_4",
+              "nombre": "Salteado de Tempeh y Brócoli",
+              "imagen": "assets/img/dieta/vegana/v_cen_4.jpg",
+              "tiempo": "20 min",
+              "calorias": "340 kcal",
+              "alergenos": [],
+              "ingredientes": ["Tempeh a tacos", "Brócoli", "Anacardos", "Salsa teriyaki"],
+              "macros": {
+                "proteinas": "22g",
+                "grasas": "14g",
+                "carbos": "30g"
+              },
+              "instrucciones": "1. Saltea fuerte el tempeh y el brócoli.\n2. Añade salsa teriyaki y anacardos y remueve hasta caramelizar un poco."
+            },
+            {
+              "id": "v_cen_5",
+              "nombre": "Wrap de Lechuga y Heura",
+              "imagen": "assets/img/dieta/vegana/v_cen_5.jpg",
+              "tiempo": "15 min",
+              "calorias": "240 kcal",
+              "alergenos": [],
+              "ingredientes": ["Hojas lechuga romana", "Heura", "Zanahoria rallada", "Salsa yogur soja"],
+              "macros": {
+                "proteinas": "18g",
+                "grasas": "8g",
+                "carbos": "15g"
+              },
+              "instrucciones": "1. Haz el Heura a la plancha.\n2. Usa las hojas de lechuga como wrap, rellena y echa salsa de yogur vegano."
+            },
+            {
+              "id": "v_cen_6",
+              "nombre": "Espaguetis de Calabacín Pesto",
+              "imagen": "assets/img/dieta/vegana/v_cen_6.jpg",
+              "tiempo": "20 min",
+              "calorias": "280 kcal",
+              "alergenos": ["frutos secos"],
+              "ingredientes": ["Zoodles de calabacín", "Albahaca fresca", "Nueces", "Levadura nutricional", "AOVE"],
+              "macros": {
+                "proteinas": "8g",
+                "grasas": "20g",
+                "carbos": "15g"
+              },
+              "instrucciones": "1. Tritura albahaca, nueces, levadura (en vez de queso) y aceite para el pesto.\n2. Saltea los zoodles 2 min y mezcla."
+            },
+            {
+              "id": "v_cen_7",
+              "nombre": "Champiñones Rellenos",
+              "imagen": "assets/img/dieta/vegana/v_cen_7.jpg",
+              "tiempo": "25 min",
+              "calorias": "190 kcal",
+              "alergenos": [],
+              "ingredientes": ["Champiñones Portobello", "Espinacas", "Ajo", "Piñones"],
+              "macros": {
+                "proteinas": "8g",
+                "grasas": "12g",
+                "carbos": "10g"
+              },
+              "instrucciones": "1. Quita el pie a los champiñones.\n2. Saltea los pies picados con espinacas y piñones.\n3. Rellena las cabezas y hornea."
+            },
+            {
+              "id": "v_cen_8",
+              "nombre": "Parrillada de Verduras",
+              "imagen": "assets/img/dieta/vegana/v_cen_8.jpg",
+              "tiempo": "20 min",
+              "calorias": "210 kcal",
+              "alergenos": [],
+              "ingredientes": ["Espárragos", "Calabacín", "Berenjena", "Pimiento", "Salsa romesco"],
+              "macros": {
+                "proteinas": "5g",
+                "grasas": "12g",
+                "carbos": "25g"
+              },
+              "instrucciones": "1. Corta todas las verduras en láminas y haz a la plancha.\n2. Acompaña con salsa romesco casera."
+            },
+            {
+              "id": "v_cen_9",
+              "nombre": "Crema de Calabacín",
+              "imagen": "assets/img/dieta/vegana/v_cen_9.jpg",
+              "tiempo": "25 min",
+              "calorias": "230 kcal",
+              "alergenos": [],
+              "ingredientes": ["Calabacines", "Cebolla", "Crema de avena (para cocinar)", "Picatostes"],
+              "macros": {
+                "proteinas": "6g",
+                "grasas": "9g",
+                "carbos": "30g"
+              },
+              "instrucciones": "1. Cuece las verduras.\n2. Tritura con la crema de avena (sustituto de la nata).\n3. Sirve con picatostes tostados."
+            },
+            {
+              "id": "v_cen_10",
+              "nombre": "Ceviche de Champiñones",
+              "imagen": "assets/img/dieta/vegana/v_cen_10.jpg",
+              "tiempo": "25 min",
+              "calorias": "160 kcal",
+              "alergenos": [],
+              "ingredientes": ["Champiñones blancos crudos", "Cebolla morada", "Cilantro", "Zumo de lima", "Mango"],
+              "macros": {
+                "proteinas": "5g",
+                "grasas": "2g",
+                "carbos": "28g"
+              },
+              "instrucciones": "1. Lamina los champiñones muy finos.\n2. Macera en el zumo de lima con la cebolla, cilantro y dados de mango durante 20 min."
+            },
+            {
+              "id": "v_cen_11",
+              "nombre": "Tofu a la Plancha con Espárragos",
+              "imagen": "assets/img/dieta/vegana/v_cen_11.jpg",
+              "tiempo": "15 min",
+              "calorias": "270 kcal",
+              "alergenos": [],
+              "ingredientes": ["Bloque tofu firme", "Salsa tamari (soja sin gluten)", "Espárragos trigueros", "Sésamo"],
+              "macros": {
+                "proteinas": "22g",
+                "grasas": "14g",
+                "carbos": "12g"
+              },
+              "instrucciones": "1. Corta el tofu en lonchas gruesas y marina en tamari.\n2. Pasa por la plancha hasta que dore junto con los espárragos."
+            },
+            {
+              "id": "v_cen_12",
+              "nombre": "Rollitos Primavera al Horno",
+              "imagen": "assets/img/dieta/vegana/v_cen_12.jpg",
+              "tiempo": "25 min",
+              "calorias": "250 kcal",
+              "alergenos": [],
+              "ingredientes": ["Obleas de arroz", "Col, zanahoria, cebolleta cortada fina", "Salsa agridulce"],
+              "macros": {
+                "proteinas": "6g",
+                "grasas": "4g",
+                "carbos": "45g"
+              },
+              "instrucciones": "1. Saltea las verduras 2 min.\n2. Rellena las obleas hidratadas.\n3. Hornea para que queden crujientes (sin freír)."
+            },
+            {
+              "id": "v_cen_13",
+              "nombre": "Ensalada de Garbanzos y Aguacate",
+              "imagen": "assets/img/dieta/vegana/v_cen_13.jpg",
+              "tiempo": "10 min",
+              "calorias": "320 kcal",
+              "alergenos": [],
+              "ingredientes": ["Garbanzos cocidos", "Aguacate en dados", "Tomate", "Limón y cilantro"],
+              "macros": {
+                "proteinas": "12g",
+                "grasas": "15g",
+                "carbos": "35g"
+              },
+              "instrucciones": "1. Enjuaga bien los garbanzos.\n2. Mezcla todo en un bol y aliña generosamente con limón y cilantro fresco."
+            },
+            {
+              "id": "v_cen_14",
+              "nombre": "Fajitas de Setas",
+              "imagen": "assets/img/dieta/vegana/v_cen_14.jpg",
+              "tiempo": "20 min",
+              "calorias": "290 kcal",
+              "alergenos": [],
+              "ingredientes": ["Tortillas integrales", "Setas ostra", "Pimiento verde y rojo", "Especias mexicanas"],
+              "macros": {
+                "proteinas": "8g",
+                "grasas": "6g",
+                "carbos": "48g"
+              },
+              "instrucciones": "1. Saltea las setas (tienen textura de carne) con los pimientos y las especias.\n2. Rellena las fajitas."
+            },
+            {
+              "id": "v_cen_15",
+              "nombre": "Coliflor Asada al Curry",
+              "imagen": "assets/img/dieta/vegana/v_cen_15.jpg",
+              "tiempo": "35 min",
+              "calorias": "210 kcal",
+              "alergenos": [],
+              "ingredientes": ["Media coliflor en floretes", "Aceite de oliva", "Curry en polvo", "Salsa tahini"],
+              "macros": {
+                "proteinas": "8g",
+                "grasas": "12g",
+                "carbos": "18g"
+              },
+              "instrucciones": "1. Baña la coliflor en aceite y curry.\n2. Asa al horno hasta que esté tostada.\n3. Sirve bañada con un hilo de tahini."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "volumen",
+      "titulo": "Volumen Muscular",
+      "subtitulo": "Diseñada para la ganancia de masa muscular (hipertrofia). Alta en proteínas y carbohidratos complejos.",
+      "imagen": "assets/img/dieta/volumen/portada-volumen.jpg",
+      "plan": [
+        {
+          "momento": "Desayuno",
+          "comidas": [
+            {
+              "id": "vol_des_1",
+              "nombre": "Tortitas de Avena y Claras",
+              "imagen": "assets/img/dieta/volumen/vol_des_1.jpg",
+              "tiempo": "15 min",
+              "calorias": "450 kcal",
+              "alergenos": ["huevos"],
+              "ingredientes": ["80g harina de avena", "4 claras de huevo", "1 huevo entero", "Chorro de leche", "Canela"],
+              "macros": {
+                "proteinas": "32g",
+                "grasas": "10g",
+                "carbos": "55g"
+              },
+              "instrucciones": "1. Bate todos los ingredientes hasta lograr una masa líquida pero espesa.\n2. Haz las tortitas en una sartén antiadherente.\n3. Puedes añadir un hilo de miel por encima."
+            },
+            {
+              "id": "vol_des_2",
+              "nombre": "Huevos Revueltos con Arroz",
+              "imagen": "assets/img/dieta/volumen/vol_des_2.jpg",
+              "tiempo": "15 min",
+              "calorias": "480 kcal",
+              "alergenos": ["huevos"],
+              "ingredientes": ["3 huevos enteros", "100g arroz cocido", "50g pavo en dados", "Aceite de oliva"],
+              "macros": {
+                "proteinas": "28g",
+                "grasas": "22g",
+                "carbos": "35g"
+              },
+              "instrucciones": "1. Saltea el pavo en la sartén.\n2. Añade el arroz cocido del día anterior.\n3. Echa los huevos y revuelve hasta cuajar."
+            },
+            {
+              "id": "vol_des_3",
+              "nombre": "Batido Gainer Casero",
+              "imagen": "assets/img/dieta/volumen/vol_des_3.jpg",
+              "tiempo": "5 min",
+              "calorias": "650 kcal",
+              "alergenos": ["frutos secos"],
+              "ingredientes": ["1 plátano", "60g avena", "1 cda crema de cacahuete", "1 scoop proteína Whey", "300ml leche entera"],
+              "macros": {
+                "proteinas": "45g",
+                "grasas": "20g",
+                "carbos": "68g"
+              },
+              "instrucciones": "1. Vierte todos los ingredientes en una batidora de vaso.\n2. Tritura a máxima potencia durante 1 minuto para deshacer bien la avena."
+            },
+            {
+              "id": "vol_des_4",
+              "nombre": "Tostadas Aguacate y Huevo",
+              "imagen": "assets/img/dieta/volumen/vol_des_4.jpg",
+              "tiempo": "10 min",
+              "calorias": "580 kcal",
+              "alergenos": ["huevos"],
+              "ingredientes": ["2 rebanadas pan de masa madre", "1 aguacate entero", "2 huevos cocidos", "Semillas"],
+              "macros": {
+                "proteinas": "22g",
+                "grasas": "35g",
+                "carbos": "45g"
+              },
+              "instrucciones": "1. Tuesta el pan.\n2. Machaca el aguacate y repártelo.\n3. Corta los huevos en rodajas y ponlos encima."
+            },
+            {
+              "id": "vol_des_5",
+              "nombre": "Porridge Proteico",
+              "imagen": "assets/img/dieta/volumen/vol_des_5.jpg",
+              "tiempo": "15 min",
+              "calorias": "520 kcal",
+              "alergenos": ["lacteos", "frutos secos"],
+              "ingredientes": ["80g copos de avena", "250ml leche", "1 scoop proteína vainilla", "Nueces"],
+              "macros": {
+                "proteinas": "38g",
+                "grasas": "15g",
+                "carbos": "55g"
+              },
+              "instrucciones": "1. Calienta la avena con la leche hasta espesar.\n2. Retira del fuego, añade la proteína en polvo (para que no se corte) y mezcla.\n3. Decora con nueces."
+            },
+            {
+              "id": "vol_des_6",
+              "nombre": "Bagel Salmón y Queso",
+              "imagen": "assets/img/dieta/volumen/vol_des_6.jpg",
+              "tiempo": "5 min",
+              "calorias": "490 kcal",
+              "alergenos": ["lacteos"],
+              "ingredientes": ["1 bagel grande", "100g salmón ahumado", "Queso crema abundante", "Rúcula"],
+              "macros": {
+                "proteinas": "26g",
+                "grasas": "18g",
+                "carbos": "52g"
+              },
+              "instrucciones": "1. Abre el bagel y tuéstalo ligeramente.\n2. Unta una capa gruesa de queso crema.\n3. Añade el salmón ahumado y hojas de rúcula."
+            },
+            {
+              "id": "vol_des_7",
+              "nombre": "Yogur Griego con Muesli",
+              "imagen": "assets/img/dieta/volumen/vol_des_7.jpg",
+              "tiempo": "5 min",
+              "calorias": "550 kcal",
+              "alergenos": [],
+              "ingredientes": ["250g yogur griego entero", "80g muesli o granola con chocolate", "1 plátano"],
+              "macros": {
+                "proteinas": "18g",
+                "grasas": "22g",
+                "carbos": "70g"
+              },
+              "instrucciones": "1. Sirve el yogur en un bol grande.\n2. Vuelca el muesli por encima y añade el plátano troceado."
+            },
+            {
+              "id": "vol_des_8",
+              "nombre": "Sándwich Doble de Atún",
+              "imagen": "assets/img/dieta/volumen/vol_des_8.jpg",
+              "tiempo": "10 min",
+              "calorias": "470 kcal",
+              "alergenos": [],
+              "ingredientes": ["3 rebanadas de pan de molde integral", "2 latas de atún al natural", "Mayonesa ligera", "Tomate"],
+              "macros": {
+                "proteinas": "38g",
+                "grasas": "12g",
+                "carbos": "48g"
+              },
+              "instrucciones": "1. Mezcla el atún escurrido con la mayonesa.\n2. Monta un sándwich de dos pisos intercalando atún y rodajas de tomate."
+            },
+            {
+              "id": "vol_des_9",
+              "nombre": "Crepes de Avena y Pollo",
+              "imagen": "assets/img/dieta/volumen/vol_des_9.jpg",
+              "tiempo": "20 min",
+              "calorias": "510 kcal",
+              "alergenos": ["lacteos"],
+              "ingredientes": ["Masa para crepes (avena y huevo)", "100g tiras de pollo asado", "Queso tierno"],
+              "macros": {
+                "proteinas": "42g",
+                "grasas": "16g",
+                "carbos": "45g"
+              },
+              "instrucciones": "1. Haz la crepe en la sartén.\n2. Rellénala con el pollo desmenuzado y el queso para que se funda."
+            },
+            {
+              "id": "vol_des_10",
+              "nombre": "Tortilla de Patata Fit",
+              "imagen": "assets/img/dieta/volumen/vol_des_10.jpg",
+              "tiempo": "20 min",
+              "calorias": "420 kcal",
+              "alergenos": ["huevos"],
+              "ingredientes": ["1 patata grande (cocida al microondas)", "1 huevo entero", "150ml claras de huevo", "Cebolla"],
+              "macros": {
+                "proteinas": "25g",
+                "grasas": "8g",
+                "carbos": "55g"
+              },
+              "instrucciones": "1. Pica la patata cocida y la cebolla pochada.\n2. Mezcla con el huevo y claras batidas.\n3. Cuaja en la sartén con un poco de aceite."
+            },
+            {
+              "id": "vol_des_11",
+              "nombre": "Tostadas PB&J Proteico",
+              "imagen": "assets/img/dieta/volumen/vol_des_11.jpg",
+              "tiempo": "5 min",
+              "calorias": "580 kcal",
+              "alergenos": ["lacteos"],
+              "ingredientes": ["2 rebanadas pan multicereal", "2 cdas crema de cacahuete", "Mermelada sin azúcar", "1 vaso de leche entera"],
+              "macros": {
+                "proteinas": "22g",
+                "grasas": "25g",
+                "carbos": "65g"
+              },
+              "instrucciones": "1. Tuesta el pan.\n2. Unta crema de cacahuete en un lado y mermelada en el otro, y júntalos.\n3. Acompaña con el vaso de leche."
+            },
+            {
+              "id": "vol_des_12",
+              "nombre": "Gofres Proteicos",
+              "imagen": "assets/img/dieta/volumen/vol_des_12.jpg",
+              "tiempo": "15 min",
+              "calorias": "410 kcal",
+              "alergenos": ["lacteos"],
+              "ingredientes": ["1 scoop proteína", "50g avena", "1 huevo", "Leche", "Sirope sin calorías"],
+              "macros": {
+                "proteinas": "38g",
+                "grasas": "10g",
+                "carbos": "40g"
+              },
+              "instrucciones": "1. Mezcla los ingredientes secos y húmedos.\n2. Vierte en la gofrera caliente hasta que doren.\n3. Baña con sirope."
+            },
+            {
+              "id": "vol_des_13",
+              "nombre": "Batido de Queso Fresco",
+              "imagen": "assets/img/dieta/volumen/vol_des_13.jpg",
+              "tiempo": "5 min",
+              "calorias": "430 kcal",
+              "alergenos": ["lacteos"],
+              "ingredientes": ["200g queso fresco batido", "50g avena", "1 manzana", "Canela", "Agua o leche"],
+              "macros": {
+                "proteinas": "24g",
+                "grasas": "5g",
+                "carbos": "65g"
+              },
+              "instrucciones": "1. Pon todo en la batidora.\n2. Bate bien. Es un desayuno súper rápido y muy alto en proteínas."
+            },
+            {
+              "id": "vol_des_14",
+              "nombre": "Arroz con Leche Proteico",
+              "imagen": "assets/img/dieta/volumen/vol_des_14.jpg",
+              "tiempo": "15 min",
+              "calorias": "460 kcal",
+              "alergenos": ["lacteos"],
+              "ingredientes": ["80g crema de arroz", "250ml leche", "1 scoop proteína vainilla", "Canela"],
+              "macros": {
+                "proteinas": "35g",
+                "grasas": "6g",
+                "carbos": "68g"
+              },
+              "instrucciones": "1. Calienta la crema de arroz con la leche removiendo constantemente.\n2. Al espesar, apaga el fuego, añade la proteína y espolvorea canela."
+            },
+            {
+              "id": "vol_des_15",
+              "nombre": "Huevos, Jamón y Pan",
+              "imagen": "assets/img/dieta/volumen/vol_des_15.jpg",
+              "tiempo": "10 min",
+              "calorias": "610 kcal",
+              "alergenos": ["huevos"],
+              "ingredientes": ["2 huevos a la plancha", "50g jamón serrano", "Media barra de pan integral", "Tomate triturado"],
+              "macros": {
+                "proteinas": "34g",
+                "grasas": "24g",
+                "carbos": "60g"
+              },
+              "instrucciones": "1. Abre el pan y unta el tomate.\n2. Haz los huevos a la plancha (sin freír en aceite profundo).\n3. Monta el desayuno con el jamón."
+            }
+          ]
+        },
+        {
+          "momento": "Almuerzo",
+          "comidas": [
+            {
+              "id": "vol_alm_1",
+              "nombre": "Pollo Teriyaki y Arroz",
+              "imagen": "assets/img/dieta/volumen/vol_alm_1.jpg",
+              "tiempo": "25 min",
+              "calorias": "780 kcal",
+              "alergenos": [],
+              "ingredientes": ["250g pechuga de pollo", "120g arroz basmati (en crudo)", "Salsa teriyaki", "Brócoli"],
+              "macros": {
+                "proteinas": "65g",
+                "grasas": "8g",
+                "carbos": "105g"
+              },
+              "instrucciones": "1. Cuece el arroz y el brócoli.\n2. Haz el pollo en dados a la plancha.\n3. Añade la salsa teriyaki al pollo y sirve con el arroz."
+            },
+            {
+              "id": "vol_alm_2",
+              "nombre": "Macarrones Boloñesa",
+              "imagen": "assets/img/dieta/volumen/vol_alm_2.jpg",
+              "tiempo": "30 min",
+              "calorias": "820 kcal",
+              "alergenos": ["lacteos"],
+              "ingredientes": ["120g macarrones", "200g carne picada ternera magra", "Tomate frito", "Queso rallado"],
+              "macros": {
+                "proteinas": "55g",
+                "grasas": "25g",
+                "carbos": "90g"
+              },
+              "instrucciones": "1. Cuece la pasta.\n2. Cocina la carne picada y mézclala con el tomate.\n3. Junta todo y espolvorea queso por encima."
+            },
+            {
+              "id": "vol_alm_3",
+              "nombre": "Salmón con Patata Asada",
+              "imagen": "assets/img/dieta/volumen/vol_alm_3.jpg",
+              "tiempo": "45 min",
+              "calorias": "750 kcal",
+              "alergenos": [],
+              "ingredientes": ["200g lomo de salmón", "2 patatas medianas", "Espárragos", "Aceite de oliva"],
+              "macros": {
+                "proteinas": "45g",
+                "grasas": "32g",
+                "carbos": "65g"
+              },
+              "instrucciones": "1. Hornea las patatas partidas por la mitad durante 40 min.\n2. Haz el salmón a la plancha por el lado de la piel primero.\n3. Acompaña con espárragos."
+            },
+            {
+              "id": "vol_alm_4",
+              "nombre": "Quinoa con Pavo",
+              "imagen": "assets/img/dieta/volumen/vol_alm_4.jpg",
+              "tiempo": "25 min",
+              "calorias": "690 kcal",
+              "alergenos": [],
+              "ingredientes": ["100g quinoa seca", "200g solomillo pavo", "Pimientos", "Cebolla", "Soja"],
+              "macros": {
+                "proteinas": "55g",
+                "grasas": "12g",
+                "carbos": "78g"
+              },
+              "instrucciones": "1. Cuece la quinoa.\n2. Saltea el pavo y las verduras en tiras.\n3. Mezcla todo en un wok con un chorro de salsa de soja."
+            },
+            {
+              "id": "vol_alm_5",
+              "nombre": "Lentejas con Arroz",
+              "imagen": "assets/img/dieta/volumen/vol_alm_5.jpg",
+              "tiempo": "40 min",
+              "calorias": "710 kcal",
+              "alergenos": [],
+              "ingredientes": ["150g lentejas cocidas", "80g arroz cocido", "Chorizo magro", "Patata", "Zanahoria"],
+              "macros": {
+                "proteinas": "30g",
+                "grasas": "18g",
+                "carbos": "100g"
+              },
+              "instrucciones": "1. Prepara un estofado clásico de lentejas con las verduras y la patata.\n2. Añade el arroz cocido al plato para crear una proteína de altísimo valor biológico."
+            },
+            {
+              "id": "vol_alm_6",
+              "nombre": "Hamburguesa Completa",
+              "imagen": "assets/img/dieta/volumen/vol_alm_6.jpg",
+              "tiempo": "20 min",
+              "calorias": "850 kcal",
+              "alergenos": ["gluten", "lacteos"],
+              "ingredientes": ["250g carne ternera", "Pan de hamburguesa grande", "Queso cheddar", "Huevo plancha", "Lechuga y tomate"],
+              "macros": {
+                "proteinas": "60g",
+                "grasas": "40g",
+                "carbos": "55g"
+              },
+              "instrucciones": "1. Haz la carne a la plancha.\n2. Tuesta el pan.\n3. Monta la hamburguesa coronando la carne con el queso y el huevo."
+            },
+            {
+              "id": "vol_alm_7",
+              "nombre": "Ensalada de Pasta Proteica",
+              "imagen": "assets/img/dieta/volumen/vol_alm_7.jpg",
+              "tiempo": "20 min",
+              "calorias": "760 kcal",
+              "alergenos": ["huevos"],
+              "ingredientes": ["120g espirales de colores", "2 latas atún", "2 huevos duros", "Aceitunas", "Maíz"],
+              "macros": {
+                "proteinas": "45g",
+                "grasas": "24g",
+                "carbos": "95g"
+              },
+              "instrucciones": "1. Hierve la pasta y enfríala.\n2. Añade los huevos picados, el atún escurrido, maíz y aceitunas.\n3. Aliña con abundante aceite de oliva."
+            },
+            {
+              "id": "vol_alm_8",
+              "nombre": "Risotto de Pollo",
+              "imagen": "assets/img/dieta/volumen/vol_alm_8.jpg",
+              "tiempo": "35 min",
+              "calorias": "680 kcal",
+              "alergenos": ["lacteos"],
+              "ingredientes": ["100g arroz arborio", "150g pollo", "Champiñones", "Caldo pollo", "Parmesano"],
+              "macros": {
+                "proteinas": "45g",
+                "grasas": "18g",
+                "carbos": "85g"
+              },
+              "instrucciones": "1. Saltea pollo y champiñones.\n2. Añade el arroz y ve hidratando con caldo caliente sin parar de remover.\n3. Termina con parmesano."
+            },
+            {
+              "id": "vol_alm_9",
+              "nombre": "Entrecot con Boniato",
+              "imagen": "assets/img/dieta/volumen/vol_alm_9.jpg",
+              "tiempo": "65 min",
+              "calorias": "890 kcal",
+              "alergenos": [],
+              "ingredientes": ["250g entrecot o chuletón", "1 boniato grande", "Pimientos asados"],
+              "macros": {
+                "proteinas": "55g",
+                "grasas": "45g",
+                "carbos": "65g"
+              },
+              "instrucciones": "1. Asa el boniato al horno envuelto en papel de aluminio (1 hora).\n2. Haz la carne a la plancha muy fuerte vuelta y vuelta.\n3. Acompaña con pimientos."
+            },
+            {
+              "id": "vol_alm_10",
+              "nombre": "Wok Fideos y Ternera",
+              "imagen": "assets/img/dieta/volumen/vol_alm_10.jpg",
+              "tiempo": "20 min",
+              "calorias": "720 kcal",
+              "alergenos": ["huevos"],
+              "ingredientes": ["100g fideos de huevo", "200g ternera en tiras", "Zanahoria", "Cebolleta", "Salsa ostras"],
+              "macros": {
+                "proteinas": "50g",
+                "grasas": "16g",
+                "carbos": "90g"
+              },
+              "instrucciones": "1. Saltea la ternera a fuego muy alto.\n2. Añade verduras en tiras.\n3. Incorpora fideos hervidos y salsea."
+            },
+            {
+              "id": "vol_alm_11",
+              "nombre": "Fajitas de Pollo y Guacamole",
+              "imagen": "assets/img/dieta/volumen/vol_alm_11.jpg",
+              "tiempo": "25 min",
+              "calorias": "810 kcal",
+              "alergenos": [],
+              "ingredientes": ["3 tortillas de trigo grandes", "200g pollo", "Pimientos", "Mucho guacamole casero"],
+              "macros": {
+                "proteinas": "55g",
+                "grasas": "30g",
+                "carbos": "85g"
+              },
+              "instrucciones": "1. Haz el pollo y los pimientos a tiras con especias fajita.\n2. Monta las tortillas untando el guacamole y poniendo la mezcla encima."
+            },
+            {
+              "id": "vol_alm_12",
+              "nombre": "Potaje Garbanzos y Bacalao",
+              "imagen": "assets/img/dieta/volumen/vol_alm_12.jpg",
+              "tiempo": "30 min",
+              "calorias": "670 kcal",
+              "alergenos": ["huevos"],
+              "ingredientes": ["200g garbanzos de bote", "150g bacalao desmigado", "Espinacas", "Huevo duro", "Pan tostado"],
+              "macros": {
+                "proteinas": "48g",
+                "grasas": "14g",
+                "carbos": "75g"
+              },
+              "instrucciones": "1. Prepara un sofrito de ajo y pimentón.\n2. Añade los garbanzos, el bacalao y las espinacas con caldo.\n3. Acompaña con pan tostado."
+            },
+            {
+              "id": "vol_alm_13",
+              "nombre": "Pimientos Rellenos",
+              "imagen": "assets/img/dieta/volumen/vol_alm_13.jpg",
+              "tiempo": "55 min",
+              "calorias": "640 kcal",
+              "alergenos": [],
+              "ingredientes": ["2 pimientos grandes", "200g carne picada", "80g arroz cocido", "Salsa de tomate"],
+              "macros": {
+                "proteinas": "50g",
+                "grasas": "22g",
+                "carbos": "60g"
+              },
+              "instrucciones": "1. Mezcla la carne cocinada con el arroz y el tomate.\n2. Rellena los pimientos.\n3. Hornea durante 40 minutos."
+            },
+            {
+              "id": "vol_alm_14",
+              "nombre": "Lomo Cerdo y Puré Patata",
+              "imagen": "assets/img/dieta/volumen/vol_alm_14.jpg",
+              "tiempo": "30 min",
+              "calorias": "780 kcal",
+              "alergenos": ["lacteos"],
+              "ingredientes": ["250g lomo de cerdo", "2 patatas machacadas (puré)", "Leche entera", "Mantequilla", "Guisantes"],
+              "macros": {
+                "proteinas": "60g",
+                "grasas": "30g",
+                "carbos": "65g"
+              },
+              "instrucciones": "1. Haz el puré machacando la patata con leche, mantequilla y sal.\n2. Cocina el lomo a la plancha y sirve junto a los guisantes."
+            },
+            {
+              "id": "vol_alm_15",
+              "nombre": "Burrito Gigante de Pollo",
+              "imagen": "assets/img/dieta/volumen/vol_alm_15.jpg",
+              "tiempo": "20 min",
+              "calorias": "880 kcal",
+              "alergenos": ["lacteos"],
+              "ingredientes": ["1 tortilla gigante", "150g pollo", "80g arroz", "Frijoles", "Queso rallado"],
+              "macros": {
+                "proteinas": "58g",
+                "grasas": "28g",
+                "carbos": "100g"
+              },
+              "instrucciones": "1. Extiende la tortilla y pon una base de arroz y frijoles.\n2. Añade el pollo hecho y el queso.\n3. Enrolla apretando bien y dale un golpe de plancha para cerrarlo."
+            }
+          ]
+        },
+        {
+          "momento": "Cena",
+          "comidas": [
+            {
+              "id": "vol_cen_1",
+              "nombre": "Merluza con Patata Cocida",
+              "imagen": "assets/img/dieta/volumen/vol_cen_1.jpg",
+              "tiempo": "25 min",
+              "calorias": "420 kcal",
+              "alergenos": [],
+              "ingredientes": ["250g lomos de merluza", "1 patata grande", "Pimentón dulce", "Aceite de oliva virgen"],
+              "macros": {
+                "proteinas": "45g",
+                "grasas": "12g",
+                "carbos": "35g"
+              },
+              "instrucciones": "1. Cuece la patata en rodajas.\n2. Haz la merluza al vapor o a la plancha.\n3. Sirve el pescado sobre la patata y aliña con aceite y pimentón."
+            },
+            {
+              "id": "vol_cen_2",
+              "nombre": "Tortilla Proteica con Atún",
+              "imagen": "assets/img/dieta/volumen/vol_cen_2.jpg",
+              "tiempo": "15 min",
+              "calorias": "380 kcal",
+              "alergenos": ["huevo"],
+              "ingredientes": ["1 huevo entero", "200ml claras de huevo", "2 latas atún natural", "Ensalada tomate"],
+              "macros": {
+                "proteinas": "52g",
+                "grasas": "14g",
+                "carbos": "8g"
+              },
+              "instrucciones": "1. Bate el huevo y las claras.\n2. Escurre muy bien el atún y mézclalo.\n3. Haz la tortilla en una sartén grande. Acompaña con tomate aliñado."
+            },
+            {
+              "id": "vol_cen_3",
+              "nombre": "Ensalada Completa de Pavo",
+              "imagen": "assets/img/dieta/volumen/vol_cen_3.jpg",
+              "tiempo": "15 min",
+              "calorias": "460 kcal",
+              "alergenos": ["lacteos", "frutos secos"],
+              "ingredientes": ["Bolsa de canónigos", "200g pechuga pavo plancha", "Queso fresco", "Nueces", "Picatostes"],
+              "macros": {
+                "proteinas": "55g",
+                "grasas": "18g",
+                "carbos": "20g"
+              },
+              "instrucciones": "1. Haz la pechuga a la plancha y córtala en tiras.\n2. Mezcla todos los ingredientes en un bol grande.\n3. Aliña al gusto."
+            },
+            {
+              "id": "vol_cen_4",
+              "nombre": "Salmón con Brócoli",
+              "imagen": "assets/img/dieta/volumen/vol_cen_4.jpg",
+              "tiempo": "20 min",
+              "calorias": "510 kcal",
+              "alergenos": [],
+              "ingredientes": ["200g salmón", "200g brócoli", "Salsa de soja baja en sal", "Sésamo"],
+              "macros": {
+                "proteinas": "45g",
+                "grasas": "30g",
+                "carbos": "12g"
+              },
+              "instrucciones": "1. Haz el brócoli al microondas o al vapor (aldente).\n2. Pasa el salmón por la plancha.\n3. Añade salsa de soja y sésamo al emplatar."
+            },
+            {
+              "id": "vol_cen_5",
+              "nombre": "Sepia Plancha Ensalada",
+              "imagen": "assets/img/dieta/volumen/vol_cen_5.jpg",
+              "tiempo": "15 min",
+              "calorias": "390 kcal",
+              "alergenos": [],
+              "ingredientes": ["300g sepia limpia", "Ajo y perejil", "Ensalada verde con aguacate"],
+              "macros": {
+                "proteinas": "48g",
+                "grasas": "16g",
+                "carbos": "10g"
+              },
+              "instrucciones": "1. Cocina la sepia a fuego fuerte para que no quede chiclosa.\n2. Baña con un majado de ajo, perejil y aceite.\n3. Sirve con ensalada."
+            },
+            {
+              "id": "vol_cen_6",
+              "nombre": "Pollo con Espárragos",
+              "imagen": "assets/img/dieta/volumen/vol_cen_6.jpg",
+              "tiempo": "20 min",
+              "calorias": "440 kcal",
+              "alergenos": [],
+              "ingredientes": ["250g pechuga pollo", "Manada espárragos trigueros", "Arroz salvaje (guarnición)"],
+              "macros": {
+                "proteinas": "60g",
+                "grasas": "8g",
+                "carbos": "30g"
+              },
+              "instrucciones": "1. Haz las pechugas a la plancha sin que se sequen.\n2. Saltea los espárragos con un poco de sal gorda.\n3. Acompaña con un cazo de arroz salvaje."
+            },
+            {
+              "id": "vol_cen_7",
+              "nombre": "Queso Cottage y Almendras",
+              "imagen": "assets/img/dieta/volumen/vol_cen_7.jpg",
+              "tiempo": "5 min",
+              "calorias": "480 kcal",
+              "alergenos": ["lacteos", "frutos secos"],
+              "ingredientes": ["250g queso cottage (Caseína pura)", "30g almendras naturales", "1 cda mantequilla cacahuete", "Canela"],
+              "macros": {
+                "proteinas": "35g",
+                "grasas": "32g",
+                "carbos": "12g"
+              },
+              "instrucciones": "1. Pon el cottage en un bol.\n2. Añade las almendras enteras y la mantequilla de cacahuete.\n3. Es una cena súper rápida, ideal antes de dormir por su asimilación lenta."
+            },
+            {
+              "id": "vol_cen_8",
+              "nombre": "Hamburguesa de Pollo (Sin pan)",
+              "imagen": "assets/img/dieta/volumen/vol_cen_8.jpg",
+              "tiempo": "15 min",
+              "calorias": "470 kcal",
+              "alergenos": ["lacteos"],
+              "ingredientes": ["2 hamburguesas de pollo (100% carne)", "2 lonchas queso havarti", "Champiñones salteados"],
+              "macros": {
+                "proteinas": "50g",
+                "grasas": "25g",
+                "carbos": "8g"
+              },
+              "instrucciones": "1. Cocina las hamburguesas y funde el queso encima al final.\n2. Sírvelas en el plato (sin pan) rodeadas de champiñones salteados al ajillo."
+            },
+            {
+              "id": "vol_cen_9",
+              "nombre": "Revuelto Gambas y Ajetes",
+              "imagen": "assets/img/dieta/volumen/vol_cen_9.jpg",
+              "tiempo": "15 min",
+              "calorias": "380 kcal",
+              "alergenos": ["huevos"],
+              "ingredientes": ["2 huevos enteros", "150ml claras", "150g gambas peladas", "Ajetes tiernos"],
+              "macros": {
+                "proteinas": "45g",
+                "grasas": "16g",
+                "carbos": "10g"
+              },
+              "instrucciones": "1. Saltea los ajetes troceados y las gambas.\n2. Añade la mezcla de huevos y claras, remueve a fuego lento para que quede jugoso."
+            },
+            {
+              "id": "vol_cen_10",
+              "nombre": "Pescado Blanco al Horno",
+              "imagen": "assets/img/dieta/volumen/vol_cen_10.jpg",
+              "tiempo": "25 min",
+              "calorias": "350 kcal",
+              "alergenos": [],
+              "ingredientes": ["300g bacalao o lubina", "Medio limón", "1 tomate en rodajas gruesas", "Cebolla"],
+              "macros": {
+                "proteinas": "55g",
+                "grasas": "8g",
+                "carbos": "15g"
+              },
+              "instrucciones": "1. Haz una cama con la cebolla y el tomate en la bandeja.\n2. Pon el pescado encima con rodajas de limón.\n3. Hornea 20 minutos."
+            },
+            {
+              "id": "vol_cen_11",
+              "nombre": "Tofu a la Plancha",
+              "imagen": "assets/img/dieta/volumen/vol_cen_11.jpg",
+              "tiempo": "15 min",
+              "calorias": "410 kcal",
+              "alergenos": [],
+              "ingredientes": ["250g bloque de tofu firme", "Wok de verduras variadas", "Semillas de calabaza"],
+              "macros": {
+                "proteinas": "35g",
+                "grasas": "22g",
+                "carbos": "18g"
+              },
+              "instrucciones": "1. Seca el tofu y córtalo en dados gruesos, pásalos por la plancha.\n2. Saltea las verduras y mezcla.\n3. Espolvorea semillas para subir calorías."
+            },
+            {
+              "id": "vol_cen_12",
+              "nombre": "Ternera con Champiñones",
+              "imagen": "assets/img/dieta/volumen/vol_cen_12.jpg",
+              "tiempo": "15 min",
+              "calorias": "490 kcal",
+              "alergenos": ["gluten"],
+              "ingredientes": ["250g filete ternera fina", "Bandeja champiñones laminados", "Ajo", "1 tostada integral"],
+              "macros": {
+                "proteinas": "60g",
+                "grasas": "20g",
+                "carbos": "15g"
+              },
+              "instrucciones": "1. Saltea los champiñones al ajillo.\n2. Haz la ternera vuelta y vuelta.\n3. Sirve junto a la tostada para mojar el jugo."
+            },
+            {
+              "id": "vol_cen_13",
+              "nombre": "Gazpacho y Tortilla",
+              "imagen": "assets/img/dieta/volumen/vol_cen_13.jpg",
+              "tiempo": "15 min",
+              "calorias": "430 kcal",
+              "alergenos": ["huevos", "lacteos"],
+              "ingredientes": ["1 vaso gazpacho grande", "2 huevos + claras", "Espinacas frescas", "Queso rallado"],
+              "macros": {
+                "proteinas": "35g",
+                "grasas": "22g",
+                "carbos": "20g"
+              },
+              "instrucciones": "1. Haz una tortilla gordita con la mezcla de huevos y muchas espinacas.\n2. Tómala de segundo plato tras el gazpacho bien frío."
+            },
+            {
+              "id": "vol_cen_14",
+              "nombre": "Dorada Horno y Tomate",
+              "imagen": "assets/img/dieta/volumen/vol_cen_14.jpg",
+              "tiempo": "30 min",
+              "calorias": "420 kcal",
+              "alergenos": [],
+              "ingredientes": ["1 dorada entera limpia", "Ajo y guindilla", "Tomate trinchado con orégano"],
+              "macros": {
+                "proteinas": "48g",
+                "grasas": "20g",
+                "carbos": "10g"
+              },
+              "instrucciones": "1. Hornea la dorada abierta a la espalda.\n2. Prepara un refrito de ajo y guindilla y échalo por encima al sacarla.\n3. Acompaña con el tomate."
+            },
+            {
+              "id": "vol_cen_15",
+              "nombre": "Bol de Caseína Nocturna",
+              "imagen": "assets/img/dieta/volumen/vol_cen_15.jpg",
+              "tiempo": "5 min",
+              "calorias": "380 kcal",
+              "alergenos": ["lacteos", "frutos secos"],
+              "ingredientes": ["2 scoops proteína Caseína sabor vainilla", "Leche o agua tibia", "Crema de almendras"],
+              "macros": {
+                "proteinas": "50g",
+                "grasas": "15g",
+                "carbos": "10g"
+              },
+              "instrucciones": "1. Mezcla la caseína con el líquido lentamente hasta que quede textura tipo \"pudding\".\n2. Pon crema de almendras por encima.\n3. Cena ligera de digestión lentísima, ideal para no perder músculo de noche."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "definicion",
+      "titulo": "Definición",
+      "subtitulo": "Enfocada en reducir el porcentaje de grasa corporal manteniendo la masa muscular intacta.",
+      "imagen": "assets/img/dieta/definicion/portada-definicion.jpg",
+      "plan": [
+        {
+          "momento": "Desayuno",
+          "comidas": [
+            {
+              "id": "def_des_1",
+              "nombre": "Tortilla de Claras y Espinacas",
+              "imagen": "assets/img/dieta/definicion/def_des_1.jpg",
+              "tiempo": "10 min",
+              "calorias": "180 kcal",
+              "alergenos": ["huevos"],
+              "ingredientes": ["200ml claras de huevo", "1 puñado espinacas", "Especias al gusto", "1 rodaja fina pan centeno"],
+              "macros": {
+                "proteinas": "22g",
+                "grasas": "2g",
+                "carbos": "15g"
+              },
+              "instrucciones": "1. Bate las claras con las especias.\n2. Haz la tortilla en sartén antiadherente con una sola gota de aceite esparcida con servilleta.\n3. Acompaña con la tostada crujiente."
+            },
+            {
+              "id": "def_des_2",
+              "nombre": "Queso Batido 0% con Frutos Rojos",
+              "imagen": "assets/img/dieta/definicion/def_des_2.jpg",
+              "tiempo": "5 min",
+              "calorias": "140 kcal",
+              "alergenos": ["lacteos"],
+              "ingredientes": ["200g queso fresco batido 0%", "50g arándanos", "Edulcorante líquido", "Canela"],
+              "macros": {
+                "proteinas": "16g",
+                "grasas": "0g",
+                "carbos": "14g"
+              },
+              "instrucciones": "1. Mezcla el queso 0% con edulcorante y canela.\n2. Añade los arándanos por encima. Súper saciante y casi cero grasa."
+            },
+            {
+              "id": "def_des_3",
+              "nombre": "Café Proteico (Proffee)",
+              "imagen": "assets/img/dieta/definicion/def_des_3.jpg",
+              "tiempo": "5 min",
+              "calorias": "120 kcal",
+              "alergenos": [],
+              "ingredientes": ["1 café solo largo", "1 scoop proteína sabor vainilla", "Hielo", "Chorrito bebida almendras sin azúcar"],
+              "macros": {
+                "proteinas": "25g",
+                "grasas": "1g",
+                "carbos": "2g"
+              },
+              "instrucciones": "1. Prepara el café y déjalo enfriar un poco.\n2. Mezcla la proteína con la bebida de almendras en un shaker.\n3. Únelo todo en un vaso con mucho hielo."
+            },
+            {
+              "id": "def_des_4",
+              "nombre": "Tostada Pavo y Tomate",
+              "imagen": "assets/img/dieta/definicion/def_des_4.jpg",
+              "tiempo": "5 min",
+              "calorias": "160 kcal",
+              "alergenos": ["gluten"],
+              "ingredientes": ["1 rebanada pan integral (fina)", "50g pechuga pavo 90% carne", "Rodajas de tomate", "Orégano"],
+              "macros": {
+                "proteinas": "14g",
+                "grasas": "2g",
+                "carbos": "18g"
+              },
+              "instrucciones": "1. Tuesta el pan.\n2. Pon el tomate en rodajas muy finas y las lonchas de pavo.\n3. Espolvorea orégano sin añadir aceite."
+            },
+            {
+              "id": "def_des_5",
+              "nombre": "Tortitas de Claras y Avena",
+              "imagen": "assets/img/dieta/definicion/def_des_5.jpg",
+              "tiempo": "15 min",
+              "calorias": "190 kcal",
+              "alergenos": ["huevos"],
+              "ingredientes": ["150ml claras", "30g harina de avena", "Edulcorante", "Sirope 0 kcal"],
+              "macros": {
+                "proteinas": "20g",
+                "grasas": "3g",
+                "carbos": "20g"
+              },
+              "instrucciones": "1. Mezcla claras y avena.\n2. Haz tortitas finas en la sartén.\n3. Usa sirope cero calorías para endulzar sin sumar macronutrientes."
+            },
+            {
+              "id": "def_des_6",
+              "nombre": "Yogur Skyr y Kiwi",
+              "imagen": "assets/img/dieta/definicion/def_des_6.jpg",
+              "tiempo": "5 min",
+              "calorias": "150 kcal",
+              "alergenos": [],
+              "ingredientes": ["1 yogur Skyr natural", "1 kiwi", "1 cdita semillas de chía"],
+              "macros": {
+                "proteinas": "15g",
+                "grasas": "2g",
+                "carbos": "16g"
+              },
+              "instrucciones": "1. Sirve el Skyr (muy denso y proteico).\n2. Corta el kiwi en dados para aportar vitamina C y fibra.\n3. Añade la chía."
+            },
+            {
+              "id": "def_des_7",
+              "nombre": "Revuelto de Champiñones",
+              "imagen": "assets/img/dieta/definicion/def_des_7.jpg",
+              "tiempo": "10 min",
+              "calorias": "170 kcal",
+              "alergenos": ["huevos"],
+              "ingredientes": ["1 huevo entero", "100ml claras", "100g champiñones laminados", "Ajo en polvo"],
+              "macros": {
+                "proteinas": "18g",
+                "grasas": "7g",
+                "carbos": "4g"
+              },
+              "instrucciones": "1. Saltea los champiñones sin aceite (sueltan su propia agua).\n2. Añade el huevo y las claras.\n3. Revuelve hasta cuajar."
+            },
+            {
+              "id": "def_des_8",
+              "nombre": "Batido de Fresa Bajo en Kcal",
+              "imagen": "assets/img/dieta/definicion/def_des_8.jpg",
+              "tiempo": "5 min",
+              "calorias": "140 kcal",
+              "alergenos": [],
+              "ingredientes": ["150g fresas congeladas", "200ml leche almendras 0%", "1 scoop proteína fresa"],
+              "macros": {
+                "proteinas": "26g",
+                "grasas": "2g",
+                "carbos": "8g"
+              },
+              "instrucciones": "1. Bate las fresas congeladas con la leche de almendras y la proteína.\n2. Queda textura de helado (smoothie bowl) que llena muchísimo."
+            },
+            {
+              "id": "def_des_9",
+              "nombre": "Pan Wasa con Queso Light",
+              "imagen": "assets/img/dieta/definicion/def_des_9.jpg",
+              "tiempo": "5 min",
+              "calorias": "180 kcal",
+              "alergenos": ["gluten"],
+              "ingredientes": ["2 tostadas Wasa (fibra)", "2 cdas queso crema light", "Cebollino", "Jamón cocido extra"],
+              "macros": {
+                "proteinas": "16g",
+                "grasas": "4g",
+                "carbos": "18g"
+              },
+              "instrucciones": "1. Unta el queso crema ligero en las tostadas Wasa (crujientes y con pocas kcal).\n2. Añade el jamón y cebollino."
+            },
+            {
+              "id": "def_des_10",
+              "nombre": "Gofres de Claras",
+              "imagen": "assets/img/dieta/definicion/def_des_10.jpg",
+              "tiempo": "15 min",
+              "calorias": "120 kcal",
+              "alergenos": ["huevos"],
+              "ingredientes": ["200ml claras", "1 cda psyllium o lino molido", "Canela"],
+              "macros": {
+                "proteinas": "22g",
+                "grasas": "1g",
+                "carbos": "3g"
+              },
+              "instrucciones": "1. Bate las claras con el psyllium (le da textura sin sumar carbohidratos).\n2. Haz en la gofrera y saca crujientes."
+            },
+            {
+              "id": "def_des_11",
+              "nombre": "Pudding Proteico Cacao",
+              "imagen": "assets/img/dieta/definicion/def_des_11.jpg",
+              "tiempo": "5 min",
+              "calorias": "210 kcal",
+              "alergenos": ["gluten"],
+              "ingredientes": ["1 tarrina pudding proteico chocolate", "10g almendras picadas"],
+              "macros": {
+                "proteinas": "22g",
+                "grasas": "8g",
+                "carbos": "12g"
+              },
+              "instrucciones": "1. Abre el pudding alto en proteínas.\n2. Añade unas almendras picadas para dar textura crujiente y grasas buenas."
+            },
+            {
+              "id": "def_des_12",
+              "nombre": "Rollitos de Pavo y Espárragos",
+              "imagen": "assets/img/dieta/definicion/def_des_12.jpg",
+              "tiempo": "5 min",
+              "calorias": "110 kcal",
+              "alergenos": [],
+              "ingredientes": ["4 lonchas gruesas pavo braseado", "4 espárragos blancos", "Mostaza dijon"],
+              "macros": {
+                "proteinas": "18g",
+                "grasas": "2g",
+                "carbos": "4g"
+              },
+              "instrucciones": "1. Escurre los espárragos.\n2. Pinta las lonchas de pavo con mostaza y enrolla los espárragos dentro."
+            },
+            {
+              "id": "def_des_13",
+              "nombre": "Cottage Salado con Pepino",
+              "imagen": "assets/img/dieta/definicion/def_des_13.jpg",
+              "tiempo": "5 min",
+              "calorias": "130 kcal",
+              "alergenos": ["lacteos"],
+              "ingredientes": ["150g queso cottage light", "Medio pepino", "Pimienta negra", "Vinagre manzana"],
+              "macros": {
+                "proteinas": "16g",
+                "grasas": "2g",
+                "carbos": "8g"
+              },
+              "instrucciones": "1. Corta el pepino en dados muy pequeños.\n2. Mezcla con el cottage, pimienta y vinagre (refrescante y diurético)."
+            },
+            {
+              "id": "def_des_14",
+              "nombre": "Manzana con Polvo de Cacahuete",
+              "imagen": "assets/img/dieta/definicion/def_des_14.jpg",
+              "tiempo": "5 min",
+              "calorias": "160 kcal",
+              "alergenos": ["frutos secos"],
+              "ingredientes": ["1 manzana verde", "2 cdas cacahuete en polvo desgrasado", "Agua"],
+              "macros": {
+                "proteinas": "10g",
+                "grasas": "2g",
+                "carbos": "25g"
+              },
+              "instrucciones": "1. Mezcla el polvo de cacahuete con unas gotas de agua hasta formar una crema (70% menos de grasa que la normal).\n2. Moja los gajos de manzana."
+            },
+            {
+              "id": "def_des_15",
+              "nombre": "Huevo Duro y Té Verde",
+              "imagen": "assets/img/dieta/definicion/def_des_15.jpg",
+              "tiempo": "5 min",
+              "calorias": "150 kcal",
+              "alergenos": ["huevos"],
+              "ingredientes": ["2 huevos cocidos", "1 taza té verde", "Rodaja tomate"],
+              "macros": {
+                "proteinas": "12g",
+                "grasas": "10g",
+                "carbos": "2g"
+              },
+              "instrucciones": "1. Pela los huevos y córtalos por la mitad.\n2. Acompaña con tomate y bebe el té verde caliente o con hielo."
+            }
+          ]
+        },
+        {
+          "momento": "Almuerzo",
+          "comidas": [
+            {
+              "id": "def_alm_1",
+              "nombre": "Pechuga de Pollo y Brócoli",
+              "imagen": "assets/img/dieta/definicion/def_alm_1.jpg",
+              "tiempo": "20 min",
+              "calorias": "280 kcal",
+              "alergenos": [],
+              "ingredientes": ["200g pechuga pollo", "200g brócoli", "Limón", "Pimienta negra"],
+              "macros": {
+                "proteinas": "45g",
+                "grasas": "4g",
+                "carbos": "12g"
+              },
+              "instrucciones": "1. Cuece el brócoli al vapor para que no absorba agua.\n2. Haz el pollo a la plancha.\n3. Aliña solo con limón y pimienta."
+            },
+            {
+              "id": "def_alm_2",
+              "nombre": "Merluza con Judías Verdes",
+              "imagen": "assets/img/dieta/definicion/def_alm_2.jpg",
+              "tiempo": "20 min",
+              "calorias": "260 kcal",
+              "alergenos": [],
+              "ingredientes": ["250g lomo merluza", "150g judías verdes", "Ajo", "1 cdita aceite"],
+              "macros": {
+                "proteinas": "40g",
+                "grasas": "5g",
+                "carbos": "10g"
+              },
+              "instrucciones": "1. Hierve las judías.\n2. Haz la merluza a la plancha y saltea las judías con un ajo laminado."
+            },
+            {
+              "id": "def_alm_3",
+              "nombre": "Ensalada de Atún al Natural",
+              "imagen": "assets/img/dieta/definicion/def_alm_3.jpg",
+              "tiempo": "10 min",
+              "calorias": "210 kcal",
+              "alergenos": [],
+              "ingredientes": ["Base de lechuga iceberg", "2 latas atún al natural", "Tomate", "Pepino", "Vinagre"],
+              "macros": {
+                "proteinas": "35g",
+                "grasas": "2g",
+                "carbos": "10g"
+              },
+              "instrucciones": "1. Escurre bien el atún.\n2. Mezcla todo en un bol gigante.\n3. Aliña con vinagre o limón, sin aceite."
+            },
+            {
+              "id": "def_alm_4",
+              "nombre": "Calabacines Rellenos de Pavo",
+              "imagen": "assets/img/dieta/definicion/def_alm_4.jpg",
+              "tiempo": "35 min",
+              "calorias": "290 kcal",
+              "alergenos": [],
+              "ingredientes": ["1 calabacín redondo", "150g carne picada pavo magra", "Tomate triturado natural"],
+              "macros": {
+                "proteinas": "32g",
+                "grasas": "8g",
+                "carbos": "15g"
+              },
+              "instrucciones": "1. Vacía el calabacín y hornea 15 min.\n2. Cocina el pavo con el tomate en la sartén.\n3. Rellena y hornea sin queso."
+            },
+            {
+              "id": "def_alm_5",
+              "nombre": "Ternera Magra y Champiñones",
+              "imagen": "assets/img/dieta/definicion/def_alm_5.jpg",
+              "tiempo": "15 min",
+              "calorias": "310 kcal",
+              "alergenos": [],
+              "ingredientes": ["150g filete ternera fina (sin grasa)", "Bandeja champiñones", "Ajo perejil"],
+              "macros": {
+                "proteinas": "35g",
+                "grasas": "12g",
+                "carbos": "8g"
+              },
+              "instrucciones": "1. Saltea los champiñones al ajillo.\n2. Haz la ternera muy rápido a la plancha para que no quede dura."
+            },
+            {
+              "id": "def_alm_6",
+              "nombre": "Wok de Pollo y Verduras",
+              "imagen": "assets/img/dieta/definicion/def_alm_6.jpg",
+              "tiempo": "20 min",
+              "calorias": "270 kcal",
+              "alergenos": [],
+              "ingredientes": ["150g tiras de pollo", "Pimiento", "Cebolla", "Calabacín", "Salsa soja light"],
+              "macros": {
+                "proteinas": "35g",
+                "grasas": "4g",
+                "carbos": "16g"
+              },
+              "instrucciones": "1. Corta verduras y pollo en juliana.\n2. Saltea fuerte en wok sin aceite.\n3. Añade salsa de soja baja en sodio al final."
+            },
+            {
+              "id": "def_alm_7",
+              "nombre": "Lomo de Cerdo y Col Lombarda",
+              "imagen": "assets/img/dieta/definicion/def_alm_7.jpg",
+              "tiempo": "25 min",
+              "calorias": "340 kcal",
+              "alergenos": [],
+              "ingredientes": ["200g lomo cerdo (parte magra)", "Media col lombarda", "Manzana verde", "Vinagre"],
+              "macros": {
+                "proteinas": "42g",
+                "grasas": "10g",
+                "carbos": "18g"
+              },
+              "instrucciones": "1. Rehoga la col en tiras finas con la manzana y el vinagre.\n2. Cocina los filetes de lomo a la plancha."
+            },
+            {
+              "id": "def_alm_8",
+              "nombre": "Pasta Konjac con Gambas",
+              "imagen": "assets/img/dieta/definicion/def_alm_8.jpg",
+              "tiempo": "15 min",
+              "calorias": "180 kcal",
+              "alergenos": [],
+              "ingredientes": ["Paquete fideos Konjac", "150g gambas", "Ajo", "Guindilla"],
+              "macros": {
+                "proteinas": "28g",
+                "grasas": "4g",
+                "carbos": "5g"
+              },
+              "instrucciones": "1. Lava muy bien el konjac.\n2. Saltea las gambas al ajillo picante.\n3. Añade los fideos a la sartén un minuto."
+            },
+            {
+              "id": "def_alm_9",
+              "nombre": "Tortilla Patata Falsa (Calabacín)",
+              "imagen": "assets/img/dieta/definicion/def_alm_9.jpg",
+              "tiempo": "20 min",
+              "calorias": "220 kcal",
+              "alergenos": ["huevos"],
+              "ingredientes": ["1 huevo + 3 claras", "Medio calabacín picado", "Media cebolla pochada"],
+              "macros": {
+                "proteinas": "20g",
+                "grasas": "8g",
+                "carbos": "12g"
+              },
+              "instrucciones": "1. Pica el calabacín y cebolla y cocínalos tapados al microondas (sin aceite).\n2. Mezcla con el huevo y cuaja la tortilla."
+            },
+            {
+              "id": "def_alm_10",
+              "nombre": "Sepia con Ensalada Mixta",
+              "imagen": "assets/img/dieta/definicion/def_alm_10.jpg",
+              "tiempo": "15 min",
+              "calorias": "250 kcal",
+              "alergenos": [],
+              "ingredientes": ["250g sepia", "Lechuga", "Tomate", "Espárragos blancos", "Limón"],
+              "macros": {
+                "proteinas": "40g",
+                "grasas": "3g",
+                "carbos": "10g"
+              },
+              "instrucciones": "1. Plancha muy caliente para la sepia.\n2. Monta la ensalada como guarnición y exprime limón en ambos."
+            },
+            {
+              "id": "def_alm_11",
+              "nombre": "Pinchos Pollo Piña",
+              "imagen": "assets/img/dieta/definicion/def_alm_11.jpg",
+              "tiempo": "20 min",
+              "calorias": "260 kcal",
+              "alergenos": [],
+              "ingredientes": ["150g pollo dados", "Rodajas piña natural", "Pimiento rojo"],
+              "macros": {
+                "proteinas": "32g",
+                "grasas": "4g",
+                "carbos": "22g"
+              },
+              "instrucciones": "1. Ensarta pollo, piña y pimiento en palillos.\n2. Haz a la plancha (la piña se carameliza con su propio jugo)."
+            },
+            {
+              "id": "def_alm_12",
+              "nombre": "Bacalao al Horno con Pimientos",
+              "imagen": "assets/img/dieta/definicion/def_alm_12.jpg",
+              "tiempo": "25 min",
+              "calorias": "240 kcal",
+              "alergenos": [],
+              "ingredientes": ["200g lomo bacalao", "Tiras pimiento asado", "Cebolla", "Pimentón"],
+              "macros": {
+                "proteinas": "35g",
+                "grasas": "3g",
+                "carbos": "12g"
+              },
+              "instrucciones": "1. Pon cebolla y pimientos en la base de la bandeja.\n2. Bacalao encima y hornea 15 min."
+            },
+            {
+              "id": "def_alm_13",
+              "nombre": "Ensalada de Legumbres Ligera",
+              "imagen": "assets/img/dieta/definicion/def_alm_13.jpg",
+              "tiempo": "10 min",
+              "calorias": "310 kcal",
+              "alergenos": [],
+              "ingredientes": ["80g lentejas cocidas", "Pechuga pollo hilos", "Tomate", "Pepino"],
+              "macros": {
+                "proteinas": "32g",
+                "grasas": "4g",
+                "carbos": "30g"
+              },
+              "instrucciones": "1. Usa una porción pequeña de legumbre solo para dar energía.\n2. Añade pollo deshilachado y muchas verduras de agua."
+            },
+            {
+              "id": "def_alm_14",
+              "nombre": "Pavo con Puré de Coliflor",
+              "imagen": "assets/img/dieta/definicion/def_alm_14.jpg",
+              "tiempo": "25 min",
+              "calorias": "230 kcal",
+              "alergenos": [],
+              "ingredientes": ["150g solomillo pavo", "Coliflor hervida", "Ajo polvo", "Pimienta"],
+              "macros": {
+                "proteinas": "35g",
+                "grasas": "4g",
+                "carbos": "10g"
+              },
+              "instrucciones": "1. Tritura la coliflor hervida (queda igual que puré de patata pero con muchísimas menos calorías).\n2. Cocina el pavo a la plancha."
+            },
+            {
+              "id": "def_alm_15",
+              "nombre": "Hamburguesas Pollo Caseras",
+              "imagen": "assets/img/dieta/definicion/def_alm_15.jpg",
+              "tiempo": "20 min",
+              "calorias": "240 kcal",
+              "alergenos": [],
+              "ingredientes": ["200g pechuga pollo triturada", "Especias", "Lechuga romana en vez de pan"],
+              "macros": {
+                "proteinas": "45g",
+                "grasas": "5g",
+                "carbos": "3g"
+              },
+              "instrucciones": "1. Da forma a la carne triturada con especias y fríe sin aceite.\n2. Usa hojas de lechuga romana crujiente para envolverlas."
+            }
+          ]
+        },
+        {
+          "momento": "Cena",
+          "comidas": [
+            {
+              "id": "def_cen_1",
+              "nombre": "Sopa de Pollo y Verduras",
+              "imagen": "assets/img/dieta/definicion/def_cen_1.jpg",
+              "tiempo": "20 min",
+              "calorias": "180 kcal",
+              "alergenos": [],
+              "ingredientes": ["Caldo pollo desgrasado", "Tiras pollo cocido", "Zanahoria", "Apio"],
+              "macros": {
+                "proteinas": "25g",
+                "grasas": "4g",
+                "carbos": "8g"
+              },
+              "instrucciones": "1. Calienta el caldo.\n2. Añade las verduras muy picadas y el pollo.\n3. Llena el estómago y es ideal para no acostarse pesado."
+            },
+            {
+              "id": "def_cen_2",
+              "nombre": "Lubina al Horno al Limón",
+              "imagen": "assets/img/dieta/definicion/def_cen_2.jpg",
+              "tiempo": "25 min",
+              "calorias": "210 kcal",
+              "alergenos": [],
+              "ingredientes": ["1 lubina de ración", "Limón", "Hierbas provenzales"],
+              "macros": {
+                "proteinas": "35g",
+                "grasas": "6g",
+                "carbos": "2g"
+              },
+              "instrucciones": "1. Abre la lubina a la espalda.\n2. Pon rodajas de limón y hierbas.\n3. Hornea 18 min sin guarnición para recorte máximo."
+            },
+            {
+              "id": "def_cen_3",
+              "nombre": "Crema de Espinacas Light",
+              "imagen": "assets/img/dieta/definicion/def_cen_3.jpg",
+              "tiempo": "20 min",
+              "calorias": "190 kcal",
+              "alergenos": ["lacteos"],
+              "ingredientes": ["Espinacas frescas", "Medio calabacín", "1 quesito light", "1 huevo duro picado"],
+              "macros": {
+                "proteinas": "12g",
+                "grasas": "8g",
+                "carbos": "10g"
+              },
+              "instrucciones": "1. Cuece las verduras con poca agua.\n2. Tritura con el quesito.\n3. Echa el huevo duro picado por encima como proteína."
+            },
+            {
+              "id": "def_cen_4",
+              "nombre": "Tacos de Lechuga con Atún",
+              "imagen": "assets/img/dieta/definicion/def_cen_4.jpg",
+              "tiempo": "10 min",
+              "calorias": "160 kcal",
+              "alergenos": [],
+              "ingredientes": ["Hojas lechuga cogollo", "2 latas atún natural", "Cebolla roja", "Tomate picado"],
+              "macros": {
+                "proteinas": "30g",
+                "grasas": "1g",
+                "carbos": "6g"
+              },
+              "instrucciones": "1. Mezcla el atún con tomate y cebolla picada.\n2. Sirve en barquitas de lechuga (0 carbohidratos crujientes)."
+            },
+            {
+              "id": "def_cen_5",
+              "nombre": "Gulas con Ajo y Guindilla",
+              "imagen": "assets/img/dieta/definicion/def_cen_5.jpg",
+              "tiempo": "10 min",
+              "calorias": "200 kcal",
+              "alergenos": [],
+              "ingredientes": ["1 paquete gulas", "1 ajo", "Guindilla", "Tostada muy fina"],
+              "macros": {
+                "proteinas": "15g",
+                "grasas": "12g",
+                "carbos": "8g"
+              },
+              "instrucciones": "1. Dora el ajo y la guindilla.\n2. Saltea las gulas 2 minutos y sirve."
+            },
+            {
+              "id": "def_cen_6",
+              "nombre": "Pulpo a la Gallega (Sin Patata)",
+              "imagen": "assets/img/dieta/definicion/def_cen_6.jpg",
+              "tiempo": "10 min",
+              "calorias": "160 kcal",
+              "alergenos": [],
+              "ingredientes": ["150g pulpo cocido", "Pimentón dulce y picante", "Pizca sal gruesa", "Hilo AOVE"],
+              "macros": {
+                "proteinas": "25g",
+                "grasas": "4g",
+                "carbos": "2g"
+              },
+              "instrucciones": "1. Calienta el pulpo y córtalo.\n2. Aliña con pimentón, sal y muy poco aceite. Cero carbohidratos."
+            },
+            {
+              "id": "def_cen_7",
+              "nombre": "Ensalada Pepino, Yogur y Pollo",
+              "imagen": "assets/img/dieta/definicion/def_cen_7.jpg",
+              "tiempo": "10 min",
+              "calorias": "180 kcal",
+              "alergenos": [],
+              "ingredientes": ["1 pepino entero", "100g pollo asado", "Salsa yogur 0%", "Eneldo"],
+              "macros": {
+                "proteinas": "28g",
+                "grasas": "3g",
+                "carbos": "8g"
+              },
+              "instrucciones": "1. Lamina el pepino.\n2. Desmenuza el pollo.\n3. Baña con la salsa de yogur sin grasa y eneldo."
+            },
+            {
+              "id": "def_cen_8",
+              "nombre": "Espárragos Trigueros y Pavo",
+              "imagen": "assets/img/dieta/definicion/def_cen_8.jpg",
+              "tiempo": "15 min",
+              "calorias": "150 kcal",
+              "alergenos": [],
+              "ingredientes": ["Manojo espárragos", "100g fiambre pavo 90%", "Sal gorda"],
+              "macros": {
+                "proteinas": "22g",
+                "grasas": "3g",
+                "carbos": "6g"
+              },
+              "instrucciones": "1. Pasa los espárragos por la plancha con sal gorda.\n2. Acompaña con rollitos de pavo frío."
+            },
+            {
+              "id": "def_cen_9",
+              "nombre": "Tortilla Francesa y Tomate",
+              "imagen": "assets/img/dieta/definicion/def_cen_9.jpg",
+              "tiempo": "10 min",
+              "calorias": "170 kcal",
+              "alergenos": ["huevos"],
+              "ingredientes": ["1 huevo + 2 claras", "1 tomate abierto al medio", "Orégano"],
+              "macros": {
+                "proteinas": "16g",
+                "grasas": "7g",
+                "carbos": "6g"
+              },
+              "instrucciones": "1. Haz la tortilla sencilla.\n2. Abre el tomate y ponle sal y orégano como única guarnición."
+            },
+            {
+              "id": "def_cen_10",
+              "nombre": "Brochetas Langostinos",
+              "imagen": "assets/img/dieta/definicion/def_cen_10.jpg",
+              "tiempo": "15 min",
+              "calorias": "140 kcal",
+              "alergenos": [],
+              "ingredientes": ["150g langostinos crudos", "Tomates cherry", "Limón", "Perejil"],
+              "macros": {
+                "proteinas": "25g",
+                "grasas": "2g",
+                "carbos": "4g"
+              },
+              "instrucciones": "1. Pela los langostinos y ensártalos alternando con cherrys.\n2. Plancha vuelta y vuelta y aliña con limón."
+            },
+            {
+              "id": "def_cen_11",
+              "nombre": "Salteado Heura y Champiñón",
+              "imagen": "assets/img/dieta/definicion/def_cen_11.jpg",
+              "tiempo": "15 min",
+              "calorias": "190 kcal",
+              "alergenos": [],
+              "ingredientes": ["100g Heura (pollo vegetal)", "Champiñones", "Ajo en polvo"],
+              "macros": {
+                "proteinas": "18g",
+                "grasas": "5g",
+                "carbos": "12g"
+              },
+              "instrucciones": "1. Saltea todo junto.\n2. Es una cena súper ligera, rápida y 100% libre de grasa animal."
+            },
+            {
+              "id": "def_cen_12",
+              "nombre": "Ceviche de Pescado Blanco",
+              "imagen": "assets/img/dieta/definicion/def_cen_12.jpg",
+              "tiempo": "25 min",
+              "calorias": "150 kcal",
+              "alergenos": [],
+              "ingredientes": ["150g pescado blanco (congelado previo)", "Mucha lima", "Cebolla roja", "Cilantro"],
+              "macros": {
+                "proteinas": "30g",
+                "grasas": "2g",
+                "carbos": "4g"
+              },
+              "instrucciones": "1. Corta el pescado crudo en dados.\n2. Báñalo en zumo de lima, cebolla fina y cilantro, y deja reposar 20 min en la nevera."
+            },
+            {
+              "id": "def_cen_13",
+              "nombre": "Arroz con Calamares en su Tinta",
+              "imagen": "assets/img/dieta/definicion/def_cen_13.jpg",
+              "tiempo": "5 min",
+              "calorias": "160 kcal",
+              "alergenos": [],
+              "ingredientes": ["1 lata calamares tinta", "1 tomate en rodajas", "Sin pan"],
+              "macros": {
+                "proteinas": "14g",
+                "grasas": "8g",
+                "carbos": "6g"
+              },
+              "instrucciones": "1. Cena express: abre la lata y sirve caliente.\n2. Acompaña con tomate en rodajas."
+            },
+            {
+              "id": "def_cen_14",
+              "nombre": "Corazones Alcachofa con Pavo",
+              "imagen": "assets/img/dieta/definicion/def_cen_14.jpg",
+              "tiempo": "10 min",
+              "calorias": "180 kcal",
+              "alergenos": [],
+              "ingredientes": ["Bote corazones alcachofa", "Tacos de pavo", "Pimienta negra"],
+              "macros": {
+                "proteinas": "20g",
+                "grasas": "2g",
+                "carbos": "15g"
+              },
+              "instrucciones": "1. Escurre las alcachofas.\n2. Saltea con los tacos de pavo a fuego alto para que doren."
+            },
+            {
+              "id": "def_cen_15",
+              "nombre": "Consomé y Queso Fresco",
+              "imagen": "assets/img/dieta/definicion/def_cen_15.jpg",
+              "tiempo": "5 min",
+              "calorias": "100 kcal",
+              "alergenos": [],
+              "ingredientes": ["1 taza caldo depurativo (apio/cebolla)", "100g queso fresco Burgos 0%"],
+              "macros": {
+                "proteinas": "12g",
+                "grasas": "0g",
+                "carbos": "8g"
+              },
+              "instrucciones": "1. Bebe el caldo caliente.\n2. Come el queso fresco de Burgos con una pizca de orégano. Perfecta para la última semana de recorte."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "paleo",
+      "titulo": "Dieta Paleo",
+      "subtitulo": "Prioriza carnes magras, pescados, frutas, verduras y frutos secos, excluyendo procesados.",
+      "imagen": "assets/img/dieta/paleo/portada-paleo.jpg",
+      "plan": [
+        {
+          "momento": "Desayuno",
+          "comidas": [
+            {
+              "id": "p_des_1",
+              "nombre": "Revuelto Paleo de Espinacas",
+              "imagen": "assets/img/dieta/paleo/p_des_1.jpg",
+              "tiempo": "15 min",
+              "calorias": "320 kcal",
+              "alergenos": ["huevos"],
+              "ingredientes": ["3 huevos", "Espinacas frescas", "Champiñones", "Aceite de coco"],
+              "macros": {
+                "proteinas": "20g",
+                "grasas": "25g",
+                "carbos": "4g"
+              },
+              "instrucciones": "1. Saltea los champiñones y las espinacas en aceite de coco.\n2. Añade los huevos batidos y revuelve a fuego lento hasta cuajar."
+            },
+            {
+              "id": "p_des_2",
+              "nombre": "Tortitas de Plátano",
+              "imagen": "assets/img/dieta/paleo/p_des_2.jpg",
+              "tiempo": "15 min",
+              "calorias": "280 kcal",
+              "alergenos": ["huevos"],
+              "ingredientes": ["1 plátano maduro", "2 huevos", "Canela", "Frutos rojos"],
+              "macros": {
+                "proteinas": "14g",
+                "grasas": "10g",
+                "carbos": "30g"
+              },
+              "instrucciones": "1. Chafa el plátano con un tenedor y mézclalo con los huevos batidos.\n2. Haz pequeñas tortitas en la sartén.\n3. Acompaña con frutos rojos frescos."
+            },
+            {
+              "id": "p_des_3",
+              "nombre": "Pudin de Chía con Leche de Coco",
+              "imagen": "assets/img/dieta/paleo/p_des_3.jpg",
+              "tiempo": "10 min",
+              "calorias": "350 kcal",
+              "alergenos": [],
+              "ingredientes": ["3 cdas semillas de chía", "1 taza leche de coco", "Mango en cubos", "Almendras picadas"],
+              "macros": {
+                "proteinas": "8g",
+                "grasas": "28g",
+                "carbos": "15g"
+              },
+              "instrucciones": "1. Mezcla la chía con la leche de coco y deja reposar en la nevera toda la noche.\n2. Al despertar, añade el mango y las almendras."
+            },
+            {
+              "id": "p_des_4",
+              "nombre": "Aguacate Horneado con Huevo",
+              "imagen": "assets/img/dieta/paleo/p_des_4.jpg",
+              "tiempo": "20 min",
+              "calorias": "410 kcal",
+              "alergenos": ["huevos"],
+              "ingredientes": ["1 aguacate", "2 huevos pequeños", "Sal marina", "Pimienta negra"],
+              "macros": {
+                "proteinas": "15g",
+                "grasas": "35g",
+                "carbos": "8g"
+              },
+              "instrucciones": "1. Corta el aguacate por la mitad y quita el hueso, haciendo un hueco un poco más grande.\n2. Casca un huevo en cada mitad.\n3. Hornea 15 min a 200°C."
+            },
+            {
+              "id": "p_des_5",
+              "nombre": "Muffins de Huevo y Bacon",
+              "imagen": "assets/img/dieta/paleo/p_des_5.jpg",
+              "tiempo": "25 min",
+              "calorias": "340 kcal",
+              "alergenos": ["huevos"],
+              "ingredientes": ["4 huevos", "Bacon sin curar", "Pimiento rojo picado", "Cebolla"],
+              "macros": {
+                "proteinas": "22g",
+                "grasas": "25g",
+                "carbos": "5g"
+              },
+              "instrucciones": "1. Forra moldes de muffin con el bacon.\n2. Mezcla los huevos batidos con las verduras y rellena los moldes.\n3. Hornea 20 minutos."
+            },
+            {
+              "id": "p_des_6",
+              "nombre": "Manzana con Crema de Almendras",
+              "imagen": "assets/img/dieta/paleo/p_des_6.jpg",
+              "tiempo": "5 min",
+              "calorias": "310 kcal",
+              "alergenos": [],
+              "ingredientes": ["1 manzana grande", "2 cdas crema de almendras 100%", "Semillas de cáñamo"],
+              "macros": {
+                "proteinas": "8g",
+                "grasas": "18g",
+                "carbos": "28g"
+              },
+              "instrucciones": "1. Corta la manzana en rodajas.\n2. Unta la crema de almendras natural por encima.\n3. Espolvorea semillas."
+            },
+            {
+              "id": "p_des_7",
+              "nombre": "Batido Paleo de Frutos Rojos",
+              "imagen": "assets/img/dieta/paleo/p_des_7.jpg",
+              "tiempo": "5 min",
+              "calorias": "220 kcal",
+              "alergenos": [],
+              "ingredientes": ["Frutos rojos congelados", "Leche de almendras", "1 puñado de espinacas", "Colágeno en polvo"],
+              "macros": {
+                "proteinas": "15g",
+                "grasas": "8g",
+                "carbos": "18g"
+              },
+              "instrucciones": "1. Pon todos los ingredientes en la batidora.\n2. Tritura hasta que quede un batido suave."
+            },
+            {
+              "id": "p_des_8",
+              "nombre": "Salmón Ahumado con Espárragos",
+              "imagen": "assets/img/dieta/paleo/p_des_8.jpg",
+              "tiempo": "15 min",
+              "calorias": "250 kcal",
+              "alergenos": [],
+              "ingredientes": ["100g salmón ahumado", "Espárragos trigueros", "Aceite de oliva", "Zumo de limón"],
+              "macros": {
+                "proteinas": "22g",
+                "grasas": "15g",
+                "carbos": "4g"
+              },
+              "instrucciones": "1. Pasa los espárragos por la plancha con un chorrito de aceite.\n2. Enróllalos en las lonchas de salmón ahumado y exprime limón."
+            },
+            {
+              "id": "p_des_9",
+              "nombre": "Tortilla de Boniato y Cebolla",
+              "imagen": "assets/img/dieta/paleo/p_des_9.jpg",
+              "tiempo": "20 min",
+              "calorias": "330 kcal",
+              "alergenos": [],
+              "ingredientes": ["2 huevos", "Medio boniato rallado", "Media cebolla", "Aceite de oliva virgen"],
+              "macros": {
+                "proteinas": "14g",
+                "grasas": "18g",
+                "carbos": "25g"
+              },
+              "instrucciones": "1. Saltea la cebolla y el boniato rallado hasta que ablanden.\n2. Añade los huevos y cuaja la tortilla."
+            },
+            {
+              "id": "p_des_10",
+              "nombre": "Bowl de Frutas y Nueces",
+              "imagen": "assets/img/dieta/paleo/p_des_10.jpg",
+              "tiempo": "5 min",
+              "calorias": "290 kcal",
+              "alergenos": [],
+              "ingredientes": ["Melón y sandía en dados", "Nueces de macadamia", "Semillas de calabaza", "Menta fresca"],
+              "macros": {
+                "proteinas": "6g",
+                "grasas": "20g",
+                "carbos": "22g"
+              },
+              "instrucciones": "1. Sirve la fruta fresca en un bol.\n2. Añade las nueces y las semillas para aportar grasas saludables y proteína."
+            },
+            {
+              "id": "p_des_11",
+              "nombre": "Sartén de Pavo y Pimientos",
+              "imagen": "assets/img/dieta/paleo/p_des_11.jpg",
+              "tiempo": "15 min",
+              "calorias": "310 kcal",
+              "alergenos": [],
+              "ingredientes": ["150g carne picada de pavo", "Pimiento rojo y verde", "Cebolla", "Especias"],
+              "macros": {
+                "proteinas": "35g",
+                "grasas": "12g",
+                "carbos": "10g"
+              },
+              "instrucciones": "1. Saltea la carne picada con las verduras en dados.\n2. Condimenta con pimentón y orégano."
+            },
+            {
+              "id": "p_des_12",
+              "nombre": "Huevos Fritos en Aceite de Coco",
+              "imagen": "assets/img/dieta/paleo/p_des_12.jpg",
+              "tiempo": "10 min",
+              "calorias": "380 kcal",
+              "alergenos": [],
+              "ingredientes": ["2 huevos", "1 cda aceite de coco", "Tomate natural", "Aguacate"],
+              "macros": {
+                "proteinas": "14g",
+                "grasas": "32g",
+                "carbos": "8g"
+              },
+              "instrucciones": "1. Fríe los huevos utilizando aceite de coco en lugar de girasol.\n2. Acompaña con rodajas de tomate y medio aguacate."
+            },
+            {
+              "id": "p_des_13",
+              "nombre": "Gachas Paleo (Sin Avena)",
+              "imagen": "assets/img/dieta/paleo/p_des_13.jpg",
+              "tiempo": "10 min",
+              "calorias": "360 kcal",
+              "alergenos": [],
+              "ingredientes": ["Harina de almendra", "Coco rallado", "Leche de almendras", "Frutos rojos", "Canela"],
+              "macros": {
+                "proteinas": "10g",
+                "grasas": "28g",
+                "carbos": "15g"
+              },
+              "instrucciones": "1. Calienta la leche con la harina de almendra y el coco hasta que espese como un porridge.\n2. Sirve con frutos rojos y canela."
+            },
+            {
+              "id": "p_des_14",
+              "nombre": "Pollo a la Plancha con Aguacate",
+              "imagen": "assets/img/dieta/paleo/p_des_14.jpg",
+              "tiempo": "15 min",
+              "calorias": "270 kcal",
+              "alergenos": [],
+              "ingredientes": ["100g pechuga de pollo", "Medio aguacate", "Chorro de limón", "Pimienta negra"],
+              "macros": {
+                "proteinas": "25g",
+                "grasas": "16g",
+                "carbos": "5g"
+              },
+              "instrucciones": "1. Desayuno fuerte: haz la pechuga a la plancha.\n2. Chafa el aguacate con limón y úsalo como salsa por encima del pollo."
+            },
+            {
+              "id": "p_des_15",
+              "nombre": "Té Verde y Puñado de Frutos Secos",
+              "imagen": "assets/img/dieta/paleo/p_des_15.jpg",
+              "tiempo": "5 min",
+              "calorias": "210 kcal",
+              "alergenos": [],
+              "ingredientes": ["1 taza té verde grande", "Puñado de nueces naturales", "Puñado de arándanos frescos"],
+              "macros": {
+                "proteinas": "5g",
+                "grasas": "18g",
+                "carbos": "10g"
+              },
+              "instrucciones": "1. Prepara el té verde.\n2. Un desayuno ligero basado en recolección pura: frutos secos crudos y bayas."
+            }
+          ]
+        },
+        {
+          "momento": "Almuerzo",
+          "comidas": [
+            {
+              "id": "p_alm_1",
+              "nombre": "Zoodles de Calabacín con Boloñesa",
+              "imagen": "assets/img/dieta/paleo/p_alm_1.jpg",
+              "tiempo": "25 min",
+              "calorias": "420 kcal",
+              "alergenos": [],
+              "ingredientes": ["Calabacín en espiral (zoodles)", "Carne picada de ternera", "Tomate triturado natural", "Ajo y cebolla"],
+              "macros": {
+                "proteinas": "35g",
+                "grasas": "22g",
+                "carbos": "18g"
+              },
+              "instrucciones": "1. Haz la boloñesa cocinando la carne con el tomate casero.\n2. Saltea los zoodles solo 2 minutos para que no suelten agua y mezcla."
+            },
+            {
+              "id": "p_alm_2",
+              "nombre": "Salmón con Puré de Boniato",
+              "imagen": "assets/img/dieta/paleo/p_alm_2.jpg",
+              "tiempo": "35 min",
+              "calorias": "510 kcal",
+              "alergenos": [],
+              "ingredientes": ["200g lomo de salmón", "1 boniato", "Aceite de oliva virgen extra", "Eneldo"],
+              "macros": {
+                "proteinas": "42g",
+                "grasas": "28g",
+                "carbos": "22g"
+              },
+              "instrucciones": "1. Hornea o hierve el boniato y machácalo con un tenedor y un chorrito de aceite.\n2. Haz el salmón a la plancha y espolvorea eneldo."
+            },
+            {
+              "id": "p_alm_3",
+              "nombre": "Ensalada de Pollo Asado y Aguacate",
+              "imagen": "assets/img/dieta/paleo/p_alm_3.jpg",
+              "tiempo": "15 min",
+              "calorias": "450 kcal",
+              "alergenos": [],
+              "ingredientes": ["Pechuga de pollo asada", "Lechuga variada", "Aguacate", "Tomates cherry", "Vinagreta de limón"],
+              "macros": {
+                "proteinas": "40g",
+                "grasas": "25g",
+                "carbos": "12g"
+              },
+              "instrucciones": "1. Deshilacha el pollo asado.\n2. Mezcla con los vegetales frescos en un bol grande.\n3. Aliña con aceite de oliva, limón y sal."
+            },
+            {
+              "id": "p_alm_4",
+              "nombre": "Costillas de Cerdo al Horno",
+              "imagen": "assets/img/dieta/paleo/p_alm_4.jpg",
+              "tiempo": "100 min",
+              "calorias": "580 kcal",
+              "alergenos": [],
+              "ingredientes": ["Costillar de cerdo magro", "Pimentón, ajo en polvo, orégano", "Ensalada verde"],
+              "macros": {
+                "proteinas": "45g",
+                "grasas": "40g",
+                "carbos": "5g"
+              },
+              "instrucciones": "1. Adoba las costillas con las especias secas (sin salsas procesadas).\n2. Hornea a 160°C durante 1.5 horas.\n3. Acompaña con ensalada fresca."
+            },
+            {
+              "id": "p_alm_5",
+              "nombre": "Hamburguesa Paleo (Sin Pan)",
+              "imagen": "assets/img/dieta/paleo/p_alm_5.jpg",
+              "tiempo": "20 min",
+              "calorias": "440 kcal",
+              "alergenos": [],
+              "ingredientes": ["200g carne de ternera picada", "Hojas de lechuga romana", "Tomate y cebolla roja", "Mostaza natural"],
+              "macros": {
+                "proteinas": "40g",
+                "grasas": "28g",
+                "carbos": "6g"
+              },
+              "instrucciones": "1. Cocina la hamburguesa a la parrilla.\n2. Usa dos hojas grandes de lechuga crujiente como si fueran el pan de la hamburguesa."
+            },
+            {
+              "id": "p_alm_6",
+              "nombre": "Pollo al Curry con Coliflor",
+              "imagen": "assets/img/dieta/paleo/p_alm_6.jpg",
+              "tiempo": "25 min",
+              "calorias": "480 kcal",
+              "alergenos": [],
+              "ingredientes": ["Pollo en dados", "Leche de coco", "Curry en polvo", "Coliflor rallada (falso arroz)"],
+              "macros": {
+                "proteinas": "38g",
+                "grasas": "30g",
+                "carbos": "15g"
+              },
+              "instrucciones": "1. Saltea el pollo con el curry y la leche de coco hasta espesar.\n2. Pasa la coliflor rallada un minuto por la sartén y sirve el pollo encima."
+            },
+            {
+              "id": "p_alm_7",
+              "nombre": "Atún a la Plancha y Espárragos",
+              "imagen": "assets/img/dieta/paleo/p_alm_7.jpg",
+              "tiempo": "15 min",
+              "calorias": "390 kcal",
+              "alergenos": [],
+              "ingredientes": ["Lomo de atún fresco", "Espárragos trigueros", "Aceite de oliva", "Semillas de sésamo"],
+              "macros": {
+                "proteinas": "45g",
+                "grasas": "18g",
+                "carbos": "8g"
+              },
+              "instrucciones": "1. Haz el atún a la plancha dejándolo un poco crudo por dentro.\n2. Saltea los espárragos. Espolvorea sésamo sobre el pescado."
+            },
+            {
+              "id": "p_alm_8",
+              "nombre": "Ternera Salteada con Verduras",
+              "imagen": "assets/img/dieta/paleo/p_alm_8.jpg",
+              "tiempo": "20 min",
+              "calorias": "430 kcal",
+              "alergenos": [],
+              "ingredientes": ["Tiras de ternera", "Pimiento rojo y verde", "Cebolla", "Aminos de coco (sustituto salsa soja)"],
+              "macros": {
+                "proteinas": "42g",
+                "grasas": "20g",
+                "carbos": "14g"
+              },
+              "instrucciones": "1. Saltea las tiras de ternera y las verduras en un wok.\n2. Añade los aminos de coco (soja Paleo) para dar sabor."
+            },
+            {
+              "id": "p_alm_9",
+              "nombre": "Trucha al Horno con Almendras",
+              "imagen": "assets/img/dieta/paleo/p_alm_9.jpg",
+              "tiempo": "30 min",
+              "calorias": "460 kcal",
+              "alergenos": [],
+              "ingredientes": ["1 trucha limpia", "Almendras laminadas", "Rodajas de limón", "Espinacas baby"],
+              "macros": {
+                "proteinas": "40g",
+                "grasas": "30g",
+                "carbos": "6g"
+              },
+              "instrucciones": "1. Rellena la trucha con limón y espinacas.\n2. Pon almendras laminadas por encima y hornea 20 minutos."
+            },
+            {
+              "id": "p_alm_10",
+              "nombre": "Pinchos de Pollo a la Parrilla",
+              "imagen": "assets/img/dieta/paleo/p_alm_10.jpg",
+              "tiempo": "20 min",
+              "calorias": "350 kcal",
+              "alergenos": [],
+              "ingredientes": ["Dados de pollo", "Calabacín en tacos", "Cebolla morada", "Aceite y hierbas"],
+              "macros": {
+                "proteinas": "45g",
+                "grasas": "12g",
+                "carbos": "10g"
+              },
+              "instrucciones": "1. Ensarta el pollo alternando con las verduras.\n2. Macera con aceite y hierbas y asa en la parrilla o plancha."
+            },
+            {
+              "id": "p_alm_11",
+              "nombre": "Ensalada de Gambas y Pepino",
+              "imagen": "assets/img/dieta/paleo/p_alm_11.jpg",
+              "tiempo": "15 min",
+              "calorias": "320 kcal",
+              "alergenos": [],
+              "ingredientes": ["Gambas cocidas", "Pepino picado", "Tomate", "Aguacate", "Limón y cilantro"],
+              "macros": {
+                "proteinas": "28g",
+                "grasas": "18g",
+                "carbos": "12g"
+              },
+              "instrucciones": "1. Pela las gambas y córtalas.\n2. Mezcla con el pepino, tomate y aguacate. Aliña con mucho limón y cilantro."
+            },
+            {
+              "id": "p_alm_12",
+              "nombre": "Lomo de Cerdo con Manzanas",
+              "imagen": "assets/img/dieta/paleo/p_alm_12.jpg",
+              "tiempo": "25 min",
+              "calorias": "450 kcal",
+              "alergenos": [],
+              "ingredientes": ["Medallones de lomo de cerdo", "1 manzana pelada", "Zanahorias baby", "Aceite de coco"],
+              "macros": {
+                "proteinas": "40g",
+                "grasas": "22g",
+                "carbos": "25g"
+              },
+              "instrucciones": "1. Saltea la manzana en gajos y las zanahorias.\n2. Cocina el lomo de cerdo a la plancha y acompáñalo con la guarnición agridulce."
+            },
+            {
+              "id": "p_alm_13",
+              "nombre": "Berenjenas Rellenas de Ternera",
+              "imagen": "assets/img/dieta/paleo/p_alm_13.jpg",
+              "tiempo": "45 min",
+              "calorias": "410 kcal",
+              "alergenos": [],
+              "ingredientes": ["1 berenjena", "Carne picada", "Tomate triturado", "Piñones"],
+              "macros": {
+                "proteinas": "35g",
+                "grasas": "20g",
+                "carbos": "18g"
+              },
+              "instrucciones": "1. Vacía y hornea la berenjena.\n2. Sofríe la carne con el tomate y los piñones.\n3. Rellena las mitades y hornea (sin queso)."
+            },
+            {
+              "id": "p_alm_14",
+              "nombre": "Ensalada Campera Paleo",
+              "imagen": "assets/img/dieta/paleo/p_alm_14.jpg",
+              "tiempo": "15 min",
+              "calorias": "380 kcal",
+              "alergenos": [],
+              "ingredientes": ["Atún al natural", "Huevo duro", "Tomate, cebolla, pimiento", "Aceitunas negras"],
+              "macros": {
+                "proteinas": "32g",
+                "grasas": "22g",
+                "carbos": "10g"
+              },
+              "instrucciones": "1. Pica todas las verduras finamente.\n2. Añade el atún, el huevo duro picado y las aceitunas. (Versión campera sin patata)."
+            },
+            {
+              "id": "p_alm_15",
+              "nombre": "Muslos de Pollo al Limón",
+              "imagen": "assets/img/dieta/paleo/p_alm_15.jpg",
+              "tiempo": "45 min",
+              "calorias": "520 kcal",
+              "alergenos": [],
+              "ingredientes": ["2 muslos de pollo enteros", "Ajo", "Zumo de limón", "Calabaza asada"],
+              "macros": {
+                "proteinas": "42g",
+                "grasas": "28g",
+                "carbos": "20g"
+              },
+              "instrucciones": "1. Macera los muslos con ajo picado y limón.\n2. Hornea a 200°C hasta que la piel quede crujiente.\n3. Acompaña con calabaza asada."
+            }
+          ]
+        },
+        {
+          "momento": "Cena",
+          "comidas": [
+            {
+              "id": "p_cen_1",
+              "nombre": "Caldo de Huesos y Almendras",
+              "imagen": "assets/img/dieta/paleo/p_cen_1.jpg",
+              "tiempo": "10 min",
+              "calorias": "180 kcal",
+              "alergenos": [],
+              "ingredientes": ["1 taza grande de Bone Broth (caldo de huesos)", "Puñado de almendras tostadas"],
+              "macros": {
+                "proteinas": "15g",
+                "grasas": "12g",
+                "carbos": "3g"
+              },
+              "instrucciones": "1. Calienta el caldo de huesos (la bebida estrella Paleo, rica en minerales y colágeno).\n2. Toma las almendras como acompañamiento crujiente."
+            },
+            {
+              "id": "p_cen_2",
+              "nombre": "Pescado Blanco y Judías Verdes",
+              "imagen": "assets/img/dieta/paleo/p_cen_2.jpg",
+              "tiempo": "20 min",
+              "calorias": "310 kcal",
+              "alergenos": [],
+              "ingredientes": ["250g merluza o bacalao", "Judías verdes", "Aceite de oliva", "Pimentón"],
+              "macros": {
+                "proteinas": "45g",
+                "grasas": "10g",
+                "carbos": "8g"
+              },
+              "instrucciones": "1. Cuece las judías verdes.\n2. Haz el pescado a la plancha.\n3. Aliña todo con aceite de oliva crudo y pimentón."
+            },
+            {
+              "id": "p_cen_3",
+              "nombre": "Tortilla Francesa y Calabacín",
+              "imagen": "assets/img/dieta/paleo/p_cen_3.jpg",
+              "tiempo": "15 min",
+              "calorias": "240 kcal",
+              "alergenos": [],
+              "ingredientes": ["2 huevos", "Medio calabacín", "Ajo en polvo", "Tomate cherry"],
+              "macros": {
+                "proteinas": "14g",
+                "grasas": "16g",
+                "carbos": "8g"
+              },
+              "instrucciones": "1. Haz una tortilla francesa sencilla.\n2. Pasa rodajas de calabacín y tomates cherry por la plancha como guarnición."
+            },
+            {
+              "id": "p_cen_4",
+              "nombre": "Ensalada Templada de Sepia",
+              "imagen": "assets/img/dieta/paleo/p_cen_4.jpg",
+              "tiempo": "20 min",
+              "calorias": "220 kcal",
+              "alergenos": [],
+              "ingredientes": ["Sepia limpia troceada", "Ajo y perejil", "Mezclum de lechugas", "Limón"],
+              "macros": {
+                "proteinas": "35g",
+                "grasas": "6g",
+                "carbos": "5g"
+              },
+              "instrucciones": "1. Saltea la sepia a fuego fuerte con ajo y perejil.\n2. Ponla aún caliente sobre la cama de lechugas y exprime limón."
+            },
+            {
+              "id": "p_cen_5",
+              "nombre": "Pollo Desmechado con Guacamole",
+              "imagen": "assets/img/dieta/paleo/p_cen_5.jpg",
+              "tiempo": "15 min",
+              "calorias": "360 kcal",
+              "alergenos": [],
+              "ingredientes": ["Pechuga de pollo cocida", "Aguacate, cebolla, limón (Guacamole)", "Palitos de zanahoria"],
+              "macros": {
+                "proteinas": "30g",
+                "grasas": "22g",
+                "carbos": "12g"
+              },
+              "instrucciones": "1. Desmecha el pollo cocido.\n2. Haz guacamole casero machacando el aguacate.\n3. Mezcla el pollo con el guacamole y usa zanahoria para 'dipear'."
+            },
+            {
+              "id": "p_cen_6",
+              "nombre": "Crema de Calabaza y Semillas",
+              "imagen": "assets/img/dieta/paleo/p_cen_6.jpg",
+              "tiempo": "30 min",
+              "calorias": "190 kcal",
+              "alergenos": [],
+              "ingredientes": ["Calabaza", "Puerro", "Agua o caldo", "Semillas de calabaza y girasol"],
+              "macros": {
+                "proteinas": "5g",
+                "grasas": "8g",
+                "carbos": "25g"
+              },
+              "instrucciones": "1. Hierve la calabaza y el puerro y tritúralos (sin lácteos ni patata).\n2. Tuesta las semillas en la sartén y añádelas por encima."
+            },
+            {
+              "id": "p_cen_7",
+              "nombre": "Ternera Salteada con Tomate",
+              "imagen": "assets/img/dieta/paleo/p_cen_7.jpg",
+              "tiempo": "20 min",
+              "calorias": "380 kcal",
+              "alergenos": [],
+              "ingredientes": ["Carne picada magra", "Tomate natural triturado", "Orégano fresco", "Aceitunas"],
+              "macros": {
+                "proteinas": "35g",
+                "grasas": "22g",
+                "carbos": "8g"
+              },
+              "instrucciones": "1. Sofríe la carne picada en la sartén.\n2. Añade el tomate natural, orégano y aceitunas, simulando un relleno de pizza Paleo."
+            },
+            {
+              "id": "p_cen_8",
+              "nombre": "Merluza al Papillote",
+              "imagen": "assets/img/dieta/paleo/p_cen_8.jpg",
+              "tiempo": "25 min",
+              "calorias": "280 kcal",
+              "alergenos": [],
+              "ingredientes": ["Lomo de merluza", "Puerro en tiras", "Zanahoria en tiras", "Aceite y limón"],
+              "macros": {
+                "proteinas": "35g",
+                "grasas": "10g",
+                "carbos": "10g"
+              },
+              "instrucciones": "1. Envuelve el pescado y las verduras en papel de horno (papillote).\n2. Hornea 15 min a 200°C. Se cocina al vapor en su propio jugo."
+            },
+            {
+              "id": "p_cen_9",
+              "nombre": "Sopa de Pollo (Sin Fideos)",
+              "imagen": "assets/img/dieta/paleo/p_cen_9.jpg",
+              "tiempo": "15 min",
+              "calorias": "210 kcal",
+              "alergenos": [],
+              "ingredientes": ["Caldo casero", "Trozos de pollo asado", "Apio", "Zanahoria"],
+              "macros": {
+                "proteinas": "25g",
+                "grasas": "8g",
+                "carbos": "8g"
+              },
+              "instrucciones": "1. Calienta el caldo casero.\n2. Añade el pollo y las verduras cortadas muy finas para reconfortar el estómago en la cena."
+            },
+            {
+              "id": "p_cen_10",
+              "nombre": "Ensalada Ventresca y Pepino",
+              "imagen": "assets/img/dieta/paleo/p_cen_10.jpg",
+              "tiempo": "10 min",
+              "calorias": "340 kcal",
+              "alergenos": [],
+              "ingredientes": ["1 lata ventresca de atún en aceite oliva", "Pepino", "Tomate de ensalada", "Orégano"],
+              "macros": {
+                "proteinas": "22g",
+                "grasas": "25g",
+                "carbos": "8g"
+              },
+              "instrucciones": "1. Corta el tomate y el pepino en rodajas.\n2. Dispón la ventresca de atún por encima aprovechando su propio aceite de oliva como aliño."
+            },
+            {
+              "id": "p_cen_11",
+              "nombre": "Champiñones Portobello Rellenos",
+              "imagen": "assets/img/dieta/paleo/p_cen_11.jpg",
+              "tiempo": "30 min",
+              "calorias": "270 kcal",
+              "alergenos": [],
+              "ingredientes": ["2 champiñones Portobello gigantes", "Carne picada de pavo", "Ajo y cebolla"],
+              "macros": {
+                "proteinas": "30g",
+                "grasas": "12g",
+                "carbos": "8g"
+              },
+              "instrucciones": "1. Quita el tallo a los champiñones.\n2. Saltea los tallos con el pavo y la cebolla.\n3. Rellena los champiñones y hornea 20 min."
+            },
+            {
+              "id": "p_cen_12",
+              "nombre": "Pulpo a la Plancha",
+              "imagen": "assets/img/dieta/paleo/p_cen_12.jpg",
+              "tiempo": "15 min",
+              "calorias": "240 kcal",
+              "alergenos": [],
+              "ingredientes": ["Patas de pulpo cocido", "Pimentón dulce", "Aceite de oliva", "Ensalada verde"],
+              "macros": {
+                "proteinas": "30g",
+                "grasas": "10g",
+                "carbos": "4g"
+              },
+              "instrucciones": "1. Pasa las patas de pulpo por la plancha a fuego fuerte para tostarlas.\n2. Espolvorea pimentón y acompaña con una ensalada sencilla."
+            },
+            {
+              "id": "p_cen_13",
+              "nombre": "Filete de Pavo al Romero",
+              "imagen": "assets/img/dieta/paleo/p_cen_13.jpg",
+              "tiempo": "15 min",
+              "calorias": "260 kcal",
+              "alergenos": [],
+              "ingredientes": ["Filetes de pavo finos", "Tomates cherry", "Romero fresco", "Ajo"],
+              "macros": {
+                "proteinas": "35g",
+                "grasas": "8g",
+                "carbos": "6g"
+              },
+              "instrucciones": "1. Cocina el pavo a la plancha.\n2. En la misma sartén, saltea los tomates cherry enteros con ajo y ramas de romero hasta que revienten."
+            },
+            {
+              "id": "p_cen_14",
+              "nombre": "Wok de Repollo y Pollo",
+              "imagen": "assets/img/dieta/paleo/p_cen_14.jpg",
+              "tiempo": "20 min",
+              "calorias": "290 kcal",
+              "alergenos": [],
+              "ingredientes": ["Repollo blanco picado fino", "Tiras de pollo", "Zanahoria", "Aminos de coco"],
+              "macros": {
+                "proteinas": "30g",
+                "grasas": "10g",
+                "carbos": "18g"
+              },
+              "instrucciones": "1. Saltea el pollo en el wok.\n2. Añade el repollo y la zanahoria (queda como fideos de verdura).\n3. Adereza con aminos de coco."
+            },
+            {
+              "id": "p_cen_15",
+              "nombre": "Huevos Revueltos con Espárragos",
+              "imagen": "assets/img/dieta/paleo/p_cen_15.jpg",
+              "tiempo": "15 min",
+              "calorias": "280 kcal",
+              "alergenos": [],
+              "ingredientes": ["2 huevos", "Espárragos trigueros troceados", "Pavo en dados", "Pimienta"],
+              "macros": {
+                "proteinas": "22g",
+                "grasas": "18g",
+                "carbos": "5g"
+              },
+              "instrucciones": "1. Saltea los espárragos y el pavo.\n2. Añade los huevos y revuelve.\n3. Cena ligerísima, alta en proteína y sin carbohidratos para descansar bien."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+<div class="guia-ejercicio" *ngIf="!cargando && detalleData">
+
+  <div class="hero-guia" [style.backgroundImage]="'linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7)), url(' + detalleData.imagen + ')'">
+    <h1 class="text-white">{{ detalleData.nombre }}</h1>
+    <p class="text-white">⏱ {{ detalleData.tiempo || '10 min' }} | 🔥 {{ detalleData.dificultad || 'Moderada' }}</p>
+  </div>
+
+  <div class="contenedor-columnas">
+    <div class="columna">
+      <h2 class="text-40">Músculos Clave</h2>
+      <ul class="lista-columna">
+        <li *ngFor="let m of detalleData.musculos">{{ m }}</li>
+      </ul>
+      <!-- Mensaje por si no hay músculos definidos -->
+      <p *ngIf="!detalleData.musculos || detalleData.musculos.length === 0" class="text-muted">
+        Cuerpo completo
+      </p>
+    </div>
+
+    <div class="columna">
+      <h2 class="text-40">Objetivo</h2>
+      <ul class="lista-columna">
+        <li><strong>Series : </strong> {{ detalleData.estadisticas?.series || '-' }}</li>
+        <li><strong>Reps : </strong> {{ detalleData.estadisticas?.repeticiones || '-' }}</li>
+        <li><strong>Descanso : </strong> {{ detalleData.estadisticas?.descanso || '-' }}</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="bloque-inferior">
+    <h2 class="text-40 text-center d-block">Ejecución</h2>
+    <div class="contenedor-gif mt-4 mb-2 text-center">
+
+      <div *ngIf="detalleData.gif" class="caja-gif shadow-sm mx-auto" style="max-width: 500px; border-radius: 16px; overflow: hidden; border: 2px solid var(--color-acento, #e5e7eb);">
+        <img [src]="detalleData.gif" [alt]="'Ejecución de ' + detalleData.nombre" class="img-fluid w-100" style="display: block;">
+      </div>
+
+      <div *ngIf="!detalleData.gif" class="caja-placeholder mx-auto p-4 bg-light" style="max-width: 500px; border-radius: 16px; border: 2px dashed #cbd5e1;">
+        <span class="material-symbols-outlined text-muted mb-2" style="font-size: 2.5rem;">animation</span>
+        <p class="text-muted fw-medium mb-1">Animación no disponible</p>
+        <p class="text-muted small mb-0">{{ detalleData.instrucciones || 'Mantén la postura correcta y la respiración controlada durante toda la ejecución.' }}</p>
+      </div>
+
+    </div>
+
+    <div class="text-center mt-5">
+      <button class="btn-primario px-4 py-2 fs-5">Añadir al dashboard</button>
+
+      <div class="mt-4">
+        <span (click)="volver()" class="text-muted fw-medium" style="cursor: pointer; text-decoration: underline;">
+          ← Volver a la rutina
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Pantalla de carga mientras lee de Firebase -->
+<div class="text-center py-5 mt-5" *ngIf="cargando">
+  <div class="spinner-grow" style="color: var(--color-acento);" role="status"></div>
+  <p class="mt-3 text-muted fw-medium">Preparando ejercicio...</p>
+</div>
