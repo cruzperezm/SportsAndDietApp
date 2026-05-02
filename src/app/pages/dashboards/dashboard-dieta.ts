@@ -7,13 +7,16 @@ import { DataService } from '../../services/dashboard.service';
   styleUrls: ['./Dashboard-Dieta.css']
 })
 export class DietDashboardComponent implements OnInit {
-  data: any;
+  public data: any; // Mantenemos la propiedad de datos[cite: 7]
 
   constructor(private dataService: DataService) {}
 
   ngOnInit(): void {
+    // Llamada al servicio que ahora conecta con Firestore[cite: 7]
     this.dataService.getData().subscribe(res => {
-      this.data = res;
+      if (res) {
+        this.data = res;
+      }
     });
   }
 }

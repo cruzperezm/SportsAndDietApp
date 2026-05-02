@@ -1,4 +1,5 @@
-<div id="dashboard-deporte" *ngIf="data.json">
+<!-- Cambiamos data.json por simplemente data para verificar que el objeto llegó[cite: 3] -->
+<div id="dashboard-deporte" *ngIf="data">
   <p class="text64" id="name">{{ data.usuario.nombre }}</p>
 
   <div class="rectangle-toggle">
@@ -7,10 +8,10 @@
 
   <div class="rectangle-container">
     <p class="text24" id="move-text">Moverse</p>
-    <p class="text24" id="move-calories">{{ data.deporte.resumen.moverse }} kcal</p>
+    <p class="text24" id="move-calories">{{ resumen.moverse }} kcal</p>
 
     <div class="bars-container-wrapper" style="display: flex; align-items: flex-end; gap: 4.3rem; height: 18.5rem;">
-      <div *ngFor="let day of data.deporte.semana" class="bar-unit"
+      <div *ngFor="let day of semana" class="bar-unit"
            [style.height.rem]="day.valor * 0.12"
            style="width: 2.4rem; background-color: var(--color-acento-secundario); border-radius: 1rem;">
         <p class="text16" style="margin-top: 1rem;">{{ day.dia }}</p>
@@ -18,7 +19,7 @@
     </div>
   </div>
 
-  <ng-container *ngFor="let ejercicio of data.deporte.ejercicios; let i = index">
+  <ng-container *ngFor="let ejercicio of ejercicios; let i = index">
     <p class="text20" [id]="'train-text' + (i+1)">{{ ejercicio.nombre }}</p>
     <p class="text16" [id]="'train-amount' + (i+1)">{{ ejercicio.valor }}</p>
   </ng-container>

@@ -1,5 +1,6 @@
 <div id="dashboard-dieta" *ngIf="data">
-  <p class="text64" id="name">{{ data.usuario.nombre }}</p>
+  <!-- El nombre se cargará desde Firestore una vez recibidos los datos -->
+  <p class="text64" id="name">{{ data.usuario.nombre }}</p>[cite: 9]
 
   <div class="rectangle-toggle" id="r0">
     <a class="ellipse-toggle" id="e0" routerLink="/deporte"></a>
@@ -8,26 +9,29 @@
   <div class="rectangle-container" id="r1">
     <div class="ellipse-container" id="e1">
       <div class="ellipse" id="e2">
-        <p class="text24" id="calories-goal">/{{ data.dieta.calorias_objetivo }}</p>
-        <p class="text64" id="calories-amount">{{ data.dieta.calorias_totales }}</p>
+        <p class="text24" id="calories-goal">/{{ data.dieta.calorias_objetivo }}</p>[cite: 9]
+        <p class="text64" id="calories-amount">{{ data.dieta.calorias_totales }}</p>[cite: 9]
       </div>
     </div>
 
-    <p class="text24" id="water-amount">{{ data.dieta.macros1[0].valor }}</p>
-    <p class="text16" id="water-text">{{ data.dieta.macros1[0].nombre }}</p>
+    <!-- Macros de hidratación y fibra -->
+    <p class="text24" id="water-amount">{{ data.dieta.macros1[0].valor }}</p>[cite: 9]
+    <p class="text16" id="water-text">{{ data.dieta.macros1[0].nombre }}</p>[cite: 9]
 
-    <p class="text24" id="fiber-amount">{{ data.dieta.macros1[1].valor }}</p>
-    <p class="text16" id="fiber-text">{{ data.dieta.macros1[1].nombre }}</p>
+    <p class="text24" id="fiber-amount">{{ data.dieta.macros1[1].valor }}</p>[cite: 9]
+    <p class="text16" id="fiber-text">{{ data.dieta.macros1[1].nombre }}</p>[cite: 9]
 
+    <!-- Barras de progreso de macros cargadas dinámicamente -->
     <div *ngFor="let macro of data.dieta.macros2; let i = index"
          [id]="['protein', 'fats', 'carbs', 'sodium', 'sugar'][i] + '-rectangle'"
          class="macro-track">
-      <div class="macro-fill" [style.width.%]="macro.progreso"></div>
+      <div class="macro-fill" [style.width.%]="macro.progreso"></div>[cite: 9]
     </div>
   </div>
 
+  <!-- Listado de recetas desde Firebase -->
   <ng-container *ngFor="let receta of data.dieta.recetas; let i = index">
-    <p class="text20" [id]="'diet-text' + (i+1)">{{ receta.nombre }}</p>
-    <p class="text16" [id]="'diet-amount' + (i+1)">{{ receta.valor }}</p>
+    <p class="text20" [id]="'diet-text' + (i+1)">{{ receta.nombre }}</p>[cite: 9]
+    <p class="text16" [id]="'diet-amount' + (i+1)">{{ receta.valor }}</p>[cite: 9]
   </ng-container>
 </div>

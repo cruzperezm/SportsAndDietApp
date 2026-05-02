@@ -1,16 +1,16 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { Firestore, doc, docData } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class DataService {
-  private jsonUrl = "../pages/dashboards/data.json"; // Asegúrate de colocar data.json en assets
+  constructor(private firestore: Firestore) {}
 
-  constructor(private http: HttpClient) {}
-
+  // Obtenemos los datos de un documento específico (ej. 'usuarios/id_usuario')
   getData(): Observable<any> {
-    return this.http.get(this.jsonUrl);
+    const userDocRef = doc(this.firestore, 'dashboard/deporte_data');
+    return docData(userDocRef);
   }
 }

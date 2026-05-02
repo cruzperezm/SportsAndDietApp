@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { DataService } from '../../services/dashboard.service'; // Ajusta la ruta
 
 @Component({
   selector: 'app-sport-dashboard',
   templateUrl: './Dashboard-Deporte.html',
-  styleUrls: ['./Dashboard-Deporte.css']
+  styleUrls: ['./Dashboard-Deporte.css'],
 })
 export class SportDashboardComponent implements OnInit {
   public data: any;
@@ -12,14 +12,18 @@ export class SportDashboardComponent implements OnInit {
   public semana: any[] = [];
   public resumen: any = {};
 
-  constructor(private http: HttpClient) {}
+  // Inyectamos el servicio de datos en lugar de HttpClient[cite: 1, 4]
+  constructor(private dataService: DataService) {}
 
   ngOnInit(): void {
-    this.http.get('data.json').subscribe((res: any) => {
-      this.data = res;
-      this.resumen = res.deporte.resumen;
-      this.semana = res.deporte.semana;
-      this.ejercicios = res.deporte.ejercicios;
+    // Nos suscribimos al observable que viene de Firebase[cite: 4]
+    this.dataService.getData().subscribe((res: any) => {
+      if (res) {
+        this.data = res;
+        this.resumen = res.deporte.resumen;
+        this.semana = res.deporte.semana;
+        this.ejercicios = res.deporte.ejercicios;
+      }
     });
   }
 
