@@ -3,7 +3,6 @@ import {FormBuilder, FormControl, FormGroup, FormsModule, ReactiveFormsModule, V
 import {ActivatedRoute, Router, RouterLink} from '@angular/router';
 import { BioService } from "../../services/bioservice";
 import { routes } from '../../app.routes';
-import { getAuth, onAuthStateChanged } from 'firebase/auth';
 
 @Component({
   selector: 'app-bio',
