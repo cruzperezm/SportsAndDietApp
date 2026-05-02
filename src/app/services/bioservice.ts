@@ -34,13 +34,27 @@ export class BioService {
       .then(() => console.log('🔥 network enabled'))
       .catch((err) => console.error('network error', err));
   }
-  getBooks() {
+
+  getBioData() {
     const ref = collection(this.firestore, 'bio');
     return collectionData(ref, { idField: 'id' });
   }
 
-  async addBook(bio: Biodata) {
+  async addBioData(bio: Biodata) {
     const ref = collection(this.firestore, 'bio');
     return addDoc(ref, bio);
+  }
+
+  obtenerPlanPorId(id: string): Observable<any> {
+    const bioDocRef = doc(this.firestore, `bio/${id}`);
+    return from(getDoc(bioDocRef)).pipe(
+      map((docSnap) => {
+        if (docSnap.exists()) {
+          return { id: docSnap.id, ...docSnap.data() };
+        } else {
+          return null;
+        }
+      })
+    );
   }
 }

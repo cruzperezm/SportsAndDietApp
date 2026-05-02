@@ -1,59 +1,107 @@
-# SportsAndDietApp
+---
+title: "Documentación del Proyecto: SportsAndDietApp - Sprint 3"
+author: "Salwa Madani Lazaar, Kemuel Rodriguez García, Margarita Cruz Pérez, Oscar Yavar Rodríguez"
+group: "43.5"
+---
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.5.
+# 1. Información del Proyecto
+**Nombre del Proyecto:** SportsAndDietApp
+**Componentes del Grupo:**
+* Salwa Madani Lazaar
+* Kemuel Rodriguez García
+* Margarita Cruz Perez
+* Oscar Yavar Rodríguez
 
-## Development server
+---
 
-To start a local development server, run:
+# Instrucciones de Ejecución
 
-```bash
+Este proyecto está desarrollado con Angular y requiere Node.js para funcionar localmente. Para evaluar la aplicación, sigue estos pasos:
+
+### Requisitos Previos
+* Tener instalado **Node.js** (versión 18 o superior recomendada).
+* Se recomienda tener instalado **Angular CLI** a nivel global (`npm install -g @angular/cli`).
+
+### Pasos para levantar el proyecto
+
+1. **Descomprimir:** Abre una terminal en la carpeta raíz del proyecto (donde se encuentra el archivo `package.json`).
+2. **Instalar las dependencias:** Ejecuta el siguiente comando para descargar todos los paquetes necesarios de Angular y Firebase:
+   ```
+   npm install
+   ```
+   
+Ejecutar el servidor de desarrollo: Una vez instaladas las dependencias, levanta el proyecto con:
+```
 ng serve
 ```
-
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
+Visualizar la web: Abre tu navegador de preferencia y accede a la siguiente dirección:
+```
+http://localhost:4200
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+---
 
-```bash
-ng generate --help
-```
+# 2. Diseño y Planificación (Mockups)
+Los diseños previos, prototipos de alta fidelidad y el flujo de navegación (Storyboard) están centralizados en el siguiente documento:
 
-## Building
+* **Nombre del archivo:** `Mockups.pdf`
+* **Ubicación:** `/Mockups/Mockups.pdf`
 
-To build the project run:
+---
 
-```bash
-ng build
-```
+# 3. Estructura de la Aplicación Web
+El proyecto ha evolucionado de un modelo estático a una **Single Page Application (SPA)** robusta utilizando el framework **Angular** con arquitectura de componentes Standalone.
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+**Página de Inicio (Entry Point):** Archivo `index.html` gestionado por el enrutador central (`app.routes.ts`).
+**Ubicación del Contenido:** Los archivos locales `.json` han sido migrados a una base de datos NoSQL en la nube mediante **Firebase (Firestore)**.
 
-## Running unit tests
+### Mapeo de Rutas y Funcionalidades (Angular Router)
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+| Ruta Angular | Componente | Aspectos Responsive (RWD) | Origen de Datos |
+| :--- | :--- | :--- | :---: |
+| `/home` | `HomeComponent` | Adaptación de Hero y Flex-wrap. | Local / UI |
+| `/log-in` | `LogInComponent` | Formulario escalable (100% width en móvil). | Firebase Auth |
+| `/sign-up` | `SignUpComponent` | Reestructuración de inputs táctiles. | Firebase Auth |
+| `/about-us` | `AboutUsComponent` | Reorganización de tarjetas de equipo. | Local / UI |
+| `/dietas` | `DietasInicioComponent` | Grid dinámico y buscador integrado. | **Firestore** |
+| `/dietas/plan/:id` | `DietaPlanComponent` | Grid: 2 col (Tablet) -> 1 col (Móvil). | **Firestore** |
+| `/dietas/receta/:id` | `DietaDetalleComponent` | Flex-direction: column en pantallas < 768px. | **Firestore** |
+| `/deporte` | `DeporteComponent` | Grid: 3 col (Desktop) -> 2 col (Tablet). | **Firestore** |
+| `/dashboards` | `DashboardComponent` | Panel de control con métricas adaptables. | - |
 
-```bash
-ng test
-```
+---
 
-## Running end-to-end tests
+# 4. Validaciones de Formularios
+La aplicación combina las directivas reactivas de **Angular** con la **validación nativa HTML5** para asegurar la calidad de los datos sin afectar el rendimiento:
 
-For end-to-end (e2e) testing, run:
+### Registro y Acceso (Sign Up / Log In):
+* **Campos Requeridos:** Uso de `required` y control de estado de Angular.
+* **Correo Electrónico:** Validación de formato y dominio mediante `type="email"`.
+* **Seguridad de Contraseña:** Mínimo de 8 caracteres, exigiendo al menos una letra mayúscula y un número.
+* **Feedback Visual:** El botón de envío ("Siguiente" o "Acceder") se bloquea dinámicamente si los criterios técnicos no se cumplen. Los campos erróneos muestran feedback en tiempo real.
 
-```bash
-ng e2e
-```
+---
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+# 5. Autenticación y Credenciales
+En este Sprint, se ha abandonado el almacenamiento inseguro en `localStorage` y la validación mediante JSON local. El sistema de acceso y registro está ahora preparado para integrarse de forma segura utilizando los proveedores de **Firebase Authentication**.
 
-## Additional Resources
+### Registro Dinámico
+Cualquier usuario creado en la página de **Sign Up** puede ser procesado por el backend en la nube. Los usuarios pueden iniciar sesión en la pantalla de **Log In** sin necesidad de reiniciar la aplicación, manteniendo un flujo de estado seguro y moderno.
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+---
+
+# 6. Detalles Técnicos de Implementación
+
+### 1. Framework y Arquitectura Frontend
+* **Angular Standalone:** El proyecto está construido bajo el estándar moderno de Angular, omitiendo el uso de `NgModules`. Cada sección de la página (Header, Footer, Dietas, Deportes) funciona como un componente aislado, inyectable y modular.
+* **Server-Side Rendering (SSR):** Se ha habilitado SSR mediante el motor de Vite integrado en Angular (`@angular/ssr`). Esto permite que las vistas se pre-rendericen en el servidor, mejorando los tiempos de carga (FCP) y facilitando el SEO.
+
+### 2. Base de Datos Reactiva (Firebase)
+* El dinamismo de la web está respaldado por **Firestore Database**. Se han creado servicios inyectables (ej. `DietaService`, `DeporteService`) que conectan con la base de datos de Google.
+* **RxJS y Observables:** Las peticiones a Firebase no bloquean la interfaz. Se utilizan flujos de datos asíncronos (`Observables`, `map`) para leer las colecciones (`dietas`, `deportes`).
+* **Change Detection:** Se hace uso avanzado del ciclo de vida de Angular (`ChangeDetectorRef`) para asegurar que la interfaz reaccione al instante cuando los datos se descargan desde la nube.
+
+### 3. Implementación Responsive
+El control del diseño se sigue gestionando de forma fluida y "Mobile First" mediante **Media Queries** en CSS puro:
+* **Breakpoint 1024px:** Optimización del Grid para navegación táctil en Tablet.
+* **Breakpoint 768px:** Reestructuración a una columna para dispositivos móviles, maximizando elementos interactivos y zonas de "tap".
