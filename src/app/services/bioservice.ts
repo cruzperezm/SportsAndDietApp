@@ -10,8 +10,10 @@ import {
   collectionData,
   enableNetwork,
   getFirestore,
+  getDoc,
 } from '@angular/fire/firestore';
 import { Injectable } from '@angular/core';
+import { from, map, Observable } from 'rxjs';
 
 interface Biodata {
   id?: number;
