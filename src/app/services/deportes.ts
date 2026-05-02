@@ -1,89 +1,53 @@
 import { Injectable } from '@angular/core';
-import {
-  Firestore,
-  collection,
-  getDocs,
-  query,
-  doc,
-  setDoc,
-  docData,
-} from '@angular/fire/firestore';
-import { Observable, from, map } from 'rxjs';
-import { getDoc } from '@angular/fire/firestore';
+import { HttpClient } from '@angular/common/http';
+import { Observable, map } from 'rxjs';
 
-@Injectable({
-  providedIn: 'root',
-})
+@Injectable({ providedIn: 'root' })
 export class DeporteService {
-  constructor(private firestore: Firestore) {}
+  private jsonUrl = 'assets/data/deportes.json';
 
-  getDeportes(): Observable<any[]> {
-    const deportesRef = collection(this.firestore, 'deportes');
-    const q = query(deportesRef);
+  constructor(private http: HttpClient) {}
 
-    // Convertimos la promesa de Firebase en un Observable de RxJS manualmente
-    return from(getDocs(q)).pipe(
-      map((snapshot) => {
-        const datos = snapshot.docs.map((doc) => ({
-          id: doc.id,
-          ...doc.data(),
-        }));
-        console.log('--- Datos recuperados de Firestore ---', datos);
-        return datos;
-      }),
+  obtenerPlanPorId(id: string | null): Observable<any> {
+    return this.http.get<any>(this.jsonUrl).pipe(
+      map(data => {
+        const idBuscado = String(id).trim();
+        return data.deportes.find((d: any) => String(d.id) === idBuscado);
+      })
     );
   }
 
-  obtenerPlanPorId(id: string): Observable<any> {
-    const deporteDocRef = doc(this.firestore, `deportes/${id}`);
-    return from(getDoc(deporteDocRef)).pipe(
-      map((docSnap) => {
-        if (docSnap.exists()) {
-          return { id: docSnap.id, ...docSnap.data() };
-        } else {
-          console.error('¡El documento no existe en Firebase!');
-          return null;
-        }
-      }),
-    );
-  }
-
-  obtenerEjercicioPorId(id: string): Observable<any> {
-    return this.getDeportes().pipe(
-      map(deportes => {
+  obtenerEjercicioPorId(id: string | null): Observable<any> {
+    return this.http.get<any>(this.jsonUrl).pipe(
+      map(data => {
         let ejercicioEncontrado = null;
-        deportes.forEach(deporte => {
-          if (deporte.plan) {
-            deporte.plan.forEach((p: any) => {
-              const ej = p.ejercicios.find((e: any) => e.id == id);
-              if (ej) ejercicioEncontrado = ej;
-            });
-          }
+        data.deportes.forEach((dep: any) => {
+          dep.plan.forEach((fase: any) => {
+            const ej = fase.ejercicios.find((e: any) => String(e.id) === String(id));
+            if (ej) ejercicioEncontrado = ej;
+          });
         });
         return ejercicioEncontrado;
       })
     );
   }
 
-  async migrarDatosMasivos(datosJson: any[]) {
-    try {
-      const deportesRef = collection(this.firestore, 'deportes');
-      for (const deporte of datosJson) {
-        const docRef = doc(deportesRef, deporte.id.toString());
-        await setDoc(docRef, deporte);
-        console.log(`✅ Migrado: ${deporte.titulo}`);
-      }
-      alert('¡Migración masiva completada con éxito!');
-    } catch (error) {
-      console.error('Error en la migración:', error);
-    }
-  }
-
   buscarEjercicios(termino: string): Observable<any[]> {
-    return this.getDeportes().pipe(
-      map((deportes) =>
-        deportes.filter((d) => d.titulo.toLowerCase().includes(termino.toLowerCase())),
-      ),
+    return this.http.get<any>(this.jsonUrl).pipe(
+      map(data => {
+        const resultados: any[] = [];
+        const busqueda = termino.toLowerCase();
+        data.deportes.forEach((dep: any) => {
+          dep.plan.forEach((fase: any) => {
+            fase.ejercicios.forEach((e: any) => {
+              if (e.nombre.toLowerCase().includes(busqueda)) {
+                resultados.push(e);
+              }
+            });
+          });
+        });
+        return resultados;
+      })
     );
   }
 }

@@ -1,47 +1,54 @@
-import { Router } from '@angular/router';
-import { DeporteService } from '../../../services/deportes';
-import datosDeportes from '../../../../assets/data/deportes.json';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
+import { Router, RouterModule } from '@angular/router';
+import { DeporteService } from '../../../services/deportes';
 
 @Component({
   selector: 'app-deportes-inicio',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './deportes-inicio.html',
-  styleUrls: ['./deportes-inicio.css']
+  styleUrl: './deportes-inicio.css',
 })
-
 export class DeportesInicioComponent implements OnInit {
+  //variables del Buscador
   modoBusqueda: boolean = false;
   resultados: any[] = [];
   textoBusqueda: string = '';
 
-  planesDeportivos: any[] = [];
+  planesDeportivos = [
+    {
+      id: 1,
+      titulo: 'HIIT',
+      imagen: '/assets/img/deporte/portadas/portada-1.jpg',
+    },
+    {
+      id: 2,
+      titulo: 'Aumento de Masa Muscular',
+      imagen: '/assets/img/deporte/portadas/portada-2.jpg',
+    },
+    { id: 3, titulo: 'Flexibilidad', imagen: '/assets/img/deporte/portadas/portada-3.jpg' },
+    { id: 4, titulo: 'Potencia', imagen: '/assets/img/deporte/portadas/portada-4.jpg' },
+    { id: 5, titulo: 'Resistencia', imagen: '/assets/img/deporte/portadas/portada-5.jpg' },
+    {
+      id: 6,
+      titulo: 'Entrenamiento en Casa',
+      imagen: '/assets/img/deporte/portadas/portada-6.jpg',
+    },
+  ];
 
   constructor(
-    private deporteService: DeporteService,
     private router: Router,
-    private cdr: ChangeDetectorRef
+    private deporteService: DeporteService,
   ) {}
 
-  ngOnInit() {
-    this.deporteService.getDeportes().subscribe({
-      next: (datos) => {
-        console.log('DATOS LLEGANDO:', datos);
-        this.planesDeportivos = datos;
-        this.cdr.detectChanges();
-      },
-      error: (err) => console.error('ERROR CRÍTICO:', err)
-    });
-  }
+  ngOnInit() {}
 
   irAlPlan(id: number) {
     this.router.navigate(['/deportes/plan', id]);
   }
 
-
+  //metodos del buscador
   onBuscar(event: any) {
     this.textoBusqueda = event.target.value;
 
