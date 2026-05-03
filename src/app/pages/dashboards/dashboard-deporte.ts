@@ -1,6 +1,8 @@
-import { Component, OnInit, inject } from '@angular/core';
+import { Component, OnInit, inject, ChangeDetectorRef } from '@angular/core';
 import { Firestore, doc, onSnapshot } from '@angular/fire/firestore';
 import { Unsubscribe } from 'firebase/firestore';
+import { RouterLink } from '@angular/router';
+import { NgForOf, NgIf } from '@angular/common';
 
 interface SportData {
   usuario: { nombre: string };
@@ -14,11 +16,14 @@ interface SportData {
 @Component({
   selector: 'app-dashboard-deporte',
   templateUrl: './Dashboard-Deporte.html',
-  styleUrls: ['./Dashboard-Deporte.css']
+  imports: [RouterLink, NgIf, NgForOf],
+  styleUrls: ['./Dashboard-Deporte.css'],
 })
 export class DashboardDeporteComponent implements OnInit {
   private firestore = inject(Firestore);
   private unsubscribe?: Unsubscribe;
+
+  constructor(private cdr: ChangeDetectorRef) {}
 
   weekData: Array<{ dia: string; valor: number }> = [];
 
@@ -30,11 +35,16 @@ export class DashboardDeporteComponent implements OnInit {
   standText = '';
   standCalories = '';
 
-  trainText1 = ''; trainAmount1 = '';
-  trainText2 = ''; trainAmount2 = '';
-  trainText3 = ''; trainAmount3 = '';
-  trainText4 = ''; trainAmount4 = '';
-  trainText5 = ''; trainAmount5 = '';
+  trainText1 = '';
+  trainAmount1 = '';
+  trainText2 = '';
+  trainAmount2 = '';
+  trainText3 = '';
+  trainAmount3 = '';
+  trainText4 = '';
+  trainAmount4 = '';
+  trainText5 = '';
+  trainAmount5 = '';
 
   ngOnInit() {
     const docRef = doc(this.firestore, 'dashboard-data/deporte');
@@ -46,6 +56,8 @@ export class DashboardDeporteComponent implements OnInit {
       }
     });
   }
+
+
 
   ngOnDestroy() {
     this.unsubscribe?.();
@@ -65,9 +77,10 @@ export class DashboardDeporteComponent implements OnInit {
 
     const exercises = data.deporte.ejercicios || [];
     for (let i = 1; i <= 5; i++) {
-      const exercise = exercises[i-1];
+      const exercise = exercises[i - 1];
       (this as any)[`trainText${i}`] = exercise?.nombre || '';
       (this as any)[`trainAmount${i}`] = exercise?.valor || '';
     }
+    this.cdr.detectChanges();
   }
 }
