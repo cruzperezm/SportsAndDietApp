@@ -114,28 +114,39 @@ export class SignupComponent implements AfterViewInit {
   }
 
   signup() {
+    // 1. AVISO VISUAL SI EL FORMULARIO ES INVÁLIDO (El asesino silencioso)
     if (this.signUpForm.invalid) {
       this.signUpForm.markAllAsTouched();
+      this.errorMessage =
+        'Revisa los campos. La contraseña requiere 8 caracteres, 1 mayúscula y 1 número.';
+      console.warn('El formulario es inválido. Estado de los campos:', this.signUpForm.value);
       return;
     }
 
     this.isLoading = true;
     this.errorMessage = '';
+    console.log('Enviando datos a Firebase...');
 
     this.authService.register(this.signUpForm.value).subscribe({
       next: () => {
         this.isLoading = false;
+        console.log('¡Usuario registrado y guardado en Firestore con éxito!');
         this.ngZone.run(() => void this.router.navigate(['/bio']));
       },
       error: (err: any) => {
         this.isLoading = false;
+        // 2. CHIVATO DE ERRORES DE FIREBASE
+        console.error('Firebase ha rechazado el registro. Motivo exacto:', err);
 
-        // Aquí está la magia de la redirección y el aviso seguro
         if (err.code === 'auth/email-already-in-use') {
           this.errorMessage =
-            'Este correo ya está registrado (posiblemente con Google). Por favor, ve a "Inicia sesión" para entrar.';
+            'Este correo ya está registrado. Por favor, ve a "Inicia sesión" para entrar.';
+        } else if (err.code === 'permission-denied') {
+          this.errorMessage =
+            'Error de permisos: Firebase Firestore bloqueó la escritura. Revisa tus reglas.';
         } else {
-          this.errorMessage = 'Error al conectar con la base de datos. Inténtalo de nuevo.';
+          this.errorMessage =
+            err.message || 'Error al conectar con la base de datos. Inténtalo de nuevo.';
         }
       },
     });
