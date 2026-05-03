@@ -32,7 +32,9 @@
     </div>
   </div>
 
+
   <div class="resultados-grid" *ngIf="modoBusqueda">
+
     <div class="d-flex justify-content-between align-items-center mb-5">
       <h2 class="fw-bold m-0" style="color: var(--color-texto);">Resultados para "{{ textoBusqueda }}"</h2>
       <span class="text-muted fw-medium">{{ resultados.length }} recetas encontradas</span>
@@ -45,6 +47,7 @@
     </div>
 
     <div class="row row-cols-1 row-cols-lg-2 g-4" *ngIf="resultados.length > 0">
+
       <div class="col" *ngFor="let receta of resultados">
         <div class="tarjeta-resultado d-flex" (click)="irAReceta(receta.id)" style="cursor: pointer;">
           <div class="imagen-resultado" [style.backgroundImage]="'url(' + receta.imagen + ')'"></div>
@@ -62,9 +65,12 @@
               <strong>Ingredientes:</strong> {{ receta.ingredientes?.join(', ') }}
             </p>
           </div>
+
         </div>
       </div>
+
     </div>
+
   </div>
 
 </section>
