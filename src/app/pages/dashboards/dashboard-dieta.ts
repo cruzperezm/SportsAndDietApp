@@ -1,7 +1,6 @@
-import { Component, OnInit, inject } from '@angular/core';
-import { Firestore, doc, docSnapshots } from '@angular/fire/firestore';
-import { Observable } from 'rxjs';
-import { map, filter } from 'rxjs';
+import { Component, OnInit, inject, OnDestroy } from '@angular/core';
+import { Firestore, doc, onSnapshot } from '@angular/fire/firestore';
+import { Unsubscribe } from 'firebase/firestore';
 
 interface DietData {
   usuario: { nombre: string };
@@ -19,8 +18,9 @@ interface DietData {
   templateUrl: './Dashboard-Dieta.html',
   styleUrls: ['./Dashboard-Dieta.css']
 })
-export class DashboardDietaComponent implements OnInit {
+export class DashboardDietaComponent implements OnInit, OnDestroy {
   private firestore = inject(Firestore);
+  private unsubscribe?: Unsubscribe;
 
   userName = '';
   caloriesGoal = '';
@@ -57,54 +57,58 @@ export class DashboardDietaComponent implements OnInit {
   sugarProgress = 0;
 
   ngOnInit() {
-    const dataRef = doc(this.firestore, 'dashboard-data/dieta');
+    const docRef = doc(this.firestore, 'dashboard-data/dieta');
 
-    const data$ = docSnapshots(dataRef).pipe(
-      map(snapshot => snapshot.data() as DietData | undefined)
-    );
+    this.unsubscribe = onSnapshot(docRef, (snapshot) => {
+      const data = snapshot.data() as DietData;
+      if (data) {
+        this.updateData(data);
+      }
+    });
+  }
 
-    data$.pipe(
-      filter(data => !!data),
-      map((data: DietData) => {
-        this.userName = data.usuario.nombre;
-        this.caloriesGoal = data.dieta.calorias_objetivo;
-        this.caloriesAmount = data.dieta.calorias_totales;
+  ngOnDestroy() {
+    this.unsubscribe?.();
+  }
 
-        this.waterAmount = data.dieta.macros1[0]?.valor || '';
-        this.waterText = data.dieta.macros1[0]?.nombre || '';
-        this.fiberAmount = data.dieta.macros1[1]?.valor || '';
-        this.fiberText = data.dieta.macros1[1]?.nombre || '';
+  private updateData(data: DietData) {
+    this.userName = data.usuario.nombre;
+    this.caloriesGoal = data.dieta.calorias_objetivo;
+    this.caloriesAmount = data.dieta.calorias_totales;
 
-        const m2 = data.dieta.macros2;
-        this.proteinAmount = m2[0]?.valor || '';
-        this.proteinText = m2[0]?.nombre || '';
-        this.fatsAmount = m2[1]?.valor || '';
-        this.fatsText = m2[1]?.nombre || '';
-        this.carbsAmount = m2[2]?.valor || '';
-        this.carbsText = m2[2]?.nombre || '';
-        this.sodiumAmount = m2[3]?.valor || '';
-        this.sodiumText = m2[3]?.nombre || '';
-        this.sugarAmount = m2[4]?.valor || '';
-        this.sugarText = m2[4]?.nombre || '';
+    this.waterAmount = data.dieta.macros1[0]?.valor || '';
+    this.waterText = data.dieta.macros1[0]?.nombre || '';
+    this.fiberAmount = data.dieta.macros1[1]?.valor || '';
+    this.fiberText = data.dieta.macros1[1]?.nombre || '';
 
-        this.proteinProgress = m2[0]?.progreso || 0;
-        this.fatsProgress = m2[1]?.progreso || 0;
-        this.carbsProgress = m2[2]?.progreso || 0;
-        this.sodiumProgress = m2[3]?.progreso || 0;
-        this.sugarProgress = m2[4]?.progreso || 0;
+    const m2 = data.dieta.macros2;
+    this.proteinAmount = m2[0]?.valor || '';
+    this.proteinText = m2[0]?.nombre || '';
+    this.fatsAmount = m2[1]?.valor || '';
+    this.fatsText = m2[1]?.nombre || '';
+    this.carbsAmount = m2[2]?.valor || '';
+    this.carbsText = m2[2]?.nombre || '';
+    this.sodiumAmount = m2[3]?.valor || '';
+    this.sodiumText = m2[3]?.nombre || '';
+    this.sugarAmount = m2[4]?.valor || '';
+    this.sugarText = m2[4]?.nombre || '';
 
-        const recetas = data.dieta.recetas;
-        this.dietAmount1 = recetas[0]?.valor || '';
-        this.dietText1 = recetas[0]?.nombre || '';
-        this.dietAmount2 = recetas[1]?.valor || '';
-        this.dietText2 = recetas[1]?.nombre || '';
-        this.dietAmount3 = recetas[2]?.valor || '';
-        this.dietText3 = recetas[2]?.nombre || '';
-        this.dietAmount4 = recetas[3]?.valor || '';
-        this.dietText4 = recetas[3]?.nombre || '';
-        this.dietAmount5 = recetas[4]?.valor || '';
-        this.dietText5 = recetas[4]?.nombre || '';
-      })
-    ).subscribe();
+    this.proteinProgress = m2[0]?.progreso || 0;
+    this.fatsProgress = m2[1]?.progreso || 0;
+    this.carbsProgress = m2[2]?.progreso || 0;
+    this.sodiumProgress = m2[3]?.progreso || 0;
+    this.sugarProgress = m2[4]?.progreso || 0;
+
+    const recetas = data.dieta.recetas;
+    this.dietAmount1 = recetas[0]?.valor || '';
+    this.dietText1 = recetas[0]?.nombre || '';
+    this.dietAmount2 = recetas[1]?.valor || '';
+    this.dietText2 = recetas[1]?.nombre || '';
+    this.dietAmount3 = recetas[2]?.valor || '';
+    this.dietText3 = recetas[2]?.nombre || '';
+    this.dietAmount4 = recetas[3]?.valor || '';
+    this.dietText4 = recetas[3]?.nombre || '';
+    this.dietAmount5 = recetas[4]?.valor || '';
+    this.dietText5 = recetas[4]?.nombre || '';
   }
 }

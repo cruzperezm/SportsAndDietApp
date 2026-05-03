@@ -1,7 +1,6 @@
 import { Component, OnInit, inject } from '@angular/core';
-import { Firestore, collection, doc, docSnapshots } from '@angular/fire/firestore';
-import { Observable } from 'rxjs';
-import { map, filter } from 'rxjs';
+import { Firestore, doc, onSnapshot } from '@angular/fire/firestore';
+import { Unsubscribe } from 'firebase/firestore';
 
 interface SportData {
   usuario: { nombre: string };
@@ -19,6 +18,7 @@ interface SportData {
 })
 export class DashboardDeporteComponent implements OnInit {
   private firestore = inject(Firestore);
+  private unsubscribe?: Unsubscribe;
 
   weekData: Array<{ dia: string; valor: number }> = [];
 
@@ -37,33 +37,37 @@ export class DashboardDeporteComponent implements OnInit {
   trainText5 = ''; trainAmount5 = '';
 
   ngOnInit() {
-    const dataRef = doc(this.firestore, 'dashboard-data/deporte');
+    const docRef = doc(this.firestore, 'dashboard-data/deporte');
 
-    const data$ = docSnapshots(dataRef).pipe(
-      map(snapshot => snapshot.data() as SportData | undefined)
-    );
+    this.unsubscribe = onSnapshot(docRef, (snapshot) => {
+      const data = snapshot.data() as SportData;
+      if (data) {
+        this.updateData(data);
+      }
+    });
+  }
 
-    data$.pipe(
-      filter(data => !!data),
-      map((data: SportData) => {
-        this.userName = data.usuario.nombre;
+  ngOnDestroy() {
+    this.unsubscribe?.();
+  }
 
-        this.moveText = data.actividades[0]?.nombre || '';
-        this.moveCalories = data.actividades[0]?.valor || '';
-        this.exerciseText = data.actividades[1]?.nombre || '';
-        this.exerciseCalories = data.actividades[1]?.valor || '';
-        this.standText = data.actividades[2]?.nombre || '';
-        this.standCalories = data.actividades[2]?.valor || '';
+  private updateData(data: SportData) {
+    this.userName = data.usuario.nombre;
 
-        this.weekData = data.deporte.semana || [];
+    this.moveText = data.actividades[0]?.nombre || '';
+    this.moveCalories = data.actividades[0]?.valor || '';
+    this.exerciseText = data.actividades[1]?.nombre || '';
+    this.exerciseCalories = data.actividades[1]?.valor || '';
+    this.standText = data.actividades[2]?.nombre || '';
+    this.standCalories = data.actividades[2]?.valor || '';
 
-        const exercises = data.deporte.ejercicios || [];
-        for (let i = 1; i <= 5; i++) {
-          const exercise = exercises[i-1];
-          (this as any)[`trainText${i}`] = exercise?.nombre || '';
-          (this as any)[`trainAmount${i}`] = exercise?.valor || '';
-        }
-      })
-    ).subscribe();
+    this.weekData = data.deporte.semana || [];
+
+    const exercises = data.deporte.ejercicios || [];
+    for (let i = 1; i <= 5; i++) {
+      const exercise = exercises[i-1];
+      (this as any)[`trainText${i}`] = exercise?.nombre || '';
+      (this as any)[`trainAmount${i}`] = exercise?.valor || '';
+    }
   }
 }
