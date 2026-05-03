@@ -1,31 +1,54 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Observable, map } from 'rxjs';
+import { Firestore, collection, getDocs, query, doc, getDoc } from '@angular/fire/firestore';
+import { Observable, from, map } from 'rxjs';
 
-@Injectable({ providedIn: 'root' })
+@Injectable({
+  providedIn: 'root'
+})
 export class DeporteService {
-  private jsonUrl = 'assets/data/deportes.json';
 
-  constructor(private http: HttpClient) {}
+  constructor(private firestore: Firestore) {}
+
+  getDeportes(): Observable<any[]> {
+    const deportesRef = collection(this.firestore, 'deportes');
+    const q = query(deportesRef);
+
+    return from(getDocs(q)).pipe(
+      map((snapshot) => {
+        return snapshot.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }));
+      })
+    );
+  }
 
   obtenerPlanPorId(id: string | null): Observable<any> {
-    return this.http.get<any>(this.jsonUrl).pipe(
-      map(data => {
-        const idBuscado = String(id).trim();
-        return data.deportes.find((d: any) => String(d.id) === idBuscado);
+    if (!id) return from([null]);
+    const deporteDocRef = doc(this.firestore, `deportes/${id}`);
+
+    return from(getDoc(deporteDocRef)).pipe(
+      map((docSnap) => {
+        if (docSnap.exists()) {
+          return { id: docSnap.id, ...docSnap.data() };
+        } else {
+          return null;
+        }
       })
     );
   }
 
   obtenerEjercicioPorId(id: string | null): Observable<any> {
-    return this.http.get<any>(this.jsonUrl).pipe(
-      map(data => {
+    return this.getDeportes().pipe(
+      map(deportes => {
         let ejercicioEncontrado = null;
-        data.deportes.forEach((dep: any) => {
-          dep.plan.forEach((fase: any) => {
-            const ej = fase.ejercicios.find((e: any) => String(e.id) === String(id));
-            if (ej) ejercicioEncontrado = ej;
-          });
+        deportes.forEach(dep => {
+          if (dep.plan) {
+            dep.plan.forEach((fase: any) => {
+              const ej = fase.ejercicios.find((e: any) => String(e.id) === String(id));
+              if (ej) ejercicioEncontrado = ej;
+            });
+          }
         });
         return ejercicioEncontrado;
       })
@@ -33,18 +56,21 @@ export class DeporteService {
   }
 
   buscarEjercicios(termino: string): Observable<any[]> {
-    return this.http.get<any>(this.jsonUrl).pipe(
-      map(data => {
+    return this.getDeportes().pipe(
+      map(deportes => {
         const resultados: any[] = [];
         const busqueda = termino.toLowerCase();
-        data.deportes.forEach((dep: any) => {
-          dep.plan.forEach((fase: any) => {
-            fase.ejercicios.forEach((e: any) => {
-              if (e.nombre.toLowerCase().includes(busqueda)) {
-                resultados.push(e);
-              }
+
+        deportes.forEach(dep => {
+          if (dep.plan) {
+            dep.plan.forEach((fase: any) => {
+              fase.ejercicios.forEach((e: any) => {
+                if (e.nombre.toLowerCase().includes(busqueda)) {
+                  resultados.push({ ...e, nombreDeporte: dep.nombre });
+                }
+              });
             });
-          });
+          }
         });
         return resultados;
       })
