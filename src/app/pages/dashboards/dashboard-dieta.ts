@@ -16,8 +16,8 @@ interface DietData {
 
 @Component({
   selector: 'app-dashboard-dieta',
-  templateUrl: './dashboard-dieta.component.html',
-  styleUrls: ['./dashboard-dieta.component.css']
+  templateUrl: './dashboard-dieta.html',
+  styleUrls: ['./dashboard-dieta.css']
 })
 export class DashboardDietaComponent implements OnInit {
   data$!: Observable<DietData>;
