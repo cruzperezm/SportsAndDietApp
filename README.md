@@ -2,6 +2,7 @@
 title: "Documentación del Proyecto: SportsAndDietApp - Sprint 3"
 author: "Salwa Madani Lazaar, Kemuel Rodriguez García, Margarita Cruz Pérez, Oscar Yavar Rodríguez"
 group: "43.5"
+powerpoint: https://canva.link/f1urj5b7rz9gdfe
 ---
 
 # 1. Información del Proyecto
