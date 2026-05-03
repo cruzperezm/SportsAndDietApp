@@ -1,47 +1,80 @@
-import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { BehaviorSubject, Observable, tap } from 'rxjs';
+import { Injectable, inject } from '@angular/core';
+import {
+  Auth,
+  signInWithEmailAndPassword,
+  createUserWithEmailAndPassword,
+  GoogleAuthProvider,
+  signInWithCredential,
+  signOut,
+  authState,
+} from '@angular/fire/auth';
+import { Firestore, doc, setDoc, getDoc } from '@angular/fire/firestore';
+import { from, Observable, map, switchMap } from 'rxjs';
 
 @Injectable({ providedIn: 'root' })
 export class AuthService {
-  private apiUrl = 'http://localhost:3000/api/auth';
+  private auth = inject(Auth);
+  private firestore = inject(Firestore);
 
-  private loggedIn = new BehaviorSubject<boolean>(this.hasToken());
+  isLoggedIn$: Observable<boolean> = authState(this.auth).pipe(map((user) => !!user));
 
-  isLoggedIn$ = this.loggedIn.asObservable();
-
-  constructor(private http: HttpClient) {}
-
-  hasToken(): boolean {0
-    // 1. Preguntamos: "¿Existe localStorage en este entorno?"
-    if (typeof localStorage !== 'undefined') {
-      // Si existe (estamos en el navegador), hacemos lo normal
-      return !!localStorage.getItem('token');
-      // (nota: si tu variable en el localStorage se llama distinto a 'token', pon tu nombre)
-    }
-    // 2. Si NO existe (estamos en el servidor oculto), asumimos que no hay sesión
-    return false;
-  }
-
-  register(user: any): Observable<any> {
-    return this.http.post(`${this.apiUrl}/register`, user);
-  }
-
-  login(credentials: any): Observable<any> {
-    return this.http.post<any>(`${this.apiUrl}/login`, credentials).pipe(
-      tap(res => {
-        localStorage.setItem('token', res.token);
-        this.loggedIn.next(true);
-      })
+  register(userForm: any): Observable<any> {
+    return from(createUserWithEmailAndPassword(this.auth, userForm.email, userForm.password)).pipe(
+      switchMap(async (userCredential) => {
+        const user = userCredential.user;
+        const userRef = doc(this.firestore, `users/${user.uid}`);
+        await setDoc(userRef, {
+          uid: user.uid,
+          email: user.email,
+          displayName: userForm.username,
+          createdAt: new Date(),
+          needsOnboarding: true,
+        });
+        return { user, needsOnboarding: true };
+      }),
     );
   }
 
-  getToken() {
-    return localStorage.getItem('token');
+  googleAuth(idToken: string): Observable<any> {
+    const credential = GoogleAuthProvider.credential(idToken);
+    return from(signInWithCredential(this.auth, credential)).pipe(
+      switchMap(async (userCredential) => {
+        const user = userCredential.user;
+        const userRef = doc(this.firestore, `users/${user.uid}`);
+        const userSnap = await getDoc(userRef);
+
+        if (!userSnap.exists()) {
+          await setDoc(userRef, {
+            uid: user.uid,
+            email: user.email,
+            displayName: user.displayName,
+            photoURL: user.photoURL,
+            createdAt: new Date(),
+            needsOnboarding: true,
+          });
+          return { user, needsOnboarding: true };
+        }
+        return { user, needsOnboarding: userSnap.data()['needsOnboarding'] };
+      }),
+    );
   }
 
-  logout() {
-    localStorage.removeItem('token');
-    this.loggedIn.next(false);
+  login(credentials: any): Observable<any> {
+    return from(
+      signInWithEmailAndPassword(this.auth, credentials.email, credentials.password),
+    ).pipe(
+      switchMap(async (userCredential) => {
+        const userRef = doc(this.firestore, `users/${userCredential.user.uid}`);
+        const userSnap = await getDoc(userRef);
+        return {
+          user: userCredential.user,
+          needsOnboarding: userSnap.exists() ? userSnap.data()['needsOnboarding'] : true,
+        };
+      }),
+    );
+  }
+
+  logout(): Observable<void> {
+    return from(signOut(this.auth));
   }
 }

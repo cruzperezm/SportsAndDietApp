@@ -6,7 +6,7 @@ import { RouterLink } from '@angular/router';
   standalone: true,
   imports: [RouterLink],
   templateUrl: './home.html',
-  styleUrl: './home.css'
+  styleUrl: './home.css',
 })
 export class HomeComponent implements AfterViewInit {
   // Capturamos el elemento de video del HTML
@@ -14,8 +14,8 @@ export class HomeComponent implements AfterViewInit {
 
   // Añade aquí todos los videos que quieras reproducir en orden
   videos: string[] = [
-    '/shared/videos/video-title-1.mp4',
-    '/shared/videos/video-title-2.mp4' // <- Cambia esto por la ruta real de tu segundo video
+    '/assets/videos/video-title-1.mp4',
+    '/assets/videos/video-title-2.mp4',
   ];
 
   currentVideoIndex: number = 0;
@@ -33,7 +33,7 @@ export class HomeComponent implements AfterViewInit {
       videoPlayer.muted = true;
 
       // Forzamos la reproducción programáticamente
-      videoPlayer.play().catch(err => {
+      videoPlayer.play().catch((err) => {
         console.warn('El navegador bloqueó el autoplay. Se requiere interacción previa.', err);
       });
     }

@@ -1,0 +1,44 @@
+<div class="page-wrapper">
+  <main class="wireframe-card">
+
+    <div class="logo-placeholder">
+      <!-- Avatar dinámico que nunca falla (genera un icono gris genérico) -->
+      <img src="https://ui-avatars.com/api/?name=Usuario&background=EAEAEA&color=4B5563&rounded=true&size=128" alt="Foto de usuario" class="user-avatar" />
+    </div>
+
+    <form [formGroup]="loginForm" (ngSubmit)="login()" style="width: 100%;">
+
+      <div class="input-field">
+        <input formControlName="email" type="email" placeholder="Correo Electrónico"
+               [class.is-invalid]="emailControl?.invalid && emailControl?.touched" />
+      </div>
+
+      <div class="input-field">
+        <input formControlName="password" type="password" placeholder="Contraseña"
+               [class.is-invalid]="passwordControl?.invalid && passwordControl?.touched" />
+      </div>
+
+      <p *ngIf="errorMessage" class="msg-error">{{ errorMessage }}</p>
+
+      <div class="button-row">
+        <a routerLink="/home" class="wire-btn">Atrás</a>
+        <button type="submit" class="wire-btn"
+                [class.btn-ready]="loginForm.valid"
+                [disabled]="isLoading">
+          {{ isLoading ? 'Cargando...' : 'Siguiente' }}
+        </button>
+      </div>
+
+      <div class="text-links">
+        <p>¿No tienes una cuenta? | <a routerLink="/signup">Crear cuenta</a></p>
+        <p style="margin-top: 5px; color: #6B7280;">También puedes iniciar sesión con:</p>
+      </div>
+
+      <!-- Contenedor protegido: se reserva un mínimo de alto para que Google pinte el iframe dentro -->
+      <div style="display: flex; justify-content: center; width: 100%; min-height: 50px; margin-top: 10px;">
+        <div id="google-btn"></div>
+      </div>
+
+    </form>
+  </main>
+</div>

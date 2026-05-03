@@ -1,0 +1,142 @@
+/* Movemos las variables al contenedor principal para evitar problemas de encapsulación en Angular */
+.page-wrapper {
+  --color-deporte: #FF9800;
+  --color-dieta: #4CAF50;
+  --color-error: #EF4444;
+  --color-bg-page: #E5E7EB; /* Gris un poco más oscuro para que la tarjeta blanca Destaque */
+  --color-bg-card: #FFFFFF;
+  --gray-element: #F3F4F6;
+  --gray-border: #D1D5DB;
+  --gray-placeholder: #9CA3AF;
+  --text-main: #111827;
+
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-bg-page) !important;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  margin: 0;
+}
+
+/* Añadimos .page-wrapper delante de todo para vencer cualquier estilo global de Bootstrap o Tailwind */
+.page-wrapper .wireframe-card {
+  background-color: var(--color-bg-card) !important;
+  width: 100%;
+  min-width: 400px;
+  max-width: 500px; /* Tamaño ideal de tarjeta */
+  padding: 40px 50px !important;
+  border-radius: 16px !important;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15) !important; /* Sombra fuerte para crear el efecto tarjeta */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo-placeholder {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.page-wrapper .input-field {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.page-wrapper .input-field input {
+  width: 100%;
+  padding: 14px 18px !important;
+  background-color: var(--gray-element) !important;
+  border: 2px solid var(--gray-border) !important; /* Borde visible desde el inicio */
+  border-radius: 8px !important;
+  font-size: 1rem;
+  color: var(--text-main) !important;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.page-wrapper .input-field input:focus {
+  border-color: var(--color-deporte) !important;
+  background-color: #ffffff !important;
+}
+
+/* Modificado para que solo se ponga rojo si realmente escribes algo mal, no al cargar */
+.page-wrapper .input-field input.is-invalid {
+  border-color: var(--color-error) !important;
+  background-color: #FEF2F2 !important;
+}
+
+.page-wrapper .button-row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 15px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+/* BOTONES: Forzamos el aspecto de recuadro */
+.page-wrapper .wire-btn {
+  flex: 1;
+  height: 48px !important;
+  border-radius: 8px !important;
+  font-weight: 600 !important;
+  font-size: 1rem !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease;
+
+  /* Aspecto inicial gris con borde naranja */
+  background-color: var(--gray-element) !important;
+  color: var(--text-main) !important;
+  border: 2px solid var(--color-deporte) !important;
+}
+
+.page-wrapper .wire-btn:hover {
+  background-color: #E5E7EB !important;
+}
+
+/* El botón Siguiente cambia a naranja total cuando es válido */
+.page-wrapper .wire-btn.btn-ready {
+  background-color: var(--color-deporte) !important;
+  color: #ffffff !important;
+}
+
+.page-wrapper .wire-btn.btn-ready:hover {
+  background-color: #F57C00 !important;
+}
+
+.msg-error {
+  color: var(--color-error);
+  font-size: 0.85rem;
+  margin-bottom: 15px;
+  text-align: center;
+  width: 100%;
+}
+
+.text-links {
+  text-align: center;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+
+.text-links a {
+  color: var(--color-deporte);
+  font-weight: 600;
+  text-decoration: none;
+}

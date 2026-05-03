@@ -1,0 +1,137 @@
+.page-wrapper {
+  --color-deporte: #FF9800;
+  --color-dieta: #4CAF50;
+  --color-error: #EF4444;
+  --color-bg-page: #E5E7EB;
+  --color-bg-card: #FFFFFF;
+  --gray-element: #F3F4F6;
+  --gray-border: #D1D5DB;
+  --text-main: #111827;
+  --text-secondary: #4B5563;
+
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-bg-page) !important;
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+}
+
+.page-wrapper .wireframe-card {
+  background-color: var(--color-bg-card) !important;
+  width: 100%;
+  min-width: 400px;
+  max-width: 500px;
+  padding: 40px 50px !important;
+  border-radius: 16px !important;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15) !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo-placeholder {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 25px;
+  background-color: #EAEAEA;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.user-avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.page-wrapper .input-field {
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+.page-wrapper .input-field input {
+  width: 100% !important;
+  padding: 14px 18px !important;
+  background-color: var(--gray-element) !important;
+  border: 2px solid var(--gray-border) !important;
+  border-radius: 8px !important;
+  font-size: 1rem;
+  color: var(--text-main) !important;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.page-wrapper .input-field input:focus {
+  border-color: var(--color-deporte) !important;
+  background-color: #ffffff !important;
+}
+
+.page-wrapper .button-row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 15px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.page-wrapper .wire-btn {
+  flex: 1;
+  height: 48px !important;
+  border-radius: 8px !important;
+  font-weight: 600 !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
+  background-color: var(--gray-element) !important;
+  color: var(--text-main) !important;
+  border: 2px solid var(--color-deporte) !important;
+}
+
+.page-wrapper .wire-btn.btn-ready {
+  background-color: var(--color-deporte) !important;
+  color: #ffffff !important;
+}
+
+.msg-error {
+  color: var(--color-error);
+  font-size: 0.85rem;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.page-wrapper .text-links {
+  text-align: center;
+  font-size: 0.95rem;
+  color: var(--text-main);
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.page-wrapper .text-links p {
+  margin: 0 0 8px 0;
+}
+
+.page-wrapper .text-links a {
+  color: var(--color-deporte) !important;
+  font-weight: 600 !important;
+  text-decoration: none !important;
+  transition: all 0.2s ease;
+}
+
+.page-wrapper .text-links a:hover {
+  text-decoration: underline !important;
+  color: #e68a00 !important;
+}
+
+#google-btn {
+  margin-top: 10px;
+}

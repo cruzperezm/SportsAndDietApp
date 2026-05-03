@@ -1,6 +1,5 @@
 import { Routes } from '@angular/router';
-//import { Login } from './pages/login/login';
-//import { Signup } from './pages/signup/signup';
+import { LoginComponent } from './pages/log-in/log-in.component';
 import { Bio } from './pages/biodata/bio';
 import { DietasInicioComponent } from './pages/dietas/dietas-inicio/dietas-inicio';
 import { DietasPlanComponent } from './pages/dietas/dietas-plan/dietas-plan';
@@ -12,10 +11,11 @@ import { DeportesDetalleComponent } from './pages/deportes/deportes-detalle/depo
 import { DashboardDeporteComponent} from './pages/dashboards/dashboard-deporte';
 import { DashboardDietaComponent} from './pages/dashboards/dashboard-dieta';
 import { Explorer } from './pages/explorer/explorer';
+import { SignupComponent } from './pages/sign-up/sign-up';
 
 export const routes: Routes = [
-  //{ path: 'login', component: Login, title: 'SPORTS&DIET · Log In' },
-  //{ path: 'signup', component: Signup, title: 'SPORTS&DIET · Sign Up' },
+  { path: 'login', component: LoginComponent, title: 'SPORTS&DIET · Log In' },
+  { path: 'signup', component: SignupComponent, title: 'SPORTS&DIET · Sign Up' },
   { path: 'bio', component: Bio, title: 'SPORTS&DIET · Bio Data' },
   { path: 'explorador', component: Explorer, title: 'SPORTS&DIET · Explorador' },
   { path: 'dietas', component: DietasInicioComponent, title: 'SPORTS&DIET · Dietas' },

@@ -1,0 +1,41 @@
+<div class="page-wrapper">
+  <main class="wireframe-card">
+    <div class="logo-placeholder">
+      <img src="https://ui-avatars.com/api/?name=Usuario&background=EAEAEA&color=4B5563&rounded=true&size=128" alt="Foto" class="user-avatar" />
+    </div>
+
+    <form [formGroup]="signUpForm" (ngSubmit)="signup()" class="wireframe-form">
+      <div class="input-field">
+        <input formControlName="email" type="email" placeholder="Correo Electrónico"
+               [class.is-invalid]="emailControl?.invalid && emailControl?.touched" />
+      </div>
+      <div class="input-field">
+        <input formControlName="username" type="text" placeholder="Nombre de Usuario"
+               [class.is-invalid]="userControl?.invalid && userControl?.touched" />
+      </div>
+      <div class="input-field">
+        <input formControlName="password" type="password" placeholder="Contraseña"
+               [class.is-invalid]="passwordControl?.invalid && passwordControl?.touched" />
+      </div>
+      <div class="input-field">
+        <input formControlName="confirmPassword" type="password" placeholder="Confirmar Contraseña"
+               [class.is-invalid]="confirmControl?.touched && signUpForm.errors?.['mismatch']" />
+      </div>
+
+      <p *ngIf="errorMessage" class="msg-error">{{ errorMessage }}</p>
+
+      <div class="button-row">
+        <a routerLink="/login" class="wire-btn">Atrás</a>
+        <button type="submit" class="wire-btn" [class.btn-ready]="signUpForm.valid" [disabled]="isLoading">
+          {{ isLoading ? 'Cargando...' : 'Crear Cuenta' }}
+        </button>
+      </div>
+      <div class="text-links">
+        <p>¿Ya tienes una cuenta? | <a routerLink="/login">Inicia sesión</a></p>
+      </div>
+      <div style="display: flex; justify-content: center; width: 100%; min-height: 50px;">
+        <div id="google-btn"></div>
+      </div>
+    </form>
+  </main>
+</div>
