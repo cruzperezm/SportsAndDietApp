@@ -1,26 +1,43 @@
-<!-- Cambiamos data.json por simplemente data para verificar que el objeto llegó[cite: 3] -->
-<div id="dashboard-deporte" *ngIf="data">
-  <p class="text64" id="name">{{ data.usuario.nombre }}</p>
-
+<div id="dashboard-deporte">
+  <p class="text64" id="name">{{ userName }}</p>
   <div class="rectangle-toggle">
-    <a class="ellipse-toggle" routerLink="/dieta"></a>
+    <a class="ellipse-toggle" routerLink="/dashboard-dieta"></a>
   </div>
-
   <div class="rectangle-container">
-    <p class="text24" id="move-text">Moverse</p>
-    <p class="text24" id="move-calories">{{ resumen.moverse }} kcal</p>
+    <p class="text24" id="move-text">{{ moveText }}</p>
+    <p class="text24" id="move-calories">{{ moveCalories }}</p>
+    <p class="text24" id="exercise-text">{{ exerciseText }}</p>
+    <p class="text24" id="exercise-calories">{{ exerciseCalories }}</p>
+    <p class="text24" id="stand-text">{{ standText }}</p>
+    <p class="text24" id="stand-calories">{{ standCalories }}</p>
 
-    <div class="bars-container-wrapper" style="display: flex; align-items: flex-end; gap: 4.3rem; height: 18.5rem;">
-      <div *ngFor="let day of semana" class="bar-unit"
-           [style.height.rem]="day.valor * 0.12"
-           style="width: 2.4rem; background-color: var(--color-acento-secundario); border-radius: 1rem;">
-        <p class="text16" style="margin-top: 1rem;">{{ day.dia }}</p>
+    <div class="bars-container-wrapper" *ngIf="weekData.length">
+      <div *ngFor="let day of weekData; let i = index"
+           class="bar-container"
+           [style.left.%]="(i * (100 / weekData.length)) + (50 / weekData.length)">
+        <div class="bar-unit" [style.height.rem]="day.valor * 0.12"></div>
+        <p class="text16">{{ day.dia }}</p>
       </div>
     </div>
   </div>
-
-  <ng-container *ngFor="let ejercicio of ejercicios; let i = index">
-    <p class="text20" [id]="'train-text' + (i+1)">{{ ejercicio.nombre }}</p>
-    <p class="text16" [id]="'train-amount' + (i+1)">{{ ejercicio.valor }}</p>
-  </ng-container>
+  <a class="cross-horizontal" id="r7" routerLink="/deporte"></a>
+  <a class="cross-vertical" id="r8" routerLink="/deporte"></a>
+  <p class="text20" id="train-text1">{{ trainText1 }}</p>
+  <a class="cross-horizontal" id="r9" routerLink="/deporte"></a>
+  <a class="cross-vertical" id="r10" routerLink="/deporte"></a>
+  <p class="text20" id="train-text2">{{ trainText2 }}</p>
+  <a class="cross-horizontal" id="r11" routerLink="/deporte"></a>
+  <a class="cross-vertical" id="r12" routerLink="/deporte"></a>
+  <p class="text20" id="train-text3">{{ trainText3 }}</p>
+  <a class="cross-horizontal" id="r13" routerLink="/deporte"></a>
+  <a class="cross-vertical" id="r14" routerLink="/deporte"></a>
+  <p class="text20" id="train-text4">{{ trainText4 }}</p>
+  <a class="cross-horizontal" id="r15" routerLink="/deporte"></a>
+  <a class="cross-vertical" id="r16" routerLink="/deporte"></a>
+  <p class="text20" id="train-text5">{{ trainText5 }}</p>
+  <p class="text16" id="train-amount1">{{ trainAmount1 }}</p>
+  <p class="text16" id="train-amount2">{{ trainAmount2 }}</p>
+  <p class="text16" id="train-amount3">{{ trainAmount3 }}</p>
+  <p class="text16" id="train-amount4">{{ trainAmount4 }}</p>
+  <p class="text16" id="train-amount5">{{ trainAmount5 }}</p>
 </div>

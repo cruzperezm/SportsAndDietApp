@@ -1,72 +1,553 @@
-/* Variables compartidas y configuración base */
 :root {
-  --color-fondo: #FAFAFA;
-  --sombra-suave: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-}
-
-html {
-  overflow-x: hidden;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Inter', sans-serif;
-  background-color: var(--color-fondo);
-}
-
-/* Clases comunes de texto para evitar duplicidad */
-.text16 { position: absolute; font-size: 1.6rem; }
-.text20 { position: absolute; font-size: 2.0rem; }
-.text24 { position: absolute; font-size: 2.4rem; }
-.text64 { position: absolute; font-size: 6.4rem; font-weight: bold; }
-
-:host {
+  --color-fondo: #FAFAFA;       /* Blanco roto/crema para el fondo */
   --color-fondo-secundario: #a8f0d8;
-  --color-acento: #10B981;
+  --color-acento: #10B981;      /* color esmeralda  */
   --color-acento-secundario: #6eb59e;
   --color-acento-oscuro: #059669;
-  --color-texto: #1F2937;
-  --color-texto-suave: #4B5563;
+  --color-texto: #1F2937;       /* Gris carbón para texto principal */
+  --color-texto-suave: #4B5563; /* Gris medio para descripciones */
   --color-texto-color: #00120c;
+  --sombra-suave: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --sombra-hover: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
-#dashboard-dieta {
-  position: absolute;
-  min-height: 145rem;
-  width: 100vw;
+
+
+#dashboard-dieta .text16{color: var(--color-texto-color); }
+#dashboard-dieta .text20{color: var(--color-texto-suave); }
+#dashboard-dieta .text24{color: var(--color-texto-suave); }
+#dashboard-dieta .text64{color: var(--color-texto); }
+
+#dashboard-dieta .rectangle-macros{pvar(--color-acento-secundario);}
+#dashboard-dieta .cross-horizontal {background-color: var(--color-acento-oscuro);}
+#dashboard-dieta .cross-vertical {background-color: var(--color-acento-oscuro);}
+
+#dashboard-dieta .rectangle-toggle {
+  background-color: var(--color-acento);
+}
+#dashboard-dieta .ellipse-toggle {
+  background-color: var(--color-fondo-secundario);
+}
+#dashboard-dieta .rectangle-container {
+  background-color: var(--color-fondo-secundario);
+}
+#dashboard-dieta .ellipse-container{
+  background-color: var(--color-acento-oscuro);
+}
+#dashboard-dieta .ellipse{
   background-color: var(--color-fondo);
 }
 
-/* Barras de Macros */
-.macro-track {
-  position: absolute;
-  background-color: #d9d9d9;
-  border-radius: 90px;
-}
-
-.macro-fill {
-  height: 100%;
-  background-color: var(--color-acento);
-  border-radius: 90px;
-  transition: width 0.8s ease-in-out;
-}
-
-@media (min-width: 1024px) {
-  #protein-rectangle, #fats-rectangle, #carbs-rectangle, #sodium-rectangle, #sugar-rectangle {
-    width: 18.5611rem !important; height: 1.4105rem !important; position: absolute !important;
-    left: 66rem;
+@media (min-width: 1024px){
+  html {
+    font-size: 0.65vw;
+    overflow-x: hidden;
   }
-  #protein-rectangle { top: 9.1rem; }
-  #fats-rectangle { top: 17.8rem; }
-  /* ... (mantener todas las posiciones de Dashboard-Dieta.css) */
 
-  #water-text { position: absolute; left: 11.5rem; top: 40rem; }
-  #fiber-text { position: absolute; left: 29.5rem; top: 40rem; }
-}
+  body {
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--color-fondo);
+  }
+  #dashboard-dieta {
+    position: absolute;
+    min-height: 145rem;
+    width: 100vw;
+    background-color: var(--color-fondo);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
 
-@media (max-width: 768px) {
+  #dashboard-dieta .text16{position: absolute; font-size: 1.6rem; font-family: 'Inter', sans-serif;}
+  #dashboard-dieta .text20{position: absolute; font-size: 2.0rem; font-family: 'Inter', sans-serif;}
+  #dashboard-dieta .text24{position: absolute; font-size: 2.4rem; font-family: 'Inter', sans-serif;}
+  #dashboard-dieta .text64{position: absolute; font-size: 6.4rem; font-family: 'Inter', sans-serif; font-weight: bold;}
+
+
+  #dashboard-dieta .rectangle-macros{position: absolute; height: 1.4rem; width: 15.5rem; border-radius: 90px; }
+  #dashboard-dieta .cross-horizontal {position: absolute; height:1.51685rem; width: 5rem; border-radius: 50px}
+  #dashboard-dieta .cross-vertical {position: absolute; width:1.51685rem; height: 5rem; border-radius: 50px;}
+
+  #dashboard-dieta .rectangle-toggle {
+    position: absolute;
+    height: 7.5rem;
+    width: 15.0rem;
+    top: 21.6rem;
+    left: 123.1rem;
+    border-radius: 70px;
+  }
   #dashboard-dieta .ellipse-toggle {
-    left: 4.8rem; /* Posición específica del switch en móvil para dieta */
+    position: absolute;
+    height: 6.75rem;
+    width: 6.75rem;
+    left: 7.875rem;
+    top: 0.4rem;
+    border-radius: 90px;
   }
+  .macro-track {
+    position: absolute;
+    background-color: #e2e8f0;
+    border-radius: 90px;
+    overflow: visible;
+    z-index: 10;
+  }
+  #dashboard-dieta .rectangle-container {
+    position: absolute;
+    height: 51.4rem;
+    width: 90.0rem;
+    top: 35.9rem;
+    left: 9.4rem;
+    background-color: #FFFFFF;
+    border-radius: 30px;
+    box-shadow: var(--sombra-suave);
+  }
+  #dashboard-dieta .ellipse-container{
+    position: absolute;
+    height: 31.7rem;
+    width: 31.7rem;
+    top: 6.5rem;
+    left: 5.7rem;
+    border-radius: 100%;
+  }
+  #dashboard-dieta .ellipse{
+    position: absolute;
+    height: 28.5rem;
+    width: 28.5rem;
+    top: 1.6rem;
+    left: 1.6rem;
+    background-color: var(--color-fondo);
+    border-radius: 100%;
+  }
+  #calories-amount{
+    position: absolute;
+    left: 7.05rem;
+    top: 4rem;
+  }
+  #calories-goal{
+    position: absolute;
+    top: 4rem;
+    left: 11.5rem;
+  }
+
+
+  #protein-rectangle, #fats-rectangle, #carbs-rectangle, #sodium-rectangle, #sugar-rectangle {
+    width: 18.5611rem !important;
+    height: 1.4105rem !important;
+    position: absolute !important;
+    background-color: #d9d9d9;
+  }
+
+  .macro-fill {
+    height: 100%;
+    background-color: var(--color-acento);
+    border-radius: 90px;
+    transition: width 0.8s ease-in-out;
+  }
+
+  #water-text {position:absolute; left: 11.5rem; top:40rem;}
+  #water-amount{position:absolute; left: 9rem; top:41rem;}
+  #fiber-text{position:absolute; left: 29.5rem; top:40rem;}
+  #fiber-amount{position:absolute; left: 27rem; top:41rem;}
+  #name{
+    position: absolute;
+    top: 21.6rem;
+    left: 22.6rem;
+  }
+  #protein-rectangle, #fats-rectangle, #carbs-rectangle, #sodium-rectangle, #sugar-rectangle{position: absolute; left: 66rem;}
+  #protein-rectangle{top: 9.1rem;}
+  #fats-rectangle{top: 17.8rem;}
+  #carbs-rectangle{top: 26.5rem;}
+  #sodium-rectangle{top: 35.2rem;}
+  #sugar-rectangle{top: 43.9rem;}
+
+  #protein-amount, #fats-amount, #sodium-amount, #sugar-amount, #carbs-amount{position: absolute; left: 75.5rem;}
+  #protein-amount{top: 5rem;}
+  #fats-amount{top: 13.8rem;}
+  #carbs-amount{top: 22rem;}
+  #sodium-amount{top: 31rem;}
+  #sugar-amount{top: 39.9rem;}
+
+
+  #protein-text, #fats-text, #carbs-text, #sodium-text, #sugar-text{position: absolute; left: 45rem;}
+  #protein-text{top: 5.8rem;}
+  #fats-text{top: 14.5rem;}
+  #carbs-text{top: 23.2rem;}
+  #sodium-text{top: 31.9rem;}
+  #sugar-text{top: 40.6rem;}
+
+  #r8,#r10,#r12,#r14,#r16{position: absolute; left: 140rem;}
+
+  #r8{top: 35.9rem;}
+  #r10{top: 47.7rem;}
+  #r12{top: 59.5rem;}
+  #r14{top: 71.3rem;}
+  #r16{top: 83.1rem;}
+
+  #r7,#r9,#r11,#r13,#r15{position: absolute; left: 138.25rem;}
+  #r7{top: 37.7rem;}
+  #r9{top: 49.5rem;}
+  #r11{top: 61.29rem;}
+  #r13{top: 73.09rem;}
+  #r15{top: 84.89rem;}
+
+  #diet-amount1, #diet-amount2, #diet-amount3, #diet-amount4, #diet-amount5 {position: absolute; left: 130rem;}
+  #diet-amount1 {top: 36rem;}
+  #diet-amount2 {top: 47.8rem;}
+  #diet-amount3 {top: 59.6rem;}
+  #diet-amount4 {top: 71.4rem;}
+  #diet-amount5 {top: 83.2rem;}
+
+  #diet-text1, #diet-text2, #diet-text3, #diet-text4, #diet-text5 {position: absolute; left: 110rem; width: 14rem;}
+  #diet-text1 {top: 35.3rem;}
+  #diet-text2 {top: 47.1rem;}
+  #diet-text3 {top: 58.9rem;}
+  #diet-text4 {top: 70.7rem;}
+  #diet-text5 {top: 82.5rem;}
+}
+/*tablet*/
+@media (min-width: 768px) and (max-width: 1024px) {
+  html {
+    font-size: 0.703vw;
+    overflow-x: hidden;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--color-fondo);
+  }
+  #dashboard-dieta {
+    min-height: 148.1rem;
+    width: 100vw;
+    position: absolute;
+    background-color: var(--color-fondo);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  #dashboard-dieta .text16{position: absolute; font-size: 1.6rem; font-family: 'Inter', sans-serif;}
+  #dashboard-dieta .text20{position: absolute; font-size: 2.0rem; font-family: 'Inter', sans-serif;}
+  #dashboard-dieta .text24{position: absolute; font-size: 2.4rem; font-family: 'Inter', sans-serif;}
+  #dashboard-dieta .text64{position: absolute; font-size: 6.4rem; font-family: 'Inter', sans-serif; font-weight: bold;}
+
+
+  #dashboard-dieta .rectangle-macros{position: absolute; height: 1.4rem; width: 15.5rem; border-radius: 90px; }
+  #dashboard-dieta .cross-horizontal {position: absolute; height:1.51685rem; width: 5rem; border-radius: 50px}
+  #dashboard-dieta .cross-vertical {position: absolute; width:1.51685rem; height: 5rem; border-radius: 50px;}
+
+  #dashboard-dieta .rectangle-toggle {
+    position: absolute;
+    height: 7.5rem;
+    width: 15.0rem;
+    top: 21.6rem;
+    left: 101.5rem;
+    border-radius: 70px;
+  }
+  #dashboard-dieta .ellipse-toggle {
+    position: absolute;
+    height: 6.75rem;
+    width: 6.75rem;
+    left: 7.8rem;
+    top: 0.4rem;
+    border-radius: 90px;
+  }
+  #dashboard-dieta .rectangle-container {
+    position: absolute;
+    height: 60.6rem;
+    width: 81.90rem;
+    top: 38.9rem;
+    left: 6.991rem;
+    background-color: #FFFFFF;
+    border-radius: 30px;
+    box-shadow: var(--sombra-suave);
+  }
+  #dashboard-dieta .ellipse-container{
+    position: absolute;
+    height: 30rem;
+    width: 28.09rem;
+    top: 7.66rem;
+    left: 5.13rem;
+    border-radius: 100%;
+  }
+  #dashboard-dieta .ellipse{
+    position: absolute;
+    width: 25.28rem;
+    height: 27rem;
+    top: 1.5rem;
+    left: 1.4rem;
+    border-radius: 100%;
+  }
+  .macro-track {
+    position: absolute;
+    background-color: #e2e8f0;
+    border-radius: 90px;
+    overflow: visible;
+    z-index: 10;
+  }
+  #calories-goal{
+    position: absolute;
+    left: 10rem;
+    top: 4.27rem;
+  }
+  #calories-amount{
+    position: absolute;
+    top: 4rem;
+    left: 6.24rem;
+  }
+
+  #protein-rectangle, #fats-rectangle, #carbs-rectangle, #sodium-rectangle, #sugar-rectangle{position: absolute; left: 56rem;}
+  #protein-rectangle{top: 11rem;}
+  #fats-rectangle{top: 21.25rem;}
+  #carbs-rectangle{top: 31.5rem;}
+  #sodium-rectangle{top: 41.76rem;}
+  #sugar-rectangle{top: 52.02em;}
+
+  #protein-rectangle, #fats-rectangle, #carbs-rectangle, #sodium-rectangle, #sugar-rectangle {
+    width: 18rem !important;
+    height: 1.4105rem !important;
+    position: absolute !important;
+    background-color: #d9d9d9;
+  }
+
+  .macro-fill {
+    height: 100%;
+    background-color: var(--color-acento);
+    border-radius: 90px;
+    transition: width 0.8s ease-in-out;
+  }
+  #name{
+    font-size: 3.2rem;
+    position: absolute;
+    top: 0.5rem;
+    left: 14rem;
+  }
+  #dashboard-dieta .cross-horizontal {position: absolute; height:1.2rem; width: 3.3rem; border-radius: 90px}
+  #dashboard-dieta .cross-vertical {position: absolute; width:1.2rem; height: 3.3rem; border-radius: 90px;}
+
+
+  #water-text {position:absolute; left: 17.11rem; top:39rem;}
+  #water-amount{position:absolute; left: 14.7rem; top:40rem;}
+  #fiber-text{position:absolute; left: 17.11rem; top:47rem;}
+  #fiber-amount{position:absolute; left: 14.7rem; top:48rem;}
+  #name{
+    position: absolute;
+    top: 21.6rem;
+    left: 22.6rem;
+  }
+
+  #protein-amount, #fats-amount, #sodium-amount, #sugar-amount, #carbs-amount{position: absolute; left: 67.42rem;}
+  #protein-amount{top: 6.85rem;}
+  #fats-amount{top: 17.1rem;}
+  #carbs-amount{top: 27.35rem;}
+  #sodium-amount{top: 37.61rem;}
+  #sugar-amount{top: 47.87rem;}
+
+
+  #protein-text, #fats-text, #carbs-text, #sodium-text, #sugar-text{position: absolute; left: 36.41rem;}
+  #protein-text{top: 7.66rem;}
+  #fats-text{top: 17.92rem;}
+  #carbs-text{top: 28.18rem;}
+  #sodium-text{top: 38.44rem;}
+  #sugar-text{top: 48.69rem;}
+
+  #r8,#r10,#r12,#r14,#r16{position: absolute; left: 129.35rem;}
+
+  #r8{top: 39.5rem;}
+  #r10{top: 50.8rem;}
+  #r12{top: 62rem;}
+  #r14{top: 73.2rem;}
+  #r16{top: 85.1rem;}
+
+  #r7,#r9,#r11,#r13,#r15{position: absolute; left: 128.25rem;}
+  #r7{top: 40.69rem;}
+  #r9{top: 51.99rem;}
+  #r11{top: 63.19rem;}
+  #r13{top: 74.39rem;}
+  #r15{top: 86.29rem;}
+
+  #diet-amount1, #diet-amount2, #diet-amount3, #diet-amount4, #diet-amount5 {position: absolute; left: 120rem;}
+  #diet-amount1{top: 39.2rem;}
+  #diet-amount2{top: 50.8rem;}
+  #diet-amount3{top: 62rem;}
+  #diet-amount4{top: 73.2rem;}
+  #diet-amount5{top: 85.1rem;}
+
+  #diet-text1, #diet-text2, #diet-text3, #diet-text4, #diet-text5 {position: absolute; left: 93.8rem; width: 14rem;}
+  #diet-text1{top: 38.6rem;}
+  #diet-text2{top: 50.8rem;}
+  #diet-text3{top: 62rem;}
+  #diet-text4{top: 73.2rem;}
+  #diet-text5{top: 85.1rem;}
+}
+/*movil*/
+@media (max-width: 768px) {
+  html {
+    font-size: 2.2vw;
+    overflow-x: hidden;
+    align-items: center;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    background-color: var(--color-fondo);
+    align-items: center;
+  }
+  #dashboard-dieta .text16, #dashboard-dieta .text20, #dashboard-dieta .text24, #dashboard-dieta .text64{
+    position: absolute;
+    font-family: 'Inter', sans-serif;
+  }
+
+  #dashboard-dieta {
+    min-height: 91.7rem;
+    width: 100vw;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #dashboard-dieta .rectangle-toggle {
+    position: absolute;
+    height: 4.3rem;
+    width: 9rem;
+    top: 8.3rem;
+    left: calc(50% - 4.5rem);
+    border-radius: 70px;
+  }
+  #dashboard-dieta .ellipse-toggle {
+    position: absolute;
+    height: 4.1rem;
+    width: 4.1rem;
+    left: 4.8rem;
+    top: 0.125rem;
+    border-radius: 90px;
+  }
+  #dashboard-dieta .rectangle-container {
+    position: absolute;
+    height: 41.2rem;
+    width: 90vw;
+    top: 13.4rem;
+    align: center;
+    left: auto;
+    background-color: #FFFFFF;
+    border-radius: 30px;
+    box-shadow: var(--sombra-suave);
+  }
+  #dashboard-dieta .ellipse-container{
+    position: absolute;
+    height: 15.7rem;
+    width: 15.7rem;
+    top: 4.1rem;
+    left: 12.7rem;
+    border-radius: 100%;
+  }
+  #dashboard-dieta .ellipse{
+    position: absolute;
+    height: 14rem;
+    width: 14rem;
+    top: 0.9rem;
+    left: 0.9rem;
+    background-color: var(--color-fondo);
+    border-radius: 100%;
+  }
+
+  #calories-amount{
+    font-size: 3.2rem;
+    position: absolute;
+    left: 3.43rem;
+    top: 2.5rem;
+  }
+  #calories-goal{
+    position: absolute;
+    font-size: 1.4rem;
+    top: 2.9rem;
+    left: 5.5rem;
+  }
+  .macro-track {
+    position: absolute;
+    background-color: #e2e8f0;
+    border-radius: 90px;
+    overflow: visible;
+    z-index: 10;
+  }
+
+  #protein-rectangle, #fats-rectangle, #carbs-rectangle, #sodium-rectangle, #sugar-rectangle {
+    width: 8.2902rem !important;
+    height: 0.6606rem !important;
+    position: absolute !important;
+  }
+
+  #protein-rectangle { top: 27.45rem !important; left: 2.6rem !important; }
+  #fats-rectangle    { top: 27.45rem !important; left: 16.2rem !important; }
+  #carbs-rectangle   { top: 27.45rem !important; left: 30.33rem !important; }
+  #sodium-rectangle  { top: 35.05rem !important; left: 9.8rem !important; }
+  #sugar-rectangle   { top: 35.05rem !important; left: 23.3rem !important; }
+
+  .macro-fill {
+    height: 100%;
+    background-color: var(--color-acento);
+    border-radius: 90px;
+    transition: width 0.8s ease-in-out;
+  }
+  #water-text {position:absolute; left: 5.5rem; top:8rem; font-size: 1.4rem;}
+  #water-amount{position:absolute; left: 4rem; top:10rem; font-size: 1.6rem;}
+  #fiber-text{position:absolute; left: 32.5rem; top:8rem; font-size: 1.4rem;}
+  #fiber-amount{position:absolute; left: 31rem; top:10rem; font-size: 1.6rem;}
+  #name{
+    font-size: 3.2rem;
+    position: absolute;
+    top: 0.5rem;
+    left: 14rem;
+  }
+  #dashboard-dieta .cross-horizontal {position: absolute; height:1.2rem; width: 3.3rem; border-radius: 90px}
+  #dashboard-dieta .cross-vertical {position: absolute; width:1.2rem; height: 3.3rem; border-radius: 90px;}
+
+  #protein-amount, #fats-amount, #sodium-amount, #sugar-amount, #carbs-amount{position: absolute; font-size: 1rem;}
+  #protein-amount{top: 27.54rem; left: 4.7rem;}
+  #fats-amount{top: 27.54rem; left: 18.36rem;}
+  #carbs-amount{top: 27.54rem; left: 32.43rem;}
+  #sodium-amount{top: 35.14rem; left: 11.9rem;}
+  #sugar-amount{top: 35.14rem; left: 25.56rem;}
+
+  #protein-text, #fats-text, #sodium-text, #sugar-text, #carbs-text{position: absolute; font-size: 1rem;}
+  #protein-text{top: 24.84rem; left: 4.69rem;}
+  #fats-text{top: 24.84rem; left: 18.5rem;}
+  #carbs-text{top: 24.84rem; left: 31.4rem;}
+  #sodium-text{top: 32.44rem; left: 12.5rem;}
+  #sugar-text{top: 32.44rem; left: 25.9rem;}
+
+  #r8,#r10,#r12,#r14,#r16{position: absolute; left: 38.5rem;}
+  #r8{top: 59.4rem;}
+  #r10{top: 65.9rem;}
+  #r12{top: 72.4rem;}
+  #r14{top: 79rem;}
+  #r16{top: 85.4rem;}
+
+  #r7,#r9,#r11,#r13,#r15{position: absolute; left: 37.4rem;}
+  #r7{top: 60.5rem;}
+  #r9{top: 67rem;}
+  #r11{top: 73.5rem;}
+  #r13{top: 80.1rem;}
+  #r15{top: 86.5rem;}
+
+  #diet-amount1, #diet-amount2, #diet-amount3, #diet-amount4, #diet-amount5 {position: absolute; left: 6.6rem; font-size: 1.4rem;}
+  #diet-amount1 {top: 60.3rem;}
+  #diet-amount2 {top: 66.8rem;}
+  #diet-amount3 {top: 73.3rem;}
+  #diet-amount4 {top: 79.7rem;}
+  #diet-amount5 {top: 86.3rem;}
+
+  #diet-text1, #diet-text2, #diet-text3, #diet-text4, #diet-text5 {position: absolute; left: 6.4rem; width: 14rem; font-size: 1.6rem;}
+  #diet-text1 {top: 58.3rem;}
+  #diet-text2 {top: 64.7rem;}
+  #diet-text3 {top: 71.1rem;}
+  #diet-text4 {top: 77.7rem;}
+  #diet-text5 {top: 84.3rem;}
 }

@@ -1,58 +1,67 @@
-import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
-import { DataService } from '../../services/dashboard.service';
+import { Component, OnInit } from '@angular/core';
+import { AngularFirestore } from '@angular/fire/compat/firestore';
+import { Observable } from 'rxjs';
+import { map, filter } from 'rxjs/operators';
+
+interface SportData {
+  usuario: { nombre: string };
+  actividades: Array<{ nombre: string; valor: string }>;
+  deporte: {
+    semana: Array<{ dia: string; valor: number }>;
+    ejercicios: Array<{ nombre: string; valor: string }>;
+  };
+}
 
 @Component({
-  selector: 'app-sport-dashboard',
-  standalone: true, //esto
-  imports: [CommonModule, RouterModule], //esto
-  templateUrl: './Dashboard-Deporte.html',
-  styleUrls: ['./Dashboard-Deporte.css'],
+  selector: 'app-dashboard-deporte',
+  templateUrl: './dashboard-deporte.component.html',
+  styleUrls: ['./dashboard-deporte.component.css']
 })
-export class SportDashboardComponent implements OnInit {
-  public data: any;
-  public ejercicios: any[] = [];
-  public semana: any[] = [];
-  public resumen: any = {};
+export class DashboardDeporteComponent implements OnInit {
+  data$!: Observable<SportData>;
+  weekData: Array<{ dia: string; valor: number }> = [];
 
-  constructor(
-    private dataService: DataService,
-    private cdr: ChangeDetectorRef,
-  ) {}
+  userName = '';
+  moveText = '';
+  moveCalories = '';
+  exerciseText = '';
+  exerciseCalories = '';
+  standText = '';
+  standCalories = '';
 
-  ngOnInit(): void {
-    console.log('1. Intentando conectar con el servicio...');
+  trainText1 = ''; trainAmount1 = '';
+  trainText2 = ''; trainAmount2 = '';
+  trainText3 = ''; trainAmount3 = '';
+  trainText4 = ''; trainAmount4 = '';
+  trainText5 = ''; trainAmount5 = '';
 
-    this.dataService.getData().subscribe(
-      (res: any) => {
-        console.log('2. Respuesta recibida de Firebase:', res); // <--- ESTO ES CLAVE
+  constructor(private firestore: AngularFirestore) {}
 
-        if (res) {
-          this.data = res;
-          if (res.deporte) {
-            this.resumen = res.deporte.resumen || {};
-            this.semana = res.deporte.semana || [];
-            this.ejercicios = res.deporte.ejercicios || [];
-          }
-          this.cdr.detectChanges();
-          console.log('3. Datos asignados y detector de cambios activado');
-        } else {
-          console.warn('Firebase devolvió un objeto vacío o nulo');
+  ngOnInit() {
+    // Fix: Handle undefined data properly
+    this.data$ = this.firestore.collection('dashboard-data').doc<SportData>('deporte').valueChanges() as Observable<SportData>;
+
+    this.data$.pipe(
+      filter(data => !!data), // Only process non-null/undefined data
+      map(data => {
+        this.userName = data!.usuario.nombre;
+
+        this.moveText = data!.actividades[0]?.nombre || '';
+        this.moveCalories = data!.actividades[0]?.valor || '';
+        this.exerciseText = data!.actividades[1]?.nombre || '';
+        this.exerciseCalories = data!.actividades[1]?.valor || '';
+        this.standText = data!.actividades[2]?.nombre || '';
+        this.standCalories = data!.actividades[2]?.valor || '';
+
+        this.weekData = data!.deporte.semana || [];
+
+        const exercises = data!.deporte.ejercicios || [];
+        for (let i = 1; i <= 5; i++) {
+          const exercise = exercises[i-1];
+          (this as any)[`trainText${i}`] = exercise?.nombre || '';
+          (this as any)[`trainAmount${i}`] = exercise?.valor || '';
         }
-      },
-      (error) => {
-        console.error('ERROR REAL DE FIREBASE:', error);
-      },
-    );
-  }
-
-  getBarHeight(valor: number): string {
-    return `${valor * 0.12}rem`;
-  }
-
-  getLabelPosition(index: number): string {
-    const positions = [7, 21, 35, 50, 64, 78, 92];
-    return `${positions[index]}%`;
+      })
+    ).subscribe();
   }
 }

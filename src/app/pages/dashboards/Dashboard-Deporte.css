@@ -1,71 +1,486 @@
-/* Variables compartidas y configuración base */
-:root {
-  --color-fondo: #FAFAFA;
-  --sombra-suave: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-}
-
-html {
-  overflow-x: hidden;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Inter', sans-serif;
-  background-color: var(--color-fondo);
-}
-
-/* Clases comunes de texto para evitar duplicidad */
-.text16 { position: absolute; font-size: 1.6rem; }
-.text20 { position: absolute; font-size: 2.0rem; }
-.text24 { position: absolute; font-size: 2.4rem; }
-.text64 { position: absolute; font-size: 6.4rem; font-weight: bold; }
-
-:host {
+:root{
+  --color-fondo: #FAFAFA;       /* Blanco roto/crema para el fondo */
   --color-fondo-secundario: #f0c1a8;
-  --color-acento: #F97316;
+  --color-acento: #F97316;      /* color esmeralda  */
   --color-acento-secundario: #d18f6b;
   --color-acento-oscuro: #EA580C;
-  --color-texto: #1F2937;
-  --color-texto-suave: #4B5563;
+  --color-texto: #1F2937;       /* Gris carbón para texto principal */
+  --color-texto-suave: #4B5563; /* Gris medio para descripciones */
   --color-texto-color: #140700;
+  --sombra-suave: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --sombra-hover: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
-#dashboard-deporte {
-  position: absolute;
-  min-height: 145rem;
-  width: 100%;
+
+#dashboard-deporte .text16{color: var(--color-texto-color); }
+#dashboard-deporte .text20{color: var(--color-texto-suave); }
+#dashboard-deporte .text24{color: var(--color-texto-suave); }
+#dashboard-deporte .text64{color: var(--color-texto); }
+
+#dashboard-deporte .rectangle-macros{background-color: var(--color-acento-secundario);}
+#dashboard-deporte .cross-horizontal {background-color: var(--color-acento-oscuro);}
+#dashboard-deporte .cross-vertical {background-color: var(--color-acento-oscuro);}
+
+#dashboard-deporte .rectangle-toggle {
+  background-color: var(--color-acento);
+}
+#dashboard-deporte .ellipse-toggle {
+  background-color: var(--color-fondo-secundario);
+}
+#dashboard-deporte .rectangle-container {
+  background-color: var(--color-fondo-secundario);
+}
+#dashboard-deporte .ellipse-container{
+  background-color: var(--color-acento-oscuro);
+}
+#dashboard-deporte .ellipse{
   background-color: var(--color-fondo);
-  display: flex;
-  flex-direction: column;
 }
 
-/* Escritorio */
-@media (min-width: 1024px) {
+@media (min-width: 1024px){
+  html {
+    font-size: 0.65vw;
+    overflow-x: hidden;
+    overflow-y: visible;
+  }
+
+  body {
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--color-fondo);
+  }
+  body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #FAFAFA;
+  }
+
+  #dashboard-deporte {
+    position: absolute;
+    min-height: 145rem;
+    width: 100%;
+    background-color: var(--color-fondo);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  #dashboard-deporte .text16{position: absolute; font-size: 1.6rem; font-family: 'Inter', sans-serif; color: var(--color-texto-color); }
+  #dashboard-deporte .text20{position: absolute; font-size: 2.0rem; font-family: 'Inter', sans-serif;color: var(--color-texto-suave); }
+  #dashboard-deporte .text24{position: absolute; font-size: 2.4rem; font-family: 'Inter', sans-serif;color: var(--color-texto-suave); }
+  #dashboard-deporte .text64{position: absolute; font-size: 6.4rem; font-family: 'Inter', sans-serif; font-weight: bold;color: var(--color-texto); }
+
+
+  #dashboard-deporte .rectangle-macros{position: absolute; height: 1.4rem; width: 15.5rem; background-color: var(--color-acento-secundario); border-radius: 90px; }
+  #dashboard-deporte .cross-horizontal {position: absolute; height:1.51685rem; width: 5rem; border-radius: 50px; background-color: var(--color-acento-oscuro);}
+  #dashboard-deporte .cross-vertical {position: absolute; width:1.51685rem; height: 5rem; border-radius: 50px; background-color: var(--color-acento-oscuro);}
+
+
+
   #dashboard-deporte .rectangle-toggle {
-    position: absolute; height: 7.5rem; width: 15.0rem; top: 21.6rem; left: 123.1rem; border-radius: 70px;
-    background-color: var(--color-acento);
+    position: absolute;
+    height: 7.5rem;
+    width: 15.0rem;
+    top: 21.6rem;
+    left: 123.1rem;
+    border-radius: 70px;
   }
   #dashboard-deporte .ellipse-toggle {
-    position: absolute; height: 6.75rem; width: 6.75rem; left: 0.4rem; top: 0.35rem; border-radius: 90px;
-    background-color: var(--color-fondo-secundario);
+    position: absolute;
+    height: 6.75rem;
+    width: 6.75rem;
+    left: 0.4rem;
+    top: 0.35rem;
+    border-radius: 90px;
   }
   #dashboard-deporte .rectangle-container {
-    position: absolute; height: 51.4rem; width: 90.0rem; top: 35.9rem; left: 9.4rem;
-    background-color: #FFFFFF; border-radius: 30px; box-shadow: var(--sombra-suave);
+    position: absolute;
+    height: 51.4rem;
+    width: 90.0rem;
+    top: 35.9rem;
+    left: 9.4rem;
+    background-color: #FFFFFF;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: visible;
+    box-shadow: var(--sombra-suave);
   }
-  #name { position: absolute; top: 16rem; left: 22.6rem; }
 
-  /* Posiciones de ejercicios */
-  #train-amount1, #train-amount2, #train-amount3, #train-amount4, #train-amount5 { position: absolute; left: 130rem; }
-  #train-amount1 { top: 36rem; }
-  #train-amount2 { top: 47.8rem; }
-  /* ... (resto de posiciones de train-amount y train-text según Dashboard-Deporte.css) */
+  .bars-container-wrapper .text16 {
+    position: absolute !important;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+
+  /* Styling the bars to match IMG_0121 */
+  .bar-unit {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border: 1px solid rgba(0,0,0,0.05);
+  }
+
+  /* Ensure other absolute elements inside the container stay in place */
+  #move-text, #move-calories, #exercise-text, #exercise-calories, #stand-text, #stand-calories {
+    /* These keep their original IDs but will sit below the bar chart area */
+    pointer-events: none;
+  }
+  #name{
+    position: absolute;
+    top: 16rem;
+    left: 22.6rem;
+  }
+  #move-calories{position: absolute; top:30rem; left: 65.5rem;}
+  #move-text{position: absolute; top:30rem; left: 12.6rem;}
+  #exercise-calories{position: absolute; top:36rem; left: 65.5rem;}
+  #exercise-text{position: absolute; top:36rem; left: 12.6rem;}
+  #stand-calories{position: absolute; top:42rem; left: 65.5rem;}
+  #stand-text{position: absolute; top:42rem; left: 12.6rem;}
+
+
+  #r8,#r10,#r12,#r14,#r16{position: absolute; left: 140rem;}
+
+  #r8{top: 35.9rem;}
+  #r10{top: 47.7rem;}
+  #r12{top: 59.5rem;}
+  #r14{top: 71.3rem;}
+  #r16{top: 83.1rem;}
+
+  #r7,#r9,#r11,#r13,#r15{position: absolute; left: 138.25rem;}
+  #r7{top: 37.7rem;}
+  #r9{top: 49.5rem;}
+  #r11{top: 61.29rem;}
+  #r13{top: 73.09rem;}
+  #r15{top: 84.89rem;}
+
+  #train-amount1, #train-amount2, #train-amount3, #train-amount4, #train-amount5 {position: absolute; left: 130rem;}
+  #train-amount1 {top: 36rem;}
+  #train-amount2 {top: 47.8rem;}
+  #train-amount3 {top: 59.6rem;}
+  #train-amount4 {top: 71.4rem;}
+  #train-amount5 {top: 83.2rem;}
+
+  #train-text1, #train-text2, #train-text3, #train-text4, #train-text5 {position: absolute; left: 110rem; width: 14rem;}
+  #train-text1 {top: 35.3rem;}
+  #train-text2 {top: 47.1rem;}
+  #train-text3 {top: 58.9rem;}
+  #train-text4 {top: 70.7rem;}
+  #train-text5 {top: 82.5rem;}
+}
+/*tablet*/
+@media (min-width: 768px) and (max-width: 1024px) {
+  html {
+    font-size: 0.703vw;
+    overflow-x: hidden;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--color-fondo);
+  }
+  #dashboard-deporte {
+    min-height: 148.1rem;
+    width: 100vw;
+    position: absolute;
+    background-color: var(--color-fondo);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  #dashboard-deporte .text16{position: absolute; font-size: 1.6rem; font-family: 'Inter', sans-serif;}
+  #dashboard-deporte .text20{position: absolute; font-size: 2.0rem; font-family: 'Inter', sans-serif;}
+  #dashboard-deporte .text24{position: absolute; font-size: 2.4rem; font-family: 'Inter', sans-serif;}
+  #dashboard-deporte .text64{position: absolute; font-size: 6.4rem; font-family: 'Inter', sans-serif; font-weight: bold;}
+
+
+  #dashboard-deporte .rectangle-macros{position: absolute; height: 1.4rem; width: 15.5rem; border-radius: 90px; }
+  #dashboard-deporte .cross-horizontal {position: absolute; height:1.51685rem; width: 5rem; border-radius: 50px}
+  #dashboard-deporte .cross-vertical {position: absolute; width:1.51685rem; height: 5rem; border-radius: 50px;}
+
+  #dashboard-deporte .rectangle-toggle {
+    position: absolute;
+    height: 7.5rem;
+    width: 15.0rem;
+    top: 21.6rem;
+    left: 101.5rem;
+    border-radius: 70px;
+  }
+  #dashboard-deporte .ellipse-toggle {
+    position: absolute;
+    height: 6.75rem;
+    width: 6.75rem;
+    left: 0.4rem;
+    top: 0.4rem;
+    border-radius: 90px;
+  }
+  #dashboard-deporte .rectangle-container {
+    position: absolute;
+    height: 60.6rem;
+    width: 81.90rem;
+    top: 38.9rem;
+    left: 6.991rem;
+    background-color: #FFFFFF;
+    border-radius: 30px;
+    box-shadow: var(--sombra-suave);
+  }
+  #dashboard-deporte .ellipse-container{
+    position: absolute;
+    height: 30rem;
+    width: 28.09rem;
+    top: 7.66rem;
+    left: 5.13rem;
+    border-radius: 100%;
+  }
+  #dashboard-deporte .ellipse{
+    position: absolute;
+    width: 25.28rem;
+    height: 27rem;
+    top: 1.5rem;
+    left: 1.4rem;
+    border-radius: 100%;
+  }
+
+  #calories-goal{
+    position: absolute;
+    left: 10rem;
+    top: 4.27rem;
+  }
+  #calories-amount{
+    position: absolute;
+    top: 4rem;
+    left: 6.24rem;
+  }
+  #name{
+    position: absolute;
+    top: 16.6rem;
+    left: 22.6rem;
+  }
+
+  #move-calories{position: absolute; top:32rem; left: 60.5rem;}
+  #move-text{position: absolute; top:32rem; left: 12.6rem;}
+  #exercise-calories{position: absolute; top:38rem; left: 60.5rem;}
+  #exercise-text{position: absolute; top:38rem; left: 12.6rem;}
+  #stand-calories{position: absolute; top:44rem; left: 60.5rem;}
+  #stand-text{position: absolute; top:44rem; left: 12.6rem;}
+
+  #r8,#r10,#r12,#r14,#r16{position: absolute; left: 130rem;}
+
+  #r8{top: 38.9rem;}
+  #r10{top: 50.8rem;}
+  #r12{top: 62rem;}
+  #r14{top: 73.2rem;}
+  #r16{top: 85.1rem;}
+
+  #r7,#r9,#r11,#r13,#r15{position: absolute; left: 128.25rem;}
+  #r7{top: 40.69rem;}
+  #r9{top: 52.59rem;}
+  #r11{top: 63.79rem;}
+  #r13{top: 74.99rem;}
+  #r15{top: 86.89rem;}
+
+  #train-amount1, #train-amount2, #train-amount3, #train-amount4, #train-amount5 {position: absolute; left: 120rem;}
+  #train-amount1{top: 39.2rem;}
+  #train-amount2{top: 50.8rem;}
+  #train-amount3{top: 62rem;}
+  #train-amount4{top: 73.2rem;}
+  #train-amount5{top: 85.1rem;}
+
+  #train-text1, #train-text2, #train-text3, #train-text4, #train-text5 {position: absolute; left: 93.8rem; width: 14rem;}
+  #train-text1{top: 38.6rem;}
+  #train-text2{top: 50.8rem;}
+  #train-text3{top: 62rem;}
+  #train-text4{top: 73.2rem;}
+  #train-text5{top: 85.1rem;}
+}
+/*movil*/
+@media (max-width: 768px) {
+  html {
+    font-size: 2.2vw;
+    overflow-x: hidden;
+    align-items: center;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    background-color: var(--color-fondo);
+    align-items: center;
+  }
+  #dashboard-deporte .text16, #dashboard-deporte .text20, #dashboard-deporte .text24, #dashboard-deporte .text64{
+    position: absolute;
+    font-family: 'Inter', sans-serif;
+  }
+
+  #dashboard-deporte {
+    min-height: 91.7rem;
+    width: 100vw;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #dashboard-deporte .rectangle-toggle {
+    position: absolute;
+    height: 4.3rem;
+    width: 9rem;
+    top: 8.3rem;
+    left: calc(50% - 4.5rem);
+    border-radius: 70px;
+  }
+  #dashboard-deporte .ellipse-toggle {
+    position: absolute;
+    height: 4.1rem;
+    width: 4.1rem;
+    left: 0.125rem;
+    top: 0.11rem;
+    border-radius: 90px;
+  }
+  /* Ensure the container is ready for both flex bars and absolute children */
+  #dashboard-deporte .rectangle-container {
+    position: absolute;
+    height: 41.2rem;
+    width: 90vw;
+    top: 13.4rem;
+    align: center;
+    left: calc(50% - 20.6rem); /* Keeps the 900px box centered */
+    background-color: #ffffff;
+    box-shadow: var(--sombra-suave);
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: visible; /* Changed to visible so text can sit slightly below if needed */
+
+  }
+  .bars-container-wrapper .text16 {
+    position: absolute !important;
+    margin-bottom: 2rem;
+    padding: 0;
+    text-align: center;
+  }
+
+  /* Styling the bars to match IMG_0121 */
+  .bar-unit {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border: 1px solid rgba(0,0,0,0.05);
+  }
+  #name {
+    position: absolute;
+    top: 0px;
+    left: 8.9rem;
+    font-size: 3.2rem;
+    font-weight: bold;
+  }
+
+  #move-calories{position: absolute; top:29rem; left: 28.2rem;}
+  #move-text{position: absolute; top: 29rem!important; left: 4.9rem;!important;}
+  #exercise-calories{position: absolute; top:32.5rem; left: 28.2rem;}
+  #exercise-text{position: absolute; top:32.5rem!important; left: 4.9rem;!important;}
+  #stand-calories{position: absolute; top:35.9rem; left: 28.2rem;}
+  #stand-text{position: absolute; top:35.9rem!important; left: 4.9rem!important;}
+
+  #dashboard-deporte .cross-horizontal {position: absolute; height:1.2rem; width: 3.3rem; border-radius: 90px}
+  #dashboard-deporte .cross-vertical {position: absolute; width:1.2rem; height: 3.3rem; border-radius: 90px;}
+
+  #move-rectangle, #fats-rectangle, #stand-rectangle, #sodium-rectangle, #sugar-rectangle {
+    position: relative;
+    height: 0.66rem;
+    width: 10rem !important;;
+  }
+  #move-rectangle{top: 27.85rem; left:3.6rem;}
+  #fats-rectangle{top:27.85rem; left:22.29rem;}
+  #stand-rectangle{top:27.85rem; left:40.32rem;}
+  #sodium-rectangle{top:36.45rem; left:14rem;}
+  #sugar-rectangle{top:36.45rem; left:30.99rem;}
+
+  #move-amount, #fats-amount, #sodium-amount, #sugar-amount, #stand-amount{position: absolute; font-size: 1rem;}
+  #move-amount{top: 27.54rem; left: 4.7rem;}
+  #fats-amount{top: 27.54rem; left: 18.36rem;}
+  #stand-amount{top: 27.54rem; left: 32.43rem;}
+  #sodium-amount{top: 35.14rem; left: 11.9rem;}
+  #sugar-amount{top: 35.14rem; left: 25.56rem;}
+
+  #move-text, #fats-text, #sodium-text, #sugar-text, #stand-text{position: absolute; font-size: 1rem;}
+  #move-text{top: 24.84rem; left: 4.69rem;}
+  #fats-text{top: 24.84rem; left: 18.5rem;}
+  #stand-text{top: 24.84rem; left: 31.4rem;}
+  #sodium-text{top: 32.44rem; left: 12.5rem;}
+  #sugar-text{top: 32.44rem; left: 25.9rem;}
+
+  #r8,#r10,#r12,#r14,#r16{position: absolute; left: 38.5rem;}
+  #r8{top: 59.4rem;}
+  #r10{top: 65.9rem;}
+  #r12{top: 72.4rem;}
+  #r14{top: 79rem;}
+  #r16{top: 85.4rem;}
+
+  #r7,#r9,#r11,#r13,#r15{position: absolute; left: 37.4rem;}
+  #r7{top: 60.5rem;}
+  #r9{top: 67rem;}
+  #r11{top: 73.5rem;}
+  #r13{top: 80.1rem;}
+  #r15{top: 86.5rem;}
+
+  #train-amount1, #train-amount2, #train-amount3, #train-amount4, #train-amount5 {position: absolute; left: 6.6rem; font-size: 1.4rem;}
+  #train-amount1 {top: 60.3rem;}
+  #train-amount2 {top: 66.8rem;}
+  #train-amount3 {top: 73.3rem;}
+  #train-amount4 {top: 79.7rem;}
+  #train-amount5 {top: 86.3rem;}
+
+  #train-text1, #train-text2, #train-text3, #train-text4, #train-text5 {position: absolute; left: 6.4rem; width: 14rem; font-size: 1.6rem;}
+  #train-text1 {top: 58.3rem;}
+  #train-text2 {top: 64.7rem;}
+  #train-text3 {top: 71.1rem;}
+  #train-text4 {top: 77.7rem;}
+  #train-text5 {top: 84.3rem;}
 }
 
-/* Móvil */
-@media (max-width: 768px) {
-  #dashboard-deporte .rectangle-container {
-    position: absolute; height: 41.2rem; width: 90vw; top: 13.4rem; left: calc(50% - 20.6rem);
-  }
+.bars-container-wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  height: 15rem;
+  width: 90%;
+  margin: 10rem auto 0 auto;
+  position: relative;
+  z-index: 5;
+}
+
+.bar-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  justify-content: flex-end;
+  flex: 1;
+  position: absolute;
+  transform: translateX(-50%);
+}
+
+.bar-unit {
+  width: 2.4rem;
+  background-color: var(--color-acento-secundario);
+  border-radius: 1rem;
+  transition: height 0.5s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+.bar-container .text16 {
+  position: absolute;
+  top: 15.5rem;
+  font-weight: bold;
+  color: var(--color-texto-color);
+  white-space: nowrap;
+  margin: 0;
+  padding: 0;
 }

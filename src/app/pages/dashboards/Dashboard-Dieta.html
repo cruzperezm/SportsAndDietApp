@@ -1,37 +1,64 @@
-<div id="dashboard-dieta" *ngIf="data">
-  <!-- El nombre se cargará desde Firestore una vez recibidos los datos -->
-  <p class="text64" id="name">{{ data.usuario.nombre }}</p>[cite: 9]
-
+<div id="dashboard-dieta">
+  <p class="text64" id="name">{{ userName }}</p>
   <div class="rectangle-toggle" id="r0">
-    <a class="ellipse-toggle" id="e0" routerLink="/deporte"></a>
+    <a class="ellipse-toggle" id="e0" routerLink="/dashboard-deporte"></a>
   </div>
-
   <div class="rectangle-container" id="r1">
     <div class="ellipse-container" id="e1">
       <div class="ellipse" id="e2">
-        <p class="text24" id="calories-goal">/{{ data.dieta.calorias_objetivo }}</p>[cite: 9]
-        <p class="text64" id="calories-amount">{{ data.dieta.calorias_totales }}</p>[cite: 9]
+        <p class="text24" id="calories-goal">{{ caloriesGoal }}</p>
+        <p class="text64" id="calories-amount">{{ caloriesAmount }}</p>
       </div>
     </div>
+    <p class="text24" id="water-amount">{{ waterAmount }}</p>
+    <p class="text16" id="water-text">{{ waterText }}</p>
+    <p class="text24" id="fiber-amount">{{ fiberAmount }}</p>
+    <p class="text16" id="fiber-text">{{ fiberText }}</p>
+    <p class="text16" id="protein-amount">{{ proteinAmount }}</p>
+    <p class="text24" id="protein-text">{{ proteinText }}</p>
+    <p class="text16" id="fats-amount">{{ fatsAmount }}</p>
+    <p class="text24" id="fats-text">{{ fatsText }}</p>
+    <p class="text16" id="carbs-amount">{{ carbsAmount }}</p>
+    <p class="text24" id="carbs-text">{{ carbsText }}</p>
+    <p class="text16" id="sodium-amount">{{ sodiumAmount }}</p>
+    <p class="text24" id="sodium-text">{{ sodiumText }}</p>
+    <p class="text16" id="sugar-amount">{{ sugarAmount }}</p>
+    <p class="text24" id="sugar-text">{{ sugarText }}</p>
 
-    <!-- Macros de hidratación y fibra -->
-    <p class="text24" id="water-amount">{{ data.dieta.macros1[0].valor }}</p>[cite: 9]
-    <p class="text16" id="water-text">{{ data.dieta.macros1[0].nombre }}</p>[cite: 9]
-
-    <p class="text24" id="fiber-amount">{{ data.dieta.macros1[1].valor }}</p>[cite: 9]
-    <p class="text16" id="fiber-text">{{ data.dieta.macros1[1].nombre }}</p>[cite: 9]
-
-    <!-- Barras de progreso de macros cargadas dinámicamente -->
-    <div *ngFor="let macro of data.dieta.macros2; let i = index"
-         [id]="['protein', 'fats', 'carbs', 'sodium', 'sugar'][i] + '-rectangle'"
-         class="macro-track">
-      <div class="macro-fill" [style.width.%]="macro.progreso"></div>[cite: 9]
+    <div id="protein-rectangle" class="macro-track">
+      <div class="macro-fill" [style.width.%]="proteinProgress"></div>
+    </div>
+    <div id="fats-rectangle" class="macro-track">
+      <div class="macro-fill" [style.width.%]="fatsProgress"></div>
+    </div>
+    <div id="carbs-rectangle" class="macro-track">
+      <div class="macro-fill" [style.width.%]="carbsProgress"></div>
+    </div>
+    <div id="sodium-rectangle" class="macro-track">
+      <div class="macro-fill" [style.width.%]="sodiumProgress"></div>
+    </div>
+    <div id="sugar-rectangle" class="macro-track">
+      <div class="macro-fill" [style.width.%]="sugarProgress"></div>
     </div>
   </div>
-
-  <!-- Listado de recetas desde Firebase -->
-  <ng-container *ngFor="let receta of data.dieta.recetas; let i = index">
-    <p class="text20" [id]="'diet-text' + (i+1)">{{ receta.nombre }}</p>[cite: 9]
-    <p class="text16" [id]="'diet-amount' + (i+1)">{{ receta.valor }}</p>[cite: 9]
-  </ng-container>
+  <a class="cross-horizontal" id="r7" routerLink="/dietas"></a>
+  <a class="cross-vertical" id="r8" routerLink="/dietas"></a>
+  <p class="text20" id="diet-text1">{{ dietText1 }}</p>
+  <a class="cross-horizontal" id="r9" routerLink="/dietas"></a>
+  <a class="cross-vertical" id="r10" routerLink="/dietas"></a>
+  <p class="text20" id="diet-text2">{{ dietText2 }}</p>
+  <a class="cross-horizontal" id="r11" routerLink="/dietas"></a>
+  <a class="cross-vertical" id="r12" routerLink="/dietas"></a>
+  <p class="text20" id="diet-text3">{{ dietText3 }}</p>
+  <a class="cross-horizontal" id="r13" routerLink="/dietas"></a>
+  <a class="cross-vertical" id="r14" routerLink="/dietas"></a>
+  <p class="text20" id="diet-text4">{{ dietText4 }}</p>
+  <a class="cross-horizontal" id="r15" routerLink="/dietas"></a>
+  <a class="cross-vertical" id="r16" routerLink="/dietas"></a>
+  <p class="text20" id="diet-text5">{{ dietText5 }}</p>
+  <p class="text16" id="diet-amount1">{{ dietAmount1 }}</p>
+  <p class="text16" id="diet-amount2">{{ dietAmount2 }}</p>
+  <p class="text16" id="diet-amount3">{{ dietAmount3 }}</p>
+  <p class="text16" id="diet-amount4">{{ dietAmount4 }}</p>
+  <p class="text16" id="diet-amount5">{{ dietAmount5 }}</p>
 </div>
