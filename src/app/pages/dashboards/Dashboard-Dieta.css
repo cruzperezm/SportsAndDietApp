@@ -408,7 +408,7 @@
   #dashboard-dieta {
     min-height: 91.7rem;
     width: 100vw;
-    position: absolute;
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
