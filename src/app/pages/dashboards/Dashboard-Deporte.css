@@ -12,29 +12,29 @@
 }
 
 
-#dashboard-deporte .text16{color: var(--color-texto-color); }
-#dashboard-deporte .text20{color: var(--color-texto-suave); }
-#dashboard-deporte .text24{color: var(--color-texto-suave); }
-#dashboard-deporte .text64{color: var(--color-texto); }
+#dashboard-deporte .text16{color: #140700; }
+#dashboard-deporte .text20{color: #4B5563; }
+#dashboard-deporte .text24{color: #4B5563; }
+#dashboard-deporte .text64{color: #1F2937; }
 
-#dashboard-deporte .rectangle-macros{background-color: var(--color-acento-secundario);}
-#dashboard-deporte .cross-horizontal {background-color: var(--color-acento-oscuro);}
-#dashboard-deporte .cross-vertical {background-color: var(--color-acento-oscuro);}
+#dashboard-deporte .rectangle-macros{background-color: #d18f6b;}
+#dashboard-deporte .cross-horizontal {background-color: #EA580C;}
+#dashboard-deporte .cross-vertical {background-color: #EA580C;}
 
 #dashboard-deporte .rectangle-toggle {
-  background-color: var(--color-acento);
+  background-color: #F97316;
 }
 #dashboard-deporte .ellipse-toggle {
-  background-color: var(--color-fondo-secundario);
+  background-color: #f0c1a8;
 }
 #dashboard-deporte .rectangle-container {
-  background-color: var(--color-fondo-secundario);
+  background-color: #f0c1a8;
 }
 #dashboard-deporte .ellipse-container{
-  background-color: var(--color-acento-oscuro);
+  background-color: #EA580C;
 }
 #dashboard-deporte .ellipse{
-  background-color: var(--color-fondo);
+  background-color: #FAFAFA;
 }
 
 @media (min-width: 1024px){
@@ -47,7 +47,7 @@
   body {
     height: 100vh;
     width: 100vw;
-    background-color: var(--color-fondo);
+    background-color: #FAFAFA;
   }
   body {
     margin: 0;
@@ -59,22 +59,22 @@
     position: absolute;
     min-height: 145rem;
     width: 100%;
-    background-color: var(--color-fondo);
+    background-color: #FAFAFA;
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
   }
 
-  #dashboard-deporte .text16{position: absolute; font-size: 1.6rem; font-family: 'Inter', sans-serif; color: var(--color-texto-color); }
-  #dashboard-deporte .text20{position: absolute; font-size: 2.0rem; font-family: 'Inter', sans-serif;color: var(--color-texto-suave); }
-  #dashboard-deporte .text24{position: absolute; font-size: 2.4rem; font-family: 'Inter', sans-serif;color: var(--color-texto-suave); }
-  #dashboard-deporte .text64{position: absolute; font-size: 6.4rem; font-family: 'Inter', sans-serif; font-weight: bold;color: var(--color-texto); }
+  #dashboard-deporte .text16{position: absolute; font-size: 1.6rem; font-family: 'Inter', sans-serif; color: #140700; }
+  #dashboard-deporte .text20{position: absolute; font-size: 2.0rem; font-family: 'Inter', sans-serif;color: #4B5563; }
+  #dashboard-deporte .text24{position: absolute; font-size: 2.4rem; font-family: 'Inter', sans-serif;color: #4B5563; }
+  #dashboard-deporte .text64{position: absolute; font-size: 6.4rem; font-family: 'Inter', sans-serif; font-weight: bold;color: #1F2937; }
 
 
-  #dashboard-deporte .rectangle-macros{position: absolute; height: 1.4rem; width: 15.5rem; background-color: var(--color-acento-secundario); border-radius: 90px; }
-  #dashboard-deporte .cross-horizontal {position: absolute; height:1.51685rem; width: 5rem; border-radius: 50px; background-color: var(--color-acento-oscuro);}
-  #dashboard-deporte .cross-vertical {position: absolute; width:1.51685rem; height: 5rem; border-radius: 50px; background-color: var(--color-acento-oscuro);}
+  #dashboard-deporte .rectangle-macros{position: absolute; height: 1.4rem; width: 15.5rem; background-color: #d18f6b; border-radius: 90px; }
+  #dashboard-deporte .cross-horizontal {position: absolute; height:1.51685rem; width: 5rem; border-radius: 50px; background-color: #EA580C;}
+  #dashboard-deporte .cross-vertical {position: absolute; width:1.51685rem; height: 5rem; border-radius: 50px; background-color: #EA580C;}
 
 
 
@@ -181,13 +181,13 @@
     padding: 0;
     height: 100vh;
     width: 100vw;
-    background-color: var(--color-fondo);
+    background-color: #FAFAFA;
   }
   #dashboard-deporte {
     min-height: 148.1rem;
     width: 100vw;
     position: absolute;
-    background-color: var(--color-fondo);
+    background-color: #FAFAFA;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -311,7 +311,7 @@
     margin: 0;
     padding: 0;
     width: 100vw;
-    background-color: var(--color-fondo);
+    background-color: #FAFAFA;
     align-items: center;
   }
   #dashboard-deporte .text16, #dashboard-deporte .text20, #dashboard-deporte .text24, #dashboard-deporte .text64{
@@ -468,7 +468,7 @@
 
 .bar-unit {
   width: 2.4rem;
-  background-color: var(--color-acento-secundario);
+  background-color: #d18f6b;
   border-radius: 1rem;
   transition: height 0.5s ease;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -479,7 +479,7 @@
   position: absolute;
   top: 15.5rem;
   font-weight: bold;
-  color: var(--color-texto-color);
+  color: #140700;
   white-space: nowrap;
   margin: 0;
   padding: 0;

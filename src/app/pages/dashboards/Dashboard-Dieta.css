@@ -13,29 +13,29 @@
 
 
 
-#dashboard-dieta .text16{color: var(--color-texto-color); }
-#dashboard-dieta .text20{color: var(--color-texto-suave); }
-#dashboard-dieta .text24{color: var(--color-texto-suave); }
-#dashboard-dieta .text64{color: var(--color-texto); }
+#dashboard-dieta .text16{color: #00120c; }
+#dashboard-dieta .text20{color: #4B5563; }
+#dashboard-dieta .text24{color: #4B5563; }
+#dashboard-dieta .text64{color: #1F2937; }
 
-#dashboard-dieta .rectangle-macros{pvar(--color-acento-secundario);}
-#dashboard-dieta .cross-horizontal {background-color: var(--color-acento-oscuro);}
-#dashboard-dieta .cross-vertical {background-color: var(--color-acento-oscuro);}
+#dashboard-dieta .rectangle-macros{background-color: #6eb59e;}
+#dashboard-dieta .cross-horizontal {background-color: #059669;}
+#dashboard-dieta .cross-vertical {background-color: #059669;}
 
 #dashboard-dieta .rectangle-toggle {
-  background-color: var(--color-acento);
+  background-color: #10B981;
 }
 #dashboard-dieta .ellipse-toggle {
-  background-color: var(--color-fondo-secundario);
+  background-color: #a8f0d8;
 }
 #dashboard-dieta .rectangle-container {
-  background-color: var(--color-fondo-secundario);
+  background-color: #a8f0d8;
 }
 #dashboard-dieta .ellipse-container{
-  background-color: var(--color-acento-oscuro);
+  background-color: #059669;
 }
 #dashboard-dieta .ellipse{
-  background-color: var(--color-fondo);
+  background-color: #FAFAFA;
 }
 
 @media (min-width: 1024px){
@@ -47,13 +47,13 @@
   body {
     height: 100vh;
     width: 100vw;
-    background-color: var(--color-fondo);
+    background-color: #FAFAFA;
   }
   #dashboard-dieta {
     position: absolute;
     min-height: 145rem;
     width: 100vw;
-    background-color: var(--color-fondo);
+    background-color: #FAFAFA;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -117,7 +117,7 @@
     width: 28.5rem;
     top: 1.6rem;
     left: 1.6rem;
-    background-color: var(--color-fondo);
+    background-color: #FAFAFA;
     border-radius: 100%;
   }
   #calories-amount{
@@ -141,7 +141,7 @@
 
   .macro-fill {
     height: 100%;
-    background-color: var(--color-acento);
+    background-color: #10B981;
     border-radius: 90px;
     transition: width 0.8s ease-in-out;
   }
@@ -218,13 +218,13 @@
     padding: 0;
     height: 100vh;
     width: 100vw;
-    background-color: var(--color-fondo);
+    background-color: #FAFAFA;
   }
   #dashboard-dieta {
     min-height: 148.1rem;
     width: 100vw;
     position: absolute;
-    background-color: var(--color-fondo);
+    background-color: #FAFAFA;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -317,7 +317,7 @@
 
   .macro-fill {
     height: 100%;
-    background-color: var(--color-acento);
+    background-color: #10B981;
     border-radius: 90px;
     transition: width 0.8s ease-in-out;
   }
@@ -397,7 +397,7 @@
     margin: 0;
     padding: 0;
     width: 100vw;
-    background-color: var(--color-fondo);
+    background-color: #FAFAFA;
     align-items: center;
   }
   #dashboard-dieta .text16, #dashboard-dieta .text20, #dashboard-dieta .text24, #dashboard-dieta .text64{
@@ -454,7 +454,7 @@
     width: 14rem;
     top: 0.9rem;
     left: 0.9rem;
-    background-color: var(--color-fondo);
+    background-color: #FAFAFA;
     border-radius: 100%;
   }
 
@@ -492,7 +492,7 @@
 
   .macro-fill {
     height: 100%;
-    background-color: var(--color-acento);
+    background-color: #10B981;
     border-radius: 90px;
     transition: width 0.8s ease-in-out;
   }
