@@ -14,8 +14,8 @@ interface SportData {
 
 @Component({
   selector: 'app-dashboard-deporte',
-  templateUrl: './dashboard-deporte.component.html',
-  styleUrls: ['./dashboard-deporte.component.css']
+  templateUrl: './Dashboard-Deporte.html',
+  styleUrls: ['./Dashboard-Deporte.css']
 })
 export class DashboardDeporteComponent implements OnInit {
   data$!: Observable<SportData>;
