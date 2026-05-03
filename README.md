@@ -26,9 +26,9 @@ Este proyecto está desarrollado con Angular y requiere Node.js para funcionar l
 
 1. **Descomprimir:** Abre una terminal en la carpeta raíz del proyecto (donde se encuentra el archivo `package.json`).
 2. **Instalar las dependencias:** Ejecuta el siguiente comando para descargar todos los paquetes necesarios de Angular y Firebase:
-   ```
-   npm install
-   ```
+```
+npm install
+```
    
 Ejecutar el servidor de desarrollo: Una vez instaladas las dependencias, levanta el proyecto con:
 ```
@@ -37,6 +37,19 @@ ng serve
 Visualizar la web: Abre tu navegador de preferencia y accede a la siguiente dirección:
 ```
 http://localhost:4200
+```
+
+Si por algun casual no observa bien las paginas, tiene que ver con las normas del firebase:
+```
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /{document=**} {
+      // Permitimos lectura y escritura abierta para la corrección del proyecto
+      allow read, write: if true;
+    }
+  }
+}
 ```
 
 ---
