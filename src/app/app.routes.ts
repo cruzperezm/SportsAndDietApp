@@ -12,6 +12,7 @@ import { DashboardDeporteComponent} from './pages/dashboards/dashboard-deporte';
 import { DashboardDietaComponent} from './pages/dashboards/dashboard-dieta';
 import { Explorer } from './pages/explorer/explorer';
 import { SignupComponent } from './pages/sign-up/sign-up';
+import { AboutUsComponent } from './pages/about-us/about-us';
 
 export const routes: Routes = [
   { path: 'login', component: LoginComponent, title: 'SPORTS&DIET · Log In' },
@@ -23,6 +24,7 @@ export const routes: Routes = [
   { path: 'dietas/receta/:id', component: DietasDetalleComponent, title: 'SPORTS&DIET · Receta' },
   { path: 'home', component: HomeComponent, title: 'SPORTS&DIET · Home' },
   { path: 'deportes', component: DeportesInicioComponent, title: 'SPORTS&DIET · Deportes' },
+  { path: 'about-us', component: AboutUsComponent, title: 'SPORTS&DIET · Sobre Nosotros'},
   {
     path: 'deportes/plan/:id',
     component: DeportesPlanComponent,

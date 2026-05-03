@@ -1,8 +1,9 @@
-import { Component, inject, AfterViewInit, NgZone } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { AuthService } from '../../services/auth';
+import { Component, inject, AfterViewInit, NgZone, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 
 declare var google: any;
 
@@ -14,6 +15,7 @@ declare var google: any;
   styleUrls: ['./log-in.component.css'],
 })
 export class LoginComponent implements AfterViewInit {
+  private platformId = inject(PLATFORM_ID);
   private fb = inject(FormBuilder);
   private authService = inject(AuthService);
   private router = inject(Router);
@@ -36,9 +38,11 @@ export class LoginComponent implements AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    setTimeout(() => {
-      this.loadGoogleScript();
-    }, 200);
+    if (isPlatformBrowser(this.platformId)) {
+      setTimeout(() => {
+        this.loadGoogleScript();
+      }, 300);
+    }
   }
 
   loadGoogleScript(): void {
