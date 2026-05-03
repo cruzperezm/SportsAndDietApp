@@ -1,7 +1,7 @@
 <div id="dashboard-dieta">
   <p class="text64" id="name">{{ userName }}</p>
   <div class="rectangle-toggle" id="r0">
-    <a class="ellipse-toggle" id="e0" routerLink="/dashboard-deporte"></a>
+    <div class="ellipse-toggle" (click)="goToDeporte()" style="cursor: pointer;"></div>
   </div>
   <div class="rectangle-container" id="r1">
     <div class="ellipse-container" id="e1">
@@ -41,20 +41,20 @@
       <div class="macro-fill" [style.width.%]="sugarProgress"></div>
     </div>
   </div>
-  <a class="cross-horizontal" id="r7" routerLink="/dietas"></a>
-  <a class="cross-vertical" id="r8" routerLink="/dietas"></a>
+  <div class="cross-horizontal" id="r7" (click)="goToDieta()" style="cursor: pointer;"></div>
+  <div class="cross-vertical" id="r8"(click)="goToDieta()" style='cursor: pointer;'></div>
   <p class="text20" id="diet-text1">{{ dietText1 }}</p>
-  <a class="cross-horizontal" id="r9" routerLink="/dietas"></a>
-  <a class="cross-vertical" id="r10" routerLink="/dietas"></a>
+  <div class="cross-horizontal" id="r9" (click)="goToDieta()" style='cursor: pointer;'></div>
+  <div class="cross-vertical" id="r10" (click)="goToDieta()" style='cursor: pointer;'></div>
   <p class="text20" id="diet-text2">{{ dietText2 }}</p>
-  <a class="cross-horizontal" id="r11" routerLink="/dietas"></a>
-  <a class="cross-vertical" id="r12" routerLink="/dietas"></a>
+  <div class="cross-horizontal" id="r11" (click)="goToDieta()" style='cursor: pointer;'></div>
+  <div class="cross-vertical" id="r12" (click)="goToDieta()" style='cursor: pointer;'></div>
   <p class="text20" id="diet-text3">{{ dietText3 }}</p>
-  <a class="cross-horizontal" id="r13" routerLink="/dietas"></a>
-  <a class="cross-vertical" id="r14" routerLink="/dietas"></a>
+  <div class="cross-horizontal" id="r13" (click)="goToDieta()" style='cursor: pointer;'></div>
+  <div class="cross-vertical" id="r14" (click)="goToDieta()" style='cursor: pointer;'></div>
   <p class="text20" id="diet-text4">{{ dietText4 }}</p>
-  <a class="cross-horizontal" id="r15" routerLink="/dietas"></a>
-  <a class="cross-vertical" id="r16" routerLink="/dietas"></a>
+  <div class="cross-horizontal" id="r15" (click)="goToDieta()" style='cursor: pointer;'></div>
+  <div class="cross-vertical" id="r16" (click)="goToDieta()" style='cursor: pointer;'></div>
   <p class="text20" id="diet-text5">{{ dietText5 }}</p>
   <p class="text16" id="diet-amount1">{{ dietAmount1 }}</p>
   <p class="text16" id="diet-amount2">{{ dietAmount2 }}</p>

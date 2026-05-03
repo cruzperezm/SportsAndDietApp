@@ -1,6 +1,7 @@
 import { Component, OnInit, inject, OnDestroy } from '@angular/core';
 import { Firestore, doc, onSnapshot } from '@angular/fire/firestore';
 import { Unsubscribe } from 'firebase/firestore';
+import { Router } from '@angular/router';
 
 interface DietData {
   usuario: { nombre: string };
@@ -110,5 +111,12 @@ export class DashboardDietaComponent implements OnInit, OnDestroy {
     this.dietText4 = recetas[3]?.nombre || '';
     this.dietAmount5 = recetas[4]?.valor || '';
     this.dietText5 = recetas[4]?.nombre || '';
+  }
+  constructor(private router: Router) {}
+  goToDeporte() {
+    this.router.navigate(['/dashboard-deporte']);
+  }
+  goToDieta() {
+    this.router.navigate(['/dietas']);
   }
 }

@@ -1,7 +1,7 @@
 <div id="dashboard-deporte">
   <p class="text64" id="name">{{ userName }}</p>
   <div class="rectangle-toggle">
-    <a class="ellipse-toggle" routerLink="/dashboard-dieta"></a>
+    <div class="ellipse-toggle" (click)="goToDieta()" style="cursor: pointer;"></div>
   </div>
   <div class="rectangle-container">
     <p class="text24" id="move-text">{{ moveText }}</p>
@@ -20,20 +20,20 @@
       </div>
     </div>
   </div>
-  <a class="cross-horizontal" id="r7" routerLink="/deporte"></a>
-  <a class="cross-vertical" id="r8" routerLink="/deporte"></a>
+  <div class="cross-horizontal" id="r7" (click)="goToDeporte()" style="cursor: pointer;" ></div>
+  <div class="cross-vertical" id="r8" (click)="goToDeporte()" style="cursor: pointer;"></div>
   <p class="text20" id="train-text1">{{ trainText1 }}</p>
-  <a class="cross-horizontal" id="r9" routerLink="/deporte"></a>
-  <a class="cross-vertical" id="r10" routerLink="/deporte"></a>
+  <div class="cross-horizontal" id="r9" (click)="goToDeporte()" style="cursor: pointer;"></div>
+  <div class="cross-vertical" id="r10" (click)="goToDeporte()" style="cursor: pointer;"></div>
   <p class="text20" id="train-text2">{{ trainText2 }}</p>
-  <a class="cross-horizontal" id="r11" routerLink="/deporte"></a>
-  <a class="cross-vertical" id="r12" routerLink="/deporte"></a>
+  <div class="cross-horizontal" id="r11" (click)="goToDeporte()" style="cursor: pointer;"></div>
+  <div class="cross-vertical" id="r12" (click)="goToDeporte()" style="cursor: pointer;"></div>
   <p class="text20" id="train-text3">{{ trainText3 }}</p>
-  <a class="cross-horizontal" id="r13" routerLink="/deporte"></a>
-  <a class="cross-vertical" id="r14" routerLink="/deporte"></a>
+  <div class="cross-horizontal" id="r13" (click)="goToDeporte()" style="cursor: pointer;"></div>
+  <div class="cross-vertical" id="r14" (click)="goToDeporte()" style="cursor: pointer;"></div>
   <p class="text20" id="train-text4">{{ trainText4 }}</p>
-  <a class="cross-horizontal" id="r15" routerLink="/deporte"></a>
-  <a class="cross-vertical" id="r16" routerLink="/deporte"></a>
+  <div class="cross-horizontal" id="r15" (click)="goToDeporte()" style="cursor: pointer;"></div>
+  <div class="cross-vertical" id="r16" (click)="goToDeporte()" style="cursor: pointer;"></div>
   <p class="text20" id="train-text5">{{ trainText5 }}</p>
   <p class="text16" id="train-amount1">{{ trainAmount1 }}</p>
   <p class="text16" id="train-amount2">{{ trainAmount2 }}</p>

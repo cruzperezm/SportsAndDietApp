@@ -12,8 +12,17 @@
 }
 
 #dashboard-deporte {
+  display: grid !important;
+  place-items: center !important;
+  min-height: 100vh !important;
   transform: scale(0.5);
-  transform-origin: top center;
+  transform-origin: top left;
+  margin-left: 10vw;
+}
+
+* {
+  max-width: 100vw !important;
+  font-size: clamp(0.8rem, 4vw, 2rem) !important;
 }
 
 #dashboard-deporte .text16{color: #140700; }

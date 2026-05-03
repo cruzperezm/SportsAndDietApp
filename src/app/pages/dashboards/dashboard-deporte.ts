@@ -1,6 +1,7 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { Firestore, doc, onSnapshot } from '@angular/fire/firestore';
 import { Unsubscribe } from 'firebase/firestore';
+import {Router} from '@angular/router';
 
 interface SportData {
   usuario: { nombre: string };
@@ -70,4 +71,13 @@ export class DashboardDeporteComponent implements OnInit {
       (this as any)[`trainAmount${i}`] = exercise?.valor || '';
     }
   }
+  constructor(private router: Router) {}
+  goToDieta() {
+    this.router.navigate(['/dashboard-dieta']);
+  }
+  goToDeporte() {
+    this.router.navigate(['/deportes']);
+  }
 }
+
+
