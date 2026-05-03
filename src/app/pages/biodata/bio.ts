@@ -54,7 +54,8 @@ export class Bio {
     // @ts-ignore
       await this.bioService
       .addBioData(this.bioForm.value)
-      .then((res) => console.log('OK:', res))
+      .then((res) =>{ console.log('OK:', res)
+      this.router.navigate(['/dashboard-dieta']);})
       .catch((err) => console.error('ERROR:', err));}
     catch(err) {console.error('ERROR:', err)}
   }
