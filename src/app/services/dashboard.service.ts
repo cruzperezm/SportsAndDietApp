@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Firestore, doc, docData } from '@angular/fire/firestore';
-import { Observable } from 'rxjs';
+import { Firestore, doc, getDoc } from '@angular/fire/firestore';
+import { Observable, from, map } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -8,9 +8,18 @@ import { Observable } from 'rxjs';
 export class DataService {
   constructor(private firestore: Firestore) {}
 
-  // Obtenemos los datos de un documento específico (ej. 'usuarios/id_usuario')
   getData(): Observable<any> {
-    const userDocRef = doc(this.firestore, 'dashboard/deporte_data');
-    return docData(userDocRef);
+    const docRef = doc(this.firestore, 'dashboard/deporte_data');
+
+    return from(getDoc(docRef)).pipe(
+      map((docSnap) => {
+        if (docSnap.exists()) {
+          return docSnap.data();
+        } else {
+          console.warn('AVISO: El documento "deporte_data" no existe en Firebase.');
+          return null;
+        }
+      }),
+    );
   }
 }

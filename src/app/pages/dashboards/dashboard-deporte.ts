@@ -1,8 +1,12 @@
-import { Component, OnInit } from '@angular/core';
-import { DataService } from '../../services/dashboard.service'; // Ajusta la ruta
+import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
+import { DataService } from '../../services/dashboard.service';
 
 @Component({
   selector: 'app-sport-dashboard',
+  standalone: true, //esto
+  imports: [CommonModule, RouterModule], //esto
   templateUrl: './Dashboard-Deporte.html',
   styleUrls: ['./Dashboard-Deporte.css'],
 })
@@ -12,19 +16,35 @@ export class SportDashboardComponent implements OnInit {
   public semana: any[] = [];
   public resumen: any = {};
 
-  // Inyectamos el servicio de datos en lugar de HttpClient[cite: 1, 4]
-  constructor(private dataService: DataService) {}
+  constructor(
+    private dataService: DataService,
+    private cdr: ChangeDetectorRef,
+  ) {}
 
   ngOnInit(): void {
-    // Nos suscribimos al observable que viene de Firebase[cite: 4]
-    this.dataService.getData().subscribe((res: any) => {
-      if (res) {
-        this.data = res;
-        this.resumen = res.deporte.resumen;
-        this.semana = res.deporte.semana;
-        this.ejercicios = res.deporte.ejercicios;
-      }
-    });
+    console.log('1. Intentando conectar con el servicio...');
+
+    this.dataService.getData().subscribe(
+      (res: any) => {
+        console.log('2. Respuesta recibida de Firebase:', res); // <--- ESTO ES CLAVE
+
+        if (res) {
+          this.data = res;
+          if (res.deporte) {
+            this.resumen = res.deporte.resumen || {};
+            this.semana = res.deporte.semana || [];
+            this.ejercicios = res.deporte.ejercicios || [];
+          }
+          this.cdr.detectChanges();
+          console.log('3. Datos asignados y detector de cambios activado');
+        } else {
+          console.warn('Firebase devolvió un objeto vacío o nulo');
+        }
+      },
+      (error) => {
+        console.error('ERROR REAL DE FIREBASE:', error);
+      },
+    );
   }
 
   getBarHeight(valor: number): string {

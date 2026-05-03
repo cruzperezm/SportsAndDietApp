@@ -12,7 +12,7 @@ export class AuthService {
 
   constructor(private http: HttpClient) {}
 
-  hasToken(): boolean {
+  hasToken(): boolean {0
     // 1. Preguntamos: "¿Existe localStorage en este entorno?"
     if (typeof localStorage !== 'undefined') {
       // Si existe (estamos en el navegador), hacemos lo normal

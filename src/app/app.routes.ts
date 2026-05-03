@@ -9,6 +9,8 @@ import { HomeComponent } from './pages/home/home';
 import { DeportesInicioComponent } from './pages/deportes/deportes-inicio/deportes-inicio';
 import { DeportesPlanComponent } from './pages/deportes/deportes-plan/deportes-plan';
 import { DeportesDetalleComponent } from './pages/deportes/deportes-detalle/deportes-detalle';
+import { SportDashboardComponent} from './pages/dashboards/dashboard-deporte';
+import { DietDashboardComponent} from './pages/dashboards/dashboard-dieta';
 
 export const routes: Routes = [
   //{ path: 'login', component: Login, title: 'SPORTS&DIET · Log In' },
@@ -19,16 +21,10 @@ export const routes: Routes = [
   { path: 'dietas/receta/:id', component: DietasDetalleComponent, title: 'SPORTS&DIET · Receta' },
   { path: 'home', component: HomeComponent, title: 'SPORTS&DIET · Home' },
   { path: 'deportes', component: DeportesInicioComponent, title: 'SPORTS&DIET · Deportes' },
-  {
-    path: 'deportes/plan/:id',
-    component: DeportesPlanComponent,
-    title: 'SPORTS&DIET · Entrenamientos',
-  },
-  {
-    path: 'deportes/ejercicio/:id',
-    component: DeportesDetalleComponent,
-    title: 'SPORTS&DIET · Ejercicio',
-  },
+  { path: 'deportes/plan/:id', component: DeportesPlanComponent, title: 'SPORTS&DIET · Entrenamientos', },
+  { path: 'deportes/ejercicio/:id', component: DeportesDetalleComponent, title: 'SPORTS&DIET · Ejercicio', },
+  { path: 'dashboard-deporte', component: SportDashboardComponent, title: 'SPORTS&DIET · Dashboard Deporte' },
+  { path: 'dashboard-dieta', component: DietDashboardComponent, title: 'SPORTS&DIET · Dashboard Dieta' },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: '**', redirectTo: 'home' },
 ];
