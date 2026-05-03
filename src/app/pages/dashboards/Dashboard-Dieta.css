@@ -21,10 +21,6 @@
   margin-left: 10vw;
 }
 
-* {
-  max-width: 100vw !important;
-  font-size: clamp(0.8rem, 4vw, 2rem) !important;
-}
 
 #dashboard-dieta .text16{color: #00120c; }
 #dashboard-dieta .text20{color: #4B5563; }
@@ -75,7 +71,7 @@
   #dashboard-dieta .text16{position: absolute; font-size: 1.6rem; font-family: 'Inter', sans-serif;}
   #dashboard-dieta .text20{position: absolute; font-size: 2.0rem; font-family: 'Inter', sans-serif;}
   #dashboard-dieta .text24{position: absolute; font-size: 2.4rem; font-family: 'Inter', sans-serif;}
-  #dashboard-dieta .text64{position: absolute; font-size: 6.4rem; font-family: 'Inter', sans-serif; font-weight: bold;}
+  #dashboard-dieta .text64{position: absolute; font-size: 6.4rem!important; font-family: 'Inter', sans-serif; font-weight: bold;}
 
 
   #dashboard-dieta .rectangle-macros{position: absolute; height: 1.4rem; width: 15.5rem; border-radius: 90px; }
@@ -135,7 +131,8 @@
   #calories-amount{
     position: absolute;
     left: 7.05rem;
-    top: 4rem;
+    top: 10rem;
+    font-size: 6.4rem;
   }
   #calories-goal{
     position: absolute;
@@ -158,9 +155,9 @@
     transition: width 0.8s ease-in-out;
   }
 
-  #water-text {position:absolute; left: 11.5rem; top:40rem;}
+  #water-text {position:absolute; left: 11.5rem; top:39rem;}
   #water-amount{position:absolute; left: 9rem; top:41rem;}
-  #fiber-text{position:absolute; left: 29.5rem; top:40rem;}
+  #fiber-text{position:absolute; left: 29.5rem; top:39rem;}
   #fiber-amount{position:absolute; left: 27rem; top:41rem;}
   #name{
     position: absolute;
