@@ -66,12 +66,12 @@
   #dashboard-dieta .text64{position: absolute; font-size: 6.4rem; font-family: 'Inter', sans-serif; font-weight: bold;}
 
 
-  #dashboard-dieta .rectangle-macros{position: absolute; height: 1.4rem; width: 15.5rem; border-radius: 90px; }
-  #dashboard-dieta .cross-horizontal {position: absolute; height:1.51685rem; width: 5rem; border-radius: 50px}
-  #dashboard-dieta .cross-vertical {position: absolute; width:1.51685rem; height: 5rem; border-radius: 50px;}
+  #dashboard-dieta .rectangle-macros{position: relative; height: 1.4rem; width: 15.5rem; border-radius: 90px; }
+  #dashboard-dieta .cross-horizontal {position: relative; height:1.51685rem; width: 5rem; border-radius: 50px}
+  #dashboard-dieta .cross-vertical {position: relative; width:1.51685rem; height: 5rem; border-radius: 50px;}
 
   #dashboard-dieta .rectangle-toggle {
-    position: absolute;
+    position: relative;
     height: 7.5rem;
     width: 15.0rem;
     top: 21.6rem;
@@ -79,7 +79,7 @@
     border-radius: 70px;
   }
   #dashboard-dieta .ellipse-toggle {
-    position: absolute;
+    position: relative;
     height: 6.75rem;
     width: 6.75rem;
     left: 7.875rem;
@@ -87,7 +87,7 @@
     border-radius: 90px;
   }
   .macro-track {
-    position: absolute;
+    position: relative;
     background-color: #e2e8f0;
     border-radius: 90px;
     overflow: visible;
@@ -104,7 +104,7 @@
     box-shadow: var(--sombra-suave);
   }
   #dashboard-dieta .ellipse-container{
-    position: absolute;
+    position: relative;
     height: 31.7rem;
     width: 31.7rem;
     top: 6.5rem;
@@ -112,7 +112,7 @@
     border-radius: 100%;
   }
   #dashboard-dieta .ellipse{
-    position: absolute;
+    position: relative;
     height: 28.5rem;
     width: 28.5rem;
     top: 1.6rem;
@@ -121,7 +121,7 @@
     border-radius: 100%;
   }
   #calories-amount{
-    position: absolute;
+    position: relative;
     left: 7.05rem;
     top: 4rem;
   }
@@ -135,7 +135,7 @@
   #protein-rectangle, #fats-rectangle, #carbs-rectangle, #sodium-rectangle, #sugar-rectangle {
     width: 18.5611rem !important;
     height: 1.4105rem !important;
-    position: absolute !important;
+    position: relative !important;
     background-color: #d9d9d9;
   }
 
@@ -147,15 +147,15 @@
   }
 
   #water-text {position:absolute; left: 11.5rem; top:40rem;}
-  #water-amount{position:absolute; left: 9rem; top:41rem;}
+  #water-amount{position:relative; left: 9rem; top:41rem;}
   #fiber-text{position:absolute; left: 29.5rem; top:40rem;}
-  #fiber-amount{position:absolute; left: 27rem; top:41rem;}
+  #fiber-amount{position:relative; left: 27rem; top:41rem;}
   #name{
     position: absolute;
     top: 21.6rem;
     left: 22.6rem;
   }
-  #protein-rectangle, #fats-rectangle, #carbs-rectangle, #sodium-rectangle, #sugar-rectangle{position: absolute; left: 66rem;}
+  #protein-rectangle, #fats-rectangle, #carbs-rectangle, #sodium-rectangle, #sugar-rectangle{position: relative; left: 66rem;}
   #protein-rectangle{top: 9.1rem;}
   #fats-rectangle{top: 17.8rem;}
   #carbs-rectangle{top: 26.5rem;}
@@ -177,7 +177,7 @@
   #sodium-text{top: 31.9rem;}
   #sugar-text{top: 40.6rem;}
 
-  #r8,#r10,#r12,#r14,#r16{position: absolute; left: 140rem;}
+  #r8,#r10,#r12,#r14,#r16{position: relative; left: 140rem;}
 
   #r8{top: 35.9rem;}
   #r10{top: 47.7rem;}
@@ -185,7 +185,7 @@
   #r14{top: 71.3rem;}
   #r16{top: 83.1rem;}
 
-  #r7,#r9,#r11,#r13,#r15{position: absolute; left: 138.25rem;}
+  #r7,#r9,#r11,#r13,#r15{position: relative; left: 138.25rem;}
   #r7{top: 37.7rem;}
   #r9{top: 49.5rem;}
   #r11{top: 61.29rem;}
@@ -237,12 +237,12 @@
   #dashboard-dieta .text64{position: absolute; font-size: 6.4rem; font-family: 'Inter', sans-serif; font-weight: bold;}
 
 
-  #dashboard-dieta .rectangle-macros{position: absolute; height: 1.4rem; width: 15.5rem; border-radius: 90px; }
-  #dashboard-dieta .cross-horizontal {position: absolute; height:1.51685rem; width: 5rem; border-radius: 50px}
-  #dashboard-dieta .cross-vertical {position: absolute; width:1.51685rem; height: 5rem; border-radius: 50px;}
+  #dashboard-dieta .rectangle-macros{position: relative; height: 1.4rem; width: 15.5rem; border-radius: 90px; }
+  #dashboard-dieta .cross-horizontal {position: relative; height:1.51685rem; width: 5rem; border-radius: 50px}
+  #dashboard-dieta .cross-vertical {position: relative; width:1.51685rem; height: 5rem; border-radius: 50px;}
 
   #dashboard-dieta .rectangle-toggle {
-    position: absolute;
+    position: relative;
     height: 7.5rem;
     width: 15.0rem;
     top: 21.6rem;
@@ -250,7 +250,7 @@
     border-radius: 70px;
   }
   #dashboard-dieta .ellipse-toggle {
-    position: absolute;
+    position: relative;
     height: 6.75rem;
     width: 6.75rem;
     left: 7.8rem;
@@ -268,7 +268,7 @@
     box-shadow: var(--sombra-suave);
   }
   #dashboard-dieta .ellipse-container{
-    position: absolute;
+    position: relative;
     height: 30rem;
     width: 28.09rem;
     top: 7.66rem;
@@ -276,7 +276,7 @@
     border-radius: 100%;
   }
   #dashboard-dieta .ellipse{
-    position: absolute;
+    position: relative;
     width: 25.28rem;
     height: 27rem;
     top: 1.5rem;
@@ -284,14 +284,14 @@
     border-radius: 100%;
   }
   .macro-track {
-    position: absolute;
+    position: relative;
     background-color: #e2e8f0;
     border-radius: 90px;
     overflow: visible;
     z-index: 10;
   }
   #calories-goal{
-    position: absolute;
+    position: relative;
     left: 10rem;
     top: 4.27rem;
   }
@@ -301,7 +301,7 @@
     left: 6.24rem;
   }
 
-  #protein-rectangle, #fats-rectangle, #carbs-rectangle, #sodium-rectangle, #sugar-rectangle{position: absolute; left: 56rem;}
+  #protein-rectangle, #fats-rectangle, #carbs-rectangle, #sodium-rectangle, #sugar-rectangle{position: relative; left: 56rem;}
   #protein-rectangle{top: 11rem;}
   #fats-rectangle{top: 21.25rem;}
   #carbs-rectangle{top: 31.5rem;}
@@ -311,7 +311,7 @@
   #protein-rectangle, #fats-rectangle, #carbs-rectangle, #sodium-rectangle, #sugar-rectangle {
     width: 18rem !important;
     height: 1.4105rem !important;
-    position: absolute !important;
+    position: relative !important;
     background-color: #d9d9d9;
   }
 
@@ -327,13 +327,13 @@
     top: 0.5rem;
     left: 14rem;
   }
-  #dashboard-dieta .cross-horizontal {position: absolute; height:1.2rem; width: 3.3rem; border-radius: 90px}
-  #dashboard-dieta .cross-vertical {position: absolute; width:1.2rem; height: 3.3rem; border-radius: 90px;}
+  #dashboard-dieta .cross-horizontal {position: relative; height:1.2rem; width: 3.3rem; border-radius: 90px}
+  #dashboard-dieta .cross-vertical {position: relative; width:1.2rem; height: 3.3rem; border-radius: 90px;}
 
 
-  #water-text {position:absolute; left: 17.11rem; top:39rem;}
+  #water-text {position:relative; left: 17.11rem; top:39rem;}
   #water-amount{position:absolute; left: 14.7rem; top:40rem;}
-  #fiber-text{position:absolute; left: 17.11rem; top:47rem;}
+  #fiber-text{position:relative; left: 17.11rem; top:47rem;}
   #fiber-amount{position:absolute; left: 14.7rem; top:48rem;}
   #name{
     position: absolute;
@@ -356,7 +356,7 @@
   #sodium-text{top: 38.44rem;}
   #sugar-text{top: 48.69rem;}
 
-  #r8,#r10,#r12,#r14,#r16{position: absolute; left: 129.35rem;}
+  #r8,#r10,#r12,#r14,#r16{position: relative; left: 129.35rem;}
 
   #r8{top: 39.5rem;}
   #r10{top: 50.8rem;}
@@ -364,7 +364,7 @@
   #r14{top: 73.2rem;}
   #r16{top: 85.1rem;}
 
-  #r7,#r9,#r11,#r13,#r15{position: absolute; left: 128.25rem;}
+  #r7,#r9,#r11,#r13,#r15{position: relative; left: 128.25rem;}
   #r7{top: 40.69rem;}
   #r9{top: 51.99rem;}
   #r11{top: 63.19rem;}
@@ -414,7 +414,7 @@
     align-items: center;
   }
   #dashboard-dieta .rectangle-toggle {
-    position: absolute;
+    position: relative;
     height: 4.3rem;
     width: 9rem;
     top: 8.3rem;
@@ -422,7 +422,7 @@
     border-radius: 70px;
   }
   #dashboard-dieta .ellipse-toggle {
-    position: absolute;
+    position: relative;
     height: 4.1rem;
     width: 4.1rem;
     left: 4.8rem;
@@ -441,7 +441,7 @@
     box-shadow: var(--sombra-suave);
   }
   #dashboard-dieta .ellipse-container{
-    position: absolute;
+    position: relative;
     height: 15.7rem;
     width: 15.7rem;
     top: 4.1rem;
@@ -449,7 +449,7 @@
     border-radius: 100%;
   }
   #dashboard-dieta .ellipse{
-    position: absolute;
+    position: relative;
     height: 14rem;
     width: 14rem;
     top: 0.9rem;
@@ -460,7 +460,7 @@
 
   #calories-amount{
     font-size: 3.2rem;
-    position: absolute;
+    position: relative;
     left: 3.43rem;
     top: 2.5rem;
   }
@@ -471,7 +471,7 @@
     left: 5.5rem;
   }
   .macro-track {
-    position: absolute;
+    position: relative;
     background-color: #e2e8f0;
     border-radius: 90px;
     overflow: visible;
@@ -481,7 +481,7 @@
   #protein-rectangle, #fats-rectangle, #carbs-rectangle, #sodium-rectangle, #sugar-rectangle {
     width: 8.2902rem !important;
     height: 0.6606rem !important;
-    position: absolute !important;
+    position: relative !important;
   }
 
   #protein-rectangle { top: 27.45rem !important; left: 2.6rem !important; }
@@ -496,9 +496,9 @@
     border-radius: 90px;
     transition: width 0.8s ease-in-out;
   }
-  #water-text {position:absolute; left: 5.5rem; top:8rem; font-size: 1.4rem;}
+  #water-text {position:relative; left: 5.5rem; top:8rem; font-size: 1.4rem;}
   #water-amount{position:absolute; left: 4rem; top:10rem; font-size: 1.6rem;}
-  #fiber-text{position:absolute; left: 32.5rem; top:8rem; font-size: 1.4rem;}
+  #fiber-text{position:relative; left: 32.5rem; top:8rem; font-size: 1.4rem;}
   #fiber-amount{position:absolute; left: 31rem; top:10rem; font-size: 1.6rem;}
   #name{
     font-size: 3.2rem;
@@ -506,8 +506,8 @@
     top: 0.5rem;
     left: 14rem;
   }
-  #dashboard-dieta .cross-horizontal {position: absolute; height:1.2rem; width: 3.3rem; border-radius: 90px}
-  #dashboard-dieta .cross-vertical {position: absolute; width:1.2rem; height: 3.3rem; border-radius: 90px;}
+  #dashboard-dieta .cross-horizontal {position: relative; height:1.2rem; width: 3.3rem; border-radius: 90px}
+  #dashboard-dieta .cross-vertical {position: relative; width:1.2rem; height: 3.3rem; border-radius: 90px;}
 
   #protein-amount, #fats-amount, #sodium-amount, #sugar-amount, #carbs-amount{position: absolute; font-size: 1rem;}
   #protein-amount{top: 27.54rem; left: 4.7rem;}
@@ -523,14 +523,14 @@
   #sodium-text{top: 32.44rem; left: 12.5rem;}
   #sugar-text{top: 32.44rem; left: 25.9rem;}
 
-  #r8,#r10,#r12,#r14,#r16{position: absolute; left: 38.5rem;}
+  #r8,#r10,#r12,#r14,#r16{position: relative; left: 38.5rem;}
   #r8{top: 59.4rem;}
   #r10{top: 65.9rem;}
   #r12{top: 72.4rem;}
   #r14{top: 79rem;}
   #r16{top: 85.4rem;}
 
-  #r7,#r9,#r11,#r13,#r15{position: absolute; left: 37.4rem;}
+  #r7,#r9,#r11,#r13,#r15{position: relative; left: 37.4rem;}
   #r7{top: 60.5rem;}
   #r9{top: 67rem;}
   #r11{top: 73.5rem;}
