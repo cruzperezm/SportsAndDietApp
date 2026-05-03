@@ -56,7 +56,7 @@
   }
 
   #dashboard-deporte {
-    position: absolute;
+    position: relative;
     min-height: 145rem;
     width: 100%;
     background-color: var(--color-fondo);
@@ -66,10 +66,10 @@
     text-align: center;
   }
 
-  #dashboard-deporte .text16{position: absolute; font-size: 1.6rem; font-family: 'Inter', sans-serif; color: var(--color-texto-color); }
-  #dashboard-deporte .text20{position: absolute; font-size: 2.0rem; font-family: 'Inter', sans-serif;color: var(--color-texto-suave); }
-  #dashboard-deporte .text24{position: absolute; font-size: 2.4rem; font-family: 'Inter', sans-serif;color: var(--color-texto-suave); }
-  #dashboard-deporte .text64{position: absolute; font-size: 6.4rem; font-family: 'Inter', sans-serif; font-weight: bold;color: var(--color-texto); }
+  #dashboard-deporte .text16{position: relative; font-size: 1.6rem; font-family: 'Inter', sans-serif; color: var(--color-texto-color); }
+  #dashboard-deporte .text20{position: relative; font-size: 2.0rem; font-family: 'Inter', sans-serif;color: var(--color-texto-suave); }
+  #dashboard-deporte .text24{position: relative; font-size: 2.4rem; font-family: 'Inter', sans-serif;color: var(--color-texto-suave); }
+  #dashboard-deporte .text64{position: relative; font-size: 6.4rem; font-family: 'Inter', sans-serif; font-weight: bold;color: var(--color-texto); }
 
 
   #dashboard-deporte .rectangle-macros{position: relative; height: 1.4rem; width: 15.5rem; background-color: var(--color-acento-secundario); border-radius: 90px; }
@@ -95,7 +95,7 @@
     border-radius: 90px;
   }
   #dashboard-deporte .rectangle-container {
-    position: absolute;
+    position: relative;
     height: 51.4rem;
     width: 90.0rem;
     top: 35.9rem;
@@ -110,7 +110,7 @@
   }
 
   .bars-container-wrapper .text16 {
-    position: absolute !important;
+    position: relative !important;
     margin: 0;
     padding: 0;
     text-align: center;
@@ -122,13 +122,13 @@
     border: 1px solid rgba(0,0,0,0.05);
   }
 
-  /* Ensure other absolute elements inside the container stay in place */
+  /* Ensure other relative elements inside the container stay in place */
   #move-text, #move-calories, #exercise-text, #exercise-calories, #stand-text, #stand-calories {
     /* These keep their original IDs but will sit below the bar chart area */
     pointer-events: none;
   }
   #name{
-    position: absolute;
+    position: relative;
     top: 16rem;
     left: 22.6rem;
   }
@@ -186,7 +186,7 @@
   #dashboard-deporte {
     min-height: 148.1rem;
     width: 100vw;
-    position: absolute;
+    position: relative;
     background-color: var(--color-fondo);
     display: flex;
     flex-direction: column;
@@ -194,10 +194,10 @@
     text-align: center;
   }
 
-  #dashboard-deporte .text16{position: absolute; font-size: 1.6rem; font-family: 'Inter', sans-serif;}
-  #dashboard-deporte .text20{position: absolute; font-size: 2.0rem; font-family: 'Inter', sans-serif;}
-  #dashboard-deporte .text24{position: absolute; font-size: 2.4rem; font-family: 'Inter', sans-serif;}
-  #dashboard-deporte .text64{position: absolute; font-size: 6.4rem; font-family: 'Inter', sans-serif; font-weight: bold;}
+  #dashboard-deporte .text16{position: relative; font-size: 1.6rem; font-family: 'Inter', sans-serif;}
+  #dashboard-deporte .text20{position: relative; font-size: 2.0rem; font-family: 'Inter', sans-serif;}
+  #dashboard-deporte .text24{position: relative; font-size: 2.4rem; font-family: 'Inter', sans-serif;}
+  #dashboard-deporte .text64{position: relative; font-size: 6.4rem; font-family: 'Inter', sans-serif; font-weight: bold;}
 
 
   #dashboard-deporte .rectangle-macros{position: relative; height: 1.4rem; width: 15.5rem; border-radius: 90px; }
@@ -221,7 +221,7 @@
     border-radius: 90px;
   }
   #dashboard-deporte .rectangle-container {
-    position: absolute;
+    position: relative;
     height: 60.6rem;
     width: 81.90rem;
     top: 38.9rem;
@@ -248,7 +248,7 @@
   }
 
   #calories-goal{
-    position: absolute;
+    position: relative;
     left: 10rem;
     top: 4.27rem;
   }
@@ -263,12 +263,12 @@
     left: 22.6rem;
   }
 
-  #move-calories{position: absolute; top:32rem; left: 60.5rem;}
-  #move-text{position: absolute; top:32rem; left: 12.6rem;}
-  #exercise-calories{position: absolute; top:38rem; left: 60.5rem;}
-  #exercise-text{position: absolute; top:38rem; left: 12.6rem;}
-  #stand-calories{position: absolute; top:44rem; left: 60.5rem;}
-  #stand-text{position: absolute; top:44rem; left: 12.6rem;}
+  #move-calories{position: relative; top:32rem; left: 60.5rem;}
+  #move-text{position: relative; top:32rem; left: 12.6rem;}
+  #exercise-calories{position: relative; top:38rem; left: 60.5rem;}
+  #exercise-text{position: relative; top:38rem; left: 12.6rem;}
+  #stand-calories{position: relative; top:44rem; left: 60.5rem;}
+  #stand-text{position: relative; top:44rem; left: 12.6rem;}
 
   #r8,#r10,#r12,#r14,#r16{position: relative; left: 130rem;}
 
@@ -285,14 +285,14 @@
   #r13{top: 74.99rem;}
   #r15{top: 86.89rem;}
 
-  #train-amount1, #train-amount2, #train-amount3, #train-amount4, #train-amount5 {position: absolute; left: 120rem;}
+  #train-amount1, #train-amount2, #train-amount3, #train-amount4, #train-amount5 {position: relative; left: 120rem;}
   #train-amount1{top: 39.2rem;}
   #train-amount2{top: 50.8rem;}
   #train-amount3{top: 62rem;}
   #train-amount4{top: 73.2rem;}
   #train-amount5{top: 85.1rem;}
 
-  #train-text1, #train-text2, #train-text3, #train-text4, #train-text5 {position: absolute; left: 93.8rem; width: 14rem;}
+  #train-text1, #train-text2, #train-text3, #train-text4, #train-text5 {position: relative; left: 93.8rem; width: 14rem;}
   #train-text1{top: 38.6rem;}
   #train-text2{top: 50.8rem;}
   #train-text3{top: 62rem;}
@@ -315,7 +315,7 @@
     align-items: center;
   }
   #dashboard-deporte .text16, #dashboard-deporte .text20, #dashboard-deporte .text24, #dashboard-deporte .text64{
-    position: absolute;
+    position: relative;
     font-family: 'Inter', sans-serif;
   }
 
@@ -328,7 +328,7 @@
     align-items: center;
   }
   #dashboard-deporte .rectangle-toggle {
-    position: absolute;
+    position: relative;
     height: 4.3rem;
     width: 9rem;
     top: 8.3rem;
@@ -343,9 +343,9 @@
     top: 0.11rem;
     border-radius: 90px;
   }
-  /* Ensure the container is ready for both flex bars and absolute children */
+  /* Ensure the container is ready for both flex bars and relative children */
   #dashboard-deporte .rectangle-container {
-    position: absolute;
+    position: relative;
     height: 41.2rem;
     width: 90vw;
     top: 13.4rem;
@@ -373,19 +373,19 @@
     border: 1px solid rgba(0,0,0,0.05);
   }
   #name {
-    position: absolute;
+    position: relative;
     top: 0px;
     left: 8.9rem;
     font-size: 3.2rem;
     font-weight: bold;
   }
 
-  #move-calories{position: absolute; top:29rem; left: 28.2rem;}
-  #move-text{position: absolute; top: 29rem!important; left: 4.9rem;!important;}
-  #exercise-calories{position: absolute; top:32.5rem; left: 28.2rem;}
-  #exercise-text{position: absolute; top:32.5rem!important; left: 4.9rem;!important;}
-  #stand-calories{position: absolute; top:35.9rem; left: 28.2rem;}
-  #stand-text{position: absolute; top:35.9rem!important; left: 4.9rem!important;}
+  #move-calories{position: relative; top:29rem; left: 28.2rem;}
+  #move-text{position: relative; top: 29rem!important; left: 4.9rem;!important;}
+  #exercise-calories{position: relative; top:32.5rem; left: 28.2rem;}
+  #exercise-text{position: relative; top:32.5rem!important; left: 4.9rem;!important;}
+  #stand-calories{position: relative; top:35.9rem; left: 28.2rem;}
+  #stand-text{position: relative; top:35.9rem!important; left: 4.9rem!important;}
 
   #dashboard-deporte .cross-horizontal {position: relative; height:1.2rem; width: 3.3rem; border-radius: 90px}
   #dashboard-deporte .cross-vertical {position: relative; width:1.2rem; height: 3.3rem; border-radius: 90px;}
@@ -401,14 +401,14 @@
   #sodium-rectangle{top:36.45rem; left:14rem;}
   #sugar-rectangle{top:36.45rem; left:30.99rem;}
 
-  #move-amount, #fats-amount, #sodium-amount, #sugar-amount, #stand-amount{position: absolute; font-size: 1rem;}
+  #move-amount, #fats-amount, #sodium-amount, #sugar-amount, #stand-amount{position: relative; font-size: 1rem;}
   #move-amount{top: 27.54rem; left: 4.7rem;}
   #fats-amount{top: 27.54rem; left: 18.36rem;}
   #stand-amount{top: 27.54rem; left: 32.43rem;}
   #sodium-amount{top: 35.14rem; left: 11.9rem;}
   #sugar-amount{top: 35.14rem; left: 25.56rem;}
 
-  #move-text, #fats-text, #sodium-text, #sugar-text, #stand-text{position: absolute; font-size: 1rem;}
+  #move-text, #fats-text, #sodium-text, #sugar-text, #stand-text{position: relative; font-size: 1rem;}
   #move-text{top: 24.84rem; left: 4.69rem;}
   #fats-text{top: 24.84rem; left: 18.5rem;}
   #stand-text{top: 24.84rem; left: 31.4rem;}
@@ -429,14 +429,14 @@
   #r13{top: 80.1rem;}
   #r15{top: 86.5rem;}
 
-  #train-amount1, #train-amount2, #train-amount3, #train-amount4, #train-amount5 {position: absolute; left: 6.6rem; font-size: 1.4rem;}
+  #train-amount1, #train-amount2, #train-amount3, #train-amount4, #train-amount5 {position: relative; left: 6.6rem; font-size: 1.4rem;}
   #train-amount1 {top: 60.3rem;}
   #train-amount2 {top: 66.8rem;}
   #train-amount3 {top: 73.3rem;}
   #train-amount4 {top: 79.7rem;}
   #train-amount5 {top: 86.3rem;}
 
-  #train-text1, #train-text2, #train-text3, #train-text4, #train-text5 {position: absolute; left: 6.4rem; width: 14rem; font-size: 1.6rem;}
+  #train-text1, #train-text2, #train-text3, #train-text4, #train-text5 {position: relative; left: 6.4rem; width: 14rem; font-size: 1.6rem;}
   #train-text1 {top: 58.3rem;}
   #train-text2 {top: 64.7rem;}
   #train-text3 {top: 71.1rem;}
