@@ -1,4 +1,4 @@
-import { Component, OnInit, inject } from '@angular/core';
+import { Component, OnInit, inject, ChangeDetectorRef } from '@angular/core';
 import { Firestore, doc, onSnapshot } from '@angular/fire/firestore';
 import { Unsubscribe } from 'firebase/firestore';
 import {Router} from '@angular/router';
@@ -70,8 +70,9 @@ export class DashboardDeporteComponent implements OnInit {
       (this as any)[`trainText${i}`] = exercise?.nombre || '';
       (this as any)[`trainAmount${i}`] = exercise?.valor || '';
     }
+    this.cdr.detectChanges();
   }
-  constructor(private router: Router) {}
+  constructor(private router: Router, private cdr: ChangeDetectorRef) {}
   goToDieta() {
     this.router.navigate(['/dashboard-dieta']);
   }

@@ -1,4 +1,4 @@
-import { Component, OnInit, inject, OnDestroy } from '@angular/core';
+import { Component, OnInit, inject, OnDestroy, ChangeDetectorRef } from '@angular/core';
 import { Firestore, doc, onSnapshot } from '@angular/fire/firestore';
 import { Unsubscribe } from 'firebase/firestore';
 import { Router } from '@angular/router';
@@ -111,8 +111,9 @@ export class DashboardDietaComponent implements OnInit, OnDestroy {
     this.dietText4 = recetas[3]?.nombre || '';
     this.dietAmount5 = recetas[4]?.valor || '';
     this.dietText5 = recetas[4]?.nombre || '';
+    this.cdr.detectChanges();
   }
-  constructor(private router: Router) {}
+  constructor(private router: Router, private cdr: ChangeDetectorRef) {}
   goToDeporte() {
     this.router.navigate(['/dashboard-deporte']);
   }
