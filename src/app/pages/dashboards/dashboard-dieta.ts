@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { AngularFirestore } from '@angular/fire/compat/firestore';
+import { Component, OnInit, inject } from '@angular/core';
+import { Firestore, doc, docSnapshots } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
-import { map, filter } from 'rxjs/operators';
+import { map, filter } from 'rxjs';
 
 interface DietData {
   usuario: { nombre: string };
@@ -20,7 +20,7 @@ interface DietData {
   styleUrls: ['./Dashboard-Dieta.css']
 })
 export class DashboardDietaComponent implements OnInit {
-  data$!: Observable<DietData>;
+  private firestore = inject(Firestore);
 
   userName = '';
   caloriesGoal = '';
@@ -56,25 +56,26 @@ export class DashboardDietaComponent implements OnInit {
   sodiumProgress = 0;
   sugarProgress = 0;
 
-  constructor(private firestore: AngularFirestore) {}
-
   ngOnInit() {
-    // Fix: Handle undefined data properly
-    this.data$ = this.firestore.collection('dashboard-data').doc<DietData>('dieta').valueChanges() as Observable<DietData>;
+    const dataRef = doc(this.firestore, 'dashboard-data/dieta');
 
-    this.data$.pipe(
-      filter(data => !!data), // Only process non-null/undefined data
-      map(data => {
-        this.userName = data!.usuario.nombre;
-        this.caloriesGoal = data!.dieta.calorias_objetivo;
-        this.caloriesAmount = data!.dieta.calorias_totales;
+    const data$ = docSnapshots(dataRef).pipe(
+      map(snapshot => snapshot.data() as DietData | undefined)
+    );
 
-        this.waterAmount = data!.dieta.macros1[0]?.valor || '';
-        this.waterText = data!.dieta.macros1[0]?.nombre || '';
-        this.fiberAmount = data!.dieta.macros1[1]?.valor || '';
-        this.fiberText = data!.dieta.macros1[1]?.nombre || '';
+    data$.pipe(
+      filter(data => !!data),
+      map((data: DietData) => {
+        this.userName = data.usuario.nombre;
+        this.caloriesGoal = data.dieta.calorias_objetivo;
+        this.caloriesAmount = data.dieta.calorias_totales;
 
-        const m2 = data!.dieta.macros2;
+        this.waterAmount = data.dieta.macros1[0]?.valor || '';
+        this.waterText = data.dieta.macros1[0]?.nombre || '';
+        this.fiberAmount = data.dieta.macros1[1]?.valor || '';
+        this.fiberText = data.dieta.macros1[1]?.nombre || '';
+
+        const m2 = data.dieta.macros2;
         this.proteinAmount = m2[0]?.valor || '';
         this.proteinText = m2[0]?.nombre || '';
         this.fatsAmount = m2[1]?.valor || '';
@@ -92,7 +93,7 @@ export class DashboardDietaComponent implements OnInit {
         this.sodiumProgress = m2[3]?.progreso || 0;
         this.sugarProgress = m2[4]?.progreso || 0;
 
-        const recetas = data!.dieta.recetas;
+        const recetas = data.dieta.recetas;
         this.dietAmount1 = recetas[0]?.valor || '';
         this.dietText1 = recetas[0]?.nombre || '';
         this.dietAmount2 = recetas[1]?.valor || '';
