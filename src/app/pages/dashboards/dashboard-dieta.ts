@@ -1,7 +1,7 @@
 import { Component, OnInit, inject, OnDestroy, ChangeDetectorRef } from '@angular/core';
 import { Firestore, doc, onSnapshot } from '@angular/fire/firestore';
 import { Unsubscribe } from 'firebase/firestore';
-import { RouterLink } from '@angular/router';
+import { Router } from '@angular/router';
 
 interface DietData {
   usuario: { nombre: string };
@@ -17,13 +17,11 @@ interface DietData {
 @Component({
   selector: 'app-dashboard-dieta',
   templateUrl: './Dashboard-Dieta.html',
-  styleUrls: ['./Dashboard-Dieta.css'],
-  imports: [RouterLink],
+  styleUrls: ['./Dashboard-Dieta.css']
 })
 export class DashboardDietaComponent implements OnInit, OnDestroy {
   private firestore = inject(Firestore);
   private unsubscribe?: Unsubscribe;
-  constructor(private cdr: ChangeDetectorRef) {}
 
   userName = '';
   caloriesGoal = '';
@@ -114,5 +112,12 @@ export class DashboardDietaComponent implements OnInit, OnDestroy {
     this.dietAmount5 = recetas[4]?.valor || '';
     this.dietText5 = recetas[4]?.nombre || '';
     this.cdr.detectChanges();
+  }
+  constructor(private router: Router, private cdr: ChangeDetectorRef) {}
+  goToDeporte() {
+    this.router.navigate(['/dashboard-deporte']);
+  }
+  goToDieta() {
+    this.router.navigate(['/dietas']);
   }
 }
