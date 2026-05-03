@@ -1,0 +1,16 @@
+<main class="about-us">
+  <section class="about-hero-section">
+    <div class="about-hero-bg" [ngStyle]="{'background-image': 'url(' + heroData.image + ')'}"></div>
+    <div class="about-hero-overlay"></div>
+    <p class="about-hero-text">{{ heroData.text }}</p>
+  </section>
+
+  <section class="about-features-section">
+    <article class="about-feature-card" *ngFor="let feature of features">
+      <span class="material-symbols-outlined feature-icon">{{ feature.icon }}</span>
+      <h3 class="feature-title">{{ feature.title }}</h3>
+      <p class="feature-desc">{{ feature.description }}</p>
+    </article>
+  </section>
+
+</main>
