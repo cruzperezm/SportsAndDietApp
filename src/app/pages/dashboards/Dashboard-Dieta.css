@@ -12,6 +12,11 @@
 }
 
 
+#dashboard-dieta {
+  transform: scale(0.5);
+  transform-origin: top center;
+}
+
 
 #dashboard-dieta .text16{color: #00120c; }
 #dashboard-dieta .text20{color: #4B5563; }
