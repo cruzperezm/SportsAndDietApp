@@ -1,0 +1,50 @@
+
+<ion-toolbar color="primary">
+  <ion-title>Crear Cuenta</ion-title> </ion-toolbar>
+
+<ion-content class="ion-padding">
+  <div class="header-text">
+    <h2>¡Bienvenido!</h2>
+    <p>Regístrate para guardar tu perfil y acceder a la app.</p> </div>
+
+  <form [formGroup]="registroForm" (ngSubmit)="onSubmit()">
+    <ion-list>
+      <ion-item>
+        <ion-label position="floating">Email</ion-label>
+        <ion-input type="email" formControlName="email"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Contraseña</ion-label>
+        <ion-input type="password" formControlName="password"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Nombre</ion-label>
+        <ion-input type="text" formControlName="nombre"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Apellidos</ion-label>
+        <ion-input type="text" formControlName="apellidos"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">URL de tu Foto de Perfil</ion-label>
+        <ion-input type="url" formControlName="imagen" placeholder="https://..."></ion-input>
+      </ion-item>
+    </ion-list>
+
+    <ion-text color="danger" *ngIf="errorMessage">
+      <p class="ion-text-center">{{ errorMessage }}</p>
+    </ion-text>
+
+    <ion-button expand="block" type="submit" [disabled]="registroForm.invalid" class="ion-margin-top">
+      Registrarse
+    </ion-button>
+  </form>
+
+  <div class="ion-text-center ion-margin-top">
+    <p>¿Ya tienes cuenta? <a routerLink="/login">Inicia sesión aquí</a></p>
+  </div>
+</ion-content>

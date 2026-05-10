@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/favoritos"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Detalle del Elemento</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div *ngIf="item">
+    <ion-img [src]="item.imagen" class="detalle-img"></ion-img>
+
+    <div class="ion-margin-top">
+      <h1>{{ item.nombre || item.titulo }}</h1>
+      <p>{{ item.descripcion_larga }}</p>
+    </div>
+
+    <ion-button
+      class="ion-margin-top"
+      expand="block"
+      [color]="esFavorito ? 'danger' : 'success'"
+      (click)="toggleFavorito()">
+      <ion-icon [name]="esFavorito ? 'trash' : 'star'" slot="start"></ion-icon>
+      {{ esFavorito ? 'Quitar de Favoritos' : 'Añadir a Favoritos' }}
+    </ion-button>
+  </div>
+
+  <div *ngIf="!item" class="ion-text-center ion-padding">
+    <ion-spinner name="crescent"></ion-spinner>
+    <p>Cargando detalles...</p>
+  </div>
+</ion-content>
