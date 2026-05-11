@@ -2,15 +2,23 @@ import { Component } from '@angular/core';
 import { Auth, signOut, authState } from '@angular/fire/auth';
 import { Firestore, doc, getDoc } from '@angular/fire/firestore';
 import { Router, RouterModule } from '@angular/router';
-import { IonicModule } from '@ionic/angular';
-import { CommonModule } from '@angular/common';
+import {
+  IonApp, IonAvatar, IonContent,
+  IonHeader, IonIcon, IonItem, IonLabel, IonList,
+  IonMenu, IonMenuToggle, IonRouterLink,
+  IonRouterOutlet,
+  IonSplitPane,
+  IonTitle,
+  IonToolbar
+} from "@ionic/angular/standalone";
+import {NgIf} from "@angular/common";
 
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
   styleUrls: ['app.component.scss'],
   standalone: true, // Crucial
-  imports: [IonicModule, CommonModule, RouterModule] // Registra las etiquetas ion-* y routerLink
+  imports: [IonApp, IonRouterOutlet, IonSplitPane, IonMenu, IonHeader, IonToolbar, IonTitle, IonContent, IonAvatar, IonList, IonMenuToggle, IonItem, IonIcon, IonLabel, NgIf, IonRouterLink] // Registra las etiquetas ion-* y routerLink
 })
 export class AppComponent {
   usuarioPerfil: any = null;
