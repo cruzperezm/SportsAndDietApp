@@ -21,7 +21,7 @@ export class AuthService {
       const uid = userCredential.user.uid;
 
       // 2. Guardar la información extra en Firebase Database (Firestore) [cite: 10, 78]
-      const userDocRef = doc(this.firestore, `usuarios/${uid}`);
+      const userDocRef = doc(this.firestore, `users/${uid}`);
       await setDoc(userDocRef, {
         email: email,
         nombre: extraData.nombre,       // [cite: 9, 76]
