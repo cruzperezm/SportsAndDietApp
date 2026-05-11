@@ -3,13 +3,13 @@
     <ion-menu contentId="main-content" type="overlay">
       <ion-header>
         <ion-toolbar color="primary">
-          <ion-title>Menú</ion-title>
+          <ion-title>Sports & Diet App</ion-title>
         </ion-toolbar>
       </ion-header>
 
       <ion-content>
         <div class="ion-padding ion-text-center" *ngIf="usuarioPerfil">
-          <ion-avatar style="margin: 0 auto; width: 80px; height: 80px;">
+          <ion-avatar style="margin: 0 auto; width: 64px; height: 64px;">
             <img [src]="usuarioPerfil.imagen" /> </ion-avatar>
           <h3>{{ usuarioPerfil.nombre }} {{ usuarioPerfil.apellidos }}</h3>
           <p>{{ usuarioPerfil.email }}</p>
@@ -21,7 +21,6 @@
               <ion-icon slot="start" name="list"></ion-icon>
               <ion-label>Explorar</ion-label>
             </ion-item>
-
             <ion-item (click)="logout()" button>
               <ion-icon slot="start" name="log-out" color="danger"></ion-icon>
               <ion-label color="danger">Cerrar Sesión</ion-label>

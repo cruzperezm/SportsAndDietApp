@@ -1,15 +1,18 @@
 import { Component } from '@angular/core';
 import { Auth, signOut, authState } from '@angular/fire/auth';
 import { Firestore, doc, getDoc } from '@angular/fire/firestore';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router'; // Añadido RouterModule
+import { IonicModule } from '@ionic/angular'; // Importación necesaria
+import { CommonModule } from '@angular/common'; // Para usar *ngIf
 
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
   styleUrls: ['app.component.scss'],
+  standalone: true, // REQUISITO PARA STANDALONE
+  imports: [IonicModule, CommonModule, RouterModule] // REGISTRA LOS COMPONENTES AQUÍ
 })
 export class AppComponent {
-  // Información asociada con el perfil del usuario a visualizar en el menú [cite: 9, 10]
   usuarioPerfil: any = null;
 
   constructor(
@@ -20,14 +23,12 @@ export class AppComponent {
     this.escucharUsuario();
   }
 
-  // Escucha si hay un usuario logeado para cargar su información de Firebase [cite: 6, 12]
   escucharUsuario() {
     authState(this.auth).subscribe(async (user) => {
       if (user) {
-        // Obtenemos la información extra (nombre, apellidos, imagen) de Firestore [cite: 10, 78]
+        // Recuperar info del perfil de Firebase DB (Requisito 1.10) [cite: 10]
         const docRef = doc(this.firestore, `usuarios/${user.uid}`);
         const docSnap = await getDoc(docRef);
-
         if (docSnap.exists()) {
           this.usuarioPerfil = docSnap.data();
         }
@@ -37,11 +38,10 @@ export class AppComponent {
     });
   }
 
-  // Lógica para cerrar la sesión del usuario [cite: 50, 60]
   async logout() {
     try {
       await signOut(this.auth);
-      this.router.navigate(['/login']);
+      this.router.navigate(['/login']); // [cite: 50]
     } catch (error) {
       console.error('Error al cerrar sesión', error);
     }

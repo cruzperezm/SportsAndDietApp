@@ -4,17 +4,17 @@ import { IonicRouteStrategy, provideIonicAngular } from '@ionic/angular/standalo
 
 import { routes } from './app/app.routes';
 import { AppComponent } from './app/app.component';
-import {initializeApp, provideFirebaseApp} from "@angular/fire/app";
-import {environment} from "./environments/environment";
-import {getAuth, provideAuth} from "@angular/fire/auth";
-import {getFirestore, provideFirestore} from "@angular/fire/firestore";
+import { initializeApp, provideFirebaseApp } from "@angular/fire/app";
+import { environment } from "./environments/environment";
+import { getAuth, provideAuth } from "@angular/fire/auth";
+import { getFirestore, provideFirestore } from "@angular/fire/firestore";
 
 bootstrapApplication(AppComponent, {
   providers: [
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
-    provideIonicAngular(),
+    provideIonicAngular(), // Inicializa Ionic correctamente
     provideRouter(routes, withPreloading(PreloadAllModules)),
-    // Configuración de Firebase
+    // Configuración de Firebase requerida por el Sprint 4 [cite: 59, 60]
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
     provideFirestore(() => getFirestore()),
