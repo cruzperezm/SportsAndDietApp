@@ -5,14 +5,16 @@ import { IonicModule } from '@ionic/angular'; // Para componentes ion-*
 import { ActivatedRoute } from '@angular/router';
 import { Firestore, doc, getDoc } from '@angular/fire/firestore';
 import { SqliteService } from '../../services/sqlite.service';
+import {ReactiveFormsModule} from "@angular/forms";
 
 @Component({
   selector: 'app-detalle',
   templateUrl: './detalle.page.html',
   styleUrls: ['./detalle.page.scss'],
-  standalone: true, // REQUERIDO para usar 'imports'
-  imports: [CommonModule, IonicModule] // Soluciona los errores de "out of scope"
+  standalone: true, // Debe ser standalone
+  imports: [IonicModule, CommonModule, ReactiveFormsModule] // Esto activa los botones y el diseño
 })
+
 export class DetallePage implements OnInit {
   item: any = null;
   esFavorito: boolean = false;

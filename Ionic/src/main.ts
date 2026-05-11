@@ -12,10 +12,9 @@ import { getFirestore, provideFirestore } from "@angular/fire/firestore";
 bootstrapApplication(AppComponent, {
   providers: [
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
-    provideIonicAngular(),
-    provideRouter(routes, withPreloading(PreloadAllModules)),
-
-    // CONFIGURACIÓN CORRECTA DE FIREBASE (Aquí como Providers, no Imports)
+    provideIonicAngular(), // Inicializa Ionic
+    provideRouter(routes, withPreloading(PreloadAllModules)), // Carga las rutas
+    // Configuración global de Firebase
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
     provideFirestore(() => getFirestore()),

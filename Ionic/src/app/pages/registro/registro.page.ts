@@ -1,4 +1,3 @@
-// src/app/pages/registro/registro.page.ts
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, ReactiveFormsModule, Validators} from '@angular/forms';
 import { Router } from '@angular/router';
@@ -11,13 +10,10 @@ import { CommonModule } from '@angular/common';
   selector: 'app-registro',
   templateUrl: './registro.page.html',
   styleUrls: ['./registro.page.scss'],
-  standalone: true,
-  imports: [
-    IonicModule,
-    ReactiveFormsModule,
-    CommonModule
-  ]
+  standalone: true, // Debe ser standalone
+  imports: [IonicModule, CommonModule, ReactiveFormsModule] // Esto activa los botones y el diseño
 })
+
 export class RegistroPage implements OnInit {
   registroForm: FormGroup;
   errorMessage: string = '';

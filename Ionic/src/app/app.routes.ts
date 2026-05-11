@@ -3,7 +3,7 @@ import { AuthGuard } from './guards/auth-guard';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
-  // CAMBIO CLAVE: Usar loadComponent en lugar de loadChildren
+  // CAMBIO CLAVE: Usamos loadComponent
   { path: 'login', loadComponent: () => import('./pages/login/login.page').then(m => m.LoginPage) },
   { path: 'registro', loadComponent: () => import('./pages/registro/registro.page').then(m => m.RegistroPage) },
   {

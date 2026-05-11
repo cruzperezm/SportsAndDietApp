@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {Auth, authState, signOut} from '@angular/fire/auth';
+import { Auth, signOut, authState } from '@angular/fire/auth';
 import { Firestore, doc, getDoc } from '@angular/fire/firestore';
 import { Router, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
@@ -9,8 +9,8 @@ import { CommonModule } from '@angular/common';
   selector: 'app-root',
   templateUrl: 'app.component.html',
   styleUrls: ['app.component.scss'],
-  standalone: true, // ESTO ES VITAL
-  imports: [IonicModule, CommonModule, RouterModule]
+  standalone: true, // Crucial
+  imports: [IonicModule, CommonModule, RouterModule] // Registra las etiquetas ion-* y routerLink
 })
 export class AppComponent {
   usuarioPerfil: any = null;
@@ -34,11 +34,7 @@ export class AppComponent {
   }
 
   async logout() {
-    try {
-      await signOut(this.auth);
-      this.router.navigate(['/login']); // [cite: 50]
-    } catch (error) {
-      console.error('Error al cerrar sesión', error);
-    }
+    await signOut(this.auth);
+    this.router.navigate(['/login']);
   }
 }

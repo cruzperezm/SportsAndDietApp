@@ -7,7 +7,6 @@
 <ion-content>
   <ion-list>
     <ion-item *ngFor="let item of elementos" [routerLink]="['/detalle', item.id]" [button]="true">
-
       <ion-label>
         <h2>{{ item.titulo || item.nombre }}</h2>
         <p>{{ item.descripcion_corta }}</p>
