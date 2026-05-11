@@ -12,9 +12,10 @@ import { getFirestore, provideFirestore } from "@angular/fire/firestore";
 bootstrapApplication(AppComponent, {
   providers: [
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
-    provideIonicAngular(), // Inicializa Ionic correctamente
+    provideIonicAngular(),
     provideRouter(routes, withPreloading(PreloadAllModules)),
-    // Configuración de Firebase requerida por el Sprint 4 [cite: 59, 60]
+
+    // CONFIGURACIÓN CORRECTA DE FIREBASE (Aquí como Providers, no Imports)
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
     provideFirestore(() => getFirestore()),

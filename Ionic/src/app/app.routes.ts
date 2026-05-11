@@ -3,13 +3,13 @@ import { AuthGuard } from './guards/auth-guard';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
-  // Si las páginas son Standalone, usa loadComponent:
+  // CAMBIO CLAVE: Usar loadComponent en lugar de loadChildren
   { path: 'login', loadComponent: () => import('./pages/login/login.page').then(m => m.LoginPage) },
   { path: 'registro', loadComponent: () => import('./pages/registro/registro.page').then(m => m.RegistroPage) },
   {
     path: 'favoritos',
     loadComponent: () => import('./pages/favoritos/favoritos.page').then(m => m.FavoritosPage),
-    canActivate: [AuthGuard] // Requisito de seguridad del Sprint [cite: 19, 100]
+    canActivate: [AuthGuard]
   },
   {
     path: 'detalle/:id',
