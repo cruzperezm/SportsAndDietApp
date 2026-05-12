@@ -35,12 +35,23 @@ export class DetallePage implements OnInit {
   }
 
   async cargarDetalle() {
-    // IMPORTANTE: Asegúrate de que 'items' sea el nombre real de tu colección
-    const docRef = doc(this.firestore, `items/${this.itemId}`);
-    const docSnap = await getDoc(docRef);
+    // Primero buscamos en dietas
+    let docRef = doc(this.firestore, `dietas/${this.itemId}`);
+    let docSnap = await getDoc(docRef);
 
     if (docSnap.exists()) {
       this.item = docSnap.data();
+      return; // Si lo encuentra, terminamos aquí
+    }
+
+    // Si no estaba en dietas, buscamos en deportes
+    docRef = doc(this.firestore, `deportes/${this.itemId}`);
+    docSnap = await getDoc(docRef);
+
+    if (docSnap.exists()) {
+      this.item = docSnap.data();
+    } else {
+      console.error("El elemento no existe en ninguna colección");
     }
   }
 

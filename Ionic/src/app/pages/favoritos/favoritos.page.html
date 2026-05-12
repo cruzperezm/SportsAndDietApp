@@ -1,27 +1,47 @@
 <ion-header>
   <ion-toolbar color="primary">
-    <ion-title>Explorar y Favoritos</ion-title>
+    <ion-segment [(ngModel)]="vistaActual" value="explorar">
+      <ion-segment-button value="explorar">
+        <ion-label>Explorar</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="favoritos">
+        <ion-label>Mis Favoritos</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+
+  <ion-toolbar *ngIf="vistaActual === 'explorar'">
+    <ion-segment [(ngModel)]="categoriaSeleccionada" value="dieta">
+      <ion-segment-button value="dieta">
+        <ion-label>Dietas</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="entrenamiento">
+        <ion-label>Entrenos</ion-label>
+      </ion-segment-button>
+    </ion-segment>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <ion-list>
-    <ion-item *ngFor="let item of elementos" [routerLink]="['/detalle', item.id]" [button]="true">
-      <ion-label>
-        <h2>{{ item.titulo || item.nombre }}</h2>
-        <p>{{ item.descripcion_corta }}</p>
-      </ion-label>
+    <ng-container *ngFor="let item of elementos">
+      <ion-item *ngIf="(vistaActual === 'favoritos' && item.isFavorite) || (vistaActual === 'explorar' && item.categoria === categoriaSeleccionada)"
+                [routerLink]="['/detalle', item.id]" button>
 
-      <ion-icon
-        [name]="item.isFavorite ? 'star' : 'star-outline'"
-        [color]="item.isFavorite ? 'warning' : 'medium'"
-        slot="end">
-      </ion-icon>
+        <ion-avatar slot="start" style="background-color: #f4f5f8;">
+          <img [src]="item.imagen" loading="lazy" />
+        </ion-avatar>
 
-    </ion-item>
+        <ion-label>
+          <h2>{{ item.titulo || item.nombre }}</h2>
+          <p>{{ item.descripcion_corta }}</p>
+        </ion-label>
+
+        <ion-button fill="clear" slot="end" (click)="toggleFavorito(item, $event)">
+          <ion-icon [name]="item.isFavorite ? 'heart' : 'heart-outline'" [color]="item.isFavorite ? 'danger' : 'medium'"></ion-icon>
+        </ion-button>
+
+      </ion-item>
+    </ng-container>
   </ion-list>
-
-  <div *ngIf="elementos.length === 0" class="ion-padding ion-text-center">
-    <p>No se encontraron elementos.</p>
-  </div>
 </ion-content>

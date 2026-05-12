@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, ReactiveFormsModule, Validators} from '@angular/forms';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
 import {IonHeader} from "@ionic/angular/standalone";
 import {IonicModule} from "@ionic/angular";
@@ -11,7 +11,7 @@ import { CommonModule } from '@angular/common';
   templateUrl: './registro.page.html',
   styleUrls: ['./registro.page.scss'],
   standalone: true, // Debe ser standalone
-  imports: [IonicModule, CommonModule, ReactiveFormsModule] // Esto activa los botones y el diseño
+  imports: [IonicModule, CommonModule, ReactiveFormsModule, RouterModule] // Esto activa los botones y el diseño
 })
 
 export class RegistroPage implements OnInit {
