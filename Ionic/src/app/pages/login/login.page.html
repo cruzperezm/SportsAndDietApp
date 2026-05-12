@@ -11,15 +11,16 @@
   </div>
 
   <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-    <ion-list>
-      <ion-item>
-        <ion-input label="Email" labelPlacement="floating" type="email" formControlName="email"></ion-input>
-      </ion-item>
 
-      <ion-item>
-        <ion-input label="Contraseña" labelPlacement="floating" type="password" formControlName="password"></ion-input>
-      </ion-item>
-    </ion-list>
+    <ion-item lines="full" class="ion-margin-bottom">
+      <ion-label position="stacked">Email</ion-label>
+      <input type="email" formControlName="email" class="native-input" placeholder="ejemplo@correo.com" />
+    </ion-item>
+
+    <ion-item lines="full" class="ion-margin-bottom">
+      <ion-label position="stacked">Contraseña</ion-label>
+      <input type="password" formControlName="password" class="native-input" placeholder="******" />
+    </ion-item>
 
     <ion-text color="danger" *ngIf="errorMessage">
       <p class="ion-text-center">{{ errorMessage }}</p>
