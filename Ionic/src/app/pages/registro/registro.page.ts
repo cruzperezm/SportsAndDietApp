@@ -10,26 +10,25 @@ import { CommonModule } from '@angular/common';
   selector: 'app-registro',
   templateUrl: './registro.page.html',
   styleUrls: ['./registro.page.scss'],
-  standalone: true, // Debe ser standalone
-  imports: [IonicModule, CommonModule, ReactiveFormsModule, RouterModule] // Esto activa los botones y el diseño
+  standalone: true,
+  imports: [IonicModule, CommonModule, ReactiveFormsModule, RouterModule, IonHeader]
 })
-
 export class RegistroPage implements OnInit {
   registroForm: FormGroup;
   errorMessage: string = '';
+  isLoading: boolean = false; // Variable de estado de carga
 
   constructor(
     private fb: FormBuilder,
     private authService: AuthService,
     private router: Router
   ) {
-    // Inicializamos el formulario con los campos requeridos [cite: 74, 75, 76]
     this.registroForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(6)]],
       nombre: ['', Validators.required],
       apellidos: ['', Validators.required],
-      imagen: ['', Validators.required] // Por ahora pediremos una URL de imagen
+      imagen: ['', Validators.required]
     });
   }
 
@@ -37,18 +36,17 @@ export class RegistroPage implements OnInit {
 
   async onSubmit() {
     if (this.registroForm.valid) {
+      this.isLoading = true; // Iniciar carga
+      this.errorMessage = '';
       const { email, password, nombre, apellidos, imagen } = this.registroForm.value;
 
       try {
-        // Llamamos al servicio para registrar [cite: 77, 78]
         await this.authService.registrarUsuario(email, password, { nombre, apellidos, imagen });
-
-        console.log('Usuario registrado con éxito');
-        // Redirigir a la pantalla de favoritos/lista tras registro exitoso
         this.router.navigate(['/favoritos']);
-
       } catch (error: any) {
         this.errorMessage = 'Error al registrar: ' + error.message;
+      } finally {
+        this.isLoading = false; // Finalizar carga
       }
     } else {
       this.errorMessage = 'Por favor, completa todos los campos correctamente.';

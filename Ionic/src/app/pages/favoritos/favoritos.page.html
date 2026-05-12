@@ -1,49 +1,37 @@
 <ion-header>
   <ion-toolbar color="primary">
-    <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
-    </ion-buttons>
-
-    <ion-title>{{ vistaActual === 'favoritos' ? 'Mis Favoritos' : 'Explorar' }}</ion-title>
+    <ion-buttons slot="start"><ion-menu-button></ion-menu-button></ion-buttons>
+    <ion-title>{{ getTitulo() }}</ion-title>
   </ion-toolbar>
 
-  <ion-toolbar *ngIf="vistaActual === 'explorar'">
-    <ion-segment mode="md" [value]="categoriaSeleccionada" (ionChange)="cambiarCategoria($event)">
-      <ion-segment-button value="dieta">
-        <ion-label>DIETAS</ion-label>
-      </ion-segment-button>
-      <ion-segment-button value="entrenamiento">
-        <ion-label>ENTRENOS</ion-label>
-      </ion-segment-button>
+  <ion-toolbar *ngIf="seccionActual === 'favoritos'">
+    <ion-segment [value]="categoriaFavoritos" (ionChange)="cambiarTabFavoritos($event)" mode="md">
+      <ion-segment-button value="dieta"><ion-label>DIETAS</ion-label></ion-segment-button>
+      <ion-segment-button value="entrenamiento"><ion-label>DEPORTES</ion-label></ion-segment-button>
     </ion-segment>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    <ng-container *ngFor="let item of elementos">
-      <ion-item *ngIf="(vistaActual === 'favoritos' && item.isFavorite) || (vistaActual === 'explorar' && item.categoria === categoriaSeleccionada)"
-                [routerLink]="['/detalle', item.id]"
-                routerDirection="forward">
+  <div *ngIf="cargando" class="ion-text-center ion-padding">
+    <ion-spinner name="crescent"></ion-spinner>
+  </div>
 
-        <ion-avatar slot="start" style="background-color: #f4f5f8;">
-          <img [src]="item.imagen" loading="lazy" />
-        </ion-avatar>
-
-        <ion-label>
-          <h2>{{ item.titulo || item.nombre }}</h2>
-          <p>{{ item.descripcion_corta }}</p>
-        </ion-label>
-
-        <ion-button fill="clear" slot="end" (click)="toggleFavorito(item, $event)">
-          <ion-icon [name]="item.isFavorite ? 'heart' : 'heart-outline'" [color]="item.isFavorite ? 'danger' : 'medium'"></ion-icon>
-        </ion-button>
-
-      </ion-item>
-    </ng-container>
+  <ion-list *ngIf="!cargando">
+    <ion-item *ngFor="let item of elementosFiltrados" [routerLink]="['/detalle', item.id]" routerDirection="forward" [button]="true">
+      <ion-avatar slot="start" style="background: #f0f0f0;">
+        <ion-img [src]="item.imagen"></ion-img>
+      </ion-avatar>
+      <ion-label>
+        <h2>{{ item.titulo || item.nombre }}</h2>
+        <p>{{ item.descripcion_corta }}</p>
+      </ion-label>
+      <ion-icon slot="end" [name]="item.isFavorite ? 'heart' : 'heart-outline'"
+                [color]="item.isFavorite ? 'danger' : 'medium'" (click)="toggleFavorito(item, $event)"></ion-icon>
+    </ion-item>
   </ion-list>
 
-  <div *ngIf="elementos.length === 0" class="ion-padding ion-text-center">
-    <p>No hay elementos para mostrar.</p>
+  <div *ngIf="!cargando && elementosFiltrados.length === 0" class="ion-padding ion-text-center">
+    <p>No hay elementos en esta sección.</p>
   </div>
 </ion-content>

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
-import { RouterModule, ActivatedRoute } from '@angular/router'; // <-- Añadido ActivatedRoute
+import { RouterModule, ActivatedRoute } from '@angular/router';
 import { Firestore, collection, getDocs } from '@angular/fire/firestore';
 import { SqliteService } from '../../services/sqlite.service';
 
@@ -15,43 +15,65 @@ import { SqliteService } from '../../services/sqlite.service';
 })
 export class FavoritosPage implements OnInit {
   elementos: any[] = [];
+  elementosFiltrados: any[] = [];
   favoritosIds: string[] = [];
-  vistaActual: string = 'explorar';
-  categoriaSeleccionada: string = 'dieta';
+
+  seccionActual: string = 'dietas';
+  categoriaFavoritos: string = 'dieta';
+  cargando: boolean = true;
 
   constructor(
     private firestore: Firestore,
     private sqliteService: SqliteService,
-    private route: ActivatedRoute // <-- Añadido al constructor
+    private route: ActivatedRoute
   ) {}
 
   async ngOnInit() {
-    this.route.queryParams.subscribe(params => {
-      if (params['vista']) {
-        this.vistaActual = params['vista']; // Cambia entre 'explorar' y 'favoritos'
-      }
+    this.route.queryParams.subscribe(async params => {
+      this.seccionActual = params['seccion'] || 'dietas';
+      await this.cargarDatos();
     });
-    await this.cargarDatos();
   }
 
   async ionViewWillEnter() { await this.cargarDatos(); }
 
-  // Nueva función para el evento de las pestañas en móvil
-  cambiarCategoria(event: any) {
-    this.categoriaSeleccionada = event.detail.value;
-  }
-
   async cargarDatos() {
+    this.cargando = true;
     try {
       this.favoritosIds = await this.sqliteService.getFavoritos();
+
       const dietasSnap = await getDocs(collection(this.firestore, 'dietas'));
-      const listaDietas = dietasSnap.docs.map(doc => ({ id: doc.id, categoria: 'dieta', isFavorite: this.favoritosIds.includes(doc.id), ...doc.data() }));
+      const listaDietas = dietasSnap.docs.map(doc => ({
+        id: doc.id, categoria: 'dieta', isFavorite: this.favoritosIds.includes(doc.id), ...doc.data()
+      }));
+
       const deportesSnap = await getDocs(collection(this.firestore, 'deportes'));
-      const listaDeportes = deportesSnap.docs.map(doc => ({ id: doc.id, categoria: 'entrenamiento', isFavorite: this.favoritosIds.includes(doc.id), ...doc.data() }));
+      const listaDeportes = deportesSnap.docs.map(doc => ({
+        id: doc.id, categoria: 'entrenamiento', isFavorite: this.favoritosIds.includes(doc.id), ...doc.data()
+      }));
+
       this.elementos = [...listaDietas, ...listaDeportes];
+      this.aplicarFiltro();
     } catch (e) {
-      console.error('Error cargando datos:', e);
+      console.error('Error:', e);
+    } finally {
+      this.cargando = false;
     }
+  }
+
+  aplicarFiltro() {
+    if (this.seccionActual === 'dietas') {
+      this.elementosFiltrados = this.elementos.filter(item => item.categoria === 'dieta');
+    } else if (this.seccionActual === 'deportes') {
+      this.elementosFiltrados = this.elementos.filter(item => item.categoria === 'entrenamiento');
+    } else if (this.seccionActual === 'favoritos') {
+      this.elementosFiltrados = this.elementos.filter(item => item.isFavorite && item.categoria === this.categoriaFavoritos);
+    }
+  }
+
+  cambiarTabFavoritos(event: any) {
+    this.categoriaFavoritos = event.detail.value;
+    this.aplicarFiltro();
   }
 
   async toggleFavorito(item: any, event: Event) {
@@ -62,5 +84,12 @@ export class FavoritosPage implements OnInit {
       await this.sqliteService.agregarAFavoritos(item.id);
     }
     item.isFavorite = !item.isFavorite;
+    if (this.seccionActual === 'favoritos') this.aplicarFiltro();
+  }
+
+  getTitulo() {
+    if (this.seccionActual === 'dietas') return 'Nuestras Dietas';
+    if (this.seccionActual === 'deportes') return 'Entrenamientos';
+    return 'Mis Favoritos';
   }
 }

@@ -26,7 +26,12 @@
       <p class="ion-text-center">{{ errorMessage }}</p>
     </ion-text>
 
-    <ion-button expand="block" type="submit" [disabled]="loginForm.invalid" class="ion-margin-top">
+    <div *ngIf="isLoading" class="ion-text-center ion-margin-top">
+      <ion-spinner name="dots" color="primary"></ion-spinner>
+      <p>Verificando credenciales...</p>
+    </div>
+
+    <ion-button *ngIf="!isLoading" expand="block" type="submit" [disabled]="loginForm.invalid" class="ion-margin-top">
       Entrar
     </ion-button>
   </form>

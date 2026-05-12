@@ -6,7 +6,7 @@ import { Router, RouterModule } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
 
 @Component({
-  selector: 'app-login', // Corregido
+  selector: 'app-login',
   templateUrl: './login.page.html',
   styleUrls: ['./login.page.scss'],
   standalone: true,
@@ -15,6 +15,7 @@ import { AuthService } from '../../services/auth.service';
 export class LoginPage implements OnInit {
   loginForm: FormGroup;
   errorMessage: string = '';
+  isLoading: boolean = false; // Variable para controlar el estado de carga
 
   constructor(
     private fb: FormBuilder,
@@ -31,12 +32,16 @@ export class LoginPage implements OnInit {
 
   async onSubmit() {
     if (this.loginForm.valid) {
+      this.isLoading = true; // Activar carga al iniciar la solicitud
+      this.errorMessage = '';
       const { email, password } = this.loginForm.value;
       try {
         await this.authService.loginUsuario(email, password);
-        this.router.navigate(['/favoritos']); // Navega a la lista tras éxito
+        this.router.navigate(['/favoritos']); // Navega al éxito
       } catch (error: any) {
         this.errorMessage = 'Email o contraseña incorrectos.';
+      } finally {
+        this.isLoading = false; // Desactivar carga al finalizar (éxito o error)
       }
     }
   }

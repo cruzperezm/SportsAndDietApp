@@ -1,34 +1,43 @@
 <ion-header>
   <ion-toolbar color="primary">
-    <ion-buttons slot="start">
-      <ion-back-button defaultHref="/favoritos"></ion-back-button>
-    </ion-buttons>
+    <ion-buttons slot="start"><ion-back-button defaultHref="/favoritos"></ion-back-button></ion-buttons>
     <ion-title>Detalles</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="ion-padding">
   <div *ngIf="item">
+    <h1 class="ion-text-center" style="font-weight: bold;">{{ item.nombre || item.titulo }}</h1>
 
-    <div class="ion-margin-bottom">
-      <h1>{{ item.nombre || item.titulo }}</h1>
-      <p>{{ item.descripcion_larga }}</p>
+    <div style="border-radius: 15px; overflow: hidden; margin-bottom: 20px;">
+      <ion-img [src]="item.imagen"></ion-img>
     </div>
 
-    <ion-img [src]="item.imagen" style="border-radius: 8px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.2);"></ion-img>
+    <div class="info-container">
+      <div *ngIf="item.descripcion_larga">
+        <h3 color="primary">Descripción</h3>
+        <p>{{ item.descripcion_larga }}</p>
+      </div>
 
-    <ion-button
-      class="ion-margin-top"
-      expand="block"
-      [color]="esFavorito ? 'danger' : 'success'"
-      (click)="toggleFavorito()">
+      <div *ngIf="item.ingredientes">
+        <h3 color="primary">Ingredientes necesarios</h3>
+        <p>{{ item.ingredientes }}</p>
+      </div>
+
+      <div *ngIf="item.preparacion">
+        <h3 color="primary">Pasos de preparación</h3>
+        <p>{{ item.preparacion }}</p>
+      </div>
+
+      <div *ngIf="item.ejercicios">
+        <h3 color="primary">Rutina de ejercicios</h3>
+        <p>{{ item.ejercicios }}</p>
+      </div>
+    </div>
+
+    <ion-button expand="block" [color]="esFavorito ? 'danger' : 'success'" (click)="toggleFavorito()" class="ion-margin-top">
       <ion-icon [name]="esFavorito ? 'trash' : 'star'" slot="start"></ion-icon>
       {{ esFavorito ? 'Quitar de Favoritos' : 'Añadir a Favoritos' }}
     </ion-button>
-  </div>
-
-  <div *ngIf="!item" class="ion-text-center ion-padding">
-    <ion-spinner name="crescent"></ion-spinner>
-    <p>Cargando detalles...</p>
   </div>
 </ion-content>
