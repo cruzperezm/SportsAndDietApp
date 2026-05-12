@@ -25,3 +25,30 @@
 #container a {
   text-decoration: none;
 }
+.image-container {
+  background-color: #e0e0e0; /* Fondo gris mientras carga */
+  border-radius: 50%;
+  overflow: hidden;
+
+  img {
+    transition: opacity 0.3s ease-in;
+    opacity: 0;
+  }
+
+  /* Cuando la imagen termina de cargar, se hace visible suavemente */
+  img[src] {
+    opacity: 1;
+  }
+}
+
+/* Espaciado extra para los segmentos en móvil */
+ion-segment {
+  --background: transparent;
+  min-height: 48px;
+}
+
+ion-segment-button {
+  --color-checked: var(--ion-color-primary);
+  font-weight: bold;
+  text-transform: uppercase;
+}

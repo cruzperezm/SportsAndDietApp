@@ -1,22 +1,19 @@
 <ion-header>
   <ion-toolbar color="primary">
-    <ion-segment [(ngModel)]="vistaActual" value="explorar">
-      <ion-segment-button value="explorar">
-        <ion-label>Explorar</ion-label>
-      </ion-segment-button>
-      <ion-segment-button value="favoritos">
-        <ion-label>Mis Favoritos</ion-label>
-      </ion-segment-button>
-    </ion-segment>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+
+    <ion-title>{{ vistaActual === 'favoritos' ? 'Mis Favoritos' : 'Explorar' }}</ion-title>
   </ion-toolbar>
 
   <ion-toolbar *ngIf="vistaActual === 'explorar'">
-    <ion-segment [(ngModel)]="categoriaSeleccionada" value="dieta">
+    <ion-segment mode="md" [value]="categoriaSeleccionada" (ionChange)="cambiarCategoria($event)">
       <ion-segment-button value="dieta">
-        <ion-label>Dietas</ion-label>
+        <ion-label>DIETAS</ion-label>
       </ion-segment-button>
       <ion-segment-button value="entrenamiento">
-        <ion-label>Entrenos</ion-label>
+        <ion-label>ENTRENOS</ion-label>
       </ion-segment-button>
     </ion-segment>
   </ion-toolbar>
@@ -26,7 +23,8 @@
   <ion-list>
     <ng-container *ngFor="let item of elementos">
       <ion-item *ngIf="(vistaActual === 'favoritos' && item.isFavorite) || (vistaActual === 'explorar' && item.categoria === categoriaSeleccionada)"
-                [routerLink]="['/detalle', item.id]" button>
+                [routerLink]="['/detalle', item.id]"
+                routerDirection="forward">
 
         <ion-avatar slot="start" style="background-color: #f4f5f8;">
           <img [src]="item.imagen" loading="lazy" />
@@ -44,4 +42,8 @@
       </ion-item>
     </ng-container>
   </ion-list>
+
+  <div *ngIf="elementos.length === 0" class="ion-padding ion-text-center">
+    <p>No hay elementos para mostrar.</p>
+  </div>
 </ion-content>

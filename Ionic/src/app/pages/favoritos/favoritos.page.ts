@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
-import { RouterModule } from '@angular/router';
+import { RouterModule, ActivatedRoute } from '@angular/router'; // <-- Añadido ActivatedRoute
 import { Firestore, collection, getDocs } from '@angular/fire/firestore';
 import { SqliteService } from '../../services/sqlite.service';
 
@@ -16,29 +16,38 @@ import { SqliteService } from '../../services/sqlite.service';
 export class FavoritosPage implements OnInit {
   elementos: any[] = [];
   favoritosIds: string[] = [];
-
-  // Variables para los filtros
-  vistaActual: string = 'explorar'; // 'explorar' o 'favoritos'
-  categoriaSeleccionada: string = 'dieta'; // 'dieta' o 'entrenamiento'
+  vistaActual: string = 'explorar';
+  categoriaSeleccionada: string = 'dieta';
 
   constructor(
     private firestore: Firestore,
-    private sqliteService: SqliteService
+    private sqliteService: SqliteService,
+    private route: ActivatedRoute // <-- Añadido al constructor
   ) {}
 
-  async ngOnInit() { await this.cargarDatos(); }
+  async ngOnInit() {
+    this.route.queryParams.subscribe(params => {
+      if (params['vista']) {
+        this.vistaActual = params['vista']; // Cambia entre 'explorar' y 'favoritos'
+      }
+    });
+    await this.cargarDatos();
+  }
+
   async ionViewWillEnter() { await this.cargarDatos(); }
+
+  // Nueva función para el evento de las pestañas en móvil
+  cambiarCategoria(event: any) {
+    this.categoriaSeleccionada = event.detail.value;
+  }
 
   async cargarDatos() {
     try {
       this.favoritosIds = await this.sqliteService.getFavoritos();
-
       const dietasSnap = await getDocs(collection(this.firestore, 'dietas'));
       const listaDietas = dietasSnap.docs.map(doc => ({ id: doc.id, categoria: 'dieta', isFavorite: this.favoritosIds.includes(doc.id), ...doc.data() }));
-
       const deportesSnap = await getDocs(collection(this.firestore, 'deportes'));
       const listaDeportes = deportesSnap.docs.map(doc => ({ id: doc.id, categoria: 'entrenamiento', isFavorite: this.favoritosIds.includes(doc.id), ...doc.data() }));
-
       this.elementos = [...listaDietas, ...listaDeportes];
     } catch (e) {
       console.error('Error cargando datos:', e);
