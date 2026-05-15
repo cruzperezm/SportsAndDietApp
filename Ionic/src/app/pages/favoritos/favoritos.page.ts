@@ -1,17 +1,31 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonicModule } from '@ionic/angular';
 import { RouterModule, ActivatedRoute } from '@angular/router';
 import { Firestore, collection, getDocs } from '@angular/fire/firestore';
 import { SqliteService } from '../../services/sqlite.service';
+import { addIcons } from 'ionicons';
+import { heart, heartOutline } from 'ionicons/icons'
+import {
+  IonAvatar,
+  IonButtons, IonContent,
+  IonHeader, IonIcon, IonImg, IonItem, IonLabel, IonList,
+  IonMenuButton,
+  IonSegment,
+  IonSegmentButton, IonSpinner,
+  IonTitle,
+  IonToolbar
+} from "@ionic/angular/standalone";
+
 
 @Component({
   selector: 'app-favoritos',
   templateUrl: './favoritos.page.html',
   styleUrls: ['./favoritos.page.scss'],
   standalone: true,
-  imports: [IonicModule, CommonModule, FormsModule, RouterModule]
+  imports: [CommonModule, FormsModule, RouterModule, IonHeader, IonToolbar,
+    IonButtons, IonMenuButton, IonTitle, IonSegmentButton, IonSegment, IonContent,
+    IonList, IonSpinner, IonAvatar, IonItem, IonLabel, IonImg, IonIcon]
 })
 export class FavoritosPage implements OnInit {
   elementos: any[] = [];
@@ -26,7 +40,9 @@ export class FavoritosPage implements OnInit {
     private firestore: Firestore,
     private sqliteService: SqliteService,
     private route: ActivatedRoute
-  ) {}
+  ) {
+    addIcons({heart, heartOutline});
+  }
 
   async ngOnInit() {
     this.route.queryParams.subscribe(async params => {

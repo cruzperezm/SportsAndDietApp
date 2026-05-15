@@ -1,18 +1,26 @@
 // src/app/pages/detalle/detalle.page.ts
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common'; // Para *ngIf
-import { IonicModule } from '@ionic/angular'; // Para componentes ion-*
 import { ActivatedRoute } from '@angular/router';
 import { Firestore, doc, getDoc } from '@angular/fire/firestore';
 import { SqliteService } from '../../services/sqlite.service';
 import {ReactiveFormsModule} from "@angular/forms";
+import {
+  IonBackButton, IonButton,
+  IonButtons,
+  IonContent,
+  IonHeader, IonIcon,
+  IonImg,
+  IonTitle,
+  IonToolbar
+} from "@ionic/angular/standalone";
 
 @Component({
   selector: 'app-detalle',
   templateUrl: './detalle.page.html',
   styleUrls: ['./detalle.page.scss'],
   standalone: true, // Debe ser standalone
-  imports: [IonicModule, CommonModule, ReactiveFormsModule] // Esto activa los botones y el diseño
+  imports: [CommonModule, ReactiveFormsModule, IonContent, IonHeader, IonToolbar, IonButtons, IonTitle, IonBackButton, IonImg, IonButton, IonIcon] // Esto activa los botones y el diseño
 })
 
 export class DetallePage implements OnInit {

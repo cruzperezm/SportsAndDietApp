@@ -2,8 +2,16 @@ import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, ReactiveFormsModule, Validators} from '@angular/forms';
 import { Router, RouterModule } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
-import {IonHeader} from "@ionic/angular/standalone";
-import {IonicModule} from "@ionic/angular";
+import {
+  IonContent,
+  IonHeader,
+  IonTitle,
+  IonToolbar,
+  IonItem,
+  IonLabel,
+  IonText,
+  IonSpinner, IonButton
+} from "@ionic/angular/standalone";
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -11,7 +19,7 @@ import { CommonModule } from '@angular/common';
   templateUrl: './registro.page.html',
   styleUrls: ['./registro.page.scss'],
   standalone: true,
-  imports: [IonicModule, CommonModule, ReactiveFormsModule, RouterModule, IonHeader]
+  imports: [CommonModule, ReactiveFormsModule, RouterModule, IonHeader, IonToolbar, IonTitle, IonContent, IonItem, IonLabel, IonText, IonSpinner, IonButton]
 })
 export class RegistroPage implements OnInit {
   registroForm: FormGroup;

@@ -10,6 +10,8 @@ import {
   IonRouterOutlet, IonSplitPane, IonTitle,
   IonToolbar, IonAccordionGroup, IonAccordion // <-- AÑADIDOS ESTOS DOS
 } from "@ionic/angular/standalone";
+import {addIcons} from "ionicons";
+import { heartOutline, barbellOutline, logInOutline, restaurantOutline, logOutOutline} from "ionicons/icons";
 
 // Asegúrate de incluirlos en la etiqueta @Component:
 @Component({
@@ -24,6 +26,7 @@ export class AppComponent {
 
   constructor(private auth: Auth, private firestore: Firestore, private router: Router) {
     this.escucharUsuario();
+    addIcons({heartOutline, barbellOutline, logInOutline, restaurantOutline, logOutOutline});
   }
 
   escucharUsuario() {
