@@ -89,9 +89,11 @@ export class FavoritosPage implements OnInit {
       });
 
       // 2. CARGAR DEPORTES
+      // 2. CARGAR DEPORTES
       const deportesSnap = await getDocs(collection(this.firestore, 'deportes'));
       this.tiposDeportes = deportesSnap.docs.map(doc => {
         const data = doc.data();
+
         // Aplanar array plan -> ejercicios
         if (data['plan']) {
           data['plan'].forEach((dia: any) => {
@@ -107,7 +109,13 @@ export class FavoritosPage implements OnInit {
             }
           });
         }
-        return { idDoc: doc.id, nombreTipo: doc.id, imagen: data['imagen'] };
+
+        // Forzamos la ruta local apuntando a la carpeta assets en lugar de leer data['imagen']
+        return {
+          idDoc: doc.id,
+          nombreTipo: data['titulo'] || data['nombre'] || `Rutina ${doc.id}`,
+          imagen: `assets/img/deporte/portadas/portada-${doc.id}.jpg` // <-- CAMBIO CLAVE APLICADO AQUÍ
+        };
       });
 
       this.aplicarFiltro();

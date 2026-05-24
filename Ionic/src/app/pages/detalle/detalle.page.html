@@ -11,10 +11,10 @@
     <h1 class="ion-text-center" style="font-weight: bold;">{{ item.nombre }}</h1>
 
     <div style="border-radius: 15px; overflow: hidden; margin-bottom: 20px; text-align: center;">
-      <img [src]="item.gif || item.imagen" alt="Imagen detalle" style="width: 100%; max-height: 300px; object-fit: cover;" />
+      <img [src]="item.gif || item.imagen" alt="Imagen detalle" style="width: 100%; max-height: 300px; object-fit: cover; background-color: #f0f0f0;" />
     </div>
 
-    <ion-card color="light" class="ion-margin-bottom">
+    <ion-card color="light" class="ion-margin-bottom" style="margin-left: 0; margin-right: 0;">
       <ion-card-content>
 
         <div *ngIf="item.categoria === 'dieta'">
@@ -33,6 +33,18 @@
           <div *ngIf="item.alergenos?.length > 0" style="margin-top: 10px;">
             <strong>Alérgenos:</strong>
             <span *ngFor="let al of item.alergenos; let last=last">{{ al | titlecase }}{{ !last ? ', ' : '' }}</span>
+          </div>
+
+          <div *ngIf="item.ingredientes?.length > 0" style="margin-top: 20px;">
+            <h3 color="primary" style="font-weight: bold; margin-bottom: 5px;">Ingredientes</h3>
+            <ul style="padding-left: 20px; margin-top: 0;">
+              <li *ngFor="let ing of item.ingredientes">{{ ing }}</li>
+            </ul>
+          </div>
+
+          <div *ngIf="item.instrucciones" style="margin-top: 20px;">
+            <h3 color="primary" style="font-weight: bold; margin-bottom: 5px;">Instrucciones</h3>
+            <p style="white-space: pre-line; line-height: 1.6; margin-top: 0;">{{ item.instrucciones }}</p>
           </div>
         </div>
 
@@ -53,21 +65,14 @@
             <strong>Músculos Implicados:</strong>
             <span *ngFor="let mus of item.musculos; let last=last">{{ mus | titlecase }}{{ !last ? ', ' : '' }}</span>
           </div>
+
+          <div *ngIf="item.instrucciones" style="margin-top: 20px;">
+            <h3 color="primary" style="font-weight: bold; margin-bottom: 5px;">Instrucciones</h3>
+            <p style="white-space: pre-line; line-height: 1.6; margin-top: 0;">{{ item.instrucciones }}</p>
+          </div>
         </div>
       </ion-card-content>
     </ion-card>
-
-    <div *ngIf="item.ingredientes?.length > 0" class="ion-margin-top">
-      <h3 color="primary" style="font-weight: bold;">Ingredientes</h3>
-      <ul style="padding-left: 20px;">
-        <li *ngFor="let ing of item.ingredientes">{{ ing }}</li>
-      </ul>
-    </div>
-
-    <div *ngIf="item.instrucciones" class="ion-margin-top">
-      <h3 color="primary" style="font-weight: bold;">Instrucciones</h3>
-      <p style="white-space: pre-line; line-height: 1.6;">{{ item.instrucciones }}</p>
-    </div>
 
     <ion-button expand="block" [color]="esFavorito ? 'danger' : 'success'" (click)="toggleFavorito()" class="ion-margin-top">
       <ion-icon [name]="esFavorito ? 'trash' : 'heart'" slot="start"></ion-icon>
