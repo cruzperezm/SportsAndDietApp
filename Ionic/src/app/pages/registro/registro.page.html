@@ -14,27 +14,27 @@
 
     <ion-item lines="full" class="ion-margin-bottom">
       <ion-label position="stacked">Email</ion-label>
-      <input type="email" formControlName="email" class="native-input" placeholder="ejemplo@correo.com" />
+      <ion-input (keyup.enter)="gotoNextField(input2)" type="email" formControlName="email" class="native-input" placeholder="ejemplo@correo.com" />
     </ion-item>
 
     <ion-item lines="full" class="ion-margin-bottom">
       <ion-label position="stacked">Contraseña</ion-label>
-      <input type="password" formControlName="password" class="native-input" placeholder="******" />
+      <ion-input #input2 (keyup.enter)="gotoNextField(input3)" type="password" formControlName="password" class="native-input" placeholder="******" />
     </ion-item>
 
     <ion-item lines="full" class="ion-margin-bottom">
       <ion-label position="stacked">Nombre</ion-label>
-      <input type="text" formControlName="nombre" class="native-input" placeholder="Tu nombre" />
+      <ion-input #input3 (keyup.enter)="gotoNextField(input4)" type="text" formControlName="nombre" class="native-input" placeholder="Tu nombre" />
     </ion-item>
 
     <ion-item lines="full" class="ion-margin-bottom">
       <ion-label position="stacked">Apellidos</ion-label>
-      <input type="text" formControlName="apellidos" class="native-input" placeholder="Tus apellidos" />
+      <ion-input #input4 (keyup.enter)="gotoNextField(input5)" type="text" formControlName="apellidos" class="native-input" placeholder="Tus apellidos" />
     </ion-item>
 
     <ion-item lines="full" class="ion-margin-bottom">
       <ion-label position="stacked">URL de tu Foto</ion-label>
-      <input type="url" formControlName="imagen" class="native-input" placeholder="https://..." />
+      <ion-input #input5 type="url" formControlName="imagen" class="native-input" placeholder="https://..." />
     </ion-item>
 
     <ion-text color="danger" *ngIf="errorMessage">

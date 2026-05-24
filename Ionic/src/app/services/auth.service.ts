@@ -1,7 +1,8 @@
 // src/app/services/auth.service.ts
 import { Injectable } from '@angular/core';
-import { Auth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from '@angular/fire/auth';
+import {Auth, createUserWithEmailAndPassword, setPersistence, signInWithEmailAndPassword, browserLocalPersistence} from '@angular/fire/auth';
 import {doc, Firestore, setDoc} from "@angular/fire/firestore";
+import firebase from "firebase/compat/app";
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +11,7 @@ export class AuthService {
 
   constructor(
     private auth: Auth,
-    private firestore: Firestore
+    private firestore: Firestore,
   ) { }
 
   // Función para registrar usuario y guardar su perfil
@@ -37,8 +38,10 @@ export class AuthService {
   }
   async loginUsuario(email: string, password: string) {
     try {
-      const userCredential = await signInWithEmailAndPassword(this.auth, email, password);
-      return userCredential.user;
+      this.auth.setPersistence(browserLocalPersistence).then(() => {
+      return  signInWithEmailAndPassword(this.auth, email, password);
+      })
+
     } catch (error) {
       throw error;
     }

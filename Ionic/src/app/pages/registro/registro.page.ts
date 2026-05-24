@@ -10,7 +10,7 @@ import {
   IonItem,
   IonLabel,
   IonText,
-  IonSpinner, IonButton
+  IonSpinner, IonButton, IonInput
 } from "@ionic/angular/standalone";
 import { CommonModule } from '@angular/common';
 
@@ -19,7 +19,7 @@ import { CommonModule } from '@angular/common';
   templateUrl: './registro.page.html',
   styleUrls: ['./registro.page.scss'],
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule, RouterModule, IonHeader, IonToolbar, IonTitle, IonContent, IonItem, IonLabel, IonText, IonSpinner, IonButton]
+  imports: [CommonModule, ReactiveFormsModule, RouterModule, IonHeader, IonToolbar, IonTitle, IonContent, IonItem, IonLabel, IonText, IonSpinner, IonButton, IonInput]
 })
 export class RegistroPage implements OnInit {
   registroForm: FormGroup;
@@ -59,5 +59,10 @@ export class RegistroPage implements OnInit {
     } else {
       this.errorMessage = 'Por favor, completa todos los campos correctamente.';
     }
+  }
+
+  gotoNextField(nextElement: IonInput){
+    console.log();
+    nextElement.setFocus();
   }
 }

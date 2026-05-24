@@ -6,7 +6,7 @@ import { AuthService } from '../../services/auth.service';
 import {
   IonButton,
   IonContent,
-  IonHeader,
+  IonHeader, IonInput,
   IonItem,
   IonLabel, IonSpinner,
   IonText,
@@ -19,7 +19,7 @@ import {
   templateUrl: './login.page.html',
   styleUrls: ['./login.page.scss'],
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule, RouterModule, IonHeader, IonToolbar, IonTitle, IonContent, IonItem, IonLabel, IonText, IonButton, IonSpinner]
+  imports: [CommonModule, ReactiveFormsModule, RouterModule, IonHeader, IonToolbar, IonTitle, IonContent, IonItem, IonLabel, IonText, IonButton, IonSpinner, IonInput]
 })
 export class LoginPage implements OnInit {
   loginForm: FormGroup;
@@ -53,5 +53,10 @@ export class LoginPage implements OnInit {
         this.isLoading = false; // Desactivar carga al finalizar (éxito o error)
       }
     }
+  }
+
+  gotoNextField(nextElement: IonInput){
+    console.log();
+    nextElement.setFocus();
   }
 }

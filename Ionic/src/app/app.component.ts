@@ -19,7 +19,7 @@ import { heartOutline, barbellOutline, logInOutline, restaurantOutline, logOutOu
   templateUrl: 'app.component.html',
   styleUrls: ['app.component.scss'],
   standalone: true,
-  imports: [IonApp, IonRouterOutlet, IonSplitPane, IonMenu, IonHeader, IonToolbar, IonTitle, IonContent, IonAvatar, IonList, IonMenuToggle, IonItem, IonIcon, IonLabel, NgIf, IonRouterLink, IonAccordionGroup, IonAccordion, RouterModule] // <-- AÑADIDOS AQUÍ TAMBIÉN
+  imports: [IonApp, IonRouterOutlet, IonSplitPane, IonMenu, IonHeader, IonToolbar, IonTitle, IonContent, IonAvatar, IonList, IonMenuToggle, IonItem, IonIcon, IonLabel, NgIf, IonRouterLink, RouterModule] // <-- AÑADIDOS AQUÍ TAMBIÉN
 })
 export class AppComponent {
   usuarioPerfil: any = null;
@@ -32,7 +32,7 @@ export class AppComponent {
   escucharUsuario() {
     authState(this.auth).subscribe(async (user) => {
       if (user) {
-        const docRef = doc(this.firestore, `usuarios/${user.uid}`);
+        const docRef = doc(this.firestore, `users/${user.uid}`);
         const docSnap = await getDoc(docRef);
         if (docSnap.exists()) {
           this.usuarioPerfil = docSnap.data();
