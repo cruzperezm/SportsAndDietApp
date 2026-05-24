@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start"><ion-back-button defaultHref="/favoritos"></ion-back-button></ion-buttons>
+    <ion-title>{{ titulo }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let subItem of items; let i = index"
+              [routerLink]="['/detalle', idDoc, coleccion, i]" routerDirection="forward" [button]="true">
+      <ion-avatar slot="start" style="background: #f0f0f0;">
+        <ion-img [src]="subItem.imagen"></ion-img>
+      </ion-avatar>
+      <ion-label>
+        <h2>{{ subItem.id }}</h2> <p *ngIf="subItem.calorias">{{ subItem.calorias }}</p>
+        <p *ngIf="subItem.dificultad">Dificultad: {{ subItem.dificultad }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

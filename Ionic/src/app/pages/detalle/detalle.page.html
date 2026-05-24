@@ -7,37 +7,72 @@
 
 <ion-content class="ion-padding">
   <div *ngIf="item">
-    <h1 class="ion-text-center" style="font-weight: bold;">{{ item.nombre || item.titulo }}</h1>
 
-    <div style="border-radius: 15px; overflow: hidden; margin-bottom: 20px;">
-      <ion-img [src]="item.imagen"></ion-img>
+    <h1 class="ion-text-center" style="font-weight: bold;">{{ item.nombre }}</h1>
+
+    <div style="border-radius: 15px; overflow: hidden; margin-bottom: 20px; text-align: center;">
+      <img [src]="item.gif || item.imagen" alt="Imagen detalle" style="width: 100%; max-height: 300px; object-fit: cover;" />
     </div>
 
-    <div class="info-container">
-      <div *ngIf="item.descripcion_larga">
-        <h3 color="primary">Descripción</h3>
-        <p>{{ item.descripcion_larga }}</p>
-      </div>
+    <ion-card color="light" class="ion-margin-bottom">
+      <ion-card-content>
 
-      <div *ngIf="item.ingredientes">
-        <h3 color="primary">Ingredientes necesarios</h3>
-        <p>{{ item.ingredientes }}</p>
-      </div>
+        <div *ngIf="item.categoria === 'dieta'">
+          <p *ngIf="item.calorias"><strong>Calorías:</strong> {{ item.calorias }}</p>
+          <p *ngIf="item.tiempo"><strong>Tiempo:</strong> {{ item.tiempo }}</p>
 
-      <div *ngIf="item.preparacion">
-        <h3 color="primary">Pasos de preparación</h3>
-        <p>{{ item.preparacion }}</p>
-      </div>
+          <div *ngIf="item.macros" style="margin-top: 10px;">
+            <strong>Macros:</strong>
+            <ul style="margin: 5px 0;">
+              <li>Proteínas: {{ item.macros.proteinas }}</li>
+              <li>Carbohidratos: {{ item.macros.carbos }}</li>
+              <li>Grasas: {{ item.macros.grasas }}</li>
+            </ul>
+          </div>
 
-      <div *ngIf="item.ejercicios">
-        <h3 color="primary">Rutina de ejercicios</h3>
-        <p>{{ item.ejercicios }}</p>
-      </div>
+          <div *ngIf="item.alergenos?.length > 0" style="margin-top: 10px;">
+            <strong>Alérgenos:</strong>
+            <span *ngFor="let al of item.alergenos; let last=last">{{ al | titlecase }}{{ !last ? ', ' : '' }}</span>
+          </div>
+        </div>
+
+        <div *ngIf="item.categoria === 'entrenamiento'">
+          <p *ngIf="item.dificultad"><strong>Dificultad:</strong> {{ item.dificultad }}</p>
+          <p *ngIf="item.tiempo"><strong>Tiempo:</strong> {{ item.tiempo }}</p>
+
+          <div *ngIf="item.estadisticas" style="margin-top: 10px;">
+            <strong>Estadísticas:</strong>
+            <ul style="margin: 5px 0;">
+              <li>Series: {{ item.estadisticas.series }}</li>
+              <li>Repeticiones: {{ item.estadisticas.repeticiones }}</li>
+              <li>Descanso: {{ item.estadisticas.descanso }}</li>
+            </ul>
+          </div>
+
+          <div *ngIf="item.musculos?.length > 0" style="margin-top: 10px;">
+            <strong>Músculos Implicados:</strong>
+            <span *ngFor="let mus of item.musculos; let last=last">{{ mus | titlecase }}{{ !last ? ', ' : '' }}</span>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+    <div *ngIf="item.ingredientes?.length > 0" class="ion-margin-top">
+      <h3 color="primary" style="font-weight: bold;">Ingredientes</h3>
+      <ul style="padding-left: 20px;">
+        <li *ngFor="let ing of item.ingredientes">{{ ing }}</li>
+      </ul>
+    </div>
+
+    <div *ngIf="item.instrucciones" class="ion-margin-top">
+      <h3 color="primary" style="font-weight: bold;">Instrucciones</h3>
+      <p style="white-space: pre-line; line-height: 1.6;">{{ item.instrucciones }}</p>
     </div>
 
     <ion-button expand="block" [color]="esFavorito ? 'danger' : 'success'" (click)="toggleFavorito()" class="ion-margin-top">
-      <ion-icon [name]="esFavorito ? 'trash' : 'star'" slot="start"></ion-icon>
+      <ion-icon [name]="esFavorito ? 'trash' : 'heart'" slot="start"></ion-icon>
       {{ esFavorito ? 'Quitar de Favoritos' : 'Añadir a Favoritos' }}
     </ion-button>
+
   </div>
 </ion-content>

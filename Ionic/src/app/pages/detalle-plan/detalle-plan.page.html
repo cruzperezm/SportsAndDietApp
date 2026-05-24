@@ -1,0 +1,32 @@
+<ion-content class="ion-padding">
+  <div *ngIf="info">
+    <h1 class="ion-text-center" style="font-weight: bold; color: var(--ion-color-primary);">
+      {{ info.id }}
+    </h1>
+
+    <div style="border-radius: 20px; overflow: hidden; margin: 15px 0; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
+      <ion-img [src]="info.imagen"></ion-img>
+    </div>
+
+    <ion-card mode="ios" class="ion-no-margin">
+      <ion-card-content>
+        <div *ngIf="esDieta">
+          <p><strong>Calorías:</strong> {{ info.calorias }}</p>
+          <p><strong>Alérgenos:</strong> {{ info.alergenos?.join(', ') }}</p>
+          <h3 class="ion-margin-top" color="primary">Ingredientes</h3>
+          <p>{{ info.ingredientes }}</p>
+        </div>
+
+        <div *ngIf="!esDieta">
+          <p><strong>Dificultad:</strong> {{ info.dificultad }}</p>
+          <div class="ion-margin-top" *ngIf="info.estadisticas">
+            <h3>Objetivos</h3>
+            <ion-chip>Series: {{ info.estadisticas.series }}</ion-chip>
+            <ion-chip>Reps: {{ info.estadisticas.repeticiones }}</ion-chip>
+            <ion-chip>Descanso: {{ info.estadisticas.descanso }}</ion-chip>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

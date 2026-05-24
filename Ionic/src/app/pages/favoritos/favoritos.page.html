@@ -1,7 +1,12 @@
 <ion-header>
   <ion-toolbar color="primary">
-    <ion-buttons slot="start"><ion-menu-button></ion-menu-button></ion-buttons>
-    <ion-title>{{ getTitulo() }}</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button *ngIf="seccionActual === 'favoritos' || vistaActual === 'tipos'"></ion-menu-button>
+      <ion-button *ngIf="seccionActual !== 'favoritos' && vistaActual === 'elementos'" (click)="volverATipos()">
+        <ion-icon slot="icon-only" name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title style="text-transform: capitalize;">{{ vistaActual === 'elementos' && seccionActual !== 'favoritos' ? tipoSeleccionado : getTitulo() }}</ion-title>
   </ion-toolbar>
 
   <ion-toolbar *ngIf="seccionActual === 'favoritos'">
@@ -17,21 +22,35 @@
     <ion-spinner name="crescent"></ion-spinner>
   </div>
 
-  <ion-list *ngIf="!cargando">
+  <ion-list *ngIf="!cargando && vistaActual === 'tipos' && seccionActual !== 'favoritos'">
+    <ion-item *ngFor="let tipo of tiposMostrados" (click)="seleccionarTipo(tipo.idDoc)" [button]="true" detail="true">
+      <ion-avatar slot="start" style="background: #f0f0f0;">
+        <img [src]="tipo.imagen" alt="img" style="object-fit: cover; width: 100%; height: 100%;">
+      </ion-avatar>
+      <ion-label style="text-transform: capitalize;">
+        <h2>{{ tipo.nombreTipo }}</h2>
+        <p>Ver opciones disponibles</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-list *ngIf="!cargando && vistaActual === 'elementos'">
     <ion-item *ngFor="let item of elementosFiltrados" [routerLink]="['/detalle', item.id]" routerDirection="forward" [button]="true">
       <ion-avatar slot="start" style="background: #f0f0f0;">
-        <ion-img [src]="item.imagen"></ion-img>
+        <img [src]="item.imagen || item.gif" alt="img" style="object-fit: cover; width: 100%; height: 100%;">
       </ion-avatar>
+
       <ion-label>
-        <h2>{{ item.titulo || item.nombre }}</h2>
-        <p>{{ item.descripcion_corta }}</p>
+        <h2>{{ item.nombre }}</h2>
+        <p>{{ item.tiempo || '' }} <span *ngIf="item.calorias"> • {{ item.calorias }}</span></p>
       </ion-label>
+
       <ion-icon slot="end" [name]="item.isFavorite ? 'heart' : 'heart-outline'"
                 [color]="item.isFavorite ? 'danger' : 'medium'" (click)="toggleFavorito(item, $event)"></ion-icon>
     </ion-item>
   </ion-list>
 
-  <div *ngIf="!cargando && elementosFiltrados.length === 0" class="ion-padding ion-text-center">
-    <p>No hay elementos en esta sección.</p>
+  <div *ngIf="!cargando && vistaActual === 'elementos' && elementosFiltrados.length === 0" class="ion-padding ion-text-center">
+    <p>No hay elementos disponibles en esta sección.</p>
   </div>
 </ion-content>
